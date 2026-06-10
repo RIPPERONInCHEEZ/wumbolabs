@@ -22,6 +22,17 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.brand-mark,
+.footer-mark {
+  display: block;
+  flex: 0 0 auto;
+}
+
 body {
   margin: 0;
   background: var(--wl-bg);
