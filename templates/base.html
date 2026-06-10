@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{{ config.description }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WumboLabs">
+  <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
+  <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
+  <meta property="og:url" content="https://wumbocore.com">
+  <meta property="og:image" content="https://wumbocore.com/img/wumbolabs-card.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% block twitter_title %}{{ config.title }}{% endblock twitter_title %}">
+  <meta name="twitter:description" content="{% block twitter_description %}{{ config.description }}{% endblock twitter_description %}">
+  <meta name="twitter:image" content="https://wumbocore.com/img/wumbolabs-card.png">
+
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
