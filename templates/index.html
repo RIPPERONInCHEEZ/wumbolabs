@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="container hero">
+  <p class="kicker">WumboLabs</p>
+  <h1>Practical Linux, self-hosting, and local AI.</h1>
+  <p class="lede">
+    A personal lab for building systems, testing local models, documenting lessons learned,
+    and occasionally breaking things along the way.
+  </p>
+  <div class="hero-actions">
+    <a class="button" href="{{ get_url(path='/projects/') }}">View Projects</a>
+    <a class="button secondary" href="{{ get_url(path='/about/') }}">About WumboLabs</a>
+  </div>
+</section>
+
+<section class="container">
+  <p class="kicker">Current Focus</p>
+  <div class="grid cards">
+    <article class="card">
+      <h3>Local AI</h3>
+      <p>Testing what can actually run well on consumer hardware, with practical evaluations instead of benchmark hype.</p>
+    </article>
+    <article class="card">
+      <h3>Linux Systems</h3>
+      <p>Arch, Debian, Ubuntu, Wayland desktops, terminal workflows, systemd services, and conservative system maintenance.</p>
+    </article>
+    <article class="card">
+      <h3>Homelab Infrastructure</h3>
+      <p>Docker services, ZFS storage, DNS, VPN-routed workloads, dashboards, and documentation-first operations.</p>
+    </article>
+  </div>
+</section>
+
+<section class="container">
+  <p class="kicker">Featured Projects</p>
+  <div class="grid cards">
+    <article class="card">
+      <h3><a href="{{ get_url(path='/projects/monolith/') }}">Monolith</a></h3>
+      <p>A local LLM workbench for model testing, prompt suites, eval imports, and context-scaling experiments.</p>
+    </article>
+    <article class="card">
+      <h3><a href="{{ get_url(path='/projects/quant-lab/') }}">Quant Lab</a></h3>
+      <p>A Markdown-first evaluation workflow for testing local models against practical technical prompts.</p>
+    </article>
+    <article class="card">
+      <h3><a href="{{ get_url(path='/projects/wumbo-core/') }}">Wumbo Core</a></h3>
+      <p>A Docker-based homelab with ZFS storage, DNS, VPN-routed workloads, media services, and documentation.</p>
+    </article>
+  </div>
+</section>
+
+<section class="container">
+  <p class="kicker">Operating Philosophy</p>
+  <div class="grid cards">
+    <article class="card"><h3>Stability before novelty</h3><p>Working systems beat fragile experiments.</p></article>
+    <article class="card"><h3>Documentation before memory</h3><p>If a system matters, it should be recoverable.</p></article>
+    <article class="card"><h3>Evidence before hype</h3><p>Benchmarks need context. Claims need testing.</p></article>
+  </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{{ config.description }}">
+  <link rel="stylesheet" href="{{ get_url(path='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="{{ get_url(path='/') }}">WumboLabs</a>
+      <div class="nav-links">
+        <a href="{{ get_url(path='/projects/') }}">Projects</a>
+        <a href="{{ get_url(path='/lab-notes/') }}">Lab Notes</a>
+        <a href="{{ get_url(path='/benchmarks/') }}">Benchmarks</a>
+        <a href="{{ get_url(path='/about/') }}">About</a>
+        <a href="{{ get_url(path='/contact/') }}">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p><strong>WumboLabs</strong></p>
+      <p>Practical Linux, self-hosting, and local AI.</p>
+    </div>
+  </footer>
+</body>
+</html>
