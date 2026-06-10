@@ -6,6 +6,9 @@
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{{ config.description }}">
 
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="apple-touch-icon" href="/img/favicon.png">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WumboLabs">
   <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
@@ -23,7 +26,10 @@
 <body>
   <header class="site-header">
     <nav class="nav">
-      <a class="brand" href="/">Home</a>
+      <a class="brand" href="/" aria-label="WumboLabs home">
+        <img class="brand-mark" src="/img/wumbolabs-mark.png" alt="" aria-hidden="true">
+        <span>WumboLabs</span>
+      </a>
       <div class="nav-links">
         <a href="/projects/">Projects</a>
         <a href="/lab-notes/">Lab Notes</a>
@@ -41,8 +47,12 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <p><strong>WumboLabs</strong> <span class="version">v0.03</span></p>
-        <p>Practical Linux, self-hosting, and local AI.</p>
+        <p class="footer-brand">
+          <img class="footer-mark" src="/img/wumbolabs-mark.png" alt="" aria-hidden="true">
+          <strong>WumboLabs</strong>
+          <span class="version">v0.04</span>
+        </p>
+        <p>Real hardware. Real testing. No hype.</p>
         <p>Built with Zola. Hosted on Cloudflare Pages.</p>
       </div>
 

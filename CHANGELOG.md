@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.04 - Brand Identity Pass
+
+### Added
+- Added WumboLabs logo assets
+- Added favicon
+- Added branded Open Graph image
+- Added header logo mark
+- Added footer logo mark
+- Updated homepage tagline to "Real hardware. Real testing. No hype."
+
+### Changed
+- Updated CSS palette to locked WumboLabs brand colors
+- Tuned links, cards, buttons, footer, and contact cards around restrained lime accents
+- Updated visible footer version to v0.04
+
+### Notes
+This release applies the locked WumboLabs Monochrome Lime identity to the public site.
+
 ## v0.03 - Public Launch Polish
 
 ### Added
