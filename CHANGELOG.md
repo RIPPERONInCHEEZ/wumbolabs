@@ -1,33 +1,34 @@
 # Changelog
 
-## v0.01 — 2026-06-09
-
-Initial public WumboLabs baseline.
+## v0.03 - Public Launch Polish
 
 ### Added
+- Updated About page with clearer WumboLabs origin story
+- Updated Contact page with public email, X/Twitter, and GitHub cards
+- Updated footer navigation
+- Bumped visible site version to v0.03
 
-- Zola static site foundation
-- Dark theme baseline
-- Homepage
-- About page
-- Projects section
-- Project pages:
-  - Monolith
-  - Quant Lab
-  - Wumbo Core
-  - WumboJetsII
-- Lab Notes section
-- First Lab Note placeholder
-- Benchmarks section
-- First Benchmark placeholder
-- Contact page
-- Cloudflare Pages deployment
-- Custom domain setup:
-  - wumbocore.com
-  - www.wumbocore.com
-- GitHub repository baseline
-- v0.01 Git tag
+### Infrastructure
+- Verified Cloudflare Email Routing for contact@wumbocore.com
+- Confirmed contact@wumbocore.com forwards to Proton Mail
+- Kept Cloudflare Pages deployment flow unchanged
 
 ### Notes
+This release polishes the public launch version of WumboLabs after confirming the site, custom domain, GitHub repository, and email routing are working.
 
-This version is intentionally simple. The goal was to establish a working site, repository, deployment pipeline, and custom domain before heavier theme and content work.
+## v0.02 - Contact and Footer
+
+### Added
+- Contact page
+- contact@wumbocore.com email routing
+- X/Twitter contact link
+- Footer versioning
+
+## v0.01 - Initial Baseline
+
+### Added
+- Zola static site foundation
+- GitHub repository
+- Cloudflare Pages deployment
+- Custom domain setup
+- Initial homepage, project pages, lab notes, benchmarks, and about page

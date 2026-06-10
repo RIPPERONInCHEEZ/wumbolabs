@@ -157,3 +157,69 @@ pre, code {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+
+.version {
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-left: 0.35rem;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+  color: var(--text);
+}
+
+.contact-card:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: rgba(143, 188, 187, 0.12);
+  color: var(--accent);
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+
+.contact-card strong {
+  display: block;
+}
+
+.contact-card small {
+  display: block;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}

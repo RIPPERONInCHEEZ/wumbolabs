@@ -7,11 +7,11 @@ description = "About Kevin Dickinson and WumboLabs."
 
 WumboLabs is my corner of the internet for local AI, Linux, homelabs, self-hosting, and building useful things.
 
-My interest in local AI goes back to 2021 when I started experimenting with tools like DeepDaze. At the time, running modern AI models locally wasn't really practical on the hardware I had available, but the idea stuck with me.
+My interest in local AI goes back to 2021, when I started experimenting with projects like DeepDaze. At the time, hardware limitations meant most experiments were small-scale, but the idea stuck with me.
 
 What began as curiosity around local AI eventually expanded into Linux, self-hosting, Docker, storage, networking, automation, and homelab infrastructure. About a year ago I started building a more serious homelab environment and quickly discovered that every project led to three more.
 
-Along the way I've migrated storage, rebuilt DNS infrastructure, broken Docker stacks, benchmarked countless local models, documented recovery procedures, and spent more late nights troubleshooting than I'd like to admit.
+Along the way I've migrated storage, rebuilt DNS infrastructure, broken Docker stacks, benchmarked local models, documented recovery procedures, and spent more late nights troubleshooting than I'd like to admit.
 
 Today my primary focus is practical local AI.
 
