@@ -300,3 +300,98 @@ pre, code {
   font-size: 1.05rem;
   margin-top: -0.25rem;
 }
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 760px;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 9vw, 4rem);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav {
+    gap: 0.75rem;
+  }
+
+  .brand {
+    font-size: 0.95rem;
+  }
+
+  .brand-mark {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 2.25rem 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 12vw, 3.2rem);
+  }
+
+  .lede {
+    font-size: 1rem;
+  }
+
+  .secondary-lede {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .contact-card {
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    font-size: 0.85rem;
+  }
+}
