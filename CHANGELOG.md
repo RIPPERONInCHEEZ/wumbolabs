@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.06 - Project Pages Pass
+
+### Added
+- Expanded LLMGauge project page with scan-first project structure.
+- Expanded Wumbo Core project page as the home network and homelab infrastructure layer.
+- Expanded WumboJetsII project page as the Linux workstation and local AI test rig.
+- Added WumboJetsII to the homepage featured projects section.
+- Added old project URL aliases for LLMGauge.
+
+### Changed
+- Renamed the public-facing Quant Lab project to LLMGauge.
+- Updated active website references from Quant Lab and WumboGauge to LLMGauge.
+- Updated Projects index to remove duplicate project card rendering.
+- Updated project page descriptions for cleaner automatic project cards.
+- Updated visible footer version to v0.06.
+
+### Notes
+- The local/internal quant-lab directory name remains unchanged outside the website.
+- Old public URLs for Quant Lab and WumboGauge are preserved through page aliases.
+
 ## v0.05 - Monolith Project Page
 
 ### Added

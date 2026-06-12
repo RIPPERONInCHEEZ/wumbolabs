@@ -1,6 +1,6 @@
 +++
 title = "Monolith"
-description = "Local-first AI workbench for practical local model evaluation."
+description = "Local-first AI workbench for testing, comparing, and evaluating local LLMs on real hardware."
 weight = 1
 +++
 
@@ -220,7 +220,7 @@ Completed:
 
 - Generalized public-alpha docs and bundled prompt examples
 - Removed original-author machine/path assumptions from active public files
-- Generalized default model, llama.cpp, inventory, and Quant Lab paths
+- Generalized default model, llama.cpp, inventory, and LLMGauge paths
 - Added public-alpha status documentation
 - Updated troubleshooting database migration instructions
 - Corrected release dates

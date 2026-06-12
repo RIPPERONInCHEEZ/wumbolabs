@@ -4,4 +4,4 @@ description = "Projects from WumboLabs."
 sort_by = "weight"
 +++
 
-A collection of local AI, Linux, homelab, self-hosting, and infrastructure projects.
+WumboLabs projects focus on local AI, Linux workstations, self-hosting, homelab infrastructure, and practical real-hardware testing.

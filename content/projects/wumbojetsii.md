@@ -1,22 +1,94 @@
 +++
 title = "WumboJetsII"
-description = "An Arch Linux workstation for daily use, development, and local AI testing."
+description = "Arch Linux workstation for daily use, development, local AI testing, GPU experiments, and WumboLabs project work."
 weight = 4
 +++
 
+# WumboJetsII
+
+**Linux workstation and local AI test rig**  
+**Status:** Active daily workstation
+
 WumboJetsII is my main Linux workstation.
 
-It runs Arch Linux with Hyprland and serves as my daily desktop, development system, and local AI test machine.
+It runs Arch Linux with Hyprland and serves as my daily desktop, development system, local AI test machine, and primary WumboLabs project workstation.
+
+## At a Glance
+
+<div class="info-grid">
+  <div class="info-card">
+    <span class="info-label">OS</span>
+    <strong>Arch Linux</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Desktop</span>
+    <strong>Hyprland</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">GPU</span>
+    <strong>RTX 5070 12GB</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">AI Stack</span>
+    <strong>llama.cpp CUDA</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Workflow</span>
+    <strong>Terminal-first</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Role</span>
+    <strong>Daily driver</strong>
+  </div>
+</div>
 
 ## Focus Areas
 
-- Arch Linux
-- Hyprland and Wayland workflows
-- NVIDIA GPU acceleration
-- local LLM inference
-- llama.cpp CUDA builds
-- desktop automation
-- terminal-first workflows
-- conservative update practices
+<div class="feature-grid">
+  <div class="feature-card">
+    <h3>Linux Desktop</h3>
+    <p>Arch Linux, Hyprland, Wayland workflows, keyboard-driven interaction, theming, and practical daily use.</p>
+  </div>
 
-The system is built to be clean, stable, keyboard-friendly, and useful for real work.
+  <div class="feature-card">
+    <h3>Local LLM Testing</h3>
+    <p>Real-world testing of GGUF models, llama.cpp builds, context limits, generation speed, and VRAM behavior.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Development Workstation</h3>
+    <p>Primary machine for Monolith, LLMGauge, website work, scripting, documentation, and local experiments.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>GPU Experiments</h3>
+    <p>CUDA-backed inference, model fit testing, benchmark runs, and constrained-VRAM evaluation.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Terminal Workflow</h3>
+    <p>Shell-first development, conservative commands, local tooling, and reproducible project operations.</p>
+  </div>
+
+  <div class="feature-card">
+    <h3>Stable Evolution</h3>
+    <p>Configured incrementally with conservative updates, rollback awareness, and minimal unnecessary complexity.</p>
+  </div>
+</div>
+
+## Role in WumboLabs
+
+WumboJetsII is where most WumboLabs development and local AI testing happens.
+
+It is the real hardware behind many of the Monolith and LLMGauge experiments. The workstation is intentionally practical: a daily-use Linux desktop that also acts as a constrained local AI lab.
+
+## Operating Goal
+
+The goal is to keep the system clean, stable, fast, keyboard-friendly, and useful for real work.
+
+Experiments are welcome, but the baseline should remain reliable.
