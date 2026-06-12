@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.05 - Monolith Project Page
+
+### Added
+- Expanded the Monolith project page into a scan-first public project overview.
+- Added alpha v0.11.9 status and current project positioning.
+- Added At a Glance status cards for release, status, audience, setup, local UI, and license.
+- Added capability cards for model profiles, local eval workflows, context scaling, agent-backend testing, setup diagnostics, and workstation visibility.
+- Added current roadmap summary for alpha v0.11.10 through alpha v0.11.13.
+- Added collapsible Technical Details section for deeper project information.
+
+### Changed
+- Reworked the Monolith page to reduce long-scroll friction while preserving technical detail.
+- Updated homepage Monolith card copy.
+- Added reusable CSS for project info cards, feature cards, roadmap rows, and details panels.
+- Clarified Monolith as a technical public alpha and source-available project, not open source.
+
+### Notes
+- Monolith currently has no open-source license selected.
+- The page intentionally prioritizes fast scanning first, with deeper technical detail available on demand.
+
 ## v0.04 - Brand Identity Pass
 
 ### Added
