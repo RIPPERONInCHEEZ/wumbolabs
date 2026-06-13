@@ -1,9 +1,10 @@
 +++
 title = "About"
 description = "About Kevin Dickinson and WumboLabs."
+[extra]
+back_label = "Back to Home"
+back_url = "/"
 +++
-
-# About WumboLabs
 
 WumboLabs is my corner of the internet for local AI, Linux, homelabs, self-hosting, and building useful things.
 

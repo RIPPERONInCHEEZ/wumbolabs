@@ -2,9 +2,10 @@
 title = "WumboJetsII"
 description = "Arch Linux workstation for daily use, development, local AI testing, GPU experiments, and WumboLabs project work."
 weight = 4
+[extra]
+back_label = "Back to Projects"
+back_url = "/projects/"
 +++
-
-# WumboJetsII
 
 **Linux workstation and local AI test rig**  
 **Status:** Active daily workstation

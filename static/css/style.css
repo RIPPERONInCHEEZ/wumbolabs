@@ -495,3 +495,18 @@ summary:hover {
     flex-direction: column;
   }
 }
+
+.page-back {
+  margin: 0 0 1rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+.page-back a {
+  color: var(--wl-text-muted);
+  text-decoration: none;
+}
+
+.page-back a:hover {
+  color: var(--wl-lime);
+}

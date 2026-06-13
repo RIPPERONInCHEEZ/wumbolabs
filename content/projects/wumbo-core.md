@@ -2,9 +2,10 @@
 title = "Wumbo Core"
 description = "Home network and homelab infrastructure for WumboLabs."
 weight = 3
+[extra]
+back_label = "Back to Projects"
+back_url = "/projects/"
 +++
-
-# Wumbo Core
 
 **Home network and homelab infrastructure**  
 **Status:** Active production environment

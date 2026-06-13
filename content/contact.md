@@ -1,6 +1,9 @@
 +++
 title = "Contact"
 description = "Contact WumboLabs."
+[extra]
+back_label = "Back to Home"
+back_url = "/"
 +++
 
 If you'd like to discuss local AI, Linux, homelabs, self-hosting, or any of the projects documented on this site, feel free to reach out.

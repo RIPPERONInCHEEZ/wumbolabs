@@ -3,9 +3,10 @@ title = "LLMGauge"
 description = "Markdown-first local LLM evaluation workflow for prompt suites, repeatable runs, raw outputs, and practical model comparison."
 weight = 2
 aliases = ["/projects/quant-lab/", "/projects/wumbogauge/"]
+[extra]
+back_label = "Back to Projects"
+back_url = "/projects/"
 +++
-
-# LLMGauge
 
 **Local LLM evaluation workflow**  
 **Status:** Active local testing workflow

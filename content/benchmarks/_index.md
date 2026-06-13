@@ -4,6 +4,9 @@ description = "Local AI benchmark notes with practical context."
 sort_by = "date"
 template = "section.html"
 page_template = "page.html"
+[extra]
+back_label = "Back to Home"
+back_url = "/"
 +++
 
 Benchmarks, model notes, and practical local AI testing results.

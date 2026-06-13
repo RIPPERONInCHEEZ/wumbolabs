@@ -2,9 +2,10 @@
 title = "Monolith"
 description = "Local-first AI workbench for testing, comparing, and evaluating local LLMs on real hardware."
 weight = 1
+[extra]
+back_label = "Back to Projects"
+back_url = "/projects/"
 +++
-
-# Monolith
 
 **Technical Public Alpha · alpha v0.11.9**  
 [GitHub Repository](https://github.com/WumboLabs/monolith)

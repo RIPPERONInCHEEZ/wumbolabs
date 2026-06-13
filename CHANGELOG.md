@@ -10,6 +10,8 @@
 - Added old project URL aliases for LLMGauge.
 
 ### Changed
+- Added contextual back links for project, section, About, and Contact pages.
+- Removed duplicate top-level content headings now handled by page templates.
 - Renamed the public-facing Quant Lab project to LLMGauge.
 - Updated active website references from Quant Lab and WumboGauge to LLMGauge.
 - Updated Projects index to remove duplicate project card rendering.
