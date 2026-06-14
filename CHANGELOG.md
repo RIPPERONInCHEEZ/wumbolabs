@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.07 - Monolith Roadmap Sync
+
+### Added
+- Added website-side Monolith roadmap sync script.
+- Added generated local roadmap content from Monolith's canonical `docs/ROADMAP.md`.
+- Added Zola shortcode for rendering generated Markdown content.
+- Added developer documentation for the manual Monolith roadmap sync workflow.
+
+### Changed
+- Updated the Monolith project page to render synced roadmap content instead of hardcoded roadmap text.
+- Updated visible footer version to v0.07.
+
+### Notes
+- The website remains static and deterministic.
+- The sync is manual for now via `python scripts/sync_monolith_roadmap.py`.
+- The website only consumes the public marker block from Monolith's roadmap.
+- There is no browser-side GitHub fetch, no GitHub Actions requirement, and no write access to the Monolith repo.
+
 ## v0.06 - Project Pages Pass
 
 ### Added

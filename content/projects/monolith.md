@@ -99,27 +99,9 @@ The goal is not to chase generic leaderboards. The goal is to understand how loc
 
 ## Current Roadmap
 
-<div class="roadmap-list">
-  <div class="roadmap-item">
-    <strong>alpha v0.11.10</strong>
-    <span>Clean-clone install validation and release hardening.</span>
-  </div>
+The roadmap below is synced from Monolith's canonical `docs/ROADMAP.md` public website block.
 
-  <div class="roadmap-item">
-    <strong>alpha v0.11.11</strong>
-    <span>Setup doctor hardening.</span>
-  </div>
-
-  <div class="roadmap-item">
-    <strong>alpha v0.11.12</strong>
-    <span>Repo-local bootstrap script.</span>
-  </div>
-
-  <div class="roadmap-item">
-    <strong>alpha v0.11.13</strong>
-    <span>Guided setup wizard.</span>
-  </div>
-</div>
+{{ generated_markdown(path="data/generated/monolith-roadmap.md") }}
 
 ## Current Limitations
 

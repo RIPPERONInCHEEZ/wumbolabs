@@ -1,0 +1,2 @@
+{% set generated_content = load_data(path=path, format="plain") %}
+{{ generated_content | markdown | safe }}
