@@ -1,21 +1,35 @@
-# Monolith Roadmap Sync
+# Monolith Website Sync
 
-The WumboLabs website renders a public Monolith roadmap section from Monolith's canonical roadmap.
+The WumboLabs website renders selected public Monolith project information from the Monolith repository.
 
 ## Source of Truth
 
-The canonical source is:
+The canonical source repository is:
 
     WumboLabs/monolith
+
+The website currently consumes:
+
+    docs/website/public_status.json
     docs/ROADMAP.md
 
-The website fetches the raw file from:
+Raw source URLs:
 
+    https://raw.githubusercontent.com/WumboLabs/monolith/main/docs/website/public_status.json
     https://raw.githubusercontent.com/WumboLabs/monolith/main/docs/ROADMAP.md
 
-## Public Marker Block
+## Generated Website Files
 
-The website only consumes the Markdown between these exact markers:
+The sync script writes:
+
+    data/generated/monolith-status.json
+    data/generated/monolith-roadmap.md
+
+The website renders those local generated files. It does not fetch GitHub from the browser.
+
+## Public Roadmap Marker Block
+
+The website only consumes roadmap Markdown between these exact markers:
 
     <!-- website-roadmap:start -->
     <!-- website-roadmap:end -->
@@ -29,20 +43,43 @@ The sync script fails if:
 - either marker is duplicated
 - the end marker appears before the start marker
 - the extracted block is empty
-- the fetch fails
-- the output file cannot be written
+- the roadmap fetch fails
+
+## Public Status Metadata
+
+The website also consumes:
+
+    docs/website/public_status.json
+
+Required keys:
+
+    project
+    status
+    current_release
+    repository_url
+    license_status
+    canonical_local_url
+    canonical_start_command
+    summary
+    audience
+    positioning
+    capabilities
+    caveats
+    current_focus
+
+The sync script validates that required keys exist and that expected list fields are non-empty lists.
 
 ## Manual Sync Command
 
 From the website repo root:
 
+    python scripts/sync_monolith.py
+
+Legacy compatibility command:
+
     python scripts/sync_monolith_roadmap.py
 
-The script writes the extracted roadmap block to:
-
-    data/generated/monolith-roadmap.md
-
-The website renders that local generated file. It does not fetch GitHub from the browser.
+The legacy command currently runs the broader Monolith sync.
 
 ## Current Policy
 

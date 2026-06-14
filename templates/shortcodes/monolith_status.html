@@ -1,0 +1,99 @@
+{% set monolith = load_data(path="data/generated/monolith-status.json") %}
+
+<p><strong>{{ monolith.status }} · {{ monolith.current_release }}</strong></p>
+<p><a href="{{ monolith.repository_url }}">GitHub Repository</a></p>
+
+<p>{{ monolith.summary }}</p>
+
+<p><strong>Real hardware. Real testing. No hype.</strong></p>
+
+<h2>At a Glance</h2>
+
+<div class="info-grid">
+  <div class="info-card">
+    <span class="info-label">Current Release</span>
+    <strong>{{ monolith.current_release }}</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Status</span>
+    <strong>{{ monolith.status }}</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Audience</span>
+    <strong>Technical users</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Setup</span>
+    <strong>Manual install</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Local UI</span>
+    <strong>{{ monolith.canonical_local_url | replace(from="http://", to="") | trim_end_matches(pat="/") }}</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">License</span>
+    <strong>Source-available</strong>
+  </div>
+</div>
+
+<h2>Current Focus</h2>
+
+<div class="feature-grid">
+  {% for item in monolith.current_focus %}
+    <div class="feature-card">
+      <h3>{{ item }}</h3>
+    </div>
+  {% endfor %}
+</div>
+
+<h2>Capabilities</h2>
+
+<ul>
+  {% for item in monolith.capabilities %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Positioning</h2>
+
+<ul>
+  {% for item in monolith.positioning %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+
+<h2>Current Caveats</h2>
+
+<ul>
+  {% for item in monolith.caveats %}
+    <li>{{ item }}</li>
+  {% endfor %}
+</ul>
+
+<details>
+<summary>Technical Details</summary>
+
+<h2>Canonical Local Usage</h2>
+
+<p>Current local web UI:</p>
+
+<pre><code>{{ monolith.canonical_local_url }}</code></pre>
+
+<p>Canonical start command:</p>
+
+<pre><code>{{ monolith.canonical_start_command }}</code></pre>
+
+<h2>Audience</h2>
+
+<p>{{ monolith.audience }}</p>
+
+<h2>License Status</h2>
+
+<p>{{ monolith.license_status }}</p>
+
+</details>
