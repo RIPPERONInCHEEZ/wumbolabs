@@ -1,6 +1,7 @@
 +++
 title = "LLMGauge"
 description = "Markdown-first local LLM evaluation workflow for prompt suites, repeatable runs, raw outputs, and practical model comparison."
+template = "project.html"
 weight = 2
 aliases = ["/projects/quant-lab/", "/projects/wumbogauge/"]
 [extra]

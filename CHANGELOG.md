@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.08 - Lab Console Redesign
+
+### Added
+- Added lab-console homepage layout focused on current lab state, recent activity, projects on the bench, field notes, and system inventory.
+- Added project record page template for WumboLabs project pages.
+- Added record-style section indexes for Projects, Lab Notes, and Benchmarks.
+- Added general record-style page layout for About, Contact, Lab Notes, and Benchmark detail pages.
+- Added terminal-console typography and panel styling.
+- Replaced the benchmark placeholder with a real local LLM baseline note.
+
+### Changed
+- Shifted the site from a generic technical landing-page layout toward a public lab record / active workbench structure.
+- Updated homepage copy to better reflect WumboLabs as a place where ongoing work lives.
+- Updated section and project page presentation to reduce generic card-grid structure.
+- Updated visible footer version to v0.08.
+
+### Notes
+- No route changes.
+- No new dependencies.
+- Monolith website sync remains manual.
+- The live site keeps static Zola output with no browser-side GitHub fetch.
+
 ## v0.07 - Monolith Website Sync
 
 ### Added

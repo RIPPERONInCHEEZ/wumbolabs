@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container project-shell">
+  {% if page.extra.back_url %}
+    <p class="page-back">
+      <a href="{{ get_url(path=page.extra.back_url) }}">← {{ page.extra.back_label | default(value="Back") }}</a>
+    </p>
+  {% endif %}
+
+  <p class="console-label">WUMBOLABS / PROJECT RECORD</p>
+
+  <header class="project-header">
+    <div>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="project-description">{{ page.description }}</p>
+      {% endif %}
+    </div>
+
+    <aside class="project-file-card">
+      <div class="panel-topline">
+        <span>PROJECT FILE</span>
+        <span class="status-dot">OPEN</span>
+      </div>
+      <dl class="project-file-meta">
+        <div>
+          <dt>Record</dt>
+          <dd>{{ page.title }}</dd>
+        </div>
+        {% if page.extra.back_label %}
+        <div>
+          <dt>Collection</dt>
+          <dd>{{ page.extra.back_label | replace(from="Back to ", to="") }}</dd>
+        </div>
+        {% endif %}
+        <div>
+          <dt>Site</dt>
+          <dd>WumboLabs</dd>
+        </div>
+      </dl>
+    </aside>
+  </header>
+
+  <div class="project-content">
+    {{ page.content | safe }}
+  </div>
+</section>
+{% endblock content %}

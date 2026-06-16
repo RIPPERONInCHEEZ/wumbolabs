@@ -510,3 +510,778 @@ summary:hover {
 .page-back a:hover {
   color: var(--wl-lime);
 }
+
+/* v0.08 Lab Console homepage */
+
+.lab-hero {
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+}
+
+.lab-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.8fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.console-label,
+.panel-topline,
+.bench-key,
+.record-meta,
+.terminal-title,
+.activity-row time {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.console-label {
+  color: var(--wl-lime);
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin: 0 0 1.25rem;
+}
+
+.lab-hero h1 {
+  max-width: 900px;
+  color: var(--wl-text);
+  font-size: clamp(2.7rem, 7vw, 5.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  margin: 0 0 1.25rem;
+}
+
+.lab-intro {
+  max-width: 760px;
+  color: var(--wl-text-soft);
+  font-size: 1.08rem;
+}
+
+.lab-status-panel,
+.terminal-note,
+.bench-item,
+.project-record,
+.activity-log,
+.inventory-list {
+  background: linear-gradient(180deg, rgba(23, 26, 33, 0.96), rgba(16, 18, 22, 0.96));
+  border: 1px solid var(--wl-border);
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(198, 255, 51, 0.03);
+}
+
+.lab-status-panel {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 360px;
+}
+
+.panel-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--wl-text-muted);
+  font-size: 0.72rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--wl-border);
+  padding-bottom: 0.75rem;
+}
+
+.status-dot {
+  color: var(--wl-lime);
+}
+
+.status-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.status-list div {
+  border-left: 2px solid rgba(198, 255, 51, 0.35);
+  padding-left: 0.75rem;
+}
+
+.status-list dt {
+  color: var(--wl-text);
+  font-weight: 800;
+}
+
+.status-list dd {
+  color: var(--wl-text-muted);
+  margin: 0.15rem 0 0;
+}
+
+.lab-strip {
+  padding-top: 1rem;
+}
+
+.bench-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--wl-border);
+  border: 1px solid var(--wl-border);
+}
+
+.bench-item {
+  border: 0;
+  padding: 1rem;
+  min-height: 160px;
+}
+
+.bench-key {
+  display: block;
+  color: var(--wl-text-muted);
+  font-size: 0.7rem;
+  margin-bottom: 0.55rem;
+}
+
+.bench-item strong {
+  display: block;
+  color: var(--wl-text);
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.bench-item p {
+  margin: 0;
+  color: var(--wl-text-soft);
+  font-size: 0.95rem;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.activity-log {
+  display: grid;
+  gap: 0;
+  border-bottom: 0;
+}
+
+.activity-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--wl-border);
+}
+
+.activity-row time {
+  color: var(--wl-lime);
+  font-size: 0.72rem;
+  padding-top: 0.15rem;
+}
+
+.activity-row strong {
+  color: var(--wl-text);
+}
+
+.activity-row p {
+  margin: 0.25rem 0 0;
+  color: var(--wl-text-muted);
+}
+
+.terminal-note {
+  padding: 1rem;
+}
+
+.terminal-title {
+  color: var(--wl-lime);
+  font-size: 0.72rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.terminal-note pre {
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--wl-text-soft);
+}
+
+.terminal-note code {
+  color: var(--wl-text-soft);
+}
+
+.project-records {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--wl-border);
+  border: 1px solid var(--wl-border);
+}
+
+.project-record {
+  border: 0;
+  padding: 1.25rem;
+}
+
+.project-record:hover {
+  background: var(--wl-bg-elevated);
+}
+
+.record-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--wl-text-muted);
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.record-meta span:first-child {
+  color: var(--wl-lime);
+}
+
+.project-record h2 {
+  margin: 0 0 0.65rem;
+  color: var(--wl-text);
+  font-size: 1.45rem;
+}
+
+.project-record p {
+  color: var(--wl-text-soft);
+}
+
+.record-facts {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--wl-text-muted);
+}
+
+.section-title {
+  color: var(--wl-text);
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+}
+
+.text-link {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+.inventory-list {
+  display: grid;
+}
+
+.inventory-list div {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--wl-border);
+}
+
+.inventory-list div:last-child {
+  border-bottom: 0;
+}
+
+.inventory-list span {
+  color: var(--wl-lime);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+}
+
+.inventory-list strong {
+  color: var(--wl-text-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .lab-hero-grid,
+  .split-section,
+  .project-records {
+    grid-template-columns: 1fr;
+  }
+
+  .bench-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lab-status-panel {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .lab-hero {
+    padding-top: 3rem;
+  }
+
+  .lab-hero h1 {
+    font-size: clamp(2.35rem, 13vw, 3.6rem);
+  }
+
+  .bench-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .record-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* v0.08 Typography and terminal-console refinement */
+
+:root {
+  --font-body: "Atkinson Hyperlegible", "IBM Plex Sans", "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: "Atkinson Hyperlegible", "IBM Plex Sans", "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrainsMono Nerd Font", "JetBrains Mono", "CaskaydiaCove Nerd Font", "Cascadia Mono", "FiraCode Nerd Font", "Fira Code", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3,
+.brand,
+.footer-brand strong,
+.project-record h2,
+.section-title {
+  font-family: var(--font-display);
+}
+
+pre,
+code,
+.kicker,
+.version,
+.page-back,
+.info-label,
+.console-label,
+.panel-topline,
+.bench-key,
+.record-meta,
+.terminal-title,
+.activity-row time,
+.inventory-list span,
+.text-link {
+  font-family: var(--font-mono);
+}
+
+.lab-hero h1 {
+  max-width: 820px;
+  font-weight: 900;
+  letter-spacing: -0.075em;
+  text-wrap: balance;
+}
+
+.lede {
+  color: var(--wl-text-soft);
+  font-weight: 650;
+}
+
+.lab-intro {
+  line-height: 1.75;
+}
+
+.console-label::before {
+  content: "❯ ";
+  color: var(--wl-lime);
+}
+
+.kicker::before {
+  content: "// ";
+  color: var(--wl-gray);
+}
+
+.lab-status-panel,
+.terminal-note,
+.bench-item,
+.project-record,
+.activity-log,
+.inventory-list {
+  position: relative;
+}
+
+.lab-status-panel::before,
+.terminal-note::before,
+.bench-item::before,
+.project-record::before,
+.activity-log::before,
+.inventory-list::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(198, 255, 51, 0.025) 1px, transparent 1px);
+  background-size: 100% 9px;
+  opacity: 0.35;
+}
+
+.lab-status-panel,
+.terminal-note {
+  background:
+    radial-gradient(circle at top right, rgba(198, 255, 51, 0.045), transparent 34%),
+    linear-gradient(180deg, rgba(23, 26, 33, 0.98), rgba(12, 14, 19, 0.98));
+}
+
+.panel-topline,
+.record-meta,
+.bench-key,
+.activity-row time,
+.inventory-list span,
+.terminal-title {
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.status-list dt,
+.bench-item strong,
+.project-record h2,
+.activity-row strong,
+.inventory-list strong {
+  letter-spacing: -0.02em;
+}
+
+.project-record h2 a::before {
+  content: "▸ ";
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+}
+
+.terminal-note pre {
+  border-left: 2px solid rgba(198, 255, 51, 0.45);
+  padding-left: 0.85rem;
+}
+
+.terminal-note code {
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.activity-row {
+  position: relative;
+}
+
+.activity-row::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 1.25rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 1px solid var(--wl-lime);
+  background: var(--wl-bg);
+  transform: translateX(-1.1rem);
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 15px;
+  }
+
+  .lab-hero h1 {
+    letter-spacing: -0.06em;
+  }
+
+  .activity-row::before {
+    display: none;
+  }
+}
+
+/* v0.08 Section record lists */
+
+.section-record h1 {
+  color: var(--wl-text);
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin: 0 0 1rem;
+}
+
+.section-intro {
+  max-width: 780px;
+  color: var(--wl-text-soft);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.record-list {
+  display: grid;
+  border: 1px solid var(--wl-border);
+  background: var(--wl-border);
+  gap: 1px;
+}
+
+.record-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(23, 26, 33, 0.97), rgba(16, 18, 22, 0.97));
+  padding: 1.1rem 1.25rem;
+  position: relative;
+}
+
+.record-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(198, 255, 51, 0.022) 1px, transparent 1px);
+  background-size: 100% 9px;
+  opacity: 0.35;
+}
+
+.record-row-main,
+.record-row-link {
+  position: relative;
+  z-index: 1;
+}
+
+.record-row-kicker {
+  display: block;
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.record-row h2 {
+  margin: 0 0 0.35rem;
+  color: var(--wl-text);
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.record-row h2 a::before {
+  content: "▸ ";
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+}
+
+.record-row p {
+  margin: 0;
+  color: var(--wl-text-muted);
+}
+
+.record-row-link a {
+  color: var(--wl-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.record-row:hover {
+  background: var(--wl-bg-elevated);
+}
+
+.record-row:hover .record-row-link a {
+  color: var(--wl-lime);
+}
+
+@media (max-width: 700px) {
+  .record-row {
+    grid-template-columns: 1fr;
+  }
+
+  .record-row-link {
+    justify-self: start;
+  }
+}
+
+/* v0.08 Project record pages */
+
+.project-shell {
+  padding-top: 3rem;
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+.project-header h1 {
+  color: var(--wl-text);
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  margin: 0 0 1rem;
+}
+
+.project-description {
+  max-width: 780px;
+  color: var(--wl-text-soft);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.project-file-card {
+  background:
+    radial-gradient(circle at top right, rgba(198, 255, 51, 0.045), transparent 34%),
+    linear-gradient(180deg, rgba(23, 26, 33, 0.98), rgba(12, 14, 19, 0.98));
+  border: 1px solid var(--wl-border);
+  padding: 1rem;
+  position: relative;
+}
+
+.project-file-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(198, 255, 51, 0.022) 1px, transparent 1px);
+  background-size: 100% 9px;
+  opacity: 0.35;
+}
+
+.project-file-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-file-meta {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.project-file-meta div {
+  border-left: 2px solid rgba(198, 255, 51, 0.35);
+  padding-left: 0.75rem;
+}
+
+.project-file-meta dt {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-file-meta dd {
+  color: var(--wl-text-soft);
+  margin: 0.15rem 0 0;
+}
+
+.project-content {
+  max-width: 100%;
+}
+
+.project-content > p:first-child strong {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.project-content h2 {
+  color: var(--wl-text);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin-top: 3rem;
+}
+
+.project-content h3 {
+  color: var(--wl-text);
+}
+
+.project-content > ul {
+  background: var(--wl-bg-panel);
+  border: 1px solid var(--wl-border);
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.project-content details h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .project-header {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* v0.08 General record pages */
+
+.page-record {
+  padding-top: 3rem;
+}
+
+.page-record-header {
+  max-width: 880px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--wl-border);
+  padding-bottom: 1.5rem;
+}
+
+.page-record-header h1 {
+  color: var(--wl-text);
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+  margin: 0 0 1rem;
+}
+
+.page-record-description {
+  color: var(--wl-text-soft);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.page-record-date {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 1rem 0 0;
+}
+
+.page-record-content {
+  max-width: 900px;
+}
+
+.page-record-content h2 {
+  color: var(--wl-text);
+  font-size: clamp(1.65rem, 4vw, 2.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin-top: 2.75rem;
+}
+
+.page-record-content h3 {
+  color: var(--wl-text);
+}
+
+.page-record-content > ul {
+  background: var(--wl-bg-panel);
+  border: 1px solid var(--wl-border);
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.page-record-content strong {
+  color: var(--wl-text);
+}
