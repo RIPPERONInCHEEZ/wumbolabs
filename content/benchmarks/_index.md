@@ -9,6 +9,6 @@ back_label = "Back to Home"
 back_url = "/"
 +++
 
-Benchmarks, model notes, and practical local AI testing results.
+Benchmark notes from WumboLabs are field records, not universal rankings.
 
-Raw performance numbers matter, but they are only useful with context: hardware, quantization, workload, prompt quality, failure modes, and actual usefulness.
+The focus is practical local AI behavior on real hardware: model fit, speed, VRAM behavior, context limits, failure modes, and whether the output is actually useful for Linux, homelab, coding, and local AI work.
