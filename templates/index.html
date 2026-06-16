@@ -66,6 +66,7 @@
       <h2>Lab notes and benchmarks</h2>
       <p>Read practical notes from local AI, Linux, self-hosting, infrastructure, and real hardware testing.</p>
       <div class="start-actions">
+        <a href="{{ get_url(path='/projects/') }}">Projects</a>
         <a href="{{ get_url(path='/lab-notes/') }}">Lab Notes</a>
         <a href="{{ get_url(path='/benchmarks/') }}">Benchmarks</a>
       </div>
@@ -126,67 +127,6 @@ systems need rollback paths
 benchmarks need context
 notes beat memory</code></pre>
   </aside>
-</section>
-
-<section class="container">
-  <p class="kicker">Projects on the Bench</p>
-  <div class="project-records">
-    <article class="project-record">
-      <div class="record-meta">
-        <span>ACTIVE</span>
-        <span>{{ monolith.current_release }}</span>
-      </div>
-      <h2><a href="{{ get_url(path='/projects/monolith/') }}">Monolith</a></h2>
-      <p>{{ monolith.summary }}</p>
-      <ul class="record-facts">
-        <li>local-first AI workbench</li>
-        <li>GGUF / llama.cpp workflow tracking</li>
-        <li>setup diagnostics and evaluation scaffolding</li>
-      </ul>
-    </article>
-
-    <article class="project-record">
-      <div class="record-meta">
-        <span>PRIVATE ALPHA</span>
-        <span>evaluation engine</span>
-      </div>
-      <h2><a href="{{ get_url(path='/projects/llmgauge/') }}">LLMGauge</a></h2>
-      <p>Local-first GGUF/llama.cpp evaluation engine with auditable artifacts, context ladders, validation, and Monolith-ready export indexes.</p>
-      <ul class="record-facts">
-        <li>validated run and ladder artifacts</li>
-        <li>import-ready JSON and Markdown outputs</li>
-        <li>file-based bridge for Monolith</li>
-      </ul>
-    </article>
-
-    <article class="project-record">
-      <div class="record-meta">
-        <span>ACTIVE</span>
-        <span>infrastructure</span>
-      </div>
-      <h2><a href="{{ get_url(path='/projects/wumbo-core/') }}">Wumbo Core</a></h2>
-      <p>Home infrastructure and documentation system built around Docker services, ZFS storage, VPN routing, and recovery notes.</p>
-      <ul class="record-facts">
-        <li>ZFS-backed storage</li>
-        <li>containerized services</li>
-        <li>documentation-first operations</li>
-      </ul>
-    </article>
-
-    <article class="project-record">
-      <div class="record-meta">
-        <span>ACTIVE</span>
-        <span>workstation</span>
-      </div>
-      <h2><a href="{{ get_url(path='/projects/wumbojetsii/') }}">WumboJetsII</a></h2>
-      <p>Arch Linux workstation used for daily development, local AI testing, GPU experiments, and WumboLabs project work.</p>
-      <ul class="record-facts">
-        <li>RTX 5070 12GB</li>
-        <li>Arch Linux / Hyprland</li>
-        <li>local model testing bench</li>
-      </ul>
-    </article>
-  </div>
 </section>
 
 <section class="container split-section">
