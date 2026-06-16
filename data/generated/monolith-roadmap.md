@@ -2,30 +2,36 @@
 
 Monolith is a technical public alpha for local LLM workbench development, model testing, and practical evaluation on real hardware.
 
-Current release state:
+Current phase:
 
 - `alpha v0.11.12` — repo-local bootstrap script and guided setup preparation
+- clean-clone install validation
+- setup diagnostics
+- dependency and runtime detection
+- safer model onboarding
 
-Near-term direction:
-
-- finish guided setup preparation
-- improve setup diagnostics and dependency/runtime detection
-- make model onboarding clearer
-- add safer model profile editing
-- continue improving local evaluation workflows
-- improve comparison views for model runs and context tests
-
-Next planned milestone:
+Next milestone:
 
 - `alpha v0.11.13` — guided setup wizard
 
-Longer-term direction:
+Upcoming phases:
+
+- guided first-run setup flow
+- clearer llama.cpp/runtime detection
+- safer model profile editing
+- improved model onboarding
+- stronger setup doctor output
+- cleaner local evaluation workflow
+- better comparison views for model runs and context tests
+
+Future direction:
 
 - eval scoring workflow
 - comparison dashboard
 - global search or command palette
 - run notes and annotations
 - agent-backend readiness dashboard
+- workstation monitoring improvements
 - future CLI/TUI companion
 
 Current caveats:
