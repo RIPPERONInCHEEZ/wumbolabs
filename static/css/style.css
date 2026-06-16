@@ -1285,3 +1285,45 @@ code,
 .page-record-content strong {
   color: var(--wl-text);
 }
+
+/* Footer ownership / lab-note disclaimer */
+
+.footer-legal,
+.footer-note {
+  color: var(--wl-text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-note {
+  max-width: 620px;
+}
+
+/* Lab status compact sizing */
+
+.lab-status-panel,
+.lab-status {
+  align-self: start;
+  min-height: 0;
+}
+
+.lab-status-panel dl,
+.lab-status dl {
+  margin-top: 1rem;
+}
+
+.lab-status-panel .status-list,
+.lab-status .status-list,
+.lab-status-panel dl,
+.lab-status dl {
+  max-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.lab-status-panel {
+  height: auto;
+}
+
+.lab-hero {
+  align-items: start;
+}
