@@ -8,12 +8,11 @@ back_label = "Back to Projects"
 back_url = "/projects/"
 +++
 
-**Linux workstation and local AI test rig**  
-**Status:** Active daily workstation
-
 WumboJetsII is my main Linux workstation.
 
 It runs Arch Linux with Hyprland and serves as my daily desktop, development system, local AI test machine, and primary WumboLabs project workstation.
+
+<strong>Active daily workstation</strong>
 
 ## At a Glance
 
@@ -49,7 +48,14 @@ It runs Arch Linux with Hyprland and serves as my daily desktop, development sys
   </div>
 </div>
 
-## Focus Areas
+## Role in WumboLabs
+
+WumboJetsII is where most WumboLabs development and local AI testing happens.
+
+It is the real hardware behind many of the Monolith and LLMGauge experiments: a daily-use Linux desktop that also acts as a constrained local AI lab.
+
+<details class="project-details">
+<summary>Focus areas</summary>
 
 <div class="feature-grid">
   <div class="feature-card">
@@ -71,26 +77,15 @@ It runs Arch Linux with Hyprland and serves as my daily desktop, development sys
     <h3>GPU Experiments</h3>
     <p>CUDA-backed inference, model fit testing, benchmark runs, and constrained-VRAM evaluation.</p>
   </div>
-
-  <div class="feature-card">
-    <h3>Terminal Workflow</h3>
-    <p>Shell-first development, conservative commands, local tooling, and reproducible project operations.</p>
-  </div>
-
-  <div class="feature-card">
-    <h3>Stable Evolution</h3>
-    <p>Configured incrementally with conservative updates, rollback awareness, and minimal unnecessary complexity.</p>
-  </div>
 </div>
 
-## Role in WumboLabs
+</details>
 
-WumboJetsII is where most WumboLabs development and local AI testing happens.
-
-It is the real hardware behind many of the Monolith and LLMGauge experiments. The workstation is intentionally practical: a daily-use Linux desktop that also acts as a constrained local AI lab.
-
-## Operating Goal
+<details class="project-details">
+<summary>Operating goal</summary>
 
 The goal is to keep the system clean, stable, fast, keyboard-friendly, and useful for real work.
 
 Experiments are welcome, but the baseline should remain reliable.
+
+</details>

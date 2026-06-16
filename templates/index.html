@@ -47,31 +47,37 @@
   </div>
 </section>
 
-<section class="container lab-strip" aria-label="Current bench">
-  <p class="kicker">Current Bench</p>
-  <div class="bench-grid">
-    <article class="bench-item">
-      <span class="bench-key">primary project</span>
-      <strong>Monolith</strong>
-      <p>{{ monolith.status }} · {{ monolith.current_release }}</p>
+<section class="container start-here-section">
+  <p class="kicker">Start Here</p>
+
+  <div class="start-here-grid">
+    <article class="start-card primary-start-card">
+      <span class="start-label">Use now</span>
+      <h2>Try Monolith</h2>
+      <p>Monolith is the public technical alpha: a local-first AI workbench for testing and tracking GGUF models on real hardware.</p>
+      <div class="start-actions">
+        <a href="{{ get_url(path='/projects/monolith/') }}">Open project</a>
+        <a href="https://github.com/WumboLabs/monolith">GitHub</a>
+      </div>
     </article>
 
-    <article class="bench-item">
-      <span class="bench-key">test hardware</span>
-      <strong>WumboJetsII</strong>
-      <p>Arch Linux, Hyprland, RTX 5070 12GB, local GGUF model testing.</p>
+    <article class="start-card">
+      <span class="start-label">Read the record</span>
+      <h2>Lab notes and benchmarks</h2>
+      <p>Read practical notes from local AI, Linux, self-hosting, infrastructure, and real hardware testing.</p>
+      <div class="start-actions">
+        <a href="{{ get_url(path='/lab-notes/') }}">Lab Notes</a>
+        <a href="{{ get_url(path='/benchmarks/') }}">Benchmarks</a>
+      </div>
     </article>
 
-    <article class="bench-item">
-      <span class="bench-key">evaluation track</span>
-      <strong>LLMGauge</strong>
-      <p>Private alpha evaluation engine producing validated, import-ready artifacts for Monolith.</p>
-    </article>
-
-    <article class="bench-item">
-      <span class="bench-key">infrastructure</span>
-      <strong>Wumbo Core</strong>
-      <p>Docker, ZFS, VPN-routed services, dashboards, and recoverability.</p>
+    <article class="start-card muted-start-card">
+      <span class="start-label">Internal work</span>
+      <h2>LLMGauge</h2>
+      <p>LLMGauge is a private alpha evaluation engine behind Monolith planning. It is documented as a project record, not the public entry point yet.</p>
+      <div class="start-actions">
+        <a href="{{ get_url(path='/projects/llmgauge/') }}">View record</a>
+      </div>
     </article>
   </div>
 </section>
