@@ -1,6 +1,7 @@
 +++
 title = "Wumbo Core"
 description = "Home network and homelab infrastructure for WumboLabs."
+template = "project.html"
 weight = 3
 [extra]
 back_label = "Back to Projects"

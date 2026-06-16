@@ -1104,3 +1104,121 @@ code,
     justify-self: start;
   }
 }
+
+/* v0.08 Project record pages */
+
+.project-shell {
+  padding-top: 3rem;
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 2rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+.project-header h1 {
+  color: var(--wl-text);
+  font-size: clamp(2.8rem, 7vw, 5.2rem);
+  line-height: 0.92;
+  letter-spacing: -0.07em;
+  margin: 0 0 1rem;
+}
+
+.project-description {
+  max-width: 780px;
+  color: var(--wl-text-soft);
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+.project-file-card {
+  background:
+    radial-gradient(circle at top right, rgba(198, 255, 51, 0.045), transparent 34%),
+    linear-gradient(180deg, rgba(23, 26, 33, 0.98), rgba(12, 14, 19, 0.98));
+  border: 1px solid var(--wl-border);
+  padding: 1rem;
+  position: relative;
+}
+
+.project-file-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(198, 255, 51, 0.022) 1px, transparent 1px);
+  background-size: 100% 9px;
+  opacity: 0.35;
+}
+
+.project-file-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.project-file-meta {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+}
+
+.project-file-meta div {
+  border-left: 2px solid rgba(198, 255, 51, 0.35);
+  padding-left: 0.75rem;
+}
+
+.project-file-meta dt {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-file-meta dd {
+  color: var(--wl-text-soft);
+  margin: 0.15rem 0 0;
+}
+
+.project-content {
+  max-width: 100%;
+}
+
+.project-content > p:first-child strong {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.project-content h2 {
+  color: var(--wl-text);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin-top: 3rem;
+}
+
+.project-content h3 {
+  color: var(--wl-text);
+}
+
+.project-content > ul {
+  background: var(--wl-bg-panel);
+  border: 1px solid var(--wl-border);
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.project-content details h2 {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .project-header {
+    grid-template-columns: 1fr;
+  }
+}
