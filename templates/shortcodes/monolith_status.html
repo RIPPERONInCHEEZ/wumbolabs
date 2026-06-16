@@ -1,11 +1,6 @@
 {% set monolith = load_data(path="data/generated/monolith-status.json") %}
 
 <p><strong>{{ monolith.status }} · {{ monolith.current_release }}</strong></p>
-<p><a href="{{ monolith.repository_url }}">GitHub Repository</a></p>
-
-<p>{{ monolith.summary }}</p>
-
-<p><strong>Real hardware. Real testing. No hype.</strong></p>
 
 <h2>At a Glance</h2>
 
@@ -41,17 +36,8 @@
   </div>
 </div>
 
-<h2>Current Focus</h2>
-
-<div class="feature-grid">
-  {% for item in monolith.current_focus %}
-    <div class="feature-card">
-      <h3>{{ item }}</h3>
-    </div>
-  {% endfor %}
-</div>
-
-<h2>Capabilities</h2>
+<details class="project-details">
+<summary>Capabilities</summary>
 
 <ul>
   {% for item in monolith.capabilities %}
@@ -59,15 +45,10 @@
   {% endfor %}
 </ul>
 
-<h2>Positioning</h2>
+</details>
 
-<ul>
-  {% for item in monolith.positioning %}
-    <li>{{ item }}</li>
-  {% endfor %}
-</ul>
-
-<h2>Current Caveats</h2>
+<details class="project-details">
+<summary>Current caveats</summary>
 
 <ul>
   {% for item in monolith.caveats %}
@@ -75,8 +56,10 @@
   {% endfor %}
 </ul>
 
-<details>
-<summary>Technical Details</summary>
+</details>
+
+<details class="project-details">
+<summary>Technical details</summary>
 
 <h2>Canonical Local Usage</h2>
 

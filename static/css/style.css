@@ -1438,3 +1438,39 @@ code,
     min-height: 0;
   }
 }
+
+/* Project-page action rows */
+
+.page-start-actions {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-top: 0;
+}
+
+/* Compact project details */
+
+.project-details {
+  border: 1px solid var(--wl-border);
+  background: rgba(16, 18, 22, 0.65);
+  margin: 0.75rem 0;
+  padding: 0.75rem 0.9rem;
+}
+
+.project-details summary {
+  color: var(--wl-lime);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-details h2 {
+  font-size: 1.45rem;
+  margin-top: 1.25rem;
+}
+
+.project-details ul {
+  margin-bottom: 0;
+}
