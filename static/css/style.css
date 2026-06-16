@@ -1222,3 +1222,66 @@ code,
     grid-template-columns: 1fr;
   }
 }
+
+/* v0.08 General record pages */
+
+.page-record {
+  padding-top: 3rem;
+}
+
+.page-record-header {
+  max-width: 880px;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--wl-border);
+  padding-bottom: 1.5rem;
+}
+
+.page-record-header h1 {
+  color: var(--wl-text);
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+  margin: 0 0 1rem;
+}
+
+.page-record-description {
+  color: var(--wl-text-soft);
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.page-record-date {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 1rem 0 0;
+}
+
+.page-record-content {
+  max-width: 900px;
+}
+
+.page-record-content h2 {
+  color: var(--wl-text);
+  font-size: clamp(1.65rem, 4vw, 2.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin-top: 2.75rem;
+}
+
+.page-record-content h3 {
+  color: var(--wl-text);
+}
+
+.page-record-content > ul {
+  background: var(--wl-bg-panel);
+  border: 1px solid var(--wl-border);
+  padding: 1rem 1rem 1rem 2rem;
+}
+
+.page-record-content strong {
+  color: var(--wl-text);
+}

@@ -3,14 +3,27 @@
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
 
 {% block content %}
-<section class="container">
+<section class="container page-record">
   {% if page.extra.back_url %}
     <p class="page-back">
       <a href="{{ get_url(path=page.extra.back_url) }}">← {{ page.extra.back_label | default(value="Back") }}</a>
     </p>
   {% endif %}
 
-  <h1>{{ page.title }}</h1>
-  {{ page.content | safe }}
+  <p class="console-label">WUMBOLABS / RECORD</p>
+
+  <header class="page-record-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-record-description">{{ page.description }}</p>
+    {% endif %}
+    {% if page.date %}
+      <p class="page-record-date">{{ page.date }}</p>
+    {% endif %}
+  </header>
+
+  <div class="page-record-content">
+    {{ page.content | safe }}
+  </div>
 </section>
 {% endblock content %}
