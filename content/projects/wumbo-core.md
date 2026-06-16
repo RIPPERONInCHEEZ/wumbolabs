@@ -8,12 +8,11 @@ back_label = "Back to Projects"
 back_url = "/projects/"
 +++
 
-**Home network and homelab infrastructure**  
-**Status:** Active production environment
-
 Wumbo Core is the home network and homelab infrastructure behind WumboLabs.
 
 It includes the server, workstations, mobile systems, local network, storage, DNS, Docker services, documentation, and recovery planning that support day-to-day use and local experimentation.
+
+<strong>Active production environment</strong>
 
 ## At a Glance
 
@@ -49,7 +48,14 @@ It includes the server, workstations, mobile systems, local network, storage, DN
   </div>
 </div>
 
-## Core Areas
+## Operating Goal
+
+Wumbo Core is not just a server. It is the local infrastructure layer.
+
+The priorities are stable home networking, reliable local services, clear documentation, recoverable configuration, conservative changes, practical monitoring, and room for future expansion.
+
+<details class="project-details">
+<summary>Core areas</summary>
 
 <div class="feature-grid">
   <div class="feature-card">
@@ -63,18 +69,8 @@ It includes the server, workstations, mobile systems, local network, storage, DN
   </div>
 
   <div class="feature-card">
-    <h3>Workstations and Clients</h3>
-    <p>WumboJetsII, WumboMini, WumboMobile, and future systems are treated as part of the broader lab environment.</p>
-  </div>
-
-  <div class="feature-card">
     <h3>Storage and Backups</h3>
     <p>ZFS storage, datasets, snapshots, backup planning, and clear recovery procedures are core parts of the infrastructure.</p>
-  </div>
-
-  <div class="feature-card">
-    <h3>Services and Dashboards</h3>
-    <p>Docker Compose services, Homepage, AdGuard Home, media services, monitoring, logs, and operational visibility.</p>
   </div>
 
   <div class="feature-card">
@@ -83,7 +79,10 @@ It includes the server, workstations, mobile systems, local network, storage, DN
   </div>
 </div>
 
-## Current Systems
+</details>
+
+<details class="project-details">
+<summary>Current systems</summary>
 
 ### WumboServer
 
@@ -91,7 +90,7 @@ The main homelab server. It runs the core Docker service stack, storage, DNS, me
 
 ### WumboJetsII
 
-The primary Linux workstation and local AI test machine. It is part of Wumbo Core because it depends on, tests against, and helps operate the broader lab environment.
+The primary Linux workstation and local AI test machine. It depends on, tests against, and helps operate the broader lab environment.
 
 ### WumboMini
 
@@ -101,24 +100,13 @@ A secondary small-form-factor system used as part of the broader infrastructure 
 
 A mobile Linux system used for portable work, testing, and access into the WumboLabs environment.
 
-## Operating Philosophy
+</details>
 
-Wumbo Core is not just a server. It is the full local infrastructure layer.
-
-The main priorities are:
-
-- stable home networking
-- reliable local services
-- clear documentation
-- recoverable configuration
-- conservative changes
-- practical monitoring
-- room for future expansion
-
-## Future Expansion
-
-Wumbo Core is expected to grow over time.
+<details class="project-details">
+<summary>Future expansion</summary>
 
 Future expansion may include additional wired drops, new lab hardware, more structured backups, improved monitoring, better network segmentation, and deeper integration between local systems.
 
 The goal is to keep the infrastructure understandable and recoverable as it grows.
+
+</details>
