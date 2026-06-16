@@ -3,25 +3,38 @@
 {% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
 
 {% block content %}
-<section class="container">
+<section class="container section-record">
   {% if section.extra.back_url %}
     <p class="page-back">
       <a href="{{ get_url(path=section.extra.back_url) }}">← {{ section.extra.back_label | default(value="Back") }}</a>
     </p>
   {% endif %}
 
+  <p class="console-label">WUMBOLABS / INDEX</p>
   <h1>{{ section.title }}</h1>
-  {{ section.content | safe }}
-
-  <div class="grid cards">
-    {% for page in section.pages %}
-      <article class="card">
-        <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-        {% if page.description %}
-          <p>{{ page.description }}</p>
-        {% endif %}
-      </article>
-    {% endfor %}
+  <div class="section-intro">
+    {{ section.content | safe }}
   </div>
+
+  {% if section.pages %}
+    <div class="record-list">
+      {% for page in section.pages %}
+        <article class="record-row">
+          <div class="record-row-main">
+            <span class="record-row-kicker">
+              {% if page.date %}{{ page.date }}{% else %}record {{ loop.index }}{% endif %}
+            </span>
+            <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            {% if page.description %}
+              <p>{{ page.description }}</p>
+            {% endif %}
+          </div>
+          <div class="record-row-link">
+            <a href="{{ page.permalink }}">open →</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
 </section>
 {% endblock content %}

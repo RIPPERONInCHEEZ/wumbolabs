@@ -997,3 +997,110 @@ code,
     display: none;
   }
 }
+
+/* v0.08 Section record lists */
+
+.section-record h1 {
+  color: var(--wl-text);
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin: 0 0 1rem;
+}
+
+.section-intro {
+  max-width: 780px;
+  color: var(--wl-text-soft);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.record-list {
+  display: grid;
+  border: 1px solid var(--wl-border);
+  background: var(--wl-border);
+  gap: 1px;
+}
+
+.record-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  background:
+    linear-gradient(180deg, rgba(23, 26, 33, 0.97), rgba(16, 18, 22, 0.97));
+  padding: 1.1rem 1.25rem;
+  position: relative;
+}
+
+.record-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(198, 255, 51, 0.022) 1px, transparent 1px);
+  background-size: 100% 9px;
+  opacity: 0.35;
+}
+
+.record-row-main,
+.record-row-link {
+  position: relative;
+  z-index: 1;
+}
+
+.record-row-kicker {
+  display: block;
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.record-row h2 {
+  margin: 0 0 0.35rem;
+  color: var(--wl-text);
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
+}
+
+.record-row h2 a::before {
+  content: "▸ ";
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+}
+
+.record-row p {
+  margin: 0;
+  color: var(--wl-text-muted);
+}
+
+.record-row-link a {
+  color: var(--wl-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.record-row:hover {
+  background: var(--wl-bg-elevated);
+}
+
+.record-row:hover .record-row-link a {
+  color: var(--wl-lime);
+}
+
+@media (max-width: 700px) {
+  .record-row {
+    grid-template-columns: 1fr;
+  }
+
+  .record-row-link {
+    justify-self: start;
+  }
+}
