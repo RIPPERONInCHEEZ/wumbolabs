@@ -2,6 +2,9 @@
 title = "Local LLM Baseline"
 description = "Baseline notes for local LLM testing on WumboJetsII."
 date = 2026-06-09
+[extra]
+back_label = "Back to Benchmarks"
+back_url = "/benchmarks/"
 +++
 
 This is the starting benchmark record for local LLM testing on WumboJetsII.
@@ -42,7 +45,22 @@ It is not a leaderboard. It is a baseline for tracking what actually runs well o
   </div>
 </div>
 
-## What Gets Tracked
+## Current Baseline Philosophy
+
+A model is only useful if it can fit the hardware, stay stable, follow instructions, avoid confident fabrication, and produce output that helps with real work.
+
+For WumboLabs, that means testing against practical tasks:
+
+- Linux troubleshooting
+- Docker and networking diagnostics
+- ZFS/recovery procedures
+- configuration review
+- local AI workflow support
+- long-context behavior
+- honesty under uncertainty
+
+<details class="project-details">
+<summary>What gets tracked</summary>
 
 Local model testing needs more than raw tokens per second.
 
@@ -61,19 +79,7 @@ Each useful benchmark record should include:
 - practical usefulness
 - whether the result is repeatable enough to trust
 
-## Current Baseline Philosophy
-
-A model is only useful if it can fit the hardware, stay stable, follow instructions, avoid confident fabrication, and produce output that helps with real work.
-
-For WumboLabs, that means testing against practical tasks:
-
-- Linux troubleshooting
-- Docker and networking diagnostics
-- ZFS/recovery procedures
-- configuration review
-- local AI workflow support
-- long-context behavior
-- honesty under uncertainty
+</details>
 
 ## How to Read These Notes
 

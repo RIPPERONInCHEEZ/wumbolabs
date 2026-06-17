@@ -1474,3 +1474,61 @@ code,
 .project-details ul {
   margin-bottom: 0;
 }
+
+/* WumboLabs restrained terminal-font pass
+   Uses local Nerd Font variants when present, with safe fallbacks.
+   Body copy stays on the normal readable sans stack. */
+
+:root {
+  --font-nerd-mono: "JetBrainsMono Nerd Font", "JetBrains Mono", "CaskaydiaCove Nerd Font", "Cascadia Code", "FiraCode Nerd Font", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.site-title,
+.nav a,
+.console-label,
+.kicker,
+.info-label,
+.record-meta,
+.start-label,
+.terminal-title,
+.status-list dt,
+.inventory-list span,
+.activity-row time,
+.project-details summary,
+.back-link,
+.footer-brand,
+.footer-links a {
+  font-family: var(--font-nerd-mono);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-nerd-mono);
+}
+
+h1 {
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  letter-spacing: -0.02em;
+}
+
+.info-card strong,
+.feature-card h3,
+.start-card h2,
+.activity-row strong {
+  letter-spacing: -0.015em;
+}
+
+pre,
+code,
+.terminal-note,
+.terminal-note code {
+  font-family: var(--font-nerd-mono);
+}

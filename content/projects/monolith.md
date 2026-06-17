@@ -41,6 +41,12 @@ It is a technical public alpha. Setup is still manual, and it is intended for us
   <a href="https://github.com/WumboLabs/monolith/blob/main/docs/public_alpha.md">Public Alpha Notes</a>
 </div>
 
+## Current Development Note
+
+Recent Monolith development is focused on importing LLMGauge artifacts into the local workbench: import tables, artifact metadata parsing, importer architecture, listing pages, detail pages, and sidebar UI polish.
+
+That work is active development beyond the current public alpha release metadata, so it should be read as current project direction rather than a packaged release claim.
+
 {{ monolith_status() }}
 
 ## Current Roadmap
