@@ -1,6 +1,6 @@
 +++
 title = "LLMGauge"
-description = "Practical local LLM evaluation on real hardware."
+description = "Local LLM evaluation bench for real consumer hardware."
 template = "project.html"
 weight = 20
 [extra]
@@ -8,28 +8,23 @@ back_label = "Back to Projects"
 back_url = "/projects"
 +++
 
-LLMGauge is WumboLabs' local-first evaluation engine for testing GGUF models through llama.cpp on real hardware.
+LLMGauge is WumboLabs' local LLM evaluation bench for real consumer hardware.
 
-It runs practical prompt suites, captures raw prompts and model outputs, validates result artifacts, supports context ladder tests, captures VRAM behavior, and writes import-ready JSON and Markdown outputs.
+It runs reproducible prompt suites against local GGUF models through llama.cpp, preserves raw and cleaned artifacts, captures runtime metrics and VRAM behavior, validates results, supports reviewable scoring, and compares practical model usefulness without leaderboard hype.
 
-<strong>Private alpha / internal evaluation engine</strong>
+<strong>Flagship WumboLabs evidence engine</strong>
 
 ## Current Checkpoint
 
 <div class="info-grid">
   <div class="info-card">
-    <span class="info-label">Status</span>
-    <strong>Private alpha</strong>
-  </div>
-
-  <div class="info-card">
     <span class="info-label">Current Tag</span>
-    <strong>v0.20</strong>
+    <strong>v0.42</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Role</span>
-    <strong>Evaluation engine</strong>
+    <strong>Evaluation bench</strong>
   </div>
 
   <div class="info-card">
@@ -38,112 +33,142 @@ It runs practical prompt suites, captures raw prompts and model outputs, validat
   </div>
 
   <div class="info-card">
-    <span class="info-label">Focus</span>
-    <strong>Batch, VRAM, and import workflows</strong>
+    <span class="info-label">Hardware</span>
+    <strong>Consumer GPUs</strong>
   </div>
 
   <div class="info-card">
-    <span class="info-label">UI Layer</span>
-    <strong>Monolith</strong>
+    <span class="info-label">Core Output</span>
+    <strong>Artifacts and reports</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Claim Style</span>
+    <strong>Conservative / evidence-backed</strong>
   </div>
 </div>
 
-LLMGauge has moved beyond its v0.13 importer-readiness checkpoint. The current v0.20 line adds model batch runs, batch validation, batch export-index support, VRAM metadata, deterministic baseline checks, and scored comparison summaries.
+LLMGauge has advanced well beyond the older v0.20 website description. The current v0.42 line includes setup diagnostics, model profile onboarding, dry-run preflight, cleaned output artifacts, manual scoring validation, assisted score drafts, scoring provenance, Fit Ladder artifact workflows, comparison reports, and export indexes.
 
-This is not a polished public release. LLMGauge remains an internal WumboLabs evaluation engine unless a separate public-release and licensing decision is made.
+The goal is not to crown universal benchmark winners. The goal is to preserve enough evidence to answer practical local model questions: what fits, what runs, what fails, what is useful, and what claims the artifacts actually support.
 
-## How It Fits
-
-LLMGauge and Monolith have separate responsibilities.
-
-LLMGauge runs prompt suites, creates result folders, validates artifacts, captures performance/VRAM data, and writes portable files.
-
-Monolith is the operator and interface layer. It imports, displays, annotates, compares, and manages those results.
-
-<details class="project-details">
-<summary>What LLMGauge does</summary>
+## What LLMGauge Measures
 
 <div class="feature-grid">
   <div class="feature-card">
-    <h3>Runs controlled prompt suites</h3>
-    <p>Executes curated local evaluation suites against configured model profiles instead of relying on ad hoc one-off prompts.</p>
+    <h3>Usefulness</h3>
+    <p>Does the model complete practical Linux, coding, config, local AI, and workflow tasks?</p>
   </div>
 
   <div class="feature-card">
-    <h3>Preserves raw artifacts</h3>
-    <p>Keeps raw prompts, raw model outputs, stderr logs, Markdown reports, machine-readable result JSON, and VRAM samples.</p>
+    <h3>Honesty and safety</h3>
+    <p>Does it avoid invented tools, unsafe commands, fake packages, and overconfident unsupported claims?</p>
   </div>
 
   <div class="feature-card">
-    <h3>Validates results</h3>
-    <p>Checks single-run, context-ladder, model-batch, and export-index artifacts before downstream tools import or compare them.</p>
+    <h3>Fit and performance</h3>
+    <p>How fast does it run, how much VRAM does it use, and how much headroom remains?</p>
   </div>
 
   <div class="feature-card">
-    <h3>Tests context behavior</h3>
-    <p>Runs the same evaluation across bounded context sizes, with explicit opt-in required for extreme context tests.</p>
+    <h3>Reproducibility</h3>
+    <p>Can the run be validated, reviewed, scored, compared, and understood later from preserved artifacts?</p>
   </div>
 </div>
-
-</details>
 
 <details class="project-details">
 <summary>Current capabilities</summary>
 
-- Run local GGUF / llama.cpp model evaluations from controlled prompt suites.
-- Preserve raw prompts, raw outputs, logs, reports, and JSON summaries.
-- Capture prompt-level NVIDIA VRAM usage through `nvidia-smi`.
-- Report peak VRAM, total VRAM, headroom, initial usage, final usage, GPU name, and sample count.
-- Validate single-run artifacts.
-- Validate context-ladder artifacts.
-- Run manifest-driven model batches across existing model profiles.
-- Validate model-batch parent artifacts and completed child result directories.
-- Generate export indexes for run, ladder, and batch artifacts.
-- Include validation and VRAM metadata in export indexes.
-- Run deterministic baseline checks against completed result artifacts.
-- Support manual scoring and scored comparison summaries.
-- Document artifact schemas and the Monolith bridge contract.
+- Check local setup readiness with `doctor`.
+- Create ignored local config files with `init-config`.
+- Inspect configured model profiles with `list-model-profiles`.
+- Validate built-in and custom prompt suites.
+- Run one prompt, one category, or a full suite.
+- Preview run plans with `run --dry-run`.
+- Preview context ladders with `run-ladder --dry-run`.
+- Run explicit context fallback tests with `fit-ladder`.
+- Validate result, ladder, batch, and Fit Ladder artifacts.
+- Preserve raw prompts and raw model outputs.
+- Generate cleaned output previews for easier review.
+- Capture stderr logs, runtime metadata, speed metrics, and prompt-level NVIDIA VRAM samples.
+- Generate Markdown reports and machine-readable JSON result files.
+- Initialize, validate, and apply manual scoring files.
+- Create deterministic assisted score drafts with review-required provenance.
+- Surface scoring provenance and review warnings in reports.
+- Compare scored result directories.
+- Generate export indexes for downstream reporting/import workflows.
 
 </details>
 
 <details class="project-details">
 <summary>Artifact model</summary>
 
-A single LLMGauge run produces a result directory with:
+A single LLMGauge run can include:
 
+- raw prompt
+- raw model output
+- cleaned output preview
+- stderr log
+- runtime metadata
+- speed metrics
+- VRAM samples
 - `llmgauge-result.json`
 - `report.md`
-- raw prompt and output artifacts
-- logs
-- optional VRAM sample artifacts
+- optional `scores.yaml`
+- optional `auto-scores.yaml`
 
-A context ladder produces a ladder directory with:
+Higher-level artifacts include:
 
-- `ladder-summary.json`
-- `ladder-report.md`
-- one child run directory per context size
-
-A model batch produces a batch directory with:
-
-- `batch-summary.json`
-- `batch-report.md`
-- one child run directory per model/profile run
-
-Export indexes use:
-
-- `llmgauge-index.json`
+- context ladder summaries
+- Fit Ladder summaries and reports
+- model batch summaries and reports
+- export indexes for run, ladder, batch, and fit-ladder artifacts
 
 </details>
 
 <details class="project-details">
-<summary>Recent work and guardrails</summary>
+<summary>Scoring and review</summary>
 
-Recent LLMGauge work focused on making evaluation outputs more complete, safer to import, and easier to compare.
+LLMGauge supports structured manual scoring through `scores.yaml`.
 
-The v0.20 line adds manifest-driven model batches, batch validation, batch export-index support, warning-only VRAM guardrails, VRAM metadata in export indexes, baseline checks, and scored comparison summaries.
+The standard scoring workflow is explicit:
 
-Batch manifests reference existing model profile names rather than accepting arbitrary model paths. VRAM capture is read-only and non-fatal if `nvidia-smi` is unavailable.
+    llmgauge score RESULT_DIR --init
+    llmgauge score RESULT_DIR --scores RESULT_DIR/scores.yaml --check
+    llmgauge score RESULT_DIR --scores RESULT_DIR/scores.yaml
 
-LLMGauge is not presented as a hosted service, polished UI, public ranking product, or substitute for Monolith. Its value comes from preserving what was actually run, making outputs auditable, and giving Monolith clean files to import.
+Assisted score drafts are supported, but they are not treated as final human judgment:
+
+    llmgauge score RESULT_DIR --auto-draft
+
+Auto-drafts are deterministic local-rule drafts. They preserve provenance, require review, and do not mutate result artifacts until deliberately validated and applied.
+
+</details>
+
+<details class="project-details">
+<summary>Fit Ladder</summary>
+
+Fit Ladder tests whether a model fits at a requested context size and falls back through smaller contexts when needed.
+
+It is designed for practical questions:
+
+- Does this model fit at 64k?
+- If not, does it fit at 32k, 16k, or 8k?
+- Which context actually works?
+- What failed, and why?
+- What VRAM headroom remains?
+
+Fit Ladder preserves failed attempt directories and selected working attempts instead of hiding failures.
+
+</details>
+
+<details class="project-details">
+<summary>Claim boundaries</summary>
+
+LLMGauge is not a model downloader, automatic judge, synthetic benchmark leaderboard, or universal performance authority.
+
+It complements synthetic benchmarks by testing whether a model is actually useful, honest, safe, complete, and practical on the hardware people really own.
+
+Public claims should stay tied to artifacts, hardware, quantization, runtime settings, context size, scoring status, and known failure modes.
 
 </details>

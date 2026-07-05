@@ -32,7 +32,7 @@
         </div>
         <div>
           <dt>LLMGauge</dt>
-          <dd>v0.20 · private local evaluation engine</dd>
+          <dd>v0.42 · local evaluation bench</dd>
         </div>
         <div>
           <dt>WumboJetsII</dt>
@@ -73,9 +73,9 @@
     </article>
 
     <article class="start-card muted-start-card">
-      <span class="start-label">Internal work</span>
+      <span class="start-label">Flagship project</span>
       <h2>LLMGauge</h2>
-      <p>LLMGauge is a private alpha evaluation engine behind Monolith planning. It is documented as a project record, not the public entry point yet.</p>
+      <p>LLMGauge is the WumboLabs evidence engine: a local-first evaluation bench for testing GGUF models on real consumer hardware.</p>
       <div class="start-actions">
         <a href="{{ get_url(path='/projects/llmgauge/') }}">View record</a>
       </div>
@@ -88,34 +88,34 @@
     <p class="kicker">Recent Lab Activity</p>
     <div class="activity-log">
       <article class="activity-row">
-        <time>2026-06-17</time>
+        <time>2026-07-04</time>
         <div>
-          <strong>Mellum2 tested in LLMGauge</strong>
-          <p>Tested JetBrains Mellum2 Instruct and Thinking Q4_K_M on WumboJetsII across 8k, context ladder, fake-tool, synthetic preload, and 64k agent-backend runs.</p>
+          <strong>LLMGauge v0.42 website refresh</strong>
+          <p>Updated the site around LLMGauge as the WumboLabs evidence engine for practical local model testing on real consumer hardware.</p>
+        </div>
+      </article>
+
+      <article class="activity-row">
+        <time>2026-07-04</time>
+        <div>
+          <strong>Practical model comparison expanded</strong>
+          <p>LLMGauge results now track scored quality, speed, VRAM headroom, fit, failure modes, and conservative model verdicts across the current local comparison set.</p>
+        </div>
+      </article>
+
+      <article class="activity-row">
+        <time>2026-06-21</time>
+        <div>
+          <strong>Gemma 12B practical-use report</strong>
+          <p>Published a WumboJetsII RTX 5070 12GB practical-use test comparing Gemmable 4 12B, Gemma 4 12B QAT Q4, and Gemma 4 12B UD-Q5.</p>
         </div>
       </article>
 
       <article class="activity-row">
         <time>2026-06-17</time>
         <div>
-          <strong>LLMGauge v0.20 checkpoint</strong>
-          <p>LLMGauge now has model batch runs, batch validation, batch export indexes, VRAM reporting, baseline checks, and scored comparison support.</p>
-        </div>
-      </article>
-
-      <article class="activity-row">
-        <time>2026-06-17</time>
-        <div>
-          <strong>Monolith LLMGauge import work</strong>
-          <p>Monolith now has LLMGauge artifact import plumbing, database tables, metadata parsing, import listing pages, detail pages, and sidebar UI polish in active development.</p>
-        </div>
-      </article>
-
-      <article class="activity-row">
-        <time>2026-06-16</time>
-        <div>
-          <strong>LLMGauge importer-readiness page update</strong>
-          <p>Updated LLMGauge framing around its role as a private alpha evaluation engine that writes validated, import-ready artifacts for Monolith.</p>
+          <strong>Mellum2 64k fit testing</strong>
+          <p>Tested Mellum2 Instruct and Thinking Q4_K_M through LLMGauge across 8k, ladder, fake-tool, synthetic preload, and 64k agent-backend runs.</p>
         </div>
       </article>
       <article class="activity-row">
