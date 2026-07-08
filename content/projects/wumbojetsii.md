@@ -2,7 +2,7 @@
 title = "WumboJetsII"
 description = "Arch Linux workstation for daily use, development, local AI testing, GPU experiments, and WumboLabs project work."
 template = "project.html"
-weight = 4
+weight = 3
 [extra]
 back_label = "Back to Projects"
 back_url = "/projects/"
