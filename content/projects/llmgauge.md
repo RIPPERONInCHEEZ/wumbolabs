@@ -1,6 +1,6 @@
 +++
 title = "LLMGauge"
-description = "Local LLM evaluation bench for real consumer hardware."
+description = "Local-first CLI for practical LLM evaluation on real consumer hardware."
 template = "project.html"
 weight = 20
 [extra]
@@ -8,23 +8,28 @@ back_label = "Back to Projects"
 back_url = "/projects"
 +++
 
-LLMGauge is WumboLabs' local LLM evaluation bench for real consumer hardware.
+LLMGauge is WumboLabs' local-first CLI for validating practical local LLM testing workflows on real consumer hardware.
 
-It runs reproducible prompt suites against local GGUF models through llama.cpp, preserves raw and cleaned artifacts, captures runtime metrics and VRAM behavior, validates results, supports reviewable scoring, and compares practical model usefulness without leaderboard hype.
+It runs local GGUF models through llama.cpp, preserves raw and cleaned artifacts, validates result structure, supports manual scoring with rationale, regenerates reports, captures speed and VRAM context, and exports machine-readable indexes for downstream reporting or import workflows.
 
-<strong>Flagship WumboLabs evidence engine</strong>
+<strong>Flagship WumboLabs evidence tool</strong>
 
 ## Current Checkpoint
 
 <div class="info-grid">
   <div class="info-card">
     <span class="info-label">Current Tag</span>
-    <strong>v0.42</strong>
+    <strong>v0.65</strong>
+  </div>
+
+  <div class="info-card">
+    <span class="info-label">Focus</span>
+    <strong>First-run validation</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Role</span>
-    <strong>Evaluation bench</strong>
+    <strong>Evaluation CLI</strong>
   </div>
 
   <div class="info-card">
@@ -38,137 +43,159 @@ It runs reproducible prompt suites against local GGUF models through llama.cpp, 
   </div>
 
   <div class="info-card">
-    <span class="info-label">Core Output</span>
-    <strong>Artifacts and reports</strong>
-  </div>
-
-  <div class="info-card">
     <span class="info-label">Claim Style</span>
-    <strong>Conservative / evidence-backed</strong>
+    <strong>Local evidence, not rankings</strong>
   </div>
 </div>
 
-LLMGauge has advanced well beyond the older v0.20 website description. The current v0.42 line includes setup diagnostics, model profile onboarding, dry-run preflight, cleaned output artifacts, manual scoring validation, assisted score drafts, scoring provenance, Fit Ladder artifact workflows, comparison reports, and export indexes.
+The v0.65 milestone validates the guided first-run setup and clean-clone workflow. The current phase is product validation: making sure a fresh user can clone LLMGauge, configure llama.cpp and model profiles, run real local models, validate artifacts, manually score outputs, regenerate reports, and export indexes without broken paths, unclear commands, or hidden assumptions.
 
-The goal is not to crown universal benchmark winners. The goal is to preserve enough evidence to answer practical local model questions: what fits, what runs, what fails, what is useful, and what claims the artifacts actually support.
+Model results are still useful evidence, but they are secondary to proving the tool works end-to-end.
 
-## What LLMGauge Measures
+## What It Is
+
+LLMGauge is a local-first command-line tool for running practical local LLM evaluations, preserving artifacts, validating results, manually scoring outputs, and generating auditable reports.
+
+It is not a hype benchmark, leaderboard, automatic judge, model downloader, or universal performance authority.
+
+## Workflow
 
 <div class="feature-grid">
   <div class="feature-card">
-    <h3>Usefulness</h3>
-    <p>Does the model complete practical Linux, coding, config, local AI, and workflow tasks?</p>
+    <h3>Setup</h3>
+    <p>Configure llama.cpp and local GGUF model profiles with guided setup commands.</p>
   </div>
 
   <div class="feature-card">
-    <h3>Honesty and safety</h3>
-    <p>Does it avoid invented tools, unsafe commands, fake packages, and overconfident unsupported claims?</p>
+    <h3>Dry run</h3>
+    <p>Resolve suites, model paths, runtime options, and output locations before launching a model.</p>
   </div>
 
   <div class="feature-card">
-    <h3>Fit and performance</h3>
-    <p>How fast does it run, how much VRAM does it use, and how much headroom remains?</p>
+    <h3>Run and validate</h3>
+    <p>Run practical prompt suites through llama.cpp, then validate generated result artifacts.</p>
   </div>
 
   <div class="feature-card">
-    <h3>Reproducibility</h3>
-    <p>Can the run be validated, reviewed, scored, compared, and understood later from preserved artifacts?</p>
+    <h3>Score and export</h3>
+    <p>Apply manual scores with rationale, regenerate reports, and export machine-readable indexes.</p>
   </div>
 </div>
 
 <details class="project-details">
-<summary>Current capabilities</summary>
+<summary>Guided setup in v0.65</summary>
 
-- Check local setup readiness with `doctor`.
-- Create ignored local config files with `init-config`.
-- Inspect configured model profiles with `list-model-profiles`.
-- Validate built-in and custom prompt suites.
-- Run one prompt, one category, or a full suite.
-- Preview run plans with `run --dry-run`.
-- Preview context ladders with `run-ladder --dry-run`.
-- Run explicit context fallback tests with `fit-ladder`.
-- Validate result, ladder, batch, and Fit Ladder artifacts.
-- Preserve raw prompts and raw model outputs.
-- Generate cleaned output previews for easier review.
-- Capture stderr logs, runtime metadata, speed metrics, and prompt-level NVIDIA VRAM samples.
-- Generate Markdown reports and machine-readable JSON result files.
-- Initialize, validate, and apply manual scoring files.
-- Create deterministic assisted score drafts with review-required provenance.
-- Surface scoring provenance and review warnings in reports.
-- Compare scored result directories.
-- Generate export indexes for downstream reporting/import workflows.
+LLMGauge v0.65 adds guided first-run setup:
+
+- `llmgauge setup`
+- `llmgauge setup --scan`
+- `llmgauge setup --non-interactive`
+- explicit `--llama-cli`
+- explicit `--model-path`
+- explicit `--models-dir`
+- explicit `--profile-name`
+
+Setup helps configure the local llama.cpp path and GGUF model profiles.
+
+It does not download models, build llama.cpp, or launch a model during setup.
 
 </details>
 
 <details class="project-details">
-<summary>Artifact model</summary>
+<summary>What LLMGauge can do</summary>
 
-A single LLMGauge run can include:
-
-- raw prompt
-- raw model output
-- cleaned output preview
-- stderr log
-- runtime metadata
-- speed metrics
-- VRAM samples
-- `llmgauge-result.json`
-- `report.md`
-- optional `scores.yaml`
-- optional `auto-scores.yaml`
-
-Higher-level artifacts include:
-
-- context ladder summaries
-- Fit Ladder summaries and reports
-- model batch summaries and reports
-- export indexes for run, ladder, batch, and fit-ladder artifacts
+- Run local GGUF / llama.cpp models.
+- Use practical prompt suites.
+- Capture raw model outputs.
+- Create cleaned outputs for review.
+- Preserve stderr logs.
+- Capture prompt-level NVIDIA VRAM telemetry.
+- Track prompt eval speed and generation speed.
+- Validate result artifact structure.
+- Support manual scoring with rationale.
+- Regenerate scored reports.
+- Create comparison and report artifacts.
+- Export machine-readable index JSON for downstream reporting/import workflows.
+- Support model profiles for repeated local testing.
+- Guard against accidental output directory reuse.
+- Validate clean-clone setup and scripted setup checks.
 
 </details>
 
 <details class="project-details">
-<summary>Scoring and review</summary>
+<summary>Validated v0.65 clean-clone workflow</summary>
 
-LLMGauge supports structured manual scoring through `scores.yaml`.
+The v0.65 workflow validation confirmed:
 
-The standard scoring workflow is explicit:
-
-    llmgauge score RESULT_DIR --init
-    llmgauge score RESULT_DIR --scores RESULT_DIR/scores.yaml --check
-    llmgauge score RESULT_DIR --scores RESULT_DIR/scores.yaml
-
-Assisted score drafts are supported, but they are not treated as final human judgment:
-
-    llmgauge score RESULT_DIR --auto-draft
-
-Auto-drafts are deterministic local-rule drafts. They preserve provenance, require review, and do not mutate result artifacts until deliberately validated and applied.
+- fresh GitHub clone works
+- `uv sync` works
+- `llmgauge --version` reports `0.65.0`
+- `llmgauge setup --help` works
+- `setup --scan` is read-only
+- `setup --non-interactive` creates usable config/profile files
+- `doctor` and `smoke` pass after setup
+- `run --dry-run` resolves model paths and runtime options without launching
+- real model runs launch llama.cpp successfully
+- result artifacts are generated correctly
+- `validate-result` passes before and after scoring
+- `score --init`, `score --check`, and score application work
+- `report.md` updates with scoring status and provenance
+- `export-index` works with positional artifact paths and includes scoring, artifact, and VRAM metadata
 
 </details>
 
 <details class="project-details">
-<summary>Fit Ladder</summary>
+<summary>Recent real validation artifacts</summary>
 
-Fit Ladder tests whether a model fits at a requested context size and falls back through smaller contexts when needed.
+Gemma 4 12B IT UD-Q5_K_XL completed, validated, scored, and indexed through the v0.65 workflow.
 
-It is designed for practical questions:
+- Suite: `wumbolabs-practical-v1`
+- Context: 8192
+- Prompts: 10 / 10 completed
+- Manual score average: 4.29 / 5
+- Verdicts: 7 pass, 3 mixed
+- Peak VRAM: 9631 MiB
+- Minimum VRAM headroom: 2596 MiB
+- Generation speed: about 60-62 tok/s
 
-- Does this model fit at 64k?
-- If not, does it fit at 32k, 16k, or 8k?
-- Which context actually works?
-- What failed, and why?
-- What VRAM headroom remains?
+Mellum2 12B-A2.5B Instruct Q4_K_M also completed and validated through the same workflow, but was not yet scored in that pass.
 
-Fit Ladder preserves failed attempt directories and selected working attempts instead of hiding failures.
+- Suite: `wumbolabs-practical-v1`
+- Context: 8192
+- Prompts: 10 / 10 completed
+- Peak VRAM: 8762 MiB
+- Minimum VRAM headroom: 3465 MiB
+- Generation speed: about 248-264 tok/s
+
+The Mellum2 run validated that adding a second real model profile works, dry-run planning works, existing output directory guards work, and artifacts validate correctly. Its quality appears more mixed and still needs scoring.
+
+</details>
+
+<details class="project-details">
+<summary>Example first-run flow</summary>
+
+    uv sync
+    uv run llmgauge setup --scan
+    uv run llmgauge setup --non-interactive \
+      --llama-cli /path/to/llama-cli \
+      --model-path /path/to/model.gguf \
+      --profile-name my_model
+
+    uv run llmgauge doctor
+    uv run llmgauge smoke
+    uv run llmgauge run --suite practical --model-profile my_model --dry-run
 
 </details>
 
 <details class="project-details">
 <summary>Claim boundaries</summary>
 
-LLMGauge is not a model downloader, automatic judge, synthetic benchmark leaderboard, or universal performance authority.
+LLMGauge results are local evidence, not universal rankings.
 
-It complements synthetic benchmarks by testing whether a model is actually useful, honest, safe, complete, and practical on the hardware people really own.
+Manual scores are review metadata under a stated rubric. Speed and VRAM results are specific to the tested hardware, runtime, quantization, context size, and settings.
 
-Public claims should stay tied to artifacts, hardware, quantization, runtime settings, context size, scoring status, and known failure modes.
+Reports should be read with their publish-readiness notes, scoring provenance, and known failure modes.
+
+LLMGauge exists to make local model testing reproducible, auditable, and grounded in real hardware rather than hype, screenshots, or unverifiable claims.
 
 </details>
