@@ -186,3 +186,40 @@ Prefer work that supports:
 - helping readers understand practical local model tradeoffs
 
 Challenge work that mainly adds internal structure, broad project sprawl, generic portfolio polish, or private-progress infrastructure.
+
+## LLMGauge v0.65 website direction
+
+Status: current content update.
+
+LLMGauge has moved from v0.42 public-proof framing to v0.65 product-validation framing.
+
+Current website emphasis:
+
+- LLMGauge is a local-first CLI/evidence tool for validating local LLM testing workflows on real consumer hardware.
+- The current phase is clean-clone and first-run workflow validation.
+- Model results remain useful evidence, but the priority is proving the tool works end-to-end for a fresh user.
+- Avoid framing the project as a hype benchmark, leaderboard, automatic judge, or “best model” site.
+
+Validated v0.65 workflow:
+
+    fresh clone
+    uv sync
+    llmgauge setup / setup --scan / setup --non-interactive
+    doctor
+    smoke
+    run --dry-run
+    real llama.cpp run
+    validate-result
+    score --init
+    score --check
+    apply score
+    regenerate report
+    export-index
+
+Near-term site implications:
+
+- Update homepage and LLMGauge project page to v0.65.
+- Emphasize guided setup, clean-clone validation, and end-to-end product workflow.
+- Add methodology / claim-boundary page before expanding reports.
+- Do not restructure Benchmarks or Reports in this patch.
+- Keep model-result claims scoped as evidence from local runs, not universal recommendations.

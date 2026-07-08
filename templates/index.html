@@ -6,16 +6,16 @@
 <section class="container lab-hero">
   <div class="lab-hero-grid">
     <div class="lab-hero-copy">
-      <p class="console-label">WUMBOLABS / PUBLIC LAB RECORD</p>
-      <h1>Real systems work, logged from the bench.</h1>
+      <p class="console-label">WUMBOLABS / LOCAL LLM TESTING</p>
+      <h1>Practical local AI testing on real hardware.</h1>
       <p class="lede">
         Real hardware. Real testing. No hype.
       </p>
       <p class="lab-intro">
-        WumboLabs is a public lab record for local AI, Linux workstations,
-        self-hosted infrastructure, and practical software experiments.
-        The work here is tested on real machines, documented as it evolves,
-        and kept close to the tools that produce it.
+        WumboLabs builds and documents practical local AI testing workflows
+        on consumer hardware. LLMGauge is the flagship tool: a local-first CLI
+        for running, validating, scoring, and reporting real GGUF model tests
+        through llama.cpp.
       </p>
     </div>
 
@@ -27,12 +27,8 @@
 
       <dl class="status-list">
         <div>
-          <dt>Monolith</dt>
-          <dd>{{ monolith.current_release }} · local AI workbench</dd>
-        </div>
-        <div>
           <dt>LLMGauge</dt>
-          <dd>v0.42 · local evaluation bench</dd>
+          <dd>v0.65 · local evaluation CLI</dd>
         </div>
         <div>
           <dt>WumboJetsII</dt>
@@ -41,6 +37,10 @@
         <div>
           <dt>Wumbo Core</dt>
           <dd>active · ZFS-backed home infrastructure</dd>
+        </div>
+        <div>
+          <dt>Monolith</dt>
+          <dd>{{ monolith.current_release }} · local AI workbench</dd>
         </div>
       </dl>
     </aside>
@@ -52,12 +52,12 @@
 
   <div class="start-here-grid">
     <article class="start-card primary-start-card">
-      <span class="start-label">Use now</span>
-      <h2>Try Monolith</h2>
-      <p>Monolith is the public technical alpha: a local-first AI workbench for testing and tracking GGUF models on real hardware.</p>
+      <span class="start-label">Flagship project</span>
+      <h2>Start with LLMGauge</h2>
+      <p>LLMGauge is the WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
       <div class="start-actions">
-        <a href="{{ get_url(path='/projects/monolith/') }}">Open project</a>
-        <a href="https://github.com/WumboLabs/monolith">GitHub</a>
+        <a href="{{ get_url(path='/projects/llmgauge/') }}">Open project</a>
+        <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
       </div>
     </article>
 
@@ -73,11 +73,12 @@
     </article>
 
     <article class="start-card muted-start-card">
-      <span class="start-label">Flagship project</span>
-      <h2>LLMGauge</h2>
-      <p>LLMGauge is the WumboLabs evidence engine: a local-first evaluation bench for testing GGUF models on real consumer hardware.</p>
+      <span class="start-label">Workbench layer</span>
+      <h2>Monolith</h2>
+      <p>Monolith is the local AI workbench layer for tracking models and future LLMGauge import workflows.</p>
       <div class="start-actions">
-        <a href="{{ get_url(path='/projects/llmgauge/') }}">View record</a>
+        <a href="{{ get_url(path='/projects/monolith/') }}">View record</a>
+        <a href="https://github.com/WumboLabs/monolith">GitHub</a>
       </div>
     </article>
   </div>
@@ -88,18 +89,18 @@
     <p class="kicker">Recent Lab Activity</p>
     <div class="activity-log">
       <article class="activity-row">
-        <time>2026-07-04</time>
+        <time>2026-07-08</time>
         <div>
-          <strong>LLMGauge v0.42 website refresh</strong>
-          <p>Updated the site around LLMGauge as the WumboLabs evidence engine for practical local model testing on real consumer hardware.</p>
+          <strong>LLMGauge v0.65 first-run validation</strong>
+          <p>Validated guided setup, clean-clone onboarding, doctor/smoke checks, dry-run planning, real llama.cpp runs, artifact validation, manual scoring, report regeneration, and export-index generation.</p>
         </div>
       </article>
 
       <article class="activity-row">
         <time>2026-07-04</time>
         <div>
-          <strong>Practical model comparison expanded</strong>
-          <p>LLMGauge results now track scored quality, speed, VRAM headroom, fit, failure modes, and conservative model verdicts across the current local comparison set.</p>
+          <strong>Product workflow focus</strong>
+          <p>Current LLMGauge work is focused on proving that a fresh user can configure, run, validate, score, report, and export real local model results without hidden assumptions.</p>
         </div>
       </article>
 
