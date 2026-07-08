@@ -1,6 +1,6 @@
 base_url = "https://wumbocore.com"
 title = "WumboLabs"
-description = "Practical Linux, self-hosting, and local AI."
+description = "Local LLM testing on real hardware. Practical evidence. No hype."
 
 compile_sass = false
 build_search_index = true

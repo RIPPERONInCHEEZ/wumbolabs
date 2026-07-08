@@ -2,7 +2,7 @@
 title = "Monolith"
 description = "Local-first AI workbench for testing, comparing, and evaluating local LLMs on real hardware."
 template = "project.html"
-weight = 1
+weight = 4
 [extra]
 back_label = "Back to Projects"
 back_url = "/projects/"
@@ -10,7 +10,7 @@ back_url = "/projects/"
 
 ## Try Monolith
 
-Monolith is the public project on WumboLabs that someone can actually try today.
+Monolith is the local AI workbench layer on WumboLabs: a local web UI for model tracking and future LLMGauge import workflows. LLMGauge remains the flagship public evidence tool.
 
 It is a technical public alpha. Setup is still manual, and it is intended for users comfortable with Linux, Python, local model files, GGUF, and llama.cpp-style workflows.
 

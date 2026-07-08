@@ -26,15 +26,15 @@ The site should support the core thesis:
 
 LLMGauge is the flagship public wedge. The website is the public proof layer. Monolith remains important, but it is secondary for now as the later interface, operator, and import layer.
 
-### 1. Finish LLMGauge v0.42 refresh
+### 1. Finish LLMGauge v0.42 / v0.65 site framing
 
-Status: in progress.
+Status: done (superseded by v0.65).
 
-Update the LLMGauge project page and homepage activity/status from the old v0.20-era framing to the current v0.42-era framing.
+The LLMGauge project page and homepage activity/status were moved off the old v0.20-era framing through a v0.42 public-proof pass, then updated again for v0.65 product-validation and first-run workflow validation.
 
-The page should describe LLMGauge as a local LLM evaluation bench for real consumer hardware, with preserved artifacts, cleaned output, validation, scoring, reports, VRAM/performance capture, Fit Ladder testing, and comparison workflows.
+Current site framing treats LLMGauge as a local-first CLI/evidence tool for validating local LLM testing workflows on real consumer hardware (setup, dry run, real run, validation, scoring, report generation, export-index), not as an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
 
-Do not frame LLMGauge primarily as an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
+Further LLMGauge copy updates should track real releases; they are not the active next website content task.
 
 ### 2. Add methodology and claim boundaries
 
