@@ -190,6 +190,34 @@ If the repository later adds formatters, linters, link checkers, or scripted val
 
 Report what was checked and what was not checked.
 
+## Agent report expectations
+
+For non-trivial audits, content passes, implementation passes, or review tasks, write a full report into the repository-local `temp/` directory before handing work back.
+
+Use a clear filename such as:
+
+    temp/agent-report-YYYY-MM-DD-short-topic.md
+    temp/repo-audit-YYYY-MM-DD.md
+    temp/content-pass-YYYY-MM-DD-short-topic.md
+
+The report should include:
+
+- date
+- branch name
+- task summary
+- files inspected
+- files changed
+- commands run
+- validation results
+- important diffs or change summary
+- assumptions made
+- issues found but intentionally not fixed
+- recommended next steps
+
+The `temp/` directory is scratch space for local review and handoff. Do not commit files from `temp/` unless explicitly instructed.
+
+Reports should be specific enough that the user can inspect the result, compare the report against the git diff, and decide whether to keep, revise, or discard the changes.
+
 ## Git workflow expectations
 
 Work on a branch unless instructed otherwise.
