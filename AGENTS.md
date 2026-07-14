@@ -172,6 +172,36 @@ For the planned Monolith roadmap sync:
 - Prefer manual sync first.
 - Add automation only after the manual workflow is stable and explicitly approved.
 
+## Local preview and browser validation
+
+For website milestones, routine repository-local visual validation is pre-authorized and should not require repeated confirmation.
+
+The agent may:
+
+- start and stop `zola serve` bound only to `127.0.0.1`
+- use a non-production localhost port
+- open and inspect pages served from `http://127.0.0.1`
+- use already-installed local browser or headless-browser tools
+- render desktop and mobile viewport screenshots
+- inspect responsive layout, overflow, focus states, links, headings, landmarks, tables, and code blocks
+- write screenshots and temporary browser output under `temp/`
+- reuse one local preview server and browser session for the milestone
+- terminate only preview and browser processes started for the current milestone
+
+Treat these actions as routine, non-destructive website validation when the current sandbox and permission profile already allow them.
+
+The agent must not:
+
+- bind a preview server to a public or network-accessible interface
+- access unrelated localhost services
+- browse external websites without explicit authorization
+- modify persistent browser profiles or personal browser data
+- install browsers, packages, or system dependencies
+- terminate unrelated processes
+- leave preview servers or browser processes running after validation
+
+Batch visual checks where practical instead of repeatedly starting servers, opening browsers, or requesting approval for equivalent localhost actions.
+
 ## Testing and validation expectations
 
 Before handing work back, run the appropriate local checks.

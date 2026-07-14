@@ -4,6 +4,14 @@
 
 {% block content %}
 <section class="container project-shell">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / PROJECT RECORD</span>
+    <span>READ-ONLY / INSPECTION</span>
+  </div>
+  <nav class="console-record-path" aria-label="Record path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/projects/{{ page.slug }}</span>
+  </nav>
   {% if page.extra.back_url %}
     <p class="page-back">
       <a href="{{ get_url(path=page.extra.back_url) }}">← {{ page.extra.back_label | default(value="Back") }}</a>
