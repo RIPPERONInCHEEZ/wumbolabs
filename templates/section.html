@@ -4,6 +4,14 @@
 
 {% block content %}
 <section class="container section-record">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / INDEX</span>
+    <span>READ-ONLY / FILE LIST</span>
+  </div>
+  <nav class="console-record-path" aria-label="Record path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/{{ section.path | trim_start_matches(pat="/") }}</span>
+  </nav>
   {% if section.extra.back_url %}
     <p class="page-back">
       <a href="{{ get_url(path=section.extra.back_url) }}">← {{ section.extra.back_label | default(value="Back") }}</a>
