@@ -3,179 +3,228 @@
 {% block content %}
 {% set monolith = load_data(path="data/generated/monolith-status.json") %}
 
-<section class="container lab-hero">
-  <div class="lab-hero-grid">
-    <div class="lab-hero-copy">
-      <p class="console-label">WUMBOLABS / LOCAL LLM TESTING</p>
-      <h1>Practical local AI testing on real hardware.</h1>
-      <p class="lede">
-        Real hardware. Real testing. No hype.
-      </p>
-      <p class="lab-intro">
-        WumboLabs builds and documents practical local AI testing workflows
-        on consumer hardware. LLMGauge is the flagship tool: a local-first CLI
-        for running, validating, scoring, and reporting real GGUF model tests
-        through llama.cpp.
-      </p>
+<section class="container operator-home" aria-labelledby="operator-title">
+  <div class="operator-console">
+    <header class="operator-console-bar">
+      <div>
+        <span class="operator-signal" aria-hidden="true"></span>
+        <span>WUMBOLABS :: OPERATOR CONSOLE</span>
+      </div>
+      <span>LOCAL / STATIC / ACTIVE</span>
+    </header>
+
+    <nav class="operator-path-nav" aria-label="Homepage console routes">
+      <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+      <a href="#overview" aria-current="location">/overview</a>
+      <a href="#evidence">/evidence</a>
+      <a href="#activity">/activity</a>
+      <a href="#systems">/systems</a>
+    </nav>
+
+    <div class="operator-overview" id="overview">
+      <div class="operator-pane operator-pane--focus">
+        <div class="panel-topline">
+          <span>OVERVIEW / PRIMARY</span>
+          <span class="status-dot">FOCUSED</span>
+        </div>
+        <p class="console-label">WUMBOLABS / LOCAL LLM TESTING</p>
+        <h1 id="operator-title">Practical local AI testing on real hardware.</h1>
+        <p class="lede">Real hardware. Real testing. No hype.</p>
+        <p class="operator-intro">
+          WumboLabs builds and documents practical local AI testing workflows
+          on consumer hardware. LLMGauge is the flagship tool: a local-first CLI
+          for running, validating, scoring, and reporting real GGUF model tests
+          through llama.cpp.
+        </p>
+        <dl class="operator-metadata" aria-label="Evaluation context">
+          <div><dt>MODE</dt><dd>local-first</dd></div>
+          <div><dt>RUNTIME</dt><dd>llama.cpp</dd></div>
+          <div><dt>EVIDENCE</dt><dd>validated artifacts</dd></div>
+        </dl>
+      </div>
+
+      <aside class="lab-status-panel operator-status" aria-label="Current lab status">
+        <div class="panel-topline">
+          <span>LAB STATUS / 04 SYSTEMS</span>
+          <span class="status-dot">ACTIVE</span>
+        </div>
+        <dl class="status-list">
+          <div>
+            <dt><a href="{{ get_url(path='/projects/llmgauge/') }}">LLMGauge</a></dt>
+            <dd>v0.65 · local evaluation CLI</dd>
+          </div>
+          <div>
+            <dt><a href="{{ get_url(path='/projects/wumbojetsii/') }}">WumboJetsII</a></dt>
+            <dd>active · RTX 5070 Linux workstation</dd>
+          </div>
+          <div>
+            <dt><a href="{{ get_url(path='/projects/wumbo-core/') }}">Wumbo Core</a></dt>
+            <dd>active · ZFS-backed home infrastructure</dd>
+          </div>
+          <div>
+            <dt><a href="{{ get_url(path='/projects/monolith/') }}">Monolith</a></dt>
+            <dd>{{ monolith.current_release }} · local AI workbench</dd>
+          </div>
+        </dl>
+      </aside>
     </div>
 
-    <aside class="lab-status-panel" aria-label="Current lab status">
+    <section class="operator-pane operator-evidence" id="evidence" aria-labelledby="evidence-title">
       <div class="panel-topline">
-        <span>LAB STATUS</span>
-        <span class="status-dot">ACTIVE</span>
+        <span id="evidence-title">EVIDENCE ROUTES</span>
+        <span>03 TARGETS</span>
       </div>
+      <div class="operator-route-list">
+        <article class="operator-route operator-route--active">
+          <div class="operator-route-key">
+            <span>01</span>
+            <strong>FLAGSHIP PROJECT</strong>
+          </div>
+          <div>
+            <h2>Start with LLMGauge</h2>
+            <p>LLMGauge is the WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
+          </div>
+          <div class="operator-route-links">
+            <a href="{{ get_url(path='/projects/llmgauge/') }}">Open project</a>
+            <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
+          </div>
+        </article>
 
-      <dl class="status-list">
-        <div>
-          <dt>LLMGauge</dt>
-          <dd>v0.65 · local evaluation CLI</dd>
-        </div>
-        <div>
-          <dt>WumboJetsII</dt>
-          <dd>active · RTX 5070 Linux workstation</dd>
-        </div>
-        <div>
-          <dt>Wumbo Core</dt>
-          <dd>active · ZFS-backed home infrastructure</dd>
-        </div>
-        <div>
-          <dt>Monolith</dt>
-          <dd>{{ monolith.current_release }} · local AI workbench</dd>
-        </div>
-      </dl>
-    </aside>
-  </div>
-</section>
+        <article class="operator-route">
+          <div class="operator-route-key">
+            <span>02</span>
+            <strong>READ THE RECORD</strong>
+          </div>
+          <div>
+            <h2>Lab notes and benchmarks</h2>
+            <p>Read practical notes from local AI, Linux, self-hosting, infrastructure, and real hardware testing.</p>
+          </div>
+          <div class="operator-route-links">
+            <a href="{{ get_url(path='/projects/') }}">Projects</a>
+            <a href="{{ get_url(path='/lab-notes/') }}">Lab Notes</a>
+            <a href="{{ get_url(path='/benchmarks/') }}">Benchmarks</a>
+          </div>
+        </article>
 
-<section class="container start-here-section">
-  <p class="kicker">Start Here</p>
-
-  <div class="start-here-grid">
-    <article class="start-card primary-start-card">
-      <span class="start-label">Flagship project</span>
-      <h2>Start with LLMGauge</h2>
-      <p>LLMGauge is the WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
-      <div class="start-actions">
-        <a href="{{ get_url(path='/projects/llmgauge/') }}">Open project</a>
-        <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
+        <article class="operator-route">
+          <div class="operator-route-key">
+            <span>03</span>
+            <strong>WORKBENCH LAYER</strong>
+          </div>
+          <div>
+            <h2>Monolith</h2>
+            <p>Monolith is the local AI workbench layer for tracking models and future LLMGauge import workflows.</p>
+          </div>
+          <div class="operator-route-links">
+            <a href="{{ get_url(path='/projects/monolith/') }}">View record</a>
+            <a href="https://github.com/WumboLabs/monolith">GitHub</a>
+          </div>
+        </article>
       </div>
-    </article>
+    </section>
 
-    <article class="start-card">
-      <span class="start-label">Read the record</span>
-      <h2>Lab notes and benchmarks</h2>
-      <p>Read practical notes from local AI, Linux, self-hosting, infrastructure, and real hardware testing.</p>
-      <div class="start-actions">
-        <a href="{{ get_url(path='/projects/') }}">Projects</a>
-        <a href="{{ get_url(path='/lab-notes/') }}">Lab Notes</a>
-        <a href="{{ get_url(path='/benchmarks/') }}">Benchmarks</a>
-      </div>
-    </article>
-
-    <article class="start-card muted-start-card">
-      <span class="start-label">Workbench layer</span>
-      <h2>Monolith</h2>
-      <p>Monolith is the local AI workbench layer for tracking models and future LLMGauge import workflows.</p>
-      <div class="start-actions">
-        <a href="{{ get_url(path='/projects/monolith/') }}">View record</a>
-        <a href="https://github.com/WumboLabs/monolith">GitHub</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="container split-section">
-  <div>
-    <p class="kicker">Recent Lab Activity</p>
-    <div class="activity-log">
-      <article class="activity-row">
-        <time>2026-07-08</time>
-        <div>
-          <strong>LLMGauge v0.65 first-run validation</strong>
-          <p>Validated guided setup, clean-clone onboarding, doctor/smoke checks, dry-run planning, real llama.cpp runs, artifact validation, manual scoring, report regeneration, and export-index generation.</p>
+    <div class="operator-workspace" id="activity">
+      <section class="operator-pane" aria-labelledby="activity-title">
+        <div class="panel-topline">
+          <span id="activity-title">RECENT LAB ACTIVITY</span>
+          <span>07 RECORDS</span>
         </div>
-      </article>
+        <div class="activity-log">
+          <article class="activity-row">
+            <time>2026-07-08</time>
+            <div>
+              <strong>LLMGauge v0.65 first-run validation</strong>
+              <p>Validated guided setup, clean-clone onboarding, doctor/smoke checks, dry-run planning, real llama.cpp runs, artifact validation, manual scoring, report regeneration, and export-index generation.</p>
+            </div>
+          </article>
 
-      <article class="activity-row">
-        <time>2026-07-04</time>
-        <div>
-          <strong>Product workflow focus</strong>
-          <p>Current LLMGauge work is focused on proving that a fresh user can configure, run, validate, score, report, and export real local model results without hidden assumptions.</p>
-        </div>
-      </article>
+          <article class="activity-row">
+            <time>2026-07-04</time>
+            <div>
+              <strong>Product workflow focus</strong>
+              <p>Current LLMGauge work is focused on proving that a fresh user can configure, run, validate, score, report, and export real local model results without hidden assumptions.</p>
+            </div>
+          </article>
 
-      <article class="activity-row">
-        <time>2026-06-21</time>
-        <div>
-          <strong>Gemma 12B practical-use report</strong>
-          <p>Published a WumboJetsII RTX 5070 12GB practical-use test comparing Gemmable 4 12B, Gemma 4 12B QAT Q4, and Gemma 4 12B UD-Q5.</p>
-        </div>
-      </article>
+          <article class="activity-row">
+            <time>2026-06-21</time>
+            <div>
+              <strong>Gemma 12B practical-use report</strong>
+              <p>Published a WumboJetsII RTX 5070 12GB practical-use test comparing Gemmable 4 12B, Gemma 4 12B QAT Q4, and Gemma 4 12B UD-Q5.</p>
+            </div>
+          </article>
 
-      <article class="activity-row">
-        <time>2026-06-17</time>
-        <div>
-          <strong>Mellum2 64k fit testing</strong>
-          <p>Tested Mellum2 Instruct and Thinking Q4_K_M through LLMGauge across 8k, ladder, fake-tool, synthetic preload, and 64k agent-backend runs.</p>
-        </div>
-      </article>
-      <article class="activity-row">
-        <time>2026-06-14</time>
-        <div>
-          <strong>Homepage redesign started</strong>
-          <p>Moving WumboLabs away from generic AI landing-page structure and toward a public lab-console layout.</p>
-        </div>
-      </article>
+          <article class="activity-row">
+            <time>2026-06-17</time>
+            <div>
+              <strong>Mellum2 64k fit testing</strong>
+              <p>Tested Mellum2 Instruct and Thinking Q4_K_M through LLMGauge across 8k, ladder, fake-tool, synthetic preload, and 64k agent-backend runs.</p>
+            </div>
+          </article>
 
-      <article class="activity-row">
-        <time>2026-06-13</time>
-        <div>
-          <strong>Monolith website sync shipped</strong>
-          <p>Website now consumes public-safe Monolith metadata and roadmap content directly from the Monolith repo.</p>
-        </div>
-      </article>
+          <article class="activity-row">
+            <time>2026-06-14</time>
+            <div>
+              <strong>Homepage redesign started</strong>
+              <p>Moving WumboLabs away from generic AI landing-page structure and toward a public lab-console layout.</p>
+            </div>
+          </article>
 
-      <article class="activity-row">
-        <time>2026-06-13</time>
-        <div>
-          <strong>Public roadmap block cleaned up</strong>
-          <p>Monolith roadmap sync now reads like a roadmap: current phase, next milestone, upcoming phases, and future direction.</p>
-        </div>
-      </article>
-    </div>
-  </div>
+          <article class="activity-row">
+            <time>2026-06-13</time>
+            <div>
+              <strong>Monolith website sync shipped</strong>
+              <p>Website now consumes public-safe Monolith metadata and roadmap content directly from the Monolith repo.</p>
+            </div>
+          </article>
 
-  <aside class="terminal-note">
-    <div class="terminal-title">working rule</div>
-    <pre><code>claims need evidence
+          <article class="activity-row">
+            <time>2026-06-13</time>
+            <div>
+              <strong>Public roadmap block cleaned up</strong>
+              <p>Monolith roadmap sync now reads like a roadmap: current phase, next milestone, upcoming phases, and future direction.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="operator-side-stack">
+        <div class="terminal-note">
+          <div class="terminal-title">working rule</div>
+          <pre><code>claims need evidence
 systems need rollback paths
 benchmarks need context
 notes beat memory</code></pre>
-  </aside>
-</section>
+        </div>
 
-<section class="container split-section">
-  <div>
-    <p class="kicker">Field Notes</p>
-    <h2 class="section-title">Change logs, test notes, breakage, repairs, and decisions from the lab.</h2>
-    <p>
-      This is where the working record belongs: local model tests, setup notes,
-      system changes, failed experiments, recovery steps, and project decisions
-      that are worth keeping outside a chat thread.
-    </p>
-    <p>
-      <a class="text-link" href="{{ get_url(path='/lab-notes/') }}">Open lab notes →</a>
-    </p>
-  </div>
-
-  <div>
-    <p class="kicker">System Inventory</p>
-    <div class="inventory-list">
-      <div><span>WumboJetsII</span><strong>Arch workstation / RTX 5070</strong></div>
-      <div><span>WumboServer</span><strong>Docker / ZFS / media infrastructure</strong></div>
-      <div><span>WumboMobile</span><strong>Debian laptop / remote work terminal</strong></div>
-      <div><span>Monolith</span><strong>local AI workbench under active development</strong></div>
+        <section class="operator-pane operator-field-notes" aria-labelledby="notes-title">
+          <div class="panel-topline">
+            <span id="notes-title">FIELD NOTES</span>
+            <span>OPEN LOG</span>
+          </div>
+          <h2 class="section-title">Change logs, test notes, breakage, repairs, and decisions from the lab.</h2>
+          <p>
+            This is where the working record belongs: local model tests, setup notes,
+            system changes, failed experiments, recovery steps, and project decisions
+            that are worth keeping outside a chat thread.
+          </p>
+          <p><a class="text-link" href="{{ get_url(path='/lab-notes/') }}">Open lab notes →</a></p>
+        </section>
+      </aside>
     </div>
+
+    <section class="operator-pane operator-systems" id="systems" aria-labelledby="systems-title">
+      <div class="panel-topline">
+        <span id="systems-title">SYSTEM INVENTORY</span>
+        <span>04 NODES</span>
+      </div>
+      <div class="inventory-list">
+        <div><span>WumboJetsII</span><strong><a href="{{ get_url(path='/projects/wumbojetsii/') }}">Arch workstation / RTX 5070</a></strong></div>
+        <div><span>WumboServer</span><strong>Docker / ZFS / media infrastructure</strong></div>
+        <div><span>WumboMobile</span><strong>Debian laptop / remote work terminal</strong></div>
+        <div><span>Monolith</span><strong><a href="{{ get_url(path='/projects/monolith/') }}">local AI workbench under active development</a></strong></div>
+      </div>
+    </section>
   </div>
 </section>
 {% endblock content %}
