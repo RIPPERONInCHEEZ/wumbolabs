@@ -192,7 +192,7 @@ Report what was checked and what was not checked.
 
 ## Agent report expectations
 
-For non-trivial audits, content passes, implementation passes, or review tasks, write a full report into the repository-local `temp/` directory before handing work back.
+For non-trivial audits, content passes, implementation passes, or review tasks, write a structured report into the repository-local `temp/` directory before handing work back.
 
 Use a clear filename such as:
 
@@ -200,41 +200,84 @@ Use a clear filename such as:
     temp/repo-audit-YYYY-MM-DD.md
     temp/content-pass-YYYY-MM-DD-short-topic.md
 
-The report should include:
+The report must be the agent's final file-writing action.
 
-- date
-- branch name
+Include:
+
+- verified starting branch and HEAD
+- working branch
 - task summary
+- complete tracked diff scope
 - files inspected
 - files changed
+- decisions made
 - commands run
-- validation results
-- important diffs or change summary
-- assumptions made
-- issues found but intentionally not fixed
-- recommended next steps
+- actual validation results
+- self-review findings and corrections
+- assumptions
+- intentionally deferred issues
+- residual risks
+- explicit PASS or FAIL
+- exact recommended next action
 
-The `temp/` directory is scratch space for local review and handoff. Do not commit files from `temp/` unless explicitly instructed.
+Do not report PASS while an in-scope Critical, High, or Medium finding remains unresolved.
 
-Reports should be specific enough that the user can inspect the result, compare the report against the git diff, and decide whether to keep, revise, or discard the changes.
+The `temp/` directory is scratch space for local review and handoff. Do not stage or commit files from `temp/` unless explicitly instructed.
+
+Reports must be specific enough for the user to compare the report against the complete Git diff and decide whether to keep, revise, or discard the changes.
+
+## Agent workflow and responsibility boundaries
+
+Use one agent for each bounded milestone unless multi-agent work is explicitly requested.
+
+The agent may:
+
+- verify the repository baseline
+- create and switch to the named branch
+- inspect the repository
+- make scoped changes
+- run local, non-destructive validation
+- review and correct the complete final diff
+- write the final review report
+
+The human retains exclusive control over:
+
+- staging
+- commits
+- merges
+- branch deletion
+- pushes
+- tags
+- releases
+- history rewriting
+
+The agent must not perform those human-controlled Git operations.
+
+Before editing, verify the expected branch, HEAD, remote relationship, and working-tree state. Stop and report a material discrepancy instead of guessing.
+
+Keep handoffs lean and milestone-specific. Stable repository policy belongs in this file. Task prompts should define the concrete outcome, essential context, hard constraints, validation, report path, and exact next action.
+
+Do not use subagents or multi-agent orchestration unless explicitly requested.
+
+Do not use destructive Git commands.
+
+Do not use network access, install dependencies, modify host or system configuration, write outside the repository, invoke external services, or run expensive workloads unless explicitly authorized.
 
 ## Git workflow expectations
 
-Work on a branch unless instructed otherwise.
+Work on one bounded branch per milestone unless instructed otherwise.
 
-Keep commits focused.
+Keep changes focused and avoid unrelated cleanup or refactoring.
 
-Use clear commit messages that describe the content or site change.
+Before handing work back:
 
-Provide a concise summary of changed files.
+- run `zola build`
+- run `git diff --check`
+- inspect the complete final tracked diff
+- correct all in-scope findings
+- write the required report under `temp/`
 
-Note unchecked assumptions.
-
-Do not tag releases unless explicitly instructed.
-
-Do not push unless explicitly instructed.
-
-Do not rewrite history unless explicitly requested.
+Do not stage, commit, merge, delete branches, push, tag, publish, release, or rewrite history unless explicitly instructed.
 
 ## File and privacy rules
 
