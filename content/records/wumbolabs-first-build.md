@@ -4,8 +4,9 @@ description = "Notes on building the WumboLabs website as a public lab record."
 date = 2026-06-09
 updated = 2026-06-17
 [extra]
-back_label = "Back to Lab Notes"
-back_url = "/lab-notes/"
+record_type = "LAB NOTE"
+back_label = "Back to Lab Records"
+back_url = "/records/"
 +++
 
 WumboLabs started as a simple static site for documenting local AI, Linux, homelab, and self-hosting work.
@@ -34,15 +35,14 @@ Recent changes focused on making the site easier to understand quickly:
 - redundant homepage project grid removed
 - project pages compacted with collapsible supporting details
 - Monolith quick-start information moved higher on its page
-- LLMGauge reframed as the private/internal evaluation engine behind Monolith planning
+- LLMGauge established as the flagship public evidence tool, with Monolith retained as the local AI workbench layer
 - benchmark results split into separate dated records instead of overloading the baseline page
 - typography shifted toward a restrained terminal/mono feel without making body copy hard to read
 
 The current structure is:
 
 - **Projects** — what exists
-- **Benchmarks** — measured local test results
-- **Lab Notes** — what changed, why it changed, and what was learned
+- **Lab Records** — reports, baselines, fit tests, and notes documenting what was tested, changed, and learned
 - **About** — what WumboLabs is
 
 ## Current Rule

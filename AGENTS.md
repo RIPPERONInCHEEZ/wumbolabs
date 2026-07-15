@@ -174,33 +174,56 @@ For the planned Monolith roadmap sync:
 
 ## Local preview and browser validation
 
-For website milestones, routine repository-local visual validation is pre-authorized and should not require repeated confirmation.
+Automated browser tools are not part of the default validation gate because the agent host may require repeated interactive approval for each browser action.
 
-The agent may:
+Default website validation should use repository-local commands and generated artifacts:
 
-- start and stop `zola serve` bound only to `127.0.0.1`
+- run `zola build`
+- inspect relevant generated files under `public/`
+- inspect generated routes, links, headings, metadata, and redirect artifacts
+- run repository-wide searches for stale links or paths
+- run `git diff --check`
+- inspect the complete final tracked diff
+
+Do not repeatedly request approval for browser-tool actions.
+
+Use `zola serve`, automated browser rendering, screenshots, viewport automation, or scripted interaction checks only when:
+
+- the handoff explicitly requires browser validation; and
+- the current session permission profile allows those actions without repeated approval.
+
+If browser validation begins producing repeated approval prompts:
+
+- stop using the browser tool for the milestone
+- continue with repository-local and generated-output validation
+- record browser validation as not performed
+- state whether manual visual review is required
+- do not treat the missing browser automation as a blocker unless the task depends on behavior that cannot be validated another way
+
+For visual or responsive changes, the normal completion boundary is:
+
+1. The agent implements the scoped change.
+2. The agent runs non-browser validation.
+3. The agent reports PASS or FAIL and states that manual visual review is required when applicable.
+4. The human may run `zola serve` and inspect the result before staging or committing.
+
+When local preview is explicitly authorized, the agent may:
+
+- bind `zola serve` only to `127.0.0.1`
 - use a non-production localhost port
-- open and inspect pages served from `http://127.0.0.1`
-- use already-installed local browser or headless-browser tools
-- render desktop and mobile viewport screenshots
-- inspect responsive layout, overflow, focus states, links, headings, landmarks, tables, and code blocks
-- write screenshots and temporary browser output under `temp/`
-- reuse one local preview server and browser session for the milestone
-- terminate only preview and browser processes started for the current milestone
-
-Treat these actions as routine, non-destructive website validation when the current sandbox and permission profile already allow them.
+- inspect only the site being developed
+- write temporary preview output under `temp/`
+- terminate only processes started for the current milestone
 
 The agent must not:
 
-- bind a preview server to a public or network-accessible interface
+- bind preview services to a public or network-accessible interface
 - access unrelated localhost services
 - browse external websites without explicit authorization
 - modify persistent browser profiles or personal browser data
 - install browsers, packages, or system dependencies
 - terminate unrelated processes
 - leave preview servers or browser processes running after validation
-
-Batch visual checks where practical instead of repeatedly starting servers, opening browsers, or requesting approval for equivalent localhost actions.
 
 ## Testing and validation expectations
 

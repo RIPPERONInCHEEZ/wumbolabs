@@ -3,8 +3,9 @@ title = "Mellum2 Agent Backend Test"
 description = "JetBrains Mellum2 Instruct and Thinking Q4_K_M tested through LLMGauge on WumboJetsII."
 date = 2026-06-17
 [extra]
-back_label = "Back to Benchmarks"
-back_url = "/benchmarks/"
+record_type = "FIT TEST"
+back_label = "Back to Lab Records"
+back_url = "/records/"
 +++
 
 JetBrains Mellum2 12B-A2.5B Instruct Q4_K_M and Thinking Q4_K_M were tested through LLMGauge on WumboJetsII.

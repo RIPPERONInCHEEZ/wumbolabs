@@ -3,8 +3,9 @@ title = "Local LLM Baseline"
 description = "Baseline notes for local LLM testing on WumboJetsII."
 date = 2026-06-09
 [extra]
-back_label = "Back to Benchmarks"
-back_url = "/benchmarks/"
+record_type = "BASELINE"
+back_label = "Back to Lab Records"
+back_url = "/records/"
 +++
 
 This is the starting benchmark record for local LLM testing on WumboJetsII.
