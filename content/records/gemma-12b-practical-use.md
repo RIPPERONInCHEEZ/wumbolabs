@@ -3,8 +3,9 @@ title = "12B Gemma-Based Practical Use Test"
 description = "Gemmable 4 12B, Gemma 4 12B QAT Q4, and Gemma 4 12B UD-Q5 tested through LLMGauge on WumboJetsII."
 date = 2026-06-21
 [extra]
-back_label = "Back to Benchmarks"
-back_url = "/benchmarks/"
+record_type = "REPORT"
+back_label = "Back to Lab Records"
+back_url = "/records/"
 +++
 
 Gemmable 4 12B MTP Q4_K_M, Gemma 4 12B IT QAT UD-Q4_K_XL, and Gemma 4 12B IT UD-Q5_K_XL were tested through LLMGauge on WumboJetsII.
@@ -212,6 +213,8 @@ All three models completed the six-prompt suite with zero runtime failures.
 Gemma 4 12B IT QAT UD-Q4_K_XL was the strongest practical-use result in this comparison. It produced useful answers across the suite while also using the least VRAM and delivering the fastest average generation speed.
 
 Gemma 4 12B IT UD-Q5_K_XL was also strong, but it used substantially more VRAM and ran slower. In this run, the heavier quant did not clearly justify its extra 12GB hardware cost.
+
+The result also showed that quantization weight alone did not determine practical value: the heavier UD-Q5 was slower, used more VRAM, and scored slightly lower in this suite.
 
 Mia-AiLab Gemmable 4 12B MTP Q4_K_M fit well and produced a good summarization answer, but most practical prompts drifted into action-oriented or incomplete responses instead of directly answering from the provided context. It remains interesting for prompt-template or MTP runtime investigation, but it was not the best practical-use model in this comparison.
 

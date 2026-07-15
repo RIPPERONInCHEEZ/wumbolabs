@@ -25,8 +25,8 @@
     {% if page.description %}
       <p class="page-record-description">{{ page.description }}</p>
     {% endif %}
-    {% if page.date %}
-      <p class="page-record-date">{{ page.date }}</p>
+    {% if page.extra.record_type or page.date %}
+      <p class="page-record-date">{% if page.extra.record_type %}{{ page.extra.record_type }}{% endif %}{% if page.extra.record_type and page.date %} / {% endif %}{% if page.date %}{{ page.date }}{% endif %}</p>
     {% endif %}
   </header>
 

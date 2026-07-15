@@ -75,7 +75,7 @@ Keep this short and clearly hardware-scoped.
 
 ### 4. Decide Benchmarks vs Reports structure
 
-Status: planned.
+Status: superseded by `docs/lab-records-migration.md`.
 
 The current Benchmarks section already contains report-like practical-use pages. Do not rush a migration.
 
@@ -87,6 +87,8 @@ Preferred long-term split:
     Lab Notes = process, decisions, and change history
 
 Do not rename or restructure the section until the first curated report format is clear.
+
+The canonical Lab Records plan replaces this split proposal with one `/records/` section for reports, baselines, fit tests, and lab notes.
 
 ### 5. Add Real Hardware Model Reports landing page
 

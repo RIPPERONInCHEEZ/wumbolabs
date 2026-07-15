@@ -30,7 +30,7 @@
         <article class="record-row">
           <div class="record-row-main">
             <span class="record-row-kicker">
-              {% if page.date %}{{ page.date }}{% else %}record {{ loop.index }}{% endif %}
+              {% if page.extra.record_type %}{{ page.extra.record_type }} / {% endif %}{% if page.date %}{{ page.date }}{% else %}record {{ loop.index }}{% endif %}
             </span>
             <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
             {% if page.description %}
