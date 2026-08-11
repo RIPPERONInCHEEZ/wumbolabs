@@ -24,7 +24,7 @@ The site should support the core thesis:
 
     Real Hardware. Real Testing. No Hype.
 
-LLMGauge is the flagship public wedge. The website is the public proof layer. Monolith remains important, but it is secondary for now as the later interface, operator, and import layer.
+LLMGauge is the flagship public evidence tool. wumbOS is the main active development focus. Monolith remains an important supporting project as the interface, operator, and import layer.
 
 ### 1. Finish LLMGauge v0.42 / v0.65 site framing
 
@@ -191,9 +191,9 @@ Challenge work that mainly adds internal structure, broad project sprawl, generi
 
 ## LLMGauge v0.65 website direction
 
-Status: current content update.
+Status: historical framing; a full v0.70 website refresh remains outside the current wumbOS milestone.
 
-LLMGauge has moved from v0.42 public-proof framing to v0.65 product-validation framing.
+This section records the earlier v0.65 product-validation pass.
 
 Current website emphasis:
 

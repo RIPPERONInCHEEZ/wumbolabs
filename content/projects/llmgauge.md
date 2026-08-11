@@ -6,6 +6,8 @@ weight = 1
 [extra]
 back_label = "Back to Projects"
 back_url = "/projects"
+portfolio_status = "FLAGSHIP PROJECT"
+release_status = "FORMAL STABLE RELEASE · v0.70.0"
 +++
 
 LLMGauge is WumboLabs' local-first CLI for validating practical local LLM testing workflows on real consumer hardware.

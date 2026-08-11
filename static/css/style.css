@@ -517,9 +517,7 @@ summary:hover {
 .console-label,
 .panel-topline,
 .bench-key,
-.record-meta,
-.terminal-title,
-.activity-row time {
+.record-meta {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -534,10 +532,8 @@ summary:hover {
 
 
 .lab-status-panel,
-.terminal-note,
 .bench-item,
 .project-record,
-.activity-log,
 .inventory-list {
   background: linear-gradient(180deg, rgba(23, 26, 33, 0.96), rgba(16, 18, 22, 0.96));
   border: 1px solid var(--wl-border);
@@ -634,55 +630,6 @@ summary:hover {
   align-items: start;
 }
 
-.activity-log {
-  display: grid;
-  gap: 0;
-  border-bottom: 0;
-}
-
-.activity-row {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-  border-bottom: 1px solid var(--wl-border);
-}
-
-.activity-row time {
-  color: var(--wl-lime);
-  font-size: 0.72rem;
-  padding-top: 0.15rem;
-}
-
-.activity-row strong {
-  color: var(--wl-text);
-}
-
-.activity-row p {
-  margin: 0.25rem 0 0;
-  color: var(--wl-text-muted);
-}
-
-.terminal-note {
-  padding: 1rem;
-}
-
-.terminal-title {
-  color: var(--wl-lime);
-  font-size: 0.72rem;
-  font-weight: 800;
-  margin-bottom: 0.75rem;
-}
-
-.terminal-note pre {
-  margin: 0;
-  white-space: pre-wrap;
-  color: var(--wl-text-soft);
-}
-
-.terminal-note code {
-  color: var(--wl-text-soft);
-}
 
 .project-records {
   display: grid;
@@ -790,10 +737,6 @@ summary:hover {
     grid-template-columns: 1fr;
   }
 
-  .activity-row {
-    grid-template-columns: 1fr;
-    gap: 0.35rem;
-  }
 
   .record-meta {
     flex-direction: column;
@@ -835,8 +778,6 @@ code,
 .panel-topline,
 .bench-key,
 .record-meta,
-.terminal-title,
-.activity-row time,
 .inventory-list span,
 .text-link {
   font-family: var(--font-mono);
@@ -860,19 +801,15 @@ code,
 }
 
 .lab-status-panel,
-.terminal-note,
 .bench-item,
 .project-record,
-.activity-log,
 .inventory-list {
   position: relative;
 }
 
 .lab-status-panel::before,
-.terminal-note::before,
 .bench-item::before,
 .project-record::before,
-.activity-log::before,
 .inventory-list::before {
   content: "";
   position: absolute;
@@ -884,8 +821,7 @@ code,
   opacity: 0.35;
 }
 
-.lab-status-panel,
-.terminal-note {
+.lab-status-panel {
   background:
     radial-gradient(circle at top right, rgba(198, 255, 51, 0.045), transparent 34%),
     linear-gradient(180deg, rgba(23, 26, 33, 0.98), rgba(12, 14, 19, 0.98));
@@ -894,9 +830,7 @@ code,
 .panel-topline,
 .record-meta,
 .bench-key,
-.activity-row time,
-.inventory-list span,
-.terminal-title {
+.inventory-list span {
   font-weight: 800;
   letter-spacing: 0.14em;
 }
@@ -904,7 +838,6 @@ code,
 .status-list dt,
 .bench-item strong,
 .project-record h2,
-.activity-row strong,
 .inventory-list strong {
   letter-spacing: -0.02em;
 }
@@ -916,31 +849,6 @@ code,
   font-size: 0.8em;
 }
 
-.terminal-note pre {
-  border-left: 2px solid rgba(198, 255, 51, 0.45);
-  padding-left: 0.85rem;
-}
-
-.terminal-note code {
-  font-size: 0.92rem;
-  line-height: 1.7;
-}
-
-.activity-row {
-  position: relative;
-}
-
-.activity-row::before {
-  content: "";
-  position: absolute;
-  left: 1rem;
-  top: 1.25rem;
-  width: 0.45rem;
-  height: 0.45rem;
-  border: 1px solid var(--wl-lime);
-  background: var(--wl-bg);
-  transform: translateX(-1.1rem);
-}
 
 @media (max-width: 560px) {
   body {
@@ -948,9 +856,6 @@ code,
   }
 
 
-  .activity-row::before {
-    display: none;
-  }
 }
 
 /* v0.08 Section record lists */
@@ -1368,8 +1273,7 @@ code,
   outline-offset: 1px;
 }
 
-.operator-overview,
-.operator-workspace {
+.operator-overview {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.75fr);
   gap: 1px;
@@ -1543,35 +1447,6 @@ code,
   text-decoration: none;
 }
 
-.operator-workspace {
-  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.75fr);
-  border-top: 1px solid var(--wl-border);
-}
-
-.operator-side-stack {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 1px;
-  background: var(--wl-border);
-}
-
-.operator-side-stack .terminal-note,
-.operator-side-stack .operator-pane {
-  border: 0;
-  box-shadow: none;
-}
-
-.operator-side-stack .terminal-note {
-  padding: 1.25rem;
-}
-
-.operator-field-notes .section-title {
-  font-size: clamp(1.45rem, 3vw, 2rem);
-}
-
-.operator-field-notes p {
-  color: var(--wl-text-muted);
-}
 
 .operator-systems .inventory-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1591,11 +1466,9 @@ code,
 }
 
 @media (max-width: 900px) {
-  .operator-overview,
-  .operator-workspace {
+  .operator-overview {
     grid-template-columns: 1fr;
   }
-
   .operator-route {
     grid-template-columns: 130px minmax(0, 1fr);
   }
@@ -1640,11 +1513,10 @@ code,
     flex-basis: 100%;
   }
 
-  .operator-pane,
-  .operator-status,
-  .operator-side-stack .terminal-note {
-    padding: 0.9rem;
-  }
+.operator-pane,
+.operator-status {
+  padding: 0.9rem;
+}
 
   .operator-overview h1 {
     font-size: clamp(2.1rem, 11vw, 3rem);
@@ -1729,10 +1601,8 @@ code,
 .info-label,
 .record-meta,
 .start-label,
-.terminal-title,
 .status-list dt,
 .inventory-list span,
-.activity-row time,
 .project-details summary,
 .back-link,
 .footer-brand,
@@ -1760,15 +1630,12 @@ h3 {
 
 .info-card strong,
 .feature-card h3,
-.start-card h2,
-.activity-row strong {
+.start-card h2 {
   letter-spacing: -0.015em;
 }
 
 pre,
-code,
-.terminal-note,
-.terminal-note code {
+code {
   font-family: var(--font-nerd-mono);
 }
 
@@ -1947,5 +1814,131 @@ code,
   .console-record-path {
     margin-left: -0.9rem;
     margin-right: -0.9rem;
+  }
+}
+
+/* Scoped Copper Bench treatment for the wumbOS project record. */
+.operator-route--wumbos {
+  background: rgba(216, 138, 45, 0.055);
+  box-shadow: inset 3px 0 0 rgba(216, 138, 45, 0.78);
+}
+
+.operator-route--wumbos .operator-route-key span,
+.operator-route--wumbos .operator-route-key strong {
+  color: #e1a35a;
+}
+
+.record-row-status {
+  color: var(--wl-lime) !important;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.45rem !important;
+}
+
+.project-shell--wumbos {
+  --wumbos-copper: #d88a2d;
+  --wumbos-border: rgba(216, 138, 45, 0.42);
+}
+
+.project-shell--wumbos .project-file-card {
+  border-left: 2px solid var(--wumbos-copper);
+}
+
+.project-shell--wumbos .project-file-meta div {
+  border-color: var(--wumbos-border);
+}
+
+.project-shell--wumbos .project-file-meta dt,
+.project-shell--wumbos .project-content > p:first-child strong,
+.project-shell--wumbos summary {
+  color: var(--wumbos-copper);
+}
+
+.wumbos-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2.5rem;
+}
+
+.wumbos-cta {
+  border: 1px solid var(--wumbos-copper);
+  color: #f2f2f2;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.65rem 0.8rem;
+}
+
+.wumbos-cta:hover {
+  background: var(--wumbos-copper);
+  color: #0e0b08;
+}
+
+.wumbos-cta--secondary {
+  border-color: var(--wumbos-border);
+  color: var(--wl-text-soft);
+}
+
+.wumbos-architecture,
+.wumbos-status-matrix {
+  display: grid;
+  gap: 0.6rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem;
+  border: 1px solid var(--wl-border);
+  border-left: 2px solid var(--wumbos-copper);
+  background: var(--wl-bg-panel);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.wumbos-architecture > div {
+  border: 1px solid var(--wl-border);
+  color: var(--wl-text-soft);
+  padding: 0.7rem;
+  text-align: center;
+}
+
+.wumbos-architecture > span {
+  color: var(--wumbos-copper);
+  text-align: center;
+}
+
+.wumbos-architecture em {
+  color: var(--wumbos-copper);
+  font-style: normal;
+}
+
+.wumbos-status-matrix > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--wl-border);
+  padding-bottom: 0.6rem;
+}
+
+.wumbos-status-matrix > div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.wumbos-status-matrix strong {
+  color: var(--wl-text);
+}
+
+.wumbos-status-matrix span {
+  color: var(--wumbos-copper);
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .wumbos-status-matrix > div {
+    flex-direction: column;
+  }
+
+  .wumbos-status-matrix span {
+    text-align: left;
   }
 }
