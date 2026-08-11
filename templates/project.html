@@ -3,7 +3,7 @@
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
 
 {% block content %}
-<section class="container project-shell">
+<section class="container project-shell{% if page.extra.wumbos %} project-shell--wumbos{% endif %}">
   <div class="console-record-bar" aria-label="Record context">
     <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / PROJECT RECORD</span>
     <span>READ-ONLY / INSPECTION</span>
