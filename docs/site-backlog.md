@@ -28,13 +28,13 @@ LLMGauge is the flagship public evidence tool. wumbOS is the main active develop
 
 ### 1. Finish LLMGauge v0.42 / v0.65 site framing
 
-Status: done (superseded by v0.65).
+Status: done (superseded by the August 2026 public-status pass).
 
-The LLMGauge project page and homepage activity/status were moved off the old v0.20-era framing through a v0.42 public-proof pass, then updated again for v0.65 product-validation and first-run workflow validation.
+The LLMGauge project page and homepage activity/status were moved off the old v0.20-era framing through a v0.42 public-proof pass, then updated for v0.65 product-validation, later v0.70 metadata, and the August 2026 consistency pass.
 
-Current site framing treats LLMGauge as a local-first CLI/evidence tool for validating local LLM testing workflows on real consumer hardware (setup, dry run, real run, validation, scoring, report generation, export-index), not as an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
+Current site framing treats LLMGauge as the flagship local-first CLI/evidence tool. Formal release is v0.72. Current main is unreleased development toward the v0.73 Generic Core gate. It is not an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
 
-Further LLMGauge copy updates should track real releases; they are not the active next website content task.
+Further LLMGauge copy updates should track real releases versus unreleased main; they are not the active next website content task.
 
 ### 2. Add methodology and claim boundaries
 
@@ -59,19 +59,17 @@ This is the trust bridge between LLMGauge artifacts and public WumboLabs reports
 
 ### 3. Add a current practical baseline summary
 
-Status: near-term.
+Status: superseded in compact form by the Lab Records snapshot.
 
-Add a compact baseline summary to the homepage, Benchmarks index, or future Reports landing page.
+The August 2026 public-status pass added a compact **Current 12GB Reference** and tested/blocked snapshot to `/records/` instead of restoring a homepage model feed.
 
-Current practical-use baseline on WumboJetsII / RTX 5070 12GB:
+Current 12GB reference on WumboJetsII / RTX 5070 12GB:
 
-- Gemma 4 12B IT QAT UD-Q4_K_XL is the current best overall practical-use baseline.
-- Mellum2 Instruct remains the strongest speed candidate.
-- Grug-12B Q4_K_M is viable enough to keep as a public comparison entry.
-- Qwen3.6 35B-A3B is capable but less comfortable as a 12GB default because of VRAM headroom, completion, and safety tradeoffs.
-- Qwen3 14B fits better than Qwen3.6 35B but does not clearly beat Gemma QAT overall.
+- Qwen3.8-27B UD-Q2_K_XL is the current 12GB reference: a strong reviewed coding/technical assistant, not ready for unguarded daily use.
+- Gemma 4 12B GGUF, Mellum2, Grug-12B, and earlier Qwen3 / Qwen3.6 results remain historical baselines.
+- Do not treat producer claims, queued models, or blocked admissions as completed quality verdicts.
 
-Keep this short and clearly hardware-scoped.
+Keep this short and clearly hardware-scoped. Do not restore Recent Lab Activity or add a homepage research queue.
 
 ### 4. Decide Benchmarks vs Reports structure
 
@@ -191,15 +189,15 @@ Challenge work that mainly adds internal structure, broad project sprawl, generi
 
 ## LLMGauge v0.65 website direction
 
-Status: historical framing; a full v0.70 website refresh remains outside the current wumbOS milestone.
+Status: historical framing; superseded by the August 2026 public-status pass (formal v0.72, current main toward v0.73).
 
 This section records the earlier v0.65 product-validation pass.
 
-Current website emphasis:
+Historical website emphasis at that time:
 
 - LLMGauge is a local-first CLI/evidence tool for validating local LLM testing workflows on real consumer hardware.
-- The current phase is clean-clone and first-run workflow validation.
-- Model results remain useful evidence, but the priority is proving the tool works end-to-end for a fresh user.
+- The then-current phase was clean-clone and first-run workflow validation.
+- Model results remain useful evidence, but the priority then was proving the tool works end-to-end for a fresh user.
 - Avoid framing the project as a hype benchmark, leaderboard, automatic judge, or “best model” site.
 
 Validated v0.65 workflow:
@@ -218,10 +216,21 @@ Validated v0.65 workflow:
     regenerate report
     export-index
 
-Near-term site implications:
+Those workflow steps remain part of the mature foundation. Current public pages should describe formal v0.72 plus unreleased main toward v0.73, not treat v0.65/v0.70 as the live release line.
 
-- Update homepage and LLMGauge project page to v0.65.
-- Emphasize guided setup, clean-clone validation, and end-to-end product workflow.
-- Add methodology / claim-boundary page before expanding reports.
-- Do not restructure Benchmarks or Reports in this patch.
-- Keep model-result claims scoped as evidence from local runs, not universal recommendations.
+## Future expanded Lab experience
+
+Status: later concept. Do not implement a competing `/labs/` route while `/records/` is the canonical evidence archive.
+
+A future expanded Lab experience may eventually organize:
+
+- current 12GB reference
+- published reports
+- tested models
+- blocked/failed experiments
+- upcoming tests
+- runtime research
+- hardware platforms
+- methodology
+
+Canonical public route today remains `/records/`.
