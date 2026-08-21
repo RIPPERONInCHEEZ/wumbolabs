@@ -1759,7 +1759,8 @@ code {
 }
 
 .project-content table,
-.page-record-content table {
+.page-record-content table,
+.section-intro table {
   display: block;
   max-width: 100%;
   overflow-x: auto;
@@ -1770,7 +1771,9 @@ code {
 .project-content th,
 .project-content td,
 .page-record-content th,
-.page-record-content td {
+.page-record-content td,
+.section-intro th,
+.section-intro td {
   min-width: 9rem;
   padding: 0.65rem 0.75rem;
   border: 1px solid var(--wl-border);
@@ -1778,7 +1781,8 @@ code {
 }
 
 .project-content th,
-.page-record-content th {
+.page-record-content th,
+.section-intro th {
   color: var(--wl-lime);
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -1817,15 +1821,15 @@ code {
   }
 }
 
-/* Scoped Copper Bench treatment for the wumbOS project record. */
+/* Scoped wumbOS project accents use normal WumboLabs tokens. */
 .operator-route--wumbos {
-  background: rgba(216, 138, 45, 0.055);
-  box-shadow: inset 3px 0 0 rgba(216, 138, 45, 0.78);
+  background: rgba(198, 255, 51, 0.035);
+  box-shadow: inset 3px 0 0 rgba(198, 255, 51, 0.65);
 }
 
 .operator-route--wumbos .operator-route-key span,
 .operator-route--wumbos .operator-route-key strong {
-  color: #e1a35a;
+  color: var(--wl-lime);
 }
 
 .record-row-status {
@@ -1837,12 +1841,12 @@ code {
 }
 
 .project-shell--wumbos {
-  --wumbos-copper: #d88a2d;
-  --wumbos-border: rgba(216, 138, 45, 0.42);
+  --wumbos-accent: var(--wl-lime);
+  --wumbos-border: rgba(198, 255, 51, 0.35);
 }
 
 .project-shell--wumbos .project-file-card {
-  border-left: 2px solid var(--wumbos-copper);
+  border-left: 2px solid var(--wumbos-accent);
 }
 
 .project-shell--wumbos .project-file-meta div {
@@ -1852,7 +1856,7 @@ code {
 .project-shell--wumbos .project-file-meta dt,
 .project-shell--wumbos .project-content > p:first-child strong,
 .project-shell--wumbos summary {
-  color: var(--wumbos-copper);
+  color: var(--wumbos-accent);
 }
 
 .wumbos-cta-row {
@@ -1863,7 +1867,7 @@ code {
 }
 
 .wumbos-cta {
-  border: 1px solid var(--wumbos-copper);
+  border: 1px solid var(--wumbos-accent);
   color: #f2f2f2;
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -1872,7 +1876,7 @@ code {
 }
 
 .wumbos-cta:hover {
-  background: var(--wumbos-copper);
+  background: var(--wumbos-accent);
   color: #0e0b08;
 }
 
@@ -1888,7 +1892,7 @@ code {
   margin: 1.5rem 0 2rem;
   padding: 1rem;
   border: 1px solid var(--wl-border);
-  border-left: 2px solid var(--wumbos-copper);
+  border-left: 2px solid var(--wumbos-accent);
   background: var(--wl-bg-panel);
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -1902,12 +1906,12 @@ code {
 }
 
 .wumbos-architecture > span {
-  color: var(--wumbos-copper);
+  color: var(--wumbos-accent);
   text-align: center;
 }
 
 .wumbos-architecture em {
-  color: var(--wumbos-copper);
+  color: var(--wumbos-accent);
   font-style: normal;
 }
 
@@ -1929,7 +1933,7 @@ code {
 }
 
 .wumbos-status-matrix span {
-  color: var(--wumbos-copper);
+  color: var(--wumbos-accent);
   text-align: right;
 }
 
