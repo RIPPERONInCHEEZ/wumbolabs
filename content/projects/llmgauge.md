@@ -7,7 +7,7 @@ weight = 1
 back_label = "Back to Projects"
 back_url = "/projects"
 portfolio_status = "FLAGSHIP PROJECT"
-release_status = "FORMAL RELEASE · v0.72 · current main toward v0.73"
+release_status = "FORMAL RELEASE · v0.75 · PyPI 0.75.0"
 +++
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.
@@ -21,22 +21,22 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
 <div class="info-grid">
   <div class="info-card">
     <span class="info-label">Formal release</span>
-    <strong>v0.72</strong>
+    <strong>v0.75</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Package</span>
-    <strong>0.72.0</strong>
+    <strong>0.75.0</strong>
   </div>
 
   <div class="info-card">
-    <span class="info-label">Current main</span>
-    <strong>Unreleased toward v0.73</strong>
+    <span class="info-label">Distribution</span>
+    <strong>PyPI · uv tool install</strong>
   </div>
 
   <div class="info-card">
-    <span class="info-label">v0.73 gate</span>
-    <strong>Generic Core</strong>
+    <span class="info-label">v0.75 focus</span>
+    <strong>Profiles + Bundle 2</strong>
   </div>
 
   <div class="info-card">
@@ -50,7 +50,7 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 </div>
 
-v0.72 is the latest formal release. Current `main` contains substantial validated development beyond that tag. Those capabilities are unreleased work toward the v0.73 Generic Core release gate. **v0.73 has not shipped.**
+v0.75 is the latest formal release, published to production PyPI as `llmgauge` 0.75.0 and covered by over 1,100 automated tests. It adds named reasoning / sampling profiles, requested `--min-p` capture, a derived peak-VRAM metric, and read-only Bundle 2 benchmark qualification. Schemas and artifact contracts evolve additively: previously valid v0.74 result directories remain valid.
 
 LLMGauge is not a hype benchmark, leaderboard, automatic judge, model downloader, cloud evaluation service, or autonomous Agent runtime.
 
@@ -88,12 +88,12 @@ LLMGauge is not a hype benchmark, leaderboard, automatic judge, model downloader
 
   <div class="feature-card">
     <h3>Coding Core</h3>
-    <p><code>coding-core-v1</code> 0.1.0 is implemented on current main: eight coding-oriented roles with native run, result, report, manual, structural, hybrid, and bounded live evidence. Generated code is not automatically executed.</p>
+    <p><code>coding-core-v1</code> 0.1.0 ships in the released CLI: eight coding-oriented roles with native run, result, report, manual, structural, hybrid, and bounded live evidence. Generated code is not automatically executed.</p>
   </div>
 
   <div class="feature-card">
     <h3>Generic Core</h3>
-    <p>Current main includes <code>generic-core-v1</code> 0.1.0 as a real discoverable native suite: 13 Core prompts, an exact 4-prompt Smoke profile, and D1–D7 deterministic checks. It is not the completed v0.73 release.</p>
+    <p>The released CLI ships <code>generic-core-v1</code> 0.1.0 as a real discoverable native suite: 13 Core prompts, an exact 4-prompt Smoke profile, and D1–D7 deterministic checks with explicit manual-review boundaries.</p>
   </div>
 </div>
 
@@ -106,9 +106,22 @@ Hybrid and manual review boundaries remain explicit. The D5 generated-code check
 
 </details>
 
+## Reasoning and Sampling Profiles
+
+v0.75 makes generation controls a named, versioned, reproducible part of every run. `llmgauge run --sampling-profile PROFILE_ID` attaches a profile to a run; the selected profile, its content identity, and its provenance are recorded in run metadata, reports, and comparisons.
+
+    llmgauge profiles list
+    llmgauge profiles show qwen3-thinking-v1
+
+The released CLI ships one controlled profile (`controlled-deterministic-v1`) and four primary-source-qualified vendor-aligned profiles (`qwen3-thinking-v1`, `qwen3-nonthinking-v1`, `gemma-4-instruct-v1`, `deepseek-r1-v1`), each with documented source and scope provenance.
+
+A profile records the controls a run requested. It does not prove semantic model reasoning, effective template behavior, or equivalent behavior to vendor-hosted inference. Vendor alignment is operator-declared, not vendor endorsement.
+
+Comparison reports now treat every captured reasoning / sampling / control setting as runtime-mixing evidence, disclose reasoning mode in Comparison Scope, and add a limited-claims notice when effective reasoning mode is unknown, unspecified, or differs across runs.
+
 ## External Benchmark Interoperability
 
-Current main can import, validate, and report authoritative EleutherAI `lm-evaluation-harness` result evidence. LLMGauge does not recreate those benchmarks as native prompts and does not replace their authoritative scoring implementations.
+The released CLI imports, validates, and reports authoritative EleutherAI `lm-evaluation-harness` result evidence. LLMGauge does not recreate those benchmarks as native prompts and does not replace their authoritative scoring implementations.
 
     llmgauge benchmark import
     llmgauge benchmark validate
@@ -116,11 +129,13 @@ Current main can import, validate, and report authoritative EleutherAI `lm-evalu
 
 Qualified Bundle 1: MMLU, ARC Challenge, HellaSwag, WinoGrande, TruthfulQA MC2, GSM8K, HumanEval, and MBPP.
 
+Qualified Bundle 2 (`llmgauge.bundle2.v0`): MMLU-Pro, GPQA (n-shot), and IFEval, at the same pin.
+
 Pinned qualification baseline: EleutherAI `lm-evaluation-harness` v0.4.12, commit `6d642546f4688648fced259eb3302efd36ece5af`.
 
-Real upstream writer validation has been completed for MMLU, ARC Challenge, HellaSwag, WinoGrande, TruthfulQA MC2, and GSM8K. HumanEval and MBPP remain **import / report only** under the current safety boundary. LLMGauge does not automatically execute candidate code for them.
+Real upstream writer validation has been completed for MMLU, ARC Challenge, HellaSwag, WinoGrande, TruthfulQA MC2, and GSM8K. HumanEval and MBPP remain **import / report only** under the current safety boundary. LLMGauge does not automatically execute candidate code for them. Bundle 2 qualification is likewise read-only import evidence, not an LLMGauge-native quality score.
 
-Future Bundle 2 may add MMLU-Pro, GPQA, and IFEval. Later possible environment tracks include Terminal-Bench / Harbor, SWE-bench, and browser/computer-use / OSWorld. Those remain future work.
+Later possible environment tracks include Terminal-Bench / Harbor, SWE-bench, and browser/computer-use / OSWorld. Those remain future work.
 
 ## LocalMaxxing
 
@@ -134,13 +149,13 @@ LocalMaxxing Bundle-1 quality submission is **not implemented**.
 
 ## Runtime and Hardware Provenance
 
-LLMGauge captures reproducible runtime and hardware evidence. Current main also preserves requested and runtime-backed llama.cpp settings such as top-k, seed, independent K/V cache controls, KV offload / parallel evidence, reasoning effort, reasoning budget, fit, reasoning preserve, spec-type, and improved runtime-command evidence.
+LLMGauge captures reproducible runtime and hardware evidence. The released CLI preserves requested and runtime-backed llama.cpp settings such as top-k, `--min-p`, seed, independent K/V cache controls, KV offload / parallel evidence, reasoning effort, reasoning budget, fit, reasoning preserve, spec-type, and improved runtime-command evidence.
 
 Requested settings do not automatically prove effective model behavior, effective template behavior, or observed GPU/CPU placement.
 
-The first bounded native llama.cpp runtime-neutral evidence slice is implemented: request wall-time evidence plus classified failures for runtime-environment failure, model-weight-load OOM, KV-cache OOM, and unclassified unknown. Broader Area 4 work remains future.
+Runtime-neutral evidence now includes request wall-time plus classified failures for runtime-environment failure, model-weight-load OOM, KV-cache OOM, and unclassified unknown — and, for native llama.cpp results, a derived device-scoped peak-VRAM metric (`llmgauge.metric.v1.peak_vram`) computed from preserved per-prompt VRAM samples with calculated provenance and validator recomputation. Results without capture remain unchanged; no cross-runtime VRAM equivalence is implied.
 
-Current main also includes native multi-turn transcript evidence, retry/recovery/state preservation, read-only WumboLabs OMP Agent Harness session-v3 import, and a dedicated Agent Session Review workflow. LLMGauge remains the evaluator / evidence layer, not an autonomous Agent runtime.
+The released CLI also includes native multi-turn transcript evidence, retry/recovery/state preservation, read-only WumboLabs OMP Agent Harness session-v3 import, and a dedicated Agent Session Review workflow. LLMGauge remains the evaluator / evidence layer, not an autonomous Agent runtime.
 
 <details class="project-details">
 <summary>Mature foundation</summary>
@@ -153,13 +168,15 @@ Current main also includes native multi-turn transcript evidence, retry/recovery
 - Context ladders and Fit Ladder.
 - Provenance and evidence fingerprints.
 - Guided setup, doctor, and smoke workflows.
+- PyPI distribution via Trusted Publishing with build-once/publish-exact-artifacts release automation.
 
 </details>
 
 <details class="project-details">
 <summary>Example first-run flow</summary>
 
-    uv tool install git+https://github.com/WumboLabs/llmgauge.git@v0.72
+    uv tool install llmgauge
+    llmgauge --version
     llmgauge setup --scan
     llmgauge setup --non-interactive \
       --llama-cli /path/to/llama-cli \
@@ -169,7 +186,16 @@ Current main also includes native multi-turn transcript evidence, retry/recovery
     llmgauge smoke
     llmgauge run --suite practical --model-profile my_model --dry-run
 
-Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
+For a pinned install: `uv tool install "llmgauge==0.75.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
+
+</details>
+
+<details class="project-details">
+<summary>Links</summary>
+
+- PyPI: <https://pypi.org/project/llmgauge/>
+- GitHub: <https://github.com/WumboLabs/llmgauge>
+- Changelog: <https://github.com/WumboLabs/llmgauge/blob/main/CHANGELOG.md>
 
 </details>
 
@@ -180,7 +206,7 @@ LLMGauge results are local evidence, not universal rankings.
 
 Manual scores are review metadata under a stated rubric. They are not objective proof of model quality. Speed and VRAM results are specific to the tested hardware, runtime, quantization, context size, and settings.
 
-Importing a mainstream benchmark does not mean LLMGauge owns or reimplements that benchmark. Generated code is not automatically executed. Unreleased current-main capabilities have not shipped in v0.72.
+Importing a mainstream benchmark does not mean LLMGauge owns or reimplements that benchmark, and imported external benchmark evidence is not an LLMGauge-native quality score. Generated code is not automatically executed. Sampling-profile selection records requested controls only, and vendor-profile alignment is operator-declared rather than vendor-endorsed.
 
 Reports should be read with their publish-readiness notes, scoring provenance, and known failure modes.
 
