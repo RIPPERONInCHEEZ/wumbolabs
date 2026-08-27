@@ -60,7 +60,7 @@ The early-stop behavior is a feature of WELP transparency: the model failed the 
 
 ## Phase 3 Practical Viability — DO_NOT_ADVANCE
 
-Contract `wlep-practical-viability 0.1.2-draft`, scorer `score_pv.py` (self-test 35/35), 30 tasks x seeds {42,43,44}, thinking OFF baseline.
+Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 35/35), 30 tasks x seeds {42,43,44}, thinking OFF baseline.
 
 | Gate | Threshold | s42 | s43 | s44 | Verdict |
 |---|---|---|---|---|---|
