@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container page-record">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LAB RECORD</span>
+    <span>READ-ONLY / EVIDENCE SUMMARY</span>
+  </div>
+  <nav class="console-record-path" aria-label="Record path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/labs/{{ page.slug }}</span>
+  </nav>
+  <p class="page-back">
+    <a href="{{ get_url(path='/labs/') }}">← Back to Labs</a>
+  </p>
+
+  <p class="console-label">WUMBOLABS / LAB RECORD</p>
+
+  <header class="page-record-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="page-record-description">{{ page.description }}</p>
+    {% endif %}
+    {% if page.extra.status or page.date %}
+      <p class="page-record-date">
+        {% if page.extra.status %}{{ page.extra.status }}{% endif %}
+        {% if page.extra.status and page.date %} / {% endif %}
+        {% if page.date %}{{ page.date }}{% endif %}
+      </p>
+    {% endif %}
+  </header>
+
+  <div class="page-record-content">
+    {{ page.content | safe }}
+  </div>
+</section>
+{% endblock content %}

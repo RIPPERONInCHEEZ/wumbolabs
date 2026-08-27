@@ -1972,3 +1972,119 @@ code {
     grid-template-columns: 1fr;
   }
 }
+
+/* Labs index table */
+
+.labs-table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--wl-border);
+}
+
+.labs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.labs-table th,
+.labs-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--wl-border);
+}
+
+.labs-table th {
+  color: var(--wl-lime);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  background: var(--wl-bg-panel);
+}
+
+.labs-table td {
+  color: var(--wl-text-soft);
+}
+
+.labs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.labs-table tr:hover td {
+  background: var(--wl-bg-elevated);
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid var(--wl-border);
+  color: var(--wl-text-soft);
+}
+
+.status-pill--completed_deep_evaluation {
+  color: var(--wl-lime);
+  border-color: rgba(198, 255, 51, 0.4);
+  background: rgba(198, 255, 51, 0.06);
+}
+
+.status-pill--partial_protocol_development,
+.status-pill--complete_small_model_evaluation {
+  color: var(--wl-gray);
+  border-color: rgba(154, 163, 172, 0.3);
+  background: rgba(154, 163, 172, 0.06);
+}
+
+.status-pill--bounded_early_stop--phase_3_do_not_advance,
+.status-pill--bounded_early_stop {
+  color: #ff9b7a;
+  border-color: rgba(255, 155, 122, 0.3);
+  background: rgba(255, 155, 122, 0.06);
+}
+
+@media (max-width: 700px) {
+  .labs-table-wrap {
+    border: none;
+  }
+
+  .labs-table thead {
+    display: none;
+  }
+
+  .labs-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid var(--wl-border);
+    background: var(--wl-bg-elevated);
+  }
+
+  .labs-table td {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--wl-border);
+  }
+
+  .labs-table td::before {
+    content: attr(data-label);
+    color: var(--wl-lime);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    flex-shrink: 0;
+  }
+
+  .labs-table td:last-child {
+    border-bottom: none;
+  }
+}

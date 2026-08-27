@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container page-record">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LABS</span>
+    <span>READ-ONLY / EVIDENCE INDEX</span>
+  </div>
+  <nav class="console-record-path" aria-label="Record path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/labs</span>
+  </nav>
+
+  <p class="console-label">WUMBOLABS / LABS</p>
+
+  <header class="page-record-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+      <p class="page-record-description">{{ section.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="page-record-content">
+    {{ section.content | safe }}
+  </div>
+
+  {% if section.pages %}
+    <div class="labs-table-wrap">
+      <table class="labs-table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Status</th>
+            <th>Hardware</th>
+            <th>Headline</th>
+            <th>Repo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for page in section.pages %}
+          <tr>
+            <td data-label="Model"><a href="{{ page.permalink }}">{{ page.extra.model }}</a></td>
+            <td data-label="Status"><span class="status-pill status-pill--{{ page.extra.status | lower | replace(from=' ', to='-') | replace(from='/', to='-') }}">{{ page.extra.status }}</span></td>
+            <td data-label="Hardware">{{ page.extra.hardware }}</td>
+            <td data-label="Headline">{{ page.extra.headline }}</td>
+            <td data-label="Repo"><a href="{{ page.extra.repo }}" rel="noopener" target="_blank">GitHub</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Lab Records</h2>
+    <div class="record-list">
+      {% for page in section.pages %}
+        <article class="record-row">
+          <div class="record-row-main">
+            <span class="record-row-kicker">
+              {% if page.extra.status %}{{ page.extra.status }} / {% endif %}{% if page.date %}{{ page.date }}{% endif %}
+            </span>
+            <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+            <p>{{ page.description }}</p>
+          </div>
+          <div class="record-row-link">
+            <a href="{{ page.permalink }}">open →</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+{% endblock content %}
