@@ -132,7 +132,7 @@ MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output 
 - **Canonical evaluation repo:** https://github.com/WumboLabs/eval-ornith-1.5-9b
 - **WELP protocol:** https://github.com/WumboLabs/welp
 - **Labs catalog:** https://github.com/WumboLabs/labs
-- **LocalMaxxing:** see the eval repo README for the submitted speed record.
+- **LocalMaxxing:** Speed result submitted and APPROVED (ID `cmtc6sopl0007o601d7hqrj1z`; decode 102.04 tok/s, prefill 4,046.67 tok/s, Q4_K_M, llama.cpp b10449, RTX 5070 12 GB). Model page: https://www.localmaxxing.com/en/models/ornith-ai/Ornith-1.5-9B
 
 ## Reproduction
 
