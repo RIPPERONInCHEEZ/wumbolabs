@@ -7,7 +7,7 @@ weight = 1
 back_label = "Back to Projects"
 back_url = "/projects"
 portfolio_status = "FLAGSHIP PROJECT"
-release_status = "FORMAL RELEASE · v0.75 · PyPI 0.75.0"
+release_status = "FORMAL RELEASE · v0.76 · PyPI 0.76.0"
 +++
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.
@@ -21,12 +21,12 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
 <div class="info-grid">
   <div class="info-card">
     <span class="info-label">Formal release</span>
-    <strong>v0.75</strong>
+    <strong>v0.76</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Package</span>
-    <strong>0.75.0</strong>
+    <strong>0.76.0</strong>
   </div>
 
   <div class="info-card">
@@ -35,8 +35,8 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 
   <div class="info-card">
-    <span class="info-label">v0.75 focus</span>
-    <strong>Profiles + Bundle 2</strong>
+    <span class="info-label">v0.76 focus</span>
+    <strong>Transcript compare + derivatives</strong>
   </div>
 
   <div class="info-card">
@@ -50,7 +50,7 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 </div>
 
-v0.75 is the latest formal release, published to production PyPI as `llmgauge` 0.75.0 and covered by over 1,100 automated tests. It adds named reasoning / sampling profiles, requested `--min-p` capture, a derived peak-VRAM metric, and read-only Bundle 2 benchmark qualification. Schemas and artifact contracts evolve additively: previously valid v0.74 result directories remain valid.
+v0.76 is the latest formal release, published to production PyPI as `llmgauge` 0.76.0 and covered by over 1,100 automated tests. It adds bounded structural comparison of multi-turn transcript runs and content-default-deny public transcript derivatives. Schemas and artifact contracts evolve additively: previously valid v0.75 result directories remain valid.
 
 LLMGauge is not a hype benchmark, leaderboard, automatic judge, model downloader, cloud evaluation service, or autonomous Agent runtime.
 
@@ -119,6 +119,18 @@ A profile records the controls a run requested. It does not prove semantic model
 
 Comparison reports now treat every captured reasoning / sampling / control setting as runtime-mixing evidence, disclose reasoning mode in Comparison Scope, and add a limited-claims notice when effective reasoning mode is unknown, unspecified, or differs across runs.
 
+## Multi-Turn Transcript Comparison and Public Derivatives
+
+v0.76 makes multi-turn transcript evidence comparable and shareable through review-gated derivatives. When every compared run carries a native transcript, `llmgauge compare RUN_A RUN_B` writes a bounded structural comparison: explicit exact-identity eligibility, a three-way structural classification, role- and order-preserving event listings, and recorded review hooks disclosed exactly as stored. Mixed transcript / single-turn comparison fails closed.
+
+    llmgauge compare run-a run-b --out compare.md
+    llmgauge export-public-comparison run-a run-b --out public-comparison
+    llmgauge export-public-transcript run-a --out public-transcript
+
+The two export commands produce separate, content-default-deny public derivatives (`llmgauge.public_transcript_comparison.v0` and `llmgauge.public_transcript.v0`). Only public-safe structural and review evidence is projected — eligibility results, the structural classification, sanitized model labels, closed vocabularies, and sequence-number-only skeletons — under a closed-world validator; prompts, outputs, private identifiers, paths, and full hashes remain excluded, and adversarial canary fixtures leak nothing. Canonical result and transcript schemas and run fingerprints are unchanged, and the ordinary single-run `export-public` path keeps rejecting transcript-bearing runs.
+
+The comparison computes no session aggregate score, ranking, winner, statistical claim, or semantic judgment, and a sanitized derivative is structural evidence, not proof of answer quality or privacy completeness: every public artifact states that human review is required before publication.
+
 ## External Benchmark Interoperability
 
 The released CLI imports, validates, and reports authoritative EleutherAI `lm-evaluation-harness` result evidence. LLMGauge does not recreate those benchmarks as native prompts and does not replace their authoritative scoring implementations.
@@ -155,7 +167,7 @@ Requested settings do not automatically prove effective model behavior, effectiv
 
 Runtime-neutral evidence now includes request wall-time plus classified failures for runtime-environment failure, model-weight-load OOM, KV-cache OOM, and unclassified unknown — and, for native llama.cpp results, a derived device-scoped peak-VRAM metric (`llmgauge.metric.v1.peak_vram`) computed from preserved per-prompt VRAM samples with calculated provenance and validator recomputation. Results without capture remain unchanged; no cross-runtime VRAM equivalence is implied.
 
-The released CLI also includes native multi-turn transcript evidence, retry/recovery/state preservation, read-only WumboLabs OMP Agent Harness session-v3 import, and a dedicated Agent Session Review workflow. LLMGauge remains the evaluator / evidence layer, not an autonomous Agent runtime.
+The released CLI also includes native multi-turn transcript evidence, transcript-bearing structural comparison, content-default-deny public transcript derivatives, retry/recovery/state preservation, read-only WumboLabs OMP Agent Harness session-v3 import, and a dedicated Agent Session Review workflow. LLMGauge remains the evaluator / evidence layer, not an autonomous Agent runtime.
 
 <details class="project-details">
 <summary>Mature foundation</summary>
@@ -186,7 +198,7 @@ The released CLI also includes native multi-turn transcript evidence, retry/reco
     llmgauge smoke
     llmgauge run --suite practical --model-profile my_model --dry-run
 
-For a pinned install: `uv tool install "llmgauge==0.75.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
+For a pinned install: `uv tool install "llmgauge==0.76.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
 
 </details>
 
@@ -206,7 +218,7 @@ LLMGauge results are local evidence, not universal rankings.
 
 Manual scores are review metadata under a stated rubric. They are not objective proof of model quality. Speed and VRAM results are specific to the tested hardware, runtime, quantization, context size, and settings.
 
-Importing a mainstream benchmark does not mean LLMGauge owns or reimplements that benchmark, and imported external benchmark evidence is not an LLMGauge-native quality score. Generated code is not automatically executed. Sampling-profile selection records requested controls only, and vendor-profile alignment is operator-declared rather than vendor-endorsed.
+Importing a mainstream benchmark does not mean LLMGauge owns or reimplements that benchmark, and imported external benchmark evidence is not an LLMGauge-native quality score. Generated code is not automatically executed. Sampling-profile selection records requested controls only, and vendor-profile alignment is operator-declared rather than vendor-endorsed. Transcript comparison is structural evidence only: no aggregate score, ranking, winner, or semantic judgment is computed, public derivatives exclude raw transcript content by default, and every derivative requires human review before publication.
 
 Reports should be read with their publish-readiness notes, scoring provenance, and known failure modes.
 

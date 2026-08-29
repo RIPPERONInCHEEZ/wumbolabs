@@ -117,9 +117,10 @@ LLMGauge can be described as running practical evaluation suites, preserving raw
 
 Current public release context:
 
-- LLMGauge v0.75 is the latest formal release, published to production PyPI as `llmgauge` 0.75.0.
+- LLMGauge v0.76 is the latest formal release, published to production PyPI as `llmgauge` 0.76.0.
 - v0.74 established the ordinary-user PyPI distribution path; the canonical install is `uv tool install llmgauge`.
 - v0.75 added named reasoning / sampling profiles (`--sampling-profile`, `llmgauge profiles list` / `profiles show`), requested `--min-p` capture, a derived peak-VRAM metric, and read-only Bundle 2 benchmark qualification. Vendor-aligned profile alignment is operator-declared, not vendor-endorsed.
+- v0.76 added bounded structural comparison of multi-turn transcript runs (`llmgauge compare`) and content-default-deny public transcript derivatives (`llmgauge export-public-comparison`, `llmgauge export-public-transcript`). Comparison is structural evidence only: no aggregate score, ranking, winner, statistical claim, or semantic judgment, and every public derivative requires human review before publication.
 - Current testing emphasis is product validation.
 - The key workflow is setup, dry run, real run, validation, scoring, report generation, and export-index generation.
 - Model results are useful evidence, but LLMGauge should not be framed as a hype benchmark, leaderboard, automatic judge, or universal model-ranking system.
