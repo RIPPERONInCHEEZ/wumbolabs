@@ -7,7 +7,7 @@ weight = 1
 back_label = "Back to Projects"
 back_url = "/projects"
 portfolio_status = "FLAGSHIP PROJECT"
-release_status = "FORMAL RELEASE · v0.76 · PyPI 0.76.0"
+release_status = "FORMAL RELEASE · v0.77 · PyPI 0.77.0"
 +++
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.
@@ -21,12 +21,12 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
 <div class="info-grid">
   <div class="info-card">
     <span class="info-label">Formal release</span>
-    <strong>v0.76</strong>
+    <strong>v0.77</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Package</span>
-    <strong>0.76.0</strong>
+    <strong>0.77.0</strong>
   </div>
 
   <div class="info-card">
@@ -35,8 +35,8 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 
   <div class="info-card">
-    <span class="info-label">v0.76 focus</span>
-    <strong>Transcript compare + derivatives</strong>
+    <span class="info-label">v0.77 focus</span>
+    <strong>Runtime evidence + TTFT</strong>
   </div>
 
   <div class="info-card">
@@ -50,7 +50,7 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 </div>
 
-v0.76 is the latest formal release, published to production PyPI as `llmgauge` 0.76.0 and covered by over 1,100 automated tests. It adds bounded structural comparison of multi-turn transcript runs and content-default-deny public transcript derivatives. Schemas and artifact contracts evolve additively: previously valid v0.75 result directories remain valid.
+v0.77 is the current formal release, published to production PyPI as `llmgauge` 0.77.0 and covered by over 1,300 automated tests. It expands Area 4 runtime evidence with backend-native llama.cpp timing and placement evidence, vLLM request wall time and request-window peak VRAM, and an opt-in vLLM 0.27.1 streaming path for transport-observed neutral TTFT. It also hardens cross-artifact evidence consistency and public-export privacy. Schemas and artifact contracts evolve additively: previously valid v0.76 result directories remain valid.
 
 LLMGauge is not a hype benchmark, leaderboard, automatic judge, model downloader, cloud evaluation service, or autonomous Agent runtime.
 
@@ -165,7 +165,11 @@ LLMGauge captures reproducible runtime and hardware evidence. The released CLI p
 
 Requested settings do not automatically prove effective model behavior, effective template behavior, or observed GPU/CPU placement.
 
-Runtime-neutral evidence now includes request wall-time plus classified failures for runtime-environment failure, model-weight-load OOM, KV-cache OOM, and unclassified unknown — and, for native llama.cpp results, a derived device-scoped peak-VRAM metric (`llmgauge.metric.v1.peak_vram`) computed from preserved per-prompt VRAM samples with calculated provenance and validator recomputation. Results without capture remain unchanged; no cross-runtime VRAM equivalence is implied.
+Native llama.cpp results now also preserve backend-owned timing evidence (load, prompt-eval, eval/generation, and total) and conservative observed execution placement from llama.cpp diagnostic lines. These are backend-owned observations, not neutral cross-runtime mappings: neutral load, prefill, decode, and TTFT metrics are not emitted for the native path, and layer offload counts are not claimed as full accelerator residency. Results without capture remain unchanged.
+
+External vLLM results now carry runtime-neutral request wall time and request-window peak VRAM evidence. Request wall time is measured from immediately before request serialization through receipt and structural validation of the complete non-streaming response (`llmgauge.metric.v1.request_wall_time`). Request-window peak VRAM (`llmgauge.metric.v1.peak_vram`) records absolute device-used memory observed during the evaluation request window by a bounded concurrent NVIDIA telemetry sampler — not model-private VRAM, a vLLM process footprint, or steady-state usage — and its observation boundary is distinct from the native llama.cpp process-window boundary. Matching metric IDs do not automatically imply cross-runtime equivalence.
+
+Opt-in streaming evidence (`--vllm-streaming-evidence`) adds bounded SSE evidence and a neutral TTFT metric (`llmgauge.metric.v1.time_to_first_token`) measured from the request start boundary to the first backend-generated token observed at the LLMGauge transport boundary. Reasoning tokens count when they are the first generated token exposed by the admitted stream. Streaming TTFT V1 is qualified for exactly vLLM 0.27.1 — not a version range — and the non-streaming default is unchanged. Raw per-request stream evidence is private, and TTFT is intentionally omitted from v1 public exports.
 
 The released CLI also includes native multi-turn transcript evidence, transcript-bearing structural comparison, content-default-deny public transcript derivatives, retry/recovery/state preservation, read-only WumboLabs OMP Agent Harness session-v3 import, and a dedicated Agent Session Review workflow. LLMGauge remains the evaluator / evidence layer, not an autonomous Agent runtime.
 
@@ -198,7 +202,7 @@ The released CLI also includes native multi-turn transcript evidence, transcript
     llmgauge smoke
     llmgauge run --suite practical --model-profile my_model --dry-run
 
-For a pinned install: `uv tool install "llmgauge==0.76.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
+For a pinned install: `uv tool install "llmgauge==0.77.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
 
 </details>
 
@@ -218,7 +222,7 @@ LLMGauge results are local evidence, not universal rankings.
 
 Manual scores are review metadata under a stated rubric. They are not objective proof of model quality. Speed and VRAM results are specific to the tested hardware, runtime, quantization, context size, and settings.
 
-Importing a mainstream benchmark does not mean LLMGauge owns or reimplements that benchmark, and imported external benchmark evidence is not an LLMGauge-native quality score. Generated code is not automatically executed. Sampling-profile selection records requested controls only, and vendor-profile alignment is operator-declared rather than vendor-endorsed. Transcript comparison is structural evidence only: no aggregate score, ranking, winner, or semantic judgment is computed, public derivatives exclude raw transcript content by default, and every derivative requires human review before publication.
+Importing a mainstream benchmark does not mean LLMGauge owns or reimplements that benchmark, and imported external benchmark evidence is not an LLMGauge-native quality score. Generated code is not automatically executed. Sampling-profile selection records requested controls only, and vendor-profile alignment is operator-declared rather than vendor-endorsed. Transcript comparison is structural evidence only: no aggregate score, ranking, winner, or semantic judgment is computed, public derivatives exclude raw transcript content by default, and every derivative requires human review before publication. vLLM streaming evidence is opt-in, not the default; streaming TTFT V1 is qualified for exactly vLLM 0.27.1, not a version range. Request-window peak VRAM is absolute device-used memory observed during the evaluation window, not model-private VRAM or steady-state usage. TTFT is omitted from v1 public exports. Matching metric IDs across runtimes do not automatically imply equivalence. Area 4 runtime evidence is not universally complete.
 
 Reports should be read with their publish-readiness notes, scoring provenance, and known failure modes.
 
