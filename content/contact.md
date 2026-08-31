@@ -9,11 +9,11 @@ back_url = "/"
 If you'd like to discuss local AI, Linux, homelabs, self-hosting, or any of the projects documented on this site, feel free to reach out.
 
 <div class="contact-grid">
-  <a class="contact-card" href="mailto:contact@wumbocore.com">
+  <a class="contact-card" href="mailto:contact@wumbolabs.dev">
     <span class="contact-icon">✉</span>
     <span>
       <strong>Email</strong>
-      <small>contact@wumbocore.com</small>
+      <small>contact@wumbolabs.dev</small>
     </span>
   </a>
 

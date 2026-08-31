@@ -6,7 +6,7 @@ The site is built with Zola and deployed with Cloudflare Pages.
 
 ## Live Site
 
-- https://wumbocore.com
+- https://wumbolabs.dev
 - https://wumbolabs.pages.dev
 
 ## Stack
