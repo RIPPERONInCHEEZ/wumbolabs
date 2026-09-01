@@ -5,3 +5,6 @@ public/
 .DS_Store
 *.swp
 *.swo
+
+# Agent reports and scratch artifacts
+tmp/

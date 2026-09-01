@@ -216,7 +216,7 @@ When local preview is explicitly authorized, the agent may:
 - bind `zola serve` only to `127.0.0.1`
 - use a non-production localhost port
 - inspect only the site being developed
-- write temporary preview output under `temp/`
+- write temporary preview output under `tmp/`
 - terminate only processes started for the current milestone
 
 The agent must not:
@@ -249,13 +249,9 @@ Report what was checked and what was not checked.
 
 ## Agent report expectations
 
-For non-trivial audits, content passes, implementation passes, or review tasks, write a structured report into the repository-local `temp/` directory before handing work back.
-
-Use a clear filename such as:
-
-    temp/agent-report-YYYY-MM-DD-short-topic.md
-    temp/repo-audit-YYYY-MM-DD.md
-    temp/content-pass-YYYY-MM-DD-short-topic.md
+For non-trivial audits, content passes, implementation passes, or review tasks,
+write a structured report at `tmp/<milestone-name>/REPORT.md` before handing
+work back. Do not use any other scratch directory for reports.
 
 The report must be the agent's final file-writing action.
 
@@ -279,13 +275,17 @@ Include:
 
 Do not report PASS while an in-scope Critical, High, or Medium finding remains unresolved.
 
-The `temp/` directory is scratch space for local review and handoff. Do not stage or commit files from `temp/` unless explicitly instructed.
-
 Reports must be specific enough for the user to compare the report against the complete Git diff and decide whether to keep, revise, or discard the changes.
+
+The `tmp/` directory is untracked scratch space for local review and handoff.
+Do not stage or commit files from `tmp/` unless explicitly instructed. The
+final response ends with `REPORT: /absolute/path/to/REPORT.md`.
 
 ## Agent workflow and responsibility boundaries
 
 Use one agent for each bounded milestone unless multi-agent work is explicitly requested.
+
+At the start of each non-trivial task, provide a concise to-do list before performing the work. Use the environment's native task/todo mechanism when available; otherwise provide the list directly in the response. Keep it updated as work progresses and mark items complete as they are finished.
 
 The agent may:
 
@@ -312,7 +312,7 @@ The agent must not perform those human-controlled Git operations.
 
 Before editing, verify the expected branch, HEAD, remote relationship, and working-tree state. Stop and report a material discrepancy instead of guessing.
 
-Keep handoffs lean and milestone-specific. Stable repository policy belongs in this file. Task prompts should define the concrete outcome, essential context, hard constraints, validation, report path, and exact next action.
+Keep handoffs lean and milestone-specific. Stable repository policy belongs in this file. Task prompts should define the concrete outcome, essential context, hard constraints, validation, the exact absolute report path, and the exact next action.
 
 Do not use subagents or multi-agent orchestration unless explicitly requested.
 
@@ -332,7 +332,7 @@ Before handing work back:
 - run `git diff --check`
 - inspect the complete final tracked diff
 - correct all in-scope findings
-- write the required report under `temp/`
+- write the required report under `tmp/<milestone-name>/REPORT.md`
 
 Do not stage, commit, merge, delete branches, push, tag, publish, release, or rewrite history unless explicitly instructed.
 
