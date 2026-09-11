@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "generated_by": "scripts/sync_labs.py from data/labs-registry.json",
+  "records": [
+    {
+      "slug": "apodex-1.1-mini",
+      "model": "Apodex 1.1 mini",
+      "authoring": "hand-authored",
+      "record_date": "2026-08-25",
+      "welp_status": "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-apodex-1.1-mini",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-apodex-1.1-mini"
+      },
+      "record_path": "content/labs/apodex-1.1-mini.md"
+    },
+    {
+      "slug": "lfm2.5-1.2b",
+      "model": "LFM2.5 1.2B",
+      "authoring": "hand-authored",
+      "record_date": "2026-08-26",
+      "welp_status": "COMPLETE_SMALL_MODEL_EVALUATION",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-lfm2.5-1.2b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-lfm2.5-1.2b"
+      },
+      "record_path": "content/labs/lfm2.5-1.2b.md"
+    },
+    {
+      "slug": "lfm2.5-2.6b",
+      "model": "LFM2.5 2.6B",
+      "authoring": "hand-authored",
+      "record_date": "2026-08-26",
+      "welp_status": "COMPLETE_SMALL_MODEL_EVALUATION",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-lfm2.5-2.6b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-lfm2.5-2.6b"
+      },
+      "record_path": "content/labs/lfm2.5-2.6b.md"
+    },
+    {
+      "slug": "nemotron-3-nano-4b",
+      "model": "Nemotron 3 Nano 4B",
+      "authoring": "hand-authored",
+      "record_date": "2026-08-25",
+      "welp_status": "PARTIAL_PROTOCOL_DEVELOPMENT",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b"
+      },
+      "record_path": "content/labs/nemotron-3-nano-4b.md"
+    },
+    {
+      "slug": "ornith-1.5-9b",
+      "model": "Ornith 1.5 9B",
+      "authoring": "hand-authored",
+      "record_date": "2026-08-27",
+      "welp_status": "COMPLETE / FINAL_WELP_READINESS_NOT_READY",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-ornith-1.5-9b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-ornith-1.5-9b"
+      },
+      "record_path": "content/labs/ornith-1.5-9b.md"
+    },
+    {
+      "slug": "qwen3.8-27b",
+      "model": "Qwen3.8-27B",
+      "authoring": "hand-authored",
+      "record_date": "2026-08-21",
+      "welp_status": "COMPLETED_DEEP_EVALUATION",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.8-27b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-qwen3.8-27b"
+      },
+      "record_path": "content/labs/qwen3.8-27b.md"
+    },
+    {
+      "slug": "qwen35-4b",
+      "model": "Qwen3.5-4B",
+      "authoring": "generated",
+      "record_date": "2026-09-09",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "publication_state": "evidence-pending-human-gate",
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-qwen3.5-4b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      },
+      "record_path": "content/labs/qwen35-4b.md",
+      "campaign": "qwen35-4b-rtx5070-baseline-2026-09-09",
+      "welp_outcome": "PASS — QWEN35_4B_RTX5070_BASELINE_CHARACTERIZED",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "935d9f5ede0505d4742535cc5d2b42496c47006081ccde2a35d842995cd2944f",
+      "resolved_commit": null
+    },
+    {
+      "slug": "qwen35-9b",
+      "model": "Qwen3.5-9B",
+      "authoring": "generated",
+      "record_date": "2026-09-09",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "publication_state": "evidence-pending-human-gate",
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-qwen3.5-9b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      },
+      "record_path": "content/labs/qwen35-9b.md",
+      "campaign": "qwen35-9b-rtx5070-baseline-2026-09-09",
+      "welp_outcome": "PASS — QWEN35_9B_RTX5070_BASELINE_CHARACTERIZED",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "b37fbeb2eafd516495d0034ab6d8f609432e63343fc6ac9a2d3258221171962a",
+      "resolved_commit": null
+    },
+    {
+      "slug": "minicpm5-2b",
+      "model": "MiniCPM5-2B",
+      "authoring": "generated",
+      "record_date": "2026-09-10",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "publication_state": "evidence-pending-human-gate",
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-minicpm5-2b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      },
+      "record_path": "content/labs/minicpm5-2b.md",
+      "campaign": "minicpm5-2b-rtx5070-welp-characterization-2026-09-10",
+      "welp_outcome": "PASS — MINICPM5_2B_RTX5070_CHARACTERIZED; MODEL-CARD CONTEXT ENVELOPE COMPLETE = YES",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "efb9f5256bc2b88290ff2f8081019beb19eb695f7331c5490e5aeb6a2c63f4cf",
+      "resolved_commit": null
+    },
+    {
+      "slug": "gemma4-e4b",
+      "model": "Gemma 4 E4B",
+      "authoring": "generated",
+      "record_date": "2026-09-10",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "publication_state": "evidence-pending-human-gate",
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-gemma4-e4b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      },
+      "record_path": "content/labs/gemma4-e4b.md",
+      "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10",
+      "welp_outcome": "PASS — GEMMA4_E4B_EVIDENCE_COMPLETION_COMPLETE",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "aba0f2e9c50b03e418362b18db4ac52dfe469603db4f97173f8b7eea88deb5bf",
+      "resolved_commit": null
+    },
+    {
+      "slug": "qwen38-27b-h1",
+      "model": "Qwen3.8-27B (current H1 profile)",
+      "authoring": "generated",
+      "record_date": "2026-09-09",
+      "welp_status": "COMPLETE / CURRENT_CANONICAL_H1_PROFILE",
+      "publication_state": "evidence-pending-human-gate",
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-qwen3.8-27b (follow-up update)",
+        "note": "Historical eval repository exists and is untouched; the H1 follow-up update package awaits the human publication gate."
+      },
+      "record_path": "content/labs/qwen38-27b-h1.md",
+      "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)",
+      "welp_outcome": "PASS — E18I_H1_CANONICAL_PROMOTION_COMPLETE (E18H: PASS — E18H_H1_VALIDATED_EXPERIMENTAL_PROMOTION_CANDIDATE)",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "7786d7c68a7821c11006768e3c2139d578e7e20fe60079d5714d27d59a195652",
+      "resolved_commit": null
+    }
+  ]
+}

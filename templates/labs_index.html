@@ -45,7 +45,7 @@
             <td data-label="Status"><span class="status-pill status-pill--{{ page.extra.status | lower | replace(from=' ', to='-') | replace(from='/', to='-') }}">{{ page.extra.status }}</span></td>
             <td data-label="Hardware">{{ page.extra.hardware }}</td>
             <td data-label="Headline">{{ page.extra.headline }}</td>
-            <td data-label="Repo"><a href="{{ page.extra.repo }}" rel="noopener" target="_blank">GitHub</a></td>
+            <td data-label="Repo">{% if page.extra.repo %}<a href="{{ page.extra.repo }}" rel="noopener" target="_blank">GitHub</a>{% else %}<span class="status-pill">Evidence pending</span>{% endif %}</td>
           </tr>
           {% endfor %}
         </tbody>

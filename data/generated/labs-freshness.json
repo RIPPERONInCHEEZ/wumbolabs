@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "generated_by": "scripts/sync_labs.py",
+  "source_identities": {
+    "qwen35-4b": {
+      "file": "qwen35-4b/website-publication.json",
+      "sha256": "935d9f5ede0505d4742535cc5d2b42496c47006081ccde2a35d842995cd2944f",
+      "kind": "local-export"
+    },
+    "qwen35-9b": {
+      "file": "qwen35-9b/website-publication.json",
+      "sha256": "b37fbeb2eafd516495d0034ab6d8f609432e63343fc6ac9a2d3258221171962a",
+      "kind": "local-export"
+    },
+    "minicpm5-2b": {
+      "file": "minicpm5-2b/website-publication.json",
+      "sha256": "efb9f5256bc2b88290ff2f8081019beb19eb695f7331c5490e5aeb6a2c63f4cf",
+      "kind": "local-export"
+    },
+    "gemma4-e4b": {
+      "file": "gemma4-e4b/website-publication.json",
+      "sha256": "aba0f2e9c50b03e418362b18db4ac52dfe469603db4f97173f8b7eea88deb5bf",
+      "kind": "local-export"
+    },
+    "qwen38-27b-h1": {
+      "file": "qwen38-27b-h1/website-publication.json",
+      "sha256": "7786d7c68a7821c11006768e3c2139d578e7e20fe60079d5714d27d59a195652",
+      "kind": "local-export"
+    }
+  },
+  "latest_represented_campaigns": [
+    {
+      "slug": "qwen35-4b",
+      "campaign": "qwen35-4b-rtx5070-baseline-2026-09-09"
+    },
+    {
+      "slug": "qwen35-9b",
+      "campaign": "qwen35-9b-rtx5070-baseline-2026-09-09"
+    },
+    {
+      "slug": "minicpm5-2b",
+      "campaign": "minicpm5-2b-rtx5070-welp-characterization-2026-09-10"
+    },
+    {
+      "slug": "gemma4-e4b",
+      "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10"
+    },
+    {
+      "slug": "qwen38-27b-h1",
+      "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)"
+    }
+  ],
+  "pending_website_publication": [
+    "qwen35-4b",
+    "qwen35-9b",
+    "minicpm5-2b",
+    "gemma4-e4b",
+    "qwen38-27b-h1"
+  ],
+  "pending_public_evidence": [
+    "qwen35-4b",
+    "qwen35-9b",
+    "minicpm5-2b",
+    "gemma4-e4b",
+    "qwen38-27b-h1"
+  ],
+  "blocked_records": [],
+  "notes": "Publication state is evidence-identity based; no time-based auto-expiration."
+}

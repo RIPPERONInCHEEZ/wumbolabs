@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "description": "WumboLabs Labs publication registry. Single durable index mapping each Lab Record to its canonical public evidence and publication state. The website is a derivative of canonical public evidence, never a second source of model facts. See docs/labs-publication-workflow.md.",
+  "generated_records_note": "Entries with authoring=generated are written by scripts/sync_labs.py from a website-publication.json export (schema wumbolabs-labs-publication/1). source.file is a relative filename resolved against the --local-exports directory passed to the sync command at runtime; this registry deliberately contains no machine-local absolute paths. source.sha256 pins the exact export bytes consumed; sync fails if the file no longer matches. When canonical evidence is published, switch the entry to source.kind=github-raw with repo/ref/path and publication_state=published.",
+  "hand_authored_records_note": "Entries with authoring=hand-authored are existing static pages that sync never rewrites; sync only verifies the page exists and the slug is unique.",
+  "publication_states": [
+    "published",
+    "evidence-pending-human-gate"
+  ],
+  "records": [
+    {
+      "slug": "apodex-1.1-mini",
+      "authoring": "hand-authored",
+      "record_path": "content/labs/apodex-1.1-mini.md",
+      "model": "Apodex 1.1 mini",
+      "record_date": "2026-08-25",
+      "welp_status": "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-apodex-1.1-mini",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-apodex-1.1-mini"
+      }
+    },
+    {
+      "slug": "lfm2.5-1.2b",
+      "authoring": "hand-authored",
+      "record_path": "content/labs/lfm2.5-1.2b.md",
+      "model": "LFM2.5 1.2B",
+      "record_date": "2026-08-26",
+      "welp_status": "COMPLETE_SMALL_MODEL_EVALUATION",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-lfm2.5-1.2b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-lfm2.5-1.2b"
+      }
+    },
+    {
+      "slug": "lfm2.5-2.6b",
+      "authoring": "hand-authored",
+      "record_path": "content/labs/lfm2.5-2.6b.md",
+      "model": "LFM2.5 2.6B",
+      "record_date": "2026-08-26",
+      "welp_status": "COMPLETE_SMALL_MODEL_EVALUATION",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-lfm2.5-2.6b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-lfm2.5-2.6b"
+      }
+    },
+    {
+      "slug": "nemotron-3-nano-4b",
+      "authoring": "hand-authored",
+      "record_path": "content/labs/nemotron-3-nano-4b.md",
+      "model": "Nemotron 3 Nano 4B",
+      "record_date": "2026-08-25",
+      "welp_status": "PARTIAL_PROTOCOL_DEVELOPMENT",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b"
+      }
+    },
+    {
+      "slug": "ornith-1.5-9b",
+      "authoring": "hand-authored",
+      "record_path": "content/labs/ornith-1.5-9b.md",
+      "model": "Ornith 1.5 9B",
+      "record_date": "2026-08-27",
+      "welp_status": "COMPLETE / FINAL_WELP_READINESS_NOT_READY",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-ornith-1.5-9b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-ornith-1.5-9b"
+      }
+    },
+    {
+      "slug": "qwen3.8-27b",
+      "authoring": "hand-authored",
+      "record_path": "content/labs/qwen3.8-27b.md",
+      "model": "Qwen3.8-27B",
+      "record_date": "2026-08-21",
+      "welp_status": "COMPLETED_DEEP_EVALUATION",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.8-27b",
+        "ref": "main",
+        "url": "https://github.com/WumboLabs/eval-qwen3.8-27b"
+      },
+      "note": "Historical record for its tested stack (UD-Q2_K_XL GGUF / llama.cpp). The current canonical profile has its own dated record below; history is preserved, not rewritten."
+    },
+    {
+      "slug": "qwen35-4b",
+      "authoring": "generated",
+      "record_path": "content/labs/qwen35-4b.md",
+      "model": "Qwen3.5-4B",
+      "record_date": "2026-09-09",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "weight": 7,
+      "publication_state": "evidence-pending-human-gate",
+      "source": {
+        "kind": "local-export",
+        "file": "qwen35-4b/website-publication.json",
+        "sha256": "935d9f5ede0505d4742535cc5d2b42496c47006081ccde2a35d842995cd2944f"
+      },
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-qwen3.5-4b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      }
+    },
+    {
+      "slug": "qwen35-9b",
+      "authoring": "generated",
+      "record_path": "content/labs/qwen35-9b.md",
+      "model": "Qwen3.5-9B",
+      "record_date": "2026-09-09",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "weight": 8,
+      "publication_state": "evidence-pending-human-gate",
+      "source": {
+        "kind": "local-export",
+        "file": "qwen35-9b/website-publication.json",
+        "sha256": "b37fbeb2eafd516495d0034ab6d8f609432e63343fc6ac9a2d3258221171962a"
+      },
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-qwen3.5-9b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      }
+    },
+    {
+      "slug": "minicpm5-2b",
+      "authoring": "generated",
+      "record_path": "content/labs/minicpm5-2b.md",
+      "model": "MiniCPM5-2B",
+      "record_date": "2026-09-10",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "weight": 9,
+      "publication_state": "evidence-pending-human-gate",
+      "source": {
+        "kind": "local-export",
+        "file": "minicpm5-2b/website-publication.json",
+        "sha256": "efb9f5256bc2b88290ff2f8081019beb19eb695f7331c5490e5aeb6a2c63f4cf"
+      },
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-minicpm5-2b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      }
+    },
+    {
+      "slug": "gemma4-e4b",
+      "authoring": "generated",
+      "record_path": "content/labs/gemma4-e4b.md",
+      "model": "Gemma 4 E4B",
+      "record_date": "2026-09-10",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "weight": 10,
+      "publication_state": "evidence-pending-human-gate",
+      "source": {
+        "kind": "local-export",
+        "file": "gemma4-e4b/website-publication.json",
+        "sha256": "aba0f2e9c50b03e418362b18db4ac52dfe469603db4f97173f8b7eea88deb5bf"
+      },
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-gemma4-e4b",
+        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+      }
+    },
+    {
+      "slug": "qwen38-27b-h1",
+      "authoring": "generated",
+      "record_path": "content/labs/qwen38-27b-h1.md",
+      "model": "Qwen3.8-27B (current H1 profile)",
+      "record_date": "2026-09-09",
+      "welp_status": "COMPLETE / CURRENT_CANONICAL_H1_PROFILE",
+      "weight": 11,
+      "publication_state": "evidence-pending-human-gate",
+      "source": {
+        "kind": "local-export",
+        "file": "qwen38-27b-h1/website-publication.json",
+        "sha256": "7786d7c68a7821c11006768e3c2139d578e7e20fe60079d5714d27d59a195652"
+      },
+      "canonical_evidence": {
+        "state": "pending-human-gate",
+        "proposed_repo": "eval-qwen3.8-27b (follow-up update)",
+        "note": "Historical eval repository exists and is untouched; the H1 follow-up update package awaits the human publication gate."
+      }
+    }
+  ]
+}

@@ -39,6 +39,15 @@ The static site is generated into:
 
     public/
 
+## Updating Labs
+
+Lab Records are generated from a publication registry, not hand-edited. See
+[docs/labs-publication-workflow.md](docs/labs-publication-workflow.md).
+
+Canonical sync command:
+
+    python scripts/sync_labs.py --local-exports <exports-dir>
+
 ## Deployment
 
 Deployments are handled automatically by Cloudflare Pages when changes are pushed to the main branch.

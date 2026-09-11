@@ -32,6 +32,13 @@
     {% endif %}
   </header>
 
+  {% set evidence_state = page.extra | get(key="evidence", default="published") %}
+  {% if evidence_state == "pending" or not page.extra.repo %}
+  <div class="page-record-content">
+    <p><strong>Evidence publication pending.</strong> Canonical public evidence for this record has not been published yet; this page is a local derivative prepared ahead of publication and claims no canonical evidence URL. The measurements come from the accepted local WELP campaign named below.</p>
+  </div>
+  {% endif %}
+
   <div class="page-record-content">
     {{ page.content | safe }}
   </div>
