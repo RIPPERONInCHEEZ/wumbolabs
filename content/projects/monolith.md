@@ -2,7 +2,7 @@
 title = "Monolith"
 description = "Local-first AI workbench for testing, comparing, and evaluating local LLMs on real hardware."
 template = "project.html"
-weight = 4
+weight = 5
 [extra]
 back_label = "Back to Projects"
 back_url = "/projects/"

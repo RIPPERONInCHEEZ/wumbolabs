@@ -9,18 +9,12 @@ weight = 7
 model = "Qwen3.5-4B"
 producer = "Alibaba (Qwen team); GGUF conversion by Unsloth"
 quant = "BF16 weights, F16 KV cache, F32 recurrent state"
-repo = ""
+repo = "https://github.com/WumboLabs/eval-qwen3.5-4b"
 status = "READY_WITH_GUARDRAILS"
 hardware = "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)"
 headline = "Comfortable-fit BF16 text control, READY_WITH_GUARDRAILS on the RTX 5070: 32K default / 64K guarded, 67.9 tok/s short decode, 7/7 constrained quality and 20/20 reliability. Full model-card context completion was NOT completed under the later corrected-WELP standard and remains deferred; free-form grounding cautions apply."
-evidence = "pending"
+evidence = "published"
 +++
-
-> **Evidence publication pending.** Canonical public evidence for this
-> record has not been published yet (proposed repository: `eval-qwen3.5-4b`).
-> This page is a local derivative prepared ahead of publication; no
-> canonical evidence URL is claimed. The listed measurements come from
-> the accepted local WELP campaign named below.
 
 ## Identity
 
@@ -51,7 +45,7 @@ evidence = "pending"
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Comfortable-fit high-precision BF16 text control
 
-Publication state: **evidence pending human gate** — canonical public evidence is not yet published; this record shows an explicit pending state
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-qwen3.5-4b
 
 ## Context profile
 
@@ -102,10 +96,7 @@ Publication state: **evidence pending human gate** — canonical public evidence
 
 ## Canonical evidence
 
-State: **PENDING_HUMAN_GATE** — the canonical public evidence repository
-has not been published yet. This record intentionally claims no canonical
-evidence URL. Once the evidence repository is published and the registry is
-updated, this record synchronizes against it and the pending state is removed.
+Canonical public evidence: <https://github.com/WumboLabs/eval-qwen3.5-4b>
 
 This Lab Record is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative

@@ -9,18 +9,12 @@ weight = 9
 model = "MiniCPM5-2B"
 producer = "OpenBMB"
 quant = "BF16 weights and BF16 KV (primary surface); fp8(e4m3) KV only on the single authorized 131,072 alternate surface"
-repo = ""
+repo = "https://github.com/WumboLabs/eval-minicpm5-2b"
 status = "READY_WITH_GUARDRAILS"
 hardware = "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)"
 headline = "Official BF16 full-precision characterization on a contained vLLM runtime, READY_WITH_GUARDRAILS: 32K default / 64K guarded, complete 131K model-card envelope (98K highest BF16-KV rung; exact 131K FIT_LIMIT on BF16-KV and strict-gate FAILED on the authorized fp8-KV surface), 118.6 tok/s decode, thinking/coding/tools PASS, 20/20 reliability."
-evidence = "pending"
+evidence = "published"
 +++
-
-> **Evidence publication pending.** Canonical public evidence for this
-> record has not been published yet (proposed repository: `eval-minicpm5-2b`).
-> This page is a local derivative prepared ahead of publication; no
-> canonical evidence URL is claimed. The listed measurements come from
-> the accepted local WELP campaign named below.
 
 ## Identity
 
@@ -51,7 +45,7 @@ evidence = "pending"
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official BF16 full-precision candidate (characterized; not deployed); architecture-diversity control value HIGH
 
-Publication state: **evidence pending human gate** — canonical public evidence is not yet published; this record shows an explicit pending state
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-minicpm5-2b
 
 ## Context profile
 
@@ -102,10 +96,7 @@ Publication state: **evidence pending human gate** — canonical public evidence
 
 ## Canonical evidence
 
-State: **PENDING_HUMAN_GATE** — the canonical public evidence repository
-has not been published yet. This record intentionally claims no canonical
-evidence URL. Once the evidence repository is published and the registry is
-updated, this record synchronizes against it and the pending state is removed.
+Canonical public evidence: <https://github.com/WumboLabs/eval-minicpm5-2b>
 
 This Lab Record is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative

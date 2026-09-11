@@ -9,18 +9,12 @@ weight = 11
 model = "Qwen3.8-27B (current H1 profile)"
 producer = "Alibaba (Qwen team); EXL3 quant by turboderp"
 quant = "2.20 bpw EXL3; q4 target KV; q4 draft KV"
-repo = ""
+repo = "https://github.com/WumboLabs/eval-qwen3.8-27b"
 status = "COMPLETE / CURRENT_CANONICAL_H1_PROFILE"
 hardware = "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)"
 headline = "Current canonical RTX 5070 profile: ExLlamaV3 1.4.6 serving SC_2.20bpw_H3_V3 at 65,536 context with H1 recurrent history promoted via E18H/E18I (H4 fallback retained). H1 cuts recurrent storage by 434.8 MiB (held as reserve), passes the E18E oracle 3/3 / 15-15 fields, quality 7/7 and a 20/20 flat stability sequence; 75.8 tok/s decode at a 3,514-token prompt."
-evidence = "pending"
+evidence = "published"
 +++
-
-> **Evidence publication pending.** Canonical public evidence for this
-> record has not been published yet (proposed repository: `eval-qwen3.8-27b (follow-up update)`).
-> This page is a local derivative prepared ahead of publication; no
-> canonical evidence URL is claimed. The listed measurements come from
-> the accepted local WELP campaign named below.
 
 ## Identity
 
@@ -49,7 +43,7 @@ evidence = "pending"
 - **Classification:** CURRENT_CANONICAL_PROFILE — engine/history promotion validation, not a new model classification; the historical deep-evaluation role findings remain those of their tested stack
 - **Artifact classification:** Current canonical Qwen3.8 serving surface (exact artifact/runtime/geometry scope only)
 
-Publication state: **evidence pending human gate** — canonical public evidence is not yet published; this record shows an explicit pending state
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-qwen3.8-27b
 
 ## Context profile
 
@@ -100,10 +94,7 @@ Publication state: **evidence pending human gate** — canonical public evidence
 
 ## Canonical evidence
 
-State: **PENDING_HUMAN_GATE** — the canonical public evidence repository
-has not been published yet. This record intentionally claims no canonical
-evidence URL. Once the evidence repository is published and the registry is
-updated, this record synchronizes against it and the pending state is removed.
+Canonical public evidence: <https://github.com/WumboLabs/eval-qwen3.8-27b>
 
 This Lab Record is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative

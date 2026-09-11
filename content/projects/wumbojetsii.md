@@ -64,7 +64,7 @@ WumboJetsII is where WumboLabs development, wumbOS Shell development/testing, an
 
 It is a constrained consumer-workstation environment for LLMGauge runs and deeper model-evaluation campaigns. The RTX 5070 also drives the Fedora/Hyprland session during testing, so practical free VRAM is lower than its physical 12GB capacity. That constraint is intentional evidence context, not controlled-lab isolation.
 
-The current Qwen3.8 campaign used the RTX 5070 with llama.cpp/CUDA; [read the Lab Record](/records/qwen38-27b-rtx5070-evaluation/) for its runtime-specific findings and limitations.
+The Qwen3.8-27B deep-evaluation campaign ran on the RTX 5070 with llama.cpp/CUDA; [read the Lab Record](/records/qwen38-27b-rtx5070-evaluation/) for its runtime-specific findings and limitations. The current Qwen3.8 serving profile (ExLlamaV3, H1 history) has [its own Lab Record](/labs/qwen38-27b-h1/).
 
 <details class="project-details">
 <summary>Focus areas</summary>
@@ -87,7 +87,7 @@ The current Qwen3.8 campaign used the RTX 5070 with llama.cpp/CUDA; [read the La
 
   <div class="feature-card">
     <h3>CUDA Work</h3>
-    <p>Local llama.cpp/CUDA testing on SM120. Current Qwen campaign runtime: driver 610.57.04, CUDA 13.3, and llama.cpp b10449.</p>
+    <p>Local CUDA testing on SM120: driver 610.57.04, CUDA 13.3. Recent campaigns used llama.cpp b10449 and ExLlamaV3 1.4.6 (torch 2.10.0, CUDA 12.8 build).</p>
   </div>
 </div>
 

@@ -98,18 +98,19 @@
       "authoring": "generated",
       "record_date": "2026-09-09",
       "welp_status": "READY_WITH_GUARDRAILS",
-      "publication_state": "evidence-pending-human-gate",
+      "publication_state": "published",
       "canonical_evidence": {
-        "state": "pending-human-gate",
-        "proposed_repo": "eval-qwen3.5-4b",
-        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.5-4b",
+        "ref": "c4891275b02d67a2ec9a8aaaf8a51919508f7b8e",
+        "url": "https://github.com/WumboLabs/eval-qwen3.5-4b"
       },
       "record_path": "content/labs/qwen35-4b.md",
       "campaign": "qwen35-4b-rtx5070-baseline-2026-09-09",
       "welp_outcome": "PASS — QWEN35_4B_RTX5070_BASELINE_CHARACTERIZED",
       "disposition": "WEBSITE_READY",
-      "export_sha256": "935d9f5ede0505d4742535cc5d2b42496c47006081ccde2a35d842995cd2944f",
-      "resolved_commit": null
+      "export_sha256": "d876c9ce0a4411abe66e257e77d78d546f851f30ca7d7c4466b7637f387881ea",
+      "resolved_commit": "c4891275b02d67a2ec9a8aaaf8a51919508f7b8e"
     },
     {
       "slug": "qwen35-9b",
@@ -117,18 +118,19 @@
       "authoring": "generated",
       "record_date": "2026-09-09",
       "welp_status": "READY_WITH_GUARDRAILS",
-      "publication_state": "evidence-pending-human-gate",
+      "publication_state": "published",
       "canonical_evidence": {
-        "state": "pending-human-gate",
-        "proposed_repo": "eval-qwen3.5-9b",
-        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.5-9b",
+        "ref": "768674f35411eb9917398dca95925aa0d53f381f",
+        "url": "https://github.com/WumboLabs/eval-qwen3.5-9b"
       },
       "record_path": "content/labs/qwen35-9b.md",
       "campaign": "qwen35-9b-rtx5070-baseline-2026-09-09",
       "welp_outcome": "PASS — QWEN35_9B_RTX5070_BASELINE_CHARACTERIZED",
       "disposition": "WEBSITE_READY",
-      "export_sha256": "b37fbeb2eafd516495d0034ab6d8f609432e63343fc6ac9a2d3258221171962a",
-      "resolved_commit": null
+      "export_sha256": "ba09b944b78c99f27914a724030e080e7914ea3acaaa66d35642a387ea832379",
+      "resolved_commit": "768674f35411eb9917398dca95925aa0d53f381f"
     },
     {
       "slug": "minicpm5-2b",
@@ -136,37 +138,39 @@
       "authoring": "generated",
       "record_date": "2026-09-10",
       "welp_status": "READY_WITH_GUARDRAILS",
-      "publication_state": "evidence-pending-human-gate",
+      "publication_state": "published",
       "canonical_evidence": {
-        "state": "pending-human-gate",
-        "proposed_repo": "eval-minicpm5-2b",
-        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+        "state": "published",
+        "repo": "WumboLabs/eval-minicpm5-2b",
+        "ref": "e4563e2e5f9898b71d0ef2a39d46241112b1146c",
+        "url": "https://github.com/WumboLabs/eval-minicpm5-2b"
       },
       "record_path": "content/labs/minicpm5-2b.md",
       "campaign": "minicpm5-2b-rtx5070-welp-characterization-2026-09-10",
       "welp_outcome": "PASS — MINICPM5_2B_RTX5070_CHARACTERIZED; MODEL-CARD CONTEXT ENVELOPE COMPLETE = YES",
       "disposition": "WEBSITE_READY",
-      "export_sha256": "efb9f5256bc2b88290ff2f8081019beb19eb695f7331c5490e5aeb6a2c63f4cf",
-      "resolved_commit": null
+      "export_sha256": "20f817b5c706f0f68319bebe02e1766510c93a6c5249acb8104a57549eb7f7e1",
+      "resolved_commit": "e4563e2e5f9898b71d0ef2a39d46241112b1146c"
     },
     {
       "slug": "gemma4-e4b",
       "model": "Gemma 4 E4B",
       "authoring": "generated",
       "record_date": "2026-09-10",
-      "welp_status": "READY_WITH_GUARDRAILS",
-      "publication_state": "evidence-pending-human-gate",
+      "welp_status": "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL",
+      "publication_state": "published",
       "canonical_evidence": {
-        "state": "pending-human-gate",
-        "proposed_repo": "eval-gemma4-e4b",
-        "note": "No public eval repository exists yet; publication-ready package prepared locally."
+        "state": "published",
+        "repo": "WumboLabs/eval-gemma4-e4b",
+        "ref": "336d86a0fefb7c64e3c7c770d4cd41057b98990d",
+        "url": "https://github.com/WumboLabs/eval-gemma4-e4b"
       },
       "record_path": "content/labs/gemma4-e4b.md",
       "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10",
       "welp_outcome": "PASS — GEMMA4_E4B_EVIDENCE_COMPLETION_COMPLETE",
       "disposition": "WEBSITE_READY",
-      "export_sha256": "aba0f2e9c50b03e418362b18db4ac52dfe469603db4f97173f8b7eea88deb5bf",
-      "resolved_commit": null
+      "export_sha256": "45aca9eb0ff421280e04e6137cdcdc8571e40754a89c5f4e705b410ab7a052bb",
+      "resolved_commit": "336d86a0fefb7c64e3c7c770d4cd41057b98990d"
     },
     {
       "slug": "qwen38-27b-h1",
@@ -174,18 +178,19 @@
       "authoring": "generated",
       "record_date": "2026-09-09",
       "welp_status": "COMPLETE / CURRENT_CANONICAL_H1_PROFILE",
-      "publication_state": "evidence-pending-human-gate",
+      "publication_state": "published",
       "canonical_evidence": {
-        "state": "pending-human-gate",
-        "proposed_repo": "eval-qwen3.8-27b (follow-up update)",
-        "note": "Historical eval repository exists and is untouched; the H1 follow-up update package awaits the human publication gate."
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.8-27b",
+        "ref": "cc5a435092c17394b9e29b228a0e8509613f26b3",
+        "url": "https://github.com/WumboLabs/eval-qwen3.8-27b"
       },
       "record_path": "content/labs/qwen38-27b-h1.md",
       "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)",
       "welp_outcome": "PASS — E18I_H1_CANONICAL_PROMOTION_COMPLETE (E18H: PASS — E18H_H1_VALIDATED_EXPERIMENTAL_PROMOTION_CANDIDATE)",
       "disposition": "WEBSITE_READY",
-      "export_sha256": "7786d7c68a7821c11006768e3c2139d578e7e20fe60079d5714d27d59a195652",
-      "resolved_commit": null
+      "export_sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
+      "resolved_commit": "cc5a435092c17394b9e29b228a0e8509613f26b3"
     }
   ]
 }

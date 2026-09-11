@@ -9,18 +9,12 @@ weight = 10
 model = "Gemma 4 E4B"
 producer = "Google"
 quant = "QAT Q4_0 weights, F16 KV cache"
-repo = ""
-status = "READY_WITH_GUARDRAILS"
+repo = "https://github.com/WumboLabs/eval-gemma4-e4b"
+status = "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL"
 hardware = "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)"
 headline = "Official Google QAT Q4_0 + mmproj on llama.cpp, READY_WITH_GUARDRAILS: 32K default / 131K guarded with the full card envelope complete; perfect five-needle retrieval through the exact 131,072 maximum while the strict aggregate gate FAILED at every rung. Vision, multi-image, ASR, AST and bounded video PASS; OCR TESTED_LIMITED; reliability 20/20 completion, 14/20 exactness."
-evidence = "pending"
+evidence = "published"
 +++
-
-> **Evidence publication pending.** Canonical public evidence for this
-> record has not been published yet (proposed repository: `eval-gemma4-e4b`).
-> This page is a local derivative prepared ahead of publication; no
-> canonical evidence URL is claimed. The listed measurements come from
-> the accepted local WELP campaign named below.
 
 ## Identity
 
@@ -51,7 +45,7 @@ evidence = "pending"
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official Google QAT Q4_0 + official mmproj — the only official precision that hosts the full card range with reserve on this GPU; community Q4_K_M pair retained as evidence only (provenance unknown)
 
-Publication state: **evidence pending human gate** — canonical public evidence is not yet published; this record shows an explicit pending state
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-gemma4-e4b
 
 ## Context profile
 
@@ -102,10 +96,7 @@ Publication state: **evidence pending human gate** — canonical public evidence
 
 ## Canonical evidence
 
-State: **PENDING_HUMAN_GATE** — the canonical public evidence repository
-has not been published yet. This record intentionally claims no canonical
-evidence URL. Once the evidence repository is published and the registry is
-updated, this record synchronizes against it and the pending state is removed.
+Canonical public evidence: <https://github.com/WumboLabs/eval-gemma4-e4b>
 
 This Lab Record is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
