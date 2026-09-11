@@ -5,18 +5,16 @@
 {% block content %}
 <section class="container page-record">
   <div class="console-record-bar" aria-label="Record context">
-    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LAB RECORD</span>
-    <span>READ-ONLY / EVIDENCE SUMMARY</span>
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LAB RECORDS</span>
+    <span>READ-ONLY / MODEL EVALUATION</span>
   </div>
-  <nav class="console-record-path" aria-label="Record path">
+  <p class="console-record-path">
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
     <span>/labs/{{ page.slug }}</span>
-  </nav>
-  <p class="page-back">
-    <a href="{{ get_url(path='/labs/') }}">← Back to Labs</a>
   </p>
-
-  <p class="console-label">WUMBOLABS / LAB RECORD</p>
+  <nav class="page-back" aria-label="Parent section">
+    <a href="{{ get_url(path='/records/') }}">← Back to Lab Records</a>
+  </nav>
 
   <header class="page-record-header">
     <h1>{{ page.title }}</h1>
@@ -42,5 +40,12 @@
   <div class="page-record-content">
     {{ page.content | safe }}
   </div>
+
+  {% if page.word_count >= 400 %}
+    <nav class="page-exit" aria-label="After this evaluation">
+      <a href="{{ get_url(path='/records/') }}#evaluation-catalog">← Return to Lab Records</a>
+      <a href="#main-content">Back to top ↑</a>
+    </nav>
+  {% endif %}
 </section>
 {% endblock content %}

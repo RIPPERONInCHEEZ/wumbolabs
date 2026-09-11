@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container page-record methodology-page">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / METHODOLOGY</span>
+    <span>READ-ONLY / PROCESS</span>
+  </div>
+  <p class="console-record-path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/methodology</span>
+  </p>
+
+  <header class="page-record-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+      <p class="page-record-description">{{ section.description }}</p>
+    {% endif %}
+  </header>
+
+  <nav id="methodology-contents" class="methodology-contents" aria-label="On this page" tabindex="-1">
+    {% for heading in section.toc %}
+      <a href="#{{ heading.id }}">{{ heading.title }}</a>
+    {% endfor %}
+  </nav>
+
+  <div class="page-record-content">
+    {{ section.content | safe }}
+  </div>
+
+  <nav class="page-exit" aria-label="After this guide">
+    <a href="{{ get_url(path='/records/') }}">Browse Lab Records →</a>
+    <a href="#methodology-contents">Return to contents ↑</a>
+  </nav>
+</section>
+{% endblock content %}

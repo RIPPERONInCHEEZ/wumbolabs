@@ -1,3 +1,4 @@
+{% set current_path = current_path | default(value="") %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,13 +9,17 @@
 
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/favicon.png">
-  <link rel="canonical" href="{{ current_url }}">
+  {% if current_url %}
+    <link rel="canonical" href="{{ current_url }}">
+  {% else %}
+    <meta name="robots" content="noindex">
+  {% endif %}
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WumboLabs">
   <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
   <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
-  <meta property="og:url" content="{{ current_url }}">
+  {% if current_url %}<meta property="og:url" content="{{ current_url }}">{% endif %}
   <meta property="og:image" content="{{ config.base_url }}/img/wumbolabs-card.png">
 
   <meta name="twitter:card" content="summary_large_image">
@@ -25,6 +30,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="site-header-bar">
       <span class="site-header-status"><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS :: STATIC LAB</span>
@@ -36,16 +42,16 @@
         <span>WumboLabs</span>
       </a>
       <div class="nav-links">
-        <a href="/projects/"{% if current_path == "/projects/" or current_path is starting_with("/projects/") %} aria-current="page"{% endif %}>Projects</a>
-        <a href="/labs/"{% if current_path == "/labs/" or current_path is starting_with("/labs/") %} aria-current="page"{% endif %}>Labs</a>
-        <a href="/records/"{% if current_path == "/records/" or current_path is starting_with("/records/") %} aria-current="page"{% endif %}>Records</a>
+        <a href="/projects/"{% if current_path == "/projects/" %} aria-current="page"{% elif current_path is starting_with("/projects/") %} aria-current="location"{% endif %}>Projects</a>
+        <a href="/records/"{% if current_path == "/records/" %} aria-current="page"{% elif current_path is starting_with("/records/") or current_path is starting_with("/labs/") %} aria-current="location"{% endif %}>Lab Records</a>
+        <a href="/methodology/"{% if current_path == "/methodology/" %} aria-current="page"{% elif current_path is starting_with("/methodology/") %} aria-current="location"{% endif %}>Methodology</a>
         <a href="/about/"{% if current_path == "/about/" %} aria-current="page"{% endif %}>About</a>
         <a href="/contact/"{% if current_path == "/contact/" %} aria-current="page"{% endif %}>Contact</a>
       </div>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     {% block content %}{% endblock content %}
   </main>
 
@@ -65,8 +71,8 @@
 
       <div class="footer-links">
         <a href="/projects/">Projects</a>
-        <a href="/labs/">Labs</a>
         <a href="/records/">Lab Records</a>
+        <a href="/methodology/">Methodology</a>
         <a href="https://github.com/RIPPERONInCHEEZ/wumbolabs">GitHub</a>
       </div>
     </div>

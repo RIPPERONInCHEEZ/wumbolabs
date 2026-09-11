@@ -5,20 +5,14 @@
 {% block content %}
 <section class="container section-record">
   <div class="console-record-bar" aria-label="Record context">
-    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / INDEX</span>
-    <span>READ-ONLY / FILE LIST</span>
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / PROJECTS</span>
+    <span>PROJECT DIRECTORY</span>
   </div>
-  <nav class="console-record-path" aria-label="Record path">
+  <p class="console-record-path">
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
     <span>/{{ section.path | trim_start_matches(pat="/") }}</span>
-  </nav>
-  {% if section.extra.back_url %}
-    <p class="page-back">
-      <a href="{{ get_url(path=section.extra.back_url) }}">← {{ section.extra.back_label | default(value="Back") }}</a>
-    </p>
-  {% endif %}
+  </p>
 
-  <p class="console-label">WUMBOLABS / INDEX</p>
   <h1>{{ section.title }}</h1>
   <div class="section-intro">
     {{ section.content | safe }}
@@ -29,17 +23,14 @@
       {% for page in section.pages %}
         <article class="record-row">
           <div class="record-row-main">
-            <span class="record-row-kicker">
-              {% if page.extra.portfolio_status %}{{ page.extra.portfolio_status }}{% elif page.extra.record_type %}{{ page.extra.record_type }} / {% if page.date %}{{ page.date }}{% else %}record {{ loop.index }}{% endif %}{% elif page.date %}{{ page.date }}{% else %}record {{ loop.index }}{% endif %}
-            </span>
+            {% if page.extra.portfolio_status %}
+              <span class="record-row-kicker">{{ page.extra.portfolio_status }}</span>
+            {% endif %}
             <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
             {% if page.extra.release_status %}<p class="record-row-status">{{ page.extra.release_status }}</p>{% endif %}
             {% if page.description %}
               <p>{{ page.description }}</p>
             {% endif %}
-          </div>
-          <div class="record-row-link">
-            <a href="{{ page.permalink }}">open →</a>
           </div>
         </article>
       {% endfor %}

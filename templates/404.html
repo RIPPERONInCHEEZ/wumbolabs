@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container page-record context-page">
+  <div class="console-record-bar" aria-label="Page context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / ROUTE</span>
+    <span>HTTP / 404</span>
+  </div>
+  <header class="page-record-header">
+    <h1>Page not found</h1>
+    <p class="page-record-description">This address does not resolve to a WumboLabs page.</p>
+  </header>
+  <nav class="page-exit" aria-label="Find a page">
+    <a href="/">← Go to the homepage</a>
+    <a href="/records/">Browse Lab Records →</a>
+  </nav>
+</section>
+{% endblock content %}

@@ -15,18 +15,13 @@
 
     <nav class="operator-path-nav" aria-label="Homepage console routes">
       <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
-      <a href="#overview" aria-current="location">/overview</a>
+      <a href="#overview">/overview</a>
       <a href="#evidence">/evidence</a>
       <a href="#systems">/systems</a>
     </nav>
 
     <div class="operator-overview" id="overview">
       <div class="operator-pane operator-pane--focus">
-        <div class="panel-topline">
-          <span>OVERVIEW / PRIMARY</span>
-          <span class="status-dot">FOCUSED</span>
-        </div>
-        <p class="console-label">WUMBOLABS / PRACTICAL SYSTEMS</p>
         <h1 id="operator-title">Real hardware. Real testing. No hype.</h1>
         <p class="lede">LLMGauge is the flagship. wumbOS is the largest active build.</p>
         <p class="operator-intro">
@@ -35,11 +30,6 @@
           model testing. wumbOS is the main active development focus: a cohesive,
           agent-aware Linux workstation being built from the shell outward.
         </p>
-        <dl class="operator-metadata" aria-label="Current project context">
-          <div><dt>FLAGSHIP</dt><dd>LLMGauge</dd></div>
-          <div><dt>MAIN FOCUS</dt><dd>wumbOS</dd></div>
-          <div><dt>EVIDENCE</dt><dd>validated artifacts</dd></div>
-        </dl>
       </div>
 
       <aside class="lab-status-panel operator-status" aria-label="Current lab status">
@@ -88,7 +78,7 @@
             <p>The established WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/projects/llmgauge/') }}">Open project</a>
+            <a href="{{ get_url(path='/projects/llmgauge/') }}" aria-label="Open LLMGauge project">Open project →</a>
             <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
           </div>
         </article>
@@ -103,7 +93,7 @@
             <p>A developing Linux desktop environment / desktop shell. Public baseline is Alpha.2; current prealpha development is active on the tested Fedora 44, Hyprland, and Wayland stack.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/projects/wumbos/') }}">Open project</a>
+            <a href="{{ get_url(path='/projects/wumbos/') }}" aria-label="Open wumbOS project">Open project →</a>
             <a href="https://github.com/WumboLabs/wumbo-quickshell">Shell GitHub</a>
           </div>
         </article>
@@ -111,15 +101,15 @@
         <article class="operator-route">
           <div class="operator-route-key">
             <span>03</span>
-            <strong>LAB RECORD</strong>
+            <strong>LAB RECORDS / EVIDENCE ARCHIVE</strong>
           </div>
           <div>
-            <h2>Labs</h2>
-            <p>Read bounded model-evaluation lab records summarizing canonical GitHub evidence from real-hardware testing.</p>
+            <h2>Lab Records</h2>
+            <p>The WumboLabs evidence archive: bounded model evaluations, benchmarks, fit tests, and lab notes from real-hardware testing. Methodology explains how that evidence is produced and bounded.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/labs/') }}">Labs</a>
-            <a href="{{ get_url(path='/records/') }}">Lab Records</a>
+            <a href="{{ get_url(path='/records/') }}">Lab Records →</a>
+            <a href="{{ get_url(path='/methodology/') }}">Methodology →</a>
           </div>
         </article>
       </div>
