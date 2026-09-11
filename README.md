@@ -41,7 +41,9 @@ The static site is generated into:
 
 ## Updating Labs
 
-Lab Records are generated from a publication registry, not hand-edited. See
+Published model evaluations and hand-authored technical records appear together
+on `/records/`, newest first. Model evaluation pages use the publication registry
+and sync pipeline; technical records live in `content/records/`. See
 [docs/labs-publication-workflow.md](docs/labs-publication-workflow.md).
 
 Canonical sync command:

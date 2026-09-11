@@ -4,12 +4,15 @@
 
 {% block content %}
 {% set labs = get_section(path="labs/_index.md") %}
-{% set_global published = 0 %}
-{% for record in labs.pages %}
-  {% if record.extra.repo and record.extra | get(key="evidence", default="published") != "pending" %}
-    {% set_global published = published + 1 %}
+{% set_global linked_evaluations = [] %}
+{% for page in section.pages %}
+  {% if page.extra.evaluation_record %}
+    {% set_global linked_evaluations = linked_evaluations | concat(with=page.extra.evaluation_record) %}
   {% endif %}
 {% endfor %}
+{% set records = section.pages | concat(with=labs.pages) %}
+{% set records_by_date = records | group_by(attribute="date") %}
+{% set dates = records | map(attribute="date") | unique | sort | reverse %}
 <section class="container page-record archive-page">
   <div class="console-record-bar" aria-label="Record context">
     <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LAB RECORDS</span>
@@ -22,79 +25,39 @@
 
   <header class="page-record-header">
     <h1>{{ section.title }}</h1>
-    <p class="page-record-description">Technical reports, benchmarks, evaluations, fit tests, baselines, and experimental findings from real WumboLabs hardware.</p>
+    <p class="page-record-description">{{ section.description }}</p>
   </header>
 
-  <section class="archive-reference" aria-labelledby="current-reference">
-    <div>
-      <p class="archive-label">Reference deep evaluation</p>
-      <h2 id="current-reference">Qwen3.8-27B</h2>
-      <p class="archive-reference-hardware">UD-Q2_K_XL · RTX 5070 12GB · historical campaign (llama.cpp)</p>
-      <a href="{{ get_url(path='/records/qwen38-27b-rtx5070-evaluation/') }}">Open report →</a>
-    </div>
-    <dl class="archive-reference-facts">
-      <div><dt>Classification</dt><dd>Strong reviewed coding / technical assistant</dd></div>
-      <div><dt>Boundary</dt><dd>Not ready for unguarded daily use</dd></div>
-      <div><dt>Current profile</dt><dd><a href="{{ get_url(path='/labs/qwen38-27b-h1/') }}">ExLlamaV3 H1 canonical profile</a></dd></div>
-    </dl>
-  </section>
-
-  {% if section.pages %}
-    <section class="archive-section" aria-labelledby="technical-records">
-      <h2 id="technical-records">Technical records</h2>
-      <div class="record-list record-list--archive">
-        {% for page in section.pages %}
+  <section class="archive-section" aria-labelledby="all-records">
+    <h2 id="all-records">All records</h2>
+    <div class="record-list record-list--archive">
+      {% for date in dates %}
+        {% for page in records_by_date | get(key=date) | sort(attribute="permalink") %}
+          {% if page.relative_path in linked_evaluations %}{% continue %}{% endif %}
+          {% set record = page %}
+          {% if page.extra.evaluation_record %}
+            {% set record = get_page(path=page.extra.evaluation_record) %}
+          {% endif %}
           <article class="record-row">
-            <div class="archive-record-meta">
-              {% if page.date %}<time datetime="{{ page.date }}">{{ page.date }}</time>{% endif %}
-              {% if page.extra.record_type %}<span>{{ page.extra.record_type }}</span>{% endif %}
-            </div>
+            <time class="archive-record-date" datetime="{{ page.date }}">{{ page.date }}</time>
             <div class="record-row-main">
-              <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-              {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+              <h3><a href="{{ page.permalink }}">{% if page.extra.model %}{{ page.extra.model }}{% else %}{{ page.title }}{% endif %}</a></h3>
+              <div class="archive-record-meta">
+                {% if record.extra.model %}<span>Model evaluation{% if page.extra.evaluation_record %} / report{% endif %}</span>{% elif page.extra.record_type %}<span>{{ page.extra.record_type }}</span>{% endif %}
+                {% if record.extra.status %}<span>{{ record.extra.status | replace(from='_', to=' ') | lower }}</span>{% endif %}
+                {% if record.extra | get(key="evidence", default="published") == "pending" %}<span class="evidence-pending">Evidence publication pending</span>{% endif %}
+              </div>
+              {% if record.extra.hardware %}<p class="archive-record-hardware">{{ record.extra.hardware }}</p>{% endif %}
+              {% if record.extra.headline %}<p class="archive-record-summary">{{ record.extra.headline }}</p>{% elif page.description %}<p class="archive-record-summary">{{ page.description }}</p>{% endif %}
+              <div class="archive-record-links">
+                <a href="{{ page.permalink }}">View record</a>
+                {% if page.extra.evaluation_record %}<a href="{{ record.permalink }}">Evaluation details</a>{% endif %}
+                {% if record.extra.repo and record.extra | get(key="evidence", default="published") != "pending" %}<a href="{{ record.extra.repo }}">Canonical evidence</a>{% endif %}
+              </div>
             </div>
           </article>
         {% endfor %}
-      </div>
-    </section>
-  {% endif %}
-
-  {% if labs.pages %}
-    <section class="archive-section" aria-labelledby="evaluation-catalog">
-      <h2 id="evaluation-catalog">Model evaluations</h2>
-      <p class="archive-catalog-counts"><strong>{{ labs.pages | length }}</strong> evaluations <span>·</span> <strong>{{ published }}</strong> published evidence <span>·</span> <strong>{{ labs.pages | length - published }}</strong> evidence pending</p>
-      <details class="archive-disclosure evaluation-catalog">
-        <summary>Browse the evaluation catalog</summary>
-        <p>Registry-sourced summaries link to the full findings and configuration. Evidence pending means no canonical public evidence URL is claimed. <a href="{{ get_url(path='/methodology/') }}">How evidence is reviewed</a>.</p>
-        <p class="table-scroll-hint">Scroll horizontally to read all columns.</p>
-        <div class="labs-table-wrap" role="region" aria-label="Model evaluations" tabindex="0">
-          <table class="labs-table">
-            <thead>
-              <tr>
-                <th scope="col">Model / evaluation state</th>
-                <th scope="col">Finding</th>
-                <th scope="col">Public evidence</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for page in labs.pages %}
-              <tr>
-                <th scope="row"><a href="{{ page.permalink }}">{{ page.extra.model }}</a><span class="evaluation-state">{{ page.extra.status | replace(from='_', to=' ') | lower }}</span></th>
-                <td>{{ page.extra.headline }}</td>
-                <td>{% if page.extra.repo and page.extra | get(key="evidence", default="published") != "pending" %}<a href="{{ page.extra.repo }}" aria-label="Public evidence for {{ page.extra.model }} on GitHub">GitHub</a>{% else %}<span class="evidence-pending">Pending</span>{% endif %}</td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-      </details>
-    </section>
-  {% endif %}
-
-  <section class="archive-section archive-section--status" aria-labelledby="testing-status">
-    <h2 id="testing-status">Current testing status</h2>
-    <div class="page-record-content">
-      {{ section.content | safe }}
+      {% endfor %}
     </div>
   </section>
 </section>

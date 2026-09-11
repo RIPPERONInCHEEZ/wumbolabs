@@ -4,6 +4,7 @@ description = "A complete Qwen3.8-27B campaign on WumboJetsII covering quant sel
 date = 2026-08-21
 [extra]
 record_type = "REPORT"
+evaluation_record = "labs/qwen3.8-27b.md"
 back_label = "Back to Lab Records"
 back_url = "/records/"
 +++

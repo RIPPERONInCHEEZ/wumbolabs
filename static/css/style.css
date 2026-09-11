@@ -1837,69 +1837,6 @@ code {
 }
 
 
-/* Lab Records evidence tables retain native table semantics at every width. */
-
-.labs-table-wrap {
-  margin: 1rem 0;
-  overflow-x: auto;
-}
-
-.labs-table {
-  width: 100%;
-  min-width: 44rem;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-}
-
-.labs-table th,
-.labs-table td {
-  padding: 1rem 0.75rem;
-  vertical-align: top;
-  text-align: left;
-  border-bottom: 1px solid var(--wl-border);
-}
-
-.labs-table thead th {
-  color: var(--wl-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-}
-
-.labs-table tbody th,
-.labs-table td {
-  color: var(--wl-text-soft);
-}
-
-.labs-table tr:last-child td {
-  border-bottom: none;
-}
-
-.labs-table tr:hover td {
-  background: var(--wl-bg-elevated);
-}
-
-.labs-table tbody th {
-  width: 28%;
-  font-weight: 600;
-}
-
-.labs-table td:last-child {
-  width: 8rem;
-  font-size: 0.82rem;
-}
-
-.evaluation-state {
-  display: block;
-  margin-top: 0.5rem;
-  color: var(--wl-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 400;
-}
-
 /* Documents use typography rather than panel chrome. Data keeps its width. */
 .project-content,
 .page-record-content {
@@ -1918,8 +1855,7 @@ code {
 }
 
 .project-content :where(a:not(.button):not(.wumbos-cta)),
-.page-record-content :where(a:not(.contact-card)),
-.labs-table a {
+.page-record-content :where(a:not(.contact-card)) {
   color: var(--wl-text);
   text-decoration: underline;
   text-decoration-color: var(--wl-gray);
@@ -1958,8 +1894,7 @@ main h2:target {
 }
 
 .page-record-header,
-.project-header,
-.archive-reference {
+.project-header {
   overflow-wrap: anywhere;
 }
 
@@ -1972,50 +1907,8 @@ main h2:target {
   margin-top: 2rem;
 }
 
-.archive-reference {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 2rem;
-  border-left: 2px solid var(--wl-lime);
-  padding: 0.25rem 0 0.25rem 1.5rem;
-  margin: 3rem 0;
-}
-
-.archive-label {
-  margin: 0 0 0.5rem;
-  color: var(--wl-text-muted);
-  font: 0.75rem var(--font-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.archive-reference h2 {
-  margin: 0;
-  color: var(--wl-text);
-  font-size: 1.75rem;
-}
-
-.archive-reference-hardware {
-  margin: 0.5rem 0 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-}
-
-.archive-reference-facts {
-  display: grid;
-  gap: 1rem;
-  margin: 0;
-}
-
-.archive-reference-facts dt {
-  color: var(--wl-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-}
-
-.archive-reference-facts dd {
-  margin: 0.25rem 0 0;
-  color: var(--wl-text);
+.archive-page {
+  max-width: 64rem;
 }
 
 .archive-section {
@@ -2027,66 +1920,65 @@ main h2:target {
   color: var(--wl-text);
   font-size: 1.5rem;
 }
-
 .record-list--archive .record-row {
-  grid-template-columns: 8rem minmax(0, 1fr);
+  grid-template-columns: 7.5rem minmax(0, 1fr);
   align-items: start;
   gap: 1.5rem;
+  padding: 2rem 0;
+  overflow-wrap: anywhere;
+}
+
+.record-list--archive h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  line-height: 1.35;
+}
+
+.archive-record-date {
+  color: var(--wl-lime);
+  font: 0.85rem/1.6 var(--font-mono);
 }
 
 .archive-record-meta {
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin: 0.75rem 0;
   color: var(--wl-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font: 0.8rem/1.6 var(--font-mono);
 }
 
-.archive-catalog-counts {
+.archive-record-meta > span:first-child {
+  text-transform: uppercase;
+}
+
+.record-list--archive .archive-record-hardware {
+  margin-bottom: 0.6rem;
   color: var(--wl-text-muted);
   font-size: 0.9rem;
 }
 
-.archive-catalog-counts strong {
-  color: var(--wl-text);
+.record-list--archive .archive-record-summary {
+  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.7;
 }
 
-.archive-catalog-counts > span {
-  margin: 0 0.5rem;
+.archive-record-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-top: 0.75rem;
 }
 
-.archive-disclosure {
-  margin: 0;
+.archive-record-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  white-space: nowrap;
+  font: 0.85rem/1.6 var(--font-mono);
 }
 
-.archive-disclosure > summary {
-  padding: 0.25rem 0;
-}
 
-.archive-disclosure > p {
-  max-width: 72ch;
-}
-
-.archive-section--status .page-record-content {
-  max-width: none;
-}
-
-.archive-section--status table {
-  display: table;
-  width: 100%;
-  min-width: 44rem;
-  font-size: 0.9rem;
-}
-
-.archive-section--status th:last-child {
-  width: 55%;
-}
-
-.table-scroll-hint {
-  display: none;
-  color: var(--wl-text-muted);
-  font-size: 0.8rem;
-}
 
 .methodology-page .page-record-header,
 .methodology-page .page-record-content,
@@ -2120,28 +2012,15 @@ main h2:target {
 }
 
 @media (max-width: 700px) {
-  .archive-reference,
   .record-list--archive .record-row,
   .methodology-contents {
     grid-template-columns: 1fr;
   }
 
-  .archive-reference {
-    gap: 1.5rem;
-    padding-left: 1rem;
-  }
 
   .record-list--archive .record-row {
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
 
-  .archive-record-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
 
-  .table-scroll-hint {
-    display: block;
-  }
 }

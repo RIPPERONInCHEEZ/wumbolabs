@@ -22,6 +22,34 @@ evidence URL. The registry stores no machine-local absolute paths; local
 exports are resolved through the `--local-exports` argument at sync time and
 pinned by SHA-256.
 
+## Unified Records index
+
+Published model evaluations and hand-authored technical records are surfaced
+together on `/records/`, newest first. `templates/records_index.html` combines
+the pages in `content/records/` and `content/labs/` at build time; no second
+model-facts datastore is maintained. Generated evaluation pages still come
+from the registry and deterministic sync above.
+
+Archive position uses the original front-matter `date`, descending, with the
+page permalink ascending as the deterministic same-date tie-break. `weight`,
+`updated`, type, and status do not affect chronology. Every record needs a
+trustworthy explicit date. Later substantive evidence belongs in a new dated
+record rather than moving an older event.
+
+When a technical report and an evaluation describe the **same evidence event**,
+the report may set `extra.evaluation_record` to the evaluation's content-relative
+path (for example, `labs/qwen3.8-27b.md`). They must share the event date. The
+index renders one entry using the report title and evaluation metadata, linking
+both detail pages and canonical evidence. This is an explicit event relationship,
+not model-name deduplication: the August Qwen3.8 campaign and September H1 update
+remain separate records. All existing detail URLs remain available.
+
+Type, lifecycle/status, hardware, and publication state are entry metadata,
+not separate browsing sections. The exact `/labs/` root redirects to `/records/`
+on Cloudflare Pages; the minimal local compatibility page and all `/labs/<slug>/`
+detail pages remain available. No public testing-status dashboard or research
+queue is maintained.
+
 ## Publication dispositions (defined in canonical WELP)
 
 Every full WELP campaign records exactly one disposition in
