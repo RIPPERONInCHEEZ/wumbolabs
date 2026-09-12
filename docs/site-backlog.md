@@ -32,7 +32,7 @@ Status: done (superseded by the August 2026 public-status pass).
 
 The LLMGauge project page and homepage activity/status were moved off the old v0.20-era framing through a v0.42 public-proof pass, then updated for v0.65 product-validation, later v0.70 metadata, and the August 2026 consistency pass.
 
-Current site framing treats LLMGauge as the flagship local-first CLI/evidence tool. Formal release is v0.72. Current main is unreleased development toward the v0.73 Generic Core gate. It is not an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
+Current site framing treats LLMGauge as the flagship local-first CLI/evidence tool. Formal release is v0.78. Current main is unreleased post-v0.78 development: first-class multi-runtime model identity (model source kinds, checkpoint-directory provenance, vLLM checkpoint binding) plus the accepted EXL/ExLlama qualification contract, with development currently paused. It is not an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
 
 Further LLMGauge copy updates should track real releases versus unreleased main; they are not the active next website content task.
 

@@ -7,7 +7,7 @@ weight = 1
 back_label = "Back to Projects"
 back_url = "/projects"
 portfolio_status = "FLAGSHIP PROJECT"
-release_status = "FORMAL RELEASE · v0.77 · PyPI 0.77.0"
+release_status = "FORMAL RELEASE · v0.78 · PyPI 0.78.0"
 +++
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.
@@ -21,12 +21,12 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
 <div class="info-grid">
   <div class="info-card">
     <span class="info-label">Formal release</span>
-    <strong>v0.77</strong>
+    <strong>v0.78</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Package</span>
-    <strong>0.77.0</strong>
+    <strong>0.78.0</strong>
   </div>
 
   <div class="info-card">
@@ -35,8 +35,8 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 
   <div class="info-card">
-    <span class="info-label">v0.77 focus</span>
-    <strong>Runtime evidence + TTFT</strong>
+    <span class="info-label">v0.78 focus</span>
+    <strong>Evidence integrity + qualification</strong>
   </div>
 
   <div class="info-card">
@@ -50,9 +50,19 @@ It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bo
   </div>
 </div>
 
-v0.77 is the current formal release, published to production PyPI as `llmgauge` 0.77.0 and covered by over 1,300 automated tests. It expands Area 4 runtime evidence with backend-native llama.cpp timing and placement evidence, vLLM request wall time and request-window peak VRAM, and an opt-in vLLM 0.27.1 streaming path for transport-observed neutral TTFT. It also hardens cross-artifact evidence consistency and public-export privacy. Schemas and artifact contracts evolve additively: previously valid v0.76 result directories remain valid.
+v0.78 is the current formal release, published to production PyPI as `llmgauge` 0.78.0. It is the Area 4 evidence-integrity and qualification hardening release: native llama.cpp diagnostics capture is now admitted against a frozen upstream runtime-lineage manifest instead of a single pinned build, qualified current llama-cli builds contribute backend-owned placement and slot-timing evidence, and the vLLM streaming TTFT validator re-derives the first-token channel from preserved raw stream evidence instead of trusting stored labels. Schemas and artifact contracts evolve additively: previously valid v0.77 result directories remain valid.
 
 LLMGauge is not a hype benchmark, leaderboard, automatic judge, model downloader, cloud evaluation service, or autonomous Agent runtime.
+
+## Current Development (post-v0.78)
+
+Development on main has moved past v0.78 with the first milestones of an accepted first-class multi-runtime program. None of it is in the published 0.78.0 package yet.
+
+Model profiles can now represent three source kinds — GGUF files, local checkpoint directories, and served-model references — and local checkpoint directories gain bounded cryptographic provenance: canonical file manifests, tokenizer and chat-template identity, and checkpoint-declared quantization evidence. On the vLLM path, a run can be explicitly bound to a fingerprint-eligible local checkpoint directory, with the served-model name declared separately and never inferred from the checkpoint. This is model-identity work: vLLM lifecycle management and workflow parity remain open milestones, and llama.cpp / GGUF remains the default runtime.
+
+ExLlamaV3 / EXL3 is now an explicit first-class runtime target, accepted as the fourth runtime family through a qualification contract, with EXL2 / ExLlamaV2 as a compatibility lane and TabbyAPI as the server implementation. That contract is architecture and qualification work — LLMGauge does not yet execute EXL checkpoints, and no EXL release date or version is promised.
+
+LLMGauge development is intentionally paused after this runtime-architecture work while WumboLabs establishes a practical EXL3 / ExLlamaV3 baseline on the RTX 5070 and tests local models on real structured agent workloads.
 
 ## Workflow
 
@@ -202,7 +212,7 @@ The released CLI also includes native multi-turn transcript evidence, transcript
     llmgauge smoke
     llmgauge run --suite practical --model-profile my_model --dry-run
 
-For a pinned install: `uv tool install "llmgauge==0.77.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
+For a pinned install: `uv tool install "llmgauge==0.78.0"`. Contributors and unreleased development should use a source checkout with `uv sync` and `uv run llmgauge ...`.
 
 </details>
 
