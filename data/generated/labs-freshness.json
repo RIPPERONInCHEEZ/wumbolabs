@@ -55,6 +55,15 @@
       "sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
       "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
       "kind": "github-raw"
+    },
+    "qwen38-27b-context-envelope": {
+      "repo": "WumboLabs/eval-qwen3.8-27b",
+      "ref": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
+      "path": "website-publication.json",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b/78e8ebf636d33048f1e23b687ed060be9ccc1e97/website-publication.json",
+      "sha256": "efbde1adf01c3a57b59d1b51d9234384cd62738de299cbe9c8b6f06f80f8064f",
+      "resolved_commit": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
+      "kind": "github-raw"
     }
   },
   "latest_represented_campaigns": [
@@ -81,6 +90,10 @@
     {
       "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
       "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
+    },
+    {
+      "slug": "qwen38-27b-context-envelope",
+      "campaign": "qwen38-27b-rtx5070-context-completion-2026-09-12"
     }
   ],
   "pending_website_publication": [],

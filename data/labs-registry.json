@@ -236,6 +236,30 @@
         "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
         "url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b"
       }
+    },
+    {
+      "slug": "qwen38-27b-context-envelope",
+      "authoring": "generated",
+      "record_path": "content/labs/qwen38-27b-context-envelope.md",
+      "model": "Qwen3.8-27B (context-envelope completion)",
+      "record_date": "2026-09-12",
+      "welp_status": "GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE",
+      "weight": 13,
+      "publication_state": "published",
+      "source": {
+        "kind": "github-raw",
+        "repo": "WumboLabs/eval-qwen3.8-27b",
+        "ref": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
+        "path": "website-publication.json",
+        "sha256": "efbde1adf01c3a57b59d1b51d9234384cd62738de299cbe9c8b6f06f80f8064f"
+      },
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.8-27b",
+        "ref": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
+        "url": "https://github.com/WumboLabs/eval-qwen3.8-27b"
+      },
+      "note": "Dated context-envelope completion event appended alongside the preserved hand-authored historical record (qwen3.8-27b) and the generated H1 record (qwen38-27b-h1, pinned at cc5a435); all three Qwen3.8 public evidence generations remain distinct."
     }
   ]
 }

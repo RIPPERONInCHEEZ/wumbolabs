@@ -211,6 +211,26 @@
       "disposition": "WEBSITE_READY",
       "export_sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
       "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1"
+    },
+    {
+      "slug": "qwen38-27b-context-envelope",
+      "model": "Qwen3.8-27B (context-envelope completion)",
+      "authoring": "generated",
+      "record_date": "2026-09-12",
+      "welp_status": "GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-qwen3.8-27b",
+        "ref": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
+        "url": "https://github.com/WumboLabs/eval-qwen3.8-27b"
+      },
+      "record_path": "content/labs/qwen38-27b-context-envelope.md",
+      "campaign": "qwen38-27b-rtx5070-context-completion-2026-09-12",
+      "welp_outcome": "PASS — QWEN38_27B_CONTEXT_ENVELOPE_COMPLETED",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "efbde1adf01c3a57b59d1b51d9234384cd62738de299cbe9c8b6f06f80f8064f",
+      "resolved_commit": "78e8ebf636d33048f1e23b687ed060be9ccc1e97"
     }
   ]
 }
