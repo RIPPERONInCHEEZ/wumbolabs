@@ -1862,7 +1862,7 @@ code {
   text-underline-offset: 0.2em;
 }
 
-main a:not(.button):hover {
+main a:not(.button):not(.wumbos-cta):hover {
   color: var(--wl-lime);
 }
 
