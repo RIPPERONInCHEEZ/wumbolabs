@@ -102,15 +102,15 @@
       "canonical_evidence": {
         "state": "published",
         "repo": "WumboLabs/eval-qwen3.5-4b",
-        "ref": "c4891275b02d67a2ec9a8aaaf8a51919508f7b8e",
+        "ref": "65afa02d46b7e3e4ba57d6d318d5474db3866341",
         "url": "https://github.com/WumboLabs/eval-qwen3.5-4b"
       },
       "record_path": "content/labs/qwen35-4b.md",
-      "campaign": "qwen35-4b-rtx5070-baseline-2026-09-09",
-      "welp_outcome": "PASS — QWEN35_4B_RTX5070_BASELINE_CHARACTERIZED",
+      "campaign": "qwen35-4b-rtx5070-context-completion-2026-09-11",
+      "welp_outcome": "PASS — QWEN35_4B_CONTEXT_ENVELOPE_COMPLETED",
       "disposition": "WEBSITE_READY",
-      "export_sha256": "d876c9ce0a4411abe66e257e77d78d546f851f30ca7d7c4466b7637f387881ea",
-      "resolved_commit": "c4891275b02d67a2ec9a8aaaf8a51919508f7b8e"
+      "export_sha256": "5ca959e62323472cd7fb7ee2fe860278b6204ee19b8dc611b1d4f0e178167460",
+      "resolved_commit": "65afa02d46b7e3e4ba57d6d318d5474db3866341"
     },
     {
       "slug": "qwen35-9b",
