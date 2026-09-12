@@ -21,9 +21,9 @@ WumboLabs tests **Gemma 4 E4B** on real consumer hardware. This is the canonical
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL — [Initial evaluation (full characterization) (2026-09-10)](/labs/gemma4-e4b#initial-evaluation-2026-09-10-gemma4), profile llama.cpp official QAT Q4_0
+- **Classification:** READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4), profile llama.cpp official QAT Q4_0
 - **Recommended profile:** llama.cpp official QAT Q4_0 (`gemma4-e4b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/eval-gemma4-e4b)
-- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/labs/gemma4-e4b#initial-evaluation-2026-09-10-gemma4)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4)
 - **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
 
 ## Tested profiles
@@ -44,7 +44,7 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-gemma4-e4b>
 
 Events on this profile:
 
-- [Initial evaluation (full characterization) (2026-09-10)](/labs/gemma4-e4b#initial-evaluation-2026-09-10-gemma4) — READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
+- [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4) — READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
 ## Testing history
 

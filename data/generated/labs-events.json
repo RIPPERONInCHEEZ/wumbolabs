@@ -19,7 +19,7 @@
       "headline": "Strong reviewed local coding/technical assistant. Not recommended as unguarded daily driver or unattended autonomous agent.",
       "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp",
       "evidence_state": "published",
-      "model_url": "/labs/qwen38-27b/",
+      "model_url": "/evaluations/qwen38-27b/",
       "report_page": "records/qwen38-27b-rtx5070-evaluation.md"
     },
     {
@@ -39,7 +39,7 @@
       "headline": "Current canonical RTX 5070 profile: ExLlamaV3 1.4.6 serving SC_2.20bpw_H3_V3 at 65,536 context with H1 recurrent history promoted via E18H/E18I (H4 fallback retained). H1 cuts recurrent storage by 434.8 MiB (held as reserve), passes the E18E oracle 3/3 / 15-15 fields, quality 7/7 and a 20/20 flat stability sequence; 75.8 tok/s decode at a 3,514-token prompt.",
       "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1",
       "evidence_state": "published",
-      "model_url": "/labs/qwen38-27b/",
+      "model_url": "/evaluations/qwen38-27b/",
       "report_page": null
     },
     {
@@ -59,7 +59,7 @@
       "headline": "Model-card context envelope COMPLETE on the canonical ExLlamaV3 H1 surface: 65,536 default revalidated and 98,304 guarded boundary VALIDATED at >=99.4% near-full occupancy with strict useful-context 4/4; native 262,144 FIT_LIMIT on this 12 GB H1 surface (nearest measured boundary 98,304); official YaRN 1,000,000 INTEGRATION_BLOCKED on the accepted surface and independently FIT_LIMIT. Default unchanged at 65,536; inherited guarded/limited classification carries; LocalMaxxing VERIFIED_EXISTING, no new submission.",
       "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1",
       "evidence_state": "published",
-      "model_url": "/labs/qwen38-27b/",
+      "model_url": "/evaluations/qwen38-27b/",
       "report_page": null
     },
     {
@@ -79,7 +79,7 @@
       "headline": "Protocol development campaign. Phases 0–2 passed; stopped at Phase 3 gate decision. Not a complete WELP capability review.",
       "evidence_url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b",
       "evidence_state": "published",
-      "model_url": "/labs/nemotron-3-nano-4b/",
+      "model_url": "/evaluations/nemotron-3-nano-4b/",
       "report_page": null
     },
     {
@@ -99,7 +99,7 @@
       "headline": "Append-only dated recharacterization under the current WELP protocol: the historical PROTOCOL_BLOCKED record is preserved unchanged, and this campaign completes the model-card context envelope (native 262,144 VALIDATED at both seeds; extensions source-backed absent), reproduces the reliability weakness as a measurable guardrail (clean-pass 0.30/0.25; hallucination 0.20/0.15), and confirms the dense hybrid Mamba-2/4-attention-layer architecture. Classification READY_WITH_GUARDRAILS; practical profile 32K default / 131K guarded; LocalMaxxing VERIFIED_EXISTING.",
       "evidence_url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b",
       "evidence_state": "published",
-      "model_url": "/labs/nemotron-3-nano-4b/",
+      "model_url": "/evaluations/nemotron-3-nano-4b/",
       "report_page": null
     },
     {
@@ -119,7 +119,7 @@
       "headline": "Early stop at Phase 3 gate. Model failed the applicable advancement gate; later phases were not run. Bounded result only.",
       "evidence_url": "https://github.com/WumboLabs/eval-apodex-1.1-mini",
       "evidence_state": "published",
-      "model_url": "/labs/apodex-1-1-mini/",
+      "model_url": "/evaluations/apodex-1-1-mini/",
       "report_page": null
     },
     {
@@ -139,7 +139,7 @@
       "headline": "Best always-resident micro-sidecar candidate in the family. Hallucination resistance absent at 1.2B scale — every quant including BF16 fabricates confidently on invented subjects.",
       "evidence_url": "https://github.com/WumboLabs/eval-lfm2.5-1.2b",
       "evidence_state": "published",
-      "model_url": "/labs/lfm2-5-1-2b/",
+      "model_url": "/evaluations/lfm2-5-1-2b/",
       "report_page": null
     },
     {
@@ -159,7 +159,7 @@
       "headline": "QAD Q4_0 is the rational ultra-fast deployment quant when 1.59 GB is the hard model-size target. No material practical-quality win over PTQ Q4_0 was reproduced.",
       "evidence_url": "https://github.com/WumboLabs/eval-lfm2.5-2.6b",
       "evidence_state": "published",
-      "model_url": "/labs/lfm2-5-2-6b/",
+      "model_url": "/evaluations/lfm2-5-2-6b/",
       "report_page": null
     },
     {
@@ -179,7 +179,7 @@
       "headline": "Full WELP campaign completed. Phase 3 practical viability ADVANCE (0.922); Phase 4 reliability gate FAIL (DO_NOT_ADVANCE) closes all deployment roles: FINAL WELP READINESS: NOT_READY. Later-phase evidence is characterization only.",
       "evidence_url": "https://github.com/WumboLabs/eval-ornith-1.5-9b",
       "evidence_state": "published",
-      "model_url": "/labs/ornith-1-5-9b/",
+      "model_url": "/evaluations/ornith-1-5-9b/",
       "report_page": null
     },
     {
@@ -199,7 +199,7 @@
       "headline": "Full model-card context envelope now COMPLETE with evidence-backed dispositions: native 262,144 FIT_LIMIT (f16 lower bound; q4_0 measured admission failure), YaRN 1,010,000 FIT_LIMIT (all representable KV precisions), 32K/64K revalidated at >=99.4% near-full occupancy with perfect retrieval and a measured auxiliary-instruction retention defect. Practical profile unchanged: 32K default, 64K guarded, READY_WITH_GUARDRAILS.",
       "evidence_url": "https://github.com/WumboLabs/eval-qwen3.5-4b",
       "evidence_state": "published",
-      "model_url": "/labs/qwen35-4b/",
+      "model_url": "/evaluations/qwen35-4b/",
       "report_page": null
     },
     {
@@ -219,7 +219,7 @@
       "headline": "Full model-card context envelope now COMPLETE with evidence-backed dispositions: native 262,144 FIT_LIMIT (f16 primary lower bound; q4_0 alternate measured admission failure), YaRN 1,010,000 FIT_LIMIT (all representable KV precisions; mechanism confirmed), 32K/64K revalidated at >=99.4% near-full occupancy with perfect retrieval and a measured strict useful-context gate failure (absent-field key-name deviation). Classification READY_WITH_GUARDRAILS unchanged; practical profile 32K default / 64K guarded confirmed.",
       "evidence_url": "https://github.com/WumboLabs/eval-qwen3.5-9b",
       "evidence_state": "published",
-      "model_url": "/labs/qwen35-9b/",
+      "model_url": "/evaluations/qwen35-9b/",
       "report_page": null
     },
     {
@@ -239,7 +239,7 @@
       "headline": "Official BF16 full-precision characterization on a contained vLLM runtime, READY_WITH_GUARDRAILS: 32K default / 64K guarded, complete 131K model-card envelope (98K highest BF16-KV rung; exact 131K FIT_LIMIT on BF16-KV and strict-gate FAILED on the authorized fp8-KV surface), 118.6 tok/s decode, thinking/coding/tools PASS, 20/20 reliability.",
       "evidence_url": "https://github.com/WumboLabs/eval-minicpm5-2b",
       "evidence_state": "published",
-      "model_url": "/labs/minicpm5-2b/",
+      "model_url": "/evaluations/minicpm5-2b/",
       "report_page": null
     },
     {
@@ -259,7 +259,7 @@
       "headline": "Official Google QAT Q4_0 + mmproj on llama.cpp, READY_WITH_GUARDRAILS: 32K default / 131K guarded with the full card envelope complete; perfect five-needle retrieval through the exact 131,072 maximum while the strict aggregate gate FAILED at every rung. Vision, multi-image, ASR, AST and bounded video PASS; OCR TESTED_LIMITED; reliability 20/20 completion, 14/20 exactness.",
       "evidence_url": "https://github.com/WumboLabs/eval-gemma4-e4b",
       "evidence_state": "published",
-      "model_url": "/labs/gemma4-e4b/",
+      "model_url": "/evaluations/gemma4-e4b/",
       "report_page": null
     }
   ]

@@ -21,7 +21,7 @@ WumboLabs tests **Qwen3.5-9B** on real consumer hardware. This is the canonical 
 ## Current state
 
 - **Recommended profile:** llama.cpp Q8_0 GGUF (`qwen35-9b-llamacpp-q8`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3.5-9b)
-- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-11)](/labs/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b)
+- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-11)](/evaluations/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b)
 - **Latest evidence:** 2026-09-11 — Context envelope completion
 
 ## Tested profiles
@@ -42,7 +42,7 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3.5-9b>
 
 Events on this profile:
 
-- [Context envelope completion (2026-09-11)](/labs/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b) — READY_WITH_GUARDRAILS
+- [Context envelope completion (2026-09-11)](/evaluations/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b) — READY_WITH_GUARDRAILS
 
 ## Testing history
 

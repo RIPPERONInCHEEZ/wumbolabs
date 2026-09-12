@@ -20,7 +20,7 @@ WumboLabs tests **Apodex 1.1 mini** on real consumer hardware. This is the canon
 
 ## Current state
 
-- **Classification:** BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE — [Initial evaluation (bounded early stop) (2026-08-25)](/labs/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex), profile llama.cpp IQ1_M (community conversion)
+- **Classification:** BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE — [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex), profile llama.cpp IQ1_M (community conversion)
 - **Recommended profile:** llama.cpp IQ1_M (community conversion) (`apodex-1.1-mini-llamacpp-iq1m`, current) — [canonical evidence](https://github.com/WumboLabs/eval-apodex-1.1-mini)
 - **Latest evidence:** 2026-08-25 — Initial evaluation (bounded early stop)
 
@@ -38,7 +38,7 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-apodex-1.1-mini
 
 Events on this profile:
 
-- [Initial evaluation (bounded early stop) (2026-08-25)](/labs/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex) — BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
+- [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex) — BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
 ## Testing history
 

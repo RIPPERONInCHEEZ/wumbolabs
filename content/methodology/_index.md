@@ -10,7 +10,7 @@ back_url = "/"
 
 WumboLabs treats test results as **bounded evidence**, not universal rankings. Real hardware. Real testing. No hype.
 
-This page explains how WumboLabs evidence is produced, reviewed, validated, and bounded. The evidence itself — model evaluations, benchmarks, fit tests, baselines, and lab notes — lives in [Lab Records](/records/).
+This page explains how WumboLabs evidence is produced, reviewed, validated, and bounded. Model evaluations live under [Evaluations](/evaluations/); benchmarks, fit tests, baselines, and lab notes live in the technical notes under [Projects](/projects/#technical-notes).
 
 ## 01 — Evaluation philosophy
 
@@ -45,7 +45,7 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 ## 03 — Evidence
 
-Lab Records preserve the evidence needed to reproduce and audit a result:
+Evaluation pages and technical records preserve the evidence needed to reproduce and audit a result:
 
 - **Hardware:** the named machine and GPU, with relevant notes.
 - **Runtime / build:** inference engine and version, with runtime notes.

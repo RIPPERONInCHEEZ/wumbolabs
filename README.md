@@ -39,16 +39,18 @@ The static site is generated into:
 
     public/
 
-## Updating Labs
+## Updating Evaluations
 
-Published model evaluations and hand-authored technical records appear together
-on `/records/`, newest first. Model evaluation pages use the publication registry
-and sync pipeline; technical records live in `content/records/`. See
+Each tested model has exactly one canonical Evaluation page under `/evaluations/`,
+generated from the publication registry by the deterministic sync pipeline. The
+old `/labs/` and `/records/` addresses redirect to the Evaluations destinations.
+Hand-maintained technical records keep their direct `/records/<slug>/` URLs and
+are listed under Projects → Technical notes. See
 [docs/labs-publication-workflow.md](docs/labs-publication-workflow.md).
 
 Canonical sync command:
 
-    python scripts/sync_labs.py --local-exports <exports-dir>
+    python scripts/sync_labs.py
 
 ## Deployment
 

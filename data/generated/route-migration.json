@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
+  "mappings": [
+    {
+      "old_url": "/labs/",
+      "content_type": "section-index",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/evaluations/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen38-27b/",
+      "content_type": "model-page",
+      "model_id": "qwen38-27b",
+      "event_id": null,
+      "new_url": "/evaluations/qwen38-27b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/nemotron-3-nano-4b/",
+      "content_type": "model-page",
+      "model_id": "nemotron-3-nano-4b",
+      "event_id": null,
+      "new_url": "/evaluations/nemotron-3-nano-4b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/apodex-1-1-mini/",
+      "content_type": "model-page",
+      "model_id": "apodex-1.1-mini",
+      "event_id": null,
+      "new_url": "/evaluations/apodex-1-1-mini/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/lfm2-5-2-6b/",
+      "content_type": "model-page",
+      "model_id": "lfm2.5-2.6b",
+      "event_id": null,
+      "new_url": "/evaluations/lfm2-5-2-6b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/lfm2-5-1-2b/",
+      "content_type": "model-page",
+      "model_id": "lfm2.5-1.2b",
+      "event_id": null,
+      "new_url": "/evaluations/lfm2-5-1-2b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/ornith-1-5-9b/",
+      "content_type": "model-page",
+      "model_id": "ornith-1.5-9b",
+      "event_id": null,
+      "new_url": "/evaluations/ornith-1-5-9b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen35-4b/",
+      "content_type": "model-page",
+      "model_id": "qwen35-4b",
+      "event_id": null,
+      "new_url": "/evaluations/qwen35-4b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen35-9b/",
+      "content_type": "model-page",
+      "model_id": "qwen35-9b",
+      "event_id": null,
+      "new_url": "/evaluations/qwen35-9b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/minicpm5-2b/",
+      "content_type": "model-page",
+      "model_id": "minicpm5-2b",
+      "event_id": null,
+      "new_url": "/evaluations/minicpm5-2b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/gemma4-e4b/",
+      "content_type": "model-page",
+      "model_id": "gemma4-e4b",
+      "event_id": null,
+      "new_url": "/evaluations/gemma4-e4b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen3.8-27b/",
+      "content_type": "event-url",
+      "model_id": "qwen38-27b",
+      "event_id": "initial-evaluation-2026-08-21",
+      "new_url": "/evaluations/qwen38-27b/#initial-evaluation-2026-08-21",
+      "mechanism": "html-stub-meta-refresh",
+      "http_status": 200
+    },
+    {
+      "old_url": "/labs/qwen38-27b-h1/",
+      "content_type": "event-url",
+      "model_id": "qwen38-27b",
+      "event_id": "h1-canonical-promotion-2026-09-09",
+      "new_url": "/evaluations/qwen38-27b/#h1-canonical-promotion-2026-09-09",
+      "mechanism": "html-stub-meta-refresh",
+      "http_status": 200
+    },
+    {
+      "old_url": "/labs/qwen38-27b-context-envelope/",
+      "content_type": "event-url",
+      "model_id": "qwen38-27b",
+      "event_id": "context-envelope-completion-2026-09-12",
+      "new_url": "/evaluations/qwen38-27b/#context-envelope-completion-2026-09-12",
+      "mechanism": "html-stub-meta-refresh",
+      "http_status": 200
+    },
+    {
+      "old_url": "/labs/eval-nemotron-3-nano-4b-recharacterization-2026-09-11/",
+      "content_type": "event-url",
+      "model_id": "nemotron-3-nano-4b",
+      "event_id": "welp-recharacterization-2026-09-11",
+      "new_url": "/evaluations/nemotron-3-nano-4b/#welp-recharacterization-2026-09-11",
+      "mechanism": "html-stub-meta-refresh",
+      "http_status": 200
+    },
+    {
+      "old_url": "/records/",
+      "content_type": "section-index",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/evaluations/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/records/gemma-12b-practical-use/",
+      "content_type": "technical-record",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/records/gemma-12b-practical-use/",
+      "mechanism": "url-preserved",
+      "http_status": 200
+    },
+    {
+      "old_url": "/records/local-llm-baseline/",
+      "content_type": "technical-record",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/records/local-llm-baseline/",
+      "mechanism": "url-preserved",
+      "http_status": 200
+    },
+    {
+      "old_url": "/records/mellum2-agent-backend-test/",
+      "content_type": "technical-record",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/records/mellum2-agent-backend-test/",
+      "mechanism": "url-preserved",
+      "http_status": 200
+    },
+    {
+      "old_url": "/records/qwen38-27b-rtx5070-evaluation/",
+      "content_type": "technical-record",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/records/qwen38-27b-rtx5070-evaluation/",
+      "mechanism": "url-preserved",
+      "http_status": 200
+    },
+    {
+      "old_url": "/records/wumbolabs-first-build/",
+      "content_type": "technical-record",
+      "model_id": null,
+      "event_id": null,
+      "new_url": "/records/wumbolabs-first-build/",
+      "mechanism": "url-preserved",
+      "http_status": 200
+    }
+  ]
+}

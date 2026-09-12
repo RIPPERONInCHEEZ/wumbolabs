@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+{% block canonical %}<link rel="canonical" href="{{ config.base_url }}{{ section.extra.redirect_to }}">{% endblock canonical %}
+{% block head %}<meta http-equiv="refresh" content="0; url={{ section.extra.redirect_to }}">{% endblock head %}
+
+{% block content %}
+<section class="container page-record">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / COMPATIBILITY REDIRECT</span>
+    <span>SECTION RETIRED</span>
+  </div>
+  <p class="console-record-path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>{{ section.extra.redirect_to }}</span>
+  </p>
+
+  <header class="page-record-header">
+    <h1>{{ section.title }}</h1>
+    <p class="page-record-description">{{ section.description }}</p>
+  </header>
+
+  <div class="page-record-content">
+    <p>This index moved: model evaluations live under <a href="{{ section.extra.redirect_to }}">{{ section.extra.redirect_to }}</a>, and the retained technical records are linked from <a href="/projects/#technical-notes">Projects → Technical notes</a>.</p>
+    {{ section.content | safe }}
+  </div>
+</section>
+{% endblock content %}

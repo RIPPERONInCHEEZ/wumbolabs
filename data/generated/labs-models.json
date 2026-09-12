@@ -5,7 +5,7 @@
     {
       "model_id": "qwen38-27b",
       "display_name": "Qwen3.8-27B",
-      "page": "/labs/qwen38-27b/",
+      "page": "/evaluations/qwen38-27b/",
       "classification": "COMPLETED_DEEP_EVALUATION",
       "profile_count": 2,
       "event_count": 3,
@@ -14,7 +14,7 @@
     {
       "model_id": "nemotron-3-nano-4b",
       "display_name": "Nemotron 3 Nano 4B",
-      "page": "/labs/nemotron-3-nano-4b/",
+      "page": "/evaluations/nemotron-3-nano-4b/",
       "classification": "READY_WITH_GUARDRAILS",
       "profile_count": 1,
       "event_count": 2,
@@ -23,7 +23,7 @@
     {
       "model_id": "apodex-1.1-mini",
       "display_name": "Apodex 1.1 mini",
-      "page": "/labs/apodex-1-1-mini/",
+      "page": "/evaluations/apodex-1-1-mini/",
       "classification": "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE",
       "profile_count": 1,
       "event_count": 1,
@@ -32,7 +32,7 @@
     {
       "model_id": "lfm2.5-2.6b",
       "display_name": "LFM2.5 2.6B",
-      "page": "/labs/lfm2-5-2-6b/",
+      "page": "/evaluations/lfm2-5-2-6b/",
       "classification": "COMPLETE_SMALL_MODEL_EVALUATION",
       "profile_count": 1,
       "event_count": 1,
@@ -41,7 +41,7 @@
     {
       "model_id": "lfm2.5-1.2b",
       "display_name": "LFM2.5 1.2B",
-      "page": "/labs/lfm2-5-1-2b/",
+      "page": "/evaluations/lfm2-5-1-2b/",
       "classification": "COMPLETE_SMALL_MODEL_EVALUATION",
       "profile_count": 1,
       "event_count": 1,
@@ -50,7 +50,7 @@
     {
       "model_id": "ornith-1.5-9b",
       "display_name": "Ornith 1.5 9B",
-      "page": "/labs/ornith-1-5-9b/",
+      "page": "/evaluations/ornith-1-5-9b/",
       "classification": "COMPLETE / FINAL_WELP_READINESS_NOT_READY",
       "profile_count": 1,
       "event_count": 1,
@@ -59,7 +59,7 @@
     {
       "model_id": "qwen35-4b",
       "display_name": "Qwen3.5-4B",
-      "page": "/labs/qwen35-4b/",
+      "page": "/evaluations/qwen35-4b/",
       "classification": null,
       "profile_count": 1,
       "event_count": 1,
@@ -68,7 +68,7 @@
     {
       "model_id": "qwen35-9b",
       "display_name": "Qwen3.5-9B",
-      "page": "/labs/qwen35-9b/",
+      "page": "/evaluations/qwen35-9b/",
       "classification": null,
       "profile_count": 1,
       "event_count": 1,
@@ -77,7 +77,7 @@
     {
       "model_id": "minicpm5-2b",
       "display_name": "MiniCPM5-2B",
-      "page": "/labs/minicpm5-2b/",
+      "page": "/evaluations/minicpm5-2b/",
       "classification": "READY_WITH_GUARDRAILS",
       "profile_count": 1,
       "event_count": 1,
@@ -86,7 +86,7 @@
     {
       "model_id": "gemma4-e4b",
       "display_name": "Gemma 4 E4B",
-      "page": "/labs/gemma4-e4b/",
+      "page": "/evaluations/gemma4-e4b/",
       "classification": "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL",
       "profile_count": 1,
       "event_count": 1,

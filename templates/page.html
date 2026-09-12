@@ -6,7 +6,7 @@
 {% set is_record = current_path is starting_with("/records/") %}
 <section class="container page-record{% if not is_record %} context-page{% endif %}">
   <div class="console-record-bar" aria-label="Page context">
-    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / {% if is_record %}LAB RECORDS{% else %}CONTEXT{% endif %}</span>
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / {% if is_record %}TECHNICAL RECORDS{% else %}CONTEXT{% endif %}</span>
     <span>{% if is_record %}READ-ONLY / TECHNICAL RECORD{% elif current_path == "/contact/" %}CONTACT{% else %}PROFILE{% endif %}</span>
   </div>
   <p class="console-record-path">
@@ -15,7 +15,7 @@
   </p>
   {% if is_record %}
     <nav class="page-back" aria-label="Parent section">
-      <a href="{{ get_url(path='/records/') }}">← Back to Lab Records</a>
+      <a href="{{ get_url(path='/projects/') }}#technical-notes">← Back to technical notes</a>
     </nav>
   {% endif %}
 
@@ -35,7 +35,7 @@
 
   {% if is_record and page.word_count >= 400 %}
     <nav class="page-exit" aria-label="After this record">
-      <a href="{{ get_url(path='/records/') }}#all-records">← Return to Lab Records</a>
+      <a href="{{ get_url(path='/projects/') }}#technical-notes">← Back to technical notes</a>
       <a href="#main-content">Back to top ↑</a>
     </nav>
   {% endif %}

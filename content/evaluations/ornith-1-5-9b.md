@@ -20,7 +20,7 @@ WumboLabs tests **Ornith 1.5 9B** on real consumer hardware. This is the canonic
 
 ## Current state
 
-- **Classification:** COMPLETE / FINAL_WELP_READINESS_NOT_READY — [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/labs/ornith-1-5-9b#initial-evaluation-2026-08-27), profile llama.cpp Q4_K_M
+- **Classification:** COMPLETE / FINAL_WELP_READINESS_NOT_READY — [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27), profile llama.cpp Q4_K_M
 - **Recommended profile:** llama.cpp Q4_K_M (`ornith-1.5-9b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/eval-ornith-1.5-9b)
 - **Latest evidence:** 2026-08-27 — Initial evaluation (full-lifecycle WELP campaign)
 
@@ -38,7 +38,7 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-ornith-1.5-9b>
 
 Events on this profile:
 
-- [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/labs/ornith-1-5-9b#initial-evaluation-2026-08-27) — COMPLETE / FINAL_WELP_READINESS_NOT_READY
+- [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27) — COMPLETE / FINAL_WELP_READINESS_NOT_READY
 
 ## Testing history
 

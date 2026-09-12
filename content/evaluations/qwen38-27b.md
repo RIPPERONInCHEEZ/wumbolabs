@@ -21,9 +21,9 @@ WumboLabs tests **Qwen3.8-27B** on real consumer hardware. This is the canonical
 
 ## Current state
 
-- **Classification:** COMPLETED_DEEP_EVALUATION — [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/labs/qwen38-27b#initial-evaluation-2026-08-21), profile Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
+- **Classification:** COMPLETED_DEEP_EVALUATION — [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21), profile Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
 - **Recommended profile:** ExLlamaV3 H1 (SC_2.20bpw_H3_V3) (`qwen38-27b-exl3-h1`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1)
-- **Practical context:** 65,536 default / 98,304 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-12)](/labs/qwen38-27b#context-envelope-completion-2026-09-12)
+- **Practical context:** 65,536 default / 98,304 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12)
 - **Latest evidence:** 2026-09-12 — Context envelope completion
 
 ## Tested profiles
@@ -45,8 +45,8 @@ Original publication location (preserved archive): [WumboLabs/eval-qwen3.8-27b](
 
 Events on this profile:
 
-- [Context envelope completion (2026-09-12)](/labs/qwen38-27b#context-envelope-completion-2026-09-12) — GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
-- [H1 deployment / canonical promotion (2026-09-09)](/labs/qwen38-27b#h1-canonical-promotion-2026-09-09) — COMPLETE / CURRENT_CANONICAL_H1_PROFILE
+- [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12) — GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
+- [H1 deployment / canonical promotion (2026-09-09)](/evaluations/qwen38-27b#h1-canonical-promotion-2026-09-09) — COMPLETE / CURRENT_CANONICAL_H1_PROFILE
 
 ### Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) — HISTORICAL
 
@@ -61,7 +61,7 @@ Original publication location (preserved archive): [WumboLabs/eval-qwen3.8-27b](
 
 Events on this profile:
 
-- [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/labs/qwen38-27b#initial-evaluation-2026-08-21) — COMPLETED_DEEP_EVALUATION
+- [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21) — COMPLETED_DEEP_EVALUATION
 
 ## Testing history
 
@@ -253,6 +253,8 @@ rankings.
 **Initial Evaluation — Historical llama.cpp** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · status: COMPLETED_DEEP_EVALUATION
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp)
+
+[Long-form report: Qwen3.8-27B on 12GB: How Far Can an RTX 5070 Really Push It?](/records/qwen38-27b-rtx5070-evaluation/)
 
 ### Identity
 

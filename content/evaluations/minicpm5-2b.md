@@ -21,9 +21,9 @@ WumboLabs tests **MiniCPM5-2B** on real consumer hardware. This is the canonical
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Initial evaluation (full characterization) (2026-09-10)](/labs/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5), profile contained vLLM BF16
+- **Classification:** READY_WITH_GUARDRAILS — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5), profile contained vLLM BF16
 - **Recommended profile:** contained vLLM BF16 (`minicpm5-2b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/eval-minicpm5-2b)
-- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/labs/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5)
+- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5)
 - **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
 
 ## Tested profiles
@@ -44,7 +44,7 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-minicpm5-2b>
 
 Events on this profile:
 
-- [Initial evaluation (full characterization) (2026-09-10)](/labs/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5) — READY_WITH_GUARDRAILS
+- [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5) — READY_WITH_GUARDRAILS
 
 ## Testing history
 

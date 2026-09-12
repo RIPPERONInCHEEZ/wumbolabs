@@ -6,19 +6,24 @@ stable model_id / profile_id / event_id identity), consumes each generated
 event's canonical website-publication export (schema wumbolabs-labs-publication/1),
 validates identity, and renders:
 
-  - exactly ONE canonical Labs model page per model_id
-    (content/labs/<model_id>.md, aggregating all of the model's profiles and
-    events, current state first);
+  - exactly ONE canonical Evaluation model page per model_id
+    (content/evaluations/<model_id>.md, aggregating all of the model's profiles
+    and events, current state first);
   - compatibility redirect stubs for superseded event-style Labs URLs
-    (content/labs/<old-slug>.md -> /labs/<model_id>/#<event_id>);
+    (served at /labs/<old-slug>/ via a page path override, meta-refreshing to
+    /evaluations/<model_id>/#<event_id>);
+  - the Cloudflare Pages _redirects file (static/_redirects) covering the
+    retired /labs/ and /records/ section roots and every old model-page URL;
+  - a machine-readable route migration map
+    (data/generated/route-migration.json);
   - machine-readable generated data (data/generated/labs-models.json,
-    labs-generated/labs-events.json for the unified /records/ stream, and
-    labs-freshness.json provenance).
+    labs-events.json for event chronology, and labs-freshness.json
+    provenance).
 
 Contract (documented in docs/labs-publication-workflow.md):
-    one model_id        = one canonical Labs page
+    one model_id        = one canonical Evaluation page
     one profile_id      = one canonical public eval repository
-    one event_id        = one dated Records entry / evidence event
+    one event_id        = one dated evidence event on the model page
     one profile may contain many events; one model may contain many profiles
 
 The website is a DERIVATIVE of canonical public evidence. This script never
@@ -48,8 +53,24 @@ EVENT_BODIES = Path("data")  # hand-authored event bodies resolve under data/
 GENERATED_MODELS = Path("data/generated/labs-models.json")
 GENERATED_EVENTS = Path("data/generated/labs-events.json")
 GENERATED_FRESHNESS = Path("data/generated/labs-freshness.json")
-LABS_PAGES = Path("content/labs")
+GENERATED_ROUTE_MIGRATION = Path("data/generated/route-migration.json")
+EVALUATIONS_PAGES = Path("content/evaluations")
+RECORDS_PAGES = Path("content/records")  # hand-maintained technical records
+REDIRECTS_FILE = Path("static/_redirects")
 BASE = Path(".")  # repository root; all repo-relative paths resolve against this
+
+# Hand-maintained pre-Evaluations redirect lines, preserved verbatim so the
+# generated _redirects file stays the single complete source of route
+# compatibility (sync rewrites the whole file deterministically).
+HISTORICAL_REDIRECT_LINES = [
+    "/lab-notes/ /records/ 301",
+    "/benchmarks/ /records/ 301",
+    "/lab-notes/wumbolabs-first-build/ /records/wumbolabs-first-build/ 301",
+    "/benchmarks/local-llm-baseline/ /records/local-llm-baseline/ 301",
+    "/benchmarks/mellum2-agent-backend-test/ /records/mellum2-agent-backend-test/ 301",
+    "/lab-notes/gemma-12b-practical-use/ /records/gemma-12b-practical-use/ 301",
+    "/benchmarks/gemma-12b-practical-use-v1/ /records/gemma-12b-practical-use/ 301",
+]
 
 EXPORT_SCHEMA = "wumbolabs-labs-publication/1"
 DISPOSITIONS = {"WEBSITE_READY", "WEBSITE_BLOCKED", "NOT_FOR_PUBLICATION", "WEBSITE_PUBLISHED"}
@@ -528,7 +549,7 @@ def recommended_profile(entries: list[dict[str, Any]]) -> dict[str, Any] | None:
 
 def anchor_link(entry: dict[str, Any]) -> str:
     title = entry.get("event_title") or entry.get("event_id")
-    return f'[{title} ({entry["event_date"]})](/labs/{url_slug(entry["model_id"])}#{entry["event_id"]})'
+    return f'[{title} ({entry["event_date"]})](/evaluations/{url_slug(entry["model_id"])}#{entry["event_id"]})'
 
 
 def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
@@ -696,6 +717,12 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
         if ev_url:
             lines.append("")
             lines.append(f"[Canonical evidence for this event]({ev_url})")
+        report_page = e.get("report_page")
+        if report_page:
+            report_url = f"/{report_page[:-3]}/" if report_page.endswith(".md") else report_page
+            report_title = e.get("report_title") or "Long-form campaign report"
+            lines.append("")
+            lines.append(f"[Long-form report: {report_title}]({report_url})")
         lines.append("")
         lines.append(event_body(e, exports).rstrip())
         lines.append("")
@@ -727,15 +754,22 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     return "\n".join(lines) + "\n"
 
 
-def render_stub(entry: dict[str, Any]) -> str:
-    target = f"/labs/{url_slug(entry['model_id'])}/#{entry['event_id']}"
+def render_stub(entry: dict[str, Any], old_slug: str) -> str:
+    """Compatibility page served at the legacy /labs/<old-slug>/ URL.
+
+    Cloudflare Pages _redirects cannot target fragments, so event-style legacy
+    URLs keep real HTML pages (path override) that meta-refresh to the event
+    anchor on the canonical Evaluation page.
+    """
+    target = f"/evaluations/{url_slug(entry['model_id'])}/#{entry['event_id']}"
     display = entry.get("event_title") or entry.get("event_id")
     lines = [
         "+++",
         f'title = "{display} (moved)"',
         'description = "Compatibility page. This evidence event now lives on the canonical '
-        'model page for its model."',
+        'Evaluation page for its model."',
         'template = "redirect.html"',
+        f'path = "/labs/{old_slug}/"',
         "",
         "weight = 1000",
         "[extra]",
@@ -743,7 +777,7 @@ def render_stub(entry: dict[str, Any]) -> str:
         f'redirect_to = "{target}"',
         "+++",
         "",
-        f"This record moved to the canonical model page: [{display}]({target}).",
+        f"This record moved to the canonical Evaluation page: [{display}]({target}).",
         "",
     ]
     return "\n".join(lines)
@@ -765,7 +799,7 @@ def build_models_data(registry: dict[str, Any], page_meta: dict[str, dict[str, A
             {
                 "model_id": m["model_id"],
                 "display_name": m["display_name"],
-                "page": f"/labs/{url_slug(m['model_id'])}/",
+                "page": f"/evaluations/{url_slug(m['model_id'])}/",
                 **page_meta.get(m["model_id"], {}),
             }
             for m in registry["models"]
@@ -804,13 +838,87 @@ def build_events_data(registry: dict[str, Any], exports: dict[str, dict[str, Any
             "headline": headline,
             "evidence_url": evidence.get("url"),
             "evidence_state": evidence.get("state"),
-            "model_url": f"/labs/{url_slug(entry['model_id'])}/",
+            "model_url": f"/evaluations/{url_slug(entry['model_id'])}/",
             "report_page": entry.get("report_page"),
         })
     return {
         "version": 1,
         "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
         "events": events,
+    }
+
+
+def build_redirects(models: list[dict[str, Any]], registry: dict[str, Any]) -> str:
+    """Deterministic Cloudflare Pages _redirects content.
+
+    The retired /labs/ section root, the moved section feed, and every old
+    canonical model-page URL are permanent redirects here. Event-style legacy
+    URLs are NOT listed: they keep real HTML stub pages so the fragment in
+    their compatibility target (/evaluations/<model>/#<event>) survives —
+    _redirects cannot express fragments.
+    """
+    lines = [
+        "# Generated by scripts/sync_labs.py — legacy route compatibility.",
+        "# Do not edit by hand; changes belong in the sync script/registry.",
+        "# Historical (pre-2026-09) address changes:",
+        *HISTORICAL_REDIRECT_LINES,
+        "# 2026-09-12 Evaluations consolidation (/labs/ + /records/ -> /evaluations/):",
+        "/labs/ /evaluations/ 301",
+    ]
+    for model in sorted(models, key=lambda m: (m.get("weight") or 0, m["model_id"])):
+        slug = url_slug(model["model_id"])
+        lines.append(f"/labs/{slug}/ /evaluations/{slug}/ 301")
+    lines.append("/records/ /evaluations/ 301")
+    return "\n".join(lines) + "\n"
+
+
+def technical_record_slugs() -> list[str]:
+    """Hand-maintained technical record pages (URLs preserved, no redirects)."""
+    if not (BASE / RECORDS_PAGES).is_dir():
+        return []
+    return sorted(p.stem for p in (BASE / RECORDS_PAGES).glob("*.md") if p.name != "_index.md")
+
+
+def build_route_migration(models: list[dict[str, Any]],
+                          registry: dict[str, Any]) -> dict[str, Any]:
+    """Machine-readable old-URL -> new-URL map (see handoff contract §15)."""
+    mappings: list[dict[str, Any]] = [
+        {"old_url": "/labs/", "content_type": "section-index", "model_id": None,
+         "event_id": None, "new_url": "/evaluations/",
+         "mechanism": "cloudflare-redirects", "http_status": 301},
+    ]
+    for model in sorted(models, key=lambda m: (m.get("weight") or 0, m["model_id"])):
+        slug = url_slug(model["model_id"])
+        mappings.append({
+            "old_url": f"/labs/{slug}/", "content_type": "model-page",
+            "model_id": model["model_id"], "event_id": None,
+            "new_url": f"/evaluations/{slug}/",
+            "mechanism": "cloudflare-redirects", "http_status": 301,
+        })
+    for entry in registry["records"]:
+        for url in entry.get("legacy_urls") or []:
+            mappings.append({
+                "old_url": url, "content_type": "event-url",
+                "model_id": entry["model_id"], "event_id": entry["event_id"],
+                "new_url": (f"/evaluations/{url_slug(entry['model_id'])}/"
+                            f"#{entry['event_id']}"),
+                "mechanism": "html-stub-meta-refresh", "http_status": 200,
+            })
+    mappings.append({
+        "old_url": "/records/", "content_type": "section-index", "model_id": None,
+        "event_id": None, "new_url": "/evaluations/",
+        "mechanism": "cloudflare-redirects", "http_status": 301,
+    })
+    for slug in technical_record_slugs():
+        mappings.append({
+            "old_url": f"/records/{slug}/", "content_type": "technical-record",
+            "model_id": None, "event_id": None, "new_url": f"/records/{slug}/",
+            "mechanism": "url-preserved", "http_status": 200,
+        })
+    return {
+        "version": 1,
+        "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
+        "mappings": mappings,
     }
 
 
@@ -873,13 +981,16 @@ def run(local_exports: Path | None, check_only: bool) -> int:
             "event_count": len(entries),
             "latest_event_date": max(e["event_date"] for e in entries),
         }
-        record_output(BASE / LABS_PAGES / f"{url_slug(mid)}.md",
+        record_output(BASE / EVALUATIONS_PAGES / f"{url_slug(mid)}.md",
                       render_model_page(model, entries, exports))
 
     for entry in registry["records"]:
         for url in entry.get("legacy_urls") or []:
             old_slug = url.rstrip("/").rsplit("/", 1)[-1]
-            record_output(BASE / LABS_PAGES / f"{old_slug}.md", render_stub(entry))
+            record_output(BASE / EVALUATIONS_PAGES / f"{old_slug}.md", render_stub(entry, old_slug))
+
+    redirects_content = build_redirects(registry["models"], registry)
+    migration_data = build_route_migration(registry["models"], registry)
 
     models_data = build_models_data(registry, page_meta)
     events_data = build_events_data(registry, exports)
@@ -900,9 +1011,15 @@ def run(local_exports: Path | None, check_only: bool) -> int:
     }
 
     if not check_only:
-        for path, serial in ((GENERATED_MODELS, json.dumps(models_data, indent=2, ensure_ascii=False) + "\n"),
-                             (GENERATED_EVENTS, json.dumps(events_data, indent=2, ensure_ascii=False) + "\n"),
-                             (GENERATED_FRESHNESS, json.dumps(freshness, indent=2, ensure_ascii=False) + "\n")):
+        outputs_list = (
+            (GENERATED_MODELS, json.dumps(models_data, indent=2, ensure_ascii=False) + "\n"),
+            (GENERATED_EVENTS, json.dumps(events_data, indent=2, ensure_ascii=False) + "\n"),
+            (GENERATED_FRESHNESS, json.dumps(freshness, indent=2, ensure_ascii=False) + "\n"),
+            (GENERATED_ROUTE_MIGRATION,
+             json.dumps(migration_data, indent=2, ensure_ascii=False) + "\n"),
+            (REDIRECTS_FILE, redirects_content),
+        )
+        for path, serial in outputs_list:
             if write_if_changed(path, serial):
                 changed.append(str(path))
             else:
@@ -1065,36 +1182,46 @@ def selftest() -> int:
                     failures.append(f"selftest: {label} exit {exc.code}")
             REGISTRY_PATH.write_text(json.dumps(registry, indent=2) + "\n")
 
-        global REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS, LABS_PAGES, BASE
-        orig = (REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS, LABS_PAGES, BASE)
+        global REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS, EVALUATIONS_PAGES, BASE
+        global GENERATED_ROUTE_MIGRATION, REDIRECTS_FILE
+        orig = (REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS,
+                EVALUATIONS_PAGES, GENERATED_ROUTE_MIGRATION, REDIRECTS_FILE, BASE)
         BASE = root
         REGISTRY_PATH = root / "data" / "labs-registry.json"
         GENERATED_MODELS = root / "data" / "generated" / "labs-models.json"
         GENERATED_EVENTS = root / "data" / "generated" / "labs-events.json"
         GENERATED_FRESHNESS = root / "data" / "generated" / "labs-freshness.json"
-        LABS_PAGES = root / "content" / "labs"
-        (root / "content" / "labs").mkdir(parents=True)
+        GENERATED_ROUTE_MIGRATION = root / "data" / "generated" / "route-migration.json"
+        EVALUATIONS_PAGES = root / "content" / "evaluations"
+        REDIRECTS_FILE = root / "static" / "_redirects"
+        (root / "content" / "evaluations").mkdir(parents=True)
         (root / "content" / "records").mkdir(parents=True)
+        (root / "static").mkdir(parents=True)
         REGISTRY_PATH.parent.mkdir(parents=True, exist_ok=True)
         REGISTRY_PATH.write_text(json.dumps(registry, indent=2) + "\n")
 
-        # 1. valid sync: one page per model, profiles grouped, events inlined
+        # 1. valid sync: one Evaluation page per model, profiles grouped, events inlined
         run(root / "exports", check_only=False)
-        page_a = root / "content" / "labs" / "model-a.md"
-        page_b = root / "content" / "labs" / "model-b.md"
-        generated_pages = sorted(p.name for p in (root / "content" / "labs").glob("*.md"))
+        page_a = root / "content" / "evaluations" / "model-a.md"
+        page_b = root / "content" / "evaluations" / "model-b.md"
+        generated_pages = sorted(p.name for p in (root / "content" / "evaluations").glob("*.md"))
         if not page_a.is_file() or not page_b.is_file():
             failures.append("selftest: model pages missing")
         if generated_pages != ["a2-context.md", "model-a.md", "model-b.md"]:
-            failures.append(f"selftest: unexpected labs outputs {generated_pages} "
-                            "(must be exactly one page per model + stubs)")
+            failures.append(f"selftest: unexpected evaluations outputs {generated_pages} "
+                            "(must be exactly one page per model + legacy stubs)")
         a_text = page_a.read_text() if page_a.is_file() else ""
+        a_front = a_text.split("+++")[1] if a_text.startswith("+++") else ""
         if "model-a-p1" not in a_text or "model-a-p2" not in a_text:
             failures.append("selftest: multi-profile grouping missing on model page")
         for anchor in ("initial-evaluation-2026-01-01", "profile-canonical-promotion-2026-01-02",
                        "context-envelope-completion-2026-01-03"):
             if f'<a id="{anchor}"></a>' not in a_text:
                 failures.append(f"selftest: event anchor {anchor} missing on model page")
+        if "/labs/" in a_text:
+            failures.append("selftest: canonical model page must not link legacy /labs/ URLs")
+        if "\npath = " in a_front:
+            failures.append("selftest: canonical model page must live at its /evaluations/ route")
 
         # 2. current-state precedence: classification from the full-characterization
         #    hand-authored event; context from the later context-only completion.
@@ -1105,12 +1232,15 @@ def selftest() -> int:
         if "guessed" in a_text:
             failures.append("selftest: unexpected text on model page")
 
-        # 3. redirect stub content
-        stub = root / "content" / "labs" / "a2-context.md"
+        # 3. redirect stub content: served at the legacy /labs/ URL, targets the
+        #    /evaluations/ model page + event anchor
+        stub = root / "content" / "evaluations" / "a2-context.md"
         if stub.is_file():
             s = stub.read_text()
-            if 'redirect_to = "/labs/model-a/#context-envelope-completion-2026-01-03"' not in s:
-                failures.append("selftest: legacy URL stub does not target model page + anchor")
+            if 'redirect_to = "/evaluations/model-a/#context-envelope-completion-2026-01-03"' not in s:
+                failures.append("selftest: legacy URL stub does not target Evaluation page + anchor")
+            if 'path = "/labs/a2-context/"' not in s:
+                failures.append("selftest: legacy stub must keep serving at its /labs/ URL")
         else:
             failures.append("selftest: legacy URL stub missing")
 
@@ -1124,44 +1254,73 @@ def selftest() -> int:
         b_events = [e for e in events if e["model_id"] == "model-b"]
         if len(b_events) != 1 or b_events[0]["headline"] != "B1 context envelope completion.":
             failures.append("selftest: qwen35-style in-place record must stay one event row")
+        if any(not e["model_url"].startswith("/evaluations/") for e in events):
+            failures.append("selftest: events dataset model_url must be the /evaluations/ page")
 
-        # 5. idempotence: second run is a no-op
-        before = {p: p.read_text() for p in (root / "content" / "labs").glob("*.md")}
+        # 5. generated _redirects: section roots + model pages 301; event-style
+        #    URLs stay HTML stubs (not listed)
+        redirects = (root / "static" / "_redirects").read_text()
+        for required in ("/labs/ /evaluations/ 301",
+                         "/labs/model-a/ /evaluations/model-a/ 301",
+                         "/labs/model-b/ /evaluations/model-b/ 301",
+                         "/records/ /evaluations/ 301"):
+            if required not in redirects:
+                failures.append(f"selftest: _redirects missing {required!r}")
+        if "/labs/a2-context/ " in redirects:
+            failures.append("selftest: event-style legacy URL must stay an HTML stub, not _redirects")
+
+        # 6. route migration map covers every migrated/preserved route
+        migration = json.loads((root / "data" / "generated" / "route-migration.json").read_text())
+        by_old = {m["old_url"]: m for m in migration["mappings"]}
+        if by_old.get("/labs/model-a/", {}).get("new_url") != "/evaluations/model-a/":
+            failures.append("selftest: route map missing model-page migration")
+        event_map = by_old.get("/labs/a2-context/", {})
+        if event_map.get("event_id") != "context-envelope-completion-2026-01-03" or \
+           event_map.get("new_url") != "/evaluations/model-a/#context-envelope-completion-2026-01-03":
+            failures.append("selftest: route map missing event-URL mapping")
+        if by_old.get("/records/", {}).get("new_url") != "/evaluations/":
+            failures.append("selftest: route map missing /records/ migration")
+
+        # 7. idempotence: second run is a no-op
+        before = {p: p.read_text() for p in (root / "content" / "evaluations").glob("*.md")}
         before_data = {p: p.read_text() for p in (root / "data" / "generated").glob("*.json")}
+        before_data[root / "static" / "_redirects"] = \
+            (root / "static" / "_redirects").read_text()
         run(root / "exports", check_only=False)
-        after = {p: p.read_text() for p in (root / "content" / "labs").glob("*.md")}
+        after = {p: p.read_text() for p in (root / "content" / "evaluations").glob("*.md")}
         after_data = {p: p.read_text() for p in (root / "data" / "generated").glob("*.json")}
+        after_data[root / "static" / "_redirects"] = (root / "static" / "_redirects").read_text()
         if before != after or before_data != after_data:
             failures.append("selftest: second sync is not a no-op")
 
-        # 6. --check passes on a synced tree
+        # 8. --check passes on a synced tree
         if run(root / "exports", check_only=True) != 0:
             failures.append("selftest: --check failed on a synced tree")
 
-        # 7. duplicate event_id rejected
+        # 9. duplicate event_id rejected
         run_and_expect_failure("duplicate event_id", lambda r: r["records"].append(
             dict(r["records"][3], slug="b1-dup", event_id="initial-evaluation-2026-01-01")))
-        # 8. duplicate model_id rejected
+        # 10. duplicate model_id rejected
         run_and_expect_failure("duplicate model_id", lambda r: r["models"].append(dict(r["models"][0])))
-        # 9. profile_id -> two repositories rejected
+        # 11. profile_id -> two repositories rejected
         run_and_expect_failure("profile/repo collision", lambda r: r["records"][3].update(
             profile_id="model-a-p1", profile_repo="WumboLabs/eval-other"))
-        # 10. entry without declared model (technical record) rejected
+        # 12. entry without declared model (technical record) rejected
         run_and_expect_failure("technical record without model", lambda r: r["records"].append(
             {"slug": "tech-note", "event_id": "tech-event-2026-01-01", "event_type": "initial-evaluation",
              "event_date": "2026-01-01", "record_date": "2026-01-01", "model_id": None,
              "profile_id": "tech-p", "profile_repo": "WumboLabs/eval-tech", "authoring": "hand-authored",
              "event_body": "labs-events/initial-evaluation.md", "publication_state": "published",
              "evidence_scope": ["performance"]}))
-        # 11. unknown model_id rejected
+        # 13. unknown model_id rejected
         run_and_expect_failure("unknown model_id", lambda r: r["records"][0].update(model_id="model-z"))
-        # 12. duplicate legacy URL rejected
+        # 14. duplicate legacy URL rejected
         run_and_expect_failure("duplicate legacy URL", lambda r: r["records"][0].update(
             legacy_urls=["/labs/a2-context/"]))
-        # 13. legacy URL colliding with a model page rejected
+        # 15. legacy URL colliding with a model page rejected
         run_and_expect_failure("legacy/model URL collision", lambda r: r["records"][0].update(
             legacy_urls=["/labs/model-b/"]))
-        # 14. export-bytes mutation without updating the pin rejected
+        # 16. export-bytes mutation without updating the pin rejected
         def export_mutation_case(label: str, mutate_export) -> None:
             mutated = json.loads(json.dumps(ctx_a2))
             mutate_export(mutated)
@@ -1190,20 +1349,20 @@ def selftest() -> int:
             if exc.code != 1:
                 failures.append(f"selftest: hash mismatch exit {exc.code}")
         REGISTRY_PATH.write_text(json.dumps(registry, indent=2) + "\n")
-        # 15. export slug mismatch rejected
+        # 17. export slug mismatch rejected
         export_mutation_case("slug mismatch", lambda e: e.update(website_record_slug="other"))
-        # 16. pending export claiming a URL rejected
+        # 18. pending export claiming a URL rejected
         export_mutation_case(
             "pending-with-URL",
             lambda e: e.update(canonical_evidence={"state": "PENDING_HUMAN_GATE",
                                                    "url": "https://example.com/x"}))
-        # 17. export identity conflicting with the registry rejected
+        # 19. export identity conflicting with the registry rejected
         export_mutation_case(
             "conflicting export identity",
             lambda e: e.update(identity={"model_id": "model-zzz", "profile_id": "model-a-p2",
                                          "event_id": "context-envelope-completion-2026-01-03",
                                          "event_type": "context-envelope-completion"}))
-        # 18. hand-authored body must stay present; matching export identity accepted
+        # 20. hand-authored body must stay present; matching export identity accepted
         (root / "data" / "labs-events" / "initial-evaluation.md").write_text(hand_body)
         ok_export = json.loads(json.dumps(ctx_a2))
         ok_export["identity"] = {"model_id": "model-a", "profile_id": "model-a-p2",
@@ -1220,13 +1379,15 @@ def selftest() -> int:
         (exports_dir / "a2-context" / "website-publication.json").write_text(
             json.dumps(ctx_a2, indent=2) + "\n")
 
-        REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS, LABS_PAGES, BASE = orig
+        REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS, \
+            EVALUATIONS_PAGES, GENERATED_ROUTE_MIGRATION, REDIRECTS_FILE, BASE = orig
 
         if failures:
             print(json.dumps({"pass": False, "failures": failures}, indent=2))
             return 1
         print(json.dumps({"pass": True, "checks": [
-            "one Labs page per model; stubs generated for legacy URLs",
+            "one Evaluation page per model at /evaluations/; legacy event stubs served from /labs/ URLs",
+            "generated _redirects (section roots + model pages) and route-migration map",
             "multi-profile/multi-event aggregation with anchors",
             "per-surface current-state precedence (classification vs context)",
             "legacy URL stub targets model page + event anchor",

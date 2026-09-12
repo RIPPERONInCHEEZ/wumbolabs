@@ -2,6 +2,12 @@
 
 Small follow-up items for the public WumboLabs / WumboCore website.
 
+> **Note (2026-09-12):** the Evaluations consolidation changed the public
+> information architecture. The canonical public model-evaluation route is now
+> `/evaluations/` (one page per tested model); `/labs/` and `/records/` are
+> retired public concepts with legacy redirects. Backlog entries below that
+> reference Labs / Lab Records / `/records/` as live routes are historical.
+
 ## Translation / language accessibility
 
 Status: planned, not urgent.

@@ -8,18 +8,26 @@ stale/defective.
 
 ## Identity contract (2026-09-12, model/profile/event architecture)
 
-    one MODEL ID        = one canonical Labs page        (/labs/<model-id>/)
+    one MODEL ID        = one canonical Evaluation page   (/evaluations/<model-id>/)
     one PROFILE ID      = one canonical public eval repository
-    one EVENT ID        = one dated Lab Records entry / evidence event
+    one EVENT ID        = one dated evidence event on the model page
     one profile may contain many events; one model may contain many profiles
+
+Public presentation (2026-09-12 Evaluations consolidation): the primary
+navigation is Projects / Evaluations / Methodology / About / Contact. There is
+one public model-evaluation section — **Evaluations** — listing one entry per
+tested model, with exactly one canonical page per model containing the current
+state, tested profiles, results, chronological testing history (events with
+anchors), and canonical evidence links. The underlying model/profile/event
+evidence architecture is unchanged.
 
 - `data/labs-registry.json` (v2) is EVENT-oriented: one entry per published
   evidence event, carrying `model_id`, `profile_id`, `event_id`, `event_type`,
   `event_date`, `record_date`, `profile_repo`, `profile_status`, and
   `evidence_scope`.
-- `scripts/sync_labs.py` renders exactly ONE Labs page per model
-  (`content/labs/<model-id>.md`), aggregating all of the model's profiles and
-  events with the current state first. Per-surface currency follows
+- `scripts/sync_labs.py` renders exactly ONE Evaluation page per model
+  (`content/evaluations/<model-id>.md`), aggregating all of the model's profiles
+  and events with the current state first. Per-surface currency follows
   `evidence_scope`: a later context-only event supersedes only the surfaces it
   declares (it can never silently replace classification, reliability, or
   capability evidence).
@@ -30,11 +38,17 @@ stale/defective.
   into profile-specific canonical repositories; the original remains a
   preserved historical archive with a README notice. Profile-pure repositories
   keep their original names.
-- Superseded event-style Labs URLs are preserved as generated compatibility
-  pages (meta refresh + canonical) pointing at
-  `/labs/<model-id>/#<event-id>`; Cloudflare Pages `_redirects` cannot target
-  fragments. The `/labs/` root is the model catalog (the old
-  `/labs/ -> /records/` redirect was removed).
+- Legacy route compatibility (generated deterministically by sync):
+  `/labs/`, `/labs/atom.xml`, every `/labs/<model-id>/`, and `/records/`
+  permanent-redirect (301) to their Evaluations destinations via
+  `static/_redirects` (generated — do not edit by hand). Superseded
+  event-style Labs URLs keep real HTML stub pages served at `/labs/<old-slug>/`
+  (page path override) that meta-refresh to
+  `/evaluations/<model-id>/#<event-id>`, because `_redirects` cannot target
+  fragments. A machine-readable map of every old → new route is written to
+  `data/generated/route-migration.json`. Hand-maintained technical records
+  keep their direct `/records/<slug>/` URLs and are listed under
+  Projects → Technical notes.
 - Each canonical eval repository used to pin website exports stores the export
   at a pinned commit with a SHA-256 pin in the registry. Where evidence was
   migrated, `MIGRATION.md` in the new repository records per-file provenance
@@ -58,35 +72,33 @@ evidence URL. The registry stores no machine-local absolute paths; local
 exports are resolved through the `--local-exports` argument at sync time and
 pinned by SHA-256.
 
-## Unified Records index
+## Public presentation: Evaluations
 
-`/records/` remains the chronological stream of individual evidence events.
-`templates/records_index.html` combines the hand-maintained technical records
-in `content/records/` with the generated model-event rows from
-`data/generated/labs-events.json` (produced by deterministic sync from the
-registry). Each model-event row shows model, event type/profile context, date,
-status, hardware, and headline, and links to the event's anchor on the
-canonical model page plus the canonical evidence repository. A long-form
-technical report describing the same event as an evaluation (for example
-`records/qwen38-27b-rtx5070-evaluation.md` with
-`extra.evaluation_event = "initial-evaluation-2026-08-21"`) renders as one
-merged row; this is an explicit event relationship, not model-name
-deduplication. Record chronology uses `record_date`, which is preserved when a
-record is updated in place.
+`/evaluations/` is the single public model catalog: one entry per tested model
+(model name, classification, recommended profile, practical context, profile
+and event counts, latest evidence date). Event chronology is not duplicated on
+the catalog; it lives in each model page's **Testing history** section, where
+every event keeps its stable anchor (`#<event-id>`), its canonical evidence
+link, and — where one exists — a link to the long-form campaign report.
 
-Archive position uses the original front-matter `date`, descending, with the
-page permalink ascending as the deterministic same-date tie-break. `weight`,
-`updated`, type, and status do not affect chronology. Every record needs a
-trustworthy explicit date. Later substantive evidence belongs in a new dated
-record rather than moving an older event.
+`/records/` is no longer a standalone public archive. Its index address
+permanent-redirects to `/evaluations/`. The hand-maintained technical records
+(`content/records/`) keep their direct `/records/<slug>/` URLs and are
+discoverable through the **Technical notes** block on the Projects index; a
+long-form report describing a model event (for example
+`records/qwen38-27b-rtx5070-evaluation.md`) is additionally linked from that
+event's section on the model's Evaluation page. No public Records/Labs
+navigation label remains, and no old published route returns 404.
+
+Archive position of technical records uses the original front-matter `date`,
+descending. `weight`, `updated`, type, and status do not affect chronology.
+Every record needs a trustworthy explicit date. Later substantive evidence
+belongs in a new dated record rather than moving an older event.
 
 When a technical report and an evaluation describe the **same evidence event**,
-the report may set `extra.evaluation_record` to the evaluation's content-relative
-path (for example, `labs/qwen3.8-27b.md`). They must share the event date. The
-index renders one entry using the report title and evaluation metadata, linking
-both detail pages and canonical evidence. This is an explicit event relationship,
-not model-name deduplication: the August Qwen3.8 campaign and September H1 update
-remain separate records. All existing detail URLs remain available.
+the report is linked from the event section on the model's Evaluation page
+(registry `report_page` field). This is an explicit event relationship, not
+model-name deduplication. All existing detail URLs remain available.
 
 Type, lifecycle/status, hardware, and publication state are entry metadata,
 not separate browsing sections. No public testing-status dashboard or research
@@ -133,10 +145,10 @@ pushes, and deployment are always human actions.
        python scripts/sync_labs.py
 
    Omit `--local-exports` when every generated entry consumes `github-raw`
-   sources. Sync renders one model page per model_id, compatibility stubs for
-   superseded event URLs, and the generated datasets, then exits nonzero on
-   schema, hash, slug, identity, or evidence-relationship errors. A second run
-   must change nothing (idempotence).
+   sources. Sync renders one Evaluation page per model_id, legacy compatibility
+   stubs and the generated `_redirects`, the generated datasets, and the route
+   migration map, then exits nonzero on schema, hash, slug, identity, or
+   evidence-relationship errors. A second run must change nothing (idempotence).
 
        python scripts/sync_labs.py --local-exports <exports-dir>   # first pass
        python scripts/sync_labs.py --local-exports <exports-dir>   # verify: 0 changed
@@ -162,9 +174,11 @@ pushes, and deployment are always human actions.
 
        zola build
 
-8. **Validate:** inspect generated routes under `public/labs/`, confirm no
-   localhost URLs, no local filesystem paths, no secrets in changed files,
-   and run `git diff --check`. Review the complete diff.
+8. **Validate:** inspect generated routes under `public/evaluations/`, run
+   `python scripts/check_evaluations_site.py` (route/navigation/legacy-link
+   validation), confirm no localhost URLs, no local filesystem paths, no
+   secrets in changed files, and run `git diff --check`. Review the complete
+   diff.
 9. **Human Git gate:** stage, review, and commit the changes; push.
 10. **Deployment verification:** confirm the Cloudflare Pages deployment and
     that every published record resolves to live canonical evidence. Then set

@@ -21,9 +21,9 @@ WumboLabs tests **Nemotron 3 Nano 4B** on real consumer hardware. This is the ca
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-11)](/labs/nemotron-3-nano-4b#welp-recharacterization-2026-09-11), profile llama.cpp Q4_K_M
+- **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11), profile llama.cpp Q4_K_M
 - **Recommended profile:** llama.cpp Q4_K_M (`nemotron-3-nano-4b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/eval-nemotron-3-nano-4b)
-- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-11)](/labs/nemotron-3-nano-4b#welp-recharacterization-2026-09-11)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11)
 - **Latest evidence:** 2026-09-11 — Current-WELP recharacterization
 
 ## Tested profiles
@@ -44,8 +44,8 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-nemotron-3-nano
 
 Events on this profile:
 
-- [Current-WELP recharacterization (2026-09-11)](/labs/nemotron-3-nano-4b#welp-recharacterization-2026-09-11) — READY_WITH_GUARDRAILS
-- [Initial evaluation (protocol development, PROTOCOL_BLOCKED) (2026-08-25)](/labs/nemotron-3-nano-4b#initial-evaluation-2026-08-25) — PARTIAL_PROTOCOL_DEVELOPMENT
+- [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11) — READY_WITH_GUARDRAILS
+- [Initial evaluation (protocol development, PROTOCOL_BLOCKED) (2026-08-25)](/evaluations/nemotron-3-nano-4b#initial-evaluation-2026-08-25) — PARTIAL_PROTOCOL_DEVELOPMENT
 
 ## Testing history
 

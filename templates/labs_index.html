@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
-{% block title %}Labs — Model Catalog | {{ config.title }}{% endblock title %}
+{% block title %}Evaluations — Model Catalog | {{ config.title }}{% endblock title %}
 
 {% block content %}
-{% set models = get_section(path="labs/_index.md") %}
+{% set models = get_section(path="evaluations/_index.md") %}
 <section class="container page-record archive-page">
   <div class="console-record-bar" aria-label="Record context">
-    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LABS</span>
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / EVALUATIONS</span>
     <span>MODEL CATALOG / ONE PAGE PER MODEL</span>
   </div>
   <p class="console-record-path">
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
-    <span>/labs</span>
+    <span>/evaluations</span>
   </p>
 
   <header class="page-record-header">
@@ -44,9 +44,5 @@
       {% endfor %}
     </div>
   </section>
-
-  <div class="page-record-content">
-    <p>Chronological evidence events, including the testing history of every model above, live in <a href="/records/">Lab Records</a>.</p>
-  </div>
 </section>
 {% endblock content %}
