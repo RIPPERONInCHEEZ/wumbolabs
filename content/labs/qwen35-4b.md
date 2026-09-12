@@ -70,6 +70,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 - **Constrained result:** inherited: 7/7 constrained checks and 20/20 bounded reliability (baseline campaign, unchanged, not rerun)
 - Perfect synthetic retrieval (20/20 values) at 99.4-99.5% occupancy through 64K on the primary surface
+- Highest measured/admitted near-full primary context 65,536 (guarded profile confirmed); 98,304 projected below the frozen operational safety floor and intentionally not launched; exact ceiling not bracketed
 - q4_0-KV alternate surface functionally correct at 32K
 - Official YaRN mechanism representable in the pinned runtime
 

@@ -111,14 +111,14 @@
       "source": {
         "kind": "github-raw",
         "repo": "WumboLabs/eval-qwen3.5-4b",
-        "ref": "65afa02d46b7e3e4ba57d6d318d5474db3866341",
+        "ref": "cb01b6826c67f8fcb5ce9dfffdb36664c23ee0d0",
         "path": "website-publication.json",
-        "sha256": "5ca959e62323472cd7fb7ee2fe860278b6204ee19b8dc611b1d4f0e178167460"
+        "sha256": "3c8fab5a1dcea73dd57a5296a00fd8238caf1b3eb8dd28be7fb2d5d56ee4bb04"
       },
       "canonical_evidence": {
         "state": "published",
         "repo": "WumboLabs/eval-qwen3.5-4b",
-        "ref": "65afa02d46b7e3e4ba57d6d318d5474db3866341",
+        "ref": "cb01b6826c67f8fcb5ce9dfffdb36664c23ee0d0",
         "url": "https://github.com/WumboLabs/eval-qwen3.5-4b"
       }
     },
