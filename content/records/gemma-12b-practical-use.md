@@ -4,9 +4,15 @@ description = "Gemmable 4 12B, Gemma 4 12B QAT Q4, and Gemma 4 12B UD-Q5 tested 
 date = 2026-06-21
 [extra]
 record_type = "REPORT"
-back_label = "Back to Lab Records"
-back_url = "/records/"
+back_label = "Back to model evaluation"
+back_url = "/evaluations/gemma-4-12b/"
 +++
+
+This long-form report is retained at its historical URL. Its canonical home is
+the [Gemma 4 12B IT](/evaluations/gemma-4-12b/) Evaluation page (with the
+[Gemmable 4 12B MTP](/evaluations/gemmable-4-12b/) page for the comparison's
+third tested variant); this shared report is one immutable artifact referenced
+from both models' testing history.
 
 Gemmable 4 12B MTP Q4_K_M, Gemma 4 12B IT QAT UD-Q4_K_XL, and Gemma 4 12B IT UD-Q5_K_XL were tested through LLMGauge on WumboJetsII.
 

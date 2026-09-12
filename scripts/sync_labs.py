@@ -79,7 +79,16 @@ REGISTRY_PUBLICATION_STATES = {"published", "evidence-pending-human-gate"}
 PROFILE_STATUSES = {"current", "current-alternate", "historical", "superseded", "specialized"}
 EVENT_TYPES = {
     "initial-evaluation", "welp-recharacterization", "profile-canonical-promotion",
-    "context-envelope-completion", "follow-up",
+    "context-envelope-completion", "follow-up", "specialized-test",
+    "practical-use-comparison", "benchmark-only", "profile-optimization", "integration-test",
+}
+# Evidence maturity labels (census vocabulary). Required on every registry entry
+# since the 2026-09-12 full-evidence census; displayed verbatim on model pages.
+MATURITIES = {
+    "CURRENT_WELP", "FULL_EVALUATION", "HISTORICAL_EVALUATION", "PARTIAL_EVALUATION",
+    "SPECIALIZED_TEST", "BENCHMARK_ONLY", "PRACTICAL_USE", "PROFILE_OPTIMIZATION",
+    "CONTEXT_COMPLETION", "RELIABILITY_TEST", "PROTOCOL_BLOCKED", "EARLY_STOP",
+    "INTEGRATION_TEST", "UNRESOLVED_HISTORICAL",
 }
 REQUIRED_EXPORT_KEYS = [
     "schema", "campaign", "disposition", "model", "artifact", "runtime",
@@ -96,6 +105,9 @@ EVENT_ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 SURFACES = {
     "model-classification", "reliability", "capabilities", "context",
     "performance", "serving-profile", "localmaxxing", "protocol-development",
+    # census additions: bounded testing surfaces that never supersede the
+    # canonical WELP surfaces above
+    "specialized", "practical-use", "agent-backend",
 }
 
 
@@ -188,6 +200,22 @@ def validate_registry(registry: dict[str, Any]) -> None:
         scope = entry.get("evidence_scope")
         if not isinstance(scope, list) or not scope or not all(s in SURFACES for s in scope):
             fail(f"registry entry {slug!r}: evidence_scope must be a non-empty list of {sorted(SURFACES)}")
+        maturity = entry.get("evidence_maturity")
+        if maturity not in MATURITIES:
+            fail(f"registry entry {slug!r}: evidence_maturity must be one of {sorted(MATURITIES)}")
+
+        related_models = entry.get("related_model_ids") or []
+        shared_notes = entry.get("shared_model_notes") or {}
+        if not isinstance(related_models, list) or \
+                any(mid not in model_ids for mid in related_models):
+            fail(f"registry entry {slug!r}: related_model_ids must all be declared registry models")
+        if set(shared_notes) - set(related_models):
+            fail(f"registry entry {slug!r}: shared_model_notes keys must be listed in related_model_ids")
+        if related_models and not entry.get("shared_event_id"):
+            fail(f"registry entry {slug!r}: related_model_ids entries require a shared_event_id")
+        related_profiles = entry.get("related_profile_ids") or []
+        if not isinstance(related_profiles, list):
+            fail(f"registry entry {slug!r}: related_profile_ids must be a list")
 
         # one profile_id maps to exactly one canonical repository (and vice versa)
         repo = (entry.get("profile_repo") or "")
@@ -541,8 +569,11 @@ def current_event(entries: list[dict[str, Any]], surface: str) -> dict[str, Any]
 
 
 def recommended_profile(entries: list[dict[str, Any]]) -> dict[str, Any] | None:
-    """Profile of the latest serving-profile event; fallback: latest event overall."""
+    """Profile of the latest serving-profile event; fallback: latest practical-use
+    event; final fallback: latest event overall. Benchmark-only or specialized
+    events must not masquerade as the recommended practical surface."""
     e = current_event(entries, "serving-profile") or \
+        current_event(entries, "practical-use") or \
         max(entries, key=lambda e: (e["event_date"], e["slug"]))
     return e
 
@@ -553,7 +584,8 @@ def anchor_link(entry: dict[str, Any]) -> str:
 
 
 def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
-                      exports: dict[str, dict[str, Any]]) -> str:
+                      exports: dict[str, dict[str, Any]],
+                      shared_for_model: list[dict[str, Any]] | None = None) -> str:
     mid = model["model_id"]
     display = model["display_name"]
     entries_sorted = sorted(entries, key=lambda e: (e["event_date"], e["slug"]), reverse=True)
@@ -565,6 +597,11 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     profile_events: dict[str, list[dict[str, Any]]] = {}
     for e in entries:
         profile_events.setdefault(e["profile_id"], []).append(e)
+        # a shared single event can test several profiles of one model (e.g. a
+        # fit test covering an Instruct variant and its Thinking sibling); the
+        # related profiles appear as tested surfaces with the same event.
+        for rpid in e.get("related_profile_ids") or []:
+            profile_events.setdefault(rpid, []).append(e)
 
     # ordered profiles: current first, then by most recent event
     def profile_sort_key(pid: str) -> tuple[int, str]:
@@ -574,6 +611,8 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
 
     profile_ids = sorted(profile_events, key=profile_sort_key, reverse=False)
     profile_ids.sort(key=lambda pid: profile_sort_key(pid))
+    # stable: profile_sort_key sorts by (status-current, latest_date); reverse=False keeps
+    # current first. Do not double-sort (kept explicit for clarity).
 
     desc = (f"{display} — the current WumboLabs evidence state on one page: tested profiles, "
             "validated context, and the full chronological testing history. Each value is "
@@ -710,8 +749,12 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
         lines.append("")
         ev_url = (e.get("canonical_evidence") or {}).get("url", "")
         meta = [f'**{fmt(e.get("event_kicker"))}**', f'profile: {e.get("profile_name")}']
+        if e.get("evidence_maturity"):
+            meta.append(f'maturity: {e["evidence_maturity"]}')
         if e.get("welp_status"):
             meta.append(f'status: {e["welp_status"]}')
+        if e.get("related_profile_ids"):
+            meta.append("related profiles: " + ", ".join(f'`{p}`' for p in e["related_profile_ids"]))
         line = " · ".join(meta)
         lines.append(line)
         if ev_url:
@@ -725,6 +768,20 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
             lines.append(f"[Long-form report: {report_title}]({report_url})")
         lines.append("")
         lines.append(event_body(e, exports).rstrip())
+        lines.append("")
+
+    if shared_for_model:
+        lines.append("## Shared comparison events")
+        lines.append("")
+        lines.append("This model appears as a related model in shared multi-model comparisons. The "
+                     "underlying report remains one immutable shared artifact, published in the "
+                     "canonical model's evidence repository; this model's measured entries:")
+        lines.append("")
+        for s in sorted(shared_for_model, key=lambda x: (x["entry"]["event_date"], x["entry"]["slug"])):
+            e = s["entry"]
+            note = s.get("note")
+            lines.append(f"- {anchor_link(e)}"
+                         + (f" — {note}" if note else ""))
         lines.append("")
 
     lines.append("## Canonical evidence")
@@ -834,6 +891,9 @@ def build_events_data(registry: dict[str, Any], exports: dict[str, dict[str, Any
             "date": entry.get("record_date"),
             "event_date": entry.get("event_date"),
             "status": entry.get("welp_status"),
+            "evidence_maturity": entry.get("evidence_maturity"),
+            "shared_event_id": entry.get("shared_event_id"),
+            "related_model_ids": entry.get("related_model_ids"),
             "hardware": hardware,
             "headline": headline,
             "evidence_url": evidence.get("url"),
@@ -958,6 +1018,13 @@ def run(local_exports: Path | None, check_only: bool) -> int:
     entries_by_model: dict[str, list[dict[str, Any]]] = {}
     for entry in registry["records"]:
         entries_by_model.setdefault(entry["model_id"], []).append(entry)
+    shared_by_model: dict[str, list[dict[str, Any]]] = {}
+    for entry in registry["records"]:
+        for mid in entry.get("related_model_ids") or []:
+            shared_by_model.setdefault(mid, []).append({
+                "entry": entry,
+                "note": (entry.get("shared_model_notes") or {}).get(mid),
+            })
 
     changed: list[str] = []
     unchanged: list[str] = []
@@ -975,14 +1042,15 @@ def run(local_exports: Path | None, check_only: bool) -> int:
     for model in registry["models"]:
         mid = model["model_id"]
         entries = entries_by_model.get(mid) or []
+        related_pids = {rp for e in entries for rp in (e.get("related_profile_ids") or [])}
         page_meta[mid] = {
             "classification": (current_event(entries, "model-classification") or {}).get("welp_status"),
-            "profile_count": len({e["profile_id"] for e in entries}),
+            "profile_count": len({e["profile_id"] for e in entries} | related_pids),
             "event_count": len(entries),
             "latest_event_date": max(e["event_date"] for e in entries),
         }
         record_output(BASE / EVALUATIONS_PAGES / f"{url_slug(mid)}.md",
-                      render_model_page(model, entries, exports))
+                      render_model_page(model, entries, exports, shared_by_model.get(mid)))
 
     for entry in registry["records"]:
         for url in entry.get("legacy_urls") or []:
@@ -1133,6 +1201,7 @@ def selftest() -> int:
                  "profile_id": "model-a-p1", "profile_name": "P1 legacy", "profile_status": "historical",
                  "profile_repo": "WumboLabs/eval-model-a-p1", "event_kicker": "Initial Evaluation",
                  "event_title": "Initial evaluation", "welp_status": "COMPLETED_DEEP_EVALUATION",
+                 "evidence_maturity": "FULL_EVALUATION",
                  "evidence_scope": ["model-classification", "reliability", "capabilities", "context", "performance"],
                  "authoring": "hand-authored", "event_body": "labs-events/initial-evaluation.md",
                  "publication_state": "published",
@@ -1143,6 +1212,7 @@ def selftest() -> int:
                  "profile_name": "P2 current", "profile_status": "current",
                  "profile_repo": "WumboLabs/eval-model-a-p2", "event_kicker": "Profile promotion",
                  "event_title": "Profile promotion", "welp_status": "CURRENT_CANONICAL_PROFILE",
+                 "evidence_maturity": "CURRENT_WELP",
                  "evidence_scope": ["serving-profile", "performance", "localmaxxing"],
                  "authoring": "generated", "source": src_a2_base, "publication_state": "published",
                  "canonical_evidence": {"state": "published", "url": "https://example.com/a2-baseline"}},
@@ -1152,6 +1222,7 @@ def selftest() -> int:
                  "profile_name": "P2 current", "profile_status": "current",
                  "profile_repo": "WumboLabs/eval-model-a-p2", "event_kicker": "Context Envelope",
                  "event_title": "Context envelope completion", "welp_status": "GUARDED",
+                 "evidence_maturity": "CONTEXT_COMPLETION",
                  "evidence_scope": ["context"],
                  "authoring": "generated", "source": src_a2_ctx, "publication_state": "published",
                  "canonical_evidence": {"state": "published", "url": "https://example.com/a2-context"},
@@ -1162,6 +1233,7 @@ def selftest() -> int:
                  "profile_name": "B profile", "profile_status": "current",
                  "profile_repo": "WumboLabs/eval-model-b", "event_kicker": "Context Envelope",
                  "event_title": "Context envelope completion", "welp_status": "READY_WITH_GUARDRAILS",
+                 "evidence_maturity": "CONTEXT_COMPLETION",
                  "evidence_scope": ["context"],
                  "authoring": "generated", "source": src_b_ctx, "publication_state": "published",
                  "canonical_evidence": {"state": "published", "url": "https://example.com/b1"}},
@@ -1311,7 +1383,7 @@ def selftest() -> int:
              "event_date": "2026-01-01", "record_date": "2026-01-01", "model_id": None,
              "profile_id": "tech-p", "profile_repo": "WumboLabs/eval-tech", "authoring": "hand-authored",
              "event_body": "labs-events/initial-evaluation.md", "publication_state": "published",
-             "evidence_scope": ["performance"]}))
+             "evidence_maturity": "BENCHMARK_ONLY", "evidence_scope": ["performance"]}))
         # 13. unknown model_id rejected
         run_and_expect_failure("unknown model_id", lambda r: r["records"][0].update(model_id="model-z"))
         # 14. duplicate legacy URL rejected

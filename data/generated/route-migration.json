@@ -102,6 +102,105 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/gemma-4-12b/",
+      "content_type": "model-page",
+      "model_id": "gemma-4-12b",
+      "event_id": null,
+      "new_url": "/evaluations/gemma-4-12b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/mellum2-12b-a2-5b/",
+      "content_type": "model-page",
+      "model_id": "mellum2-12b-a2.5b",
+      "event_id": null,
+      "new_url": "/evaluations/mellum2-12b-a2-5b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen3-14b/",
+      "content_type": "model-page",
+      "model_id": "qwen3-14b",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-14b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen3-6-35b-a3b/",
+      "content_type": "model-page",
+      "model_id": "qwen3.6-35b-a3b",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-6-35b-a3b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/gemmable-4-12b/",
+      "content_type": "model-page",
+      "model_id": "gemmable-4-12b",
+      "event_id": null,
+      "new_url": "/evaluations/gemmable-4-12b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/grug-12b/",
+      "content_type": "model-page",
+      "model_id": "grug-12b",
+      "event_id": null,
+      "new_url": "/evaluations/grug-12b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen2-5-3b/",
+      "content_type": "model-page",
+      "model_id": "qwen2.5-3b",
+      "event_id": null,
+      "new_url": "/evaluations/qwen2-5-3b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen3-8-2b-empero/",
+      "content_type": "model-page",
+      "model_id": "qwen3.8-2b-empero",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-8-2b-empero/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen3-8-4b-empero/",
+      "content_type": "model-page",
+      "model_id": "qwen3.8-4b-empero",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-8-4b-empero/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/qwen3-8-9b-empero/",
+      "content_type": "model-page",
+      "model_id": "qwen3.8-9b-empero",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-8-9b-empero/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/bonsai-27b/",
+      "content_type": "model-page",
+      "model_id": "bonsai-27b",
+      "event_id": null,
+      "new_url": "/evaluations/bonsai-27b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

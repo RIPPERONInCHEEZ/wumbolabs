@@ -4,9 +4,13 @@ description = "JetBrains Mellum2 Instruct and Thinking Q4_K_M tested through LLM
 date = 2026-06-17
 [extra]
 record_type = "FIT TEST"
-back_label = "Back to Lab Records"
-back_url = "/records/"
+back_label = "Back to model evaluation"
+back_url = "/evaluations/mellum2-12b-a2-5b/"
 +++
+
+This long-form report is retained at its historical URL. Its canonical home is
+the [Mellum2 12B-A2.5B](/evaluations/mellum2-12b-a2-5b/) Evaluation page; this
+is a specialized agent-backend fit test, not a general model-quality verdict.
 
 JetBrains Mellum2 12B-A2.5B Instruct Q4_K_M and Thinking Q4_K_M were tested through LLMGauge on WumboJetsII.
 

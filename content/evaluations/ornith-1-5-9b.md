@@ -12,8 +12,8 @@ classification = "COMPLETE / FINAL_WELP_READINESS_NOT_READY"
 recommended_profile_id = "ornith-1.5-9b-llamacpp-q4km"
 recommended_profile_name = "llama.cpp Q4_K_M"
 profile_count = 1
-event_count = 1
-latest_event_date = 2026-08-27
+event_count = 2
+latest_event_date = 2026-09-02
 +++
 
 WumboLabs tests **Ornith 1.5 9B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
@@ -22,7 +22,7 @@ WumboLabs tests **Ornith 1.5 9B** on real consumer hardware. This is the canonic
 
 - **Classification:** COMPLETE / FINAL_WELP_READINESS_NOT_READY — [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27), profile llama.cpp Q4_K_M
 - **Recommended profile:** llama.cpp Q4_K_M (`ornith-1.5-9b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/eval-ornith-1.5-9b)
-- **Latest evidence:** 2026-08-27 — Initial evaluation (full-lifecycle WELP campaign)
+- **Latest evidence:** 2026-09-02 — WumboServer RTX 2060S admission benchmark
 
 ## Tested profiles
 
@@ -38,17 +38,43 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-ornith-1.5-9b>
 
 Events on this profile:
 
+- [WumboServer RTX 2060S admission benchmark (2026-09-02)](/evaluations/ornith-1-5-9b#ornith-9b-wumboserver-admission-2026-09-02) — BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
 - [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27) — COMPLETE / FINAL_WELP_READINESS_NOT_READY
 
 ## Testing history
 
 Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
 
+<a id="ornith-9b-wumboserver-admission-2026-09-02"></a>
+
+### 2026-09-02 — WumboServer RTX 2060S admission benchmark
+
+**Benchmark Only — WumboServer hardware lane** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
+
+[Canonical evidence for this event](https://github.com/WumboLabs/eval-ornith-1.5-9b)
+
+### Identity and scope
+
+- Profile: `ornith-1.5-9b-llamacpp-q4km` — llama.cpp Q4_K_M
+- Evidence maturity: **BENCHMARK_ONLY**
+- Evidence scope: performance
+- Hardware: WumboServer (RTX 2060 SUPER 8GB)
+
+Ornith 1.5 9B Q4_K_M admission benchmark on WumboServer RTX 2060S (hardware-lane fit evidence; complements the canonical WumboJetsII WELP campaign).
+
+This event is a bounded public-safe summary derived from retained WumboLabs evidence.
+It is not a WELP characterization, a universal model ranking, or a production-readiness
+proof. Values are attributed to the tested artifact, runtime, hardware, suite, and settings.
+### Lane boundary
+
+Measured on the WumboServer RTX 2060 SUPER hardware lane. It complements — and must not be
+compared numerically with — the canonical WumboJetsII RTX 5070 WELP campaign on this model.
+
 <a id="initial-evaluation-2026-08-27"></a>
 
 ### 2026-08-27 — Initial evaluation (full-lifecycle WELP campaign)
 
-**Initial Evaluation — Full Campaign (NOT_READY)** · profile: llama.cpp Q4_K_M · status: COMPLETE / FINAL_WELP_READINESS_NOT_READY
+**Initial Evaluation — Full Campaign (NOT_READY)** · profile: llama.cpp Q4_K_M · maturity: FULL_EVALUATION · status: COMPLETE / FINAL_WELP_READINESS_NOT_READY
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-ornith-1.5-9b)
 

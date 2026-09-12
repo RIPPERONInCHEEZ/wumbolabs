@@ -186,6 +186,83 @@ def main() -> int:
               f"events dataset model_url for {e['event_id']} is not /evaluations/: "
               f"{e['model_url']}")
 
+    # 7b. 2026-09-12 census: maturity labels, specialized/benchmark-only
+    # representation, shared multi-model events, orphan rejection
+    for e in events:
+        check(bool(e.get("evidence_maturity")),
+              f"event {e['event_id']} has no evidence_maturity label")
+    by_model: dict[str, list[dict]] = {}
+    for e in events:
+        by_model.setdefault(e["model_id"], []).append(e)
+    # required census fixtures: previously omitted models now represented
+    census_fixtures = {
+        "mellum2-12b-a2.5b": "Mellum2 Agent Backend Test",
+        "gemma-4-12b": "Gemma 4 12B",
+        "gemmable-4-12b": "Gemmable",
+        "grug-12b": "Grug",
+        "qwen3-14b": "Qwen3-14B",
+        "qwen3.6-35b-a3b": "Qwen3.6-35B",
+        "qwen2.5-3b": "Qwen2.5-3B",
+        "bonsai-27b": "Bonsai",
+    }
+    for mid, needle in census_fixtures.items():
+        check(mid in {m["model_id"] for m in models},
+              f"census model {mid} missing from the registry catalog")
+        page = PUBLIC / "evaluations" / url_slug(mid) / "index.html"
+        check(page.is_file(), f"census model page missing: /evaluations/{url_slug(mid)}/")
+        if page.is_file():
+            body = html_unescape(html(page))
+            check(needle in body, f"model page {mid} missing identity text {needle!r}")
+            check("SPECIALIZED_TEST" in body or "BENCHMARK_ONLY" in body or "PRACTICAL_USE" in body,
+                  f"model page {mid} displays no bounded maturity label")
+    # maturity labels rendered on every model page event
+    for m in models:
+        page = PUBLIC / "evaluations" / url_slug(m["model_id"]) / "index.html"
+        if not page.is_file():
+            continue
+        body = html_unescape(html(page))
+        for e in by_model.get(m["model_id"], []):
+            if e.get("evidence_maturity"):
+                check(f"maturity: {e['evidence_maturity']}" in body,
+                      f"{m['model_id']}: event {e['event_id']} missing its maturity label")
+    # shared multi-model events attached to every related model page
+    registry_by_event = {r["event_id"]: r for r in registry["records"]}
+    for r in registry["records"]:
+        for mid in r.get("related_model_ids") or []:
+            page = PUBLIC / "evaluations" / url_slug(mid) / "index.html"
+            check(page.is_file(), f"shared-event related model page missing: {mid}")
+            if page.is_file():
+                body = html_unescape(html(page))
+                check("Shared comparison events" in body,
+                      f"{mid}: shared comparison section missing")
+                check(f"/evaluations/{url_slug(r['model_id'])}#{r['event_id']}" in body,
+                      f"{mid}: shared event {r['event_id']} not linked on the model page")
+        # canonical shared events must declare their shared_event_id
+        if r.get("related_model_ids"):
+            check(bool(r.get("shared_event_id")),
+                  f"event {r['event_id']} has related_model_ids but no shared_event_id")
+    # model-specific orphan rejection: the long-form model reports must be
+    # linked from their canonical Evaluation pages (no model evidence whose
+    # only discoverable home is a /records/ URL)
+    for record_slug, model_slug in (
+            ("mellum2-agent-backend-test", "mellum2-12b-a2-5b"),
+            ("gemma-12b-practical-use", "gemma-4-12b")):
+        record_page = PUBLIC / "records" / record_slug / "index.html"
+        check(record_page.is_file(), f"record page missing: /records/{record_slug}/")
+        if record_page.is_file():
+            body = html_unescape(html(record_page))
+            check(f"/evaluations/{model_slug}/" in body,
+                  f"/records/{record_slug}/ does not link its canonical Evaluation page")
+        model_page = PUBLIC / "evaluations" / model_slug / "index.html"
+        if model_page.is_file():
+            body = html_unescape(html(model_page))
+            check(f"/records/{record_slug}/" in body,
+                  f"/evaluations/{model_slug}/ does not link its long-form record /records/{record_slug}/")
+    # exactly one canonical page per model: no dotted-slug duplicates outside
+    # generated legacy stubs
+    dotted = [p.name for p in (PUBLIC / "evaluations").glob("*.*.html*")]
+    check(not dotted, f"unexpected dotted files under /evaluations/: {dotted}")
+
     # 8. every local link in built HTML resolves
     html_files = sorted(PUBLIC.rglob("*.html"))
     for path in html_files:

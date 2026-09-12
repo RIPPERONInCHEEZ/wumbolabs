@@ -13,7 +13,7 @@ recommended_profile_id = "qwen38-27b-exl3-h1"
 recommended_profile_name = "ExLlamaV3 H1 (SC_2.20bpw_H3_V3)"
 practical_context = "65,536 default / 98,304 guarded tokens"
 profile_count = 2
-event_count = 3
+event_count = 4
 latest_event_date = 2026-09-12
 +++
 
@@ -62,6 +62,7 @@ Original publication location (preserved archive): [WumboLabs/eval-qwen3.8-27b](
 Events on this profile:
 
 - [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21) — COMPLETED_DEEP_EVALUATION
+- [llama.cpp quant/variant showdown runs (LLMGauge era) (2026-08-20)](/evaluations/qwen38-27b#qwen38-27b-quant-showdowns-2026-08-20) — PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
 
 ## Testing history
 
@@ -71,7 +72,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ### 2026-09-12 — Context envelope completion
 
-**Context Envelope — ExLlamaV3 H1** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · status: GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
+**Context Envelope — ExLlamaV3 H1** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CONTEXT_COMPLETION · status: GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1)
 
@@ -156,7 +157,7 @@ rankings.
 
 ### 2026-09-09 — H1 deployment / canonical promotion
 
-**H1 Canonical Promotion — ExLlamaV3** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · status: COMPLETE / CURRENT_CANONICAL_H1_PROFILE
+**H1 Canonical Promotion — ExLlamaV3** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CURRENT_WELP · status: COMPLETE / CURRENT_CANONICAL_H1_PROFILE
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1)
 
@@ -250,7 +251,7 @@ rankings.
 
 ### 2026-08-21 — Initial evaluation (deep evaluation, historical llama.cpp)
 
-**Initial Evaluation — Historical llama.cpp** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · status: COMPLETED_DEEP_EVALUATION
+**Initial Evaluation — Historical llama.cpp** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: HISTORICAL_EVALUATION · status: COMPLETED_DEEP_EVALUATION
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp)
 
@@ -389,6 +390,31 @@ Full reproduction instructions, manifests, and checksums are published in the ca
 > ([eval-qwen3.8-27b-llamacpp](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp))
 > by the model/profile/event publication-identity milestone; the original
 > repository is preserved unchanged as a historical archive.
+
+<a id="qwen38-27b-quant-showdowns-2026-08-20"></a>
+
+### 2026-08-20 — llama.cpp quant/variant showdown runs (LLMGauge era)
+
+**Profile Optimization — llama.cpp quant selection** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: PROFILE_OPTIMIZATION · status: PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
+
+[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp)
+
+### Identity and scope
+
+- Profile: `qwen38-27b-llamacpp-ud-q2-k-xl` — Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
+- Evidence maturity: **PROFILE_OPTIMIZATION**
+- Evidence scope: performance, serving-profile
+- Hardware: WumboJetsII (RTX 5070 12GB)
+
+llama.cpp-era quant/variant showdown evidence (unsloth v3-final UD-IQ1_S/IQ2_XXS/IQ2_M ladder, community variants AtomicChat/XYZ Q3 smokes, 16k practical-use selection, 196k context-retrieval probe) that informed the historical llama.cpp profile before the ExLlamaV3 H1 promotion. Long-form context completion is separately represented (context-envelope-completion-2026-09-12).
+
+This event is a bounded public-safe summary derived from retained WumboLabs evidence.
+It is not a WELP characterization, a universal model ranking, or a production-readiness
+proof. Values are attributed to the tested artifact, runtime, hardware, suite, and settings.
+### Historical lane note
+
+These showdown runs belong to the historical llama.cpp lane. The current canonical serving
+profile for this model is the ExLlamaV3 H1 surface, represented by its own events above.
 
 ## Canonical evidence
 

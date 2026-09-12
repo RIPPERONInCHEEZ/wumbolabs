@@ -54,7 +54,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ### 2026-09-10 — Initial evaluation (full characterization)
 
-**Initial Evaluation — contained vLLM BF16** · profile: contained vLLM BF16 · status: READY_WITH_GUARDRAILS
+**Initial Evaluation — contained vLLM BF16** · profile: contained vLLM BF16 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-minicpm5-2b)
 

@@ -52,7 +52,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ### 2026-09-11 — Context envelope completion
 
-**Context Envelope — llama.cpp BF16** · profile: llama.cpp BF16 GGUF · status: READY_WITH_GUARDRAILS
+**Context Envelope — llama.cpp BF16** · profile: llama.cpp BF16 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.5-4b)
 

@@ -48,7 +48,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ### 2026-08-25 — Initial evaluation (bounded early stop)
 
-**Initial Evaluation — Early Stop** · profile: llama.cpp IQ1_M (community conversion) · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
+**Initial Evaluation — Early Stop** · profile: llama.cpp IQ1_M (community conversion) · maturity: EARLY_STOP · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-apodex-1.1-mini)
 

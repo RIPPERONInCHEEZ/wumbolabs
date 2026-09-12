@@ -55,7 +55,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ### 2026-09-11 — Current-WELP recharacterization
 
-**WELP Recharacterization — llama.cpp Q4_K_M** · profile: llama.cpp Q4_K_M · status: READY_WITH_GUARDRAILS
+**WELP Recharacterization — llama.cpp Q4_K_M** · profile: llama.cpp Q4_K_M · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-nemotron-3-nano-4b)
 
@@ -153,7 +153,7 @@ rankings.
 
 ### 2026-08-25 — Initial evaluation (protocol development, PROTOCOL_BLOCKED)
 
-**Initial Evaluation — PROTOCOL_BLOCKED (historical, preserved)** · profile: llama.cpp Q4_K_M · status: PARTIAL_PROTOCOL_DEVELOPMENT
+**Initial Evaluation — PROTOCOL_BLOCKED (historical, preserved)** · profile: llama.cpp Q4_K_M · maturity: PROTOCOL_BLOCKED · status: PARTIAL_PROTOCOL_DEVELOPMENT
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-nemotron-3-nano-4b)
 

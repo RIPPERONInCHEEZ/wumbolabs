@@ -54,7 +54,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ### 2026-09-10 — Initial evaluation (full characterization)
 
-**Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
+**Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma4-e4b)
 

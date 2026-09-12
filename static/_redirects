@@ -20,4 +20,15 @@
 /labs/qwen35-9b/ /evaluations/qwen35-9b/ 301
 /labs/minicpm5-2b/ /evaluations/minicpm5-2b/ 301
 /labs/gemma4-e4b/ /evaluations/gemma4-e4b/ 301
+/labs/gemma-4-12b/ /evaluations/gemma-4-12b/ 301
+/labs/mellum2-12b-a2-5b/ /evaluations/mellum2-12b-a2-5b/ 301
+/labs/qwen3-14b/ /evaluations/qwen3-14b/ 301
+/labs/qwen3-6-35b-a3b/ /evaluations/qwen3-6-35b-a3b/ 301
+/labs/gemmable-4-12b/ /evaluations/gemmable-4-12b/ 301
+/labs/grug-12b/ /evaluations/grug-12b/ 301
+/labs/qwen2-5-3b/ /evaluations/qwen2-5-3b/ 301
+/labs/qwen3-8-2b-empero/ /evaluations/qwen3-8-2b-empero/ 301
+/labs/qwen3-8-4b-empero/ /evaluations/qwen3-8-4b-empero/ 301
+/labs/qwen3-8-9b-empero/ /evaluations/qwen3-8-9b-empero/ 301
+/labs/bonsai-27b/ /evaluations/bonsai-27b/ 301
 /records/ /evaluations/ 301
