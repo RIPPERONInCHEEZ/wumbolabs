@@ -213,6 +213,29 @@
         "ref": "cc5a435092c17394b9e29b228a0e8509613f26b3",
         "url": "https://github.com/WumboLabs/eval-qwen3.8-27b"
       }
+    },
+    {
+      "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
+      "authoring": "generated",
+      "record_path": "content/labs/eval-nemotron-3-nano-4b-recharacterization-2026-09-11.md",
+      "model": "Nemotron 3 Nano 4B",
+      "record_date": "2026-09-11",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "weight": 12,
+      "publication_state": "published",
+      "source": {
+        "kind": "github-raw",
+        "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+        "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+        "path": "website-publication.json",
+        "sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa"
+      },
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+        "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+        "url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b"
+      }
     }
   ]
 }

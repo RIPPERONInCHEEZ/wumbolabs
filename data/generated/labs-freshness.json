@@ -46,6 +46,15 @@
       "sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
       "resolved_commit": "cc5a435092c17394b9e29b228a0e8509613f26b3",
       "kind": "github-raw"
+    },
+    "eval-nemotron-3-nano-4b-recharacterization-2026-09-11": {
+      "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+      "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+      "path": "website-publication.json",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-nemotron-3-nano-4b/86d615c23bc1422890b32d9c1cf8e7d68b6001c1/website-publication.json",
+      "sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
+      "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+      "kind": "github-raw"
     }
   },
   "latest_represented_campaigns": [
@@ -68,6 +77,10 @@
     {
       "slug": "qwen38-27b-h1",
       "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)"
+    },
+    {
+      "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
+      "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
     }
   ],
   "pending_website_publication": [],

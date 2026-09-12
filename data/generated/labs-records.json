@@ -191,6 +191,26 @@
       "disposition": "WEBSITE_READY",
       "export_sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
       "resolved_commit": "cc5a435092c17394b9e29b228a0e8509613f26b3"
+    },
+    {
+      "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
+      "model": "Nemotron 3 Nano 4B",
+      "authoring": "generated",
+      "record_date": "2026-09-11",
+      "welp_status": "READY_WITH_GUARDRAILS",
+      "publication_state": "published",
+      "canonical_evidence": {
+        "state": "published",
+        "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+        "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+        "url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b"
+      },
+      "record_path": "content/labs/eval-nemotron-3-nano-4b-recharacterization-2026-09-11.md",
+      "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11",
+      "welp_outcome": "PASS — NEMOTRON3_NANO_4B_RTX5070_RECHARACTERIZED",
+      "disposition": "WEBSITE_READY",
+      "export_sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
+      "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1"
     }
   ]
 }
