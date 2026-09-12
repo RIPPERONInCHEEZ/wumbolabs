@@ -13,11 +13,11 @@
     },
     "qwen35-9b": {
       "repo": "WumboLabs/eval-qwen3.5-9b",
-      "ref": "768674f35411eb9917398dca95925aa0d53f381f",
+      "ref": "7c18920d380378a8e47408fa4c5149f67f28828f",
       "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.5-9b/768674f35411eb9917398dca95925aa0d53f381f/website-publication.json",
-      "sha256": "ba09b944b78c99f27914a724030e080e7914ea3acaaa66d35642a387ea832379",
-      "resolved_commit": "768674f35411eb9917398dca95925aa0d53f381f",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.5-9b/7c18920d380378a8e47408fa4c5149f67f28828f/website-publication.json",
+      "sha256": "b6f98bc724a53b720e2ddab9d5e92a61aa33d565916dffcb654c49c2367c7cd3",
+      "resolved_commit": "7c18920d380378a8e47408fa4c5149f67f28828f",
       "kind": "github-raw"
     },
     "minicpm5-2b": {
@@ -55,7 +55,7 @@
     },
     {
       "slug": "qwen35-9b",
-      "campaign": "qwen35-9b-rtx5070-baseline-2026-09-09"
+      "campaign": "qwen35-9b-rtx5070-context-completion-2026-09-11"
     },
     {
       "slug": "minicpm5-2b",
