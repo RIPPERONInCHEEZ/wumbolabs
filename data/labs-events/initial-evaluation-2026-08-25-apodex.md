@@ -1,21 +1,4 @@
-+++
-title = "Apodex 1.1 mini Lab Record"
-description = "WumboLabs evaluation of Apodex 1.1 mini on WumboJetsII (RTX 5070 12GB). Bounded early stop at Phase 3 — DO NOT ADVANCE."
-date = 2026-08-25
-template = "lab_record.html"
-weight = 3
-
-[extra]
-model = "Apodex 1.1 mini"
-producer = "Apodex (Qwen3.5-35B-A3B MoE base)"
-quant = "IQ1_M (community conversion)"
-repo = "https://github.com/WumboLabs/eval-apodex-1.1-mini"
-status = "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE"
-hardware = "WumboJetsII (RTX 5070 12GB)"
-headline = "Early stop at Phase 3 gate. Model failed the applicable advancement gate; later phases were not run. Bounded result only."
-+++
-
-## Identity
+### Identity
 
 | Field | Value |
 |---|---|
@@ -29,7 +12,7 @@ headline = "Early stop at Phase 3 gate. Model failed the applicable advancement 
 | Highest phase reached | Phase 3 (gate decision) |
 | Campaign classification | BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE |
 
-## Hardware
+### Hardware
 
 | Field | Value |
 |---|---|
@@ -41,7 +24,7 @@ headline = "Early stop at Phase 3 gate. Model failed the applicable advancement 
 | Driver / CUDA | NVIDIA 610.57.04 |
 | Runtime | llama.cpp pinned at `f280b26983ad0fdb705a0d9ebf0503e76f2899b0` (2026-08-24) |
 
-## Headline Verdict
+### Headline Verdict
 
 **DO_NOT_ADVANCE at Phase 3 (early stop, frozen gate).**
 
@@ -49,7 +32,7 @@ The model failed the applicable advancement gate. Per WELP protocol, later phase
 
 The early-stop behavior is a feature of WELP transparency: the model failed the gate, so the evaluation stopped. This is not a protocol failure — it is the protocol working as designed.
 
-## Performance
+### Performance
 
 | Metric | Result |
 |---|---|
@@ -58,7 +41,7 @@ The early-stop behavior is a feature of WELP transparency: the model failed the 
 | TTFT (short prompt) | ~125 ms |
 | VRAM idle | 9.7 GB |
 
-## Phase 3 Practical Viability — DO_NOT_ADVANCE
+### Phase 3 Practical Viability — DO_NOT_ADVANCE
 
 Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 35/35), 30 tasks x seeds {42,43,44}, thinking OFF baseline.
 
@@ -71,7 +54,7 @@ Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 3
 
 Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genuine failures (fabricated package description, explained nonexistent git flag, asserted 25 prime, invented phone number, echoed un-reversed word); ~8 scorer lexicon artifacts. Verdict robust: correcting every artifact still leaves seed-42 aggregate <0.75.
 
-## What Was NOT Tested
+### What Was NOT Tested
 
 - Native Tools module
 - Coding module
@@ -82,27 +65,27 @@ Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genu
 
 **Do not fabricate missing results.** This evaluation establishes that the strongest representation satisfying the frozen WumboJetsII full-GPU baseline (IQ1_M, 1.75-bpw) does not clear the frozen viability gate. It does NOT establish that BF16/FP8/GPTQ or Agent Team deployments would fail.
 
-## Role Classification
+### Role Classification
 
 **Supported roles:** none beyond "runs coherently on 12GB at extreme quantization."
 
 **NOT_REACHED:** Phases 4–10, OMP Stage 2, all capability modules, context/variance/optimization/soak/classification engine.
 
-## Important Limitations
+### Important Limitations
 
 - **Extreme quantization forced by hardware:** single 12GB consumer GPU required IQ1_M (1.75-bpw). Producer positioning rests on BF16-class deployments plus an agent harness that was not authorized to run.
 - **Phase-3 failure at IQ1_M does NOT establish that BF16/FP8/GPTQ or Agent Team deployments would fail.** It establishes that the strongest representation satisfying the frozen full-GPU baseline does not clear the frozen viability gate.
 - **Scorer lexicon defect** understates false-premise performance modestly; verdict unaffected.
 - **No reliability, coding, tools, context, or soak results exist.**
 
-## Evidence Links
+### Evidence Links
 
 - **Canonical evaluation repo:** https://github.com/WumboLabs/eval-apodex-1.1-mini
 - **WELP protocol:** https://github.com/WumboLabs/welp
 - **Labs catalog:** https://github.com/WumboLabs/labs
 - **LocalMaxxing:** Speed result SUBMITTED/APPROVED (ID `cmt9ijytg00xali017f46xk25`, 182.31 tok/s p512/n128). Benchmark suites NOT_SUBMITTED due to early WELP stop.
 
-## Reproduction
+### Reproduction
 
 Direct link to canonical reproduction material: [eval-apodex-1.1-mini/](https://github.com/WumboLabs/eval-apodex-1.1-mini)
 

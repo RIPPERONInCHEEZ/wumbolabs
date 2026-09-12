@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 
-{% block title %}Labs compatibility | {{ config.title }}{% endblock title %}
+{% block title %}Labs — Model Catalog | {{ config.title }}{% endblock title %}
 
 {% block content %}
-<section class="container page-record context-page">
+{% set models = get_section(path="labs/_index.md") %}
+<section class="container page-record archive-page">
   <div class="console-record-bar" aria-label="Record context">
     <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LABS</span>
-    <span>COMPATIBILITY ROUTE / SEE LAB RECORDS</span>
+    <span>MODEL CATALOG / ONE PAGE PER MODEL</span>
   </div>
   <p class="console-record-path">
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
@@ -14,11 +15,38 @@
   </p>
 
   <header class="page-record-header">
-    <h1>Continue to Lab Records</h1>
+    <h1>{{ models.title }}</h1>
+    <p class="page-record-description">{{ models.description }}</p>
   </header>
 
   <div class="page-record-content">
-    {{ section.content | safe }}
+    {{ models.content | safe }}
+  </div>
+
+  <section class="archive-section" aria-labelledby="model-catalog">
+    <h2 id="model-catalog">Models</h2>
+    <div class="record-list record-list--archive">
+      {% for page in models.pages %}
+        {% if not page.extra | get(key="redirect_page", default=false) %}
+        <article class="record-row">
+          <time class="archive-record-date" datetime="{{ page.extra.latest_event_date }}">{{ page.extra.latest_event_date }}</time>
+          <div class="record-row-main">
+            <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            <div class="archive-record-meta">
+              {% if page.extra.classification %}<span>{{ page.extra.classification | replace(from='_', to=' ') | lower }}</span>{% endif %}
+              <span>{{ page.extra.profile_count }} profile{{ "" }}{% if page.extra.profile_count != 1 %}s{% endif %} · {{ page.extra.event_count }} event{{ "" }}{% if page.extra.event_count != 1 %}s{% endif %}</span>
+            </div>
+            {% if page.extra.practical_context %}<p class="archive-record-hardware">Practical context: {{ page.extra.practical_context }}</p>{% endif %}
+            {% if page.extra.recommended_profile_name %}<p class="archive-record-summary">Recommended profile: {{ page.extra.recommended_profile_name }}</p>{% endif %}
+          </div>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <div class="page-record-content">
+    <p>Chronological evidence events, including the testing history of every model above, live in <a href="/records/">Lab Records</a>.</p>
   </div>
 </section>
 {% endblock content %}

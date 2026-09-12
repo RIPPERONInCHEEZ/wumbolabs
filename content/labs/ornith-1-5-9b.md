@@ -1,21 +1,58 @@
 +++
-title = "Ornith 1.5 9B Lab Record"
-description = "WumboLabs full-lifecycle WELP evaluation of Ornith 1.5 9B (Q4_K_M) on WumboJetsII (RTX 5070 12GB). Complete campaign; mechanical outcome NOT_READY — Phase 4 reliability gate failure closes all deployment roles."
-date = 2026-08-27
-template = "lab_record.html"
+title = "Ornith 1.5 9B"
+description = "Ornith 1.5 9B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+template = "lab_model.html"
 weight = 6
 
 [extra]
-model = "Ornith 1.5 9B"
-producer = "Ornith (ornith-ai/Ornith-1.5-9B)"
-quant = "Q4_K_M"
-repo = "https://github.com/WumboLabs/eval-ornith-1.5-9b"
-status = "COMPLETE / FINAL_WELP_READINESS_NOT_READY"
-hardware = "WumboJetsII (RTX 5070 12GB)"
-headline = "Full WELP campaign completed. Phase 3 practical viability ADVANCE (0.922); Phase 4 reliability gate FAIL (DO_NOT_ADVANCE) closes all deployment roles: FINAL WELP READINESS: NOT_READY. Later-phase evidence is characterization only."
+kind = "model"
+model_id = "ornith-1.5-9b"
+vendor = "ornith-ai"
+classification = "COMPLETE / FINAL_WELP_READINESS_NOT_READY"
+recommended_profile_id = "ornith-1.5-9b-llamacpp-q4km"
+recommended_profile_name = "llama.cpp Q4_K_M"
+profile_count = 1
+event_count = 1
+latest_event_date = 2026-08-27
 +++
 
-## Identity
+WumboLabs tests **Ornith 1.5 9B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+
+## Current state
+
+- **Classification:** COMPLETE / FINAL_WELP_READINESS_NOT_READY — [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/labs/ornith-1-5-9b#initial-evaluation-2026-08-27), profile llama.cpp Q4_K_M
+- **Recommended profile:** llama.cpp Q4_K_M (`ornith-1.5-9b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/eval-ornith-1.5-9b)
+- **Latest evidence:** 2026-08-27 — Initial evaluation (full-lifecycle WELP campaign)
+
+## Tested profiles
+
+### llama.cpp Q4_K_M — CURRENT
+
+Profile identity: `ornith-1.5-9b-llamacpp-q4km`.
+
+Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
+
+Status: current canonical/recommended tested surface.
+
+Canonical profile repository: <https://github.com/WumboLabs/eval-ornith-1.5-9b>
+
+Events on this profile:
+
+- [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/labs/ornith-1-5-9b#initial-evaluation-2026-08-27) — COMPLETE / FINAL_WELP_READINESS_NOT_READY
+
+## Testing history
+
+Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+
+<a id="initial-evaluation-2026-08-27"></a>
+
+### 2026-08-27 — Initial evaluation (full-lifecycle WELP campaign)
+
+**Initial Evaluation — Full Campaign (NOT_READY)** · profile: llama.cpp Q4_K_M · status: COMPLETE / FINAL_WELP_READINESS_NOT_READY
+
+[Canonical evidence for this event](https://github.com/WumboLabs/eval-ornith-1.5-9b)
+
+### Identity
 
 | Field | Value |
 |---|---|
@@ -29,7 +66,7 @@ headline = "Full WELP campaign completed. Phase 3 practical viability ADVANCE (0
 | Phases completed | Intake → Admission → Performance → Practical Viability → Reliability → Capability Modules → Context → Variance → Optimization → Soak → Final Classification |
 | Campaign classification | COMPLETED_FULL_PROTOCOL_CHARACTERIZATION |
 
-## Hardware
+### Hardware
 
 | Field | Value |
 |---|---|
@@ -41,7 +78,7 @@ headline = "Full WELP campaign completed. Phase 3 practical viability ADVANCE (0
 | Runtime | llama.cpp `b10449` @ `0d9ceae1e38291035605613ab41a8f5e693d6fcd` |
 | Serving profile | `-c 32768 -ngl 99 --parallel 1 --fit off -fa on --jinja --reasoning off`, batch 2048 / ubatch 512, no speculation |
 
-## Headline Verdict
+### Headline Verdict
 
 **FINAL WELP READINESS: NOT_READY.**
 
@@ -52,7 +89,7 @@ headline = "Full WELP campaign completed. Phase 3 practical viability ADVANCE (0
 
 This is a complete campaign, not an early stop: phases after the blocking gate were run under explicitly frozen characterization-only contracts, and the classification engine still returns NOT_READY.
 
-## Performance (Phase 2)
+### Performance (Phase 2)
 
 | Metric | Result |
 |---|---|
@@ -60,7 +97,7 @@ This is a complete campaign, not an early stop: phases after the blocking gate w
 | Prefill throughput | 4,046.67 ± 15.68 tok/s |
 | TTFT (estimated, short prompt) | ~46.7 ms |
 
-## Practical Viability (Phase 3) — ADVANCE
+### Practical Viability (Phase 3) — ADVANCE
 
 30 tasks × seeds {42, 43, 44}, thinking OFF baseline, scorer self-test 35/35 before live scoring.
 
@@ -72,13 +109,13 @@ This is a complete campaign, not an early stop: phases after the blocking gate w
 | G4 structured-output | ≥0.70 | pass | PASS |
 | G5 seed stability | identical decision | identical | PASS |
 
-## Reliability (Phase 4) — DO_NOT_ADVANCE
+### Reliability (Phase 4) — DO_NOT_ADVANCE
 
 162/162 rows scored. G1 clean 0.4877 PASS · G2 hallucination-on-false-premise 0.1296 PASS · G3 refusal-drift 0.0185 PASS · G4 UNSAFE = 0 · G5 seed range 0.0926 PASS · **G6 uncertainty 1/21 = 0.0476 FAIL** (threshold ≥0.15).
 
 **Mechanical vs qualitative distinction:** the mechanical gate result is authoritative and stands — the campaign verdict is NOT_READY. Manual review (documented as scorer-lexicon adjudications, finding PF-01) found the dominant G6 failure mode to be scorer false-negatives: correct expressions of uncertainty whose wording fell outside the frozen lexicon. Genuine calibration failures remain in the residual. The qualitative finding explains the mechanism; it does not overturn the gate.
 
-## Capability Modules (Phase 5) — characterization only
+### Capability Modules (Phase 5) — characterization only
 
 No PASS thresholds exist for Phase 5 (frozen decision D4); rates below are honest characterization, not gate results.
 
@@ -91,23 +128,23 @@ No PASS thresholds exist for Phase 5 (frozen decision D4); rates below are hones
 | Linux / systems | 0.515 (34/66) |
 | Reasoning (OFF vs ON thinking) | 17/30 vs 17/30, Δ = 0; thinking ON ≈ +27% wall cost |
 
-## Context (Phase 6)
+### Context (Phase 6)
 
 Useful context **24,576 tokens** under the 12 GB Q4_K_M profile (configured 32,768; top rung INCONCLUSIVE due to harness overshoot, PF-02). The producer's 256K window claim is **not** reproducible on this hardware profile.
 
-## Variance (Phase 7)
+### Variance (Phase 7)
 
 7/9 surfaces STABLE across seeds. Two flagged ESCALATE_TO_5: linux_systems (range 0.1819) and reasoning-off (0.20). Recorded, not re-run.
 
-## Optimization (Phase 8)
+### Optimization (Phase 8)
 
 MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output divergence → **REJECTED_FOR_CANONICAL**. Frozen serving profile unchanged.
 
-## Stability (Phase 9) — screening soak
+### Stability (Phase 9) — screening soak
 
 30-minute screening: 11,449 requests, 0 real errors, 0 GPU Xid events. Clean. **LOCKIN (120 min + cycles) NOT_REACHED** — screening-level only.
 
-## Producer Claims (reviewed against revision `489cb979`)
+### Producer Claims (reviewed against revision `489cb979`)
 
 | Claim | Outcome |
 |---|---|
@@ -119,7 +156,7 @@ MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output 
 | Official sampling recipe | RECORDED_VERBATIM |
 | Card benchmark scores | PHYSICALLY_UNTESTABLE (cloud-scale reference hardware) |
 
-## Important Limitations
+### Important Limitations
 
 - **NOT_READY is a role verdict, not a capability verdict.** The model passed practical viability and showed strong coding/structured-output characterization; one frozen reliability gate (with documented scorer-lexicon contamination) closes all deployment roles.
 - Results are scoped to Q4_K_M on a 12 GB consumer GPU under the frozen serving profile; they do not establish behavior at other quantizations, context sizes, or hardware classes.
@@ -127,15 +164,21 @@ MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output 
 - Soak evidence is screening-level only; long-hold stability is unestablished.
 - Reasoning-mode equivalence (Δ = 0) is suite-scoped, not a general claim that thinking adds no value.
 
-## Evidence Links
+### Evidence Links
 
 - **Canonical evaluation repo:** https://github.com/WumboLabs/eval-ornith-1.5-9b
 - **WELP protocol:** https://github.com/WumboLabs/welp
 - **Labs catalog:** https://github.com/WumboLabs/labs
 - **LocalMaxxing:** Speed result submitted and APPROVED (ID `cmtc6sopl0007o601d7hqrj1z`; decode 102.04 tok/s, prefill 4,046.67 tok/s, Q4_K_M, llama.cpp b10449, RTX 5070 12 GB). Model page: https://www.localmaxxing.com/en/models/ornith-ai/Ornith-1.5-9B
 
-## Reproduction
+### Reproduction
 
 Direct link to canonical reproduction material: [eval-ornith-1.5-9b/](https://github.com/WumboLabs/eval-ornith-1.5-9b)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
+
+## Canonical evidence
+
+One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+
+- **llama.cpp Q4_K_M** (`ornith-1.5-9b-llamacpp-q4km`): <https://github.com/WumboLabs/eval-ornith-1.5-9b>

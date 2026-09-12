@@ -10,10 +10,11 @@
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <link rel="apple-touch-icon" href="/img/favicon.png">
   {% if current_url %}
-    <link rel="canonical" href="{{ current_url }}">
+    {% block canonical %}<link rel="canonical" href="{{ current_url }}">{% endblock canonical %}
   {% else %}
     <meta name="robots" content="noindex">
   {% endif %}
+  {% block head %}{% endblock head %}
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="WumboLabs">
@@ -43,7 +44,8 @@
       </a>
       <div class="nav-links">
         <a href="/projects/"{% if current_path == "/projects/" %} aria-current="page"{% elif current_path is starting_with("/projects/") %} aria-current="location"{% endif %}>Projects</a>
-        <a href="/records/"{% if current_path == "/records/" %} aria-current="page"{% elif current_path is starting_with("/records/") or current_path is starting_with("/labs/") %} aria-current="location"{% endif %}>Lab Records</a>
+        <a href="/labs/"{% if current_path == "/labs/" %} aria-current="page"{% elif current_path is starting_with("/labs/") %} aria-current="location"{% endif %}>Labs</a>
+        <a href="/records/"{% if current_path == "/records/" %} aria-current="page"{% elif current_path is starting_with("/records/") %} aria-current="location"{% endif %}>Lab Records</a>
         <a href="/methodology/"{% if current_path == "/methodology/" %} aria-current="page"{% elif current_path is starting_with("/methodology/") %} aria-current="location"{% endif %}>Methodology</a>
         <a href="/about/"{% if current_path == "/about/" %} aria-current="page"{% endif %}>About</a>
         <a href="/contact/"{% if current_path == "/contact/" %} aria-current="page"{% endif %}>Contact</a>

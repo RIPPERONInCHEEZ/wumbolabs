@@ -1,21 +1,4 @@
-+++
-title = "LFM2.5 1.2B QAD Lab Record"
-description = "WumboLabs evaluation of Liquid AI LFM2.5 1.2B QAD Q4_0 on WumboJetsII (RTX 5070 12GB). Best always-resident micro-sidecar candidate in the family, but hallucination resistance is absent at this scale."
-date = 2026-08-26
-template = "lab_record.html"
-weight = 5
-
-[extra]
-model = "LFM2.5 1.2B"
-producer = "Liquid AI"
-quant = "QAD Q4_0"
-repo = "https://github.com/WumboLabs/eval-lfm2.5-1.2b"
-status = "COMPLETE_SMALL_MODEL_EVALUATION"
-hardware = "WumboJetsII (RTX 5070 12GB)"
-headline = "Best always-resident micro-sidecar candidate in the family. Hallucination resistance absent at 1.2B scale — every quant including BF16 fabricates confidently on invented subjects."
-+++
-
-## Identity
+### Identity
 
 | Field | Value |
 |---|---|
@@ -27,7 +10,7 @@ headline = "Best always-resident micro-sidecar candidate in the family. Hallucin
 | Protocol | WELP |
 | Campaign classification | COMPLETE_SMALL_MODEL_EVALUATION |
 
-## Hardware
+### Hardware
 
 | Field | Value |
 |---|---|
@@ -39,13 +22,13 @@ headline = "Best always-resident micro-sidecar candidate in the family. Hallucin
 | Driver / CUDA | NVIDIA 610.57.04 |
 | Runtime | llama.cpp b10449 (commit `0d9ceae1e38291035605613ab41a8f5e693d6fcd`) |
 
-## Headline Verdict
+### Headline Verdict
 
 **QAD Q4_0 is the best deployment quant of the five-way matrix and the best always-resident sidecar candidate measured so far in this model family, but the campaign did not reproduce Liquid's hallucination or aggregate-retention story: at 1.2B every quant including BF16 fabricates confidently on invented subjects (0/12), and QAD's fixed-corpus perplexity advantage over PTQ inverted.**
 
 QAD kept exactly Q4_0 memory and within-variance Q4_0 speed, scored best of all quants on the 52-task practical suite (31/52), and is faster than both K-quant controls (~+6% decode). Useful context is <=8K for every candidate.
 
-## Performance
+### Performance
 
 | Quant | Prompt tok/s | Decode tok/s | TTFT ms |
 |---|---|---|---|
@@ -58,7 +41,7 @@ QAD kept exactly Q4_0 memory and within-variance Q4_0 speed, scored best of all 
 
 Deltas: QAD -1.14% vs PTQ decode (within variance), +5.63% vs Liquid Q4_K_M, +6.28% vs UD-Q4_K_XL.
 
-## Fidelity
+### Fidelity
 
 `llama-perplexity` on fixed local repeated corpora:
 
@@ -71,7 +54,7 @@ Deltas: QAD -1.14% vs PTQ decode (within variance), +5.63% vs Liquid Q4_K_M, +6.
 
 **The 2.6B finding inverted: at 1.2B PTQ beats QAD on natural text.** The repeated-corpus pathology persists and worsens — BF16 is worse than most quants on natural text, so no BF16-relative percentage from this corpus is valid.
 
-## Practical Capability
+### Practical Capability
 
 52 unique mechanically-scored tasks, same set for all six models, seed 42:
 
@@ -84,29 +67,29 @@ Deltas: QAD -1.14% vs PTQ decode (within variance), +5.63% vs Liquid Q4_K_M, +6.
 | Q4_K_M | 8/10 | 3/8 | 10/12 | 0/12 | 3/6 | 3/4 | 27/52 |
 | UD-Q4_K_XL | 8/10 | 3/8 | 10/12 | 0/12 | 3/6 | 3/4 | 27/52 |
 
-## Hallucination Resistance
+### Hallucination Resistance
 
 Twelve invented-subject probes (packages, flags, APIs, files, systemd units, sysctls, Kconfig options): **every model, including BF16, fabricated confident detailed explanations — 0/12 across the entire matrix.** This is a model-family property at 1.2B scale, not a quantization effect. QAD shows no improvement.
 
-## Structured Output
+### Structured Output
 
 Mechanical JSON/schema scoring: QAD 11/12, PTQ/Q4_K_M/Q5_K_M/UD 10/12, BF16 12/12. A small QAD-over-PTQ edge appeared (+1).
 
-## Native Tools
+### Native Tools
 
 v1 (exact five-case contract): saturated — 5/5 for BF16, PTQ, QAD, Q4_K_M, Q5_K_M; UD-Q4_K_XL 4/5.
 
 v2 (ten harder cases): complete multi-turn tool sequences succeed only half the time even for BF16. QAD ties its controls.
 
-## Context
+### Context
 
 Three-needle retrieval at 4K/8K/16K/32K: at >=16K every model degenerates into repeating filler text. **Useful context ceiling: 8K for all finalists.**
 
-## Stability
+### Stability
 
 The loopback-only QAD soak completed 1,805.9s (30m 6s), 180 varied requests, zero request errors. Peak power 33.6 W, max temperature 52 C. Zero Xid/reset/GSP/channel events.
 
-## Role Classification
+### Role Classification
 
 **GOOD FIT:** always-loaded router, classifier, simple tool selector.
 
@@ -114,7 +97,7 @@ The loopback-only QAD soak completed 1,805.9s (30m 6s), 180 varied requests, zer
 
 **POOR FIT:** coding helper, primary assistant, autonomous agent.
 
-## 1.2B vs 2.6B Comparison
+### 1.2B vs 2.6B Comparison
 
 | Dimension | 2.6B QAD | 1.2B QAD | Delta |
 |---|---|---|---|
@@ -126,7 +109,7 @@ The loopback-only QAD soak completed 1,805.9s (30m 6s), 180 varied requests, zer
 
 The 1.2B creates a genuinely better always-resident micro-sidecar niche (twice as fast, two-thirds the VRAM) but is a strictly weaker knowledge/extraction assistant.
 
-## Claim Classifications
+### Claim Classifications
 
 | Claim | Classification |
 |---|---|
@@ -138,13 +121,13 @@ The 1.2B creates a genuinely better always-resident micro-sidecar niche (twice a
 | Meaningful recovery of PTQ loss | PARTIALLY_REPRODUCED |
 | Improves hallucination resistance | NOT_REPRODUCED |
 
-## Evidence Links
+### Evidence Links
 
 - **Canonical evaluation repo:** https://github.com/WumboLabs/eval-lfm2.5-1.2b
 - **WELP protocol:** https://github.com/WumboLabs/welp
 - **Labs catalog:** https://github.com/WumboLabs/labs
 
-## Reproduction
+### Reproduction
 
 Direct link to canonical reproduction material: [eval-lfm2.5-1.2b/](https://github.com/WumboLabs/eval-lfm2.5-1.2b)
 

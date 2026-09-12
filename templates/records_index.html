@@ -3,16 +3,18 @@
 {% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
 
 {% block content %}
-{% set labs = get_section(path="labs/_index.md") %}
-{% set_global linked_evaluations = [] %}
+{% set events_data = load_data(path="data/generated/labs-events.json") %}
+{% set events = events_data.events %}
+{% set pages_by_date = section.pages | group_by(attribute="date") %}
+{% set events_by_date = events | group_by(attribute="date") %}
+{% set_global all_dates = [] %}
 {% for page in section.pages %}
-  {% if page.extra.evaluation_record %}
-    {% set_global linked_evaluations = linked_evaluations | concat(with=page.extra.evaluation_record) %}
-  {% endif %}
+  {% if page.date not in all_dates %}{% set_global all_dates = all_dates | concat(with=page.date) %}{% endif %}
 {% endfor %}
-{% set records = section.pages | concat(with=labs.pages) %}
-{% set records_by_date = records | group_by(attribute="date") %}
-{% set dates = records | map(attribute="date") | unique | sort | reverse %}
+{% for e in events %}
+  {% if e.date not in all_dates %}{% set_global all_dates = all_dates | concat(with=e.date) %}{% endif %}
+{% endfor %}
+{% set dates = all_dates | sort | reverse %}
 <section class="container page-record archive-page">
   <div class="console-record-bar" aria-label="Record context">
     <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LAB RECORDS</span>
@@ -32,31 +34,46 @@
     <h2 id="all-records">All records</h2>
     <div class="record-list record-list--archive">
       {% for date in dates %}
-        {% for page in records_by_date | get(key=date) | sort(attribute="permalink") %}
-          {% if page.relative_path in linked_evaluations %}{% continue %}{% endif %}
-          {% set record = page %}
-          {% if page.extra.evaluation_record %}
-            {% set record = get_page(path=page.extra.evaluation_record) %}
-          {% endif %}
-          <article class="record-row">
-            <time class="archive-record-date" datetime="{{ page.date }}">{{ page.date }}</time>
-            <div class="record-row-main">
-              <h3><a href="{{ page.permalink }}">{% if page.extra.model %}{{ page.extra.model }}{% else %}{{ page.title }}{% endif %}</a></h3>
-              <div class="archive-record-meta">
-                {% if record.extra.model %}<span>Model evaluation{% if page.extra.evaluation_record %} / report{% endif %}</span>{% elif page.extra.record_type %}<span>{{ page.extra.record_type }}</span>{% endif %}
-                {% if record.extra.status %}<span>{{ record.extra.status | replace(from='_', to=' ') | lower }}</span>{% endif %}
-                {% if record.extra | get(key="evidence", default="published") == "pending" %}<span class="evidence-pending">Evidence publication pending</span>{% endif %}
+        {% if pages_by_date | get(key=date) %}
+          {% for page in pages_by_date | get(key=date) | sort(attribute="permalink") %}
+            {% if page.extra.evaluation_event %}{% continue %}{% endif %}
+            <article class="record-row">
+              <time class="archive-record-date" datetime="{{ page.date }}">{{ page.date }}</time>
+              <div class="record-row-main">
+                <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+                <div class="archive-record-meta">
+                  {% if page.extra.record_type %}<span>{{ page.extra.record_type }}</span>{% endif %}
+                </div>
+                {% if page.description %}<p class="archive-record-summary">{{ page.description }}</p>{% endif %}
+                <div class="archive-record-links">
+                  <a href="{{ page.permalink }}">View record</a>
+                </div>
               </div>
-              {% if record.extra.hardware %}<p class="archive-record-hardware">{{ record.extra.hardware }}</p>{% endif %}
-              {% if record.extra.headline %}<p class="archive-record-summary">{{ record.extra.headline }}</p>{% elif page.description %}<p class="archive-record-summary">{{ page.description }}</p>{% endif %}
-              <div class="archive-record-links">
-                <a href="{{ page.permalink }}">View record</a>
-                {% if page.extra.evaluation_record %}<a href="{{ record.permalink }}">Evaluation details</a>{% endif %}
-                {% if record.extra.repo and record.extra | get(key="evidence", default="published") != "pending" %}<a href="{{ record.extra.repo }}">Canonical evidence</a>{% endif %}
+            </article>
+          {% endfor %}
+        {% endif %}
+        {% if events_by_date | get(key=date) %}
+          {% for e in events_by_date | get(key=date) | sort(attribute="event_id") %}
+            <article class="record-row">
+              <time class="archive-record-date" datetime="{{ e.date }}">{{ e.date }}</time>
+              <div class="record-row-main">
+                <h3><a href="{{ e.model_url }}#{{ e.event_id }}">{{ e.model }} — {{ e.event_kicker }}</a></h3>
+                <div class="archive-record-meta">
+                  <span>Model evaluation</span>
+                  {% if e.status %}<span>{{ e.status | replace(from='_', to=' ') | lower }}</span>{% endif %}
+                  {% if e.evidence_state and e.evidence_state != "published" %}<span class="evidence-pending">Evidence publication pending</span>{% endif %}
+                </div>
+                {% if e.hardware %}<p class="archive-record-hardware">{{ e.hardware }}</p>{% endif %}
+                {% if e.headline %}<p class="archive-record-summary">{{ e.headline }}</p>{% endif %}
+                <div class="archive-record-links">
+                  <a href="{{ e.model_url }}#{{ e.event_id }}">Event on model page</a>
+                  {% if e.report_title %}<a href="/{{ e.report_page | replace(from='.md', to='/') }}">{{ e.report_title }}</a>{% endif %}
+                  {% if e.evidence_url and e.evidence_state == "published" %}<a href="{{ e.evidence_url }}">Canonical evidence</a>{% endif %}
+                </div>
               </div>
-            </div>
-          </article>
-        {% endfor %}
+            </article>
+          {% endfor %}
+        {% endif %}
       {% endfor %}
     </div>
   </section>

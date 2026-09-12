@@ -1,22 +1,64 @@
 +++
-title = "MiniCPM5-2B Lab Record"
-description = "Official BF16 full-precision characterization on a contained vLLM runtime, READY_WITH_GUARDRAILS: 32K default / 64K guarded, complete 131K model-card envelope (98K highest BF16-KV rung; exact 131K FIT_LIMIT on BF16-KV and strict-gate FAILED on the authorized fp8-KV surface), 118.6 tok/s decode, thinking/coding/tools PASS, 20/20 reliability."
-date = 2026-09-10
-template = "lab_record.html"
+title = "MiniCPM5-2B"
+description = "MiniCPM5-2B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+template = "lab_model.html"
 weight = 9
 
 [extra]
-model = "MiniCPM5-2B"
-producer = "OpenBMB"
-quant = "BF16 weights and BF16 KV (primary surface); fp8(e4m3) KV only on the single authorized 131,072 alternate surface"
-repo = "https://github.com/WumboLabs/eval-minicpm5-2b"
-status = "READY_WITH_GUARDRAILS"
-hardware = "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)"
-headline = "Official BF16 full-precision characterization on a contained vLLM runtime, READY_WITH_GUARDRAILS: 32K default / 64K guarded, complete 131K model-card envelope (98K highest BF16-KV rung; exact 131K FIT_LIMIT on BF16-KV and strict-gate FAILED on the authorized fp8-KV surface), 118.6 tok/s decode, thinking/coding/tools PASS, 20/20 reliability."
-evidence = "published"
+kind = "model"
+model_id = "minicpm5-2b"
+vendor = "OpenBMB"
+classification = "READY_WITH_GUARDRAILS"
+recommended_profile_id = "minicpm5-2b-vllm-bf16"
+recommended_profile_name = "contained vLLM BF16"
+practical_context = "32,768 default / 65,536 guarded tokens"
+profile_count = 1
+event_count = 1
+latest_event_date = 2026-09-10
 +++
 
-## Identity
+WumboLabs tests **MiniCPM5-2B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+
+## Current state
+
+- **Classification:** READY_WITH_GUARDRAILS — [Initial evaluation (full characterization) (2026-09-10)](/labs/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5), profile contained vLLM BF16
+- **Recommended profile:** contained vLLM BF16 (`minicpm5-2b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/eval-minicpm5-2b)
+- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/labs/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5)
+- **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
+
+## Tested profiles
+
+### contained vLLM BF16 — CURRENT
+
+Profile identity: `minicpm5-2b-vllm-bf16`.
+
+| Field | Value |
+|---|---|
+| Runtime | vLLM 0.27.1 (g6e448d0ea), Torch 2.13.0+cu130, Transformers 5.15.0, FlashInfer 0.6.16.post3 |
+| Artifact | model-00000-of-00001.safetensors (official BF16; no quantization or conversion) |
+| Precision | BF16 weights and BF16 KV (primary surface); fp8(e4m3) KV only on the single authorized 131,072 alternate surface |
+
+Status: current canonical/recommended tested surface.
+
+Canonical profile repository: <https://github.com/WumboLabs/eval-minicpm5-2b>
+
+Events on this profile:
+
+- [Initial evaluation (full characterization) (2026-09-10)](/labs/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5) — READY_WITH_GUARDRAILS
+
+## Testing history
+
+Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+
+<a id="initial-evaluation-2026-09-10-minicpm5"></a>
+
+### 2026-09-10 — Initial evaluation (full characterization)
+
+**Initial Evaluation — contained vLLM BF16** · profile: contained vLLM BF16 · status: READY_WITH_GUARDRAILS
+
+[Canonical evidence for this event](https://github.com/WumboLabs/eval-minicpm5-2b)
+
+##### Identity
 
 | Field | Value |
 |---|---|
@@ -29,7 +71,7 @@ evidence = "published"
 | Campaign | `minicpm5-2b-rtx5070-welp-characterization-2026-09-10` |
 | Record date | 2026-09-10 |
 
-## Runtime and hardware
+##### Runtime and hardware
 
 | Field | Value |
 |---|---|
@@ -39,7 +81,7 @@ evidence = "published"
 | Hardware | WumboJetsII (NVIDIA GeForce RTX 5070 12GB) |
 | Hardware notes | Single-user workstation; AMD Ryzen 7 9800X3D; Fedora Linux 44 |
 
-## WELP outcome
+##### WELP outcome
 
 - **Outcome:** PASS — MINICPM5_2B_RTX5070_CHARACTERIZED; MODEL-CARD CONTEXT ENVELOPE COMPLETE = YES
 - **Classification:** READY_WITH_GUARDRAILS
@@ -47,7 +89,7 @@ evidence = "published"
 
 Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-minicpm5-2b
 
-## Context profile
+##### Context profile
 
 | Field | Value |
 |---|---|
@@ -57,7 +99,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Model-card envelope complete | YES |
 | Native maximum disposition | Exact 131,072 carries two completed dispositions: FIT_LIMIT on the BF16-KV surface (1,024 MiB reserve floor caps the pool below the maximum) and measured FAILED (strict useful-context gate) on the authorized fp8-KV alternate surface executed at 99.50% occupancy; the highest admitted BF16-KV rung was 98,304 |
 
-## Headline performance
+##### Headline performance
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
@@ -66,14 +108,14 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 <p><small>Medians over five measured repetitions per surface at 8,192 baseline context; near-full ladder medians of two seeds per rung retained in campaign evidence</small></p>
 
-## Quality and capabilities
+##### Quality and capabilities
 
 - **Constrained result:** 6/7 constrained checks — one deterministic temperature-0 over-refusal of a benign prime-list prompt failed the repeat-check content scorer; repeat consistency itself held; no repair attempted (frozen contract)
 - Thinking/reasoning TESTED_PASS; coding TESTED_PASS (4/4 frozen execution cases); native tool selection and tool-result use TESTED_PASS
 - English/Chinese text, instruction following, and structured output TESTED_PASS
 - Near-full performance inside practical gates through 98,304 (BF16-KV) with zero errors across 55 scientific requests
 
-### Guardrails and limitations
+###### Guardrails and limitations
 
 - Strict long-context output compliance fails at all rungs (format + absent-field), even though content-level retrieval is strong
 - Deterministic temperature-0 over-refusal quirk observed on a benign prompt
@@ -81,7 +123,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 **Reliability:** 20/20 COMPLETE and passed on a fresh default-context server; zero HTTP/runtime/CUDA/OOM/Xid errors; bounded, not endurance certification
 
-## LocalMaxxing
+##### LocalMaxxing
 
 | Field | Value |
 |---|---|
@@ -94,12 +136,18 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 <p><small>APPROVED, origin NEW (localmaxxing-backfill-2026-09-10); benchmarked on the canonical practical stack (BF16, vLLM contained runtime, 32K default — not the 131K fp8 boundary); actual prompt tokens 252 (endpoint usage); verifiedRun false reflects a client capture limitation</small></p>
 
-## Canonical evidence
+##### Canonical evidence
 
 Canonical public evidence: <https://github.com/WumboLabs/eval-minicpm5-2b>
 
-This Lab Record is a human-readable derivative of the accepted local WELP
+This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
 scientific source. Results are bounded by the tested artifact, runtime,
 hardware, configuration, and protocol snapshot, and are not universal model
 rankings.
+
+## Canonical evidence
+
+One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+
+- **contained vLLM BF16** (`minicpm5-2b-vllm-bf16`): <https://github.com/WumboLabs/eval-minicpm5-2b>

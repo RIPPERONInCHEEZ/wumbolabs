@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container page-record">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LABS</span>
+    <span>CANONICAL MODEL PAGE</span>
+  </div>
+  <p class="console-record-path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/labs/{{ page.extra.model_id }}</span>
+  </p>
+  <nav class="page-back" aria-label="Parent section">
+    <a href="{{ get_url(path='/labs/') }}">← All models</a>
+  </nav>
+
+  <header class="page-record-header">
+    <h1>{{ page.title }}</h1>
+    <p class="page-record-description">{{ page.description }}</p>
+    <p class="page-record-date">
+      {% if page.extra.classification %}{{ page.extra.classification | replace(from='_', to=' ') }}{% endif %}
+      {% if page.extra.latest_event_date %} / latest evidence {{ page.extra.latest_event_date }}{% endif %}
+    </p>
+  </header>
+
+  <div class="page-record-content">
+    {{ page.content | safe }}
+  </div>
+
+  <nav class="page-exit" aria-label="After this model page">
+    <a href="{{ get_url(path='/labs/') }}">← All models</a>
+    <a href="{{ get_url(path='/records/') }}">Lab Records</a>
+    <a href="#main-content">Back to top ↑</a>
+  </nav>
+</section>
+{% endblock content %}

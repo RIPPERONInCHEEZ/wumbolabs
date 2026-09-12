@@ -1,22 +1,64 @@
 +++
-title = "Gemma 4 E4B Lab Record"
-description = "Official Google QAT Q4_0 + mmproj on llama.cpp, READY_WITH_GUARDRAILS: 32K default / 131K guarded with the full card envelope complete; perfect five-needle retrieval through the exact 131,072 maximum while the strict aggregate gate FAILED at every rung. Vision, multi-image, ASR, AST and bounded video PASS; OCR TESTED_LIMITED; reliability 20/20 completion, 14/20 exactness."
-date = 2026-09-10
-template = "lab_record.html"
+title = "Gemma 4 E4B"
+description = "Gemma 4 E4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+template = "lab_model.html"
 weight = 10
 
 [extra]
-model = "Gemma 4 E4B"
-producer = "Google"
-quant = "QAT Q4_0 weights, F16 KV cache"
-repo = "https://github.com/WumboLabs/eval-gemma4-e4b"
-status = "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL"
-hardware = "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)"
-headline = "Official Google QAT Q4_0 + mmproj on llama.cpp, READY_WITH_GUARDRAILS: 32K default / 131K guarded with the full card envelope complete; perfect five-needle retrieval through the exact 131,072 maximum while the strict aggregate gate FAILED at every rung. Vision, multi-image, ASR, AST and bounded video PASS; OCR TESTED_LIMITED; reliability 20/20 completion, 14/20 exactness."
-evidence = "published"
+kind = "model"
+model_id = "gemma4-e4b"
+vendor = "Google"
+classification = "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL"
+recommended_profile_id = "gemma4-e4b-llamacpp-qat-q4-0"
+recommended_profile_name = "llama.cpp official QAT Q4_0"
+practical_context = "32,768 default / 131,072 guarded tokens"
+profile_count = 1
+event_count = 1
+latest_event_date = 2026-09-10
 +++
 
-## Identity
+WumboLabs tests **Gemma 4 E4B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+
+## Current state
+
+- **Classification:** READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL — [Initial evaluation (full characterization) (2026-09-10)](/labs/gemma4-e4b#initial-evaluation-2026-09-10-gemma4), profile llama.cpp official QAT Q4_0
+- **Recommended profile:** llama.cpp official QAT Q4_0 (`gemma4-e4b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/eval-gemma4-e4b)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/labs/gemma4-e4b#initial-evaluation-2026-09-10-gemma4)
+- **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
+
+## Tested profiles
+
+### llama.cpp official QAT Q4_0 — CURRENT
+
+Profile identity: `gemma4-e4b-llamacpp-qat-q4-0`.
+
+| Field | Value |
+|---|---|
+| Runtime | llama.cpp 0.1.0-dev build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (campaign-local CUDA 13.3 build, SM120) |
+| Artifact | gemma-4-E4B_q4_0-it.gguf + official gemma-4-E4B-it-mmproj.gguf (Google official QAT release) |
+| Precision | QAT Q4_0 weights, F16 KV cache |
+
+Status: current canonical/recommended tested surface.
+
+Canonical profile repository: <https://github.com/WumboLabs/eval-gemma4-e4b>
+
+Events on this profile:
+
+- [Initial evaluation (full characterization) (2026-09-10)](/labs/gemma4-e4b#initial-evaluation-2026-09-10-gemma4) — READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
+
+## Testing history
+
+Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+
+<a id="initial-evaluation-2026-09-10-gemma4"></a>
+
+### 2026-09-10 — Initial evaluation (full characterization)
+
+**Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
+
+[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma4-e4b)
+
+##### Identity
 
 | Field | Value |
 |---|---|
@@ -29,7 +71,7 @@ evidence = "published"
 | Campaign | `gemma4-e4b-rtx5070-welp-characterization-2026-09-10` |
 | Record date | 2026-09-10 |
 
-## Runtime and hardware
+##### Runtime and hardware
 
 | Field | Value |
 |---|---|
@@ -39,7 +81,7 @@ evidence = "published"
 | Hardware | WumboJetsII (NVIDIA GeForce RTX 5070 12GB) |
 | Hardware notes | Single-user workstation; AMD Ryzen 7 9800X3D; Fedora Linux 44 |
 
-## WELP outcome
+##### WELP outcome
 
 - **Outcome:** PASS — GEMMA4_E4B_EVIDENCE_COMPLETION_COMPLETE
 - **Classification:** READY_WITH_GUARDRAILS
@@ -47,7 +89,7 @@ evidence = "published"
 
 Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-gemma4-e4b
 
-## Context profile
+##### Context profile
 
 | Field | Value |
 |---|---|
@@ -57,7 +99,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Model-card envelope complete | YES |
 | Native maximum disposition | Exact native 131,072: measured FAILED on the strict aggregate useful-context gate while near-full performance itself was valid (both seeds 99.50% occupancy, TTFT ~38 s, decode ~79 tok/s, zero errors) and five-needle target retrieval stayed perfect (10/10 across ALL rungs including the exact maximum) |
 
-## Headline performance
+##### Headline performance
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
@@ -66,14 +108,14 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 <p><small>Medians over five measured repetitions per surface; near-full ladder values are medians of two seeds per rung</small></p>
 
-## Quality and capabilities
+##### Quality and capabilities
 
 - **Constrained result:** 3/7 strict gates (markdown-fenced JSON plus a real absent-field grounding defect); content-level supplement: 3/3 needle facts exact, decoy absent, checksum correct
 - Multimodal on 12 GB: vision TESTED_PASS, multi-image TESTED_PASS, audio ASR TESTED_PASS, audio AST TESTED_PASS, bounded three-frame video TESTED_PASS
 - Reasoning (thinking mode), coding (4/4 execution cases), function calling, and bounded tool-result use TESTED_PASS
 - Perfect five-needle retrieval through the exact 131,072 maximum; 80 valid scientific requests across 9 supervised arms with zero CUDA/OOM/Xid
 
-### Guardrails and limitations
+###### Guardrails and limitations
 
 - Strict-format fragility: fenced JSON when markdown is not explicitly forbidden; schema-tail truncation from 16K upward; absent-field (negative-space) answers unreliable at temperature 0
 - OCR/document understanding TESTED_LIMITED (one document ID digit dropped at temperature 0; broader OCR types untested)
@@ -81,7 +123,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 **Reliability:** Canonical 32K profile: 20/20 runtime completion with zero errors; behavioral exactness 14/20 — all six failures are the known dossier strict-format/absent defect, bit-stable across arms; bounded, not soak/endurance
 
-## LocalMaxxing
+##### LocalMaxxing
 
 | Field | Value |
 |---|---|
@@ -94,12 +136,18 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 <p><small>SUBMITTED once, origin NEW, service APPROVED (in-campaign, 2026-09-11); verifiedRun null — the service returned no verification state and the client could not transmit verification fields; recorded honestly, not claimed as verified; actual prompt tokens 77 (endpoint usage); tokSPrefill 1,322.5</small></p>
 
-## Canonical evidence
+##### Canonical evidence
 
 Canonical public evidence: <https://github.com/WumboLabs/eval-gemma4-e4b>
 
-This Lab Record is a human-readable derivative of the accepted local WELP
+This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
 scientific source. Results are bounded by the tested artifact, runtime,
 hardware, configuration, and protocol snapshot, and are not universal model
 rankings.
+
+## Canonical evidence
+
+One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+
+- **llama.cpp official QAT Q4_0** (`gemma4-e4b-llamacpp-qat-q4-0`): <https://github.com/WumboLabs/eval-gemma4-e4b>

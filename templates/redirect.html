@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
+{% block canonical %}<link rel="canonical" href="{{ config.base_url }}{{ page.extra.redirect_to }}">{% endblock canonical %}
+{% block head %}<meta http-equiv="refresh" content="0; url={{ page.extra.redirect_to }}">{% endblock head %}
+
+{% block content %}
+<section class="container page-record">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LABS</span>
+    <span>COMPATIBILITY REDIRECT</span>
+  </div>
+  <p class="console-record-path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>{{ page.extra.redirect_to }}</span>
+  </p>
+
+  <header class="page-record-header">
+    <h1>{{ page.title }}</h1>
+    <p class="page-record-description">{{ page.description }}</p>
+  </header>
+
+  <div class="page-record-content">
+    <p>This record moved to the canonical model page: <a href="{{ page.extra.redirect_to }}">{{ page.extra.redirect_to }}</a></p>
+    <noscript><p>Open the link above; this compatibility page no longer carries the evidence.</p></noscript>
+    {{ page.content | safe }}
+  </div>
+</section>
+{% endblock content %}

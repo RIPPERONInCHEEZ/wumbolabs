@@ -1,9 +1,45 @@
 # Labs Publication Workflow
 
-How WumboLabs Lab Records get onto this website after a WELP campaign closes.
-The website is a **derivative** of canonical public evidence — never a second
-independent source of model facts. If a page ever conflicts with campaign
-evidence, the campaign evidence governs and the page is stale/defective.
+How WumboLabs model evidence gets onto this website after a WELP campaign
+closes. The website is a **derivative** of canonical public evidence — never a
+second independent source of model facts. If a page ever conflicts with
+campaign evidence, the campaign evidence governs and the page is
+stale/defective.
+
+## Identity contract (2026-09-12, model/profile/event architecture)
+
+    one MODEL ID        = one canonical Labs page        (/labs/<model-id>/)
+    one PROFILE ID      = one canonical public eval repository
+    one EVENT ID        = one dated Lab Records entry / evidence event
+    one profile may contain many events; one model may contain many profiles
+
+- `data/labs-registry.json` (v2) is EVENT-oriented: one entry per published
+  evidence event, carrying `model_id`, `profile_id`, `event_id`, `event_type`,
+  `event_date`, `record_date`, `profile_repo`, `profile_status`, and
+  `evidence_scope`.
+- `scripts/sync_labs.py` renders exactly ONE Labs page per model
+  (`content/labs/<model-id>.md`), aggregating all of the model's profiles and
+  events with the current state first. Per-surface currency follows
+  `evidence_scope`: a later context-only event supersedes only the surfaces it
+  declares (it can never silently replace classification, reliability, or
+  capability evidence).
+- A PROFILE ID maps to exactly one canonical public eval repository, and every
+  canonical eval repository carries a `profile.json` descriptor (schema
+  `wumbolabs-eval-profile/1`). A repository that mixed two materially distinct
+  profiles (eval-qwen3.8-27b: historical llama.cpp vs ExLlamaV3 H1) was split
+  into profile-specific canonical repositories; the original remains a
+  preserved historical archive with a README notice. Profile-pure repositories
+  keep their original names.
+- Superseded event-style Labs URLs are preserved as generated compatibility
+  pages (meta refresh + canonical) pointing at
+  `/labs/<model-id>/#<event-id>`; Cloudflare Pages `_redirects` cannot target
+  fragments. The `/labs/` root is the model catalog (the old
+  `/labs/ -> /records/` redirect was removed).
+- Each canonical eval repository used to pin website exports stores the export
+  at a pinned commit with a SHA-256 pin in the registry. Where evidence was
+  migrated, `MIGRATION.md` in the new repository records per-file provenance
+  (original repo/commit/path, SHA-256 equality); migrated exports are
+  byte-identical, so existing pins resolve unchanged in their new home.
 
 ## Source-of-truth chain
 
@@ -24,11 +60,19 @@ pinned by SHA-256.
 
 ## Unified Records index
 
-Published model evaluations and hand-authored technical records are surfaced
-together on `/records/`, newest first. `templates/records_index.html` combines
-the pages in `content/records/` and `content/labs/` at build time; no second
-model-facts datastore is maintained. Generated evaluation pages still come
-from the registry and deterministic sync above.
+`/records/` remains the chronological stream of individual evidence events.
+`templates/records_index.html` combines the hand-maintained technical records
+in `content/records/` with the generated model-event rows from
+`data/generated/labs-events.json` (produced by deterministic sync from the
+registry). Each model-event row shows model, event type/profile context, date,
+status, hardware, and headline, and links to the event's anchor on the
+canonical model page plus the canonical evidence repository. A long-form
+technical report describing the same event as an evaluation (for example
+`records/qwen38-27b-rtx5070-evaluation.md` with
+`extra.evaluation_event = "initial-evaluation-2026-08-21"`) renders as one
+merged row; this is an explicit event relationship, not model-name
+deduplication. Record chronology uses `record_date`, which is preserved when a
+record is updated in place.
 
 Archive position uses the original front-matter `date`, descending, with the
 page permalink ascending as the deterministic same-date tie-break. `weight`,
@@ -45,9 +89,7 @@ not model-name deduplication: the August Qwen3.8 campaign and September H1 updat
 remain separate records. All existing detail URLs remain available.
 
 Type, lifecycle/status, hardware, and publication state are entry metadata,
-not separate browsing sections. The exact `/labs/` root redirects to `/records/`
-on Cloudflare Pages; the minimal local compatibility page and all `/labs/<slug>/`
-detail pages remain available. No public testing-status dashboard or research
+not separate browsing sections. No public testing-status dashboard or research
 queue is maintained.
 
 ## Publication dispositions (defined in canonical WELP)
@@ -88,12 +130,13 @@ pushes, and deployment are always human actions.
    registry used by the gap checker.
 5. **Run the Labs sync** (deterministic; fetches only from raw.githubusercontent.com):
 
-       python scripts/sync_labs.py --local-exports <exports-dir>
+       python scripts/sync_labs.py
 
    Omit `--local-exports` when every generated entry consumes `github-raw`
-   sources. The command prints sources, records changed/unchanged/blocked,
-   and output paths; it exits nonzero on schema, hash, slug, or evidence
-   relationship errors. A second run must change nothing (idempotence).
+   sources. Sync renders one model page per model_id, compatibility stubs for
+   superseded event URLs, and the generated datasets, then exits nonzero on
+   schema, hash, slug, identity, or evidence-relationship errors. A second run
+   must change nothing (idempotence).
 
        python scripts/sync_labs.py --local-exports <exports-dir>   # first pass
        python scripts/sync_labs.py --local-exports <exports-dir>   # verify: 0 changed

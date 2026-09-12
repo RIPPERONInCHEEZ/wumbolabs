@@ -1,7 +1,34 @@
 {
-  "version": 1,
-  "generated_by": "scripts/sync_labs.py",
+  "version": 2,
+  "generated_by": "scripts/sync_labs.py (model-centric)",
   "source_identities": {
+    "qwen38-27b-h1": {
+      "repo": "WumboLabs/eval-qwen3.8-27b-exl3-h1",
+      "ref": "4d9d47b98a7538b9eb0f06e1f949ed41e325ea0a",
+      "path": "website-publication.json",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/4d9d47b98a7538b9eb0f06e1f949ed41e325ea0a/website-publication.json",
+      "sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
+      "resolved_commit": "4d9d47b98a7538b9eb0f06e1f949ed41e325ea0a",
+      "kind": "github-raw"
+    },
+    "qwen38-27b-context-envelope": {
+      "repo": "WumboLabs/eval-qwen3.8-27b-exl3-h1",
+      "ref": "7138cd9f0c73bf306d08ef1a81075eb892f3ae99",
+      "path": "website-publication.json",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/7138cd9f0c73bf306d08ef1a81075eb892f3ae99/website-publication.json",
+      "sha256": "efbde1adf01c3a57b59d1b51d9234384cd62738de299cbe9c8b6f06f80f8064f",
+      "resolved_commit": "7138cd9f0c73bf306d08ef1a81075eb892f3ae99",
+      "kind": "github-raw"
+    },
+    "eval-nemotron-3-nano-4b-recharacterization-2026-09-11": {
+      "repo": "WumboLabs/eval-nemotron-3-nano-4b",
+      "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+      "path": "website-publication.json",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-nemotron-3-nano-4b/86d615c23bc1422890b32d9c1cf8e7d68b6001c1/website-publication.json",
+      "sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
+      "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
+      "kind": "github-raw"
+    },
     "qwen35-4b": {
       "repo": "WumboLabs/eval-qwen3.5-4b",
       "ref": "cb01b6826c67f8fcb5ce9dfffdb36664c23ee0d0",
@@ -37,36 +64,21 @@
       "sha256": "45aca9eb0ff421280e04e6137cdcdc8571e40754a89c5f4e705b410ab7a052bb",
       "resolved_commit": "336d86a0fefb7c64e3c7c770d4cd41057b98990d",
       "kind": "github-raw"
-    },
-    "qwen38-27b-h1": {
-      "repo": "WumboLabs/eval-qwen3.8-27b",
-      "ref": "cc5a435092c17394b9e29b228a0e8509613f26b3",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b/cc5a435092c17394b9e29b228a0e8509613f26b3/website-publication.json",
-      "sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
-      "resolved_commit": "cc5a435092c17394b9e29b228a0e8509613f26b3",
-      "kind": "github-raw"
-    },
-    "eval-nemotron-3-nano-4b-recharacterization-2026-09-11": {
-      "repo": "WumboLabs/eval-nemotron-3-nano-4b",
-      "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-nemotron-3-nano-4b/86d615c23bc1422890b32d9c1cf8e7d68b6001c1/website-publication.json",
-      "sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
-      "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
-      "kind": "github-raw"
-    },
-    "qwen38-27b-context-envelope": {
-      "repo": "WumboLabs/eval-qwen3.8-27b",
-      "ref": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b/78e8ebf636d33048f1e23b687ed060be9ccc1e97/website-publication.json",
-      "sha256": "efbde1adf01c3a57b59d1b51d9234384cd62738de299cbe9c8b6f06f80f8064f",
-      "resolved_commit": "78e8ebf636d33048f1e23b687ed060be9ccc1e97",
-      "kind": "github-raw"
     }
   },
   "latest_represented_campaigns": [
+    {
+      "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
+      "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
+    },
+    {
+      "slug": "gemma4-e4b",
+      "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10"
+    },
+    {
+      "slug": "minicpm5-2b",
+      "campaign": "minicpm5-2b-rtx5070-welp-characterization-2026-09-10"
+    },
     {
       "slug": "qwen35-4b",
       "campaign": "qwen35-4b-rtx5070-context-completion-2026-09-11"
@@ -76,28 +88,15 @@
       "campaign": "qwen35-9b-rtx5070-context-completion-2026-09-11"
     },
     {
-      "slug": "minicpm5-2b",
-      "campaign": "minicpm5-2b-rtx5070-welp-characterization-2026-09-10"
-    },
-    {
-      "slug": "gemma4-e4b",
-      "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10"
+      "slug": "qwen38-27b-context-envelope",
+      "campaign": "qwen38-27b-rtx5070-context-completion-2026-09-12"
     },
     {
       "slug": "qwen38-27b-h1",
       "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)"
-    },
-    {
-      "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
-      "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
-    },
-    {
-      "slug": "qwen38-27b-context-envelope",
-      "campaign": "qwen38-27b-rtx5070-context-completion-2026-09-12"
     }
   ],
-  "pending_website_publication": [],
   "pending_public_evidence": [],
-  "blocked_records": [],
-  "notes": "Publication state is evidence-identity based; no time-based auto-expiration."
+  "models": 10,
+  "model_events": 13
 }
