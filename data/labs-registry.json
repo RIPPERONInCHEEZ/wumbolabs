@@ -1500,14 +1500,14 @@
       "source": {
         "kind": "github-raw",
         "repo": "WumboLabs/eval-gemma-4-12b-qat-q4",
-        "ref": "a5c9b4333d7f89303a680c8c8139839427230983",
+        "ref": "13051c0eb36cd7dc1c1e407b31db451e6c5c806e",
         "path": "website-publication.json",
-        "sha256": "8fdb6f58161fa39e3cf9568fa4057f9696732d45c087d47a28f5f86f61031d31"
+        "sha256": "9af5545eea7fc407dc428cc9f804d2d076ea6b41a4271b7a6ee083fb136f5a93"
       },
       "canonical_evidence": {
         "state": "published",
         "repo": "WumboLabs/eval-gemma-4-12b-qat-q4",
-        "ref": "a5c9b4333d7f89303a680c8c8139839427230983",
+        "ref": "13051c0eb36cd7dc1c1e407b31db451e6c5c806e",
         "url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4"
       },
       "evidence_maturity": "CURRENT_WELP"

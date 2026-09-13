@@ -67,11 +67,11 @@
     },
     "eval-gemma-4-12b-recharacterization-2026-09-12": {
       "repo": "WumboLabs/eval-gemma-4-12b-qat-q4",
-      "ref": "a5c9b4333d7f89303a680c8c8139839427230983",
+      "ref": "13051c0eb36cd7dc1c1e407b31db451e6c5c806e",
       "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-gemma-4-12b-qat-q4/a5c9b4333d7f89303a680c8c8139839427230983/website-publication.json",
-      "sha256": "8fdb6f58161fa39e3cf9568fa4057f9696732d45c087d47a28f5f86f61031d31",
-      "resolved_commit": "a5c9b4333d7f89303a680c8c8139839427230983",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-gemma-4-12b-qat-q4/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/website-publication.json",
+      "sha256": "9af5545eea7fc407dc428cc9f804d2d076ea6b41a4271b7a6ee083fb136f5a93",
+      "resolved_commit": "13051c0eb36cd7dc1c1e407b31db451e6c5c806e",
       "kind": "github-raw"
     }
   },
@@ -109,9 +109,7 @@
       "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)"
     }
   ],
-  "pending_public_evidence": [
-    "eval-gemma-4-12b-recharacterization-2026-09-12"
-  ],
+  "pending_public_evidence": [],
   "models": 21,
   "model_events": 41
 }

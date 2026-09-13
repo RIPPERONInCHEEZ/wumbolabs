@@ -105,12 +105,6 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 [Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
 
-> **Evidence publication pending.** Canonical public evidence for this
-> record has not been published yet.
-> This section is a local derivative prepared ahead of publication; no
-> canonical evidence URL is claimed. The listed measurements come from
-> the accepted local WELP campaign named below.
-
 ##### Identity
 
 | Field | Value |
@@ -139,7 +133,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
-Publication state: **evidence pending human gate** — canonical public evidence is not yet published; this record shows an explicit pending state
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4
 
 ##### Context profile
 
@@ -164,6 +158,7 @@ Publication state: **evidence pending human gate** — canonical public evidence
 - git-safety advisory weakness (amending pushed commits framed as technically possible)
 - uncertainty/sycophancy categories 1-2/3
 - native 262,144 context is FIT_LIMIT on 12GB; guarded ceiling 131,072
+- Multimodal lane (image/audio/video via mmproj) is SUPPORTED_NOT_CHARACTERIZED: this event characterizes the canonical text profile only; no model-wide multimodal claim is made
 
 **Reliability:** Proven mechanical 20-task corpus, 2 seeds: 11/20 and 10/20 mechanical pass; evidence discipline (3/3, 2/3) and strict interfaces (3/3, 2/3) strong; hallucination 2/4 both seeds; failures concentrated in uncertainty/sycophancy/git-safety with a strong truncation component
 
@@ -182,10 +177,7 @@ Publication state: **evidence pending human gate** — canonical public evidence
 
 ##### Canonical evidence
 
-State: **PENDING_HUMAN_GATE** — the canonical public evidence repository
-has not been published yet. This section intentionally claims no canonical
-evidence URL. Once the evidence repository is published and the registry is
-updated, this record synchronizes against it and the pending state is removed.
+Canonical public evidence: <https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
