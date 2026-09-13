@@ -64,9 +64,22 @@
       "sha256": "45aca9eb0ff421280e04e6137cdcdc8571e40754a89c5f4e705b410ab7a052bb",
       "resolved_commit": "336d86a0fefb7c64e3c7c770d4cd41057b98990d",
       "kind": "github-raw"
+    },
+    "eval-gemma-4-12b-recharacterization-2026-09-12": {
+      "repo": "WumboLabs/eval-gemma-4-12b-qat-q4",
+      "ref": "a5c9b4333d7f89303a680c8c8139839427230983",
+      "path": "website-publication.json",
+      "url": "https://raw.githubusercontent.com/WumboLabs/eval-gemma-4-12b-qat-q4/a5c9b4333d7f89303a680c8c8139839427230983/website-publication.json",
+      "sha256": "8fdb6f58161fa39e3cf9568fa4057f9696732d45c087d47a28f5f86f61031d31",
+      "resolved_commit": "a5c9b4333d7f89303a680c8c8139839427230983",
+      "kind": "github-raw"
     }
   },
   "latest_represented_campaigns": [
+    {
+      "slug": "eval-gemma-4-12b-recharacterization-2026-09-12",
+      "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
+    },
     {
       "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
       "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
@@ -96,7 +109,9 @@
       "campaign": "qwen38-27b-h1-canonical-profile (E18H candidate validation 2026-09-08 + E18I canonical promotion 2026-09-09)"
     }
   ],
-  "pending_public_evidence": [],
+  "pending_public_evidence": [
+    "eval-gemma-4-12b-recharacterization-2026-09-12"
+  ],
   "models": 21,
-  "model_events": 40
+  "model_events": 41
 }

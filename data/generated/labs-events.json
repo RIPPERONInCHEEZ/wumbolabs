@@ -928,6 +928,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/qwen38-27b/",
       "report_page": null
+    },
+    {
+      "event_id": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12",
+      "slug": "eval-gemma-4-12b-recharacterization-2026-09-12",
+      "model_id": "gemma-4-12b",
+      "model": "Gemma 4 12B IT",
+      "event_type": "welp-recharacterization",
+      "event_kicker": "WELP Recharacterization — llama.cpp QAT UD-Q4_K_XL",
+      "event_title": "Current-WELP recharacterization",
+      "profile_id": "gemma-4-12b-llamacpp-qat-q4-0",
+      "profile_name": "llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)",
+      "date": "2026-09-12",
+      "event_date": "2026-09-12",
+      "status": "READY_WITH_GUARDRAILS",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
+      "headline": "Gemma 4 12B IT (Google; tested as Unsloth UD-Q4_K_XL packaging of the QAT Q4_0 lineage, llama.cpp b9672 CUDA SM120, RTX 5070 12GB) recharacterized under current WELP. READY_WITH_GUARDRAILS: 12/12 frozen quality screen; reasoning, coding, and tool-use probes pass; decode 72.9 tok/s, pp512 3,201 tok/s, full GPU residency. Context envelope COMPLETE: native rungs through 131,072 VALIDATED including two-seed useful-context at 99.5% near-full occupancy; the exact 262,144 card maximum is FIT_LIMIT on 12GB (measured OOM admission + KV-slope accounting); no official extension mechanisms documented. Reliability is the guardrail: 11/20 and 10/20 mechanical pass across two seeds with a verbosity/truncation component and git-safety advisory weakness. Multimodal (image/audio/video via mmproj) is officially supported but NOT characterized (text-only campaign). Historical 2026-06-21 practical-use winner (259.2/300) is directionally confirmed; no protocol score equivalence is claimed.",
+      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4",
+      "evidence_state": "published",
+      "model_url": "/evaluations/gemma-4-12b/",
+      "report_page": null
     }
   ]
 }

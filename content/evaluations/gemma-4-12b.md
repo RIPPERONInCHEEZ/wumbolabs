@@ -8,19 +8,23 @@ weight = 11
 kind = "model"
 model_id = "gemma-4-12b"
 vendor = "Google"
+classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "gemma-4-12b-llamacpp-qat-q4-0"
 recommended_profile_name = "llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)"
+practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 4
-event_count = 5
-latest_event_date = 2026-07-04
+event_count = 6
+latest_event_date = 2026-09-12
 +++
 
 WumboLabs tests **Gemma 4 12B IT** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
 
 ## Current state
 
+- **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12), profile llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
 - **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
-- **Latest evidence:** 2026-07-04 — 12B practical pool comparison v025 + Grug
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12)
+- **Latest evidence:** 2026-09-12 — Current-WELP recharacterization
 
 ## Tested profiles
 
@@ -28,7 +32,11 @@ WumboLabs tests **Gemma 4 12B IT** on real consumer hardware. This is the canoni
 
 Profile identity: `gemma-4-12b-llamacpp-qat-q4-0`.
 
-Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
+| Field | Value |
+|---|---|
+| Runtime | llama.cpp b9672 (74ade5274), CUDA SM120 |
+| Artifact | unsloth/gemma-4-12b-it-GGUF gemma-4-12b-it-UD-Q4_K_XL.gguf (re-acquired 2026-09-13T01:29:47Z after archive-gap repair authorization) |
+| Precision | UD-Q4_K_XL (Unsloth Dynamic 2.0 over QAT Q4_0 lineage) |
 
 Status: current canonical/recommended tested surface.
 
@@ -36,6 +44,7 @@ Canonical profile repository: <https://github.com/WumboLabs/eval-gemma-4-12b-qat
 
 Events on this profile:
 
+- [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12) — READY_WITH_GUARDRAILS
 - [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 - [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04) — BENCHMARK_ONLY (LMX local speed)
 - [12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-practical-use-family-2026-06-21) — PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
@@ -87,6 +96,102 @@ Events on this profile:
 ## Testing history
 
 Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+
+<a id="gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"></a>
+
+### 2026-09-12 — Current-WELP recharacterization
+
+**WELP Recharacterization — llama.cpp QAT UD-Q4_K_XL** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+
+[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+
+> **Evidence publication pending.** Canonical public evidence for this
+> record has not been published yet.
+> This section is a local derivative prepared ahead of publication; no
+> canonical evidence URL is claimed. The listed measurements come from
+> the accepted local WELP campaign named below.
+
+##### Identity
+
+| Field | Value |
+|---|---|
+| Model | Gemma 4 12B IT |
+| Producer | Google |
+| Official model | google/gemma-4-12b-it-qat-q4_0-gguf @ `unsloth/gemma-4-12b-it-GGUF fc034cfff751157913579611efad8462ac1be606` |
+| Tested artifact | unsloth/gemma-4-12b-it-GGUF gemma-4-12b-it-UD-Q4_K_XL.gguf (re-acquired 2026-09-13T01:29:47Z after archive-gap repair authorization) |
+| Precision | UD-Q4_K_XL (Unsloth Dynamic 2.0 over QAT Q4_0 lineage) |
+| Artifact SHA-256 | `90fd944d227e9d9b68e7e2c7d5b57b79d4c66ed521b0919fbbd932cf834f6f8e` |
+| Campaign | `gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12` |
+| Record date | 2026-09-12 |
+
+##### Runtime and hardware
+
+| Field | Value |
+|---|---|
+| Engine | llama.cpp |
+| Runtime version | b9672 (74ade5274), CUDA SM120 |
+| Hardware | WumboJetsII (NVIDIA GeForce RTX 5070 12GB) |
+| Hardware notes | full GPU residency; one heavy CUDA workload at a time |
+
+##### WELP outcome
+
+- **Outcome:** PASS — RECHARACTERIZED
+- **Classification:** READY_WITH_GUARDRAILS
+- **Artifact classification:** current
+
+Publication state: **evidence pending human gate** — canonical public evidence is not yet published; this record shows an explicit pending state
+
+##### Context profile
+
+| Field | Value |
+|---|---|
+| Practical default | 32768 tokens |
+| Guarded context | 131072 tokens |
+| Native model-card maximum | 262144 tokens |
+| Model-card envelope complete | YES |
+| Native maximum disposition | FIT_LIMIT — measured: one bounded admission attempt failed with CUDA OOM (compute buffer) and KV-slope accounting (17.4 KiB/token) proves the point cannot fit with required reserve on 12GB; nearest measured boundary 131,072 |
+
+##### Quality and capabilities
+
+- **Constrained result:** 12/12 frozen mechanical quality screen (frozen scorer, temp 0)
+- reasoning (thinking ON) multi-hop syllogism PASS
+- coding: generated function executes correctly (mechanical exec check)
+- tool calling: valid call + grounded continuation PASS
+
+###### Guardrails and limitations
+
+- verbosity: 13-14/20 reliability outputs hit frozen token caps; raise max_tokens or disable thinking for terse duty
+- git-safety advisory weakness (amending pushed commits framed as technically possible)
+- uncertainty/sycophancy categories 1-2/3
+- native 262,144 context is FIT_LIMIT on 12GB; guarded ceiling 131,072
+
+**Reliability:** Proven mechanical 20-task corpus, 2 seeds: 11/20 and 10/20 mechanical pass; evidence discipline (3/3, 2/3) and strict interfaces (3/3, 2/3) strong; hallucination 2/4 both seeds; failures concentrated in uncertainty/sycophancy/git-safety with a strong truncation component
+
+##### LocalMaxxing
+
+| Field | Value |
+|---|---|
+| Status | MEASURED_NOT_SUBMITTED |
+| Canonical context | not recorded tokens |
+| tok/s out | not recorded |
+| TTFT | not recorded |
+| Submission reference | not recorded |
+| verifiedRun | null (not claimed) |
+
+<p><small>local canonical-profile benchmark pp512 3201 tok/s / tg128 72.92 tok/s (5 reps); no exact existing service record (historical 2026-07-04 gemma4 LMX record is an unexecuted dry-run); submission requires separate human gate</small></p>
+
+##### Canonical evidence
+
+State: **PENDING_HUMAN_GATE** — the canonical public evidence repository
+has not been published yet. This section intentionally claims no canonical
+evidence URL. Once the evidence repository is published and the registry is
+updated, this record synchronizes against it and the pending state is removed.
+
+This event section is a human-readable derivative of the accepted local WELP
+campaign evidence named above; the campaign's REPORT.md is the authoritative
+scientific source. Results are bounded by the tested artifact, runtime,
+hardware, configuration, and protocol snapshot, and are not universal model
+rankings.
 
 <a id="gemma4-12b-practical-pool-v025-2026-07-04"></a>
 

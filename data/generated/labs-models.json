@@ -96,10 +96,10 @@
       "model_id": "gemma-4-12b",
       "display_name": "Gemma 4 12B IT",
       "page": "/evaluations/gemma-4-12b/",
-      "classification": null,
+      "classification": "READY_WITH_GUARDRAILS",
       "profile_count": 4,
-      "event_count": 5,
-      "latest_event_date": "2026-07-04"
+      "event_count": 6,
+      "latest_event_date": "2026-09-12"
     },
     {
       "model_id": "mellum2-12b-a2.5b",

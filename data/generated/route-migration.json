@@ -237,6 +237,15 @@
       "http_status": 200
     },
     {
+      "old_url": "/labs/eval-gemma-4-12b-recharacterization-2026-09-12/",
+      "content_type": "event-url",
+      "model_id": "gemma-4-12b",
+      "event_id": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12",
+      "new_url": "/evaluations/gemma-4-12b/#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12",
+      "mechanism": "html-stub-meta-refresh",
+      "http_status": 200
+    },
+    {
       "old_url": "/records/",
       "content_type": "section-index",
       "model_id": null,
