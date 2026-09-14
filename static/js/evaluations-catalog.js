@@ -27,8 +27,11 @@
     const visible = new Set(matching.slice(first, first + size));
 
     rows.forEach((row) => { row.hidden = !visible.has(row); });
+    const activeControl = document.activeElement;
     previous.disabled = page === 1;
     next.disabled = page === pages;
+    if (next.disabled && activeControl === next && !previous.disabled) previous.focus();
+    if (previous.disabled && activeControl === previous && !next.disabled) next.focus();
     indicator.textContent = `Page ${page} of ${pages}`;
 
     if (!matching.length) {
