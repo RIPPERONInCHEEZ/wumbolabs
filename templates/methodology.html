@@ -12,6 +12,11 @@
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
     <span>/methodology</span>
   </p>
+  {% set back_url = section.extra | get(key="back_url", default="/") %}
+  {% set back_label = section.extra | get(key="back_label", default="Back to Home") %}
+  <nav class="page-back" aria-label="Parent section">
+    <a href="{{ get_url(path=back_url) }}">← {{ back_label }}</a>
+  </nav>
 
   <header class="page-record-header">
     <h1>{{ section.title }}</h1>

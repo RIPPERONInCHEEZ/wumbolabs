@@ -13,9 +13,11 @@
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
     <span>{{ current_path }}</span>
   </p>
-  {% if is_record %}
+  {% set back_url = page.extra | get(key="back_url", default="/projects/#technical-notes") %}
+  {% set back_label = page.extra | get(key="back_label", default="Back to technical notes") %}
+  {% if is_record or page.extra | get(key="back_url", default=false) %}
     <nav class="page-back" aria-label="Parent section">
-      <a href="{{ get_url(path='/projects/') }}#technical-notes">← Back to technical notes</a>
+      <a href="{{ get_url(path=back_url) }}">← {{ back_label }}</a>
     </nav>
   {% endif %}
 
@@ -35,7 +37,7 @@
 
   {% if is_record and page.word_count >= 400 %}
     <nav class="page-exit" aria-label="After this record">
-      <a href="{{ get_url(path='/projects/') }}#technical-notes">← Back to technical notes</a>
+      <a href="{{ get_url(path=back_url) }}">← {{ back_label }}</a>
       <a href="#main-content">Back to top ↑</a>
     </nav>
   {% endif %}
