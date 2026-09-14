@@ -33,7 +33,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/aa707beabd64a875e74703ff13f638067799422d/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
 
 Events on this profile:
 
@@ -51,7 +51,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Benchmark Only — tool-version re-run** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (TOOL_VERSION_RERUN)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/aa707beabd64a875e74703ff13f638067799422d/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
@@ -73,7 +73,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Specialized Test — fit ladder** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-fit-ladder-e2e-2026-07-15/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/aa707beabd64a875e74703ff13f638067799422d/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
@@ -98,7 +98,7 @@ This model appears in shared multi-model comparisons. Each report is stored once
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
+- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/aa707beabd64a875e74703ff13f638067799422d/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
 
 ### Legacy provenance
 
