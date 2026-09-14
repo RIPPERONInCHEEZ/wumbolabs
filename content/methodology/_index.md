@@ -121,11 +121,17 @@ Negative results should not disappear because they are inconvenient. WELP freeze
 
 Website records are derivatives of campaign evidence, never a second independent source of model facts:
 
+The [Evaluations website](/evaluations/) is the human discovery and sharing layer.
+[WumboLabs/evaluations](https://github.com/WumboLabs/evaluations) holds the canonical
+public scientific registry and reports. Local `research/model-evaluations/` holds
+working/raw science; the NAS archive holds large model artifacts. Model, profile,
+and event IDs describe science, not repository boundaries.
+
 1. A WELP campaign closes, producing canonical local scientific evidence.
 2. A public-safe publication export is prepared — no credentials, no private paths, no raw prompt logs; negative results retained.
-3. A human publication gate publishes the canonical public evidence repository.
-4. The record is registered, with its canonical evidence and publication state.
-5. A deterministic sync renders the generated records and datasets for this site.
+3. A human publication gate adds accepted event evidence to the existing **WumboLabs/evaluations** repository; no new `eval-*` repository is created.
+4. The central registry records the event, its model/profile relationships, and an exact repository + full commit SHA + relative artifact path citation.
+5. The website pins that central registry commit and SHA-256; deterministic sync renders its derivative registry, pages, and datasets.
 6. The site is built and validated, then reviewed and deployed by a human gate.
 
-Every closed campaign records an explicit website-publication disposition, and the website is generated from the publication registry — never from hand-maintained tables. Every record carries an explicit publication state. A record whose canonical evidence is not yet public renders with an **evidence publication pending** state and claims no canonical evidence URL — pending evidence fails closed. If a record ever conflicts with its campaign evidence, the campaign evidence governs.
+Every closed campaign records an explicit website-publication disposition, and the website is generated from the pinned central publication registry — never from independently hand-maintained tables. Every record carries an explicit publication state. A record whose canonical evidence is not yet public renders with an **evidence publication pending** state and claims no canonical evidence URL — pending evidence fails closed. If a record ever conflicts with its campaign evidence, the campaign evidence governs. See the [publication operating contract](https://github.com/WumboLabs/welp/blob/main/docs/publication.md) for validation, historical compatibility, and exact sharing/citation rules.
