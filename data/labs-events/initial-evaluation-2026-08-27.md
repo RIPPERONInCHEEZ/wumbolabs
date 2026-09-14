@@ -119,6 +119,6 @@ MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output 
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [eval-ornith-1.5-9b/](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km)
 
 This Lab Record is a summary; the canonical repo is the source of truth.

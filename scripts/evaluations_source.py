@@ -36,7 +36,7 @@ def fetch(commit, path, expected=None):
 
 
 def migrate_links(text, targets, commit):
-    """Only replace legacy publication topology, never scientific prose/values."""
+    """Migrate current navigation, retaining quoted historical provenance verbatim."""
     pattern = re.compile(r"https://github\.com/(WumboLabs/(?:eval-[A-Za-z0-9._-]+|labs))(?:/(?:tree|blob)/[^\s/)>\"`]+(?:/[^\s)>\"`]*)?)?")
 
     def replace(match):
@@ -45,7 +45,19 @@ def migrate_links(text, targets, commit):
             raise ValueError(f"unmapped legacy evidence link: {match.group(0)}")
         return f"https://github.com/{REPO}/tree/{commit}/{path}"
 
-    return pattern.sub(replace, text)
+    lines = []
+    for line in text.splitlines(keepends=True):
+        # Quoted historical notes describe their original publication topology.
+        # Their source links must continue identifying that history, not its replacement.
+        if line.lstrip().startswith(">"):
+            lines.append(line)
+            continue
+        migrated = pattern.sub(replace, line)
+        migrated = re.sub(
+            r"\[(?:WumboLabs/)?eval-[^\]]+\](\(https://github\.com/WumboLabs/evaluations/[^)]+\))",
+            r"[Central evidence]\1", migrated)
+        lines.append(migrated)
+    return "".join(lines)
 
 
 def project(registry, pin, payloads):

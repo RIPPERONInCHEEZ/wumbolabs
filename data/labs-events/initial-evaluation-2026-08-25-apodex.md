@@ -87,6 +87,6 @@ Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genu
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [eval-apodex-1.1-mini/](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
 
 This Lab Record is a summary; the canonical repo is the source of truth.

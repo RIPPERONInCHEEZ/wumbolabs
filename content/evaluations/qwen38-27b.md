@@ -382,15 +382,15 @@ A two-hour balanced-profile soak completed 225/225 HTTP successes and 46/46 exac
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [eval-qwen3.8-27b-llamacpp/reports/](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
 
 Full reproduction instructions, manifests, and checksums are published in the canonical repository. This Lab Record is a summary; the canonical repo is the source of truth.
 
 > **Provenance note (2026-09-12):** this evidence was originally published at
-> [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b)
+> [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/eval-qwen3.8-27b)
 > (evidence commit `54b14b30e3779f15486c3785222647324459dcf5`). It moved
 > byte-identical to the canonical historical-profile repository
-> ([eval-qwen3.8-27b-llamacpp](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl))
+> ([eval-qwen3.8-27b-llamacpp](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp))
 > by the model/profile/event publication-identity milestone; the original
 > repository is preserved unchanged as a historical archive.
 
