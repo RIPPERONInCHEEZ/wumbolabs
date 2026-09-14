@@ -73,4 +73,6 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-- [WumboLabs/eval-qwen3.8-2b-empero @ `e09ed632fe835dac69eb05f9e37f7b57485923fd`](https://github.com/WumboLabs/eval-qwen3.8-2b-empero/blob/e09ed632fe835dac69eb05f9e37f7b57485923fd/events/qwen38-empero-2b-vendor-battery-2026-08-18.md)
+Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
+
+- WumboLabs/eval-qwen3.8-2b-empero @ `e09ed632fe835dac69eb05f9e37f7b57485923fd` — `events/qwen38-empero-2b-vendor-battery-2026-08-18.md`

@@ -214,5 +214,7 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
+Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
+
 - [RIPPERONInCHEEZ/wumbolabs @ `e27ddcb89b56c27e87d7a3af34003cd8c6d7355b`](https://github.com/RIPPERONInCHEEZ/wumbolabs/blob/e27ddcb89b56c27e87d7a3af34003cd8c6d7355b/data/labs-events/ornith-9b-wumboserver-admission-2026-09-02.md)
-- [WumboLabs/eval-ornith-1.5-9b @ `608294a336ce0de9fc9298ce65564b12242a0980`](https://github.com/WumboLabs/eval-ornith-1.5-9b/blob/608294a336ce0de9fc9298ce65564b12242a0980/report.md)
+- WumboLabs/eval-ornith-1.5-9b @ `608294a336ce0de9fc9298ce65564b12242a0980` — `report.md`

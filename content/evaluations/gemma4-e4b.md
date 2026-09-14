@@ -156,4 +156,6 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-- [WumboLabs/eval-gemma4-e4b @ `980b54ac5a0bb26534929149d6f6f3d041e65e56`](https://github.com/WumboLabs/eval-gemma4-e4b/blob/980b54ac5a0bb26534929149d6f6f3d041e65e56/EVIDENCE-SUMMARY.md)
+Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
+
+- WumboLabs/eval-gemma4-e4b @ `980b54ac5a0bb26534929149d6f6f3d041e65e56` — `EVIDENCE-SUMMARY.md`

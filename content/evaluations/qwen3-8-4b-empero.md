@@ -111,5 +111,7 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-- [WumboLabs/eval-qwen3.8-4b-empero @ `891dec8a5bd371cf50660efbbee98924f6d4e768`](https://github.com/WumboLabs/eval-qwen3.8-4b-empero/blob/891dec8a5bd371cf50660efbbee98924f6d4e768/events/qwen38-empero-4b-vendor-battery-2026-08-18.md)
-- [WumboLabs/eval-qwen3.8-4b-empero-distill-wumboserver @ `5b942eee8bb028b7a4f154b2aaee3026b57b6671`](https://github.com/WumboLabs/eval-qwen3.8-4b-empero-distill-wumboserver/blob/5b942eee8bb028b7a4f154b2aaee3026b57b6671/events/qwen38-empero-4b-distill-wumboserver-2026-09-01.md)
+Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
+
+- WumboLabs/eval-qwen3.8-4b-empero @ `891dec8a5bd371cf50660efbbee98924f6d4e768` — `events/qwen38-empero-4b-vendor-battery-2026-08-18.md`
+- WumboLabs/eval-qwen3.8-4b-empero-distill-wumboserver @ `5b942eee8bb028b7a4f154b2aaee3026b57b6671` — `events/qwen38-empero-4b-distill-wumboserver-2026-09-01.md`

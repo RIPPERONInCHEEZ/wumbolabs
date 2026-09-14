@@ -387,12 +387,14 @@ Direct link to canonical reproduction material: [Central evidence](https://githu
 Full reproduction instructions, manifests, and checksums are published in the canonical repository. This Lab Record is a summary; the canonical repo is the source of truth.
 
 > **Provenance note (2026-09-12):** this evidence was originally published at
-> [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/eval-qwen3.8-27b)
+> WumboLabs/eval-qwen3.8-27b
 > (evidence commit `54b14b30e3779f15486c3785222647324459dcf5`). It moved
 > byte-identical to the canonical historical-profile repository
-> ([eval-qwen3.8-27b-llamacpp](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp))
+> (eval-qwen3.8-27b-llamacpp)
 > by the model/profile/event publication-identity milestone; the original
 > repository is preserved unchanged as a historical archive.
+>
+> **Retirement update (2026-09-14):** the legacy repositories named above were deleted after verified consolidation into WumboLabs/evaluations; the identifiers remain historical provenance and full Git histories are retained in the WumboServer offline bundle archive.
 
 <a id="qwen38-27b-quant-showdowns-2026-08-20"></a>
 
@@ -429,7 +431,9 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
+Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
+
 - [RIPPERONInCHEEZ/wumbolabs @ `e27ddcb89b56c27e87d7a3af34003cd8c6d7355b`](https://github.com/RIPPERONInCHEEZ/wumbolabs/blob/e27ddcb89b56c27e87d7a3af34003cd8c6d7355b/data/labs-events/qwen38-27b-quant-showdowns-2026-08-20.md)
-- [WumboLabs/eval-qwen3.8-27b-exl3-h1 @ `484c9184ae459c79754b77b7dc95da09e64d37a5`](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/blob/484c9184ae459c79754b77b7dc95da09e64d37a5/reports/h1-canonical-profile-update.md)
-- [WumboLabs/eval-qwen3.8-27b-exl3-h1 @ `484c9184ae459c79754b77b7dc95da09e64d37a5`](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/blob/484c9184ae459c79754b77b7dc95da09e64d37a5/reports/qwen38-27b-context-envelope-completion-2026-09-12.md)
-- [WumboLabs/eval-qwen3.8-27b-llamacpp @ `2f8d9fa9f9433cb64fcd416492e3a73c3a5773c7`](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp/blob/2f8d9fa9f9433cb64fcd416492e3a73c3a5773c7/reports/comparison.md)
+- WumboLabs/eval-qwen3.8-27b-exl3-h1 @ `484c9184ae459c79754b77b7dc95da09e64d37a5` — `reports/h1-canonical-profile-update.md`
+- WumboLabs/eval-qwen3.8-27b-exl3-h1 @ `484c9184ae459c79754b77b7dc95da09e64d37a5` — `reports/qwen38-27b-context-envelope-completion-2026-09-12.md`
+- WumboLabs/eval-qwen3.8-27b-llamacpp @ `2f8d9fa9f9433cb64fcd416492e3a73c3a5773c7` — `reports/comparison.md`
