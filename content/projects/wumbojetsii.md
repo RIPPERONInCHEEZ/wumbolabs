@@ -2,10 +2,12 @@
 title = "WumboJetsII"
 description = "Fedora 44 workstation for daily development, local AI evaluation, wumbOS work, and WumboLabs evidence."
 template = "project.html"
-weight = 3
+weight = 100
 [extra]
-back_label = "Back to Projects"
-back_url = "/projects/"
+back_label = "Back to Home"
+back_url = "/"
+public_project = false
+content_kind = "infrastructure"
 +++
 
 WumboJetsII is the primary WumboLabs desktop workstation: a real daily-use Fedora 44 system, not a dedicated headless benchmark appliance.

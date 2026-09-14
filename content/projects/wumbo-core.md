@@ -2,10 +2,12 @@
 title = "Wumbo Core"
 description = "Home network and homelab infrastructure for WumboLabs."
 template = "project.html"
-weight = 4
+weight = 101
 [extra]
-back_label = "Back to Projects"
-back_url = "/projects/"
+back_label = "Back to Home"
+back_url = "/"
+public_project = false
+content_kind = "infrastructure"
 +++
 
 Wumbo Core is the home network and homelab infrastructure behind WumboLabs.

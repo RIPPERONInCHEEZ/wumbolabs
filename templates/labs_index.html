@@ -2,6 +2,8 @@
 
 {% block title %}Evaluations — Model Catalog | {{ config.title }}{% endblock title %}
 
+{% block head %}<script src="/js/evaluations-catalog.js" defer></script>{% endblock head %}
+
 {% block content %}
 {% set models = get_section(path="evaluations/_index.md") %}
 <section class="container page-record archive-page">
@@ -23,26 +25,61 @@
     {{ models.content | safe }}
   </div>
 
-  <section class="archive-section" aria-labelledby="model-catalog">
-    <h2 id="model-catalog">Models</h2>
-    <div class="record-list record-list--archive">
-      {% for page in models.pages %}
-        {% if not page.extra | get(key="redirect_page", default=false) %}
-        <article class="record-row">
-          <time class="archive-record-date" datetime="{{ page.extra.latest_event_date }}">{{ page.extra.latest_event_date }}</time>
-          <div class="record-row-main">
-            <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
-            <div class="archive-record-meta">
-              {% if page.extra.classification %}<span>{{ page.extra.classification | replace(from='_', to=' ') | lower }}</span>{% endif %}
-              <span>{{ page.extra.profile_count }} profile{{ "" }}{% if page.extra.profile_count != 1 %}s{% endif %} · {{ page.extra.event_count }} event{{ "" }}{% if page.extra.event_count != 1 %}s{% endif %}</span>
-            </div>
-            {% if page.extra.practical_context %}<p class="archive-record-hardware">Practical context: {{ page.extra.practical_context }}</p>{% endif %}
-            {% if page.extra.recommended_profile_name %}<p class="archive-record-summary">Recommended profile: {{ page.extra.recommended_profile_name }}</p>{% endif %}
-          </div>
-        </article>
-        {% endif %}
-      {% endfor %}
+  <section class="archive-section evaluation-catalog" data-evaluation-catalog aria-labelledby="model-catalog">
+    <h2 id="model-catalog">Model evaluations</h2>
+    <div class="evaluation-catalog-controls" id="evaluation-controls" hidden>
+      <div class="evaluation-search">
+        <label for="evaluation-search">Search evaluations</label>
+        <input id="evaluation-search" type="search" placeholder="Search model, producer, artifact, or status" autocomplete="off">
+      </div>
+      <p class="evaluation-results" id="evaluation-results" role="status" aria-live="polite">All evaluations are shown.</p>
+      <div class="evaluation-page-size">
+        <label for="evaluation-page-size">Rows per page</label>
+        <select id="evaluation-page-size">
+          <option value="10" selected>10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="all">All</option>
+        </select>
+      </div>
+      <div class="evaluation-pagination" aria-label="Evaluation catalog pages">
+        <button id="evaluation-previous" type="button">Previous</button>
+        <span id="evaluation-page-indicator" aria-live="polite"></span>
+        <button id="evaluation-next" type="button">Next</button>
+      </div>
     </div>
+
+    <div class="evaluation-table-scroll" tabindex="0" aria-label="Model evaluation catalog">
+      <table class="evaluation-table">
+        <thead>
+          <tr>
+            <th scope="col">Model</th>
+            <th scope="col">Producer</th>
+            <th scope="col">Artifact / quant</th>
+            <th scope="col">Status</th>
+            <th scope="col">Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for page in models.pages %}
+            {% if not page.extra | get(key="redirect_page", default=false) %}
+              {% set classification = page.extra | get(key="classification", default="Evidence in progress") %}
+              {% set profile = page.extra | get(key="recommended_profile_name", default="No recommended profile recorded") %}
+              {% set practical_context = page.extra | get(key="practical_context", default="Not recorded") %}
+              <tr data-evaluation-row data-search="{{ page.title }} {{ page.extra.model_id }} {{ page.extra.vendor }} {{ profile }} {{ classification }} {{ practical_context | lower }}">
+                <th scope="row"><a href="{{ page.permalink }}">{{ page.title }}</a></th>
+                <td>{{ page.extra.vendor }}</td>
+                <td>{{ profile }}</td>
+                <td>{{ classification | replace(from='_', to=' ') | lower }}</td>
+                <td><a href="{{ page.permalink }}">{{ page.extra.event_count }} event{% if page.extra.event_count != 1 %}s{% endif %} · {{ page.extra.latest_event_date }}</a></td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="evaluation-no-results" id="evaluation-no-results" hidden>No evaluations match this search.</p>
+    <noscript><p class="evaluation-noscript">All evaluation rows are shown. Enable JavaScript to search or paginate this catalog.</p></noscript>
   </section>
 </section>
 {% endblock content %}

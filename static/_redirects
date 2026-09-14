@@ -8,7 +8,7 @@
 /benchmarks/mellum2-agent-backend-test/ /records/mellum2-agent-backend-test/ 301
 /lab-notes/gemma-12b-practical-use/ /records/gemma-12b-practical-use/ 301
 /benchmarks/gemma-12b-practical-use-v1/ /records/gemma-12b-practical-use/ 301
-# 2026-09-12 Evaluations consolidation (/labs/ + /records/ -> /evaluations/):
+# 2026-09-12 Evaluations consolidation (/labs/ -> /evaluations/):
 /labs/ /evaluations/ 301
 /labs/qwen38-27b/ /evaluations/qwen38-27b/ 301
 /labs/nemotron-3-nano-4b/ /evaluations/nemotron-3-nano-4b/ 301
@@ -31,4 +31,3 @@
 /labs/qwen3-8-4b-empero/ /evaluations/qwen3-8-4b-empero/ 301
 /labs/qwen3-8-9b-empero/ /evaluations/qwen3-8-9b-empero/ 301
 /labs/bonsai-27b/ /evaluations/bonsai-27b/ 301
-/records/ /evaluations/ 301

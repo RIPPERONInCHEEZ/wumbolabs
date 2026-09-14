@@ -8,6 +8,7 @@ back_label = "Back to Projects"
 back_url = "/projects"
 portfolio_status = "FLAGSHIP PROJECT"
 release_status = "FORMAL RELEASE · v0.78 · PyPI 0.78.0"
+public_project = true
 +++
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.

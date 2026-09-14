@@ -1,12 +1,12 @@
 # Lab Records migration plan
 
-Status: **SUPERSEDED (2026-09-12).** The Evaluations consolidation replaced this
-architecture: `/records/` is no longer a public archive, model evaluations live
-under `/evaluations/` (one page per tested model), and the retained technical
-records keep their direct URLs, listed under Projects → Technical notes. See
-`docs/labs-publication-workflow.md` for the current public contract. This
-document is retained as the historical plan for the 2026-06 `/lab-notes/` +
-`/benchmarks/` → `/records/` migration.
+Status: **HISTORICAL PLAN (superseded by the current content-ownership contract).**
+This document records the 2026-06 `/lab-notes/` + `/benchmarks/` → `/records/`
+migration. The current architecture keeps `/records/` as the Lab Records index,
+uses `/evaluations/` as the one-model-per-page catalog, and keeps Methodology as
+the current WELP and publication surface. See
+`docs/labs-publication-workflow.md` and `docs/site-content-ownership.md` for
+the current contract.
 
 Original status: canonical architecture and content contract. This document defines the migration; it does not implement it.
 

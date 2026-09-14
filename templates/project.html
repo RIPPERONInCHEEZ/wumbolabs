@@ -3,10 +3,11 @@
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
 
 {% block content %}
+{% set content_kind = page.extra | get(key="content_kind", default="project") %}
 <section class="container project-shell{% if page.extra.wumbos %} project-shell--wumbos{% endif %}">
   <div class="console-record-bar" aria-label="Record context">
-    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / PROJECTS</span>
-    <span>READ-ONLY / PROJECT FILE</span>
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / {{ content_kind | upper }}</span>
+    <span>READ-ONLY / {{ content_kind | upper }} FILE</span>
   </div>
   <p class="console-record-path">
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>

@@ -1,13 +1,12 @@
 +++
-title = "Technical records"
-description = "Compatibility address. Model evaluations live under Evaluations; the retained technical records are linked from Projects → Technical notes."
+title = "Lab Records"
+description = "Long-form reports, benchmarks, experiments, fit tests, baselines, and technical findings. Historical records retain their original evidence context."
 sort_by = "date"
 page_template = "page.html"
-template = "section_redirect.html"
+template = "records_index.html"
 [extra]
-redirect_to = "/evaluations/"
+back_label = "Back to Home"
+back_url = "/"
 +++
 
-Model evaluation pages live under [Evaluations](/evaluations/). The standalone
-technical-record index was retired; each retained technical record keeps its
-direct URL and is listed under [Projects → Technical notes](/projects/#technical-notes).
+Lab Records preserve the longer technical context behind WumboLabs work. For current per-model evidence, use [Evaluations](/evaluations/). For WELP, review rules, and publication boundaries, use [Methodology](/methodology/).

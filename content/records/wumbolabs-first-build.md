@@ -39,11 +39,13 @@ Recent changes focused on making the site easier to understand quickly:
 - benchmark results split into separate dated records instead of overloading the baseline page
 - typography shifted toward a restrained terminal/mono feel without making body copy hard to read
 
-The current structure is:
+The 2026-06 site structure recorded here was:
 
 - **Projects** — what exists
 - **Lab Records** — reports, baselines, fit tests, and notes documenting what was tested, changed, and learned
 - **About** — what WumboLabs is
+
+Current content ownership separates Projects, Evaluations, Lab Records, and Methodology.
 
 ## Current Rule
 

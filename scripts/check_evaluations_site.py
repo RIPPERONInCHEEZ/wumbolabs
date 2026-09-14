@@ -1,25 +1,20 @@
 #!/usr/bin/env python3
 """check_evaluations_site.py — post-build public-route validation.
 
-Validates the consolidated public Evaluations contract against the built site
-(public/) and the generated datasets (data/generated/). Run after
-`zola build` from the repository root:
+Validates the consolidated Evaluations, Lab Records, and public Projects
+contracts against the built site (public/) and generated datasets
+(data/generated/). Run after `zola build` from the repository root:
 
     python scripts/check_evaluations_site.py
 
 Checks:
   - one Evaluations index; exactly one canonical page per registry model;
-  - primary navigation is Projects / Evaluations / Methodology / About /
-    Contact (no Labs / Lab Records / Records destinations);
-  - retired /labs/ + /records/ section roots are covered by _redirects;
-  - event-style legacy stubs still serve at their /labs/ URLs and target the
-    /evaluations/<model>/#<event> anchors;
-  - technical records keep their URLs and stay discoverable;
-  - /records/ no longer renders a standalone archive index;
-  - the Qwen3.8-27B multi-profile fixture (profiles, events, anchors, context
-    state, canonical central evidence links);
-  - all local links in built HTML resolve (built pages, redirects, or
-    fragment-only).
+  - primary navigation exposes Projects, Evaluations, Lab Records, and Methodology;
+  - retired /labs/ routes and event stubs preserve their model-page targets;
+  - Lab Records retains its index and each technical-record URL;
+  - Projects exposes exactly the three public projects, with no infrastructure leak;
+  - model pages retain their registry-backed evidence and related long-form links;
+  - all local links in built HTML resolve (built pages, redirects, or fragments).
 
 Exit codes: 0 PASS; 1 FAIL.
 """
@@ -95,31 +90,23 @@ def main() -> int:
     check(len(built_dirs) == len(model_slugs),
           "model page count mismatch under /evaluations/")
 
-    # 2. navigation: Evaluations present; Labs / Lab Records / Records absent
+    # 2. navigation: canonical public surfaces are discoverable; Labs is retired.
     home = html(PUBLIC / "index.html")
     for label, dest in (("Evaluations", "/evaluations/"), ("Projects", "/projects/"),
-                        ("Methodology", "/methodology/"), ("About", "/about/"),
-                        ("Contact", "/contact/")):
+                        ("Lab Records", "/records/"), ("Methodology", "/methodology/"),
+                        ("About", "/about/"), ("Contact", "/contact/")):
         check(f'href="{dest}"' in home, f"primary navigation missing {label} ({dest})")
-    for dest in ("/labs/", "/records/"):
-        check(dest not in home, f"homepage still links retired destination {dest}")
     for page in PUBLIC.glob("*/index.html"):
         body = html(page)
-        for dest in ("/labs/", "/records/"):
-            if f'href="{dest}"' in body or f'href="{dest}"' in body:
-                failures.append(f"{page}: links retired destination {dest}")
-                break
-    # direct nav-label check: no visible ">Labs<"/">Lab Records<"/">Records<" anchors
-    for label in ("Labs", "Lab Records", "Records"):
-        check(not re.search(rf">{''.join(label)}<", home),
-              f"homepage renders a nav anchor labeled {label!r}")
+        if 'href="/labs/"' in body:
+            failures.append(f"{page}: links retired destination /labs/")
 
-    # 3. retired section roots covered by _redirects
-    for source in ("/labs/", "/records/"):
-        check(source in redirects, f"_redirects missing entry for {source}")
+    # 3. retired Labs section root and model routes remain covered by _redirects.
+    check("/labs/" in redirects, "_redirects missing entry for /labs/")
     for m in models:
         source = f"/labs/{url_slug(m['model_id'])}/"
         check(source in redirects, f"_redirects missing entry for {source}")
+    check("/records/" not in redirects, "/records/ must remain the Lab Records index")
 
     # 4. event-style legacy stubs: served from /labs/, targeting /evaluations/ anchors
     for m in migration:
@@ -144,23 +131,33 @@ def main() -> int:
     check(not (PUBLIC / "labs" / "index.html").exists(),
           "/labs/ index page must not be built (covered by _redirects)")
 
-    # 5. /records/: no competing archive; technical records keep URLs
+    # 5. Lab Records is the canonical archive for long-form evidence.
     records_index = PUBLIC / "records" / "index.html"
+    check(records_index.is_file(), "missing /records/ Lab Records index")
     if records_index.is_file():
-        body = html(records_index)
-        check("COMPATIBILITY REDIRECT" in body,
-              "/records/ still renders a standalone index (must be a redirect)")
-        check("All records" not in body, "/records/ still renders the records archive list")
+        body = html_unescape(html(records_index))
+        check("Lab Records" in body, "/records/ does not render the Lab Records archive")
+        check("COMPATIBILITY REDIRECT" not in body, "/records/ still renders a redirect")
     for m in migration:
         if m["mechanism"] != "url-preserved":
             continue
         check((PUBLIC / m["new_url"].strip("/") / "index.html").is_file(),
               f"preserved technical record missing: {m['new_url']}")
-    projects_page = html(PUBLIC / "projects" / "index.html")
-    for slug in ("wumbolabs-first-build", "local-llm-baseline",
-                 "mellum2-agent-backend-test", "gemma-12b-practical-use"):
-        check(f'href="/records/{slug}/"' in projects_page,
-              f"technical record /records/{slug}/ not discoverable from Projects")
+    for source in sorted(path for path in Path("content/records").glob("*.md") if path.name != "_index.md"):
+        record_url = f'/records/{source.stem}/'
+        check(record_url in html_unescape(html(records_index)),
+              f"Lab Records index does not link {record_url}")
+
+    projects_page = html_unescape(html(PUBLIC / "projects" / "index.html"))
+    for slug in ("llmgauge", "wumbos", "monolith"):
+        check(f'/projects/{slug}/' in projects_page,
+              f"public project /projects/{slug}/ missing from Projects")
+    for slug in ("wumbojetsii", "wumbo-core"):
+        check(f'/projects/{slug}/' not in projects_page,
+              f"non-public infrastructure /projects/{slug}/ leaked into Projects")
+    check("Technical notes" not in projects_page.lower(),
+          "Projects still renders a Technical Notes section")
+
     qwen_eval = html(PUBLIC / "evaluations" / "qwen38-27b" / "index.html")
     check('href="/records/qwen38-27b-rtx5070-evaluation/"' in qwen_eval,
           "Qwen3.8 long-form campaign report not linked from its Evaluation page")

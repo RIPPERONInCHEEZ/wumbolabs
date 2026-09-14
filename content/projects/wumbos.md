@@ -9,6 +9,7 @@ back_url = "/projects/"
 portfolio_status = "MAIN FOCUS · ACTIVE DEVELOPMENT"
 release_status = "PUBLIC BASELINE · Alpha.2 · current prealpha in development"
 wumbos = true
+public_project = true
 +++
 
 <strong>MAIN FOCUS / ACTIVE DEVELOPMENT</strong>

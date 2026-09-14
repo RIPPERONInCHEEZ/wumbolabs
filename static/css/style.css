@@ -2289,3 +2289,142 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Evaluation catalog controls reveal only after the static rows are available. */
+.evaluation-catalog-controls {
+  display: grid;
+  grid-template-columns: minmax(15rem, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid var(--wl-border-soft);
+  background: var(--wl-bg-panel);
+}
+
+.evaluation-search {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.evaluation-catalog label,
+.evaluation-page-size {
+  color: var(--wl-text-soft);
+  font: 0.78rem/1.4 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.evaluation-catalog input,
+.evaluation-catalog select,
+.evaluation-catalog button {
+  min-height: 2.6rem;
+  border: 1px solid var(--wl-border);
+  border-radius: 0;
+  background: var(--wl-bg-deep);
+  color: var(--wl-text);
+  font: 0.9rem/1.4 var(--font-mono);
+}
+
+.evaluation-catalog input {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+}
+
+.evaluation-catalog select,
+.evaluation-catalog button {
+  padding: 0.45rem 0.65rem;
+}
+
+.evaluation-catalog button {
+  cursor: pointer;
+}
+
+.evaluation-catalog button:hover:not(:disabled) {
+  border-color: var(--wl-lime);
+  color: var(--wl-lime);
+}
+
+.evaluation-catalog button:disabled {
+  cursor: not-allowed;
+  color: var(--wl-text-muted);
+}
+
+.evaluation-results {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--wl-text-muted);
+  font: 0.8rem/1.5 var(--font-mono);
+}
+
+.evaluation-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  font: 0.8rem/1.4 var(--font-mono);
+}
+
+.evaluation-table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--wl-border-soft);
+}
+
+.evaluation-table {
+  width: 100%;
+  min-width: 54rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.evaluation-table th,
+.evaluation-table td {
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--wl-border-soft);
+  text-align: left;
+  vertical-align: top;
+}
+
+.evaluation-table thead th {
+  background: var(--wl-bg-panel);
+  color: var(--wl-text-soft);
+  font: 0.75rem/1.4 var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.evaluation-table tbody th {
+  color: var(--wl-text);
+  font-weight: 700;
+}
+
+.evaluation-table tbody tr:hover,
+.evaluation-table tbody tr:focus-within {
+  background: rgba(198, 255, 51, 0.045);
+}
+
+.evaluation-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.evaluation-no-results,
+.evaluation-noscript {
+  margin: 1rem 0 0;
+  color: var(--wl-text-muted);
+}
+
+main :is(a, button, input, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--wl-lime);
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .evaluation-catalog-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .evaluation-pagination {
+    justify-content: flex-start;
+  }
+}

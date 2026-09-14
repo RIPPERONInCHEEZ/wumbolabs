@@ -21,18 +21,20 @@
   {% if section.pages %}
     <div class="record-list">
       {% for page in section.pages %}
-        <article class="record-row">
-          <div class="record-row-main">
-            {% if page.extra.portfolio_status %}
-              <span class="record-row-kicker">{{ page.extra.portfolio_status }}</span>
-            {% endif %}
-            <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
-            {% if page.extra.release_status %}<p class="record-row-status">{{ page.extra.release_status }}</p>{% endif %}
-            {% if page.description %}
-              <p>{{ page.description }}</p>
-            {% endif %}
-          </div>
-        </article>
+        {% if page.extra | get(key="public_project", default=false) %}
+          <article class="record-row">
+            <div class="record-row-main">
+              {% if page.extra.portfolio_status %}
+                <span class="record-row-kicker">{{ page.extra.portfolio_status }}</span>
+              {% endif %}
+              <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+              {% if page.extra.release_status %}<p class="record-row-status">{{ page.extra.release_status }}</p>{% endif %}
+              {% if page.description %}
+                <p>{{ page.description }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
       {% endfor %}
     </div>
   {% endif %}

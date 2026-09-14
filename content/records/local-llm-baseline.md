@@ -1,16 +1,14 @@
 +++
 title = "Local LLM Baseline"
-description = "Baseline notes for local LLM testing on WumboJetsII."
+description = "Historical baseline notes for local LLM testing on WumboJetsII."
 date = 2026-06-09
 [extra]
-record_type = "BASELINE"
+record_type = "HISTORICAL BASELINE"
 back_label = "Back to Lab Records"
 back_url = "/records/"
 +++
 
-This is the starting benchmark record for local LLM testing on WumboJetsII.
-
-It is not a leaderboard. It is a baseline for tracking what actually runs well on the hardware used for WumboLabs work.
+This historical baseline predates the current WELP evaluation and publication methodology. It preserves the original test context; current model-testing method and claim rules live in [Methodology](/methodology/).
 
 ## Test Bench
 
@@ -46,7 +44,7 @@ It is not a leaderboard. It is a baseline for tracking what actually runs well o
   </div>
 </div>
 
-## Current Baseline Philosophy
+## Historical Baseline Philosophy
 
 A model is only useful if it can fit the hardware, stay stable, follow instructions, avoid confident fabrication, and produce output that helps with real work.
 
@@ -88,4 +86,4 @@ Numbers are useful, but they are not enough.
 
 A faster model that hallucinates commands, invents tools, or gives unsafe system advice is not a better model for this lab. The baseline is meant to capture both performance and judgment.
 
-Future benchmark notes will use this page as the reference point for what needs to be measured.
+Later model-evaluation methodology is governed by WELP and the current evidence and publication rules in [Methodology](/methodology/). This record remains a dated baseline, not the current testing entry point.

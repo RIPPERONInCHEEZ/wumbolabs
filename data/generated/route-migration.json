@@ -246,15 +246,6 @@
       "http_status": 200
     },
     {
-      "old_url": "/records/",
-      "content_type": "section-index",
-      "model_id": null,
-      "event_id": null,
-      "new_url": "/evaluations/",
-      "mechanism": "cloudflare-redirects",
-      "http_status": 301
-    },
-    {
       "old_url": "/records/gemma-12b-practical-use/",
       "content_type": "technical-record",
       "model_id": null,

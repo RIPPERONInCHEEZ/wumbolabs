@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+<section class="container page-record archive-page">
+  <div class="console-record-bar" aria-label="Record context">
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / LAB RECORDS</span>
+    <span>LONG-FORM EVIDENCE</span>
+  </div>
+  <p class="console-record-path">
+    <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
+    <span>/records</span>
+  </p>
+
+  <header class="page-record-header">
+    <h1>{{ section.title }}</h1>
+    <p class="page-record-description">{{ section.description }}</p>
+  </header>
+
+  <div class="page-record-content">
+    {{ section.content | safe }}
+  </div>
+
+  {% if section.pages %}
+    <section class="archive-section" aria-labelledby="records-catalog">
+      <h2 id="records-catalog">Records</h2>
+      <div class="record-list record-list--archive">
+        {% for page in section.pages %}
+          <article class="record-row">
+            {% if page.date %}<time class="archive-record-date" datetime="{{ page.date }}">{{ page.date }}</time>{% endif %}
+            <div class="record-row-main">
+              <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+              {% if page.extra.record_type %}<div class="archive-record-meta"><span>{{ page.extra.record_type }}</span></div>{% endif %}
+              {% if page.description %}<p class="archive-record-summary">{{ page.description }}</p>{% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</section>
+{% endblock content %}
