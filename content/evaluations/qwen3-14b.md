@@ -140,8 +140,6 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-qwen3-14b @ `ea855b38294d1c4c13664a45a2911a6de809ca94` — `events/qwen3-14b-fit-ladder-2026-07-15.md`
-- WumboLabs/eval-qwen3-14b @ `ea855b38294d1c4c13664a45a2911a6de809ca94` — `events/qwen3-14b-lmx-speed-2026-07-05.md`
-- WumboLabs/eval-qwen3-14b-ollama-q4km @ `285d06529dab955e9458c646b72493843c8998f0` — `events/qwen3-14b-wumbo-daily-evaluation-2026-05-07.md`
+- [WumboLabs/eval-qwen3-14b @ `ea855b38294d1c4c13664a45a2911a6de809ca94`](https://github.com/WumboLabs/eval-qwen3-14b/blob/ea855b38294d1c4c13664a45a2911a6de809ca94/events/qwen3-14b-fit-ladder-2026-07-15.md)
+- [WumboLabs/eval-qwen3-14b @ `ea855b38294d1c4c13664a45a2911a6de809ca94`](https://github.com/WumboLabs/eval-qwen3-14b/blob/ea855b38294d1c4c13664a45a2911a6de809ca94/events/qwen3-14b-lmx-speed-2026-07-05.md)
+- [WumboLabs/eval-qwen3-14b-ollama-q4km @ `285d06529dab955e9458c646b72493843c8998f0`](https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km/blob/285d06529dab955e9458c646b72493843c8998f0/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07.md)

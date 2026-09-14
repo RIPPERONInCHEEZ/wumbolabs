@@ -5,7 +5,7 @@ date = 2026-08-21
 [extra]
 record_type = "REPORT"
 evaluation_event = "initial-evaluation-2026-08-21"
-back_label = "Back to Lab Records"
+back_label = "Back to Reports"
 back_url = "/records/"
 +++
 

@@ -156,6 +156,4 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-minicpm5-2b @ `e0fba74cf21d6cd0bbac0461e9cba8796825429c` — `EVIDENCE-SUMMARY.md`
+- [WumboLabs/eval-minicpm5-2b @ `e0fba74cf21d6cd0bbac0461e9cba8796825429c`](https://github.com/WumboLabs/eval-minicpm5-2b/blob/e0fba74cf21d6cd0bbac0461e9cba8796825429c/EVIDENCE-SUMMARY.md)

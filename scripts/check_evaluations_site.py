@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """check_evaluations_site.py — post-build public-route validation.
 
-Validates the consolidated Evaluations, Lab Records, and public Projects
+Validates the consolidated Evaluations, Reports, and public Projects
 contracts against the built site (public/) and generated datasets
 (data/generated/). Run after `zola build` from the repository root:
 
@@ -9,9 +9,9 @@ contracts against the built site (public/) and generated datasets
 
 Checks:
   - one Evaluations index; exactly one canonical page per registry model;
-  - primary navigation exposes Projects, Evaluations, Lab Records, and Methodology;
+  - primary navigation exposes Projects, Evaluations, Reports, and Methodology;
   - retired /labs/ routes and event stubs preserve their model-page targets;
-  - Lab Records retains its index and each technical-record URL;
+  - Reports retains its index and each technical-record URL;
   - Projects exposes exactly the three public projects, with no infrastructure leak;
   - model pages retain their registry-backed evidence and related long-form links;
   - all local links in built HTML resolve (built pages, redirects, or fragments).
@@ -93,7 +93,7 @@ def main() -> int:
     # 2. navigation: canonical public surfaces are discoverable; Labs is retired.
     home = html(PUBLIC / "index.html")
     for label, dest in (("Evaluations", "/evaluations/"), ("Projects", "/projects/"),
-                        ("Lab Records", "/records/"), ("Methodology", "/methodology/"),
+                        ("Reports", "/records/"), ("Methodology", "/methodology/"),
                         ("About", "/about/"), ("Contact", "/contact/")):
         check(f'href="{dest}"' in home, f"primary navigation missing {label} ({dest})")
     for page in PUBLIC.glob("*/index.html"):
@@ -106,7 +106,7 @@ def main() -> int:
     for m in models:
         source = f"/labs/{url_slug(m['model_id'])}/"
         check(source in redirects, f"_redirects missing entry for {source}")
-    check("/records/" not in redirects, "/records/ must remain the Lab Records index")
+    check("/records/" not in redirects, "/records/ must remain the Reports index")
 
     # 4. event-style legacy stubs: served from /labs/, targeting /evaluations/ anchors
     for m in migration:
@@ -131,12 +131,12 @@ def main() -> int:
     check(not (PUBLIC / "labs" / "index.html").exists(),
           "/labs/ index page must not be built (covered by _redirects)")
 
-    # 5. Lab Records is the canonical archive for long-form evidence.
+    # 5. Reports is the canonical archive for long-form evidence.
     records_index = PUBLIC / "records" / "index.html"
-    check(records_index.is_file(), "missing /records/ Lab Records index")
+    check(records_index.is_file(), "missing /records/ Reports index")
     if records_index.is_file():
         body = html_unescape(html(records_index))
-        check("Lab Records" in body, "/records/ does not render the Lab Records archive")
+        check("Technical Reports" in body, "/records/ does not render the Technical Reports archive")
         check("COMPATIBILITY REDIRECT" not in body, "/records/ still renders a redirect")
     for m in migration:
         if m["mechanism"] != "url-preserved":
@@ -146,7 +146,7 @@ def main() -> int:
     for source in sorted(path for path in Path("content/records").glob("*.md") if path.name != "_index.md"):
         record_url = f'/records/{source.stem}/'
         check(record_url in html_unescape(html(records_index)),
-              f"Lab Records index does not link {record_url}")
+              f"Reports index does not link {record_url}")
 
     projects_page = html_unescape(html(PUBLIC / "projects" / "index.html"))
     for slug in ("llmgauge", "wumbos", "monolith"):

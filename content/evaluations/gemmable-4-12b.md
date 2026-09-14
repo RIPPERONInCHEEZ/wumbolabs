@@ -102,7 +102,5 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-gemmable-4-12b @ `f307603ad9e1515ff59261d86f842e1cace43980` — `events/gemmable-agent-backend-2026-06.md`
-- WumboLabs/eval-gemmable-4-12b @ `f307603ad9e1515ff59261d86f842e1cace43980` — `events/gemmable-lmx-speed-2026-07-04.md`
+- [WumboLabs/eval-gemmable-4-12b @ `f307603ad9e1515ff59261d86f842e1cace43980`](https://github.com/WumboLabs/eval-gemmable-4-12b/blob/f307603ad9e1515ff59261d86f842e1cace43980/events/gemmable-agent-backend-2026-06.md)
+- [WumboLabs/eval-gemmable-4-12b @ `f307603ad9e1515ff59261d86f842e1cace43980`](https://github.com/WumboLabs/eval-gemmable-4-12b/blob/f307603ad9e1515ff59261d86f842e1cace43980/events/gemmable-lmx-speed-2026-07-04.md)

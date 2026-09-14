@@ -6,15 +6,15 @@
 {% set is_record = current_path is starting_with("/records/") %}
 <section class="container page-record{% if not is_record %} context-page{% endif %}">
   <div class="console-record-bar" aria-label="Page context">
-    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / {% if is_record %}TECHNICAL RECORDS{% else %}CONTEXT{% endif %}</span>
-    <span>{% if is_record %}READ-ONLY / TECHNICAL RECORD{% elif current_path == "/contact/" %}CONTACT{% else %}PROFILE{% endif %}</span>
+    <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / {% if is_record %}TECHNICAL REPORTS{% else %}CONTEXT{% endif %}</span>
+    <span>{% if is_record %}READ-ONLY / TECHNICAL REPORT{% elif current_path == "/contact/" %}CONTACT{% else %}PROFILE{% endif %}</span>
   </div>
   <p class="console-record-path">
     <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
     <span>{{ current_path }}</span>
   </p>
   {% set back_url = page.extra | get(key="back_url", default="/records/") %}
-  {% set back_label = page.extra | get(key="back_label", default="Back to Lab Records") %}
+  {% set back_label = page.extra | get(key="back_label", default="Back to Reports") %}
   {% if is_record or page.extra | get(key="back_url", default=false) %}
     <nav class="page-back" aria-label="Parent section">
       <a href="{{ get_url(path=back_url) }}">← {{ back_label }}</a>

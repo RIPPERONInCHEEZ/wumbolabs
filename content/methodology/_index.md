@@ -10,7 +10,7 @@ back_url = "/"
 
 WumboLabs treats test results as **bounded evidence**, not universal rankings. Real hardware. Real testing. No hype.
 
-This page explains how WumboLabs evidence is produced, reviewed, validated, and bounded. Model evaluations live under [Evaluations](/evaluations/); long-form benchmarks, fit tests, baselines, and lab notes live in [Lab Records](/records/).
+This page explains how WumboLabs evidence is produced, reviewed, validated, and bounded. Model evaluations live under [Evaluations](/evaluations/); long-form benchmarks, fit tests, baselines, and lab notes live in [Reports](/records/).
 
 ## 01 — Evaluation philosophy
 

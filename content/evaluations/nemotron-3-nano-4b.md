@@ -263,7 +263,5 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-nemotron-3-nano-4b @ `3e357b5e4fb6b45bddd8a15847e96476dca035ca` — `report.md`
-- WumboLabs/eval-nemotron-3-nano-4b @ `3e357b5e4fb6b45bddd8a15847e96476dca035ca` — `reports/nemotron3-nano-4b-welp-recharacterization-2026-09-11.md`
+- [WumboLabs/eval-nemotron-3-nano-4b @ `3e357b5e4fb6b45bddd8a15847e96476dca035ca`](https://github.com/WumboLabs/eval-nemotron-3-nano-4b/blob/3e357b5e4fb6b45bddd8a15847e96476dca035ca/report.md)
+- [WumboLabs/eval-nemotron-3-nano-4b @ `3e357b5e4fb6b45bddd8a15847e96476dca035ca`](https://github.com/WumboLabs/eval-nemotron-3-nano-4b/blob/3e357b5e4fb6b45bddd8a15847e96476dca035ca/reports/nemotron3-nano-4b-welp-recharacterization-2026-09-11.md)

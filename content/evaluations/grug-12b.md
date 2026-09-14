@@ -102,7 +102,5 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-grug-12b @ `1f10b6b157b79b5077e9d4d540db57de78c697c7` — `events/grug-honesty-smoke-2026-07.md`
-- WumboLabs/eval-grug-12b @ `1f10b6b157b79b5077e9d4d540db57de78c697c7` — `events/grug-lmx-speed-2026-07-04.md`
+- [WumboLabs/eval-grug-12b @ `1f10b6b157b79b5077e9d4d540db57de78c697c7`](https://github.com/WumboLabs/eval-grug-12b/blob/1f10b6b157b79b5077e9d4d540db57de78c697c7/events/grug-honesty-smoke-2026-07.md)
+- [WumboLabs/eval-grug-12b @ `1f10b6b157b79b5077e9d4d540db57de78c697c7`](https://github.com/WumboLabs/eval-grug-12b/blob/1f10b6b157b79b5077e9d4d540db57de78c697c7/events/grug-lmx-speed-2026-07-04.md)

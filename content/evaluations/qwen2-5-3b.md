@@ -111,7 +111,5 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-qwen2.5-3b-llamacpp-f16 @ `651bbea8c5d1e9c1c5dfa21a538a6922f2bf60a8` — `shared/compare-qwen25-3b-f16-vs-vllm-bf16-8k.md`
-- WumboLabs/eval-qwen2.5-3b-vllm-bf16 @ `92e975e31a46b1e84e21b838f7a79e5c91cd7e86` — `events/qwen25-3b-vllm-fingerprint-smoke-2026-07.md`
+- [WumboLabs/eval-qwen2.5-3b-llamacpp-f16 @ `651bbea8c5d1e9c1c5dfa21a538a6922f2bf60a8`](https://github.com/WumboLabs/eval-qwen2.5-3b-llamacpp-f16/blob/651bbea8c5d1e9c1c5dfa21a538a6922f2bf60a8/shared/compare-qwen25-3b-f16-vs-vllm-bf16-8k.md)
+- [WumboLabs/eval-qwen2.5-3b-vllm-bf16 @ `92e975e31a46b1e84e21b838f7a79e5c91cd7e86`](https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16/blob/92e975e31a46b1e84e21b838f7a79e5c91cd7e86/events/qwen25-3b-vllm-fingerprint-smoke-2026-07.md)

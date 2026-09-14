@@ -155,6 +155,4 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-apodex-1.1-mini @ `202d2ee09cec20ec6981c6ed22541e44b9dc3865` — `report.md`
+- [WumboLabs/eval-apodex-1.1-mini @ `202d2ee09cec20ec6981c6ed22541e44b9dc3865`](https://github.com/WumboLabs/eval-apodex-1.1-mini/blob/202d2ee09cec20ec6981c6ed22541e44b9dc3865/report.md)

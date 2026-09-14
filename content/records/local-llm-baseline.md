@@ -4,7 +4,7 @@ description = "Historical baseline notes for local LLM testing on WumboJetsII."
 date = 2026-06-09
 [extra]
 record_type = "HISTORICAL BASELINE"
-back_label = "Back to Lab Records"
+back_label = "Back to Reports"
 back_url = "/records/"
 +++
 

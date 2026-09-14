@@ -7,8 +7,8 @@ back_label = "Back to Home"
 back_url = "/"
 +++
 
-WumboLabs publicly builds three projects. Evaluation evidence, long-form lab records, and the testing method have dedicated canonical surfaces.
+WumboLabs publicly builds three projects. Evaluation evidence, long-form reports, and the testing method have dedicated canonical surfaces.
 
 - [Evaluations](/evaluations/) — structured model evidence and current testing state.
-- [Lab Records](/records/) — long-form reports, benchmarks, experiments, fit tests, and historical baselines.
+- [Reports](/records/) — long-form reports, benchmarks, experiments, fit tests, and historical baselines.
 - [Methodology](/methodology/) — WELP, review rules, claim boundaries, and publication process.

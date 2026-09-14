@@ -146,8 +146,6 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-mellum2-12b-a2.5b-instruct @ `87d004ee76b6be247308fe69705d8ceb8d12c787` — `events/mellum2-agent-backend-64k-2026-06-17.md`
-- WumboLabs/eval-mellum2-12b-a2.5b-instruct @ `87d004ee76b6be247308fe69705d8ceb8d12c787` — `events/mellum2-fake-tool-2026-06-17.md`
-- WumboLabs/eval-mellum2-12b-a2.5b-instruct @ `87d004ee76b6be247308fe69705d8ceb8d12c787` — `events/mellum2-lmx-speed-2026-07-04.md`
+- [WumboLabs/eval-mellum2-12b-a2.5b-instruct @ `87d004ee76b6be247308fe69705d8ceb8d12c787`](https://github.com/WumboLabs/eval-mellum2-12b-a2.5b-instruct/blob/87d004ee76b6be247308fe69705d8ceb8d12c787/events/mellum2-agent-backend-64k-2026-06-17.md)
+- [WumboLabs/eval-mellum2-12b-a2.5b-instruct @ `87d004ee76b6be247308fe69705d8ceb8d12c787`](https://github.com/WumboLabs/eval-mellum2-12b-a2.5b-instruct/blob/87d004ee76b6be247308fe69705d8ceb8d12c787/events/mellum2-fake-tool-2026-06-17.md)
+- [WumboLabs/eval-mellum2-12b-a2.5b-instruct @ `87d004ee76b6be247308fe69705d8ceb8d12c787`](https://github.com/WumboLabs/eval-mellum2-12b-a2.5b-instruct/blob/87d004ee76b6be247308fe69705d8ceb8d12c787/events/mellum2-lmx-speed-2026-07-04.md)

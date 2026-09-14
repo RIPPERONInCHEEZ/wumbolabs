@@ -1,11 +1,11 @@
 +++
 title = "Building WumboLabs"
-description = "Notes on building the WumboLabs website as a public lab record."
+description = "Notes on building the WumboLabs website as a public technical report."
 date = 2026-06-09
 updated = 2026-06-17
 [extra]
 record_type = "LAB NOTE"
-back_label = "Back to Lab Records"
+back_label = "Back to Reports"
 back_url = "/records/"
 +++
 
@@ -42,10 +42,10 @@ Recent changes focused on making the site easier to understand quickly:
 The 2026-06 site structure recorded here was:
 
 - **Projects** — what exists
-- **Lab Records** — reports, baselines, fit tests, and notes documenting what was tested, changed, and learned
+- **Reports** — reports, baselines, fit tests, and notes documenting what was tested, changed, and learned
 - **About** — what WumboLabs is
 
-Current content ownership separates Projects, Evaluations, Lab Records, and Methodology.
+Current content ownership separates Projects, Evaluations, Reports, and Methodology.
 
 ## Current Rule
 

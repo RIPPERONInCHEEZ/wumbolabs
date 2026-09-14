@@ -102,7 +102,5 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m @ `d89df9bc26227247b858033742048bc6ccede901` — `events/qwen36-35b-fit-ladder-e2e-2026-07-15.md`
-- WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m @ `d89df9bc26227247b858033742048bc6ccede901` — `events/qwen36-35b-practical-v071-2026-07.md`
+- [WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m @ `d89df9bc26227247b858033742048bc6ccede901`](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m/blob/d89df9bc26227247b858033742048bc6ccede901/events/qwen36-35b-fit-ladder-e2e-2026-07-15.md)
+- [WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m @ `d89df9bc26227247b858033742048bc6ccede901`](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m/blob/d89df9bc26227247b858033742048bc6ccede901/events/qwen36-35b-practical-v071-2026-07.md)

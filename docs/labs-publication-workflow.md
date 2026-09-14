@@ -94,10 +94,10 @@ event-style Labs URLs retain HTML meta-refresh stubs to model-page event anchors
 because Cloudflare redirect rules cannot target fragments. The exact map is
 `data/generated/route-migration.json`.
 
-`/records/` is the Lab Records index. Hand-maintained technical records retain their
+`/records/` is the Reports index. Hand-maintained technical reports retain their
 `/records/<slug>/` URLs, preserving original front-matter dates and `record_date`
 chronology. A model-specific long-form report remains linked from the corresponding
-model event via `report_page`; historical baselines remain Lab Records rather than
+model event via `report_page`; historical baselines remain Reports rather than
 current methodology.
 
 ## Sharing

@@ -993,7 +993,7 @@ def build_route_migration(models: list[dict[str, Any]],
                             f"#{entry['event_id']}"),
                 "mechanism": "html-stub-meta-refresh", "http_status": 200,
             })
-    # /records/ is the canonical Lab Records index and remains a normal Zola route.
+    # /records/ is the canonical Reports index and remains a normal Zola route.
     for slug in technical_record_slugs():
         mappings.append({
             "old_url": f"/records/{slug}/", "content_type": "technical-record",
@@ -1358,7 +1358,7 @@ def selftest() -> int:
             if required not in redirects:
                 failures.append(f"selftest: _redirects missing {required!r}")
         if any(line.startswith("/records/ ") for line in redirects.splitlines()):
-            failures.append("selftest: /records/ must remain the Lab Records index")
+            failures.append("selftest: /records/ must remain the Reports index")
         if "/labs/a2-context/ " in redirects:
             failures.append("selftest: event-style legacy URL must stay an HTML stub, not _redirects")
 

@@ -322,11 +322,9 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-gemma-4-12b-q4km @ `561be30e6f39eefb19fa36844904fb110c6a66a8` — `events/gemma4-12b-lmx-speed-2026-07-04.md`
-- WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e` — `events/gemma4-12b-core-agent-v016-2026-06-16.md`
-- WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e` — `events/gemma4-12b-honesty-ladder-2026-06.md`
-- WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e` — `reports/gemma4-12b-welp-recharacterization-2026-09-12.md`
-- WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e` — `shared/compare-gemma4-family-wumbolabs-practical-v024-scored.md`
-- WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e` — `shared/compare-wumbolabs-practical-v025-plus-grug.md`
+- [WumboLabs/eval-gemma-4-12b-q4km @ `561be30e6f39eefb19fa36844904fb110c6a66a8`](https://github.com/WumboLabs/eval-gemma-4-12b-q4km/blob/561be30e6f39eefb19fa36844904fb110c6a66a8/events/gemma4-12b-lmx-speed-2026-07-04.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/events/gemma4-12b-core-agent-v016-2026-06-16.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/events/gemma4-12b-honesty-ladder-2026-06.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/reports/gemma4-12b-welp-recharacterization-2026-09-12.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/shared/compare-gemma4-family-wumbolabs-practical-v024-scored.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/shared/compare-wumbolabs-practical-v025-plus-grug.md)

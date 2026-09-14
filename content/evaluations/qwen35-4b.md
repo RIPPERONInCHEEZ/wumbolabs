@@ -155,6 +155,4 @@ All canonical public evidence lives in WumboLabs/evaluations. Each event links a
 
 ### Legacy provenance
 
-Historical source identifiers — the legacy `eval-*` repositories named below were retired (deleted from GitHub) on 2026-09-14 after verified consolidation into [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations); these identifiers are provenance, not live sources.
-
-- WumboLabs/eval-qwen3.5-4b @ `c85ec602269eeb01d3cf3c50b5f9a76506338e66` — `reports/qwen35-4b-context-envelope-completion-2026-09-11.md`
+- [WumboLabs/eval-qwen3.5-4b @ `c85ec602269eeb01d3cf3c50b5f9a76506338e66`](https://github.com/WumboLabs/eval-qwen3.5-4b/blob/c85ec602269eeb01d3cf3c50b5f9a76506338e66/reports/qwen35-4b-context-envelope-completion-2026-09-11.md)

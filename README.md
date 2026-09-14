@@ -1,6 +1,6 @@
 # WumboLabs
 
-WumboLabs is a static website for public projects, model-evaluation evidence, long-form lab records, and methodology on local AI and Linux systems.
+WumboLabs is a static website for public projects, model-evaluation evidence, long-form technical reports, and methodology on local AI and Linux systems.
 
 The site is built with Zola and deployed with Cloudflare Pages.
 
@@ -43,7 +43,7 @@ The static site is generated into:
 
 - **Projects** lists only public WumboLabs projects and derives from explicit project metadata.
 - **Evaluations** is the registry-backed model catalog and current evidence surface.
-- **Lab Records** keeps long-form reports, benchmarks, experiments, fit tests, and historical baselines.
+- **Reports** keeps long-form reports, benchmarks, experiments, fit tests, and historical baselines.
 - **Methodology** is the canonical public explanation of WELP, review rules, claim boundaries, and publication process.
 
 See [docs/site-content-ownership.md](docs/site-content-ownership.md) for the operational contract.
@@ -52,7 +52,7 @@ See [docs/site-content-ownership.md](docs/site-content-ownership.md) for the ope
 
 Each tested model has exactly one canonical Evaluation page under `/evaluations/`,
 generated from an immutable `WumboLabs/evaluations` registry pin by deterministic sync.
-Lab Records retain direct `/records/<slug>/` URLs for long-form evidence. See
+Reports retain direct `/records/<slug>/` URLs for long-form evidence. See
 [docs/labs-publication-workflow.md](docs/labs-publication-workflow.md).
 
 `data/evaluations-source.json` is the website's source pin. The local registry,

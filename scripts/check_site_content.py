@@ -44,8 +44,8 @@ def main() -> int:
         failures.append("Projects index still contains Technical Notes")
 
     records_index = frontmatter(CONTENT / "records" / "_index.md")
-    if records_index.get("title") != "Lab Records" or records_index.get("template") != "records_index.html":
-        failures.append("Lab Records index is not the canonical records surface")
+    if records_index.get("title") != "Technical Reports" or records_index.get("template") != "records_index.html":
+        failures.append("Technical Reports index is not the canonical records surface")
 
     methodology = (CONTENT / "methodology" / "_index.md").read_text(encoding="utf-8")
     if "Local LLM Baseline" in methodology:
