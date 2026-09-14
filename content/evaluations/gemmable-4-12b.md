@@ -19,7 +19,7 @@ WumboLabs tests **Gemmable 4 12B MTP** on real consumer hardware. This is the ca
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Q4_K_M (`gemmable-4-12b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/eval-gemmable-4-12b)
+- **Recommended profile:** llama.cpp Q4_K_M (`gemmable-4-12b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-lmx-speed-2026-07-04/REPORT.md)
 - **Latest evidence:** 2026-07-04 — LMX speed run
 
 ## Tested profiles
@@ -32,7 +32,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-gemmable-4-12b>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-lmx-speed-2026-07-04/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json)
 
 Events on this profile:
 
@@ -49,7 +50,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemmable-4-12b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-lmx-speed-2026-07-04/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemmable-4-12b)
 
 ### Identity and scope
 
@@ -70,7 +72,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Specialized Test — agent backend** · profile: llama.cpp Q4_K_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemmable-4-12b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-agent-backend-2026-06-21/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemmable-4-12b)
 
 ### Identity and scope
 
@@ -87,12 +90,17 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ## Shared comparison events
 
-This model appears as a related model in shared multi-model comparisons. The underlying report remains one immutable shared artifact, published in the canonical model's evidence repository; this model's measured entries:
+This model appears in shared multi-model comparisons. Each report is stored once in WumboLabs/evaluations/shared-events/; the model's measured entries remain attributed to the same historical event:
 
-- [12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-practical-use-family-2026-06-21) — Gemmable 4 12B MTP Q4_K_M scored 119.8/300 (2.0 avg) on the same suite
+- [12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-practical-use-family-2026-06-21) — Gemmable 4 12B MTP Q4_K_M scored 119.8/300 (2.0 avg) on the same suite — [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-06-21/REPORT.md)
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp Q4_K_M** (`gemmable-4-12b-llamacpp-q4km`): <https://github.com/WumboLabs/eval-gemmable-4-12b>
+- **gemmable-4-12b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-gemmable-4-12b @ `f307603ad9e1515ff59261d86f842e1cace43980`](https://github.com/WumboLabs/eval-gemmable-4-12b/blob/f307603ad9e1515ff59261d86f842e1cace43980/events/gemmable-agent-backend-2026-06.md)
+- [WumboLabs/eval-gemmable-4-12b @ `f307603ad9e1515ff59261d86f842e1cace43980`](https://github.com/WumboLabs/eval-gemmable-4-12b/blob/f307603ad9e1515ff59261d86f842e1cace43980/events/gemmable-lmx-speed-2026-07-04.md)

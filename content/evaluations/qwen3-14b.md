@@ -19,7 +19,7 @@ WumboLabs tests **Qwen3-14B** on real consumer hardware. This is the canonical m
 
 ## Current state
 
-- **Recommended profile:** Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) (`qwen3-14b-ollama-q4km-wumbo`, historical) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km)
+- **Recommended profile:** Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) (`qwen3-14b-ollama-q4km-wumbo`, historical) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07/REPORT.md)
 - **Latest evidence:** 2026-07-15 — Fit-ladder success-fallback E2E (LLMGauge feature validation)
 
 ## Tested profiles
@@ -32,7 +32,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3-14b>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-fit-ladder-2026-07-15/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json)
 
 Events on this profile:
 
@@ -47,7 +48,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: historical tested surface; retained evidence, not the recommended profile.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b/profiles/qwen3-14b-ollama-q4km-wumbo/profile.json)
 
 Events on this profile:
 
@@ -63,7 +65,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Specialized Test — fit ladder** · profile: llama.cpp Q4_K_M (unsloth) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3-14b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-fit-ladder-2026-07-15/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b)
 
 ### Identity and scope
 
@@ -84,7 +87,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M (unsloth) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3-14b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-lmx-speed-2026-07-05/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b)
 
 ### Identity and scope
 
@@ -105,7 +109,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Practical Use — historical daily driver** · profile: Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / PRE_WELP_HISTORICAL
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b)
 
 ### Identity and scope
 
@@ -122,13 +127,19 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ## Shared comparison events
 
-This model appears as a related model in shared multi-model comparisons. The underlying report remains one immutable shared artifact, published in the canonical model's evidence repository; this model's measured entries:
+This model appears in shared multi-model comparisons. Each report is stored once in WumboLabs/evaluations/shared-events/; the model's measured entries remain attributed to the same historical event:
 
-- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — Q4_K_M scored 228.4/300 (3.81 avg).
+- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — Q4_K_M scored 228.4/300 (3.81 avg). — [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp Q4_K_M (unsloth)** (`qwen3-14b-llamacpp-q4km`): <https://github.com/WumboLabs/eval-qwen3-14b>
-- **Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver)** (`qwen3-14b-ollama-q4km-wumbo`): <https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km>
+- **qwen3-14b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json)
+- **qwen3-14b-ollama-q4km-wumbo**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3-14b/profiles/qwen3-14b-ollama-q4km-wumbo/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-qwen3-14b @ `ea855b38294d1c4c13664a45a2911a6de809ca94`](https://github.com/WumboLabs/eval-qwen3-14b/blob/ea855b38294d1c4c13664a45a2911a6de809ca94/events/qwen3-14b-fit-ladder-2026-07-15.md)
+- [WumboLabs/eval-qwen3-14b @ `ea855b38294d1c4c13664a45a2911a6de809ca94`](https://github.com/WumboLabs/eval-qwen3-14b/blob/ea855b38294d1c4c13664a45a2911a6de809ca94/events/qwen3-14b-lmx-speed-2026-07-05.md)
+- [WumboLabs/eval-qwen3-14b-ollama-q4km @ `285d06529dab955e9458c646b72493843c8998f0`](https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km/blob/285d06529dab955e9458c646b72493843c8998f0/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07.md)

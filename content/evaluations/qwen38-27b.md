@@ -22,7 +22,7 @@ WumboLabs tests **Qwen3.8-27B** on real consumer hardware. This is the canonical
 ## Current state
 
 - **Classification:** COMPLETED_DEEP_EVALUATION — [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21), profile Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
-- **Recommended profile:** ExLlamaV3 H1 (SC_2.20bpw_H3_V3) (`qwen38-27b-exl3-h1`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1)
+- **Recommended profile:** ExLlamaV3 H1 (SC_2.20bpw_H3_V3) (`qwen38-27b-exl3-h1`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md)
 - **Practical context:** 65,536 default / 98,304 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12)
 - **Latest evidence:** 2026-09-12 — Context envelope completion
 
@@ -40,8 +40,8 @@ Profile identity: `qwen38-27b-exl3-h1`.
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1>
-Original publication location (preserved archive): [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/eval-qwen3.8-27b) @ `78e8ebf636d33048f1e23b687ed060be9ccc1e97`
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json)
 
 Events on this profile:
 
@@ -56,8 +56,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: historical tested surface; retained evidence, not the recommended profile.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp>
-Original publication location (preserved archive): [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/eval-qwen3.8-27b) @ `54b14b30e3779f15486c3785222647324459dcf5`
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/initial-evaluation-2026-08-21/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json)
 
 Events on this profile:
 
@@ -74,7 +74,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Context Envelope — ExLlamaV3 H1** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CONTEXT_COMPLETION · status: GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b)
 
 ##### Identity
 
@@ -103,7 +104,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Outcome:** PASS — QWEN38_27B_CONTEXT_ENVELOPE_COMPLETED
 - **Classification:** MODEL-CARD CONTEXT ENVELOPE COMPLETE at the inherited guarded deployment classification; practical default unchanged
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-qwen3.8-27b
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md
 
 ##### Context profile
 
@@ -145,7 +146,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/eval-qwen3.8-27b>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -159,7 +160,8 @@ rankings.
 
 **H1 Canonical Promotion — ExLlamaV3** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CURRENT_WELP · status: COMPLETE / CURRENT_CANONICAL_H1_PROFILE
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b)
 
 ##### Identity
 
@@ -188,7 +190,7 @@ rankings.
 - **Classification:** CURRENT_CANONICAL_PROFILE — engine/history promotion validation, not a new model classification; the historical deep-evaluation role findings remain those of their tested stack
 - **Artifact classification:** Current canonical Qwen3.8 serving surface (exact artifact/runtime/geometry scope only)
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-qwen3.8-27b
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md
 
 ##### Context profile
 
@@ -239,7 +241,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/eval-qwen3.8-27b>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -253,7 +255,8 @@ rankings.
 
 **Initial Evaluation — Historical llama.cpp** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: HISTORICAL_EVALUATION · status: COMPLETED_DEEP_EVALUATION
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/initial-evaluation-2026-08-21/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b)
 
 [Long-form report: Qwen3.8-27B on 12GB: How Far Can an RTX 5070 Really Push It?](/records/qwen38-27b-rtx5070-evaluation/)
 
@@ -372,22 +375,22 @@ A two-hour balanced-profile soak completed 225/225 HTTP successes and 46/46 exac
 
 ### Evidence Links
 
-- **Canonical evaluation repo (historical llama.cpp profile):** https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp
+- **Canonical evaluation repo (historical llama.cpp profile):** https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/labs
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models
 - **LocalMaxxing:** APPROVED speed-test submissions (`cmt3jngze0njfmv0133xpneeu` BALANCED 16K; `cmt3jp2cn0njpmv01t5u8m6wd` FAST 8K MTP) + benchmark suite APPROVED/PUBLIC; ref-quant `cmsv68xl3085ims01w8aeacig`
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [eval-qwen3.8-27b-llamacpp/reports/](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp/tree/main/reports)
+Direct link to canonical reproduction material: [eval-qwen3.8-27b-llamacpp/reports/](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
 
 Full reproduction instructions, manifests, and checksums are published in the canonical repository. This Lab Record is a summary; the canonical repo is the source of truth.
 
 > **Provenance note (2026-09-12):** this evidence was originally published at
-> [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/eval-qwen3.8-27b)
+> [WumboLabs/eval-qwen3.8-27b](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b)
 > (evidence commit `54b14b30e3779f15486c3785222647324459dcf5`). It moved
 > byte-identical to the canonical historical-profile repository
-> ([eval-qwen3.8-27b-llamacpp](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp))
+> ([eval-qwen3.8-27b-llamacpp](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl))
 > by the model/profile/event publication-identity milestone; the original
 > repository is preserved unchanged as a historical archive.
 
@@ -397,7 +400,8 @@ Full reproduction instructions, manifests, and checksums are published in the ca
 
 **Profile Optimization — llama.cpp quant selection** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: PROFILE_OPTIMIZATION · status: PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/qwen38-27b-quant-showdowns-2026-08-20/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b)
 
 ### Identity and scope
 
@@ -418,7 +422,14 @@ profile for this model is the ExLlamaV3 H1 surface, represented by its own event
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **ExLlamaV3 H1 (SC_2.20bpw_H3_V3)** (`qwen38-27b-exl3-h1`): <https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1>
-- **Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)** (`qwen38-27b-llamacpp-ud-q2-k-xl`): <https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp>
+- **qwen38-27b-exl3-h1**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json)
+- **qwen38-27b-llamacpp-ud-q2-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json)
+
+### Legacy provenance
+
+- [RIPPERONInCHEEZ/wumbolabs @ `e27ddcb89b56c27e87d7a3af34003cd8c6d7355b`](https://github.com/RIPPERONInCHEEZ/wumbolabs/blob/e27ddcb89b56c27e87d7a3af34003cd8c6d7355b/data/labs-events/qwen38-27b-quant-showdowns-2026-08-20.md)
+- [WumboLabs/eval-qwen3.8-27b-exl3-h1 @ `484c9184ae459c79754b77b7dc95da09e64d37a5`](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/blob/484c9184ae459c79754b77b7dc95da09e64d37a5/reports/h1-canonical-profile-update.md)
+- [WumboLabs/eval-qwen3.8-27b-exl3-h1 @ `484c9184ae459c79754b77b7dc95da09e64d37a5`](https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/blob/484c9184ae459c79754b77b7dc95da09e64d37a5/reports/qwen38-27b-context-envelope-completion-2026-09-12.md)
+- [WumboLabs/eval-qwen3.8-27b-llamacpp @ `2f8d9fa9f9433cb64fcd416492e3a73c3a5773c7`](https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp/blob/2f8d9fa9f9433cb64fcd416492e3a73c3a5773c7/reports/comparison.md)

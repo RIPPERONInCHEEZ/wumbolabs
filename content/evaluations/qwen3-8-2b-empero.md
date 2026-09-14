@@ -19,7 +19,7 @@ WumboLabs tests **Qwen3.8-2B (Empero)** on real consumer hardware. This is the c
 
 ## Current state
 
-- **Recommended profile:** vLLM BF16 vendor-alignment battery (`qwen3.8-2b-empero-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3.8-2b-empero)
+- **Recommended profile:** vLLM BF16 vendor-alignment battery (`qwen3.8-2b-empero-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
 - **Latest evidence:** 2026-08-18 — LLMGauge vendor-alignment battery (2B bf16)
 
 ## Tested profiles
@@ -32,7 +32,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3.8-2b-empero>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -48,7 +49,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Specialized Test — vendor alignment** · profile: vLLM BF16 vendor-alignment battery · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.8-2b-empero)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.8-2b-empero)
 
 ### Identity and scope
 
@@ -65,6 +67,10 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **vLLM BF16 vendor-alignment battery** (`qwen3.8-2b-empero-vllm-bf16`): <https://github.com/WumboLabs/eval-qwen3.8-2b-empero>
+- **qwen3.8-2b-empero-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-qwen3.8-2b-empero @ `e09ed632fe835dac69eb05f9e37f7b57485923fd`](https://github.com/WumboLabs/eval-qwen3.8-2b-empero/blob/e09ed632fe835dac69eb05f9e37f7b57485923fd/events/qwen38-empero-2b-vendor-battery-2026-08-18.md)

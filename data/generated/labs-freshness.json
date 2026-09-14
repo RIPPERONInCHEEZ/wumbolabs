@@ -3,76 +3,84 @@
   "generated_by": "scripts/sync_labs.py (model-centric)",
   "source_identities": {
     "qwen38-27b-h1": {
-      "repo": "WumboLabs/eval-qwen3.8-27b-exl3-h1",
-      "ref": "4d9d47b98a7538b9eb0f06e1f949ed41e325ea0a",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/4d9d47b98a7538b9eb0f06e1f949ed41e325ea0a/website-publication.json",
+      "file": "data/generated/evaluations-exports/h1-canonical-promotion-2026-09-09.json",
       "sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
-      "resolved_commit": "4d9d47b98a7538b9eb0f06e1f949ed41e325ea0a",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/website-publication.json",
+      "kind": "repository-cache"
     },
     "qwen38-27b-context-envelope": {
-      "repo": "WumboLabs/eval-qwen3.8-27b-exl3-h1",
-      "ref": "7138cd9f0c73bf306d08ef1a81075eb892f3ae99",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.8-27b-exl3-h1/7138cd9f0c73bf306d08ef1a81075eb892f3ae99/website-publication.json",
+      "file": "data/generated/evaluations-exports/context-envelope-completion-2026-09-12.json",
       "sha256": "efbde1adf01c3a57b59d1b51d9234384cd62738de299cbe9c8b6f06f80f8064f",
-      "resolved_commit": "7138cd9f0c73bf306d08ef1a81075eb892f3ae99",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/qwen38-27b/events/context-envelope-completion-2026-09-12/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/website-publication.json",
+      "kind": "repository-cache"
     },
     "eval-nemotron-3-nano-4b-recharacterization-2026-09-11": {
-      "repo": "WumboLabs/eval-nemotron-3-nano-4b",
-      "ref": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-nemotron-3-nano-4b/86d615c23bc1422890b32d9c1cf8e7d68b6001c1/website-publication.json",
+      "file": "data/generated/evaluations-exports/welp-recharacterization-2026-09-11.json",
       "sha256": "457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa",
-      "resolved_commit": "86d615c23bc1422890b32d9c1cf8e7d68b6001c1",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/website-publication.json",
+      "kind": "repository-cache"
     },
     "qwen35-4b": {
-      "repo": "WumboLabs/eval-qwen3.5-4b",
-      "ref": "cb01b6826c67f8fcb5ce9dfffdb36664c23ee0d0",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.5-4b/cb01b6826c67f8fcb5ce9dfffdb36664c23ee0d0/website-publication.json",
+      "file": "data/generated/evaluations-exports/context-envelope-completion-2026-09-11-qwen35-4b.json",
       "sha256": "3c8fab5a1dcea73dd57a5296a00fd8238caf1b3eb8dd28be7fb2d5d56ee4bb04",
-      "resolved_commit": "cb01b6826c67f8fcb5ce9dfffdb36664c23ee0d0",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/website-publication.json",
+      "kind": "repository-cache"
     },
     "qwen35-9b": {
-      "repo": "WumboLabs/eval-qwen3.5-9b",
-      "ref": "7c18920d380378a8e47408fa4c5149f67f28828f",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-qwen3.5-9b/7c18920d380378a8e47408fa4c5149f67f28828f/website-publication.json",
+      "file": "data/generated/evaluations-exports/context-envelope-completion-2026-09-11-qwen35-9b.json",
       "sha256": "b6f98bc724a53b720e2ddab9d5e92a61aa33d565916dffcb654c49c2367c7cd3",
-      "resolved_commit": "7c18920d380378a8e47408fa4c5149f67f28828f",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/website-publication.json",
+      "kind": "repository-cache"
     },
     "minicpm5-2b": {
-      "repo": "WumboLabs/eval-minicpm5-2b",
-      "ref": "e4563e2e5f9898b71d0ef2a39d46241112b1146c",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-minicpm5-2b/e4563e2e5f9898b71d0ef2a39d46241112b1146c/website-publication.json",
+      "file": "data/generated/evaluations-exports/initial-evaluation-2026-09-10-minicpm5.json",
       "sha256": "20f817b5c706f0f68319bebe02e1766510c93a6c5249acb8104a57549eb7f7e1",
-      "resolved_commit": "e4563e2e5f9898b71d0ef2a39d46241112b1146c",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/website-publication.json",
+      "kind": "repository-cache"
     },
     "gemma4-e4b": {
-      "repo": "WumboLabs/eval-gemma4-e4b",
-      "ref": "336d86a0fefb7c64e3c7c770d4cd41057b98990d",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-gemma4-e4b/336d86a0fefb7c64e3c7c770d4cd41057b98990d/website-publication.json",
+      "file": "data/generated/evaluations-exports/initial-evaluation-2026-09-10-gemma4.json",
       "sha256": "45aca9eb0ff421280e04e6137cdcdc8571e40754a89c5f4e705b410ab7a052bb",
-      "resolved_commit": "336d86a0fefb7c64e3c7c770d4cd41057b98990d",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/website-publication.json",
+      "kind": "repository-cache"
     },
     "eval-gemma-4-12b-recharacterization-2026-09-12": {
-      "repo": "WumboLabs/eval-gemma-4-12b-qat-q4",
-      "ref": "13051c0eb36cd7dc1c1e407b31db451e6c5c806e",
-      "path": "website-publication.json",
-      "url": "https://raw.githubusercontent.com/WumboLabs/eval-gemma-4-12b-qat-q4/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/website-publication.json",
+      "file": "data/generated/evaluations-exports/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12.json",
       "sha256": "9af5545eea7fc407dc428cc9f804d2d076ea6b41a4271b7a6ee083fb136f5a93",
-      "resolved_commit": "13051c0eb36cd7dc1c1e407b31db451e6c5c806e",
-      "kind": "github-raw"
+      "repo": "WumboLabs/evaluations",
+      "ref": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "path": "models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/website-publication.json",
+      "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [

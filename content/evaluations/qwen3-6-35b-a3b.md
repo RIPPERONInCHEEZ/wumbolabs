@@ -19,7 +19,7 @@ WumboLabs tests **Qwen3.6-35B-A3B** on real consumer hardware. This is the canon
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Unsloth UD-IQ2_M (`qwen3.6-35b-a3b-llamacpp-ud-iq2-m`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m)
+- **Recommended profile:** llama.cpp Unsloth UD-IQ2_M (`qwen3.6-35b-a3b-llamacpp-ud-iq2-m`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
 - **Latest evidence:** 2026-07-22 — LLMGauge v0.71 practical re-run
 
 ## Tested profiles
@@ -32,7 +32,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
 
 Events on this profile:
 
@@ -49,7 +50,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Benchmark Only — tool-version re-run** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (TOOL_VERSION_RERUN)
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
@@ -70,7 +72,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Specialized Test — fit ladder** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-fit-ladder-e2e-2026-07-15/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
@@ -87,12 +90,17 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ## Shared comparison events
 
-This model appears as a related model in shared multi-model comparisons. The underlying report remains one immutable shared artifact, published in the canonical model's evidence repository; this model's measured entries:
+This model appears in shared multi-model comparisons. Each report is stored once in WumboLabs/evaluations/shared-events/; the model's measured entries remain attributed to the same historical event:
 
-- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — UD-IQ2_M scored 233.9/300 (3.9 avg); tight 12GB fit (676 MiB minimum headroom).
+- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — UD-IQ2_M scored 233.9/300 (3.9 avg); tight 12GB fit (676 MiB minimum headroom). — [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp Unsloth UD-IQ2_M** (`qwen3.6-35b-a3b-llamacpp-ud-iq2-m`): <https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m>
+- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m @ `d89df9bc26227247b858033742048bc6ccede901`](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m/blob/d89df9bc26227247b858033742048bc6ccede901/events/qwen36-35b-fit-ladder-e2e-2026-07-15.md)
+- [WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m @ `d89df9bc26227247b858033742048bc6ccede901`](https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m/blob/d89df9bc26227247b858033742048bc6ccede901/events/qwen36-35b-practical-v071-2026-07.md)

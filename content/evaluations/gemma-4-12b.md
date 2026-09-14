@@ -22,7 +22,7 @@ WumboLabs tests **Gemma 4 12B IT** on real consumer hardware. This is the canoni
 ## Current state
 
 - **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12), profile llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
-- **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+- **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 - **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12)
 - **Latest evidence:** 2026-09-12 — Current-WELP recharacterization
 
@@ -40,7 +40,8 @@ Profile identity: `gemma-4-12b-llamacpp-qat-q4-0`.
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
 
 Events on this profile:
 
@@ -59,7 +60,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: specialized tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-gemma-4-12b-q4km>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
 
 Events on this profile:
 
@@ -73,7 +75,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: specialized tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-gemma-4-12b-q4km>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
 
 Events on this profile:
 
@@ -87,7 +90,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: specialized tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-gemma-4-12b-q4km>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 Events on this profile:
 
@@ -103,7 +107,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **WELP Recharacterization — llama.cpp QAT UD-Q4_K_XL** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b)
 
 ##### Identity
 
@@ -133,7 +138,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md
 
 ##### Context profile
 
@@ -177,7 +182,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -191,7 +196,8 @@ rankings.
 
 **Practical Use — shared comparison (canonical)** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b)
 
 ### Identity and scope
 
@@ -215,7 +221,11 @@ this event with their own measured entries.
 
 **Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M (ggml-org) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed) · related profiles: `gemma-4-12b-llamacpp-qat-q4-0`, `gemma-4-12b-llamacpp-ud-q5-k-xl`, `gemma-4-12b-llamacpp-ud-q6-k-xl`
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-q4km)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b)
+[Profile Metadata: gemma-4-12b-llamacpp-qat-q4-0](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
+[Profile Metadata: gemma-4-12b-llamacpp-ud-q5-k-xl](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
+[Profile Metadata: gemma-4-12b-llamacpp-ud-q6-k-xl](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 ### Identity and scope
 
@@ -236,7 +246,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Practical Use — LLMGauge wumbolabs-practical-use-v1** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-06-21/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b)
 
 [Long-form report: 12B Gemma-Based Practical Use Test](/records/gemma-12b-practical-use/)
 
@@ -262,7 +273,8 @@ this event with their own measured entries.
 
 **Specialized Test — honesty ladder** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_SMOKE
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-honesty-ladder-2026-06-21/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b)
 
 ### Identity and scope
 
@@ -283,7 +295,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Benchmark Only — LLMGauge v0.16 era** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-core-agent-v016-2026-06-16/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b)
 
 ### Identity and scope
 
@@ -300,7 +313,18 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)** (`gemma-4-12b-llamacpp-qat-q4-0`): <https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4>
-- **llama.cpp Q4_K_M (ggml-org)** (`gemma-4-12b-llamacpp-q4km`): <https://github.com/WumboLabs/eval-gemma-4-12b-q4km>
+- **gemma-4-12b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
+- **gemma-4-12b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
+- **gemma-4-12b-llamacpp-ud-q5-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
+- **gemma-4-12b-llamacpp-ud-q6-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-gemma-4-12b-q4km @ `561be30e6f39eefb19fa36844904fb110c6a66a8`](https://github.com/WumboLabs/eval-gemma-4-12b-q4km/blob/561be30e6f39eefb19fa36844904fb110c6a66a8/events/gemma4-12b-lmx-speed-2026-07-04.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/events/gemma4-12b-core-agent-v016-2026-06-16.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/events/gemma4-12b-honesty-ladder-2026-06.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/reports/gemma4-12b-welp-recharacterization-2026-09-12.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/shared/compare-gemma4-family-wumbolabs-practical-v024-scored.md)
+- [WumboLabs/eval-gemma-4-12b-qat-q4 @ `13051c0eb36cd7dc1c1e407b31db451e6c5c806e`](https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4/blob/13051c0eb36cd7dc1c1e407b31db451e6c5c806e/shared/compare-wumbolabs-practical-v025-plus-grug.md)

@@ -42,11 +42,16 @@ The static site is generated into:
 ## Updating Evaluations
 
 Each tested model has exactly one canonical Evaluation page under `/evaluations/`,
-generated from the publication registry by the deterministic sync pipeline. The
+generated from an immutable `WumboLabs/evaluations` registry pin by deterministic sync. The
 old `/labs/` and `/records/` addresses redirect to the Evaluations destinations.
 Hand-maintained technical records keep their direct `/records/<slug>/` URLs and
 are listed under Projects → Technical notes. See
 [docs/labs-publication-workflow.md](docs/labs-publication-workflow.md).
+
+`data/evaluations-source.json` is the website's source pin. The local registry,
+cached exports, model pages, and indexes are generated derivatives, not separate
+publication authorities. Never create an `eval-*` repository or hand-edit generated
+registry entries. Public citations use central repository + full commit SHA + path.
 
 Canonical sync command:
 

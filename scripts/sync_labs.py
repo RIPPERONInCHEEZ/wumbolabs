@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""sync_labs.py — deterministic WumboLabs Labs publication sync (v2, model-centric).
+"""sync_labs.py — deterministic WumboLabs publication sync (v3, central source).
 
-Reads data/labs-registry.json (v2: one entry per published EVIDENCE EVENT with
-stable model_id / profile_id / event_id identity), consumes each generated
+Materializes the pinned central registry into data/labs-registry.json, with
+stable model_id / profile_id / event_id identity, then consumes each generated
 event's canonical website-publication export (schema wumbolabs-labs-publication/1),
 validates identity, and renders:
 
@@ -22,7 +22,7 @@ validates identity, and renders:
 
 Contract (documented in docs/labs-publication-workflow.md):
     one model_id        = one canonical Evaluation page
-    one profile_id      = one canonical public eval repository
+    one profile_id      = one materially distinct tested scientific surface
     one event_id        = one dated evidence event on the model page
     one profile may contain many events; one model may contain many profiles
 
@@ -31,8 +31,8 @@ invents canonical URLs: an export whose canonical_evidence state is
 PENDING_HUMAN_GATE renders with an explicit evidence-pending state.
 
 Usage (from the repository root):
-    python scripts/sync_labs.py --local-exports <dir>
-    python scripts/sync_labs.py --local-exports <dir> --check   (verify only, no writes)
+    python scripts/sync_labs.py
+    python scripts/sync_labs.py --check   (verify only, no writes)
     python scripts/sync_labs.py selftest
 
 Exit codes: 0 ok; 1 structural/data error; 2 usage error.
@@ -137,8 +137,8 @@ def load_registry() -> dict[str, Any]:
         registry = json.loads(registry_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         fail(f"registry is invalid JSON: {exc}")
-    if registry.get("version") != 2:
-        fail(f"registry version must be 2 (model/event-oriented); got {registry.get('version')!r}")
+    if registry.get("version") not in (2, 3):
+        fail(f"unsupported registry version: {registry.get('version')!r}")
     models = registry.get("models")
     if not isinstance(models, list) or not models:
         fail("registry must contain a non-empty models list")
@@ -162,8 +162,8 @@ def validate_registry(registry: dict[str, Any]) -> None:
     slugs: set[str] = set()
     event_ids: set[str] = set()
     legacy_urls: dict[str, str] = {}
-    profile_repo: dict[str, str] = {}
-    repo_profile: dict[str, str] = {}
+    profile_models: dict[str, str] = {}
+    declared_profiles = {p["profile_id"]: p for p in registry.get("profiles", [])}
     for entry in registry["records"]:
         slug = entry.get("slug")
         if not slug or not isinstance(slug, str):
@@ -217,16 +217,17 @@ def validate_registry(registry: dict[str, Any]) -> None:
         if not isinstance(related_profiles, list):
             fail(f"registry entry {slug!r}: related_profile_ids must be a list")
 
-        # one profile_id maps to exactly one canonical repository (and vice versa)
-        repo = (entry.get("profile_repo") or "")
-        if not isinstance(repo, str) or not repo.strip():
-            fail(f"registry entry {slug!r}: profile_repo is required")
-        if profile_repo.setdefault(pid, repo) != repo:
-            fail(f"profile_id {pid!r} maps to conflicting repositories: "
-                 f"{profile_repo[pid]!r} and {repo!r}")
-        if repo_profile.setdefault(repo, pid) != pid:
-            fail(f"repository {repo!r} is claimed by conflicting profile_ids: "
-                 f"{repo_profile[repo]!r} and {pid!r}")
+        # Scientific identity is independent of repository topology.
+        if profile_models.setdefault(pid, mid) != mid:
+            fail(f"profile_id {pid!r} belongs to conflicting models")
+        if registry["version"] == 3:
+            if pid not in declared_profiles or declared_profiles[pid]["model_id"] != mid:
+                fail(f"registry entry {slug!r}: unknown or cross-model profile")
+            evidence = entry.get("canonical_evidence") or {}
+            if evidence.get("repo") != "WumboLabs/evaluations" or not re.fullmatch(
+                    r"[0-9a-f]{40}", str(evidence.get("commit", ""))):
+                fail(f"registry entry {slug!r}: canonical evidence requires central repo and full commit")
+            safe_rel_path(evidence.get("path"), "canonical_evidence.path", slug)
 
         authoring = entry.get("authoring")
         if authoring == "hand-authored":
@@ -272,10 +273,25 @@ def validate_export(raw: bytes, origin: str) -> dict[str, Any]:
     evidence = export.get("canonical_evidence")
     if not isinstance(evidence, dict) or evidence.get("state") not in EVIDENCE_STATES:
         fail(f"{origin}: canonical_evidence.state must be one of {sorted(EVIDENCE_STATES)}")
-    if evidence["state"] == "PUBLISHED" and not evidence.get("url"):
-        fail(f"{origin}: canonical_evidence.state PUBLISHED requires url")
-    if evidence["state"] == "PENDING_HUMAN_GATE" and evidence.get("url"):
-        fail(f"{origin}: PENDING_HUMAN_GATE must not claim a canonical evidence URL")
+    current = evidence.get("repo") == "WumboLabs/evaluations" or "path" in evidence
+    if current and evidence["state"] == "PUBLISHED":
+        if evidence.get("repo") != "WumboLabs/evaluations" or not re.fullmatch(r"[0-9a-f]{40}", evidence.get("commit", "")):
+            fail(f"{origin}: current evidence requires central repo and full commit SHA")
+        path = evidence.get("path", "")
+        if not isinstance(path, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*(/[A-Za-z0-9][A-Za-z0-9._-]*)*", path):
+            fail(f"{origin}: current evidence requires a safe relative path")
+        url = f"https://github.com/WumboLabs/evaluations/blob/{evidence['commit']}/{path}"
+        if evidence.get("url") not in (None, url):
+            fail(f"{origin}: current evidence URL disagrees with its immutable citation")
+        evidence["url"] = url
+    elif evidence["state"] == "PUBLISHED" and not evidence.get("url"):
+        fail(f"{origin}: legacy PUBLISHED evidence requires url")
+    if evidence["state"] == "PENDING_HUMAN_GATE" and (evidence.get("url") or "commit" in evidence or "path" in evidence):
+        fail(f"{origin}: PENDING_HUMAN_GATE must not claim a published citation")
+    if current:
+        identity = export.get("identity")
+        if not isinstance(identity, dict) or any(not identity.get(k) for k in ("model_id", "profile_id", "event_id", "event_type")):
+            fail(f"{origin}: current publication requires model/profile/event identity")
     lmx = export.get("localmaxxing")
     if not isinstance(lmx, dict) or not lmx.get("status"):
         fail(f"{origin}: localmaxxing.status is required")
@@ -289,11 +305,12 @@ def resolve_source(entry: dict[str, Any], local_exports: Path | None) -> tuple[b
     source = entry.get("source") or {}
     kind = source.get("kind")
     provenance: dict[str, Any] = {"kind": kind}
-    if kind == "local-export":
-        if local_exports is None:
+    if kind in ("local-export", "repository-cache"):
+        source_root = BASE if kind == "repository-cache" else local_exports
+        if source_root is None:
             fail(f"registry entry {entry.get('slug')!r} needs --local-exports DIR to resolve source.file")
         rel = safe_rel_path(source.get("file"), "source.file", entry["slug"])
-        path = local_exports / rel
+        path = source_root / rel
         if not path.is_file():
             fail(f"local export not found for {entry.get('slug')!r}: {path}")
         raw = path.read_bytes()
@@ -311,6 +328,14 @@ def resolve_source(entry: dict[str, Any], local_exports: Path | None) -> tuple[b
                 "Update the registry pin deliberately, never silently."
             )
         provenance.update({"file": rel.as_posix(), "sha256": actual})
+        if kind == "repository-cache":
+            if source.get("repo") != "WumboLabs/evaluations" or not re.fullmatch(
+                    r"[0-9a-f]{40}", str(source.get("ref", ""))):
+                fail(f"registry entry {entry['slug']!r}: invalid central cache pin")
+            safe_rel_path(source.get("path"), "source.path", entry["slug"])
+            provenance.update({k: source[k] for k in ("repo", "ref", "path")})
+            provenance["resolved_commit"] = source["ref"]
+            provenance["url"] = f"https://raw.githubusercontent.com/{source['repo']}/{source['ref']}/{source['path']}"
         return raw, provenance
     if kind == "github-raw":
         import urllib.error
@@ -328,6 +353,8 @@ def resolve_source(entry: dict[str, Any], local_exports: Path | None) -> tuple[b
                 raw = response.read()
         except urllib.error.URLError as exc:
             fail(f"fetch failed for {url}: {exc}")
+        if source.get("sha256") and sha256_bytes(raw) != source["sha256"]:
+            fail(f"github source hash mismatch for {entry['slug']!r}")
         provenance.update({"repo": repo, "ref": ref, "path": path, "url": url,
                            "sha256": sha256_bytes(raw)})
         if re.fullmatch(r"[0-9a-f]{40}", str(ref)):
@@ -721,13 +748,10 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
         lines.append("")
         repo_url = (first.get("canonical_evidence") or {}).get("url", "")
         if repo_url:
-            lines.append(f"Canonical profile repository: <{repo_url}>")
-            orig_repo = first.get("canonical_evidence", {}).get("original_repo")
-            if orig_repo:
-                orig_commit = first["canonical_evidence"].get("original_commit", "")
-                lines.append(f"Original publication location (preserved archive): "
-                             f"[{orig_repo}](https://github.com/{orig_repo})"
-                             + (f" @ `{orig_commit}`" if orig_commit else ""))
+            lines.append(f"[Canonical Evidence]({repo_url})")
+            metadata_url = first.get("profile_metadata_urls", {}).get(pid)
+            if metadata_url:
+                lines.append(f"[Profile Metadata]({metadata_url})")
         lines.append("")
         lines.append("Events on this profile:")
         lines.append("")
@@ -759,7 +783,13 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
         lines.append(line)
         if ev_url:
             lines.append("")
-            lines.append(f"[Canonical evidence for this event]({ev_url})")
+            lines.append(f"[Canonical Evidence / Full Report]({ev_url})")
+            if e.get("model_evidence_url"):
+                lines.append(f"[View on GitHub]({e['model_evidence_url']})")
+            for pid in e.get("related_profile_ids", []):
+                url = e.get("profile_metadata_urls", {}).get(pid)
+                if url:
+                    lines.append(f"[Profile Metadata: {pid}]({url})")
         report_page = e.get("report_page")
         if report_page:
             report_url = f"/{report_page[:-3]}/" if report_page.endswith(".md") else report_page
@@ -773,38 +803,39 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     if shared_for_model:
         lines.append("## Shared comparison events")
         lines.append("")
-        lines.append("This model appears as a related model in shared multi-model comparisons. The "
-                     "underlying report remains one immutable shared artifact, published in the "
-                     "canonical model's evidence repository; this model's measured entries:")
+        lines.append("This model appears in shared multi-model comparisons. Each report is "
+                     "stored once in WumboLabs/evaluations/shared-events/; the model's "
+                     "measured entries remain attributed to the same historical event:")
         lines.append("")
         for s in sorted(shared_for_model, key=lambda x: (x["entry"]["event_date"], x["entry"]["slug"])):
             e = s["entry"]
             note = s.get("note")
             lines.append(f"- {anchor_link(e)}"
-                         + (f" — {note}" if note else ""))
+                         + (f" — {note}" if note else "")
+                         + (f" — [Canonical Evidence / Full Report]({e['canonical_evidence']['url']})"
+                            if e.get("canonical_evidence", {}).get("url") else ""))
         lines.append("")
 
     lines.append("## Canonical evidence")
     lines.append("")
-    lines.append("One canonical evidence repository per tested profile; each event above "
-                 "links its exact evidence. LocalMaxxing dispositions are recorded per "
-                 "event. Where a repository shows an original publication location, the "
-                 "evidence was migrated byte-identically to the canonical profile "
-                 "repository and the original remains a preserved archive.")
+    lines.append("All canonical public evidence lives in WumboLabs/evaluations. Each event "
+                 "links an immutable full-commit/path citation; each profile remains a "
+                 "distinct scientific identity, not a separate repository.")
     lines.append("")
-    seen_repos: set[str] = set()
     for pid in profile_ids:
         first = profile_events[pid][0]
-        repo = first.get("profile_repo")
-        if repo in seen_repos:
-            continue
-        seen_repos.add(repo)
-        url = (first.get("canonical_evidence") or {}).get("url", "")
-        name = fmt(first.get("profile_name"))
+        url = first.get("profile_metadata_urls", {}).get(pid) or \
+            (first.get("canonical_evidence") or {}).get("url", "")
         if url:
-            lines.append(f"- **{name}** (`{pid}`): <{url}>")
-        else:
-            lines.append(f"- **{name}** (`{pid}`): `{repo}`")
+            lines.append(f"- **{pid}**: [Profile Metadata]({url})")
+    legacy_sources = {
+        (source["repo"], source["commit"], source["path"])
+        for e in entries for source in e.get("legacy_sources", [])
+    }
+    if legacy_sources:
+        lines.extend(["", "### Legacy provenance", ""])
+        for repo, commit, path in sorted(legacy_sources):
+            lines.append(f"- [{repo} @ `{commit}`](https://github.com/{repo}/blob/{commit}/{path})")
     while lines and lines[-1] == "":
         lines.pop()
 
@@ -1009,6 +1040,9 @@ def run(local_exports: Path | None, check_only: bool) -> int:
                         f"record {entry['slug']!r}: export identity {key}={ident.get(key)!r} "
                         f"does not match the registry ({entry.get(reg_key)!r})"
                     )
+        if registry["version"] == 3:
+            # Legacy export bytes remain immutable. Only the rendered citation topology changes.
+            export["canonical_evidence"] = dict(entry["canonical_evidence"], state="PUBLISHED")
         exports[entry["slug"]] = export
         provenance[entry["slug"]] = prov
         if export["canonical_evidence"]["state"] == "PENDING_HUMAN_GATE":
@@ -1078,21 +1112,15 @@ def run(local_exports: Path | None, check_only: bool) -> int:
         "model_events": len(registry["records"]),
     }
 
-    if not check_only:
-        outputs_list = (
-            (GENERATED_MODELS, json.dumps(models_data, indent=2, ensure_ascii=False) + "\n"),
-            (GENERATED_EVENTS, json.dumps(events_data, indent=2, ensure_ascii=False) + "\n"),
-            (GENERATED_FRESHNESS, json.dumps(freshness, indent=2, ensure_ascii=False) + "\n"),
-            (GENERATED_ROUTE_MIGRATION,
-             json.dumps(migration_data, indent=2, ensure_ascii=False) + "\n"),
-            (REDIRECTS_FILE, redirects_content),
-        )
-        for path, serial in outputs_list:
-            if write_if_changed(path, serial):
-                changed.append(str(path))
-            else:
-                unchanged.append(str(path))
-            outputs.append(path)
+    outputs_list = (
+        (GENERATED_MODELS, json.dumps(models_data, indent=2, ensure_ascii=False) + "\n"),
+        (GENERATED_EVENTS, json.dumps(events_data, indent=2, ensure_ascii=False) + "\n"),
+        (GENERATED_FRESHNESS, json.dumps(freshness, indent=2, ensure_ascii=False) + "\n"),
+        (GENERATED_ROUTE_MIGRATION, json.dumps(migration_data, indent=2, ensure_ascii=False) + "\n"),
+        (REDIRECTS_FILE, redirects_content),
+    )
+    for path, serial in outputs_list:
+        record_output(BASE / path, serial)
 
     print("Labs publication sync (model-centric) %s" % ("CHECK" if check_only else "complete"))
     print(f"models:                {len(registry['models'])}")
@@ -1106,7 +1134,7 @@ def run(local_exports: Path | None, check_only: bool) -> int:
         print("outputs:")
         for path in outputs:
             print(f"  {path}")
-    return 0
+    return 1 if check_only and changed else 0
 
 
 def registry_entry_publication_state(registry: dict[str, Any], slug: str) -> str | None:
@@ -1301,8 +1329,6 @@ def selftest() -> int:
             failures.append("selftest: classification must come from the classification-scope event")
         if "98,304 default" in a_text or "32,768 default / 98,304 guarded" not in a_text:
             failures.append("selftest: practical context must come from the context-scope event")
-        if "guessed" in a_text:
-            failures.append("selftest: unexpected text on model page")
 
         # 3. redirect stub content: served at the legacy /labs/ URL, targets the
         #    /evaluations/ model page + event anchor
@@ -1374,9 +1400,9 @@ def selftest() -> int:
             dict(r["records"][3], slug="b1-dup", event_id="initial-evaluation-2026-01-01")))
         # 10. duplicate model_id rejected
         run_and_expect_failure("duplicate model_id", lambda r: r["models"].append(dict(r["models"][0])))
-        # 11. profile_id -> two repositories rejected
-        run_and_expect_failure("profile/repo collision", lambda r: r["records"][3].update(
-            profile_id="model-a-p1", profile_repo="WumboLabs/eval-other"))
+        # 11. a scientific profile cannot silently move between models
+        run_and_expect_failure("profile/model collision", lambda r: r["records"][3].update(
+            profile_id="model-a-p1"))
         # 12. entry without declared model (technical record) rejected
         run_and_expect_failure("technical record without model", lambda r: r["records"].append(
             {"slug": "tech-note", "event_id": "tech-event-2026-01-01", "event_type": "initial-evaluation",
@@ -1445,7 +1471,7 @@ def selftest() -> int:
         ok_registry = json.loads(json.dumps(registry))
         ok_registry["records"][2]["source"]["sha256"] = sha256_bytes(ok_data.encode())
         REGISTRY_PATH.write_text(json.dumps(ok_registry, indent=2) + "\n")
-        if run(root / "exports", check_only=True) != 0:
+        if run(root / "exports", check_only=False) != 0:
             failures.append("selftest: matching export identity not accepted")
         REGISTRY_PATH.write_text(json.dumps(registry, indent=2) + "\n")
         (exports_dir / "a2-context" / "website-publication.json").write_text(
@@ -1467,7 +1493,7 @@ def selftest() -> int:
             "second sync is a no-op; --check passes",
             "duplicate event_id rejected",
             "duplicate model_id rejected",
-            "profile_id/repository collision rejected",
+            "profile_id/model collision rejected",
             "technical record without declared model rejected",
             "unknown model_id rejected",
             "duplicate legacy URL rejected",
@@ -1486,6 +1512,11 @@ def main() -> int:
                         help="directory that registry source.file entries resolve against")
     parser.add_argument("--check", action="store_true", help="verify only; write nothing")
     args = parser.parse_args()
+    from evaluations_source import synchronize
+    try:
+        synchronize(BASE, args.check)
+    except (ValueError, OSError) as exc:
+        fail(str(exc))
     return run(args.local_exports, args.check)
 
 

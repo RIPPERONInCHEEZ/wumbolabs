@@ -20,7 +20,7 @@ WumboLabs tests **Qwen3.5-9B** on real consumer hardware. This is the canonical 
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Q8_0 GGUF (`qwen35-9b-llamacpp-q8`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen3.5-9b)
+- **Recommended profile:** llama.cpp Q8_0 GGUF (`qwen35-9b-llamacpp-q8`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
 - **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-11)](/evaluations/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b)
 - **Latest evidence:** 2026-09-11 — Context envelope completion
 
@@ -38,7 +38,8 @@ Profile identity: `qwen35-9b-llamacpp-q8`.
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen3.5-9b>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
 
 Events on this profile:
 
@@ -54,7 +55,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Context Envelope — llama.cpp Q8_0** · profile: llama.cpp Q8_0 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen3.5-9b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen35-9b)
 
 ##### Identity
 
@@ -85,7 +87,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS (unchanged; new occupancy guardrail: at >=99.4% occupancy the model returns the absent-information value NOT_SPECIFIED under the literal key name 'zeta' instead of the required 'absent' key)
 - **Artifact classification:** High-quality quantized medium-fit text control (unchanged)
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-qwen3.5-9b
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md
 
 ##### Context profile
 
@@ -138,7 +140,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/eval-qwen3.5-9b>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -148,6 +150,10 @@ rankings.
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp Q8_0 GGUF** (`qwen35-9b-llamacpp-q8`): <https://github.com/WumboLabs/eval-qwen3.5-9b>
+- **qwen35-9b-llamacpp-q8**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-qwen3.5-9b @ `096afc64dbceb870e7672c7cdc95e44dea5ade49`](https://github.com/WumboLabs/eval-qwen3.5-9b/blob/096afc64dbceb870e7672c7cdc95e44dea5ade49/reports/qwen35-9b-context-envelope-completion-2026-09-11.md)

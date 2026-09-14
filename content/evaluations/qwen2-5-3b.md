@@ -19,7 +19,7 @@ WumboLabs tests **Qwen2.5-3B Instruct** on real consumer hardware. This is the c
 
 ## Current state
 
-- **Recommended profile:** vLLM BF16 (cross-runtime lane) (`qwen2.5-3b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16)
+- **Recommended profile:** vLLM BF16 (cross-runtime lane) (`qwen2.5-3b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md)
 - **Latest evidence:** 2026-07-15 — vLLM fingerprint live smoke
 
 ## Tested profiles
@@ -32,7 +32,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen2.5-3b-llamacpp-f16>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-cross-runtime-2026-07-15/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json)
 
 Events on this profile:
 
@@ -46,7 +47,8 @@ Runtime and artifact identity are described inside the event sections below (han
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen2.5-3b/profiles/qwen2.5-3b-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -62,7 +64,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Specialized Test — runtime fingerprint** · profile: vLLM BF16 (cross-runtime lane) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / RUNTIME_FINGERPRINT
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen2.5-3b)
 
 ### Identity and scope
 
@@ -83,7 +86,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 **Benchmark Only — cross-runtime methodology lane** · profile: llama.cpp F16 (comparison reference) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / CROSS_RUNTIME_METHODOLOGY_LANE
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-qwen2.5-3b-llamacpp-f16)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-cross-runtime-2026-07-15/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen2.5-3b)
 
 ### Identity and scope
 
@@ -100,7 +104,12 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp F16 (comparison reference)** (`qwen2.5-3b-llamacpp-f16`): <https://github.com/WumboLabs/eval-qwen2.5-3b-llamacpp-f16>
-- **vLLM BF16 (cross-runtime lane)** (`qwen2.5-3b-vllm-bf16`): <https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16>
+- **qwen2.5-3b-llamacpp-f16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json)
+- **qwen2.5-3b-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/qwen2.5-3b/profiles/qwen2.5-3b-vllm-bf16/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-qwen2.5-3b-llamacpp-f16 @ `651bbea8c5d1e9c1c5dfa21a538a6922f2bf60a8`](https://github.com/WumboLabs/eval-qwen2.5-3b-llamacpp-f16/blob/651bbea8c5d1e9c1c5dfa21a538a6922f2bf60a8/shared/compare-qwen25-3b-f16-vs-vllm-bf16-8k.md)
+- [WumboLabs/eval-qwen2.5-3b-vllm-bf16 @ `92e975e31a46b1e84e21b838f7a79e5c91cd7e86`](https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16/blob/92e975e31a46b1e84e21b838f7a79e5c91cd7e86/events/qwen25-3b-vllm-fingerprint-smoke-2026-07.md)

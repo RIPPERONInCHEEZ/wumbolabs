@@ -8,3 +8,7 @@ public/
 
 # Agent reports and scratch artifacts
 tmp/
+
+# Python sync helper imports
+__pycache__/
+*.pyc

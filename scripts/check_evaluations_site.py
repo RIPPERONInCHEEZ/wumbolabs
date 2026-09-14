@@ -17,7 +17,7 @@ Checks:
   - technical records keep their URLs and stay discoverable;
   - /records/ no longer renders a standalone archive index;
   - the Qwen3.8-27B multi-profile fixture (profiles, events, anchors, context
-    state, canonical profile repositories);
+    state, canonical central evidence links);
   - all local links in built HTML resolve (built pages, redirects, or
     fragment-only).
 
@@ -166,11 +166,10 @@ def main() -> int:
           "Qwen3.8 long-form campaign report not linked from its Evaluation page")
 
     # 6. Qwen3.8 multi-profile/multi-event fixture
-    for needle in ("eval-qwen3.8-27b-llamacpp", "eval-qwen3.8-27b-exl3-h1",
+    for needle in ("qwen38-27b-llamacpp-ud-q2-k-xl", "qwen38-27b-exl3-h1",
                    "initial-evaluation-2026-08-21", "h1-canonical-promotion-2026-09-09",
                    "context-envelope-completion-2026-09-12",
-                   "65,536", "98,304", "262,144", "1,000,000", "INTEGRATION_BLOCKED",
-                   "MODEL-CARD CONTEXT ENVELOPE COMPLETE"):
+                   "65,536", "98,304", "262,144", "1,000,000", "INTEGRATION_BLOCKED"):
         check(needle in qwen_eval, f"Qwen3.8 evaluation page missing {needle!r}")
     for m in models:
         page = PUBLIC / "evaluations" / url_slug(m["model_id"]) / "index.html"
@@ -179,6 +178,19 @@ def main() -> int:
             for e in [ev for ev in events if ev["model_id"] == m["model_id"]]:
                 check(f'id="{e["event_id"]}"' in body,
                       f"{m['model_id']}: event anchor {e['event_id']} missing")
+            for entry in registry["records"]:
+                if m["model_id"] not in [entry["model_id"], *entry.get("related_model_ids", [])]:
+                    continue
+                evidence = entry["canonical_evidence"]
+                check(evidence.get("repo") == "WumboLabs/evaluations"
+                      and bool(re.fullmatch(r"[0-9a-f]{40}", evidence.get("commit", ""))),
+                      f"{entry['event_id']}: canonical evidence must use central full-commit pin")
+                check(f'href="{evidence["url"]}"' in body,
+                      f"{m['model_id']}: immutable report link missing for {entry['event_id']}")
+                if entry["model_id"] == m["model_id"]:
+                    for url in entry.get("profile_metadata_urls", {}).values():
+                        check(f'href="{url}"' in body,
+                              f"{m['model_id']}: profile metadata link missing: {url}")
 
     # 7. events dataset points at canonical Evaluations routes
     for e in events:

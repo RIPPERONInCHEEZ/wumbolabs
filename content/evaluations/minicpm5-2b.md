@@ -22,7 +22,7 @@ WumboLabs tests **MiniCPM5-2B** on real consumer hardware. This is the canonical
 ## Current state
 
 - **Classification:** READY_WITH_GUARDRAILS — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5), profile contained vLLM BF16
-- **Recommended profile:** contained vLLM BF16 (`minicpm5-2b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/eval-minicpm5-2b)
+- **Recommended profile:** contained vLLM BF16 (`minicpm5-2b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
 - **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5)
 - **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
 
@@ -40,7 +40,8 @@ Profile identity: `minicpm5-2b-vllm-bf16`.
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-minicpm5-2b>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -56,7 +57,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Initial Evaluation — contained vLLM BF16** · profile: contained vLLM BF16 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-minicpm5-2b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/minicpm5-2b)
 
 ##### Identity
 
@@ -87,7 +89,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official BF16 full-precision candidate (characterized; not deployed); architecture-diversity control value HIGH
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-minicpm5-2b
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md
 
 ##### Context profile
 
@@ -138,7 +140,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/eval-minicpm5-2b>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -148,6 +150,10 @@ rankings.
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **contained vLLM BF16** (`minicpm5-2b-vllm-bf16`): <https://github.com/WumboLabs/eval-minicpm5-2b>
+- **minicpm5-2b-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-minicpm5-2b @ `e0fba74cf21d6cd0bbac0461e9cba8796825429c`](https://github.com/WumboLabs/eval-minicpm5-2b/blob/e0fba74cf21d6cd0bbac0461e9cba8796825429c/EVIDENCE-SUMMARY.md)

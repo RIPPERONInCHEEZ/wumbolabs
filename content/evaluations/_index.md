@@ -11,4 +11,4 @@ back_url = "/"
 
 Each WumboLabs-tested model has exactly one canonical Evaluation page answering one question: **what have we learned about this model?** Current findings come first; tested profiles, results, and the complete testing history follow, with every value attributed to the profile and event that measured it.
 
-The exact scientific reports live in the canonical public evidence repositories — one repository per tested profile — linked from every page.
+Public scientific reports and profile metadata live together in [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations). Every model page links to its reports at exact commits. Profiles describe tested scientific surfaces, not separate repositories.

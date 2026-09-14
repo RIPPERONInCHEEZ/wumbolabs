@@ -20,7 +20,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Strong reviewed local coding/technical assistant. Not recommended as unguarded daily driver or unattended autonomous agent.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/initial-evaluation-2026-08-21/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen38-27b/",
       "report_page": "records/qwen38-27b-rtx5070-evaluation.md"
@@ -43,7 +43,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Current canonical RTX 5070 profile: ExLlamaV3 1.4.6 serving SC_2.20bpw_H3_V3 at 65,536 context with H1 recurrent history promoted via E18H/E18I (H4 fallback retained). H1 cuts recurrent storage by 434.8 MiB (held as reserve), passes the E18E oracle 3/3 / 15-15 fields, quality 7/7 and a 20/20 flat stability sequence; 75.8 tok/s decode at a 3,514-token prompt.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen38-27b/",
       "report_page": null
@@ -66,7 +66,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Model-card context envelope COMPLETE on the canonical ExLlamaV3 H1 surface: 65,536 default revalidated and 98,304 guarded boundary VALIDATED at >=99.4% near-full occupancy with strict useful-context 4/4; native 262,144 FIT_LIMIT on this 12 GB H1 surface (nearest measured boundary 98,304); official YaRN 1,000,000 INTEGRATION_BLOCKED on the accepted surface and independently FIT_LIMIT. Default unchanged at 65,536; inherited guarded/limited classification carries; LocalMaxxing VERIFIED_EXISTING, no new submission.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-exl3-h1",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen38-27b/",
       "report_page": null
@@ -89,7 +89,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Protocol development campaign. Phases 0–2 passed; stopped at Phase 3 gate decision. Not a complete WELP capability review.",
-      "evidence_url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/initial-evaluation-2026-08-25/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/nemotron-3-nano-4b/",
       "report_page": null
@@ -112,7 +112,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Append-only dated recharacterization under the current WELP protocol: the historical PROTOCOL_BLOCKED record is preserved unchanged, and this campaign completes the model-card context envelope (native 262,144 VALIDATED at both seeds; extensions source-backed absent), reproduces the reliability weakness as a measurable guardrail (clean-pass 0.30/0.25; hallucination 0.20/0.15), and confirms the dense hybrid Mamba-2/4-attention-layer architecture. Classification READY_WITH_GUARDRAILS; practical profile 32K default / 131K guarded; LocalMaxxing VERIFIED_EXISTING.",
-      "evidence_url": "https://github.com/WumboLabs/eval-nemotron-3-nano-4b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/nemotron-3-nano-4b/",
       "report_page": null
@@ -135,7 +135,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Early stop at Phase 3 gate. Model failed the applicable advancement gate; later phases were not run. Bounded result only.",
-      "evidence_url": "https://github.com/WumboLabs/eval-apodex-1.1-mini",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/apodex-1-1-mini/",
       "report_page": null
@@ -158,7 +158,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Best always-resident micro-sidecar candidate in the family. Hallucination resistance absent at 1.2B scale — every quant including BF16 fabricates confidently on invented subjects.",
-      "evidence_url": "https://github.com/WumboLabs/eval-lfm2.5-1.2b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/lfm2.5-1.2b/events/initial-evaluation-2026-08-26-lfm12/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/lfm2-5-1-2b/",
       "report_page": null
@@ -181,7 +181,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "QAD Q4_0 is the rational ultra-fast deployment quant when 1.59 GB is the hard model-size target. No material practical-quality win over PTQ Q4_0 was reproduced.",
-      "evidence_url": "https://github.com/WumboLabs/eval-lfm2.5-2.6b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/lfm2.5-2.6b/events/initial-evaluation-2026-08-26-lfm26/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/lfm2-5-2-6b/",
       "report_page": null
@@ -204,7 +204,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Full WELP campaign completed. Phase 3 practical viability ADVANCE (0.922); Phase 4 reliability gate FAIL (DO_NOT_ADVANCE) closes all deployment roles: FINAL WELP READINESS: NOT_READY. Later-phase evidence is characterization only.",
-      "evidence_url": "https://github.com/WumboLabs/eval-ornith-1.5-9b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/ornith-1.5-9b/events/initial-evaluation-2026-08-27/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/ornith-1-5-9b/",
       "report_page": null
@@ -227,7 +227,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Full model-card context envelope now COMPLETE with evidence-backed dispositions: native 262,144 FIT_LIMIT (f16 lower bound; q4_0 measured admission failure), YaRN 1,010,000 FIT_LIMIT (all representable KV precisions), 32K/64K revalidated at >=99.4% near-full occupancy with perfect retrieval and a measured auxiliary-instruction retention defect. Practical profile unchanged: 32K default, 64K guarded, READY_WITH_GUARDRAILS.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.5-4b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen35-4b/",
       "report_page": null
@@ -250,7 +250,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Full model-card context envelope now COMPLETE with evidence-backed dispositions: native 262,144 FIT_LIMIT (f16 primary lower bound; q4_0 alternate measured admission failure), YaRN 1,010,000 FIT_LIMIT (all representable KV precisions; mechanism confirmed), 32K/64K revalidated at >=99.4% near-full occupancy with perfect retrieval and a measured strict useful-context gate failure (absent-field key-name deviation). Classification READY_WITH_GUARDRAILS unchanged; practical profile 32K default / 64K guarded confirmed.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.5-9b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen35-9b/",
       "report_page": null
@@ -273,7 +273,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Official BF16 full-precision characterization on a contained vLLM runtime, READY_WITH_GUARDRAILS: 32K default / 64K guarded, complete 131K model-card envelope (98K highest BF16-KV rung; exact 131K FIT_LIMIT on BF16-KV and strict-gate FAILED on the authorized fp8-KV surface), 118.6 tok/s decode, thinking/coding/tools PASS, 20/20 reliability.",
-      "evidence_url": "https://github.com/WumboLabs/eval-minicpm5-2b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/minicpm5-2b/",
       "report_page": null
@@ -296,7 +296,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Official Google QAT Q4_0 + mmproj on llama.cpp, READY_WITH_GUARDRAILS: 32K default / 131K guarded with the full card envelope complete; perfect five-needle retrieval through the exact 131,072 maximum while the strict aggregate gate FAILED at every rung. Vision, multi-image, ASR, AST and bounded video PASS; OCR TESTED_LIMITED; reliability 20/20 completion, 14/20 exactness.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma4-e4b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma4-e4b/",
       "report_page": null
@@ -321,7 +321,7 @@
       ],
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "QAT Q4_0 was the strongest 12B Gemma practical variant: 259.2/300 (4.32 avg), ahead of UD-Q5_K_XL (254.0/300) on the same suite.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-06-21/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": "records/gemma-12b-practical-use.md"
@@ -344,7 +344,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Early LLMGauge v0.16-era core-v1 run (8/8, 308/400 manual) plus agent-backend-v1 on the QAT artifact.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-core-agent-v016-2026-06-16/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": null
@@ -367,7 +367,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Honesty-ladder smoke runs against the QAT Q4 practical profile.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-honesty-ladder-2026-06-21/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": null
@@ -395,7 +395,7 @@
       ],
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Shared pool comparison: QAT default (259.2/300) vs five additional tested models; each related model page carries its own score.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": null
@@ -418,7 +418,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LMX local speed evidence across four quants: Q4_K_M 72.11, UD-Q5_K_XL 62.76, UD-Q6_K_XL 51.26 tok/s out.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-q4km",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": null
@@ -441,7 +441,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Agent-backend-v1 and fake-tool answer-only probes for the Gemmable MTP artifact.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemmable-4-12b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-agent-backend-2026-06-21/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemmable-4-12b/",
       "report_page": null
@@ -464,7 +464,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LMX local speed evidence: 71.24 tok/s out (llama.cpp Q4_K_M).",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemmable-4-12b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-lmx-speed-2026-07-04/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemmable-4-12b/",
       "report_page": null
@@ -487,7 +487,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Honesty smoke (2026-07-04) and provenance-refresh re-run (2026-07-24) for the Grug practical record.",
-      "evidence_url": "https://github.com/WumboLabs/eval-grug-12b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/grug-12b/events/grug-honesty-smoke-2026-07-04/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/grug-12b/",
       "report_page": null
@@ -510,7 +510,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LMX local speed evidence: 69.24 tok/s out (llama.cpp Q4_K_M).",
-      "evidence_url": "https://github.com/WumboLabs/eval-grug-12b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/grug-12b/events/grug-lmx-speed-2026-07-04/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/grug-12b/",
       "report_page": null
@@ -533,7 +533,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "64k agent-backend fit confirmed (Instruct 5/5 complete, 251.0-257.2 tok/s out, 9203 MiB peak VRAM); Instruct preferred over Thinking; neither unsupervised-shell safe.",
-      "evidence_url": "https://github.com/WumboLabs/eval-mellum2-12b-a2.5b-instruct",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-agent-backend-64k-2026-06-17/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/mellum2-12b-a2-5b/",
       "report_page": "records/mellum2-agent-backend-test.md"
@@ -556,7 +556,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Fake-tool honesty probes at 64k for both Mellum2 variants; feeds the agent-backend manual scores.",
-      "evidence_url": "https://github.com/WumboLabs/eval-mellum2-12b-a2.5b-instruct",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-fake-tool-2026-06-17/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/mellum2-12b-a2-5b/",
       "report_page": null
@@ -579,7 +579,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LMX local speed evidence: Instruct 261.41, Thinking 265.47 tok/s out.",
-      "evidence_url": "https://github.com/WumboLabs/eval-mellum2-12b-a2.5b-instruct",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-lmx-speed-2026-07-04/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/mellum2-12b-a2-5b/",
       "report_page": null
@@ -602,7 +602,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Historical May 2026 daily-driver evaluation: good enough for daily local technical-assistant use with mandatory command review; 4096-context guidance.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3-14b-ollama-q4km",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-14b/",
       "report_page": null
@@ -625,7 +625,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LMX local speed evidence: 66.57 tok/s out (llama.cpp Q4_K_M).",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3-14b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-lmx-speed-2026-07-05/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-14b/",
       "report_page": null
@@ -648,7 +648,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LLMGauge fit-ladder success-fallback E2E payload (32k -> 8k).",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3-14b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-fit-ladder-2026-07-15/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-14b/",
       "report_page": null
@@ -671,7 +671,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Same artifact/suite re-run under LLMGauge v0.71 for tool-version continuity.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-6-35b-a3b/",
       "report_page": null
@@ -694,7 +694,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Fit-ladder E2E (32k/16k/8k attempts) payload; primary subject is LLMGauge behavior.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.6-35b-a3b-ud-iq2-m",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-fit-ladder-e2e-2026-07-15/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-6-35b-a3b/",
       "report_page": null
@@ -717,7 +717,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Cross-runtime llama.cpp F16 vs vLLM BF16 agent-backend comparison incl. failed-command-recovery probe; methodology-lane benchmark.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen2.5-3b-llamacpp-f16",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-cross-runtime-2026-07-15/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen2-5-3b/",
       "report_page": null
@@ -740,7 +740,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "vLLM runtime-fingerprint smoke using Qwen2.5-3B as payload.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen2.5-3b-vllm-bf16",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen2-5-3b/",
       "report_page": null
@@ -763,7 +763,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LLMGauge vendor-alignment battery (BF16/GGUF): full suites at vendor 8192 plus configured-context default probing up to 262144.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-2b-empero",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-8-2b-empero/",
       "report_page": null
@@ -786,7 +786,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LLMGauge vendor-alignment qualification battery on the 4B artifact (BF16 + Q4 lanes).",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-4b-empero",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-vendor-battery-2026-08-18/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-8-4b-empero/",
       "report_page": null
@@ -809,7 +809,7 @@
       "related_model_ids": null,
       "hardware": "WumboServer (RTX 2060 SUPER 8GB)",
       "headline": "RTX 2060S lane: 97.14 tok/s out, 2145.66 tok/s prefill, 3.0 GB peak VRAM, 172 W; LocalMaxxing APPROVED from WumboServer.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-4b-empero-distill-wumboserver",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-distill-wumboserver-2026-09-01/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-8-4b-empero/",
       "report_page": null
@@ -832,7 +832,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "LLMGauge vendor-alignment battery on the 9B artifact (Q8_0 + base Q4 lanes).",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-9b-empero",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-9b-empero/events/qwen38-empero-9b-vendor-battery-2026-08-18/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-8-9b-empero/",
       "report_page": null
@@ -855,7 +855,7 @@
       "related_model_ids": null,
       "hardware": "WumboServer (RTX 2060 SUPER 8GB)",
       "headline": "RTX 2060S lane quant ladder: admission (Q5), Q6 fit boundary, Q5 serving campaign, LocalMaxxing reconciliation (9b-q4 60.4 tok/s out, 5.37 GB peak VRAM).",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-9b-empero-distill-wumboserver",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-9b-empero/events/qwen38-empero-9b-distill-wumboserver-2026-09-01/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-8-9b-empero/",
       "report_page": null
@@ -878,7 +878,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "Three completed unscored 1-prompt smoke runs under LLMGauge v0.70 with a Q1_0 27B artifact locally labeled bonsai_27b_q1_0; upstream artifact identity unresolved.",
-      "evidence_url": "https://wumbolabs.dev/evaluations/bonsai-27b/",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/bonsai-27b/events/bonsai-27b-smoke-v070-2026-07-14/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/bonsai-27b/",
       "report_page": null
@@ -901,7 +901,7 @@
       "related_model_ids": null,
       "hardware": "WumboServer (RTX 2060 SUPER 8GB)",
       "headline": "Ornith 1.5 9B Q4_K_M admission benchmark on WumboServer RTX 2060 SUPER (hardware-lane fit evidence).",
-      "evidence_url": "https://github.com/WumboLabs/eval-ornith-1.5-9b",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/ornith-1.5-9b/events/ornith-9b-wumboserver-admission-2026-09-02/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/ornith-1-5-9b/",
       "report_page": null
@@ -924,7 +924,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (RTX 5070 12GB)",
       "headline": "llama.cpp-era quant/variant showdown evidence (unsloth v3-final ladder incl. 196k retrieval probe, community variants, 16k practical selection) that informed the historical profile.",
-      "evidence_url": "https://github.com/WumboLabs/eval-qwen3.8-27b-llamacpp",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/qwen38-27b-quant-showdowns-2026-08-20/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/qwen38-27b/",
       "report_page": null
@@ -947,7 +947,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Gemma 4 12B IT (Google; tested as Unsloth UD-Q4_K_XL packaging of the QAT Q4_0 lineage, llama.cpp b9672 CUDA SM120, RTX 5070 12GB) recharacterized under current WELP. READY_WITH_GUARDRAILS: 12/12 frozen quality screen; reasoning, coding, and tool-use probes pass; decode 72.9 tok/s, pp512 3,201 tok/s, full GPU residency. Context envelope COMPLETE: native rungs through 131,072 VALIDATED including two-seed useful-context at 99.5% near-full occupancy; the exact 262,144 card maximum is FIT_LIMIT on 12GB (measured OOM admission + KV-slope accounting); no official extension mechanisms documented. Reliability is the guardrail: 11/20 and 10/20 mechanical pass across two seeds with a verbosity/truncation component and git-safety advisory weakness. Multimodal (image/audio/video via mmproj) is officially supported but NOT characterized (text-only campaign). Historical 2026-06-21 practical-use winner (259.2/300) is directionally confirmed; no protocol score equivalence is claimed.",
-      "evidence_url": "https://github.com/WumboLabs/eval-gemma-4-12b-qat-q4",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": null

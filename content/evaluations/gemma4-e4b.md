@@ -22,7 +22,7 @@ WumboLabs tests **Gemma 4 E4B** on real consumer hardware. This is the canonical
 ## Current state
 
 - **Classification:** READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4), profile llama.cpp official QAT Q4_0
-- **Recommended profile:** llama.cpp official QAT Q4_0 (`gemma4-e4b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/eval-gemma4-e4b)
+- **Recommended profile:** llama.cpp official QAT Q4_0 (`gemma4-e4b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
 - **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4)
 - **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
 
@@ -40,7 +40,8 @@ Profile identity: `gemma4-e4b-llamacpp-qat-q4-0`.
 
 Status: current canonical/recommended tested surface.
 
-Canonical profile repository: <https://github.com/WumboLabs/eval-gemma4-e4b>
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
 
 Events on this profile:
 
@@ -56,7 +57,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
-[Canonical evidence for this event](https://github.com/WumboLabs/eval-gemma4-e4b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma4-e4b)
 
 ##### Identity
 
@@ -87,7 +89,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official Google QAT Q4_0 + official mmproj — the only official precision that hosts the full card range with reserve on this GPU; community Q4_K_M pair retained as evidence only (provenance unknown)
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/eval-gemma4-e4b
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md
 
 ##### Context profile
 
@@ -138,7 +140,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/eval-gemma4-e4b>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -148,6 +150,10 @@ rankings.
 
 ## Canonical evidence
 
-One canonical evidence repository per tested profile; each event above links its exact evidence. LocalMaxxing dispositions are recorded per event. Where a repository shows an original publication location, the evidence was migrated byte-identically to the canonical profile repository and the original remains a preserved archive.
+All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **llama.cpp official QAT Q4_0** (`gemma4-e4b-llamacpp-qat-q4-0`): <https://github.com/WumboLabs/eval-gemma4-e4b>
+- **gemma4-e4b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/b58445a028ae7f8fffe444c3349de7928e57b01c/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
+
+### Legacy provenance
+
+- [WumboLabs/eval-gemma4-e4b @ `980b54ac5a0bb26534929149d6f6f3d041e65e56`](https://github.com/WumboLabs/eval-gemma4-e4b/blob/980b54ac5a0bb26534929149d6f6f3d041e65e56/EVIDENCE-SUMMARY.md)

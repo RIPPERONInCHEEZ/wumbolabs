@@ -76,6 +76,16 @@ Do not publish private local paths, personal email addresses, unpublished intern
 
 If local test results are used, summarize them with claim boundaries rather than dumping raw internal paths or logs.
 
+## Evaluation publication authority
+
+- Human discovery and ordinary sharing: `https://wumbolabs.dev/evaluations/`.
+- Public scientific registry/evidence: `WumboLabs/evaluations`; exact claims cite repository, full commit SHA, and relative artifact path.
+- Working/raw science: local `research/model-evaluations/`; large model artifacts: NAS archive.
+- Model/profile/event IDs describe science, not repository boundaries. Never create a new `eval-*` repository.
+- Update the central registry first; pin its pushed full commit and SHA-256 in `data/evaluations-source.json`, then run deterministic sync. `data/labs-registry.json`, cached exports, model pages, and indexes are derivatives; do not independently edit them.
+- Preserve immutable historical exports and legacy provenance. Shared events live once with explicit related model/profile IDs; display attribution is not ownership.
+- Follow `docs/labs-publication-workflow.md` and canonical WELP `docs/publication.md`. Publication work never authorizes new inference, benchmarks, LocalMaxxing actions, or model downloads.
+
 ## Technical change policy
 
 Keep changes minimal and scoped.
