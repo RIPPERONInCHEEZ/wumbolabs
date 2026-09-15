@@ -558,7 +558,7 @@ summary:hover {
   font: 0.82rem var(--font-mono);
 }
 
-/* v0.08 Lab Console homepage */
+/* Console homepage */
 
 
 .console-label,
@@ -791,7 +791,7 @@ summary:hover {
   }
 }
 
-/* v0.08 Typography and terminal-console refinement */
+/* Typography and terminal-console refinement */
 
 :root {
   --font-body: "Atkinson Hyperlegible", "IBM Plex Sans", "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -905,7 +905,7 @@ code,
 
 }
 
-/* v0.08 Section record lists */
+/* Section record lists */
 
 .section-record h1 {
   color: var(--wl-text);
@@ -968,7 +968,7 @@ code,
 }
 
 
-/* v0.08 Project record pages */
+/* Project record pages */
 
 .project-shell {
   padding-top: 3rem;
@@ -1028,7 +1028,7 @@ code,
 }
 
 
-/* v0.08 General record pages */
+/* General record pages */
 
 .page-record {
   padding-top: 3rem;
@@ -2119,26 +2119,6 @@ body {
   padding-left: 0.9rem;
 }
 
-.operator-route {
-  position: relative;
-  transition: background-color 140ms ease, box-shadow 140ms ease;
-}
-
-.operator-route:hover,
-.operator-route:focus-within {
-  background: rgba(198, 255, 51, 0.035);
-  box-shadow: inset 3px 0 0 rgba(198, 255, 51, 0.42);
-}
-
-.operator-route--active {
-  background: rgba(198, 255, 51, 0.055);
-}
-
-.operator-route--active:hover,
-.operator-route--active:focus-within {
-  background: rgba(198, 255, 51, 0.055);
-  box-shadow: inset 3px 0 0 rgba(198, 255, 51, 0.65);
-}
 
 .operator-route h2 a {
   color: inherit;
@@ -2207,18 +2187,11 @@ body {
 
 .record-row {
   border-color: var(--wl-border-soft);
-  transition: background-color 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+  transition: border-color 140ms ease;
 }
 
-.page-record .record-row:hover,
-.page-record .record-row:focus-within {
-  border-color: rgba(198, 255, 51, 0.3);
-  background: linear-gradient(90deg, rgba(198, 255, 51, 0.055), transparent 34%);
-  box-shadow: inset 3px 0 0 rgba(198, 255, 51, 0.7);
-}
-
-.section-record .record-row:hover,
-.section-record .record-row:focus-within {
+.record-row:hover,
+.record-row:focus-within {
   border-color: rgba(198, 255, 51, 0.3);
 }
 
