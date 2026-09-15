@@ -81,6 +81,16 @@
       "resolved_commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-qwen3-14b-recharacterization-2026-09-14": {
+      "file": "data/generated/evaluations-exports/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14.json",
+      "sha256": "bc102550a29106b0755f179fbb40fa71aa9d246b30eb934a0d4fd18b5a4136f1",
+      "repo": "WumboLabs/evaluations",
+      "ref": "2950a5eacd376c4df28b4bf33b96cae0b3db397a",
+      "path": "models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/website-publication.json",
+      "resolved_commit": "2950a5eacd376c4df28b4bf33b96cae0b3db397a",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/2950a5eacd376c4df28b4bf33b96cae0b3db397a/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -91,6 +101,10 @@
     {
       "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
       "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
+    },
+    {
+      "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
+      "campaign": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"
     },
     {
       "slug": "gemma4-e4b",
@@ -119,5 +133,5 @@
   ],
   "pending_public_evidence": [],
   "models": 21,
-  "model_events": 41
+  "model_events": 42
 }

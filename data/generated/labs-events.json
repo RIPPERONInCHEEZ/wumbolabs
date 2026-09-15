@@ -951,6 +951,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/gemma-4-12b/",
       "report_page": null
+    },
+    {
+      "event_id": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14",
+      "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
+      "model_id": "qwen3-14b",
+      "model": "Qwen3-14B",
+      "event_type": "welp-recharacterization",
+      "event_kicker": "WELP Recharacterization — llama.cpp Q4_K_M q8_0 KV",
+      "event_title": "Current-WELP recharacterization",
+      "profile_id": "qwen3-14b-llamacpp-q4km-q8kv",
+      "profile_name": "llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface)",
+      "date": "2026-09-15",
+      "event_date": "2026-09-14",
+      "status": "READY_WITH_GUARDRAILS",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
+      "headline": "Qwen3-14B (Alibaba Qwen team; tested as the exact historical unsloth Q4_K_M artifact, llama.cpp b9672 CUDA SM120, RTX 5070 12GB, KV q8_0, full GPU residency) recharacterized under current WELP. READY_WITH_GUARDRAILS: 11/12 frozen quality screen; reasoning, coding, and tool-use probes pass; decode 66 tok/s short / 43.5 tok/s at full 32K window; pp512 2,719 tok/s. Context envelope COMPLETE: native 8K/16K/32K VALIDATED including two-seed useful-context at 99.47% occupancy with all five contract depth placements (2/25/50/75/95%) inside the preferred error bound after the 2026-09-15 completion; the official YaRN 131,072 maximum is FIT_LIMIT on 12GB (measured OOM under q8_0 and q4_0 KV). Guardrails: reliability corpus mechanical pass 7-8/20 driven largely by verbosity/echo/truncation artifacts plus one true fabrication pattern and sycophancy; raise output budgets and keep grounding context for factual duty.",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/3330db39e23d8a3a02b3d627a895af4b8ae5e4b1/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/REPORT.md",
+      "evidence_state": "published",
+      "model_url": "/evaluations/qwen3-14b/",
+      "report_page": null
     }
   ]
 }

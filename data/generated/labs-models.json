@@ -114,10 +114,10 @@
       "model_id": "qwen3-14b",
       "display_name": "Qwen3-14B",
       "page": "/evaluations/qwen3-14b/",
-      "classification": null,
-      "profile_count": 2,
-      "event_count": 3,
-      "latest_event_date": "2026-07-15"
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 3,
+      "event_count": 4,
+      "latest_event_date": "2026-09-14"
     },
     {
       "model_id": "qwen3.6-35b-a3b",
