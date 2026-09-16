@@ -22,7 +22,7 @@ WumboLabs tests **Mellum2 12B-A2.5B** on real consumer hardware. This is the can
 ## Current state
 
 - **Classification:** LIMITED_ROLE_ONLY — [Current-WELP recharacterization (2026-09-15)](/evaluations/mellum2-12b-a2-5b#mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15), profile llama.cpp Q4_K_M (Instruct)
-- **Recommended profile:** llama.cpp Q4_K_M (Instruct) (`mellum2-12b-a2.5b-llamacpp-q4km-instruct`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
+- **Recommended profile:** llama.cpp Q4_K_M (Instruct) (`mellum2-12b-a2.5b-llamacpp-q4km-instruct`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/adad9217547bf22cea9f2bd27e79a929374a20a9/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
 - **Practical context:** 16,384 default / 8,192 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-15)](/evaluations/mellum2-12b-a2-5b#mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15)
 - **Latest evidence:** 2026-09-15 — Current-WELP recharacterization
 
@@ -37,7 +37,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-agent-backend-64k-2026-06-17/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
 
 Events on this profile:
 
@@ -55,8 +55,8 @@ Profile identity: `mellum2-12b-a2.5b-llamacpp-q4km-instruct`.
 
 Status: current canonical/recommended tested surface.
 
-[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json)
+[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/adad9217547bf22cea9f2bd27e79a929374a20a9/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json)
 
 Events on this profile:
 
@@ -75,8 +75,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **WELP Recharacterization — llama.cpp Q4_K_M (Instruct)** · profile: llama.cpp Q4_K_M (Instruct) · maturity: CURRENT_WELP · status: LIMITED_ROLE_ONLY
 
-[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b)
+[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/adad9217547bf22cea9f2bd27e79a929374a20a9/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b)
 
 ##### Identity
 
@@ -88,7 +88,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 | Tested artifact | Mellum2-12B-A2.5B-Instruct-Q4_K_M.gguf; reacquired from official repo after local+archive absence; SHA-256 verified against official LFS |
 | Precision | Q4_K_M |
 | Artifact SHA-256 | `b04281c27de5d968d577f310d982273b1b13bdbd8117b3ecffffeebfe222f0a7` |
-| Campaign | `mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15` |
+| Campaign | `mellum2-12b-a2.5b-rtx5070-welp-recharacterization-2026-09-15` |
 | Record date | 2026-09-15 |
 
 ##### Runtime and hardware
@@ -105,7 +105,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Outcome:** PASS
 - **Classification:** LIMITED_ROLE_ONLY
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md
+Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/adad9217547bf22cea9f2bd27e79a929374a20a9/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md
 
 ##### Context profile
 
@@ -148,7 +148,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 ##### Canonical evidence
 
-Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md>
+Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/adad9217547bf22cea9f2bd27e79a929374a20a9/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md>
 
 This event section is a human-readable derivative of the accepted local WELP
 campaign evidence named above; the campaign's REPORT.md is the authoritative
@@ -163,7 +163,7 @@ rankings.
 **Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M (Instruct) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-lmx-speed-2026-07-04/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b)
 
 ### Identity and scope
 
@@ -185,7 +185,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Specialized Test — fake-tool honesty** · profile: llama.cpp Q4_K_M (Instruct) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_PROBES
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-fake-tool-2026-06-17/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b)
 
 ### Identity and scope
 
@@ -207,8 +207,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Specialized Test — LLMGauge agent-backend-v1** · profile: llama.cpp Q4_K_M (Instruct) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / AGENT_BACKEND_FIT_TEST (not a general quality verdict) · related profiles: `mellum2-12b-a2.5b-llamacpp-q4km-thinking`
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/mellum2-12b-a2.5b/events/mellum2-agent-backend-64k-2026-06-17/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b)
-[Profile Metadata: mellum2-12b-a2.5b-llamacpp-q4km-thinking](https://github.com/WumboLabs/evaluations/blob/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b)
+[Profile Metadata: mellum2-12b-a2.5b-llamacpp-q4km-thinking](https://github.com/WumboLabs/evaluations/blob/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
 
 [Long-form report: Mellum2 Agent Backend Test](/records/mellum2-agent-backend-test/)
 
@@ -237,8 +237,8 @@ This model appears in shared multi-model comparisons. Each report is stored once
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **mellum2-12b-a2.5b-llamacpp-q4km-thinking**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
-- **mellum2-12b-a2.5b-llamacpp-q4km-instruct**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json)
+- **mellum2-12b-a2.5b-llamacpp-q4km-thinking**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
+- **mellum2-12b-a2.5b-llamacpp-q4km-instruct**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json)
 
 ### Legacy provenance
 

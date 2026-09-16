@@ -80,13 +80,13 @@ Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genu
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models
 - **LocalMaxxing:** Speed result SUBMITTED/APPROVED (ID `cmt9ijytg00xali017f46xk25`, 182.31 tok/s p512/n128). Benchmark suites NOT_SUBMITTED due to early WELP stop.
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/ce3e10ee38bfc19fdc0b78c5648c6e7add5cff4b/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/36ad3309ddb34da143f6fcf629aa1d1eb83f3e25/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
 
 This Lab Record is a summary; the canonical repo is the source of truth.

@@ -1016,7 +1016,7 @@
       "related_model_ids": null,
       "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
       "headline": "Mellum2 12B-A2.5B Instruct Q4_K_M on llama.cpp b9672 / RTX 5070: exceptionally fast (tg128 271.7 tok/s, pp512 7,744 tok/s) with native tool calling, coding, and quality 11/12 - but replicated fake-API fabrication, failed sycophancy/uncertainty categories, and a measured useful-context ceiling of 16,384 tokens (the advertised 131,072 window loads and runs near-full yet useful context fails above ~32K) yield LIMITED_ROLE_ONLY. The separate official Thinking checkpoint remains open current-WELP debt.",
-      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/adad9217547bf22cea9f2bd27e79a929374a20a9/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md",
       "evidence_state": "published",
       "model_url": "/evaluations/mellum2-12b-a2-5b/",
       "report_page": null
