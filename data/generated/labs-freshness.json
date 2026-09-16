@@ -101,12 +101,26 @@
       "resolved_commit": "3e9292e40ce307e58219d0b962f4c9a9360a73cd",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/3e9292e40ce307e58219d0b962f4c9a9360a73cd/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-mellum2-12b-a25b-recharacterization-2026-09-15": {
+      "file": "data/generated/evaluations-exports/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15.json",
+      "sha256": "b2d01fbc97a8fae686a1c1799c346a124d892551d99caaa08a23e19807210a95",
+      "repo": "WumboLabs/evaluations",
+      "ref": "e3ae8b539be41a75a3f70550509cae8c25a5ae57",
+      "path": "models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/website-publication.json",
+      "resolved_commit": "e3ae8b539be41a75a3f70550509cae8c25a5ae57",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/e3ae8b539be41a75a3f70550509cae8c25a5ae57/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
     {
       "slug": "eval-gemma-4-12b-recharacterization-2026-09-12",
       "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
+    },
+    {
+      "slug": "eval-mellum2-12b-a25b-recharacterization-2026-09-15",
+      "campaign": "mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15"
     },
     {
       "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
@@ -147,5 +161,5 @@
   ],
   "pending_public_evidence": [],
   "models": 21,
-  "model_events": 43
+  "model_events": 44
 }

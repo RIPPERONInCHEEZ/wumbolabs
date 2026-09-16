@@ -105,10 +105,10 @@
       "model_id": "mellum2-12b-a2.5b",
       "display_name": "Mellum2 12B-A2.5B",
       "page": "/evaluations/mellum2-12b-a2-5b/",
-      "classification": null,
+      "classification": "LIMITED_ROLE_ONLY",
       "profile_count": 2,
-      "event_count": 3,
-      "latest_event_date": "2026-07-04"
+      "event_count": 4,
+      "latest_event_date": "2026-09-15"
     },
     {
       "model_id": "qwen3-14b",
