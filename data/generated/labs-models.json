@@ -107,8 +107,8 @@
       "page": "/evaluations/mellum2-12b-a2-5b/",
       "classification": "LIMITED_ROLE_ONLY",
       "profile_count": 2,
-      "event_count": 4,
-      "latest_event_date": "2026-09-15"
+      "event_count": 5,
+      "latest_event_date": "2026-09-16"
     },
     {
       "model_id": "qwen3-14b",

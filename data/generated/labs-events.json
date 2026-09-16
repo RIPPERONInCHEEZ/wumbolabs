@@ -1020,6 +1020,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/mellum2-12b-a2-5b/",
       "report_page": null
+    },
+    {
+      "event_id": "mellum2-12b-a25b-thinking-rtx5070-welp-recharacterization-2026-09-16",
+      "slug": "eval-mellum2-12b-a25b-thinking-recharacterization-2026-09-16",
+      "model_id": "mellum2-12b-a2.5b",
+      "model": "Mellum2 12B-A2.5B",
+      "event_type": "welp-recharacterization",
+      "event_kicker": "WELP Recharacterization — llama.cpp Q4_K_M (Thinking)",
+      "event_title": "Current-WELP recharacterization",
+      "profile_id": "mellum2-12b-a2.5b-llamacpp-q4km-thinking",
+      "profile_name": "llama.cpp Q4_K_M (Thinking)",
+      "date": "2026-09-16",
+      "event_date": "2026-09-16",
+      "status": "NOT_READY",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
+      "headline": "Current-WELP recharacterization of the official JetBrains Mellum2 Thinking Q4_K_M artifact on llama.cpp b9672 / RTX 5070 12GB. Native capacity is validated through 131,072 tokens and narrow quality/capability probes pass (reasoning, coding, native tools), but both frozen reliability seeds score 3/20 with universal explicit-CoT length truncation and no useful-context depth validates at 8k or 131k under the frozen completion reserve. Campaign PASS with model classification NOT_READY for a current-WELP agent role.",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/a0ed8d8218d000c40fb2be157f4377d73c67af45/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-thinking-rtx5070-welp-recharacterization-2026-09-16/REPORT.md",
+      "evidence_state": "published",
+      "model_url": "/evaluations/mellum2-12b-a2-5b/",
+      "report_page": null
     }
   ]
 }
