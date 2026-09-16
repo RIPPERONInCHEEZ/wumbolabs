@@ -39,7 +39,7 @@ Profile identity: `qwen35-4b-llamacpp-bf16`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/901b6733c33939f7a69c4f09a5fa25b9e1080894/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
 
 Events on this profile:
 
@@ -56,7 +56,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Context Envelope — llama.cpp BF16** · profile: llama.cpp BF16 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/qwen35-4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/901b6733c33939f7a69c4f09a5fa25b9e1080894/models/qwen35-4b)
 
 ##### Identity
 
@@ -151,7 +151,7 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen35-4b-llamacpp-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
+- **qwen35-4b-llamacpp-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/901b6733c33939f7a69c4f09a5fa25b9e1080894/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
 
 ### Legacy provenance
 

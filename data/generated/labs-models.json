@@ -123,10 +123,10 @@
       "model_id": "qwen3.6-35b-a3b",
       "display_name": "Qwen3.6-35B-A3B",
       "page": "/evaluations/qwen3-6-35b-a3b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 2,
-      "latest_event_date": "2026-07-22"
+      "classification": "LIMITED_ROLE_ONLY",
+      "profile_count": 2,
+      "event_count": 3,
+      "latest_event_date": "2026-09-15"
     },
     {
       "model_id": "gemmable-4-12b",

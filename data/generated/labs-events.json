@@ -974,6 +974,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/qwen3-14b/",
       "report_page": null
+    },
+    {
+      "event_id": "qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15",
+      "slug": "eval-qwen36-35b-a3b-recharacterization-2026-09-15",
+      "model_id": "qwen3.6-35b-a3b",
+      "model": "Qwen3.6-35B-A3B",
+      "event_type": "welp-recharacterization",
+      "event_kicker": "WELP Recharacterization — llama.cpp UD-IQ2_M q8_0 KV",
+      "event_title": "Current-WELP recharacterization",
+      "profile_id": "qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv",
+      "profile_name": "llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile)",
+      "date": "2026-09-15",
+      "event_date": "2026-09-15",
+      "status": "LIMITED_ROLE_ONLY",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
+      "headline": "Current RTX 5070 text profile: 32K default, 16K guarded; 146.8–153.5 decode tok/s; quality 11/12; replicated reliability 9/20. Classified LIMITED_ROLE_ONLY. Vision is supported but not characterized.",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md",
+      "evidence_state": "published",
+      "model_url": "/evaluations/qwen3-6-35b-a3b/",
+      "report_page": null
     }
   ]
 }

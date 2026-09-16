@@ -41,7 +41,7 @@ Profile identity: `gemma4-e4b-llamacpp-qat-q4-0`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/901b6733c33939f7a69c4f09a5fa25b9e1080894/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/gemma4-e4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/901b6733c33939f7a69c4f09a5fa25b9e1080894/models/gemma4-e4b)
 
 ##### Identity
 
@@ -152,7 +152,7 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **gemma4-e4b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
+- **gemma4-e4b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/901b6733c33939f7a69c4f09a5fa25b9e1080894/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
 
 ### Legacy provenance
 

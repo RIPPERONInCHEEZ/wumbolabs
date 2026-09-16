@@ -91,6 +91,16 @@
       "resolved_commit": "2950a5eacd376c4df28b4bf33b96cae0b3db397a",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/2950a5eacd376c4df28b4bf33b96cae0b3db397a/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-qwen36-35b-a3b-recharacterization-2026-09-15": {
+      "file": "data/generated/evaluations-exports/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15.json",
+      "sha256": "fd1553a960b207f9ccee8d80e0bb6b116c3af6331dd590acfda08896737e7d30",
+      "repo": "WumboLabs/evaluations",
+      "ref": "3e9292e40ce307e58219d0b962f4c9a9360a73cd",
+      "path": "models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/website-publication.json",
+      "resolved_commit": "3e9292e40ce307e58219d0b962f4c9a9360a73cd",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/3e9292e40ce307e58219d0b962f4c9a9360a73cd/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -105,6 +115,10 @@
     {
       "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
       "campaign": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"
+    },
+    {
+      "slug": "eval-qwen36-35b-a3b-recharacterization-2026-09-15",
+      "campaign": "qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15"
     },
     {
       "slug": "gemma4-e4b",
@@ -133,5 +147,5 @@
   ],
   "pending_public_evidence": [],
   "models": 21,
-  "model_events": 42
+  "model_events": 43
 }
