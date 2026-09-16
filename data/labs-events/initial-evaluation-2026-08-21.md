@@ -113,14 +113,14 @@ A two-hour balanced-profile soak completed 225/225 HTTP successes and 46/46 exac
 
 ### Evidence Links
 
-- **Canonical evaluation repo (historical llama.cpp profile):** https://github.com/WumboLabs/evaluations/tree/db63d6f89b2aeb75279eb4292bda6d0a4d9213c7/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl
+- **Canonical evaluation repo (historical llama.cpp profile):** https://github.com/WumboLabs/evaluations/tree/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/db63d6f89b2aeb75279eb4292bda6d0a4d9213c7/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/1aed2cc174f264b94ec898e003a69f095a19e9d3/models
 - **LocalMaxxing:** APPROVED speed-test submissions (`cmt3jngze0njfmv0133xpneeu` BALANCED 16K; `cmt3jp2cn0njpmv01t5u8m6wd` FAST 8K MTP) + benchmark suite APPROVED/PUBLIC; ref-quant `cmsv68xl3085ims01w8aeacig`
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/db63d6f89b2aeb75279eb4292bda6d0a4d9213c7/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/1aed2cc174f264b94ec898e003a69f095a19e9d3/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
 
 Full reproduction instructions, manifests, and checksums are published in the canonical repository. This Lab Record is a summary; the canonical repo is the source of truth.
 
