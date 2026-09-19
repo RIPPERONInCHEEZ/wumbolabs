@@ -1,5 +1,14 @@
 # Changelog
 
+## Furnace Plum visual identity
+
+### Changed
+- Replaced lime branding with semantic dark-plum surfaces, ceramic-bone text, restrained persimmon accents, and independent status colors.
+- Integrated the approved mark and horizontal lockup into compact header/footer branding, browser and Apple icons, and a wide social card; retained all three source-quality masters.
+- Preserved public routes, content, responsive layouts, calm archive/project hover behavior, and evaluation catalog interactions.
+- Improved muted-text and form-boundary contrast and removed decorative glow and scanlines.
+- Made local-link validation resolve URL paths independently of cache-version queries and fragments.
+
 ## v0.08 - Lab Console Redesign
 
 ### Added

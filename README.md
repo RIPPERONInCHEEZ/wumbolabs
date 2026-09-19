@@ -71,6 +71,19 @@ Canonical sync command:
     zola build
     python3 scripts/check_evaluations_site.py
 
+## Brand assets
+
+Furnace Plum color roles live in `static/css/style.css`. Status colors remain
+independent from brand emphasis; evaluation classification text is authoritative.
+
+`static/img/brand/` contains the three approved, unchanged PNG masters and their
+locally cropped/resized derivatives. `mark.png` serves the compact header/footer;
+`favicon-32.png`, `favicon-192.png`, and `apple-touch-icon.png` use the mark alone.
+`og-card.png` is the 1200×630 horizontal-lockup social image. The stacked master
+is retained without adding redundant page branding. Metadata lives in
+`templates/base.html`; the canonical release value remains
+`zola.toml` → `[extra].site_version`.
+
 ## Deployment
 
 Deployments are handled automatically by Cloudflare Pages when changes are pushed to the main branch.

@@ -7,8 +7,10 @@
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
   <meta name="description" content="{{ config.description }}">
 
-  <link rel="icon" type="image/png" href="/img/favicon.png">
-  <link rel="apple-touch-icon" href="/img/favicon.png">
+  <meta name="theme-color" content="#100C12">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/img/brand/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/brand/apple-touch-icon.png">
   {% if current_url %}
     {% block canonical %}<link rel="canonical" href="{{ current_url }}">{% endblock canonical %}
   {% else %}
@@ -21,14 +23,18 @@
   <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
   <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
   {% if current_url %}<meta property="og:url" content="{{ current_url }}">{% endif %}
-  <meta property="og:image" content="{{ config.base_url }}/img/wumbolabs-card.png">
+  <meta property="og:image" content="{{ config.base_url }}/img/brand/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="WumboLabs logo: orange upward chevron flanked by grey and cream chevrons beside the WumboLabs wordmark on a dark plum background">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% block twitter_title %}{{ config.title }}{% endblock twitter_title %}">
   <meta name="twitter:description" content="{% block twitter_description %}{{ config.description }}{% endblock twitter_description %}">
-  <meta name="twitter:image" content="{{ config.base_url }}/img/wumbolabs-card.png">
+  <meta name="twitter:image" content="{{ config.base_url }}/img/brand/og-card.png">
+  <meta name="twitter:image:alt" content="WumboLabs logo: orange upward chevron flanked by grey and cream chevrons beside the WumboLabs wordmark on a dark plum background">
 
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v={{ config.extra.site_version }}">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -39,7 +45,7 @@
     </div>
     <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="/" aria-label="WumboLabs home">
-        <img class="brand-mark" src="/img/wumbolabs-mark.png" alt="" aria-hidden="true">
+        <img class="brand-mark" src="/img/brand/mark.png" alt="" width="28" height="28" aria-hidden="true">
         <span>WumboLabs</span>
       </a>
       <div class="nav-links">
@@ -61,7 +67,7 @@
     <div class="container footer-grid">
       <div>
         <p class="footer-brand">
-          <img class="footer-mark" src="/img/wumbolabs-mark.png" alt="" aria-hidden="true">
+          <img class="footer-mark" src="/img/brand/mark.png" alt="" width="24" height="24" aria-hidden="true">
           <strong>WumboLabs</strong>
           <span class="version">{{ config.extra.site_version }}</span>
         </p>

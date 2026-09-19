@@ -25,7 +25,7 @@ import re
 import sys
 from html import unescape as html_unescape
 from pathlib import Path
-from urllib.parse import unquote
+from urllib.parse import unquote, urlsplit
 
 PUBLIC = Path("public")
 REGISTRY = Path("data/labs-registry.json")
@@ -277,10 +277,10 @@ def main() -> int:
     for path in html_files:
         body = html(path)
         for href in re.findall(r'(?:href|src)="(/[^"]*)"', body):
-            href = unquote(href)
+            href = html_unescape(href)
             if href.startswith("//"):
                 continue
-            target = href.split("#", 1)[0]
+            target = unquote(urlsplit(href).path)
             if not target or target == "/":
                 continue
             fs_path = PUBLIC / target.lstrip("/")
