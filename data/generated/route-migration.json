@@ -201,6 +201,15 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/bonsai-2-27b/",
+      "content_type": "model-page",
+      "model_id": "bonsai-2-27b",
+      "event_id": null,
+      "new_url": "/evaluations/bonsai-2-27b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

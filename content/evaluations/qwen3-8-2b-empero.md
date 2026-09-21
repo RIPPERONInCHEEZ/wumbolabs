@@ -2,7 +2,7 @@
 title = "Qwen3.8-2B (Empero)"
 description = "Qwen3.8-2B (Empero) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 17
+weight = 18
 
 [extra]
 kind = "model"
@@ -33,7 +33,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/3b775bff3f9ccdb7dc9a1a2310ac1910c43e94aa/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/cc3564a5d0974e77d0419b647f93f02f1e5edd5c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -50,7 +50,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Specialized Test — vendor alignment** · profile: vLLM BF16 vendor-alignment battery · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/3b775bff3f9ccdb7dc9a1a2310ac1910c43e94aa/models/qwen3.8-2b-empero)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/cc3564a5d0974e77d0419b647f93f02f1e5edd5c/models/qwen3.8-2b-empero)
 
 ### Identity and scope
 
@@ -69,7 +69,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen3.8-2b-empero-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/3b775bff3f9ccdb7dc9a1a2310ac1910c43e94aa/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+- **qwen3.8-2b-empero-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/cc3564a5d0974e77d0419b647f93f02f1e5edd5c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
 
 ### Legacy provenance
 

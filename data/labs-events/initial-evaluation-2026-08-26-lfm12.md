@@ -123,12 +123,12 @@ The 1.2B creates a genuinely better always-resident micro-sidecar niche (twice a
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/3b775bff3f9ccdb7dc9a1a2310ac1910c43e94aa/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/cc3564a5d0974e77d0419b647f93f02f1e5edd5c/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/3b775bff3f9ccdb7dc9a1a2310ac1910c43e94aa/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/cc3564a5d0974e77d0419b647f93f02f1e5edd5c/models
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/3b775bff3f9ccdb7dc9a1a2310ac1910c43e94aa/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/cc3564a5d0974e77d0419b647f93f02f1e5edd5c/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0)
 
 This Lab Record is a summary; the canonical repo is the source of truth.

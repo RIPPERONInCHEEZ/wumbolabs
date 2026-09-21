@@ -121,9 +121,37 @@
       "resolved_commit": "5e3bc1d441a90047d5c0cad324469758e96104a6",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/5e3bc1d441a90047d5c0cad324469758e96104a6/models/mellum2-12b-a2.5b/events/mellum2-12b-a25b-thinking-rtx5070-welp-recharacterization-2026-09-16/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-bonsai2-27b-welp-characterization-2026-09-18": {
+      "file": "data/generated/evaluations-exports/bonsai2-27b-rtx5070-welp-20260918.json",
+      "sha256": "1de9cc7c066e4b9743cfd0310c5b2c894bb4254ca1b0d786e46809f36037f740",
+      "repo": "WumboLabs/evaluations",
+      "ref": "ea0bfa374bc22787357615d4fc2b8ff6883bccd7",
+      "path": "models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/website-publication.json",
+      "resolved_commit": "ea0bfa374bc22787357615d4fc2b8ff6883bccd7",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/ea0bfa374bc22787357615d4fc2b8ff6883bccd7/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-bonsai2-27b-welp-methodology-supplement-2026-09-20": {
+      "file": "data/generated/evaluations-exports/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920.json",
+      "sha256": "4a5c4013173c00d2ef74378279b187ef3876f6ca3a6550a6d73c981284a8d715",
+      "repo": "WumboLabs/evaluations",
+      "ref": "ea0bfa374bc22787357615d4fc2b8ff6883bccd7",
+      "path": "models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/website-publication.json",
+      "resolved_commit": "ea0bfa374bc22787357615d4fc2b8ff6883bccd7",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/ea0bfa374bc22787357615d4fc2b8ff6883bccd7/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
+    {
+      "slug": "eval-bonsai2-27b-welp-characterization-2026-09-18",
+      "campaign": "bonsai-2-27b-rtx5070-welp-characterization-2026-09-18"
+    },
+    {
+      "slug": "eval-bonsai2-27b-welp-methodology-supplement-2026-09-20",
+      "campaign": "bonsai-2-27b-welp-methodology-supplement-2026-09-20"
+    },
     {
       "slug": "eval-gemma-4-12b-recharacterization-2026-09-12",
       "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
@@ -174,6 +202,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 21,
-  "model_events": 45
+  "models": 22,
+  "model_events": 47
 }

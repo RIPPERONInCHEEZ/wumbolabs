@@ -3,6 +3,15 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
+      "model_id": "bonsai-2-27b",
+      "display_name": "Ternary Bonsai 2 27B",
+      "page": "/evaluations/bonsai-2-27b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 2,
+      "event_count": 2,
+      "latest_evidence_date": "2026-09-20"
+    },
+    {
       "model_id": "mellum2-12b-a2.5b",
       "display_name": "Mellum2 12B-A2.5B",
       "page": "/evaluations/mellum2-12b-a2-5b/",
