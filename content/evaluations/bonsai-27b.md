@@ -2,7 +2,7 @@
 title = "Bonsai 27B (Q1_0)"
 description = "Bonsai 27B (Q1_0) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 21
+weight = 19
 
 [extra]
 kind = "model"
@@ -12,7 +12,7 @@ recommended_profile_id = "bonsai-27b-q1-0-llamacpp"
 recommended_profile_name = "llama.cpp Q1_0 (unscored smoke payload)"
 profile_count = 1
 event_count = 1
-latest_event_date = 2026-07-14
+latest_evidence_date = 2026-07-14
 +++
 
 WumboLabs tests **Bonsai 27B (Q1_0)** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

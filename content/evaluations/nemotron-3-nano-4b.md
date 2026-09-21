@@ -2,7 +2,7 @@
 title = "Nemotron 3 Nano 4B"
 description = "Nemotron 3 Nano 4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 2
+weight = 6
 
 [extra]
 kind = "model"
@@ -14,7 +14,7 @@ recommended_profile_name = "llama.cpp Q4_K_M"
 practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 1
 event_count = 2
-latest_event_date = 2026-09-11
+latest_evidence_date = 2026-09-11
 +++
 
 WumboLabs tests **Nemotron 3 Nano 4B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

@@ -3,121 +3,13 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
-      "model_id": "qwen38-27b",
-      "display_name": "Qwen3.8-27B",
-      "page": "/evaluations/qwen38-27b/",
-      "classification": "COMPLETED_DEEP_EVALUATION",
-      "profile_count": 2,
-      "event_count": 4,
-      "latest_event_date": "2026-09-12"
-    },
-    {
-      "model_id": "nemotron-3-nano-4b",
-      "display_name": "Nemotron 3 Nano 4B",
-      "page": "/evaluations/nemotron-3-nano-4b/",
-      "classification": "READY_WITH_GUARDRAILS",
-      "profile_count": 1,
-      "event_count": 2,
-      "latest_event_date": "2026-09-11"
-    },
-    {
-      "model_id": "apodex-1.1-mini",
-      "display_name": "Apodex 1.1 mini",
-      "page": "/evaluations/apodex-1-1-mini/",
-      "classification": "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE",
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-08-25"
-    },
-    {
-      "model_id": "lfm2.5-2.6b",
-      "display_name": "LFM2.5 2.6B",
-      "page": "/evaluations/lfm2-5-2-6b/",
-      "classification": "COMPLETE_SMALL_MODEL_EVALUATION",
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-08-26"
-    },
-    {
-      "model_id": "lfm2.5-1.2b",
-      "display_name": "LFM2.5 1.2B",
-      "page": "/evaluations/lfm2-5-1-2b/",
-      "classification": "COMPLETE_SMALL_MODEL_EVALUATION",
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-08-26"
-    },
-    {
-      "model_id": "ornith-1.5-9b",
-      "display_name": "Ornith 1.5 9B",
-      "page": "/evaluations/ornith-1-5-9b/",
-      "classification": "COMPLETE / FINAL_WELP_READINESS_NOT_READY",
-      "profile_count": 1,
-      "event_count": 2,
-      "latest_event_date": "2026-09-02"
-    },
-    {
-      "model_id": "qwen35-4b",
-      "display_name": "Qwen3.5-4B",
-      "page": "/evaluations/qwen35-4b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-09-11"
-    },
-    {
-      "model_id": "qwen35-9b",
-      "display_name": "Qwen3.5-9B",
-      "page": "/evaluations/qwen35-9b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-09-11"
-    },
-    {
-      "model_id": "minicpm5-2b",
-      "display_name": "MiniCPM5-2B",
-      "page": "/evaluations/minicpm5-2b/",
-      "classification": "READY_WITH_GUARDRAILS",
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-09-10"
-    },
-    {
-      "model_id": "gemma4-e4b",
-      "display_name": "Gemma 4 E4B",
-      "page": "/evaluations/gemma4-e4b/",
-      "classification": "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL",
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_event_date": "2026-09-10"
-    },
-    {
-      "model_id": "gemma-4-12b",
-      "display_name": "Gemma 4 12B IT",
-      "page": "/evaluations/gemma-4-12b/",
-      "classification": "READY_WITH_GUARDRAILS",
-      "profile_count": 4,
-      "event_count": 6,
-      "latest_event_date": "2026-09-12"
-    },
-    {
       "model_id": "mellum2-12b-a2.5b",
       "display_name": "Mellum2 12B-A2.5B",
       "page": "/evaluations/mellum2-12b-a2-5b/",
       "classification": "LIMITED_ROLE_ONLY",
       "profile_count": 2,
       "event_count": 5,
-      "latest_event_date": "2026-09-16"
-    },
-    {
-      "model_id": "qwen3-14b",
-      "display_name": "Qwen3-14B",
-      "page": "/evaluations/qwen3-14b/",
-      "classification": "READY_WITH_GUARDRAILS",
-      "profile_count": 3,
-      "event_count": 4,
-      "latest_event_date": "2026-09-14"
+      "latest_evidence_date": "2026-09-16"
     },
     {
       "model_id": "qwen3.6-35b-a3b",
@@ -126,43 +18,88 @@
       "classification": "LIMITED_ROLE_ONLY",
       "profile_count": 2,
       "event_count": 3,
-      "latest_event_date": "2026-09-15"
+      "latest_evidence_date": "2026-09-15"
     },
     {
-      "model_id": "gemmable-4-12b",
-      "display_name": "Gemmable 4 12B MTP",
-      "page": "/evaluations/gemmable-4-12b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 2,
-      "latest_event_date": "2026-07-04"
+      "model_id": "qwen3-14b",
+      "display_name": "Qwen3-14B",
+      "page": "/evaluations/qwen3-14b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 3,
+      "event_count": 4,
+      "latest_evidence_date": "2026-09-14"
     },
     {
-      "model_id": "grug-12b",
-      "display_name": "Grug 12B",
-      "page": "/evaluations/grug-12b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 2,
-      "latest_event_date": "2026-07-04"
+      "model_id": "gemma-4-12b",
+      "display_name": "Gemma 4 12B IT",
+      "page": "/evaluations/gemma-4-12b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 4,
+      "event_count": 6,
+      "latest_evidence_date": "2026-09-12"
     },
     {
-      "model_id": "qwen2.5-3b",
-      "display_name": "Qwen2.5-3B Instruct",
-      "page": "/evaluations/qwen2-5-3b/",
-      "classification": null,
+      "model_id": "qwen38-27b",
+      "display_name": "Qwen3.8-27B",
+      "page": "/evaluations/qwen38-27b/",
+      "classification": "COMPLETED_DEEP_EVALUATION",
       "profile_count": 2,
-      "event_count": 2,
-      "latest_event_date": "2026-07-15"
+      "event_count": 4,
+      "latest_evidence_date": "2026-09-12"
     },
     {
-      "model_id": "qwen3.8-2b-empero",
-      "display_name": "Qwen3.8-2B (Empero)",
-      "page": "/evaluations/qwen3-8-2b-empero/",
+      "model_id": "nemotron-3-nano-4b",
+      "display_name": "Nemotron 3 Nano 4B",
+      "page": "/evaluations/nemotron-3-nano-4b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 1,
+      "event_count": 2,
+      "latest_evidence_date": "2026-09-11"
+    },
+    {
+      "model_id": "qwen35-4b",
+      "display_name": "Qwen3.5-4B",
+      "page": "/evaluations/qwen35-4b/",
       "classification": null,
       "profile_count": 1,
       "event_count": 1,
-      "latest_event_date": "2026-08-18"
+      "latest_evidence_date": "2026-09-11"
+    },
+    {
+      "model_id": "qwen35-9b",
+      "display_name": "Qwen3.5-9B",
+      "page": "/evaluations/qwen35-9b/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-09-11"
+    },
+    {
+      "model_id": "gemma4-e4b",
+      "display_name": "Gemma 4 E4B",
+      "page": "/evaluations/gemma4-e4b/",
+      "classification": "READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-09-10"
+    },
+    {
+      "model_id": "minicpm5-2b",
+      "display_name": "MiniCPM5-2B",
+      "page": "/evaluations/minicpm5-2b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-09-10"
+    },
+    {
+      "model_id": "ornith-1.5-9b",
+      "display_name": "Ornith 1.5 9B",
+      "page": "/evaluations/ornith-1-5-9b/",
+      "classification": "COMPLETE / FINAL_WELP_READINESS_NOT_READY",
+      "profile_count": 1,
+      "event_count": 2,
+      "latest_evidence_date": "2026-09-02"
     },
     {
       "model_id": "qwen3.8-4b-empero",
@@ -171,7 +108,7 @@
       "classification": null,
       "profile_count": 2,
       "event_count": 2,
-      "latest_event_date": "2026-09-01"
+      "latest_evidence_date": "2026-09-01"
     },
     {
       "model_id": "qwen3.8-9b-empero",
@@ -180,7 +117,52 @@
       "classification": null,
       "profile_count": 2,
       "event_count": 2,
-      "latest_event_date": "2026-09-01"
+      "latest_evidence_date": "2026-09-01"
+    },
+    {
+      "model_id": "lfm2.5-1.2b",
+      "display_name": "LFM2.5 1.2B",
+      "page": "/evaluations/lfm2-5-1-2b/",
+      "classification": "COMPLETE_SMALL_MODEL_EVALUATION",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-08-26"
+    },
+    {
+      "model_id": "lfm2.5-2.6b",
+      "display_name": "LFM2.5 2.6B",
+      "page": "/evaluations/lfm2-5-2-6b/",
+      "classification": "COMPLETE_SMALL_MODEL_EVALUATION",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-08-26"
+    },
+    {
+      "model_id": "apodex-1.1-mini",
+      "display_name": "Apodex 1.1 mini",
+      "page": "/evaluations/apodex-1-1-mini/",
+      "classification": "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-08-25"
+    },
+    {
+      "model_id": "qwen3.8-2b-empero",
+      "display_name": "Qwen3.8-2B (Empero)",
+      "page": "/evaluations/qwen3-8-2b-empero/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-08-18"
+    },
+    {
+      "model_id": "qwen2.5-3b",
+      "display_name": "Qwen2.5-3B Instruct",
+      "page": "/evaluations/qwen2-5-3b/",
+      "classification": null,
+      "profile_count": 2,
+      "event_count": 2,
+      "latest_evidence_date": "2026-07-15"
     },
     {
       "model_id": "bonsai-27b",
@@ -189,7 +171,25 @@
       "classification": null,
       "profile_count": 1,
       "event_count": 1,
-      "latest_event_date": "2026-07-14"
+      "latest_evidence_date": "2026-07-14"
+    },
+    {
+      "model_id": "gemmable-4-12b",
+      "display_name": "Gemmable 4 12B MTP",
+      "page": "/evaluations/gemmable-4-12b/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 2,
+      "latest_evidence_date": "2026-07-04"
+    },
+    {
+      "model_id": "grug-12b",
+      "display_name": "Grug 12B",
+      "page": "/evaluations/grug-12b/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 2,
+      "latest_evidence_date": "2026-07-04"
     }
   ]
 }

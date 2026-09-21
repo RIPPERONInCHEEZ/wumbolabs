@@ -2,7 +2,7 @@
 title = "Qwen3.8-27B"
 description = "Qwen3.8-27B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 1
+weight = 5
 
 [extra]
 kind = "model"
@@ -14,7 +14,7 @@ recommended_profile_name = "ExLlamaV3 H1 (SC_2.20bpw_H3_V3)"
 practical_context = "65,536 default / 98,304 guarded tokens"
 profile_count = 2
 event_count = 4
-latest_event_date = 2026-09-12
+latest_evidence_date = 2026-09-12
 +++
 
 WumboLabs tests **Qwen3.8-27B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

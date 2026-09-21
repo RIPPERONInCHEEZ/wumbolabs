@@ -2,7 +2,7 @@
 title = "MiniCPM5-2B"
 description = "MiniCPM5-2B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 9
+weight = 10
 
 [extra]
 kind = "model"
@@ -14,7 +14,7 @@ recommended_profile_name = "contained vLLM BF16"
 practical_context = "32,768 default / 65,536 guarded tokens"
 profile_count = 1
 event_count = 1
-latest_event_date = 2026-09-10
+latest_evidence_date = 2026-09-10
 +++
 
 WumboLabs tests **MiniCPM5-2B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

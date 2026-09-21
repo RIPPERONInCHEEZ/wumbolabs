@@ -2,7 +2,7 @@
 title = "Qwen2.5-3B Instruct"
 description = "Qwen2.5-3B Instruct — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 17
+weight = 18
 
 [extra]
 kind = "model"
@@ -12,7 +12,7 @@ recommended_profile_id = "qwen2.5-3b-vllm-bf16"
 recommended_profile_name = "vLLM BF16 (cross-runtime lane)"
 profile_count = 2
 event_count = 2
-latest_event_date = 2026-07-15
+latest_evidence_date = 2026-07-15
 +++
 
 WumboLabs tests **Qwen2.5-3B Instruct** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

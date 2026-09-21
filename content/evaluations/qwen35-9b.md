@@ -13,7 +13,7 @@ recommended_profile_name = "llama.cpp Q8_0 GGUF"
 practical_context = "32,768 default / 65,536 guarded tokens"
 profile_count = 1
 event_count = 1
-latest_event_date = 2026-09-11
+latest_evidence_date = 2026-09-11
 +++
 
 WumboLabs tests **Qwen3.5-9B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

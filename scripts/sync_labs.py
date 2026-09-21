@@ -610,8 +610,13 @@ def anchor_link(entry: dict[str, Any]) -> str:
     return f'[{title} ({entry["event_date"]})](/evaluations/{url_slug(entry["model_id"])}#{entry["event_id"]})'
 
 
+def latest_evidence_date(entries: list[dict[str, Any]]) -> str | None:
+    """Newest authoritative event date for one model's evidence."""
+    return max((e["event_date"] for e in entries), default=None)
+
+
 def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
-                      exports: dict[str, dict[str, Any]],
+                      exports: dict[str, dict[str, Any]], catalog_weight: int,
                       shared_for_model: list[dict[str, Any]] | None = None) -> str:
     mid = model["model_id"]
     display = model["display_name"]
@@ -620,7 +625,6 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     ctx_event = current_event(entries, "context")
     rec_event = recommended_profile(entries)
     latest = entries_sorted[0]
-
     profile_events: dict[str, list[dict[str, Any]]] = {}
     for e in entries:
         profile_events.setdefault(e["profile_id"], []).append(e)
@@ -650,9 +654,7 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     lines.append(f'title = "{display}"')
     lines.append(f'description = "{desc}"')
     lines.append('template = "lab_model.html"')
-    weight = model.get("weight")
-    if weight is not None:
-        lines.append(f"weight = {weight}")
+    lines.append(f"weight = {catalog_weight}")
     lines.append("")
     lines.append("[extra]")
     lines.append("kind = \"model\"")
@@ -673,7 +675,7 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
             lines.append(f'practical_context = "{practical} tokens"')
     lines.append(f"profile_count = {len(profile_ids)}")
     lines.append(f"event_count = {len(entries)}")
-    lines.append(f'latest_event_date = {latest["event_date"]}')
+    lines.append(f'latest_evidence_date = {latest["event_date"]}')
     lines.append("+++")
     lines.append("")
 
@@ -879,7 +881,8 @@ def write_if_changed(path: Path, content: str) -> bool:
     return True
 
 
-def build_models_data(registry: dict[str, Any], page_meta: dict[str, dict[str, Any]]) -> dict[str, Any]:
+def build_models_data(models: list[dict[str, Any]],
+                      page_meta: dict[str, dict[str, Any]]) -> dict[str, Any]:
     return {
         "version": 1,
         "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
@@ -890,7 +893,7 @@ def build_models_data(registry: dict[str, Any], page_meta: dict[str, dict[str, A
                 "page": f"/evaluations/{url_slug(m['model_id'])}/",
                 **page_meta.get(m["model_id"], {}),
             }
-            for m in registry["models"]
+            for m in models
         ],
     }
 
@@ -1075,10 +1078,31 @@ def run(local_exports: Path | None, check_only: bool) -> int:
             "classification": (current_event(entries, "model-classification") or {}).get("welp_status"),
             "profile_count": len({e["profile_id"] for e in entries} | related_pids),
             "event_count": len(entries),
-            "latest_event_date": max(e["event_date"] for e in entries),
+            "latest_evidence_date": latest_evidence_date(entries),
         }
+
+    dated_models = [
+        model for model in registry["models"]
+        if page_meta[model["model_id"]]["latest_evidence_date"] is not None
+    ]
+    dated_models.sort(key=lambda model: model["display_name"].casefold())
+    dated_models.sort(
+        key=lambda model: page_meta[model["model_id"]]["latest_evidence_date"],
+        reverse=True,
+    )
+    undated_models = sorted(
+        (model for model in registry["models"]
+         if page_meta[model["model_id"]]["latest_evidence_date"] is None),
+        key=lambda model: model["display_name"].casefold(),
+    )
+    catalog_models = dated_models + undated_models
+
+    for catalog_weight, model in enumerate(catalog_models, start=1):
+        mid = model["model_id"]
+        entries = entries_by_model.get(mid) or []
         record_output(BASE / EVALUATIONS_PAGES / f"{url_slug(mid)}.md",
-                      render_model_page(model, entries, exports, shared_by_model.get(mid)))
+                      render_model_page(model, entries, exports, catalog_weight,
+                                        shared_by_model.get(mid)))
 
     for entry in registry["records"]:
         for url in entry.get("legacy_urls") or []:
@@ -1088,7 +1112,7 @@ def run(local_exports: Path | None, check_only: bool) -> int:
     redirects_content = build_redirects(registry["models"], registry)
     migration_data = build_route_migration(registry["models"], registry)
 
-    models_data = build_models_data(registry, page_meta)
+    models_data = build_models_data(catalog_models, page_meta)
     events_data = build_events_data(registry, exports)
     freshness = {
         "version": 2,

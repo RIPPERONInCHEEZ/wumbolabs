@@ -2,7 +2,7 @@
 
 {% block title %}Evaluations — Model Catalog | {{ config.title }}{% endblock title %}
 
-{% block head %}<script src="/js/evaluations-catalog.js" defer></script>{% endblock head %}
+{% block head %}<script src="/js/evaluations-catalog.js?v={{ config.extra.site_version }}" defer></script>{% endblock head %}
 
 {% block content %}
 {% set models = get_section(path="evaluations/_index.md") %}
@@ -32,7 +32,15 @@
         <label for="evaluation-search">Search evaluations</label>
         <input id="evaluation-search" type="search" placeholder="Search model, producer, artifact, or status" autocomplete="off">
       </div>
-      <p class="evaluation-results" id="evaluation-results" role="status" aria-live="polite">All evaluations are shown.</p>
+      <div class="evaluation-sort">
+        <label for="evaluation-sort">Sort</label>
+        <select id="evaluation-sort">
+          <option value="newest" selected>Newest evidence</option>
+          <option value="oldest">Oldest evidence</option>
+          <option value="model">Model A–Z</option>
+          <option value="producer">Producer A–Z</option>
+        </select>
+      </div>
       <div class="evaluation-page-size">
         <label for="evaluation-page-size">Rows per page</label>
         <select id="evaluation-page-size">
@@ -42,6 +50,7 @@
           <option value="all">All</option>
         </select>
       </div>
+      <p class="evaluation-results" id="evaluation-results" role="status" aria-live="polite">All evaluations are shown.</p>
       <div class="evaluation-pagination" role="group" aria-label="Evaluation catalog pages">
         <button id="evaluation-previous" type="button">Previous</button>
         <span id="evaluation-page-indicator" aria-live="polite"></span>
@@ -56,6 +65,7 @@
             <th scope="col">Model</th>
             <th scope="col">Producer</th>
             <th scope="col">Artifact / quant</th>
+            <th scope="col">Latest evidence</th>
             <th scope="col">Status</th>
             <th scope="col">Evidence</th>
           </tr>
@@ -66,12 +76,14 @@
               {% set classification = page.extra | get(key="classification", default="Evidence in progress") %}
               {% set profile = page.extra | get(key="recommended_profile_name", default="No recommended profile recorded") %}
               {% set practical_context = page.extra | get(key="practical_context", default="Not recorded") %}
-              <tr data-evaluation-row data-search="{{ page.title }} {{ page.extra.model_id }} {{ page.extra.vendor }} {{ profile }} {{ classification }} {{ practical_context | lower }}">
+              {% set latest_evidence_date = page.extra | get(key="latest_evidence_date", default="") %}
+              <tr data-evaluation-row data-model-id="{{ page.extra.model_id }}" data-model="{{ page.title | lower }}" data-producer="{{ page.extra.vendor | lower }}" data-latest-evidence="{{ latest_evidence_date }}" data-search="{{ page.title | lower }} {{ page.extra.model_id | lower }} {{ page.extra.vendor | lower }} {{ profile | lower }} {{ classification | lower }} {{ practical_context | lower }}">
                 <th scope="row"><a href="{{ page.permalink }}">{{ page.title }}</a></th>
                 <td>{{ page.extra.vendor }}</td>
                 <td>{{ profile }}</td>
+                <td>{% if latest_evidence_date %}{{ latest_evidence_date }}{% else %}Not recorded{% endif %}</td>
                 <td>{{ classification | replace(from='_', to=' ') | lower }}</td>
-                <td><a href="{{ page.permalink }}">{{ page.extra.event_count }} event{% if page.extra.event_count != 1 %}s{% endif %} · {{ page.extra.latest_event_date }}</a></td>
+                <td><a href="{{ page.permalink }}">{{ page.extra.event_count }} event{% if page.extra.event_count != 1 %}s{% endif %}</a></td>
               </tr>
             {% endif %}
           {% endfor %}

@@ -2,7 +2,7 @@
 title = "Qwen3.8-2B (Empero)"
 description = "Qwen3.8-2B (Empero) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 18
+weight = 17
 
 [extra]
 kind = "model"
@@ -12,7 +12,7 @@ recommended_profile_id = "qwen3.8-2b-empero-vllm-bf16"
 recommended_profile_name = "vLLM BF16 vendor-alignment battery"
 profile_count = 1
 event_count = 1
-latest_event_date = 2026-08-18
+latest_evidence_date = 2026-08-18
 +++
 
 WumboLabs tests **Qwen3.8-2B (Empero)** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

@@ -21,7 +21,7 @@
     <p class="page-record-description">{{ page.description }}</p>
     <p class="page-record-date">
       {% if page.extra.classification %}{{ page.extra.classification | replace(from='_', to=' ') }}{% endif %}
-      {% if page.extra.latest_event_date %} / latest evidence {{ page.extra.latest_event_date }}{% endif %}
+      {% if page.extra.latest_evidence_date %} / latest evidence {{ page.extra.latest_evidence_date }}{% endif %}
     </p>
   </header>
 

@@ -3,7 +3,9 @@
   if (!catalog) return;
 
   const rows = Array.from(catalog.querySelectorAll('[data-evaluation-row]'));
+  const tbody = rows[0]?.parentElement;
   const search = document.getElementById('evaluation-search');
+  const sort = document.getElementById('evaluation-sort');
   const pageSize = document.getElementById('evaluation-page-size');
   const status = document.getElementById('evaluation-results');
   const previous = document.getElementById('evaluation-previous');
@@ -13,19 +15,42 @@
   const controls = document.getElementById('evaluation-controls');
   let page = 1;
 
+  const compareText = (left, right) => {
+    if (left < right) return -1;
+    if (left > right) return 1;
+    return 0;
+  };
+  const compareModel = (left, right) => compareText(left.dataset.model, right.dataset.model);
   const pageSizeValue = () => pageSize.value === 'all' ? Infinity : Number(pageSize.value);
   const matchingRows = () => {
-    const query = search.value.trim().toLocaleLowerCase();
+    const query = search.value.trim().toLowerCase();
     return rows.filter((row) => row.dataset.search.includes(query));
   };
+  const sortedRows = (matching) => matching.sort((left, right) => {
+    if (sort.value === 'model') return compareModel(left, right);
+    if (sort.value === 'producer') {
+      return compareText(left.dataset.producer, right.dataset.producer) || compareModel(left, right);
+    }
+
+    const leftDate = left.dataset.latestEvidence;
+    const rightDate = right.dataset.latestEvidence;
+    if (!leftDate || !rightDate) {
+      if (leftDate) return -1;
+      if (rightDate) return 1;
+      return compareModel(left, right);
+    }
+    const dateOrder = compareText(leftDate, rightDate);
+    return (sort.value === 'oldest' ? dateOrder : -dateOrder) || compareModel(left, right);
+  });
 
   const render = () => {
-    const matching = matchingRows();
+    const matching = sortedRows(matchingRows());
     const size = pageSizeValue();
     const pages = Math.max(1, Math.ceil(matching.length / size));
     const first = size === Infinity ? 0 : (page - 1) * size;
     const visible = new Set(matching.slice(first, first + size));
 
+    if (tbody) tbody.append(...matching);
     rows.forEach((row) => { row.hidden = !visible.has(row); });
     const activeControl = document.activeElement;
     previous.disabled = page === 1;
@@ -48,6 +73,7 @@
   };
 
   search.addEventListener('input', () => { page = 1; render(); });
+  sort.addEventListener('change', () => { page = 1; render(); });
   pageSize.addEventListener('change', () => { page = 1; render(); });
   previous.addEventListener('click', () => { page -= 1; render(); });
   next.addEventListener('click', () => { page += 1; render(); });

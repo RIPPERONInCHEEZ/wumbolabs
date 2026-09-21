@@ -9,6 +9,7 @@ contracts against the built site (public/) and generated datasets
 
 Checks:
   - one Evaluations index; exactly one canonical page per registry model;
+  - catalog rows derive latest evidence from canonical event dates and sort deterministically;
   - primary navigation exposes Projects, Evaluations, Reports, and Methodology;
   - retired /labs/ routes and event stubs preserve their model-page targets;
   - Reports retains its index and each technical-record URL;
@@ -31,6 +32,7 @@ PUBLIC = Path("public")
 REGISTRY = Path("data/labs-registry.json")
 REDIRECTS_FILE = Path("static/_redirects")
 EVENTS_DATA = Path("data/generated/labs-events.json")
+MODELS_DATA = Path("data/generated/labs-models.json")
 ROUTE_MIGRATION = Path("data/generated/route-migration.json")
 
 failures: list[str] = []
@@ -65,6 +67,10 @@ def redirect_sources() -> set[str]:
         sources.add(line.split()[0])
     return sources
 
+def data_attr(attrs: str, name: str) -> str | None:
+    match = re.search(rf'\b{name}="([^"]*)"', attrs)
+    return match.group(1) if match else None
+
 
 def main() -> int:
     if not PUBLIC.is_dir():
@@ -74,6 +80,7 @@ def main() -> int:
     registry = load_json(REGISTRY)
     models = registry["models"]
     events = load_json(EVENTS_DATA)["events"]
+    generated_models = {m["model_id"]: m for m in load_json(MODELS_DATA)["models"]}
     migration = load_json(ROUTE_MIGRATION)["mappings"]
     redirects = redirect_sources()
 
@@ -90,6 +97,58 @@ def main() -> int:
     check(len(built_dirs) == len(model_slugs),
           "model page count mismatch under /evaluations/")
 
+    # 1b. The catalog is a static evidence index before JavaScript enhances it.
+    if eval_index.is_file():
+        catalog = html_unescape(html(eval_index))
+        rows = re.findall(
+            r"<tr data-evaluation-row\b(?P<attrs>[^>]*)>(?P<body>.*?)</tr>",
+            catalog,
+            flags=re.DOTALL,
+        )
+        row_ids = [data_attr(attrs, "data-model-id") for attrs, _ in rows]
+        check(len(rows) == len(models),
+              f"catalog row count {len(rows)} does not match registry models {len(models)}")
+        check(all(row_ids) and len(set(row_ids)) == len(row_ids),
+              "catalog rows must have one unique data-model-id each")
+        check(set(row_ids) == {m["model_id"] for m in models},
+              "catalog rows omit or add registry models")
+        check("<th scope=\"col\">Latest evidence</th>" in catalog,
+              "catalog lacks a Latest evidence column")
+        check('id="evaluation-sort"' in catalog,
+              "catalog lacks the Sort control")
+        for option in ("Newest evidence", "Oldest evidence", "Model A–Z", "Producer A–Z"):
+            check(f">{option}</option>" in catalog, f"catalog sort option missing: {option}")
+
+        events_by_model: dict[str, list[dict]] = {}
+        for event in events:
+            events_by_model.setdefault(event["model_id"], []).append(event)
+        model_by_id = {m["model_id"]: m for m in models}
+        expected_order: list[tuple[str, str]] = []
+        for model in sorted(models, key=lambda item: item["display_name"].casefold()):
+            latest = max(e["event_date"] for e in events_by_model.get(model["model_id"], []))
+            expected_order.append((latest, model["model_id"]))
+        expected_order.sort(key=lambda item: item[0], reverse=True)
+        expected_ids = [model_id for _, model_id in expected_order]
+        check(row_ids == expected_ids,
+              "catalog static rows must sort newest event_date first, then Model A–Z")
+
+        for attrs, body in rows:
+            model_id = data_attr(attrs, "data-model-id")
+            assert model_id is not None
+            model = model_by_id[model_id]
+            latest = max(e["event_date"] for e in events_by_model[model_id])
+            check(data_attr(attrs, "data-model") == model["display_name"].lower(),
+                  f"{model_id}: data-model disagrees with display name")
+            check(data_attr(attrs, "data-producer") == model["vendor"].lower(),
+                  f"{model_id}: data-producer disagrees with canonical producer")
+            check(data_attr(attrs, "data-latest-evidence") == latest,
+                  f"{model_id}: data-latest-evidence disagrees with event_date")
+            check(generated_models.get(model_id, {}).get("latest_evidence_date") == latest,
+                  f"{model_id}: generated latest_evidence_date disagrees with event_date")
+            check(f"<td>{latest}</td>" in body,
+                  f"{model_id}: rendered Latest evidence does not match event_date")
+            check(model_id in (data_attr(attrs, "data-search") or ""),
+                  f"{model_id}: data-search omits model identifier")
     # 2. navigation: canonical public surfaces are discoverable; Labs is retired.
     home = html(PUBLIC / "index.html")
     for label, dest in (("Evaluations", "/evaluations/"), ("Projects", "/projects/"),

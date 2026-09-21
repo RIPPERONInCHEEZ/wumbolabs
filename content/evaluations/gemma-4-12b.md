@@ -2,7 +2,7 @@
 title = "Gemma 4 12B IT"
 description = "Gemma 4 12B IT — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 11
+weight = 4
 
 [extra]
 kind = "model"
@@ -14,7 +14,7 @@ recommended_profile_name = "llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL
 practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 4
 event_count = 6
-latest_event_date = 2026-09-12
+latest_evidence_date = 2026-09-12
 +++
 
 WumboLabs tests **Gemma 4 12B IT** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

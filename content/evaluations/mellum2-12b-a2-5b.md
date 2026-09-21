@@ -2,7 +2,7 @@
 title = "Mellum2 12B-A2.5B"
 description = "Mellum2 12B-A2.5B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 12
+weight = 1
 
 [extra]
 kind = "model"
@@ -14,7 +14,7 @@ recommended_profile_name = "llama.cpp Q4_K_M (Instruct)"
 practical_context = "16,384 default / 8,192 guarded tokens"
 profile_count = 2
 event_count = 5
-latest_event_date = 2026-09-16
+latest_evidence_date = 2026-09-16
 +++
 
 WumboLabs tests **Mellum2 12B-A2.5B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

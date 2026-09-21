@@ -2,7 +2,7 @@
 title = "Qwen3.8-9B (Empero)"
 description = "Qwen3.8-9B (Empero) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 20
+weight = 13
 
 [extra]
 kind = "model"
@@ -12,7 +12,7 @@ recommended_profile_id = "qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver"
 recommended_profile_name = "llama.cpp Distill Q4_K_M/Q5_K_M/Q6_K (WumboServer RTX 2060S lane)"
 profile_count = 2
 event_count = 2
-latest_event_date = 2026-09-01
+latest_evidence_date = 2026-09-01
 +++
 
 WumboLabs tests **Qwen3.8-9B (Empero)** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

@@ -2,7 +2,7 @@
 title = "Apodex 1.1 mini"
 description = "Apodex 1.1 mini — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 3
+weight = 16
 
 [extra]
 kind = "model"
@@ -13,7 +13,7 @@ recommended_profile_id = "apodex-1.1-mini-llamacpp-iq1m"
 recommended_profile_name = "llama.cpp IQ1_M (community conversion)"
 profile_count = 1
 event_count = 1
-latest_event_date = 2026-08-25
+latest_evidence_date = 2026-08-25
 +++
 
 WumboLabs tests **Apodex 1.1 mini** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.

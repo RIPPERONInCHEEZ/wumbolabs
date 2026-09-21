@@ -2,7 +2,7 @@
 title = "Grug 12B"
 description = "Grug 12B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 16
+weight = 21
 
 [extra]
 kind = "model"
@@ -12,7 +12,7 @@ recommended_profile_id = "grug-12b-llamacpp-q4km"
 recommended_profile_name = "llama.cpp Q4_K_M"
 profile_count = 1
 event_count = 2
-latest_event_date = 2026-07-04
+latest_evidence_date = 2026-07-04
 +++
 
 WumboLabs tests **Grug 12B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
