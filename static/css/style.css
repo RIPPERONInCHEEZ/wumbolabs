@@ -1913,6 +1913,10 @@ main h2:target {
   max-width: 64rem;
 }
 
+.evaluations-page {
+  max-width: 78rem;
+}
+
 .archive-section {
   margin-top: 3.5rem;
 }
@@ -2257,7 +2261,7 @@ body {
 
 .evaluation-catalog-controls {
   display: grid;
-  grid-template-columns: minmax(15rem, 1fr) auto auto;
+  grid-template-columns: minmax(16rem, 2fr) minmax(12rem, 1fr) minmax(10rem, 1fr);
   gap: 1rem;
   align-items: end;
   margin: 1.5rem 0;
@@ -2266,7 +2270,9 @@ body {
   background: var(--wl-bg-panel);
 }
 
-.evaluation-search {
+.evaluation-search,
+.evaluation-sort,
+.evaluation-page-size {
   display: grid;
   gap: 0.35rem;
 }
@@ -2300,7 +2306,11 @@ body {
   opacity: 1;
 }
 
-.evaluation-catalog select,
+.evaluation-catalog select {
+  width: 100%;
+  padding: 0.45rem 0.65rem;
+}
+
 .evaluation-catalog button {
   padding: 0.45rem 0.65rem;
 }
