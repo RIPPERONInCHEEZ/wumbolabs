@@ -3,6 +3,15 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
+      "model_id": "spark-x2.5-4b",
+      "display_name": "Spark-X2.5-4B",
+      "page": "/evaluations/spark-x2-5-4b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-09-20"
+    },
+    {
       "model_id": "bonsai-2-27b",
       "display_name": "Ternary Bonsai 2 27B",
       "page": "/evaluations/bonsai-2-27b/",

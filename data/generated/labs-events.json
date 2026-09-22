@@ -1089,6 +1089,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/bonsai-2-27b/",
       "report_page": null
+    },
+    {
+      "event_id": "spark25-4b-rtx5070-welp-20260920",
+      "slug": "eval-spark25-4b-rtx5070-welp-20260920",
+      "model_id": "spark-x2.5-4b",
+      "model": "Spark-X2.5-4B",
+      "event_type": "initial-evaluation",
+      "event_kicker": "WELP Characterization — iFlytek Spark-X2.5-4B (reasoning-on)",
+      "event_title": "Current-WELP characterization (official Q8_0, upstream llama.cpp b10999)",
+      "profile_id": "spark25-4b-q8-0-llamacpp",
+      "profile_name": "llama.cpp upstream official Q8_0 (reasoning-on, vendor default)",
+      "date": "2026-09-22",
+      "event_date": "2026-09-20",
+      "status": "READY_WITH_GUARDRAILS",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
+      "headline": "iFlytek's SparkLLM Spark-X2.5-4B is a 4.1B hybrid-attention model (3:1 sliding-window:full attention, 512-token window) advertising a native 1M-token context. On an RTX 5070 with the official Q8_0 GGUF under upstream llama.cpp b10999 it decodes at ~126 tok/s and prefills a 128K window at ~4,300 tok/s; 131,072 tokens is the measured fit ceiling (f16 KV at 36,864 B/token; the advertised 1M maximum needs ~38.7 GB of KV alone - FIT_LIMIT). Useful context validates at 32K/64K/128K in the declared thinking-off lane, but the vendor-default thinking mode consumes the standardized 512-token output reserve at every rung and 0/20 frozen reliability tasks complete on either seed - budget starvation, not fabrication (0 UNSAFE; semantic capability 30/33 clean on the non-starving lane). Campaign execution is COMPLETE_PASS; the model classifies READY_WITH_GUARDRAILS: vendor-default reasoning behavior is budget-sensitive, thinking-off is a materially different practical surface, and the measured useful-context envelope on this hardware is not the model-card native maximum.",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md",
+      "evidence_state": "published",
+      "model_url": "/evaluations/spark-x2-5-4b/",
+      "report_page": null
     }
   ]
 }

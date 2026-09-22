@@ -141,6 +141,16 @@
       "resolved_commit": "ea0bfa374bc22787357615d4fc2b8ff6883bccd7",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/ea0bfa374bc22787357615d4fc2b8ff6883bccd7/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-spark25-4b-rtx5070-welp-20260920": {
+      "file": "data/generated/evaluations-exports/spark25-4b-rtx5070-welp-20260920.json",
+      "sha256": "a93b2c8c3d9049e9007aa70c7a7bb29b5f0687ad3e566c5ab3559ef92ad01d09",
+      "repo": "WumboLabs/evaluations",
+      "ref": "3fe25165969c303ad32dd5002943f17e368993e0",
+      "path": "models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/website-publication.json",
+      "resolved_commit": "3fe25165969c303ad32dd5002943f17e368993e0",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/3fe25165969c303ad32dd5002943f17e368993e0/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -177,6 +187,10 @@
       "campaign": "qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15"
     },
     {
+      "slug": "eval-spark25-4b-rtx5070-welp-20260920",
+      "campaign": "spark-x2.5-4b-rtx5070-welp-characterization-2026-09-20"
+    },
+    {
       "slug": "gemma4-e4b",
       "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10"
     },
@@ -202,6 +216,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 22,
-  "model_events": 47
+  "models": 23,
+  "model_events": 48
 }
