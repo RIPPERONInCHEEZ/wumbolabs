@@ -7,36 +7,39 @@ weight = 2
 back_label = "Back to Projects"
 back_url = "/projects/"
 portfolio_status = "MAIN FOCUS · ACTIVE DEVELOPMENT"
-release_status = "PUBLIC BASELINE · Alpha.2 · current prealpha in development"
+release_status = "PUBLIC BASELINE · wumbOS v0.2.0-alpha.1 · active development"
 wumbos = true
 public_project = true
 +++
 
 <strong>MAIN FOCUS / ACTIVE DEVELOPMENT</strong>
 
-wumbOS is a developing Linux desktop environment / desktop shell centered on Hyprland, Quickshell, a cohesive WumboLabs desktop experience, local-first Agent integration, and practical workstation use. It integrates proven Linux components rather than replacing them first. It is not a complete operating system, installer, or separately distributable OS today.
+wumbOS is a developing Linux desktop environment / desktop shell centered on Hyprland, Quickshell, a cohesive WumboLabs desktop experience, local-first Agent integration, and practical workstation use. It integrates proven Linux components rather than replacing them first. It is not yet a separately distributable operating system: today's releases are a signed component/composition set plus a qualified live ISO, and the first independently installable distro alpha is still ahead.
 
-The website distinguishes the **public baseline** from **current prealpha development**. Public Alpha.2 is the installable shell release. Current prealpha work is active and has not shipped as a public release.
+The website distinguishes the **public baseline** from **current development**. The current public baseline is the signed **wumbOS v0.2.0-alpha.1** composition, which pins the Shell ([WumboLabs/wumbo-quickshell](https://github.com/WumboLabs/wumbo-quickshell) `v0.2.0-alpha.1`) and the wumbosd daemon ([WumboLabs/wumbosd](https://github.com/WumboLabs/wumbosd) `v0.1.0-alpha.1`). Current prealpha work is active and has not shipped as a public release.
 
 <div class="wumbos-cta-row">
   <a class="wumbos-cta" href="https://github.com/WumboLabs/wumbo-quickshell">View wumbOS Shell on GitHub</a>
-  <a class="wumbos-cta wumbos-cta--secondary" href="https://github.com/WumboLabs/wumbo-quickshell/releases/tag/v0.1.0-alpha.2">Read the Alpha.2 Release</a>
+  <a class="wumbos-cta wumbos-cta--secondary" href="https://github.com/WumboLabs/wumbos/releases/tag/v0.2.0-alpha.1">Read the wumbOS v0.2.0-alpha.1 Release</a>
+  <a class="wumbos-cta wumbos-cta--secondary" href="https://github.com/WumboLabs/wumbosd">wumbosd on GitHub</a>
 </div>
 
 ## Current Status
 
 <div class="info-grid wumbos-status-grid">
-  <div class="info-card"><span class="info-label">Public baseline</span><strong>Alpha.2</strong></div>
-  <div class="info-card"><span class="info-label">Public tag</span><strong>v0.1.0-alpha.2</strong></div>
-  <div class="info-card"><span class="info-label">Current work</span><strong>Prealpha / in development</strong></div>
+  <div class="info-card"><span class="info-label">Public baseline</span><strong>wumbOS v0.2.0-alpha.1</strong></div>
+  <div class="info-card"><span class="info-label">Composition repo</span><strong>WumboLabs/wumbos</strong></div>
+  <div class="info-card"><span class="info-label">Shell tag</span><strong>v0.2.0-alpha.1</strong></div>
+  <div class="info-card"><span class="info-label">Daemon tag</span><strong>wumbosd v0.1.0-alpha.1</strong></div>
+  <div class="info-card"><span class="info-label">Current work</span><strong>Active development</strong></div>
   <div class="info-card"><span class="info-label">License</span><strong>MPL-2.0</strong></div>
   <div class="info-card"><span class="info-label">Tested OS</span><strong>Fedora 44</strong></div>
   <div class="info-card"><span class="info-label">Required compositor</span><strong>Hyprland</strong></div>
 </div>
 
-Alpha.2 is a functional desktop shell, not a mockup. It was tested with **Hyprland 0.56.2**, **Quickshell 0.3.0**, Qt 6, PipeWire/WirePlumber, NetworkManager, and systemd/logind. Hyprland is required. These are tested versions, not minimum-version promises.
+The v0.2.0-alpha.1 composition is a functional desktop stack, not a mockup. The Shell was tested with **Hyprland 0.56.2** and **Quickshell 0.2.1**, plus Qt 6, PipeWire/WirePlumber, NetworkManager, and systemd/logind on Fedora 44. Hyprland is required. These are tested versions, not minimum-version promises.
 
-Current prealpha work continues on the same Fedora 44 / Hyprland workstation stack. Prealpha Agent, Control Panel, and visual work is not part of the published Alpha.2 baseline unless a later public release says so.
+Current development continues on the same Fedora 44 / Hyprland workstation stack. Unreleased Agent, Control Panel, and visual work is not part of the published v0.2.0-alpha.1 baseline unless a later public release says so.
 
 ## Shell-First Desktop
 
@@ -48,9 +51,9 @@ Multi-monitor behavior is deliberate: bars follow connected displays without har
 
 The canonical **current** visual direction is **Sandstone Night**. It supersedes the earlier Copper Bench / dual-theme experiment.
 
-Current prealpha visual work includes a unified Sandstone Night shell palette across top bars, popups, Control Panel, Hyprland integration, lock screen, terminal/tooling integration, GTK applications, wallpaper treatment, and broader workstation visual consistency.
+The unified Sandstone Night shell palette spans the shell's own surfaces — top bars, popups, Control Panel, lock screen — with terminal/tooling integration, wallpaper treatment, and broader workstation visual consistency as continuing work. External GTK, Qt, compositor, and application theming remains outside the shell's current theme boundary.
 
-Sandstone Night is current prealpha direction. It is not claimed as part of public Alpha.2. The published Alpha.2 shell still used the earlier Copper Bench look.
+Sandstone Night is the shipped default in the v0.2.0-alpha.1 Shell. The released Shell theme system (v1) ships a curated set of five selectable dark themes — Sandstone Night (default), Catppuccin Mocha, Gruvbox Dark, Nord, and Tokyo Night — selectable from Settings and persisted per installation. Current unreleased visual work continues beyond it.
 
 ## Control Panel
 
@@ -62,9 +65,9 @@ In current prealpha work, Control Panel is becoming the broader native wumbOS st
 
 Agent activity is treated as workstation state rather than chatbot branding.
 
-The established public integration remains optional **OMP**, tested with **OMP 17.2.11**. It reads structured Agent state and can represent running, tool activity, waiting, blocked, completed, failed, and idle states when the harness supplies them. OMP does not reliably expose every ordinary human-question waiting transition, so the shell does not invent one from timers, CPU use, unread state, or Attention.
+The released Shell's supported Agent harness integrations are optional **OMP** and **Hermes**. OMP was tested with **OMP 17.2.11**; it reads structured Agent state and can represent running, tool activity, waiting, blocked, completed, failed, and idle states when the harness supplies them. OMP does not reliably expose every ordinary human-question waiting transition, so the shell does not invent one from timers, CPU use, unread state, or Attention.
 
-Current prealpha work is developing a shared Agent layer that can represent multiple local coding/AI harnesses through one desktop-native status and Attention system. That foundation is unreleased. It is not part of public Alpha.2.
+Current development is working on a shared Agent layer that can represent multiple local coding/AI harnesses through one desktop-native status and Attention system. That foundation is unreleased. It is not part of the published v0.2.0-alpha.1 baseline.
 
 <div class="wumbos-architecture" aria-label="Planned Agent abstraction">
   <div>Agent UI</div><span>↓</span><div>Shared Agent layer <em>PREALPHA</em></div><span>↓</span><div>OMP Adapter &nbsp;|&nbsp; Research / future adapters</div>
@@ -88,10 +91,10 @@ Do not read this as “Grok supported.” Inactive is not the same as disconnect
 
 ## Attention and Architecture
 
-**Attention asks: “What needs me?”** Today it is a notification-centered foundation. When the optional private/local **wumbosd** service is available, it can provide deeper notification and Attention state. wumbosd is not public and is **not included** in wumbOS Shell Alpha.2; the shell continues without it, hiding or restoring dependent surfaces cleanly as the service disappears or returns.
+**Attention asks: “What needs me?”** Today it is a notification-centered foundation. The optional **wumbosd** service provides deeper notification and Attention state. wumbosd is now a public WumboLabs repository ([WumboLabs/wumbosd](https://github.com/WumboLabs/wumbosd), MPL-2.0, alpha `v0.1.0-alpha.1`): optional for standalone Shell use — the standalone Shell artifact does not bundle it — and a required component of every wumbOS composition release. The shell continues without it, hiding or restoring dependent surfaces cleanly as the service disappears or returns.
 
 <div class="wumbos-architecture" aria-label="wumbOS architecture">
-  <div><strong>wumbOS Shell</strong><br>Quickshell / QML</div><span>↕</span><div><strong>wumbosd</strong><br>private optional system/session service</div><span>↕</span><div>Notifications · Attention · System State</div><span>↕</span><div>Linux / Fedora · Hyprland / Wayland / systemd</div><span>↕</span><div><strong>Longer-term system layer</strong><br>install, update, recovery, later distribution questions</div>
+  <div><strong>wumbOS Shell</strong><br>Quickshell / QML</div><span>↕</span><div><strong>wumbosd</strong><br>public optional / composition-required session service</div><span>↕</span><div>Notifications · Attention · System State</div><span>↕</span><div>Linux / Fedora · Hyprland / Wayland / systemd</div><span>↕</span><div><strong>Distribution layer</strong><br>signed composition · RPM repository · live ISO · installer next</div>
 </div>
 
 ## System Integration
@@ -106,25 +109,26 @@ Do not read this as “Grok supported.” Inactive is not the same as disconnect
 ## Status Matrix
 
 <div class="wumbos-status-matrix">
-  <div><strong>wumbOS Shell public baseline</strong><span>AVAILABLE / CURRENT · Alpha.2</span></div>
-  <div><strong>Current shell development</strong><span>PREALPHA / IN DEVELOPMENT</span></div>
-  <div><strong>Sandstone Night</strong><span>CURRENT PREALPHA VISUAL DIRECTION</span></div>
+  <div><strong>wumbOS composition public baseline</strong><span>AVAILABLE / CURRENT · v0.2.0-alpha.1</span></div>
+  <div><strong>wumbosd daemon</strong><span>PUBLIC ALPHA · v0.1.0-alpha.1</span></div>
+  <div><strong>Current shell development</strong><span>IN DEVELOPMENT · unreleased</span></div>
+  <div><strong>Sandstone Night</strong><span>SHIPPED DEFAULT · v0.2.0-alpha.1 theme system v1</span></div>
   <div><strong>Control Panel</strong><span>IN DEVELOPMENT</span></div>
-  <div><strong>Multi-harness Agent foundation</strong><span>IN DEVELOPMENT · not in Alpha.2</span></div>
+  <div><strong>Multi-harness Agent foundation</strong><span>IN DEVELOPMENT · not in v0.2.0-alpha.1</span></div>
   <div><strong>OMP</strong><span>AVAILABLE / CURRENT · bounded</span></div>
+  <div><strong>Hermes</strong><span>SUPPORTED · optional integration</span></div>
   <div><strong>Codex</strong><span>RESEARCH · normal TUI monitoring deferred</span></div>
   <div><strong>Grok Build</strong><span>RESEARCH · owner-session events incomplete</span></div>
   <div><strong>Agent Module v2</strong><span>PLANNED / NEXT</span></div>
-  <div><strong>wumbosd</strong><span>PRIVATE / ACTIVE DEVELOPMENT</span></div>
   <div><strong>Housekeeper / File Intelligence</strong><span>PLANNED</span></div>
   <div><strong>Native file manager</strong><span>PLANNED · Nemo remains current</span></div>
-  <div><strong>Full wumbOS distribution</strong><span>LONG TERM · decision not made</span></div>
+  <div><strong>Live ISO / distribution track</strong><span>ACTIVE · ISO qualified; installer (D6) next</span></div>
 </div>
 
 ## Roadmap
 
 <div class="roadmap-list">
-  <div class="roadmap-item"><strong>1. Multi-harness Agent foundation</strong><span>IN DEVELOPMENT: shared Agent status and Attention across local harnesses. Unreleased prealpha work, not Alpha.2.</span></div>
+  <div class="roadmap-item"><strong>1. Multi-harness Agent foundation</strong><span>IN DEVELOPMENT: shared Agent status and Attention across local harnesses. Unreleased work, not part of v0.2.0-alpha.1.</span></div>
   <div class="roadmap-item"><strong>2. Agent Module v2 — session routing and focus</strong><span>PLANNED / NEXT: evolve from passive status monitoring into an Agent task switcher that can focus the exact terminal/window, switch Hyprland workspace when required, route to tmux session/window/pane where applicable, mark the focused Agent, and send Attention/approval alerts to the requesting Agent. Desktop-routing metadata stays separate from harness-neutral lifecycle state.</span></div>
   <div class="roadmap-item"><strong>3. Desktop UX / Control Panel</strong><span>IN DEVELOPMENT: broaden Control Panel as the native status/configuration surface. Later areas may include shell/module configuration, Agent status, Housekeeper permissions, File Intelligence index status, local model selection, Audio Mixer, Night Light via <code>hyprsunset</code> first, module visibility, and diagnostics.</span></div>
   <div class="roadmap-item"><strong>4. Housekeeper Safety Core</strong><span>PLANNED — before LLM autonomy: authorized roots, protected areas, canonical path validation, symlink safety, typed filesystem operations, collision protection, Trash instead of destructive removal, transaction journal, complete Undo, dry-run/planning, and risk classifications. Deterministic safety before Agent autonomy.</span></div>
@@ -135,9 +139,9 @@ Do not read this as “Grok supported.” Inactive is not the same as disconnect
   <div class="roadmap-item"><strong>9. Housekeeper Trusted Rules / Automation</strong><span>PLANNED later: repeatable local organization rules only after the local Housekeeper loop is proven.</span></div>
   <div class="roadmap-item"><strong>10. Optional provider-backed Housekeeper</strong><span>LONG TERM, only after local Housekeeper proof. A provider would be reasoning only. Filesystem authority always stays local through the deterministic capability broker. No silent cloud fallback. Local mode remains first-class.</span></div>
   <div class="roadmap-item"><strong>11. Runtime efficiency / Lean Audit</strong><span>PLANNED / LATER: measure a real cold-login/idle baseline, change one bounded item, remeasure, and keep demonstrated wins. Do not strip Hyprland functionality arbitrarily or remove useful behavior only to lower a benchmark number.</span></div>
-  <div class="roadmap-item"><strong>12. Reproducible install / update / recovery</strong><span>LONG TERM: installation, configuration/version migration, update/rollback, recovery, first-run/bootstrap, and wumbOS service conventions.</span></div>
-  <div class="roadmap-item"><strong>13. Daily-drivable wumbOS system</strong><span>LONG TERM: a workstation that is genuinely daily-drivable as a cohesive system, not merely a shell overlay.</span></div>
-  <div class="roadmap-item"><strong>14. Longer-term Agent platform / distributable-system evaluation</strong><span>LONG TERM: only later decide how far wumbOS should evolve toward a separately distributable OS. That decision is not already made.</span></div>
+  <div class="roadmap-item"><strong>12. Signed composition and distribution track</strong><span>ACTIVE: wumbOS v0.2.0-alpha.1 is a signed composition release (component releases, fail-closed installer, trust gate). Maturity levels A–E are achieved; the signed RPM repository exists and the live ISO qualified UEFI (Secure Boot), BIOS, and live-session boot in September 2026.</span></div>
+  <div class="roadmap-item"><strong>13. Installer integration (D6)</strong><span>NEXT: Anaconda <code>liveinst</code> from the live ISO — partitioning, user creation, bootloader, and <code>wumbos-desktop</code> from the signed repositories, rebooting into installed wumbOS. This closes the ISO-Qualified maturity level.</span></div>
+  <div class="roadmap-item"><strong>14. First independently installable distro alpha (D10)</strong><span>PLANNED: published ISO plus signed repository, release notes, and verification instructions. Distribution is now an active track, not an undecided question.</span></div>
 </div>
 
 <details class="project-details">
@@ -192,13 +196,13 @@ Examples: PipeWire events for audio, a shared stats provider, Agent adapters tha
 <details class="project-details">
 <summary>Tested support and current limitations</summary>
 
-- Tested Alpha.2 stack: Fedora 44, Wayland, Hyprland 0.56.2, Quickshell 0.3.0, Qt 6, PipeWire/WirePlumber, NetworkManager, and systemd/logind.
+- Tested v0.2.0-alpha.1 stack: Fedora 44, Wayland, Hyprland 0.56.2, Quickshell 0.2.1, Qt 6, PipeWire/WirePlumber, NetworkManager, and systemd/logind.
 - Other Wayland compositors, KDE, and GNOME are unsupported. Older and newer Hyprland and Quickshell versions are unqualified.
 - A stationary-pointer popup retarget behavior exists on the tested Hyprland/Quickshell stack; Escape, click-away, switching popups, and slight pointer movement remain practical close paths.
-- OMP is the established Agent harness; its ordinary human-question waiting state cannot always be represented.
+- OMP and Hermes are the supported Agent harness integrations; the ordinary human-question waiting state cannot always be represented.
 - Codex is not a supported live monitoring integration. Grok Build is research, not a supported production integration.
-- Enhanced AMD and Intel GPU telemetry are not implemented; XEmbed-only tray applications are unsupported; wumbosd is not bundled with Alpha.2.
-- Housekeeper, File Intelligence, the native file manager, provider-backed reasoning, installer/ISO media, and a separately distributable OS are not current shipping features.
+- Enhanced AMD and Intel GPU telemetry are not implemented; XEmbed-only tray applications are unsupported; wumbosd is not bundled in the standalone Shell artifact (it is a required composition component).
+- Housekeeper, File Intelligence, the native file manager, provider-backed reasoning, and published installable distro media are not current shipping features.
 
 </details>
 
@@ -210,4 +214,4 @@ The public alpha line was validated through license and privacy review, clean ar
 
 ## Open Source Public Alpha
 
-wumbOS Shell is available under **MPL-2.0**. Its public repository has GitHub Issues enabled: <a href="https://github.com/WumboLabs/wumbo-quickshell">WumboLabs/wumbo-quickshell</a>. Alpha.2 is the current public baseline. The full wumbOS distribution, installer, ISO, and broad hardware qualification remain future work.
+wumbOS Shell is available under **MPL-2.0**. The wumbOS system spans three public repositories — the Shell (<a href="https://github.com/WumboLabs/wumbo-quickshell">WumboLabs/wumbo-quickshell</a>), the daemon (<a href="https://github.com/WumboLabs/wumbosd">WumboLabs/wumbosd</a>), and the signed OS composition (<a href="https://github.com/WumboLabs/wumbos">WumboLabs/wumbos</a>) — all under MPL-2.0. wumbOS v0.2.0-alpha.1 is the current public baseline: signed composition, component releases, a signed RPM repository, and a qualified live ISO exist today. The installer (D6) and the first independently installable distro alpha (D10) are the next distribution milestones.
