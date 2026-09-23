@@ -23,9 +23,9 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 ## 02 — WELP
 
-**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated evaluation lifecycle used for WumboLabs model testing. It is published at <https://github.com/WumboLabs/welp> (DRAFT — not yet frozen as v1.0).
+**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-23 methodology snapshot](https://github.com/WumboLabs/welp/blob/6f1d695f0f40e02a5ba87b267739bb101a9117da/snapshot-freeze/welp-next-snapshot-2026-09-23-real-hardware-real-testing/manifest.json) is **DRAFT, not v1.0**; earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
 
-**What it is:** a fixed testing protocol that runs a model through ordered phases — provenance, admission, performance, practical viability, reliability, capability modules, context, variance, optimization, and stability. Each phase has a deterministic gate.
+**What it is:** a preregistered protocol with ordered phases — provenance, admission, performance, practical viability, reliability, capability modules, context, variance, optimization, and stability — and frozen applicable gates. It separates campaign execution state from a model's readiness verdict.
 
 **Why phase gates exist:** the protocol is frozen before a model is evaluated. A failed gate is a valid result. This prevents post-hoc threshold tuning and makes early-stop behavior transparent.
 
@@ -33,13 +33,49 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 **Why campaign depth differs:** different models reach different WELP depths. Some campaigns complete a deep end-to-end evaluation; others stop at a protocol-defined gate or fail an early viability gate and are not advanced. These differences are features of the protocol, not inconsistencies in effort.
 
+**Useful work has multiple boundaries:** the exact artifact, quantization, runtime/build,
+hardware, template, prompt, sampler, effective reasoning mode, context and
+generation ceiling define the tested profile. Prospective campaigns distinguish a
+bounded semantic ceiling, chosen on disjoint calibration tasks before scored runs,
+from a deployment role's independently frozen operational limit. An answerless
+reasoning trace at a short cap is not a semantic failure; a correct answer that
+needs excessive time, tokens or VRAM is not evidence of operational fitness.
+Report completion, semantic accuracy and resource cost separately. A generic
+deployment prompt is the primary role lane; minimal, publisher-recommended and
+optional preregistered optimized settings remain distinct, never pooled after
+seeing answers.
+
 **Context claims are bounded by occupancy:** configured capacity is not context validation. Full-context claims require the actual final rendered prompt at near-full occupancy of the usable budget (≥99% preferred, ≥97% hard floor, with reserved generation tokens), full-window performance, and useful-context evidence at that occupancy. Every native and officially advertised extension range — including each exact maximum — requires an explicit tested or demonstrated limiting disposition (`VALIDATED`, `FIT_LIMIT`, `INTEGRATION_BLOCKED`, or a measured `FAILED`) before context characterization may be called complete. A measured FAILED gate is a completed negative disposition, not a hidden one.
+
+**Context construction matters:** the prospective Family A controlled-retrieval
+fixture places facts against the final rendered, inference-equivalent token
+stream at five measured depths (2/25/50/75/95%, at most 0.50 percentage-point
+placement error). Semantic and operational context lanes reserve their own
+generation ceilings. Controlled fact retrieval does not establish document,
+codebase or conversational long-context synthesis; those need separate tasks.
 
 **Practical default ≠ context completeness:** selecting a comfortable everyday context is a separate decision from characterizing the full model-card envelope. Records report both independently.
 
 **LocalMaxxing disposition is mandatory:** every full model campaign evaluates LocalMaxxing eligibility on the canonical practical stack and records exactly one completion disposition (`SUBMITTED`, `MEASURED_NOT_SUBMITTED`, `NOT_ELIGIBLE`, or `BLOCKED`). It can never be silently omitted. LocalMaxxing results are practical speed evidence, not the scientific source of truth.
 
 **Report hierarchy:** each campaign has exactly one authoritative scientific report (`REPORT.md`), with the standardized `WELP-LAB-RECORD.md` as a companion summary of the same campaign. Website records are derivatives of that evidence; if a record ever conflicts with it, the campaign evidence governs.
+
+**Role claims require work-shaped evidence:** ordinary assistance, strict
+structured output and applicable coding, Linux diagnosis, native tools and
+multi-turn behavior have distinct tasks and oracles. A single function or
+isolated tool call does not qualify an agent. Mechanical checks and independent,
+rubric-based review remain separate. A blocked fixture, method or execution
+does not turn into an `INTEGRATION_BLOCKED` model verdict; only an independently
+demonstrated integration blocker can support that label. Historical campaigns
+remain under their own frozen rules; prospective changes do not rewrite them.
+
+**LLMGauge evidence boundary:** LLMGauge v0.78 runs practical prompt suites,
+validates fit and records workload-qualified timing and VRAM evidence.
+Its opt-in qualified vLLM
+  streaming TTFT and separate LocalMaxxing `llama-bench` workload are not
+  interchangeable with full-window WELP context, semantic oracles or matched
+  deployment-request timing. WELP may cite pinned compatible raw measurements;
+  neither product depends on the other for its own results.
 
 **Where the canonical specification lives:** <https://github.com/WumboLabs/welp>.
 
