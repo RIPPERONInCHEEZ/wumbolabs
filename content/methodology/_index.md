@@ -23,7 +23,7 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 ## 02 — WELP
 
-**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-23 methodology snapshot](https://github.com/WumboLabs/welp/blob/6f1d695f0f40e02a5ba87b267739bb101a9117da/snapshot-freeze/welp-next-snapshot-2026-09-23-real-hardware-real-testing/manifest.json) is **DRAFT, not v1.0**; earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
+**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-23 profile-identity clarification snapshot](https://github.com/WumboLabs/welp/blob/2a3bdbb283158e863d3e38125fffa7d1e205fbec/snapshot-freeze/welp-next-snapshot-2026-09-23-profile-identity-clarification/manifest.json) is **DRAFT, not v1.0**. It corrects the first 2026-09-23 snapshot without rewriting it; earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
 
 **What it is:** a preregistered protocol with ordered phases — provenance, admission, performance, practical viability, reliability, capability modules, context, variance, optimization, and stability — and frozen applicable gates. It separates campaign execution state from a model's readiness verdict.
 
@@ -34,13 +34,15 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 **Why campaign depth differs:** different models reach different WELP depths. Some campaigns complete a deep end-to-end evaluation; others stop at a protocol-defined gate or fail an early viability gate and are not advanced. These differences are features of the protocol, not inconsistencies in effort.
 
 **Useful work has multiple boundaries:** the exact artifact, quantization, runtime/build,
-hardware, template, prompt, sampler, effective reasoning mode, context and
-generation ceiling define the tested profile. Prospective campaigns distinguish a
+hardware, configured context, template, deployment prompt, sampler and effective
+reasoning mode identify a tested deployment profile. Generation ceilings are
+separately recorded measurement lanes of that same profile, not part of its ID.
+Prospective campaigns distinguish a
 bounded semantic ceiling, chosen on disjoint calibration tasks before scored runs,
 from a deployment role's independently frozen operational limit. An answerless
 reasoning trace at a short cap is not a semantic failure; a correct answer that
 needs excessive time, tokens or VRAM is not evidence of operational fitness.
-Report completion, semantic accuracy and resource cost separately. A generic
+Report completion, semantic accuracy and resource cost separately by lane. A generic
 deployment prompt is the primary role lane; minimal, publisher-recommended and
 optional preregistered optimized settings remain distinct, never pooled after
 seeing answers.
