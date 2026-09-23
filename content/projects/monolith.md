@@ -6,6 +6,7 @@ weight = 3
 [extra]
 back_label = "Back to Projects"
 back_url = "/projects/"
+release_status = "TECHNICAL PUBLIC ALPHA · v0.11.12"
 public_project = true
 +++
 
@@ -44,9 +45,9 @@ It is a technical public alpha. Setup is still manual, and it is intended for us
 
 ## Current Development Note
 
-Recent Monolith development is focused on importing LLMGauge artifacts into the local workbench: import tables, artifact metadata parsing, importer architecture, listing pages, detail pages, and sidebar UI polish.
+The current public alpha release is **v0.11.12**. Development at this release centers on repo-local bootstrap and guided-setup preparation: clean-clone install validation, setup diagnostics, dependency and runtime detection, and safer model onboarding. The next planned milestone is **v0.11.13**, the guided setup wizard.
 
-That work is active development beyond the current public alpha release metadata, so it should be read as current project direction rather than a packaged release claim.
+LLMGauge artifact import is a shipped Monolith capability: Monolith consumes LLMGauge artifacts as a UI/operator layer, while LLMGauge remains the evaluation engine.
 
 {{ monolith_status() }}
 
