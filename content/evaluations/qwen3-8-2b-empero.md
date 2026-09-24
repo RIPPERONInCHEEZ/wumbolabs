@@ -33,7 +33,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -50,7 +50,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Specialized Test — vendor alignment** · profile: vLLM BF16 vendor-alignment battery · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/qwen3.8-2b-empero)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/qwen3.8-2b-empero)
 
 ### Identity and scope
 
@@ -69,7 +69,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen3.8-2b-empero-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+- **qwen3.8-2b-empero-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
 
 ### Legacy provenance
 

@@ -41,7 +41,7 @@ Profile identity: `minicpm5-2b-vllm-bf16`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Initial Evaluation — contained vLLM BF16** · profile: contained vLLM BF16 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/minicpm5-2b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/minicpm5-2b)
 
 ##### Identity
 
@@ -152,7 +152,7 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **minicpm5-2b-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
+- **minicpm5-2b-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
 
 ### Legacy provenance
 

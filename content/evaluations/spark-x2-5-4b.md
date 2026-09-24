@@ -41,7 +41,7 @@ Profile identity: `spark25-4b-q8-0-llamacpp`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Characterization — iFlytek Spark-X2.5-4B (reasoning-on)** · profile: llama.cpp upstream official Q8_0 (reasoning-on, vendor default) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/spark-x2.5-4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/spark-x2.5-4b)
 
 ##### Identity
 
@@ -154,4 +154,4 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **spark25-4b-q8-0-llamacpp**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json)
+- **spark25-4b-q8-0-llamacpp**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json)

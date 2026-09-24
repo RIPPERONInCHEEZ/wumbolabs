@@ -2,6 +2,16 @@
   "version": 2,
   "generated_by": "scripts/sync_labs.py (model-centric)",
   "source_identities": {
+    "eval-lfm25-8b-a1b-rtx5070-welp-adjudication-20260924": {
+      "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924.json",
+      "sha256": "2853078c539c751ca6de068ec6588e688bae8aa7d8aa0eaee01eb19ca43df54c",
+      "repo": "WumboLabs/evaluations",
+      "ref": "8087803f58258efbbadf4551fc84cbeeeff795b0",
+      "path": "models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/website-publication.json",
+      "resolved_commit": "8087803f58258efbbadf4551fc84cbeeeff795b0",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/8087803f58258efbbadf4551fc84cbeeeff795b0/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/website-publication.json",
+      "kind": "repository-cache"
+    },
     "qwen38-27b-h1": {
       "file": "data/generated/evaluations-exports/h1-canonical-promotion-2026-09-09.json",
       "sha256": "dc5d2ca7e8aefe8cec801041aaedc637f88ad9c3c37cf1ac9ddfe80cfcb0248b",
@@ -181,6 +191,10 @@
       "campaign": "lfm2.5-8b-a1b-rtx5070-welp-prospective-retest-2-2026-09-23"
     },
     {
+      "slug": "eval-lfm25-8b-a1b-rtx5070-welp-adjudication-20260924",
+      "campaign": "lfm2.5-8b-a1b-rtx5070-welp-review-adjudication-2026-09-24"
+    },
+    {
       "slug": "eval-mellum2-12b-a25b-recharacterization-2026-09-15",
       "campaign": "mellum2-12b-a2.5b-rtx5070-welp-recharacterization-2026-09-15"
     },
@@ -231,5 +245,5 @@
   ],
   "pending_public_evidence": [],
   "models": 24,
-  "model_events": 49
+  "model_events": 50
 }

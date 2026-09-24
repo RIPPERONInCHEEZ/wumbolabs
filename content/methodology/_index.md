@@ -23,7 +23,7 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 ## 02 — WELP
 
-**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-24 protocol-hardening snapshot](https://github.com/WumboLabs/welp/blob/6f576233c2b4c2f46632be9469a03e7c90422054/snapshot-freeze/welp-next-snapshot-2026-09-24-protocol-hardening/manifest.json) is **DRAFT, not v1.0**. It binds prospective gates to setup and raw-output evidence, with qualified safety, context and real-work oracles. Earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
+**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-24 review-and-setup-hardening snapshot](https://github.com/WumboLabs/welp/blob/c7b5c92b1f22f5b34d65d688e517d7812df0c37c/snapshot-freeze/welp-next-snapshot-2026-09-24-review-and-setup-hardening/manifest.json) is **DRAFT, not v1.0**. It binds prospective gates to setup and raw-output evidence, with qualified safety, context and real-work oracles, a frozen blinded-review disagreement resolution path, and a mechanical calibration sanity layer. Earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
 
 **Historical interpretation limits:** the [frozen compatibility policy](https://github.com/WumboLabs/welp/blob/6f576233c2b4c2f46632be9469a03e7c90422054/summaries/welp_compatibility_policy.json) records confirmed limitations in the retained LFM2.5-8B-A1B retest: task failure did not establish unsafe behavior, a context oracle rejected correct answers, and tool-discovery and unexecuted Linux coverage limited role conclusions. Original reports, scores and verdicts remain historical evidence. This protocol revision supplies neither a replacement model classification nor a new model campaign.
 
@@ -42,8 +42,14 @@ separately recorded measurement lanes of that same profile, not part of its ID.
 Prospective campaigns distinguish a
 bounded semantic ceiling, calibrated separately for each response class on
 disjoint tasks under the same profile before scored runs, from a deployment
-role's independently frozen operational limit. Exact rendered prompts, class
-representativeness review and repeated identical cache probes are setup evidence;
+role's independently frozen operational limit. Each response class also freezes
+its expected answer geometry (declared from the fixture rubrics), and a
+mechanical sanity check fails setup closed before scored work when the selected
+ceiling cannot hold that declared answer structure or when the calibration
+example that represents the class's longest expected answers produced far
+shorter visible answers — reasoning-token consumption never fails calibration,
+and a genuinely concise class keeps its small ceiling. Exact rendered prompts,
+class representativeness review and repeated identical cache probes are setup evidence;
 labels alone do not qualify them. An answerless
 reasoning trace at a short cap is not a semantic failure; a correct answer that
 needs excessive time, tokens or VRAM is not evidence of operational fitness.
@@ -54,13 +60,17 @@ seeing answers.
 
 **Context claims are bounded by occupancy:** configured capacity is not context validation. Full-context claims require the actual final rendered prompt at near-full occupancy of the usable budget (≥99% preferred, ≥97% hard floor, with reserved generation tokens), full-window performance, and useful-context evidence at that occupancy. Every native and officially advertised extension range — including each exact maximum — requires an explicit tested or demonstrated limiting disposition (`VALIDATED`, `FIT_LIMIT`, `INTEGRATION_BLOCKED`, or a measured `FAILED`) before context characterization may be called complete. Coverage completeness, execution validity, demonstrated capability and the useful maximum are separate axes. A valid measured FAILED gate completes a negative coverage cell; it does not validate capability. Missing or invalid evidence does not count as a measured failure.
 
-**Context construction matters:** the prospective Family A controlled-retrieval
-fixture places facts against the final rendered, inference-equivalent token
-stream at five measured depths (2/25/50/75/95%, at most 0.50 percentage-point
-placement error). Semantic and operational context lanes reserve their own
-generation ceilings. A complementary multi-document task checks distributed,
-versioned and absent facts. Neither family establishes general codebase or
-conversational long-context synthesis; those need separate tasks.
+**Context construction matters:** the prospective Controlled Context fixture
+(legacy ID: Family A) places facts against the final rendered,
+inference-equivalent token stream at five measured depths (2/25/50/75/95%, at
+most 0.50 percentage-point placement error). Semantic and operational context
+lanes reserve their own generation ceilings. A complementary Multi-Document
+Context task checks distributed, versioned and absent facts. Neither family
+establishes general codebase or conversational long-context synthesis; those
+need separate tasks. Test names use plain display names — Controlled Context,
+Multi-Document Context, Tool Recovery, Linux Diagnosis, Repository Repair,
+Multi-Turn Correction, Assistant Quality, Structured Output — while machine
+IDs in evidence stay frozen as provenance.
 
 **Practical default ≠ context completeness:** selecting a comfortable everyday context is a separate decision from characterizing the full model-card envelope. Records report both independently.
 
@@ -121,7 +131,7 @@ WumboLabs separates deterministic checks from identified human or agent judgment
 - **Deterministic checks:** structural validation of artifacts and results, and deterministic prompt-level checks where a suite defines them.
 - **Structural checks:** structural comparison of runs or transcripts. Comparison is structural evidence only — no aggregate score, ranking, winner, statistical claim, or semantic judgment.
 - **Executable checks — where admitted:** some suites deliberately do not execute generated code. That boundary is explicit, and changing it requires a separate containment decision, not a silent default.
-- **Manual / reviewed scoring:** identified human or agent reviewers record rubric, rationale and supporting evidence. Agent review is not human review. Load-bearing prospective prose decisions require two independent, model-identity-blinded agreeing reviews; disagreement or unresolved review blocks the conclusion. Recorded provenance does not prove a judgment true or remove correlated-review risk.
+- **Manual / reviewed scoring:** identified human or agent reviewers record rubric, rationale and supporting evidence. Agent review is not human review. Load-bearing prospective prose decisions require two independent, model-identity-blinded agreeing reviews. On a recorded 1–1 disagreement, the frozen adjudication rule permits exactly one additional blinded tie-break reviewer that never saw the other reviews, and a deciding 2-of-3 majority resolves the question; if the tie-break review finds the frozen rubric ambiguous or self-contradictory, the question fails closed to human review instead of being decided by majority. Three reviewers is the maximum, and an agreed decision is never re-reviewed. These are isolated blinded adjudications — two or three calls from the same model family are not independent human review or a statistically independent evaluator population — and recorded provenance does not prove a judgment true.
 - **Bounded judgment:** practical-use verdicts (for example, readiness for a role on one machine) are judgments tied to their context, not measurements of universal quality.
 
 When a claim depends on judgment rather than a deterministic check, the record says so.
