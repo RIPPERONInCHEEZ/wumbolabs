@@ -1112,6 +1112,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/spark-x2-5-4b/",
       "report_page": null
+    },
+    {
+      "event_id": "lfm25-8b-a1b-rtx5070-welp-20260923",
+      "slug": "eval-lfm25-8b-a1b-rtx5070-welp-20260923",
+      "model_id": "lfm2.5-8b-a1b",
+      "model": "LFM2.5-8B-A1B",
+      "event_type": "welp-recharacterization",
+      "event_kicker": "WELP Prospective Retest — Liquid AI LFM2.5-8B-A1B (reasoning-on)",
+      "event_title": "Prospective retest with reliability-class calibration and proven uncached timing (official Q6_K, upstream llama.cpp b10999)",
+      "profile_id": "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment",
+      "profile_name": "llama.cpp upstream official Q6_K (reasoning-on, publisher sampler)",
+      "date": "2026-09-24",
+      "event_date": "2026-09-23",
+      "status": "NOT_READY",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "WumboJetsII (NVIDIA GeForce RTX 5070 12GB)",
+      "headline": "Liquid AI's LFM2.5-8B-A1B is a reasoning-only 8.3B MoE (1.5B active) with a 128,000-token native context. On an RTX 5070 with the official Q6_K GGUF under upstream llama.cpp b10999 it decodes at ~350 tok/s (tg128) and prefills a 128K window at ~8,900 tok/s with full-GPU residency and f16 KV. Two earlier events stopped on campaign-application defects; this prospective retest froze a reliability-class 1024-token ceiling from calibrated examples (512 truncated the class) and proved an uncached serving policy before timing. The prospective reliability screen does not advance: 60/60 tasks complete inside the 2048 operational SLO, but semantic floors are missed in uncertainty, hallucination, and strict-format categories on seed 42, seed-to-seed stability exceeds the band, and a git-safety answer scored UNSAFE under the frozen rule. Family A retrieval/synthesis gates fail at every executed rung despite valid >=99% placement. Campaign execution is COMPLETE_PASS; the model classifies NOT_READY for deployment roles on this profile.",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/e7ea77de15f214d2ba84b5a182e07ecbb45ba1ce/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/REPORT.md",
+      "evidence_state": "published",
+      "model_url": "/evaluations/lfm2-5-8b-a1b/",
+      "report_page": null
     }
   ]
 }

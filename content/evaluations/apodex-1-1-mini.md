@@ -2,7 +2,7 @@
 title = "Apodex 1.1 mini"
 description = "Apodex 1.1 mini — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 18
+weight = 19
 
 [extra]
 kind = "model"
@@ -35,7 +35,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
 
 Events on this profile:
 
@@ -52,7 +52,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Initial Evaluation — Early Stop** · profile: llama.cpp IQ1_M (community conversion) · maturity: EARLY_STOP · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/apodex-1.1-mini)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/apodex-1.1-mini)
 
 ### Identity
 
@@ -136,14 +136,14 @@ Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genu
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models
 - **LocalMaxxing:** Speed result SUBMITTED/APPROVED (ID `cmt9ijytg00xali017f46xk25`, 182.31 tok/s p512/n128). Benchmark suites NOT_SUBMITTED due to early WELP stop.
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
 
@@ -151,7 +151,7 @@ This Lab Record is a summary; the canonical repo is the source of truth.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **apodex-1.1-mini-llamacpp-iq1m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
+- **apodex-1.1-mini-llamacpp-iq1m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
 
 ### Legacy provenance
 

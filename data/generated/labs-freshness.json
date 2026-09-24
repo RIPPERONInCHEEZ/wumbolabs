@@ -151,6 +151,16 @@
       "resolved_commit": "3fe25165969c303ad32dd5002943f17e368993e0",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/3fe25165969c303ad32dd5002943f17e368993e0/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-lfm25-8b-a1b-rtx5070-welp-20260923": {
+      "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-welp-20260923.json",
+      "sha256": "7650c3ec23302eb186340eed315dc13d37ca1051dbec66a88f498ae5dbf3ccd2",
+      "repo": "WumboLabs/evaluations",
+      "ref": "aacb4521a566f42974c5703c7c58be9dd759cafe",
+      "path": "models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/website-publication.json",
+      "resolved_commit": "aacb4521a566f42974c5703c7c58be9dd759cafe",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/aacb4521a566f42974c5703c7c58be9dd759cafe/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -165,6 +175,10 @@
     {
       "slug": "eval-gemma-4-12b-recharacterization-2026-09-12",
       "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
+    },
+    {
+      "slug": "eval-lfm25-8b-a1b-rtx5070-welp-20260923",
+      "campaign": "lfm2.5-8b-a1b-rtx5070-welp-prospective-retest-2-2026-09-23"
     },
     {
       "slug": "eval-mellum2-12b-a25b-recharacterization-2026-09-15",
@@ -216,6 +230,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 23,
-  "model_events": 48
+  "models": 24,
+  "model_events": 49
 }

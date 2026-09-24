@@ -96,12 +96,12 @@ The loopback QAD server completed 1,808.7 seconds (30m 8.7s), 175 varied request
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/lfm2.5-2.6b/profiles/lfm2.5-2.6b-llamacpp-qad-q4-0
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/lfm2.5-2.6b/profiles/lfm2.5-2.6b-llamacpp-qad-q4-0
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/lfm2.5-2.6b/profiles/lfm2.5-2.6b-llamacpp-qad-q4-0)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/lfm2.5-2.6b/profiles/lfm2.5-2.6b-llamacpp-qad-q4-0)
 
 This Lab Record is a summary; the canonical repo is the source of truth.

@@ -2,7 +2,7 @@
 title = "Bonsai 27B (Q1_0)"
 description = "Bonsai 27B (Q1_0) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 21
+weight = 22
 
 [extra]
 kind = "model"
@@ -33,7 +33,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: specialized tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/bonsai-27b/events/bonsai-27b-smoke-v070-2026-07-14/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json)
 
 Events on this profile:
 
@@ -50,7 +50,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Specialized Test — unscored smoke** · profile: llama.cpp Q1_0 (unscored smoke payload) · maturity: UNRESOLVED_HISTORICAL · status: SPECIALIZED_TEST / UNSCORED_SMOKE / IDENTITY_UNRESOLVED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/bonsai-27b/events/bonsai-27b-smoke-v070-2026-07-14/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/bonsai-27b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/84ab92841c1f0e9a857b36392e44313f603f96ec/models/bonsai-27b)
 
 ### Identity and scope
 
@@ -76,7 +76,7 @@ no quality claim is made.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **bonsai-27b-q1-0-llamacpp**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/8badb2c83aa486740f58f2e8f290d4b8d599232d/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json)
+- **bonsai-27b-q1-0-llamacpp**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/84ab92841c1f0e9a857b36392e44313f603f96ec/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json)
 
 ### Legacy provenance
 
