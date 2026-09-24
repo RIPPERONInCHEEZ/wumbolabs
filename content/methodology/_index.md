@@ -23,7 +23,9 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 ## 02 — WELP
 
-**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-23 profile-identity clarification snapshot](https://github.com/WumboLabs/welp/blob/2a3bdbb283158e863d3e38125fffa7d1e205fbec/snapshot-freeze/welp-next-snapshot-2026-09-23-profile-identity-clarification/manifest.json) is **DRAFT, not v1.0**. It corrects the first 2026-09-23 snapshot without rewriting it; earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
+**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-24 protocol-hardening snapshot](https://github.com/WumboLabs/welp/blob/6f576233c2b4c2f46632be9469a03e7c90422054/snapshot-freeze/welp-next-snapshot-2026-09-24-protocol-hardening/manifest.json) is **DRAFT, not v1.0**. It binds prospective gates to setup and raw-output evidence, with qualified safety, context and real-work oracles. Earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
+
+**Historical interpretation limits:** the [frozen compatibility policy](https://github.com/WumboLabs/welp/blob/6f576233c2b4c2f46632be9469a03e7c90422054/summaries/welp_compatibility_policy.json) records confirmed limitations in the retained LFM2.5-8B-A1B retest: task failure did not establish unsafe behavior, a context oracle rejected correct answers, and tool-discovery and unexecuted Linux coverage limited role conclusions. Original reports, scores and verdicts remain historical evidence. This protocol revision supplies neither a replacement model classification nor a new model campaign.
 
 **What it is:** a preregistered protocol with ordered phases — provenance, admission, performance, practical viability, reliability, capability modules, context, variance, optimization, and stability — and frozen applicable gates. It separates campaign execution state from a model's readiness verdict.
 
@@ -38,8 +40,11 @@ hardware, configured context, template, deployment prompt, sampler and effective
 reasoning mode identify a tested deployment profile. Generation ceilings are
 separately recorded measurement lanes of that same profile, not part of its ID.
 Prospective campaigns distinguish a
-bounded semantic ceiling, chosen on disjoint calibration tasks before scored runs,
-from a deployment role's independently frozen operational limit. An answerless
+bounded semantic ceiling, calibrated separately for each response class on
+disjoint tasks under the same profile before scored runs, from a deployment
+role's independently frozen operational limit. Exact rendered prompts, class
+representativeness review and repeated identical cache probes are setup evidence;
+labels alone do not qualify them. An answerless
 reasoning trace at a short cap is not a semantic failure; a correct answer that
 needs excessive time, tokens or VRAM is not evidence of operational fitness.
 Report completion, semantic accuracy and resource cost separately by lane. A generic
@@ -47,14 +52,15 @@ deployment prompt is the primary role lane; minimal, publisher-recommended and
 optional preregistered optimized settings remain distinct, never pooled after
 seeing answers.
 
-**Context claims are bounded by occupancy:** configured capacity is not context validation. Full-context claims require the actual final rendered prompt at near-full occupancy of the usable budget (≥99% preferred, ≥97% hard floor, with reserved generation tokens), full-window performance, and useful-context evidence at that occupancy. Every native and officially advertised extension range — including each exact maximum — requires an explicit tested or demonstrated limiting disposition (`VALIDATED`, `FIT_LIMIT`, `INTEGRATION_BLOCKED`, or a measured `FAILED`) before context characterization may be called complete. A measured FAILED gate is a completed negative disposition, not a hidden one.
+**Context claims are bounded by occupancy:** configured capacity is not context validation. Full-context claims require the actual final rendered prompt at near-full occupancy of the usable budget (≥99% preferred, ≥97% hard floor, with reserved generation tokens), full-window performance, and useful-context evidence at that occupancy. Every native and officially advertised extension range — including each exact maximum — requires an explicit tested or demonstrated limiting disposition (`VALIDATED`, `FIT_LIMIT`, `INTEGRATION_BLOCKED`, or a measured `FAILED`) before context characterization may be called complete. Coverage completeness, execution validity, demonstrated capability and the useful maximum are separate axes. A valid measured FAILED gate completes a negative coverage cell; it does not validate capability. Missing or invalid evidence does not count as a measured failure.
 
 **Context construction matters:** the prospective Family A controlled-retrieval
 fixture places facts against the final rendered, inference-equivalent token
 stream at five measured depths (2/25/50/75/95%, at most 0.50 percentage-point
 placement error). Semantic and operational context lanes reserve their own
-generation ceilings. Controlled fact retrieval does not establish document,
-codebase or conversational long-context synthesis; those need separate tasks.
+generation ceilings. A complementary multi-document task checks distributed,
+versioned and absent facts. Neither family establishes general codebase or
+conversational long-context synthesis; those need separate tasks.
 
 **Practical default ≠ context completeness:** selecting a comfortable everyday context is a separate decision from characterizing the full model-card envelope. Records report both independently.
 
@@ -71,13 +77,21 @@ does not turn into an `INTEGRATION_BLOCKED` model verdict; only an independently
 demonstrated integration blocker can support that label. Historical campaigns
 remain under their own frozen rules; prospective changes do not rewrite them.
 
+**Task failure is not unsafe behavior:** safety has its own consequence- and permission-aware rubric, bound to actual messages, answers and observed actions. A warning followed by unsafe compliance is not made safe by the warning. Missing or unresolved deciding reviews block a readiness conclusion rather than fabricating an unsafe finding.
+
+**Reliability is a fixed task sample:** the current fixture contains 20 unique tasks. Repeated seeds are not independent samples from a model's general task population. Reports expose task, seed, category, completion and not-evaluable counts. Provisional policy thresholds and a preregistered base-seed sensitivity rule determine one bounded extension; required but unfinished extension work yields no readiness verdict.
+
 **LLMGauge evidence boundary:** LLMGauge v0.78 runs practical prompt suites,
 validates fit and records workload-qualified timing and VRAM evidence.
 Its opt-in qualified vLLM
   streaming TTFT and separate LocalMaxxing `llama-bench` workload are not
   interchangeable with full-window WELP context, semantic oracles or matched
-  deployment-request timing. WELP may cite pinned compatible raw measurements;
-  neither product depends on the other for its own results.
+  deployment-request timing. WELP imports raw measurements only when artifact,
+  runtime, profile, workload, units, cache regime and timing boundaries match
+  preserved provenance. Missing identity remains non-comparable, not inferred
+  from expected settings. Neither product depends on the other for its own results.
+
+**Performance needs repetitions, not just an aggregate:** prospective evidence retains individual samples and warmup disposition, reports mean, spread and median, and separates cold from warmed measurements. A fixed base-sample dispersion rule permits one bounded extra batch, retaining every attempt. Historical aggregate-only results cannot reveal missing samples or establish a cause for variability.
 
 **Where the canonical specification lives:** <https://github.com/WumboLabs/welp>.
 
@@ -102,12 +116,12 @@ A distinction runs through all of it: a *requested* setting is what a run asked 
 
 ## 04 — Review and scoring
 
-WumboLabs separates what a machine checked from what a human judged:
+WumboLabs separates deterministic checks from identified human or agent judgment:
 
 - **Deterministic checks:** structural validation of artifacts and results, and deterministic prompt-level checks where a suite defines them.
 - **Structural checks:** structural comparison of runs or transcripts. Comparison is structural evidence only — no aggregate score, ranking, winner, statistical claim, or semantic judgment.
 - **Executable checks — where admitted:** some suites deliberately do not execute generated code. That boundary is explicit, and changing it requires a separate containment decision, not a silent default.
-- **Manual / reviewed scoring:** human scores recorded with rationale under a stated rubric. This is reviewer judgment — bounded, debatable, and never presented as objective truth.
+- **Manual / reviewed scoring:** identified human or agent reviewers record rubric, rationale and supporting evidence. Agent review is not human review. Load-bearing prospective prose decisions require two independent, model-identity-blinded agreeing reviews; disagreement or unresolved review blocks the conclusion. Recorded provenance does not prove a judgment true or remove correlated-review risk.
 - **Bounded judgment:** practical-use verdicts (for example, readiness for a role on one machine) are judgments tied to their context, not measurements of universal quality.
 
 When a claim depends on judgment rather than a deterministic check, the record says so.
@@ -167,7 +181,7 @@ and event IDs describe science, not repository boundaries.
 
 1. A WELP campaign closes, producing canonical local scientific evidence.
 2. A public-safe publication export is prepared — no credentials, no private paths, no raw prompt logs; negative results retained.
-3. Accepted event evidence is added to the existing **WumboLabs/evaluations** repository; no new `eval-*` repository is created. Publication and closeout run under the WELP execution-state lifecycle: a clean `COMPLETE_PASS` campaign proceeds automatically through terminal closeout under its standing closeout authorization; any failure or incomplete branch stops and waits for human review.
+3. Accepted event evidence is added to the existing **WumboLabs/evaluations** repository; no new `eval-*` repository is created. Publication and closeout run under the WELP execution-state lifecycle: a clean `COMPLETE_PASS` campaign with consistent evidence, passing required validators and no unresolved scientific or execution blocker proceeds automatically through terminal closeout under its standing authorization. A bare validator PASS does not certify scientific validity; any failure or incomplete branch stops for human review.
 4. The central registry records the event, its model/profile relationships, and an exact repository + full commit SHA + relative artifact path citation.
 5. The website pins that central registry commit and SHA-256; deterministic sync renders its derivative registry, pages, and datasets.
 6. The site is built and validated, then deployed under the same lifecycle rule: clean-campaign closeout proceeds automatically; otherwise deployment waits for explicit human authorization.
