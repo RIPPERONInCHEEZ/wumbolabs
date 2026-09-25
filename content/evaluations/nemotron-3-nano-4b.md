@@ -2,7 +2,7 @@
 title = "Nemotron 3 Nano 4B"
 description = "Nemotron 3 Nano 4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 10
+weight = 11
 
 [extra]
 kind = "model"
@@ -41,7 +41,7 @@ Profile identity: `nemotron-3-nano-4b-llamacpp-q4km`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
 
 Events on this profile:
 
@@ -59,7 +59,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Recharacterization — llama.cpp Q4_K_M** · profile: llama.cpp Q4_K_M · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/nemotron-3-nano-4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b)
 
 ##### Identity
 
@@ -158,7 +158,7 @@ rankings.
 **Initial Evaluation — PROTOCOL_BLOCKED (historical, preserved)** · profile: llama.cpp Q4_K_M · maturity: PROTOCOL_BLOCKED · status: PARTIAL_PROTOCOL_DEVELOPMENT
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/initial-evaluation-2026-08-25/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/nemotron-3-nano-4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b)
 
 ### Identity
 
@@ -244,14 +244,14 @@ What the reached phases establish:
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models
 - **LocalMaxxing:** Speed run measured locally (~180 tok/s); submission blocked on missing credentials. No benchmark suite submissions.
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
 
@@ -259,7 +259,7 @@ This Lab Record is a summary; the canonical repo is the source of truth.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **nemotron-3-nano-4b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
+- **nemotron-3-nano-4b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
 
 ### Legacy provenance
 

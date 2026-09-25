@@ -39,7 +39,7 @@ Profile identity: `granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this profile:
 
@@ -56,7 +56,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Initial Evaluation — IBM Granite 4.2 8B (reasoning-on)** · profile: llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/granite-4.2-8b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/granite-4.2-8b)
 
 ##### Identity
 
@@ -131,4 +131,4 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
+- **granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)

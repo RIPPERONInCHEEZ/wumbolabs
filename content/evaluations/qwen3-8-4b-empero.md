@@ -2,7 +2,7 @@
 title = "Qwen3.8-4B (Empero)"
 description = "Qwen3.8-4B (Empero) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 16
+weight = 17
 
 [extra]
 kind = "model"
@@ -33,7 +33,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-vendor-battery-2026-08-18/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-vendor-battery/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-vendor-battery/profile.json)
 
 Events on this profile:
 
@@ -48,7 +48,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: specialized tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-distill-wumboserver-2026-09-01/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver/profile.json)
 
 Events on this profile:
 
@@ -65,7 +65,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Benchmark Only — WumboServer hardware lane** · profile: llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-distill-wumboserver-2026-09-01/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/qwen3.8-4b-empero)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/qwen3.8-4b-empero)
 
 ### Identity and scope
 
@@ -87,7 +87,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Specialized Test — vendor alignment** · profile: LLMGauge vendor-alignment battery (bf16/q4) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-vendor-battery-2026-08-18/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/qwen3.8-4b-empero)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/qwen3.8-4b-empero)
 
 ### Identity and scope
 
@@ -106,8 +106,8 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen3.8-4b-empero-vendor-battery**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-vendor-battery/profile.json)
-- **qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver/profile.json)
+- **qwen3.8-4b-empero-vendor-battery**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-vendor-battery/profile.json)
+- **qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver/profile.json)
 
 ### Legacy provenance
 

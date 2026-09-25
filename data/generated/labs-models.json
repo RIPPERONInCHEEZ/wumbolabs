@@ -21,6 +21,15 @@
       "latest_evidence_date": "2026-09-24"
     },
     {
+      "model_id": "ling-3.0-tiny",
+      "display_name": "Ling 3.0 Tiny",
+      "page": "/evaluations/ling-3-0-tiny/",
+      "classification": "NOT_READY",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-09-24"
+    },
+    {
       "model_id": "spark-x2.5-4b",
       "display_name": "Spark-X2.5-4B",
       "page": "/evaluations/spark-x2-5-4b/",

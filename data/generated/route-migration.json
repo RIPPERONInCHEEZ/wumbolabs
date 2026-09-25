@@ -237,6 +237,15 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/ling-3-0-tiny/",
+      "content_type": "model-page",
+      "model_id": "ling-3.0-tiny",
+      "event_id": null,
+      "new_url": "/evaluations/ling-3-0-tiny/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

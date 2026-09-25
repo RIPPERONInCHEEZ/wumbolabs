@@ -123,12 +123,12 @@ The 1.2B creates a genuinely better always-resident micro-sidecar niche (twice a
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
