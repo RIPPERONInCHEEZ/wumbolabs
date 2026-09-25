@@ -2,7 +2,7 @@
 title = "LFM2.5-8B-A1B"
 description = "LFM2.5-8B-A1B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 2
+weight = 3
 
 [extra]
 kind = "model"
@@ -41,7 +41,7 @@ Profile identity: `lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this profile:
 
@@ -59,7 +59,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Review Adjudication — Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/lfm2.5-8b-a1b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/lfm2.5-8b-a1b)
 
 ##### Identity
 
@@ -158,7 +158,7 @@ rankings.
 **WELP Prospective Retest — Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/e7ea77de15f214d2ba84b5a182e07ecbb45ba1ce/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/lfm2.5-8b-a1b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/lfm2.5-8b-a1b)
 
 ##### Identity
 
@@ -254,4 +254,4 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
+- **lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)

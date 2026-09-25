@@ -3,6 +3,15 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
+      "model_id": "ling-3.0-tiny",
+      "display_name": "Ling 3.0 Tiny",
+      "page": "/evaluations/ling-3-0-tiny/",
+      "classification": "NOT_READY",
+      "profile_count": 2,
+      "event_count": 3,
+      "latest_evidence_date": "2026-09-25"
+    },
+    {
       "model_id": "granite-4.2-8b",
       "display_name": "Granite 4.2 8B",
       "page": "/evaluations/granite-4-2-8b/",
@@ -18,15 +27,6 @@
       "classification": "NOT_READY",
       "profile_count": 1,
       "event_count": 2,
-      "latest_evidence_date": "2026-09-24"
-    },
-    {
-      "model_id": "ling-3.0-tiny",
-      "display_name": "Ling 3.0 Tiny",
-      "page": "/evaluations/ling-3-0-tiny/",
-      "classification": "NOT_READY",
-      "profile_count": 1,
-      "event_count": 1,
       "latest_evidence_date": "2026-09-24"
     },
     {

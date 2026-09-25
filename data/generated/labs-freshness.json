@@ -2,6 +2,26 @@
   "version": 2,
   "generated_by": "scripts/sync_labs.py (model-centric)",
   "source_identities": {
+    "eval-ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925": {
+      "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925.json",
+      "sha256": "d8ee05abf6a192d0016f1bfc3ee3b239f5b72c69bac745958a28615029786d50",
+      "repo": "WumboLabs/evaluations",
+      "ref": "0081605e23f0cf7cb47621072dbb6a3e42ac62c9",
+      "path": "models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/website-publication.json",
+      "resolved_commit": "0081605e23f0cf7cb47621072dbb6a3e42ac62c9",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/0081605e23f0cf7cb47621072dbb6a3e42ac62c9/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925": {
+      "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925.json",
+      "sha256": "af2a407cffb99c49dc55c1b0e4f57a3a9c968ce6beaa0ef0d6088eb943b82fad",
+      "repo": "WumboLabs/evaluations",
+      "ref": "0081605e23f0cf7cb47621072dbb6a3e42ac62c9",
+      "path": "models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/website-publication.json",
+      "resolved_commit": "0081605e23f0cf7cb47621072dbb6a3e42ac62c9",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/0081605e23f0cf7cb47621072dbb6a3e42ac62c9/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/website-publication.json",
+      "kind": "repository-cache"
+    },
     "eval-ling-3-0-tiny-rtx5070-welp-characterization-20260924": {
       "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-characterization-20260924.json",
       "sha256": "128e900f0a2f3965b0833ad30c7ec5f5654a82b07e3a3cea9571ba2ca0f83871",
@@ -223,6 +243,14 @@
       "campaign": "ling-3.0-tiny-rtx5070-welp-characterization-2026-09-24"
     },
     {
+      "slug": "eval-ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925",
+      "campaign": "ling-3.0-tiny-rtx5070-welp-reasoning-off-2026-09-25"
+    },
+    {
+      "slug": "eval-ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925",
+      "campaign": "ling-3.0-tiny-rtx5070-welp-reasoning-on-2026-09-25"
+    },
+    {
       "slug": "eval-mellum2-12b-a25b-recharacterization-2026-09-15",
       "campaign": "mellum2-12b-a2.5b-rtx5070-welp-recharacterization-2026-09-15"
     },
@@ -273,5 +301,5 @@
   ],
   "pending_public_evidence": [],
   "models": 26,
-  "model_events": 52
+  "model_events": 54
 }

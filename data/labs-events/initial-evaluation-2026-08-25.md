@@ -82,13 +82,13 @@ What the reached phases establish:
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models
 - **LocalMaxxing:** Speed run measured locally (~180 tok/s); submission blocked on missing credentials. No benchmark suite submissions.
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/afa0473404135fea513a7cb4ba4d9f568aa8306e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
