@@ -23,9 +23,26 @@ This page explains how WumboLabs evidence is produced, reviewed, validated, and 
 
 ## 02 — WELP
 
-**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-24 context-outcome-repair snapshot](https://github.com/WumboLabs/welp/blob/ead28bde1ea9bce20cec6b3930125016068a8bbc/snapshot-freeze/welp-next-snapshot-2026-09-24-context-outcome-repair/manifest.json) is **DRAFT, not v1.0**. It binds prospective gates to setup and raw-output evidence, with qualified safety, context and real-work oracles, a frozen blinded-review disagreement resolution path, a mechanical calibration sanity layer, and an explicit representation for answerless budget exhaustion. Earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
+**WELP (WumboLabs Evaluation Lifecycle Protocol)** is the reproducible, phase-gated lifecycle for WumboLabs model testing. The current [2026-09-25 reasoning-profiles snapshot](https://github.com/WumboLabs/welp/blob/193cb645c81440cc1232447f3ebc32a8197a7f3e/snapshot-freeze/welp-next-snapshot-2026-09-25-reasoning-profiles/manifest.json) is **DRAFT, not v1.0**. It binds prospective gates to setup and raw-output evidence, with qualified safety, context and real-work oracles, a frozen blinded-review disagreement resolution path, a mechanical calibration sanity layer, an explicit representation for answerless budget exhaustion, and first-class reasoning profiles. Earlier campaigns retain their own frozen snapshots and are not retroactively rescored.
 
-**Historical interpretation limits:** the [frozen compatibility policy](https://github.com/WumboLabs/welp/blob/ead28bde1ea9bce20cec6b3930125016068a8bbc/summaries/welp_compatibility_policy.json) records confirmed limitations in the retained LFM2.5-8B-A1B retest: task failure did not establish unsafe behavior, a context oracle rejected correct answers, and tool-discovery and unexecuted Linux coverage limited role conclusions. Original reports, scores and verdicts remain historical evidence. This protocol revision supplies neither a replacement model classification nor a new model campaign.
+**Reasoning profiles — models are tested as they deploy:** some models reason
+(think) before answering, and for several of them reasoning can be genuinely
+switched on or off. WELP determines each model's actual reasoning behavior
+experimentally on the tested runtime — a requested setting alone proves
+nothing. When an effective, supported ON/OFF control exists, the model is
+characterized as **two separate deployment profiles**: *Reasoning On* and
+*Reasoning Off*. Each profile gets its own setup, calibration, generation
+budgets, behavioral testing, context characterization, performance
+measurement, safety results and an independent readiness verdict. Profile
+verdicts are reported side by side and are **never averaged** into one
+model-level score — the same model can legitimately be ready in one profile
+and not ready in the other. Models without any reasoning mode are tested as a
+single *Standard* profile; models whose reasoning cannot be disabled are not
+given a fake "off" profile; and extra reasoning-effort levels (low/medium/high
+and similar) are qualified first and only become full profiles when they are
+genuinely supported, measurably distinct and deployment-relevant.
+
+**Historical interpretation limits:** the [frozen compatibility policy](https://github.com/WumboLabs/welp/blob/193cb645c81440cc1232447f3ebc32a8197a7f3e/summaries/welp_compatibility_policy.json) records confirmed limitations in the retained LFM2.5-8B-A1B retest: task failure did not establish unsafe behavior, a context oracle rejected correct answers, and tool-discovery and unexecuted Linux coverage limited role conclusions. Original reports, scores and verdicts remain historical evidence. This protocol revision supplies neither a replacement model classification nor a new model campaign.
 
 **What it is:** a preregistered protocol with ordered phases — provenance, admission, performance, practical viability, reliability, capability modules, context, variance, optimization, and stability — and frozen applicable gates. It separates campaign execution state from a model's readiness verdict.
 
