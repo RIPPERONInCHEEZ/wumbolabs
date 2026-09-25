@@ -2,6 +2,16 @@
   "version": 2,
   "generated_by": "scripts/sync_labs.py (model-centric)",
   "source_identities": {
+    "eval-granite-42-8b-rtx5070-welp-context-completion-20260924": {
+      "file": "data/generated/evaluations-exports/granite-42-8b-rtx5070-welp-context-completion-20260924.json",
+      "sha256": "978d09e20e166ff7ecec559a1b10a5a7d3de10292aa663ac3e6ce6e018cced1b",
+      "repo": "WumboLabs/evaluations",
+      "ref": "250afdf042677d8c6dc19275c357ad0f5a2b870a",
+      "path": "models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/website-publication.json",
+      "resolved_commit": "250afdf042677d8c6dc19275c357ad0f5a2b870a",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/250afdf042677d8c6dc19275c357ad0f5a2b870a/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/website-publication.json",
+      "kind": "repository-cache"
+    },
     "eval-lfm25-8b-a1b-rtx5070-welp-adjudication-20260924": {
       "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924.json",
       "sha256": "2853078c539c751ca6de068ec6588e688bae8aa7d8aa0eaee01eb19ca43df54c",
@@ -187,6 +197,10 @@
       "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
     },
     {
+      "slug": "eval-granite-42-8b-rtx5070-welp-context-completion-20260924",
+      "campaign": "granite-4.2-8b-rtx5070-welp-context-outcome-completion-2026-09-24"
+    },
+    {
       "slug": "eval-lfm25-8b-a1b-rtx5070-welp-20260923",
       "campaign": "lfm2.5-8b-a1b-rtx5070-welp-prospective-retest-2-2026-09-23"
     },
@@ -244,6 +258,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 24,
-  "model_events": 50
+  "models": 25,
+  "model_events": 51
 }

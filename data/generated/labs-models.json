@@ -3,6 +3,15 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
+      "model_id": "granite-4.2-8b",
+      "display_name": "Granite 4.2 8B",
+      "page": "/evaluations/granite-4-2-8b/",
+      "classification": "NOT_READY",
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-09-24"
+    },
+    {
       "model_id": "lfm2.5-8b-a1b",
       "display_name": "LFM2.5-8B-A1B",
       "page": "/evaluations/lfm2-5-8b-a1b/",

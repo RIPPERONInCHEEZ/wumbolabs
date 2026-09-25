@@ -2,7 +2,7 @@
 title = "Gemma 4 E4B"
 description = "Gemma 4 E4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 12
+weight = 13
 
 [extra]
 kind = "model"
@@ -41,7 +41,7 @@ Profile identity: `gemma4-e4b-llamacpp-qat-q4-0`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/gemma4-e4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/ff5de425723ed4106331fe69c2818549f66d5147/models/gemma4-e4b)
 
 ##### Identity
 
@@ -152,7 +152,7 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **gemma4-e4b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/46aeb2cfc9c73a0b0fb0a24a51c36f13c80e0a68/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
+- **gemma4-e4b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/ff5de425723ed4106331fe69c2818549f66d5147/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
 
 ### Legacy provenance
 
