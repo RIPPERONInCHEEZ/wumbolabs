@@ -41,7 +41,7 @@ Profile identity: `bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off/profile.json)
 
 Events on this profile:
 
@@ -60,7 +60,7 @@ Profile identity: `bonsai2-27b-ptq1-0-prism-llamacpp`.
 Status: historical tested surface; retained evidence, not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp/profile.json)
 
 Events on this profile:
 
@@ -77,7 +77,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Methodology-Revision Supplement — PrismML PTQ1_0 (thinking-off)** · profile: llama.cpp PTQ1_0 (thinking-off) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/bonsai-2-27b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/bonsai-2-27b)
 
 ##### Identity
 
@@ -164,7 +164,7 @@ rankings.
 **WELP Characterization — PrismML PTQ1_0 ternary (reasoning-on)** · profile: llama.cpp PTQ1_0 (reasoning-on, vendor default) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/bonsai-2-27b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/bonsai-2-27b)
 
 ##### Identity
 
@@ -259,5 +259,5 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off/profile.json)
-- **bonsai2-27b-ptq1-0-prism-llamacpp**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp/profile.json)
+- **bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off/profile.json)
+- **bonsai2-27b-ptq1-0-prism-llamacpp**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp/profile.json)

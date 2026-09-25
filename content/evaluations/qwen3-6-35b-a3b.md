@@ -41,7 +41,7 @@ Profile identity: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json)
 
 Events on this profile:
 
@@ -56,7 +56,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: historical tested surface; retained evidence, not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
 
 Events on this profile:
 
@@ -74,7 +74,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Recharacterization — llama.cpp UD-IQ2_M q8_0 KV** · profile: llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) · maturity: CURRENT_WELP · status: LIMITED_ROLE_ONLY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b)
 
 ##### Identity
 
@@ -161,7 +161,7 @@ rankings.
 **Benchmark Only — tool-version re-run** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (TOOL_VERSION_RERUN)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
@@ -183,7 +183,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Specialized Test — fit ladder** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-fit-ladder-e2e-2026-07-15/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
@@ -208,8 +208,8 @@ This model appears in shared multi-model comparisons. Each report is stored once
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json)
-- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/e0a8e71ebd2c966a9cd145257025c7bf78fbf094/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
+- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json)
+- **qwen3.6-35b-a3b-llamacpp-ud-iq2-m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d3a235eb5a74263f1e980826a7915dd5330ffb53/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
 
 ### Legacy provenance
 
