@@ -39,7 +39,7 @@ Profile identity: `ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this profile:
 
@@ -59,7 +59,7 @@ Profile identity: `ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoni
 Status: validated alternate tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
 
 Events on this profile:
 
@@ -77,7 +77,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Reasoning-Profile Re-derivation — Ling 3.0 Tiny (Reasoning On, publisher default)** · profile: llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny)
 
 ##### Identity
 
@@ -155,7 +155,7 @@ rankings.
 **WELP Reasoning-Profile Characterization — Ling 3.0 Tiny (Reasoning Off, supported alternate)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny)
 
 ##### Identity
 
@@ -233,7 +233,7 @@ rankings.
 **WELP Agentic — Ling 3.0 Tiny (Reasoning Off; methodology validation)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/599063be57edd4f3b01f27c33da02d48abc541d8/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny)
 
 ##### Identity
 
@@ -311,7 +311,7 @@ rankings.
 **WELP Initial Evaluation — inclusionAI Ling 3.0 Tiny (reasoning-on)** · profile: llama.cpp official Q8_0 (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/43f56d8add4b3dfc51183ccd818fc6037e79bd9c/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-characterization-20260924/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny)
 
 ##### Identity
 
@@ -384,5 +384,5 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json)
-- **ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
+- **ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json)
+- **ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)

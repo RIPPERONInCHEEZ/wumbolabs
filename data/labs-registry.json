@@ -3,9 +3,9 @@
   "generated_by": "scripts/evaluations_source.py — do not hand-edit",
   "source_pin": {
     "repo": "WumboLabs/evaluations",
-    "commit": "fed51a3ef66af89cfadd130d6990444797efd7ab",
+    "commit": "d9ada5b5eccc36da32214b2e4f44c846f280664e",
     "path": "registry.json",
-    "sha256": "9cf2a4b2f9bc7e59d56dde7147e795a7c85e524828781e4831c77ef637516e30"
+    "sha256": "f35426e794635df139b608c17c5dc901b35e30bbb8f51918eb76c96e4109495d"
   },
   "description": "Deterministic derivative of the canonical WumboLabs/evaluations registry; edit that source, not this file.",
   "models": [
@@ -1938,9 +1938,9 @@
         "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925.json"
       },
       "profile_metadata_urls": {
-        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json"
+        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny"
     },
     {
       "slug": "eval-ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925",
@@ -1994,9 +1994,9 @@
         "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925.json"
       },
       "profile_metadata_urls": {
-        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json"
+        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny"
     },
     {
       "slug": "eval-ling-3-0-tiny-rtx5070-welp-characterization-20260924",
@@ -2050,9 +2050,9 @@
         "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-characterization-20260924.json"
       },
       "profile_metadata_urls": {
-        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json"
+        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny"
     },
     {
       "slug": "eval-granite-42-8b-rtx5070-welp-context-completion-20260924",
@@ -2130,9 +2130,9 @@
         "file": "data/generated/evaluations-exports/granite-42-8b-rtx5070-welp-context-completion-20260924.json"
       },
       "profile_metadata_urls": {
-        "granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json"
+        "granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/granite-4.2-8b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/granite-4.2-8b"
     },
     {
       "slug": "eval-lfm25-8b-a1b-rtx5070-welp-adjudication-20260924",
@@ -2191,9 +2191,9 @@
         "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924.json"
       },
       "profile_metadata_urls": {
-        "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json"
+        "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-8b-a1b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-8b-a1b"
     },
     {
       "slug": "qwen3.8-27b",
@@ -2258,9 +2258,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen38-27b-llamacpp-ud-q2-k-xl": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json"
+        "qwen38-27b-llamacpp-ud-q2-k-xl": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b",
       "event_body": "labs-events/initial-evaluation-2026-08-21.md"
     },
     {
@@ -2330,9 +2330,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md"
       },
       "profile_metadata_urls": {
-        "qwen38-27b-exl3-h1": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json"
+        "qwen38-27b-exl3-h1": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b"
     },
     {
       "slug": "qwen38-27b-context-envelope",
@@ -2399,9 +2399,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md"
       },
       "profile_metadata_urls": {
-        "qwen38-27b-exl3-h1": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json"
+        "qwen38-27b-exl3-h1": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b"
     },
     {
       "slug": "nemotron-3-nano-4b",
@@ -2455,9 +2455,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "nemotron-3-nano-4b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json"
+        "nemotron-3-nano-4b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/nemotron-3-nano-4b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/nemotron-3-nano-4b",
       "event_body": "labs-events/initial-evaluation-2026-08-25.md"
     },
     {
@@ -2526,9 +2526,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md"
       },
       "profile_metadata_urls": {
-        "nemotron-3-nano-4b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json"
+        "nemotron-3-nano-4b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/nemotron-3-nano-4b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/nemotron-3-nano-4b"
     },
     {
       "slug": "apodex-1.1-mini",
@@ -2582,9 +2582,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "apodex-1.1-mini-llamacpp-iq1m": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json"
+        "apodex-1.1-mini-llamacpp-iq1m": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/apodex-1.1-mini",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/apodex-1.1-mini",
       "event_body": "labs-events/initial-evaluation-2026-08-25-apodex.md"
     },
     {
@@ -2642,9 +2642,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "lfm2.5-1.2b-llamacpp-qad-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0/profile.json"
+        "lfm2.5-1.2b-llamacpp-qad-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-1.2b/profiles/lfm2.5-1.2b-llamacpp-qad-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-1.2b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-1.2b",
       "event_body": "labs-events/initial-evaluation-2026-08-26-lfm12.md"
     },
     {
@@ -2702,9 +2702,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "lfm2.5-2.6b-llamacpp-qad-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-2.6b/profiles/lfm2.5-2.6b-llamacpp-qad-q4-0/profile.json"
+        "lfm2.5-2.6b-llamacpp-qad-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-2.6b/profiles/lfm2.5-2.6b-llamacpp-qad-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-2.6b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-2.6b",
       "event_body": "labs-events/initial-evaluation-2026-08-26-lfm26.md"
     },
     {
@@ -2762,9 +2762,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "ornith-1.5-9b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km/profile.json"
+        "ornith-1.5-9b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ornith-1.5-9b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ornith-1.5-9b",
       "event_body": "labs-events/initial-evaluation-2026-08-27.md"
     },
     {
@@ -2828,9 +2828,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md"
       },
       "profile_metadata_urls": {
-        "qwen35-4b-llamacpp-bf16": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json"
+        "qwen35-4b-llamacpp-bf16": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen35-4b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-4b"
     },
     {
       "slug": "qwen35-9b",
@@ -2893,9 +2893,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md"
       },
       "profile_metadata_urls": {
-        "qwen35-9b-llamacpp-q8": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json"
+        "qwen35-9b-llamacpp-q8": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen35-9b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-9b"
     },
     {
       "slug": "minicpm5-2b",
@@ -2960,9 +2960,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md"
       },
       "profile_metadata_urls": {
-        "minicpm5-2b-vllm-bf16": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json"
+        "minicpm5-2b-vllm-bf16": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/minicpm5-2b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/minicpm5-2b"
     },
     {
       "slug": "gemma4-e4b",
@@ -3027,9 +3027,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md"
       },
       "profile_metadata_urls": {
-        "gemma4-e4b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json"
+        "gemma4-e4b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma4-e4b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma4-e4b"
     },
     {
       "slug": "gemma4-12b-practical-use-family-2026-06-21",
@@ -3104,9 +3104,9 @@
       "model_id": "gemma-4-12b",
       "profile_id": "gemma-4-12b-llamacpp-qat-q4-0",
       "profile_metadata_urls": {
-        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
+        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b",
       "event_body": "labs-events/gemma4-12b-practical-use-family-2026-06-21.md"
     },
     {
@@ -3161,9 +3161,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
+        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b",
       "event_body": "labs-events/gemma4-12b-core-agent-v016-2026-06-16.md"
     },
     {
@@ -3218,9 +3218,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
+        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b",
       "event_body": "labs-events/gemma4-12b-honesty-ladder-2026-06-21.md"
     },
     {
@@ -3300,9 +3300,9 @@
       "model_id": "gemma-4-12b",
       "profile_id": "gemma-4-12b-llamacpp-qat-q4-0",
       "profile_metadata_urls": {
-        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
+        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b",
       "event_body": "labs-events/gemma4-12b-practical-pool-v025-2026-07-04.md"
     },
     {
@@ -3361,12 +3361,12 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "gemma-4-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json",
-        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json",
-        "gemma-4-12b-llamacpp-ud-q5-k-xl": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json",
-        "gemma-4-12b-llamacpp-ud-q6-k-xl": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json"
+        "gemma-4-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json",
+        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json",
+        "gemma-4-12b-llamacpp-ud-q5-k-xl": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json",
+        "gemma-4-12b-llamacpp-ud-q6-k-xl": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b",
       "event_body": "labs-events/gemma4-12b-lmx-speed-2026-07-04.md"
     },
     {
@@ -3421,9 +3421,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "gemmable-4-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json"
+        "gemmable-4-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemmable-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b",
       "event_body": "labs-events/gemmable-agent-backend-2026-06-21.md"
     },
     {
@@ -3477,9 +3477,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "gemmable-4-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json"
+        "gemmable-4-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemmable-4-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b",
       "event_body": "labs-events/gemmable-lmx-speed-2026-07-04.md"
     },
     {
@@ -3533,9 +3533,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "grug-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/grug-12b/profiles/grug-12b-llamacpp-q4km/profile.json"
+        "grug-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/grug-12b/profiles/grug-12b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/grug-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/grug-12b",
       "event_body": "labs-events/grug-honesty-smoke-2026-07-04.md"
     },
     {
@@ -3589,9 +3589,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "grug-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/grug-12b/profiles/grug-12b-llamacpp-q4km/profile.json"
+        "grug-12b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/grug-12b/profiles/grug-12b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/grug-12b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/grug-12b",
       "event_body": "labs-events/grug-lmx-speed-2026-07-04.md"
     },
     {
@@ -3651,10 +3651,10 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json",
-        "mellum2-12b-a2.5b-llamacpp-q4km-thinking": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json"
+        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json",
+        "mellum2-12b-a2.5b-llamacpp-q4km-thinking": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b",
       "event_body": "labs-events/mellum2-agent-backend-64k-2026-06-17.md"
     },
     {
@@ -3709,9 +3709,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json"
+        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b",
       "event_body": "labs-events/mellum2-fake-tool-2026-06-17.md"
     },
     {
@@ -3765,9 +3765,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json"
+        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b",
       "event_body": "labs-events/mellum2-lmx-speed-2026-07-04.md"
     },
     {
@@ -3821,9 +3821,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3-14b-ollama-q4km-wumbo": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b/profiles/qwen3-14b-ollama-q4km-wumbo/profile.json"
+        "qwen3-14b-ollama-q4km-wumbo": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b/profiles/qwen3-14b-ollama-q4km-wumbo/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b",
       "event_body": "labs-events/qwen3-14b-wumbo-daily-evaluation-2026-05-07.md"
     },
     {
@@ -3877,9 +3877,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3-14b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json"
+        "qwen3-14b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b",
       "event_body": "labs-events/qwen3-14b-lmx-speed-2026-07-05.md"
     },
     {
@@ -3933,9 +3933,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3-14b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json"
+        "qwen3-14b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b",
       "event_body": "labs-events/qwen3-14b-fit-ladder-2026-07-15.md"
     },
     {
@@ -3990,9 +3990,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.6-35b-a3b-llamacpp-ud-iq2-m": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json"
+        "qwen3.6-35b-a3b-llamacpp-ud-iq2-m": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.6-35b-a3b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.6-35b-a3b",
       "event_body": "labs-events/qwen36-35b-practical-v071-2026-07-22.md"
     },
     {
@@ -4046,9 +4046,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.6-35b-a3b-llamacpp-ud-iq2-m": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json"
+        "qwen3.6-35b-a3b-llamacpp-ud-iq2-m": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.6-35b-a3b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.6-35b-a3b",
       "event_body": "labs-events/qwen36-35b-fit-ladder-e2e-2026-07-15.md"
     },
     {
@@ -4103,9 +4103,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen2.5-3b-llamacpp-f16": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json"
+        "qwen2.5-3b-llamacpp-f16": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen2.5-3b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen2.5-3b",
       "event_body": "labs-events/qwen25-3b-cross-runtime-2026-07-15.md"
     },
     {
@@ -4159,9 +4159,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen2.5-3b-vllm-bf16": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen2.5-3b/profiles/qwen2.5-3b-vllm-bf16/profile.json"
+        "qwen2.5-3b-vllm-bf16": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen2.5-3b/profiles/qwen2.5-3b-vllm-bf16/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen2.5-3b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen2.5-3b",
       "event_body": "labs-events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15.md"
     },
     {
@@ -4217,9 +4217,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.8-2b-empero-vllm-bf16": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json"
+        "qwen3.8-2b-empero-vllm-bf16": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-2b-empero",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-2b-empero",
       "event_body": "labs-events/qwen38-empero-2b-vendor-battery-2026-08-18.md"
     },
     {
@@ -4274,9 +4274,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.8-4b-empero-vendor-battery": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-vendor-battery/profile.json"
+        "qwen3.8-4b-empero-vendor-battery": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-vendor-battery/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-4b-empero",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-4b-empero",
       "event_body": "labs-events/qwen38-empero-4b-vendor-battery-2026-08-18.md"
     },
     {
@@ -4330,9 +4330,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver/profile.json"
+        "qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-4b-empero/profiles/qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-4b-empero",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-4b-empero",
       "event_body": "labs-events/qwen38-empero-4b-distill-wumboserver-2026-09-01.md"
     },
     {
@@ -4387,9 +4387,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.8-9b-empero-vendor-battery": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-vendor-battery/profile.json"
+        "qwen3.8-9b-empero-vendor-battery": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-vendor-battery/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-9b-empero",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-9b-empero",
       "event_body": "labs-events/qwen38-empero-9b-vendor-battery-2026-08-18.md"
     },
     {
@@ -4443,9 +4443,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver/profile.json"
+        "qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.8-9b-empero",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.8-9b-empero",
       "event_body": "labs-events/qwen38-empero-9b-distill-wumboserver-2026-09-01.md"
     },
     {
@@ -4498,9 +4498,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "bonsai-27b-q1-0-llamacpp": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json"
+        "bonsai-27b-q1-0-llamacpp": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/bonsai-27b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/bonsai-27b",
       "event_body": "labs-events/bonsai-27b-smoke-v070-2026-07-14.md"
     },
     {
@@ -4554,9 +4554,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "ornith-1.5-9b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km/profile.json"
+        "ornith-1.5-9b-llamacpp-q4km": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ornith-1.5-9b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ornith-1.5-9b",
       "event_body": "labs-events/ornith-9b-wumboserver-admission-2026-09-02.md"
     },
     {
@@ -4611,9 +4611,9 @@
         "commit": "479cb50c197f8ea0dd905a68ffd61f632f49c652"
       },
       "profile_metadata_urls": {
-        "qwen38-27b-llamacpp-ud-q2-k-xl": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json"
+        "qwen38-27b-llamacpp-ud-q2-k-xl": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen38-27b",
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen38-27b",
       "event_body": "labs-events/qwen38-27b-quant-showdowns-2026-08-20.md"
     },
     {
@@ -4682,9 +4682,9 @@
         "url": "https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md"
       },
       "profile_metadata_urls": {
-        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
+        "gemma-4-12b-llamacpp-qat-q4-0": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/gemma-4-12b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemma-4-12b"
     },
     {
       "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
@@ -4738,9 +4738,9 @@
         "file": "data/generated/evaluations-exports/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14.json"
       },
       "profile_metadata_urls": {
-        "qwen3-14b-llamacpp-q4km-q8kv": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km-q8kv/profile.json"
+        "qwen3-14b-llamacpp-q4km-q8kv": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km-q8kv/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3-14b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3-14b"
     },
     {
       "slug": "eval-qwen36-35b-a3b-recharacterization-2026-09-15",
@@ -4795,9 +4795,9 @@
         "file": "data/generated/evaluations-exports/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15.json"
       },
       "profile_metadata_urls": {
-        "qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json"
+        "qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/qwen3.6-35b-a3b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen3.6-35b-a3b"
     },
     {
       "slug": "eval-mellum2-12b-a25b-recharacterization-2026-09-15",
@@ -4852,9 +4852,9 @@
         "file": "data/generated/evaluations-exports/mellum2-12b-a25b-rtx5070-welp-recharacterization-2026-09-15.json"
       },
       "profile_metadata_urls": {
-        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json"
+        "mellum2-12b-a2.5b-llamacpp-q4km-instruct": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b"
     },
     {
       "slug": "eval-mellum2-12b-a25b-thinking-recharacterization-2026-09-16",
@@ -4903,9 +4903,9 @@
         "file": "data/generated/evaluations-exports/mellum2-12b-a25b-thinking-rtx5070-welp-recharacterization-2026-09-16.json"
       },
       "profile_metadata_urls": {
-        "mellum2-12b-a2.5b-llamacpp-q4km-thinking": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json"
+        "mellum2-12b-a2.5b-llamacpp-q4km-thinking": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/mellum2-12b-a2.5b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/mellum2-12b-a2.5b"
     },
     {
       "slug": "eval-bonsai2-27b-welp-characterization-2026-09-18",
@@ -4959,9 +4959,9 @@
         "file": "data/generated/evaluations-exports/bonsai2-27b-rtx5070-welp-20260918.json"
       },
       "profile_metadata_urls": {
-        "bonsai2-27b-ptq1-0-prism-llamacpp": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp/profile.json"
+        "bonsai2-27b-ptq1-0-prism-llamacpp": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/bonsai-2-27b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/bonsai-2-27b"
     },
     {
       "slug": "eval-bonsai2-27b-welp-methodology-supplement-2026-09-20",
@@ -5013,9 +5013,9 @@
         "file": "data/generated/evaluations-exports/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920.json"
       },
       "profile_metadata_urls": {
-        "bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off/profile.json"
+        "bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/bonsai-2-27b/profiles/bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/bonsai-2-27b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/bonsai-2-27b"
     },
     {
       "slug": "eval-spark25-4b-rtx5070-welp-20260920",
@@ -5069,9 +5069,9 @@
         "file": "data/generated/evaluations-exports/spark25-4b-rtx5070-welp-20260920.json"
       },
       "profile_metadata_urls": {
-        "spark25-4b-q8-0-llamacpp": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json"
+        "spark25-4b-q8-0-llamacpp": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/spark-x2.5-4b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/spark-x2.5-4b"
     },
     {
       "slug": "eval-lfm25-8b-a1b-rtx5070-welp-20260923",
@@ -5125,9 +5125,9 @@
         "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-welp-20260923.json"
       },
       "profile_metadata_urls": {
-        "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json"
+        "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/lfm2.5-8b-a1b"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/lfm2.5-8b-a1b"
     },
     {
       "slug": "eval-ling-3-0-tiny-rtx5070-welp-agentic-20260925",
@@ -5170,15 +5170,15 @@
       "source": {
         "kind": "repository-cache",
         "repo": "WumboLabs/evaluations",
-        "ref": "8332a4e73c797f57a59f60550e2c7f2fcaf081c0",
+        "ref": "0382fc7dd89fd403869fa3d81830adc15233da7b",
         "path": "models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/website-publication.json",
-        "sha256": "74a2313bc47bd56ce018eeef33e744c1ab28373396548acebb735c0020b57d17",
+        "sha256": "5044e15ea13bbfc65819cac929429e7357b2ce43f8bff52dba2ee8f32f049ce6",
         "file": "data/generated/evaluations-exports/ling-3-0-tiny-rtx5070-welp-agentic-20260925.json"
       },
       "profile_metadata_urls": {
-        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off": "https://github.com/WumboLabs/evaluations/blob/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json"
+        "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off": "https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json"
       },
-      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/fed51a3ef66af89cfadd130d6990444797efd7ab/models/ling-3.0-tiny"
+      "model_evidence_url": "https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/ling-3.0-tiny"
     }
   ]
 }
