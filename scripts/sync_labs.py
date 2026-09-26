@@ -81,6 +81,7 @@ EVENT_TYPES = {
     "initial-evaluation", "welp-recharacterization", "profile-canonical-promotion",
     "context-envelope-completion", "follow-up", "specialized-test",
     "practical-use-comparison", "benchmark-only", "profile-optimization", "integration-test",
+    "welp-agentic-methodology-validation",
 }
 # Evidence maturity labels (census vocabulary). Required on every registry entry
 # since the 2026-09-12 full-evidence census; displayed verbatim on model pages.
@@ -107,7 +108,7 @@ SURFACES = {
     "performance", "serving-profile", "localmaxxing", "protocol-development",
     # census additions: bounded testing surfaces that never supersede the
     # canonical WELP surfaces above
-    "specialized", "practical-use", "agent-backend",
+    "specialized", "practical-use", "agent-backend", "agentic",
 }
 
 

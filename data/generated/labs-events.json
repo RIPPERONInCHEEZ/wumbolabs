@@ -1250,6 +1250,29 @@
       "evidence_state": "published",
       "model_url": "/evaluations/lfm2-5-8b-a1b/",
       "report_page": null
+    },
+    {
+      "event_id": "ling-3-0-tiny-rtx5070-welp-agentic-20260925",
+      "slug": "eval-ling-3-0-tiny-rtx5070-welp-agentic-20260925",
+      "model_id": "ling-3.0-tiny",
+      "model": "Ling 3.0 Tiny",
+      "event_type": "welp-agentic-methodology-validation",
+      "event_kicker": "WELP Agentic — Ling 3.0 Tiny (Reasoning Off; methodology validation)",
+      "event_title": "First WELP Agentic section execution: three bounded tool tasks through the pinned harness in a disposable offline sandbox; methodology-validation event on a known model",
+      "profile_id": "ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off",
+      "profile_name": "llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K)",
+      "date": "2026-09-25",
+      "event_date": "2026-09-25",
+      "status": "NOT_READY",
+      "evidence_maturity": "CURRENT_WELP",
+      "shared_event_id": null,
+      "related_model_ids": null,
+      "hardware": "NVIDIA GeForce RTX 5070 12 GB",
+      "headline": "Ling 3.0 Tiny (inclusionAI) Reasoning Off profile on the pinned llama.cpp b10999 CUDA build, same Q8_0 artifact and RTX 5070 12 GB as the publisher-default Reasoning On profile: with enable_thinking=false (proven effective), answers begin immediately - zero starvation, 1/40 truncation, and 512-token budgets suffice for most response classes; controlled retrieval is validated 8K-192K including the native 128K maximum while the 256K extension fails consistently. Fabrication resistance is measured weak (replicated on both seeds), keeping readiness NOT_READY. Engine speed is unchanged versus Reasoning On; the deployment differences are token economics and behavior. Verdicts of the two profiles are independent and never averaged.",
+      "evidence_url": "https://github.com/WumboLabs/evaluations/blob/599063be57edd4f3b01f27c33da02d48abc541d8/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/REPORT.md",
+      "evidence_state": "published",
+      "model_url": "/evaluations/ling-3-0-tiny/",
+      "report_page": null
     }
   ]
 }
