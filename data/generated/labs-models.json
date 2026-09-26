@@ -12,6 +12,15 @@
       "latest_evidence_date": "2026-09-25"
     },
     {
+      "model_id": "neohorse-1-9b",
+      "display_name": "NeoHorse-1-9B",
+      "page": "/evaluations/neohorse-1-9b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 2,
+      "event_count": 3,
+      "latest_evidence_date": "2026-09-25"
+    },
+    {
       "model_id": "granite-4.2-8b",
       "display_name": "Granite 4.2 8B",
       "page": "/evaluations/granite-4-2-8b/",

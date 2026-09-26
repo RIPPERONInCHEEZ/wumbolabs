@@ -1,0 +1,77 @@
+{
+  "schema": "wumbolabs-labs-publication/1",
+  "campaign": "neohorse-1-9b-rtx5070-welp-reasoning-on-2026-09-25",
+  "disposition": "WEBSITE_PUBLISHED",
+  "reason": "Terminal disposition: success-branch campaign group (COMPLETE_PASS, zero methodology defects); central evidence published and pinned (evaluations commit bf5e29e1afee4f391c4b8f83e77636b887453f53); website sync/build/deploy with live verification follows.",
+  "publication_date": "2026-09-26",
+  "model": {
+    "display_name": "NeoHorse-1-9B",
+    "publisher": "TokenRhythm",
+    "hf_id": "TokenRhythm/NeoHorse-1-9B",
+    "revision": "ba5b6e40d88a6ddf4591e176738254a3bc715765"
+  },
+  "artifact": {
+    "kind": "GGUF",
+    "filename": "NeoHorse-1-9B-Q8_0.gguf",
+    "quantization": "Q8_0",
+    "source_repo": "TokenRhythm/NeoHorse-1-9B-GGUF",
+    "source_revision": "ddcb4c939b5392c86a9d2733c7c0ed30db2554fd"
+  },
+  "canonical_evidence": {
+    "state": "PUBLISHED",
+    "repo": "WumboLabs/evaluations",
+    "path": "models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md",
+    "commit": "bf5e29e1afee4f391c4b8f83e77636b887453f53",
+    "url": "https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md"
+  },
+  "localmaxxing_summary": {
+    "status": "SUBMITTED",
+    "origin": "NEW",
+    "service_record_id": "cmuhu00r40dtjlq01ptbrfbx2"
+  },
+  "classification_summary": {
+    "profile_id": "neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on",
+    "readiness": "READY_WITH_GUARDRAILS",
+    "rule": "R-C6/R-C7"
+  },
+  "website_record_slug": "eval-neohorse-1-9b-rtx5070-welp-reasoning-on-20260925",
+  "runtime": {
+    "name": "llama.cpp",
+    "build": "build-cuda-sm120",
+    "commit": "b04d4e567cd2fb8d2ded6e17d38dbbcfafe29063",
+    "tag": "b10999"
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 5070 12 GB",
+    "host_class": "consumer workstation"
+  },
+  "welp": {
+    "outcome": "COMPLETE_PASS",
+    "classification_note": "derived from valid evidence (bundle valid, zero errors): READY_WITH_GUARDRAILS (R-C6/R-C7) - SEMANTIC_CAPABILITY ACCEPTABLE / BUDGET_DISCIPLINE GOOD / CONTEXT_USABILITY VALIDATED / INTEGRATION_QUALITY CLEAN; guardrails: semantic not STRONG (R7 hallucination-pattern check negative), applicable capability modules not all PASS"
+  },
+  "context": {
+    "configured": 32768,
+    "note": "coverage COMPLETE 24/24 across 8192..65536: fully VALIDATED at every native rung after blinded oracle resolution of mechanical synthesis flags (2/0); useful-context max 65536 (semantic and operational); practical rung 32768 VALIDATED; 131072/262144 FIT_LIMIT (measured VRAM load failure, hash-bound logs); advertised 1,010,000 extension FIT_LIMIT (measured impossibility on 12 GB; no publisher-pinned llama.cpp mechanism)"
+  },
+  "quality": {
+    "assistant_quality_note": "Deployment 12/12, Minimal 4/4, Publisher 11/12 (supporting diagnostics, never headline); ambiguity probe invents nothing",
+    "reliability_headline": "pooled semantic 0.926 (50 PASS / 4 FAIL / 6 NOT_EVALUABLE of 60), operational completion 1.000; safety NO_UNSAFE_BEHAVIOR 2/0 on all 6 git-amend instances across 3 seeds; gate DO_NOT_ADVANCE (R7 only)"
+  },
+  "localmaxxing": {
+    "status": "SUBMITTED",
+    "origin": "NEW",
+    "service_record_id": "cmuhu00r40dtjlq01ptbrfbx2",
+    "pp512_tok_s": 4494.72,
+    "tg128_tok_s": 67.91,
+    "note": "canonical practical profile Q8_0 llama.cpp; the benchmark workload is reasoning-state invariant"
+  },
+  "public_summary": "NeoHorse-1-9B (TokenRhythm) publisher-default Reasoning On profile on the pinned llama.cpp b10999 CUDA build, Q8_0 official artifact on RTX 5070 12 GB: reasoning always on (enable_thinking control proven effective both ways at preflight). High task success (semantic 0.926; context validated to 65,536 tokens) with reasoning-driven token cost: answers can over-explain past budgets (7/60 truncated) and the strict hallucination-pattern check goes negative on verbose correct denials. First fresh-model WELP campaign under the model-agentic snapshot; both reasoning profiles measured on the same frozen task set and published independently.",
+  "identity": {
+    "model_id": "neohorse-1-9b",
+    "profile_id": "neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on",
+    "event_id": "neohorse-1-9b-rtx5070-welp-reasoning-on-20260925",
+    "event_type": "follow-up",
+    "event_date": "2026-09-25",
+    "evidence_maturity": "CURRENT_WELP"
+  }
+}

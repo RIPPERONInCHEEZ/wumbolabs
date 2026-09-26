@@ -2,7 +2,7 @@
 title = "Qwen3.5-4B"
 description = "Qwen3.5-4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 12
+weight = 13
 
 [extra]
 kind = "model"
@@ -39,7 +39,7 @@ Profile identity: `qwen35-4b-llamacpp-bf16`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
 
 Events on this profile:
 
@@ -56,7 +56,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Context Envelope — llama.cpp BF16** · profile: llama.cpp BF16 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-4b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/qwen35-4b)
 
 ##### Identity
 
@@ -151,7 +151,7 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen35-4b-llamacpp-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
+- **qwen35-4b-llamacpp-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
 
 ### Legacy provenance
 

@@ -246,6 +246,15 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/neohorse-1-9b/",
+      "content_type": "model-page",
+      "model_id": "neohorse-1-9b",
+      "event_id": null,
+      "new_url": "/evaluations/neohorse-1-9b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

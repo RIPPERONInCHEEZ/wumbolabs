@@ -2,7 +2,7 @@
 title = "Gemmable 4 12B MTP"
 description = "Gemmable 4 12B MTP — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
 template = "lab_model.html"
-weight = 25
+weight = 26
 
 [extra]
 kind = "model"
@@ -33,7 +33,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-lmx-speed-2026-07-04/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json)
 
 Events on this profile:
 
@@ -51,7 +51,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-lmx-speed-2026-07-04/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/gemmable-4-12b)
 
 ### Identity and scope
 
@@ -73,7 +73,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Specialized Test — agent backend** · profile: llama.cpp Q4_K_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemmable-4-12b/events/gemmable-agent-backend-2026-06-21/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/gemmable-4-12b)
 
 ### Identity and scope
 
@@ -98,7 +98,7 @@ This model appears in shared multi-model comparisons. Each report is stored once
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **gemmable-4-12b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/d9ada5b5eccc36da32214b2e4f44c846f280664e/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json)
+- **gemmable-4-12b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/gemmable-4-12b/profiles/gemmable-4-12b-llamacpp-q4km/profile.json)
 
 ### Legacy provenance
 

@@ -221,6 +221,36 @@
       "resolved_commit": "0382fc7dd89fd403869fa3d81830adc15233da7b",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/0382fc7dd89fd403869fa3d81830adc15233da7b/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-neohorse-1-9b-rtx5070-welp-reasoning-on-20260925": {
+      "file": "data/generated/evaluations-exports/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925.json",
+      "sha256": "bf4c0f6ad8cb6cef9ea8305576be59f339a466316e15a63a3a18dc61adb6b990",
+      "repo": "WumboLabs/evaluations",
+      "ref": "f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b",
+      "path": "models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/website-publication.json",
+      "resolved_commit": "f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-neohorse-1-9b-rtx5070-welp-reasoning-off-20260925": {
+      "file": "data/generated/evaluations-exports/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925.json",
+      "sha256": "d165d684caa696d516a2b506a0e9c9a8b26ae8ca0a8348918754f6244b5372a3",
+      "repo": "WumboLabs/evaluations",
+      "ref": "9ecf4f8bd1eed70df5047c64cbe6b1a1b779d1bc",
+      "path": "models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/website-publication.json",
+      "resolved_commit": "9ecf4f8bd1eed70df5047c64cbe6b1a1b779d1bc",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/9ecf4f8bd1eed70df5047c64cbe6b1a1b779d1bc/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-neohorse-1-9b-rtx5070-welp-agentic-20260925": {
+      "file": "data/generated/evaluations-exports/neohorse-1-9b-rtx5070-welp-agentic-20260925.json",
+      "sha256": "624e4a0197a587ea3c1766901e630d8bb0da337407addc5e798fdf99e0b8e796",
+      "repo": "WumboLabs/evaluations",
+      "ref": "f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b",
+      "path": "models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/website-publication.json",
+      "resolved_commit": "f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -277,6 +307,18 @@
       "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
     },
     {
+      "slug": "eval-neohorse-1-9b-rtx5070-welp-agentic-20260925",
+      "campaign": "neohorse-1-9b-rtx5070-welp-agentic-2026-09-25"
+    },
+    {
+      "slug": "eval-neohorse-1-9b-rtx5070-welp-reasoning-off-20260925",
+      "campaign": "neohorse-1-9b-rtx5070-welp-reasoning-off-2026-09-25"
+    },
+    {
+      "slug": "eval-neohorse-1-9b-rtx5070-welp-reasoning-on-20260925",
+      "campaign": "neohorse-1-9b-rtx5070-welp-reasoning-on-2026-09-25"
+    },
+    {
       "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
       "campaign": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"
     },
@@ -314,6 +356,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 26,
-  "model_events": 55
+  "models": 27,
+  "model_events": 58
 }
