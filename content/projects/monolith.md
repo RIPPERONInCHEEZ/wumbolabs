@@ -7,7 +7,7 @@ weight = 3
 back_label = "Back to Projects"
 back_url = "/projects/"
 release_status = "TECHNICAL PUBLIC ALPHA · v0.11.12"
-public_project = true
+public_project = false
 +++
 
 ## Try Monolith

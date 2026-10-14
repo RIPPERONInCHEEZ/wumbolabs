@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.14 - Homepage priorities and project listings
+
+### Changed
+- Removed Monolith from the Projects directory and homepage public-project list; retained its existing direct page.
+- Ordered homepage primary routes as Evaluations, wumbOS, then LLMGauge.
+- Clarified all four node descriptions while retaining current workstation, compute, storage, and DNS roles.
+- Updated project-membership validation for LLMGauge and wumbOS only.
+
 ## v0.13 - Systems and WELP reality sync
 
 ### Changed

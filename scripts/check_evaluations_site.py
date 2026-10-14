@@ -208,12 +208,12 @@ def main() -> int:
               f"Reports index does not link {record_url}")
 
     projects_page = html_unescape(html(PUBLIC / "projects" / "index.html"))
-    for slug in ("llmgauge", "wumbos", "monolith"):
+    for slug in ("llmgauge", "wumbos"):
         check(f'/projects/{slug}/' in projects_page,
               f"public project /projects/{slug}/ missing from Projects")
-    for slug in ("wumbojetsii", "wumbo-core"):
+    for slug in ("monolith", "wumbojetsii", "wumbo-core"):
         check(f'/projects/{slug}/' not in projects_page,
-              f"non-public infrastructure /projects/{slug}/ leaked into Projects")
+              f"non-public page /projects/{slug}/ leaked into Projects")
     check("Technical notes" not in projects_page.lower(),
           "Projects still renders a Technical Notes section")
 

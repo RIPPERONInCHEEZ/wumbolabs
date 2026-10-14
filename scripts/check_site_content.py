@@ -11,7 +11,6 @@ PUBLIC = Path("public")
 EXPECTED_PROJECTS = {
     "llmgauge.md": "LLMGauge",
     "wumbos.md": "wumbOS",
-    "monolith.md": "Monolith",
 }
 
 
@@ -61,10 +60,10 @@ def main() -> int:
             failures.append("built Projects index is missing")
         else:
             body = html_unescape(projects_html.read_text(encoding="utf-8"))
-            for slug in ("llmgauge", "wumbos", "monolith"):
+            for slug in ("llmgauge", "wumbos"):
                 if f'/projects/{slug}/' not in body:
                     failures.append(f"built Projects index misses /projects/{slug}/")
-            for slug in ("wumbojetsii", "wumbo-core"):
+            for slug in ("monolith", "wumbojetsii", "wumbo-core"):
                 if f'/projects/{slug}/' in body:
                     failures.append(f"built Projects index leaks /projects/{slug}/")
 

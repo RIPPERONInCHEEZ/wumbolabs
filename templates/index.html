@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set monolith = load_data(path="data/generated/monolith-status.json") %}
 
 <section class="container operator-home" aria-labelledby="operator-title">
   <div class="operator-console">
@@ -34,7 +33,7 @@
 
       <aside class="lab-status-panel operator-status" aria-label="Current public project status">
         <div class="panel-topline">
-          <span>PUBLIC PROJECTS / 03</span>
+          <span>PUBLIC PROJECTS / 02</span>
           <span class="status-dot">ACTIVE</span>
         </div>
         <dl class="status-list">
@@ -46,10 +45,6 @@
             <dt><a href="{{ get_url(path='/projects/wumbos/') }}">wumbOS</a></dt>
             <dd>main focus / active development</dd>
           </div>
-          <div>
-            <dt><a href="{{ get_url(path='/projects/monolith/') }}">Monolith</a></dt>
-            <dd>local AI workbench</dd>
-          </div>
         </dl>
       </aside>
     </div>
@@ -60,18 +55,18 @@
         <span>03 PRIORITIES</span>
       </div>
       <div class="operator-route-list">
-        <article class="operator-route operator-route--active">
+        <article class="operator-route">
           <div class="operator-route-key">
             <span>01</span>
-            <strong>FLAGSHIP PROJECT</strong>
+            <strong>EVALUATIONS / MODEL EVIDENCE</strong>
           </div>
           <div>
-            <h2>LLMGauge</h2>
-            <p>The established WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
+            <h2>Evaluations</h2>
+            <p>Hardware-scoped model evaluations on real WumboLabs hardware: tested deployment profiles, context results, reliability findings, and canonical evidence with disclosed review boundaries. One page per model.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/projects/llmgauge/') }}" aria-label="Open LLMGauge project">Open project →</a>
-            <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
+            <a href="{{ get_url(path='/evaluations/') }}">Evaluations →</a>
+            <a href="{{ get_url(path='/methodology/') }}">Methodology →</a>
           </div>
         </article>
 
@@ -90,18 +85,18 @@
           </div>
         </article>
 
-        <article class="operator-route">
+        <article class="operator-route operator-route--active">
           <div class="operator-route-key">
             <span>03</span>
-            <strong>EVALUATIONS / MODEL EVIDENCE</strong>
+            <strong>FLAGSHIP PROJECT</strong>
           </div>
           <div>
-            <h2>Evaluations</h2>
-            <p>Hardware-scoped model evaluations on real WumboLabs hardware: tested deployment profiles, context results, reliability findings, and canonical evidence with disclosed review boundaries. One page per model.</p>
+            <h2>LLMGauge</h2>
+            <p>The established WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/evaluations/') }}">Evaluations →</a>
-            <a href="{{ get_url(path='/methodology/') }}">Methodology →</a>
+            <a href="{{ get_url(path='/projects/llmgauge/') }}" aria-label="Open LLMGauge project">Open project →</a>
+            <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
           </div>
         </article>
       </div>
@@ -114,10 +109,10 @@
         <span>04 NODES</span>
       </div>
       <div class="inventory-list">
-        <div><span>WumboMobile</span><strong>primary interactive workstation / Fedora 44 · Hyprland · wumbOS</strong></div>
-        <div><span>WumboJetsII</span><strong>headless Fedora 44 AI compute / Radeon AI PRO R9700 32GB</strong></div>
-        <div><span>WumboServer</span><strong>shared infrastructure and storage / RTX 2060 Super for bounded small-model testing</strong></div>
-        <div><span>WumboMini</span><strong>primary DNS / lightweight infrastructure</strong></div>
+        <div><span>WumboMobile</span><strong>primary desktop and development workstation · Fedora 44 / Hyprland / wumbOS</strong></div>
+        <div><span>WumboJetsII</span><strong>headless AI inference and evaluation · Radeon AI PRO R9700 / 32GB VRAM</strong></div>
+        <div><span>WumboServer</span><strong>shared services and storage · RTX 2060 Super for small-model experiments</strong></div>
+        <div><span>WumboMini</span><strong>primary DNS and lightweight infrastructure services</strong></div>
       </div>
     </section>
   </div>
