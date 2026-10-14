@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.15 - WELP model-aware execution
+
+### Changed
+- Reconciled Methodology with the accepted and active October 13 Model Configuration Authority tooling successor.
+- Explained qualified per-model execution settings across normal, reasoning, and Agentic paths, without inherited model-specific defaults.
+- Clarified preserved scientific controls and full-GPU execution scope; retained dynamic intake, runtime neutrality, validated S00–S15 methodology, 0/5 fresh-model stabilization, and unreleased v1.0 status.
+
 ## v0.14 - Homepage priorities and project listings
 
 ### Changed
