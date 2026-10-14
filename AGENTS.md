@@ -379,3 +379,17 @@ When a result sounds like a ranking, scope it to the hardware, runtime, suite, a
 When a proposed change adds moving parts, prefer a static/manual version first.
 
 When a task asks for one file, change one file.
+
+## WumboLabs website — delegated publication
+
+This human-approved exception supersedes conflicting Git-reservation rules only for the WumboLabs website repository and its authorized linked worktrees.
+
+For website milestones explicitly authorized for production deployment, agents may stage reviewed bounded changes, commit, push authorized main to origin, and verify production after all required validations pass.
+
+No additional human Git approval is required for an already-authorized website deployment.
+
+Never stage unrelated work, private evidence, tmp/ or public/. Never force-push, rewrite history, or perform destructive Git operations.
+
+Audit-only, research-only, do-not-deploy, human-review-required, and explicit human opt-out instructions prohibit automatic publication.
+
+All other repositories retain their existing Git safeguards. The human may revoke this delegation.

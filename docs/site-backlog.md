@@ -4,9 +4,16 @@ Small follow-up items for the public WumboLabs / WumboCore website.
 
 > **Note (2026-09-12):** the Evaluations consolidation changed the public
 > information architecture. The canonical public model-evaluation route is now
-> `/evaluations/` (one page per tested model); `/labs/` and `/records/` are
-> retired public concepts with legacy redirects. Backlog entries below that
-> reference Labs / Lab Records / `/records/` as live routes are historical.
+> `/evaluations/` (one page per tested model); the `/labs/` route and the
+> "Labs" / "Lab Records" naming are retired concepts with legacy redirects.
+> `/records/` itself remains the live canonical archive, now titled
+> **Technical Reports**. Backlog entries below that reference Labs / Lab
+> Records as live routes are historical.
+>
+> **Note (2026-10-13):** later entries describing an active **RTX 5070 12GB**
+> or "current 12GB" configuration are historical boundaries, not current
+> state. Do not restore them as active claims; current per-model evidence
+> lives under `/evaluations/`.
 
 ## Translation / language accessibility
 
@@ -38,7 +45,7 @@ Status: done (superseded by the August 2026 public-status pass).
 
 The LLMGauge project page and homepage activity/status were moved off the old v0.20-era framing through a v0.42 public-proof pass, then updated for v0.65 product-validation, later v0.70 metadata, and the August 2026 consistency pass.
 
-Current site framing treats LLMGauge as the flagship local-first CLI/evidence tool. Formal release is v0.78. Current main is unreleased post-v0.78 development: first-class multi-runtime model identity (model source kinds, checkpoint-directory provenance, vLLM checkpoint binding) plus the accepted EXL/ExLlama qualification contract, with development currently paused. It is not an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
+Current site framing treats LLMGauge as the flagship local-first CLI/evidence tool. Formal release is v0.78. Current main is unreleased post-v0.78 development: multi-runtime model identity (model source kinds, checkpoint-directory provenance, vLLM checkpoint binding) plus the accepted EXL/ExLlama runtime-qualification contract — a project-scoped qualification target in LLMGauge's development architecture, not a WELP runtime preference, with no EXL execution promised. The earlier "development is paused pending an RTX 5070 EXL3 baseline" rationale is historical; current compute context is documented on [Methodology](/methodology/) and the site's WumboJetsII infrastructure page. It is not an agent benchmark, synthetic leaderboard, automatic judge, or model downloader.
 
 Further LLMGauge copy updates should track real releases versus unreleased main; they are not the active next website content task.
 
@@ -65,17 +72,17 @@ This is the trust bridge between LLMGauge artifacts and public WumboLabs reports
 
 ### 3. Add a current practical baseline summary
 
-Status: superseded in compact form by the Lab Records snapshot.
+Status: historical. Superseded in compact form by the Technical Reports snapshot (`/records/`); the hardware it described is no longer the active evaluation configuration.
 
 The August 2026 public-status pass added a compact **Current 12GB Reference** and tested/blocked snapshot to `/records/` instead of restoring a homepage model feed.
 
-Current 12GB reference on WumboJetsII / RTX 5070 12GB:
+Historical 12GB reference from that pass (WumboJetsII / RTX 5070 12GB, 2026-08 framing):
 
-- Qwen3.8-27B UD-Q2_K_XL is the current 12GB reference: a strong reviewed coding/technical assistant, not ready for unguarded daily use.
+- Qwen3.8-27B UD-Q2_K_XL was then the 12GB reference: a strong reviewed coding/technical assistant, not ready for unguarded daily use.
 - Gemma 4 12B GGUF, Mellum2, Grug-12B, and earlier Qwen3 / Qwen3.6 results remain historical baselines.
 - Do not treat producer claims, queued models, or blocked admissions as completed quality verdicts.
 
-Keep this short and clearly hardware-scoped. Do not restore Recent Lab Activity or add a homepage research queue.
+Retain these as dated, hardware-scoped historical boundaries. Do not present them as current state, and do not restore Recent Lab Activity or add a homepage research queue; current per-model evidence lives under `/evaluations/`.
 
 ### 4. Decide Benchmarks vs Reports structure
 
@@ -96,7 +103,7 @@ The canonical Lab Records plan replaces this split proposal with one `/records/`
 
 ### 5. Add Real Hardware Model Reports landing page
 
-Status: planned after methodology.
+Status: superseded — do not implement as written. The canonical long-form surface is `/records/` (Technical Reports) per `docs/lab-records-migration.md`, and the methodology page exists. Any future landing-page idea must build on `/records/`, not a new `/reports/` section.
 
 Create:
 
@@ -112,7 +119,7 @@ It should link to methodology, LLMGauge, and the best current practical-use comp
 
 ### 6. Publish first curated comparison report
 
-Status: planned.
+Status: superseded as written. The working target `/reports/practical-local-models-rtx-5070-12gb/` predates the records consolidation and its RTX 5070 / 12GB scope is a dated hardware boundary, not the active configuration. Any future comparison content belongs under the canonical `/records/` or `/evaluations/` surfaces.
 
 Create a public comparison page from the existing practical-use LLMGauge result set.
 
@@ -195,7 +202,7 @@ Challenge work that mainly adds internal structure, broad project sprawl, generi
 
 ## LLMGauge v0.65 website direction
 
-Status: historical framing; superseded by the August 2026 public-status pass (formal v0.72, current main toward v0.73).
+Status: historical framing; superseded by the August 2026 public-status pass (then formal v0.72, with main toward v0.73). This is dated history, not the current release status.
 
 This section records the earlier v0.65 product-validation pass.
 
@@ -222,7 +229,7 @@ Validated v0.65 workflow:
     regenerate report
     export-index
 
-Those workflow steps remain part of the mature foundation. Current public pages should describe formal v0.72 plus unreleased main toward v0.73, not treat v0.65/v0.70 as the live release line.
+Those workflow steps remain part of the mature foundation. Current public pages should describe formal v0.78 plus unreleased main, not treat v0.65/v0.70 as the live release line.
 
 ## Future expanded Lab experience
 
@@ -230,7 +237,7 @@ Status: later concept. Do not implement a competing `/labs/` route while `/recor
 
 A future expanded Lab experience may eventually organize:
 
-- current 12GB reference
+- historical 12GB reference (dated RTX 5070 boundary)
 - published reports
 - tested models
 - blocked/failed experiments

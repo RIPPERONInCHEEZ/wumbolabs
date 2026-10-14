@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.13 - Systems and WELP reality sync
+
+### Changed
+- Updated current system context: WumboMobile is the primary interactive workstation; WumboJetsII is headless Radeon AI PRO R9700 compute; WumboServer and WumboMini remain infrastructure.
+- Reconciled Methodology with validated S00–S15 science and accepted October 13 dynamic model intake, while preserving 0/5 fresh-model stabilization and unreleased v1.0 status.
+- Scoped runtime qualification to the tested model, artifact, hardware, build, and configuration; distinguished LLMGauge implementation choices from WELP scientific policy.
+- Preserved historical RTX 5070 reports, registry-derived evaluations, public Projects membership, routes, and Furnace Plum styling.
+- Corrected the catalog smoke test's stale assumption that page size 25 includes every model; coverage now checks sorted page boundaries and page-size reset behavior.
+
 ## Furnace Plum visual identity
 
 ### Changed

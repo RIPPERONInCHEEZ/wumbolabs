@@ -1,6 +1,6 @@
 +++
 title = "WumboJetsII"
-description = "Fedora 44 workstation for daily development, local AI evaluation, wumbOS work, and WumboLabs evidence."
+description = "Headless Fedora 44 AI compute node for local-model evaluation, LLMGauge runs, and WumboLabs evidence."
 template = "project.html"
 weight = 100
 [extra]
@@ -10,11 +10,11 @@ public_project = false
 content_kind = "infrastructure"
 +++
 
-WumboJetsII is the primary WumboLabs desktop workstation: a real daily-use Fedora 44 system, not a dedicated headless benchmark appliance.
+WumboJetsII is the WumboLabs AI compute node: a headless Fedora 44 system dedicated to local-model evaluation and compute work rather than daily desktop use.
 
-It runs Fedora 44 with Hyprland and supports development, wumbOS Shell work, LLMGauge testing, and deeper local-model evaluation on consumer hardware.
+It runs Fedora 44 without a desktop session and supports LLMGauge testing, deeper local-model evaluation campaigns, and local execution work for the wider lab.
 
-<strong>Active daily workstation / evidence source</strong>
+<strong>Headless AI compute / evaluation hardware</strong>
 
 ## At a Glance
 
@@ -25,71 +25,66 @@ It runs Fedora 44 with Hyprland and supports development, wumbOS Shell work, LLM
   </div>
 
   <div class="info-card">
-    <span class="info-label">Desktop</span>
-    <strong>Hyprland</strong>
+    <span class="info-label">Form Factor</span>
+    <strong>Headless, no desktop session</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">GPU</span>
-    <strong>NVIDIA GeForce RTX 5070 12GB</strong>
+    <strong>AMD Radeon AI PRO R9700 32GB</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">CPU / Memory</span>
-    <strong>Ryzen 7 9800X3D / ~32GB DDR5</strong>
-  </div>
-
-  <div class="info-card">
-    <span class="info-label">Storage</span>
-    <strong>Samsung 9100 Pro 2TB NVMe</strong>
+    <strong>Ryzen 7 9800X3D / 32GB DDR5</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">AI Stack</span>
-    <strong>llama.cpp CUDA</strong>
+    <strong>llama.cpp ROCm/HIP and Vulkan builds</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Local AI</span>
-    <strong>RTX 5070 evaluation</strong>
+    <strong>R9700 evaluation hardware</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">Role</span>
-    <strong>Daily desktop workstation</strong>
+    <strong>Headless AI compute node</strong>
   </div>
 </div>
 
 ## Role in WumboLabs
 
-WumboJetsII is where WumboLabs development, wumbOS Shell development/testing, and local AI testing happen.
+WumboJetsII is where WumboLabs local AI compute happens: LLMGauge runs, deeper model-evaluation campaigns, and supporting execution work for the other systems in the lab.
 
-It is a constrained consumer-workstation environment for LLMGauge runs and deeper model-evaluation campaigns. The RTX 5070 also drives the Fedora/Hyprland session during testing, so practical free VRAM is lower than its physical 12GB capacity. That constraint is intentional evidence context, not controlled-lab isolation.
+The AMD Radeon AI PRO R9700 provides 32GB of physical GPU VRAM for local AI compute. ROCm/HIP and Vulkan development and testing are hardware-scoped; runtime qualification applies to the tested model, artifact, build, backend, and configuration, not to every workload or to a preferred runtime.
 
-The Qwen3.8-27B deep-evaluation campaign ran on the RTX 5070 with llama.cpp/CUDA; [read the campaign report](/records/qwen38-27b-rtx5070-evaluation/) for its runtime-specific findings and limitations. The current Qwen3.8 serving profile (ExLlamaV3, H1 history) is documented on the [canonical Qwen3.8 evaluation page](/evaluations/qwen38-27b/#h1-canonical-promotion-2026-09-09).
+The Qwen3.8-27B deep-evaluation campaign ran on the RTX 5070 with llama.cpp/CUDA; that GPU has since been removed, and the campaign stands as historical evidence for that hardware. [Read the historical campaign report](/records/qwen38-27b-rtx5070-evaluation/) for its runtime-specific findings and limitations. The Qwen3.8 H1 canonical profile from that era is documented on the [canonical Qwen3.8 evaluation page](/evaluations/qwen38-27b/#h1-canonical-promotion-2026-09-09).
 
 <details class="project-details">
 <summary>Focus areas</summary>
 
 <div class="feature-grid">
   <div class="feature-card">
-    <h3>Linux Desktop</h3>
-    <p>Fedora 44, Hyprland, Wayland workflows, keyboard-driven interaction, theming, and practical daily use.</p>
+    <h3>Headless Fedora</h3>
+    <p>Fedora 44 operated without a desktop session, managed remotely, and kept to a stable baseline for compute work.</p>
   </div>
 
   <div class="feature-card">
     <h3>Local LLM Evaluation</h3>
-    <p>LLMGauge workflows and deeper GGUF evaluation across llama.cpp builds, context limits, generation speed, VRAM behavior, and bounded reliability.</p>
+    <p>LLMGauge workflows and WELP scientific evaluation on the R9700, with model/runtime compatibility, context limits, generation speed, VRAM behavior, and reliability recorded for each tested stack.</p>
   </div>
 
   <div class="feature-card">
-    <h3>Development Workstation</h3>
-    <p>Primary system for wumbOS Shell, LLMGauge, website work, scripting, documentation, and local experiments.</p>
+    <h3>Lab Compute Infrastructure</h3>
+    <p>Execution node for WumboLabs evaluation campaigns and local runs that support the other systems in the environment.</p>
   </div>
 
   <div class="feature-card">
-    <h3>CUDA Work</h3>
-    <p>Local CUDA testing on SM120: driver 610.57.04, CUDA 13.3. Recent campaigns used llama.cpp b10449 and ExLlamaV3 1.4.6 (torch 2.10.0, CUDA 12.8 build).</p>
+    <h3>ROCm and Vulkan Work</h3>
+    <p>Hardware-scoped AMD compute testing on RDNA4 (gfx1201), including llama.cpp HIP and Vulkan builds, with claim boundaries kept explicit.</p>
   </div>
 </div>
 
@@ -98,8 +93,8 @@ The Qwen3.8-27B deep-evaluation campaign ran on the RTX 5070 with llama.cpp/CUDA
 <details class="project-details">
 <summary>Operating goal</summary>
 
-The goal is to keep the system clean, stable, fast, keyboard-friendly, and useful for real work.
+The goal is to keep the system stable, reliable, and useful as dedicated evaluation hardware.
 
-Experiments are welcome, but the baseline should remain reliable.
+Experiments are welcome, but the baseline should remain dependable for compute work.
 
 </details>

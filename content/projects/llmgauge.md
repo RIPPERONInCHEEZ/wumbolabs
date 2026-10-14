@@ -13,7 +13,7 @@ public_project = true
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.
 
-It is a local-first CLI. The primary runtime is llama.cpp / GGUF. An optional bounded local vLLM adapter is also supported. LLMGauge preserves raw outputs, logs, and evidence; validates artifacts; supports manual and reviewed scoring; generates reports and bounded comparisons; and exports sanitized, machine-readable indexes.
+It is a local-first CLI. The released LLMGauge CLI defaults to llama.cpp / GGUF and also offers a bounded optional local vLLM adapter. These are product implementation choices, not WELP-wide runtime preferences. LLMGauge preserves raw outputs, logs, and evidence; validates artifacts; supports manual and reviewed scoring; generates reports and bounded comparisons; and exports sanitized, machine-readable indexes.
 
 <strong>Flagship WumboLabs evidence tool</strong>
 
@@ -61,9 +61,9 @@ Development on main has moved past v0.78 with the first milestones of an accepte
 
 Model profiles can now represent three source kinds — GGUF files, local checkpoint directories, and served-model references — and local checkpoint directories gain bounded cryptographic provenance: canonical file manifests, tokenizer and chat-template identity, and checkpoint-declared quantization evidence. On the vLLM path, a run can be explicitly bound to a fingerprint-eligible local checkpoint directory, with the served-model name declared separately and never inferred from the checkpoint. This is model-identity work: vLLM lifecycle management and workflow parity remain open milestones, and llama.cpp / GGUF remains the default runtime.
 
-ExLlamaV3 / EXL3 is now an explicit first-class runtime target, accepted as the fourth runtime family through a qualification contract, with EXL2 / ExLlamaV2 as a compatibility lane and TabbyAPI as the server implementation. That contract is architecture and qualification work — LLMGauge does not yet execute EXL checkpoints, and no EXL release date or version is promised.
+ExLlamaV3 / EXL3 is an accepted runtime-qualification target in LLMGauge's development architecture, with EXL2 / ExLlamaV2 as a compatibility lane and TabbyAPI as the server implementation. This is a project-specific qualification contract, not scientific preference or universal runtime compatibility within WELP. LLMGauge does not yet execute EXL checkpoints, and no EXL release date or version is promised.
 
-LLMGauge development is intentionally paused after this runtime-architecture work while WumboLabs establishes a practical EXL3 / ExLlamaV3 baseline on the RTX 5070 and tests local models on real structured agent workloads.
+For the lab's current evaluation framework and compute context, see [Methodology](/methodology/) and [WumboJetsII](/projects/wumbojetsii/). Earlier RTX 5070 / EXL3 work remains historical evidence, not a description of the current installed GPU or a promise of EXL execution in LLMGauge.
 
 ## Workflow
 
@@ -187,7 +187,7 @@ The released CLI also includes native multi-turn transcript evidence, transcript
 <details class="project-details">
 <summary>Mature foundation</summary>
 
-- Local-first CLI with llama.cpp / GGUF as the primary runtime.
+- Local-first CLI; the released LLMGauge implementation defaults to llama.cpp / GGUF.
 - Optional bounded local vLLM adapter.
 - Preserved raw outputs, logs, and evidence.
 - Model profiles, validation, manual/reviewed scoring, reports, and bounded comparisons.

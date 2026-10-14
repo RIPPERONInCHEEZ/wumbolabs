@@ -14,6 +14,8 @@ Wumbo Core is the home network and homelab infrastructure behind WumboLabs.
 
 It includes the server, workstations, mobile systems, local network, storage, DNS, Docker services, documentation, and recovery planning that support day-to-day use and local experimentation.
 
+The workstation transition and headless compute conversion are complete. Standardized backup coverage across all four hosts remains deferred.
+
 <strong>Active production environment</strong>
 
 ## At a Glance
@@ -25,17 +27,17 @@ It includes the server, workstations, mobile systems, local network, storage, DN
   </div>
 
   <div class="info-card">
-    <span class="info-label">Workstation</span>
+    <span class="info-label">AI Compute</span>
     <strong>WumboJetsII</strong>
   </div>
 
   <div class="info-card">
-    <span class="info-label">Mini System</span>
+    <span class="info-label">Primary DNS</span>
     <strong>WumboMini</strong>
   </div>
 
   <div class="info-card">
-    <span class="info-label">Mobile System</span>
+    <span class="info-label">Interactive Workstation</span>
     <strong>WumboMobile</strong>
   </div>
 
@@ -67,7 +69,7 @@ The priorities are stable home networking, reliable local services, clear docume
 
   <div class="feature-card">
     <h3>Homelab Server</h3>
-    <p>WumboServer provides the main Docker, storage, media, DNS, VPN-routed workload, dashboard, and documentation services.</p>
+    <p>WumboServer provides the main Docker, ZFS storage, media, backup, VPN-routed workload, dashboard, and documentation services.</p>
   </div>
 
   <div class="feature-card">
@@ -88,19 +90,19 @@ The priorities are stable home networking, reliable local services, clear docume
 
 ### WumboServer
 
-The main homelab server. It runs the core Docker service stack, storage, DNS, media services, VPN-routed workloads, dashboards, and documentation.
+The shared infrastructure and storage server, with Docker services, ZFS storage, and media services. Its RTX 2060 Super is available for limited small-model experiments; it is not the primary WELP evaluation machine.
 
 ### WumboJetsII
 
-The primary Linux workstation and local AI test machine. It depends on, tests against, and helps operate the broader lab environment.
+The headless AI compute node. It runs local-model evaluation campaigns, LLMGauge testing, and compute work for the lab on an AMD Radeon AI PRO R9700, with no desktop session.
 
 ### WumboMini
 
-A secondary small-form-factor system used as part of the broader infrastructure and redundancy plan.
+The primary DNS server and lightweight infrastructure system.
 
 ### WumboMobile
 
-A mobile Linux system used for portable work, testing, and access into the WumboLabs environment.
+The primary interactive workstation: a Lenovo ThinkPad T14 Gen 1 with an AMD Ryzen 5 PRO 4650U, running Fedora 44 with Hyprland and the custom wumbOS desktop environment. It is the main human-facing desktop and development interface, including access to remote compute.
 
 </details>
 

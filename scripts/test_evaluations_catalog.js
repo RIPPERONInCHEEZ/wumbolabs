@@ -146,10 +146,17 @@ change('evaluation-sort', 'model');
 assert.equal(controls['evaluation-page-indicator'].textContent, 'Page 1 of 1');
 search('');
 change('evaluation-page-size', '25');
-assert.equal(visible().length, models.length);
-assert.equal(controls['evaluation-page-indicator'].textContent, 'Page 1 of 1');
+const alphabetical = models.map((model) => model.display_name.toLowerCase()).sort();
+for (let first = 0; first < models.length; first += 25) {
+  assert.deepEqual(visibleModels(), alphabetical.slice(first, first + 25),
+    'page-size 25 must preserve sorted model coverage without omissions or duplicates');
+  assert.equal(controls['evaluation-previous'].disabled, first === 0);
+  assert.equal(controls['evaluation-next'].disabled, first + 25 >= models.length);
+  if (first + 25 < models.length) controls['evaluation-next'].dispatch('click');
+}
 change('evaluation-page-size', '50');
-assert.equal(visible().length, models.length);
+assert.deepEqual(visibleModels(), alphabetical.slice(0, 50),
+  'changing page size must reset pagination to the first page');
 change('evaluation-page-size', 'all');
 assert.equal(visible().length, models.length);
 assert.equal(controls['evaluation-results'].textContent, `Showing all ${models.length} evaluations.`);

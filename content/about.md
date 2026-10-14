@@ -20,7 +20,7 @@ I'm less interested in benchmark leaderboards and marketing claims, and more int
 
 **What can normal people actually run on consumer hardware?**
 
-That question led to projects like Monolith and LLMGauge, both built around evaluating local models in realistic conditions rather than idealized benchmarks.
+That question led to projects like [Monolith](/projects/monolith/) and [LLMGauge](/projects/llmgauge/), both built around evaluating local models in realistic conditions rather than idealized benchmarks.
 
 The goal isn't to chase hype.
 

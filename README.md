@@ -62,7 +62,7 @@ registry entries. Public citations use central repository + full commit SHA + pa
 
 Canonical sync command:
 
-    python scripts/sync_labs.py
+    python3 scripts/sync_labs.py
 
 ## Validation
 
