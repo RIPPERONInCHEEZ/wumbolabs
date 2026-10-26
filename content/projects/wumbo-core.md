@@ -2,6 +2,7 @@
 title = "Wumbo Core"
 description = "Home network and homelab infrastructure for WumboLabs."
 template = "project.html"
+in_search = false
 weight = 101
 [extra]
 back_label = "Back to Home"

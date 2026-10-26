@@ -3,11 +3,13 @@ title = "Monolith"
 description = "Local-first AI workbench for testing, comparing, and evaluating local LLMs on real hardware."
 template = "project.html"
 weight = 3
+in_search = false
 [extra]
-back_label = "Back to Projects"
-back_url = "/projects/"
+back_label = "Back to Home"
+back_url = "/"
 release_status = "TECHNICAL PUBLIC ALPHA · v0.11.12"
 public_project = false
+content_kind = "compatibility"
 +++
 
 ## Try Monolith

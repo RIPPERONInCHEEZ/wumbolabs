@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.16 - Research website refocus
+
+### Changed
+- Repositioned the public site around evaluations, research reports, and methodology.
+- Removed Projects from primary navigation and the homepage. Former project URLs remain as unlisted compatibility pages.
+- Preserved `/records/` and presented it as Research.
+- Replaced the detailed Methodology page with a WELP under-construction holding page.
+- Added a catalog-wide historical evaluation notice. Protocol snapshots are shown only when already recorded on an event or export.
+
 ## v0.15 - WELP model-aware execution
 
 ### Changed

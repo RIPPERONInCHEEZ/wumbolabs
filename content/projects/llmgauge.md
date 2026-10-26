@@ -3,12 +3,13 @@ title = "LLMGauge"
 description = "Local-first CLI for practical LLM evaluation on real consumer hardware."
 template = "project.html"
 weight = 1
+in_search = false
 [extra]
-back_label = "Back to Projects"
-back_url = "/projects"
-portfolio_status = "FLAGSHIP PROJECT"
+back_label = "Back to Home"
+back_url = "/"
 release_status = "FORMAL RELEASE · v0.78 · PyPI 0.78.0"
-public_project = true
+public_project = false
+content_kind = "compatibility"
 +++
 
 LLMGauge is the flagship WumboLabs public-evidence tool for practical local LLM evaluation on real consumer hardware.

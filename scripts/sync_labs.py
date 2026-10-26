@@ -479,6 +479,10 @@ def render_generated_event_body(entry: dict[str, Any], export: dict[str, Any]) -
     lines.append(f'- **Classification:** {fmt(welp.get("classification"))}')
     if welp.get("artifact_classification"):
         lines.append(f'- **Artifact classification:** {welp["artifact_classification"]}')
+    if welp.get("snapshot"):
+        lines.append(f'- **Methodology snapshot:** {welp["snapshot"]}')
+    if welp.get("contract"):
+        lines.append(f'- **Classification contract:** {welp["contract"]}')
     lines.append("")
     lines.append("Publication state: **%s** — %s" % (
         "evidence pending human gate" if pending else "published",
@@ -784,6 +788,15 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
             meta.append("related profiles: " + ", ".join(f'`{p}`' for p in e["related_profile_ids"]))
         line = " · ".join(meta)
         lines.append(line)
+        recorded = e.get("welp") if isinstance(e.get("welp"), dict) else {}
+        snapshot = recorded.get("snapshot")
+        welp_commit = recorded.get("welp_commit")
+        if isinstance(snapshot, str) and snapshot.strip():
+            provenance = f"Methodology snapshot: `{snapshot.strip()}`"
+            if isinstance(welp_commit, str) and re.fullmatch(r"[0-9a-f]{40}", welp_commit):
+                provenance += f" · WELP commit `{welp_commit}`"
+            lines.append("")
+            lines.append(provenance)
         if ev_url:
             lines.append("")
             lines.append(f"[Canonical Evidence / Full Report]({ev_url})")

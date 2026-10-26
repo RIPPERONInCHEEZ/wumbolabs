@@ -1,6 +1,6 @@
 # WumboLabs
 
-WumboLabs is a static website for public projects, model-evaluation evidence, long-form technical reports, and methodology on local AI and Linux systems.
+WumboLabs is a static website for local language-model evaluations, technical reports, and methodology notes.
 
 The site is built with Zola and deployed with Cloudflare Pages.
 
@@ -41,10 +41,10 @@ The static site is generated into:
 
 ## Content ownership
 
-- **Projects** lists only public WumboLabs projects and derives from explicit project metadata.
-- **Evaluations** is the registry-backed model catalog and current evidence surface.
-- **Reports** keeps long-form reports, benchmarks, experiments, fit tests, and historical baselines.
-- **Methodology** is the canonical public explanation of WELP, review rules, claim boundaries, and publication process.
+- **Evaluations** is the registry-backed model catalog and historical evidence surface.
+- **Research** keeps long-form reports, benchmarks, experiments, fit tests, and investigations at `/records/`.
+- **Methodology** is a temporary WELP holding page while the evaluation framework is revised.
+- **Project URLs** under `/projects/` are unlisted compatibility pages. They are not primary navigation.
 
 See [docs/site-content-ownership.md](docs/site-content-ownership.md) for the operational contract.
 

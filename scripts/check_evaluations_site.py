@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """check_evaluations_site.py — post-build public-route validation.
 
-Validates the consolidated Evaluations, Reports, and public Projects
+Validates the consolidated Evaluations, Research, and compatibility-page
 contracts against the built site (public/) and generated datasets
 (data/generated/). Run after `zola build` from the repository root:
 
@@ -10,10 +10,10 @@ contracts against the built site (public/) and generated datasets
 Checks:
   - one Evaluations index; exactly one canonical page per registry model;
   - catalog rows derive latest evidence from canonical event dates and sort deterministically;
-  - primary navigation exposes Projects, Evaluations, Reports, and Methodology;
+  - primary navigation exposes Evaluations, Research, and Methodology, not Projects;
   - retired /labs/ routes and event stubs preserve their model-page targets;
-  - Reports retains its index and each technical-record URL;
-  - Projects exposes exactly the three public projects, with no infrastructure leak;
+  - /records/ remains the Research archive and each technical-record URL;
+  - former project URLs remain as unlisted compatibility pages;
   - model pages retain their registry-backed evidence and related long-form links;
   - all local links in built HTML resolve (built pages, redirects, or fragments).
 
@@ -151,10 +151,11 @@ def main() -> int:
                   f"{model_id}: data-search omits model identifier")
     # 2. navigation: canonical public surfaces are discoverable; Labs is retired.
     home = html(PUBLIC / "index.html")
-    for label, dest in (("Evaluations", "/evaluations/"), ("Projects", "/projects/"),
-                        ("Reports", "/records/"), ("Methodology", "/methodology/"),
+    for label, dest in (("Evaluations", "/evaluations/"), ("Research", "/records/"),
+                        ("Methodology", "/methodology/"),
                         ("About", "/about/"), ("Contact", "/contact/")):
         check(f'href="{dest}"' in home, f"primary navigation missing {label} ({dest})")
+    check(">Projects<" not in home, "primary navigation still exposes Projects")
     for page in PUBLIC.glob("*/index.html"):
         body = html(page)
         if 'href="/labs/"' in body:
@@ -195,7 +196,7 @@ def main() -> int:
     check(records_index.is_file(), "missing /records/ Reports index")
     if records_index.is_file():
         body = html_unescape(html(records_index))
-        check("Technical Reports" in body, "/records/ does not render the Technical Reports archive")
+        check("Research" in body, "/records/ does not render the Research archive")
         check("COMPATIBILITY REDIRECT" not in body, "/records/ still renders a redirect")
     for m in migration:
         if m["mechanism"] != "url-preserved":
@@ -208,14 +209,23 @@ def main() -> int:
               f"Reports index does not link {record_url}")
 
     projects_page = html_unescape(html(PUBLIC / "projects" / "index.html"))
-    for slug in ("llmgauge", "wumbos"):
-        check(f'/projects/{slug}/' in projects_page,
-              f"public project /projects/{slug}/ missing from Projects")
-    for slug in ("monolith", "wumbojetsii", "wumbo-core"):
+    check("not a project directory" in projects_page,
+          "/projects/ is not a compatibility notice")
+    for slug in ("llmgauge", "wumbos", "monolith", "wumbojetsii", "wumbo-core"):
         check(f'/projects/{slug}/' not in projects_page,
-              f"non-public page /projects/{slug}/ leaked into Projects")
+              f"compatibility index lists /projects/{slug}/")
+        check((PUBLIC / "projects" / slug / "index.html").is_file(),
+              f"missing compatibility page /projects/{slug}/")
     check("Technical notes" not in projects_page.lower(),
           "Projects still renders a Technical Notes section")
+    eval_page = html_unescape(html(PUBLIC / "evaluations" / "index.html"))
+    check("Historical evaluation notice" in eval_page, "missing historical evaluation notice")
+    granite = html(PUBLIC / "evaluations" / "granite-4-2-8b" / "index.html")
+    check("welp-next-snapshot-2026-09-24-context-outcome-repair" in granite,
+          "granite event missing recorded methodology snapshot")
+    lfm = html(PUBLIC / "evaluations" / "lfm2-5-8b-a1b" / "index.html")
+    check("welp-next-snapshot-2026-09-24-review-and-setup-hardening" in lfm,
+          "LFM adjudication event missing recorded export snapshot")
 
     qwen_eval = html(PUBLIC / "evaluations" / "qwen38-27b" / "index.html")
     check('href="/records/qwen38-27b-rtx5070-evaluation/"' in qwen_eval,

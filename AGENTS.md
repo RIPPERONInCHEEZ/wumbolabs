@@ -8,7 +8,7 @@ It is tool-agnostic. Do not add assistant-specific configuration files, editor-s
 
 This repository powers the public WumboLabs website.
 
-The site is the public proof layer for WumboLabs projects. It should communicate practical technical work clearly, conservatively, and with evidence tied to real artifacts, releases, tests, hardware, and documented project state.
+The site is the public research layer for WumboLabs local-LLM evaluations, technical reports, and methodology notes. It should communicate practical technical work clearly, conservatively, and with evidence tied to real artifacts, tests, hardware, and documented project state. Do not present software projects as the primary public output.
 
 Core brand line:
 
@@ -117,37 +117,13 @@ Generated output goes to:
 
 Do not commit generated site output unless the repository already tracks it intentionally.
 
-## LLMGauge website positioning
+## Software pages are not the public focus
 
-LLMGauge is the current flagship public project on the WumboLabs website.
+LLMGauge and wumbOS are not primary website projects. Do not add them to navigation, the homepage, or project counters. Their existing `/projects/` URLs are unlisted compatibility pages. Do not claim that either project has been discontinued, and do not claim that WELP has replaced, merged, or retired LLMGauge.
 
-Position LLMGauge as a local-first CLI/evidence tool for validating local LLM testing workflows on real consumer hardware.
+If a task explicitly updates an unlisted compatibility page, keep claims bounded to that software. LLMGauge remains a separate local-first CLI. wumbOS remains separate workstation software.
 
-LLMGauge can be described as running practical evaluation suites, preserving raw and cleaned outputs, tracking speed and VRAM, validating artifacts, supporting manual scoring, generating reports, and exporting machine-readable indexes.
-
-Current public release context:
-
-- LLMGauge v0.78 is the latest formal release, published to production PyPI as `llmgauge` 0.78.0.
-- v0.74 established the ordinary-user PyPI distribution path; the canonical install is `uv tool install llmgauge`.
-- v0.75 added named reasoning / sampling profiles (`--sampling-profile`, `llmgauge profiles list` / `profiles show`), requested `--min-p` capture, a derived peak-VRAM metric, and read-only Bundle 2 benchmark qualification. Vendor-aligned profile alignment is operator-declared, not vendor-endorsed.
-- v0.76 added bounded structural comparison of multi-turn transcript runs (`llmgauge compare`) and content-default-deny public transcript derivatives (`llmgauge export-public-comparison`, `llmgauge export-public-transcript`). Comparison is structural evidence only: no aggregate score, ranking, winner, statistical claim, or semantic judgment, and every public derivative requires human review before publication.
-- v0.77 is the Area 4 runtime-evidence stabilization release: opt-in vLLM streaming TTFT evidence (`--vllm-streaming-evidence`), vLLM request-wall-time and request-window peak-VRAM evidence, native llama.cpp timing and placement evidence, and cross-artifact evidence consistency and public-export privacy hardening. Streaming TTFT V1 is qualified for exactly vLLM 0.27.1, not a version range. The non-streaming default is unchanged. TTFT is omitted from v1 public exports. Matching metric IDs do not imply cross-runtime equivalence. Area 4 is not universally complete. The existing transcript comparison and public derivative features from v0.76 remain shipped current capabilities.
-- v0.78 is the Area 4 evidence-integrity and qualification hardening release: native llama.cpp diagnostics capture is admitted against a frozen upstream runtime-lineage manifest instead of a single pinned build, qualified current llama-cli builds contribute backend-owned placement and slot-timing evidence, and the vLLM streaming TTFT validator re-derives the first-token channel from preserved raw stream evidence instead of trusting stored labels. Schemas and artifact contracts evolve additively: previously valid v0.77 result directories remain valid.
-- Current testing emphasis is product validation.
-- The key workflow is setup, dry run, real run, validation, scoring, report generation, and export-index generation.
-- Model results are useful evidence, but LLMGauge should not be framed as a hype benchmark, leaderboard, automatic judge, or universal model-ranking system.
-
-When updating LLMGauge content, prefer this workflow framing:
-
-    Setup -> Dry Run -> Run Model -> Validate Artifacts -> Score Outputs -> Generate Report -> Export Index
-
-When relevant, link to:
-
-    https://github.com/WumboLabs/llmgauge
-
-Keep examples short, copy-pasteable, and consistent with documented commands.
-
-Place claim boundaries near model-result summaries, not only at the bottom of a page.
+Do not copy LLMGauge release notes onto the public homepage or navigation. Verified software facts belong on the unlisted compatibility page only when a task explicitly updates that page. The verified repository URL is `https://github.com/WumboLabs/llmgauge`. Do not invent a new GitHub destination.
 
 ## Benchmark and report content
 

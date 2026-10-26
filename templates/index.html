@@ -16,34 +16,38 @@
       <span class="operator-prompt" aria-hidden="true">wl@lab:~$</span>
       <a href="#overview">/overview</a>
       <a href="#evidence">/evidence</a>
-      <a href="#systems">/systems</a>
+      <a href="#systems">/hardware</a>
     </nav>
 
     <div class="operator-overview" id="overview">
       <div class="operator-pane operator-pane--focus">
         <h1 id="operator-title">Real hardware. Real testing. No hype.</h1>
-        <p class="lede">LLMGauge is the flagship. wumbOS is the largest active build.</p>
+        <p class="lede">Local language-model research, published as evidence.</p>
         <p class="operator-intro">
-          WumboLabs documents practical local AI and Linux systems on consumer
-          hardware. LLMGauge remains the flagship evidence tool for validated local
-          model testing. wumbOS is the main active development focus: a cohesive,
-          agent-aware Linux workstation being built from the shell outward.
+          WumboLabs is an independent local-AI research effort. The public site
+          records what was tested, how it was tested, what the evidence showed,
+          and where the limits are. Results stay scoped to the hardware, runtime,
+          artifact, and method that produced them.
         </p>
       </div>
 
-      <aside class="lab-status-panel operator-status" aria-label="Current public project status">
+      <aside class="lab-status-panel operator-status" aria-label="Primary research surfaces">
         <div class="panel-topline">
-          <span>PUBLIC PROJECTS / 02</span>
-          <span class="status-dot">ACTIVE</span>
+          <span>RESEARCH SURFACES</span>
+          <span class="status-dot">OPEN</span>
         </div>
         <dl class="status-list">
           <div>
-            <dt><a href="{{ get_url(path='/projects/llmgauge/') }}">LLMGauge</a></dt>
-            <dd>flagship evidence tool</dd>
+            <dt><a href="{{ get_url(path='/evaluations/') }}">Evaluations</a></dt>
+            <dd>model evidence catalog</dd>
           </div>
           <div>
-            <dt><a href="{{ get_url(path='/projects/wumbos/') }}">wumbOS</a></dt>
-            <dd>main focus / active development</dd>
+            <dt><a href="{{ get_url(path='/records/') }}">Research</a></dt>
+            <dd>technical reports and investigations</dd>
+          </div>
+          <div>
+            <dt><a href="{{ get_url(path='/methodology/') }}">Methodology</a></dt>
+            <dd>WELP revision in progress</dd>
           </div>
         </dl>
       </aside>
@@ -52,7 +56,7 @@
     <section class="operator-pane operator-evidence" id="evidence" aria-labelledby="evidence-title">
       <div class="panel-topline">
         <span id="evidence-title">PRIMARY ROUTES</span>
-        <span>03 PRIORITIES</span>
+        <span>RESEARCH FIRST</span>
       </div>
       <div class="operator-route-list">
         <article class="operator-route">
@@ -62,57 +66,51 @@
           </div>
           <div>
             <h2>Evaluations</h2>
-            <p>Hardware-scoped model evaluations on real WumboLabs hardware: tested deployment profiles, context results, reliability findings, and canonical evidence with disclosed review boundaries. One page per model.</p>
+            <p>Hardware-scoped model evaluations: tested configurations, capabilities, limitations, and original evidence. Earlier results remain available as historical evidence while WELP is being revised.</p>
           </div>
           <div class="operator-route-links">
             <a href="{{ get_url(path='/evaluations/') }}">Evaluations →</a>
-            <a href="{{ get_url(path='/methodology/') }}">Methodology →</a>
           </div>
         </article>
 
-        <article class="operator-route operator-route--wumbos">
+        <article class="operator-route">
           <div class="operator-route-key">
             <span>02</span>
-            <strong>MAIN FOCUS / ACTIVE DEVELOPMENT</strong>
+            <strong>RESEARCH / TECHNICAL REPORTS</strong>
           </div>
           <div>
-            <h2>wumbOS</h2>
-            <p>A developing Linux desktop environment / desktop shell. Public baseline is the signed wumbOS v0.2.0-alpha.1 composition; active development continues on the tested Fedora 44, Hyprland, and Wayland stack.</p>
+            <h2>Research</h2>
+            <p>Technical reports, inference and runtime investigations, hardware measurements, and controlled benchmarks. These are evidence records, not rankings. Research papers will be listed when publications exist.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/projects/wumbos/') }}" aria-label="Open wumbOS project">Open project →</a>
-            <a href="https://github.com/WumboLabs/wumbo-quickshell">Shell GitHub</a>
+            <a href="{{ get_url(path='/records/') }}">Research →</a>
           </div>
         </article>
 
-        <article class="operator-route operator-route--active">
+        <article class="operator-route">
           <div class="operator-route-key">
             <span>03</span>
-            <strong>FLAGSHIP PROJECT</strong>
+            <strong>METHODOLOGY / UNDER REVISION</strong>
           </div>
           <div>
-            <h2>LLMGauge</h2>
-            <p>The established WumboLabs evidence tool: a local-first CLI for validating practical LLM testing workflows on real consumer hardware.</p>
+            <h2>Methodology</h2>
+            <p>WELP, the evaluation framework, is undergoing a methodology revision. Updated documentation will be published after the revised framework has been validated. Earlier evaluations stay available with their original evidence.</p>
           </div>
           <div class="operator-route-links">
-            <a href="{{ get_url(path='/projects/llmgauge/') }}" aria-label="Open LLMGauge project">Open project →</a>
-            <a href="https://github.com/WumboLabs/llmgauge">GitHub</a>
+            <a href="{{ get_url(path='/methodology/') }}">Methodology →</a>
           </div>
         </article>
       </div>
     </section>
 
-
     <section class="operator-pane operator-systems" id="systems" aria-labelledby="systems-title">
       <div class="panel-topline">
-        <span id="systems-title">EVIDENCE INFRASTRUCTURE</span>
-        <span>04 NODES</span>
+        <span id="systems-title">RESEARCH HARDWARE</span>
+        <span>TEST PLATFORM</span>
       </div>
       <div class="inventory-list">
-        <div><span>WumboMobile</span><strong>primary desktop and development workstation · Fedora 44 / Hyprland / wumbOS</strong></div>
-        <div><span>WumboJetsII</span><strong>headless AI inference and evaluation · Radeon AI PRO R9700 / 32GB VRAM</strong></div>
-        <div><span>WumboServer</span><strong>shared services and storage · RTX 2060 Super for small-model experiments</strong></div>
-        <div><span>WumboMini</span><strong>primary DNS and lightweight infrastructure services</strong></div>
+        <div><span>Current compute</span><strong>WumboJetsII — headless local inference and evaluation, Radeon AI PRO R9700, 32GB VRAM</strong></div>
+        <div><span>Earlier evidence</span><strong>RTX 5070 results remain valid for that hardware and runtime; they do not transfer automatically</strong></div>
       </div>
     </section>
   </div>

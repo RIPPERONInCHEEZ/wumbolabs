@@ -1,6 +1,6 @@
 base_url = "https://wumbolabs.dev"
 title = "WumboLabs"
-description = "Local LLM testing on real hardware. Practical evidence. No hype."
+description = "Independent local-AI research: reproducible model evaluation, inference evidence, and hardware-scoped results."
 
 compile_sass = false
 build_search_index = true
@@ -8,4 +8,4 @@ generate_feeds = true
 
 [extra]
 author = "Kevin Dickinson"
-site_version = "v0.15"
+site_version = "v0.16"

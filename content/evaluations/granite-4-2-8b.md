@@ -55,6 +55,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 **WELP Initial Evaluation — IBM Granite 4.2 8B (reasoning-on)** · profile: llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
+Methodology snapshot: `welp-next-snapshot-2026-09-24-context-outcome-repair` · WELP commit `ead28bde1ea9bce20cec6b3930125016068a8bbc`
+
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/553a68d915b9ea1c9c9b3be6fa65c16f13527c24/models/granite-4.2-8b)
 

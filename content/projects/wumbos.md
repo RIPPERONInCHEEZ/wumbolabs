@@ -3,13 +3,14 @@ title = "wumbOS"
 description = "A developing Linux desktop environment centered on Hyprland, Quickshell, and local-first Agent integration."
 template = "project.html"
 weight = 2
+in_search = false
 [extra]
-back_label = "Back to Projects"
-back_url = "/projects/"
-portfolio_status = "MAIN FOCUS · ACTIVE DEVELOPMENT"
+back_label = "Back to Home"
+back_url = "/"
 release_status = "PUBLIC BASELINE · wumbOS v0.2.0-alpha.1 · active development"
 wumbos = true
-public_project = true
+public_project = false
+content_kind = "compatibility"
 +++
 
 <strong>MAIN FOCUS / ACTIVE DEVELOPMENT</strong>

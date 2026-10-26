@@ -88,6 +88,8 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 - **Outcome:** COMPLETE_PASS
 - **Classification:** NOT_READY
+- **Methodology snapshot:** welp-next-snapshot-2026-09-24-review-and-setup-hardening (WELP commit c7b5c92b1f22f5b34d65d688e517d7812df0c37c, DRAFT / NOT v1.0)
+- **Classification contract:** welp-final-classification-0.4.0-draft
 
 Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md
 

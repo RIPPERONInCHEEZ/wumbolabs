@@ -2,6 +2,7 @@
 title = "WumboJetsII"
 description = "Headless Fedora 44 AI compute node for local-model evaluation, LLMGauge runs, and WumboLabs evidence."
 template = "project.html"
+in_search = false
 weight = 100
 [extra]
 back_label = "Back to Home"

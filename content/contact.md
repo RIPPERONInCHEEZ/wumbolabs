@@ -6,7 +6,7 @@ back_label = "Back to Home"
 back_url = "/"
 +++
 
-If you'd like to discuss local AI, Linux, homelabs, self-hosting, or any of the projects documented on this site, feel free to reach out.
+If you'd like to discuss local model evaluation, inference measurements, or the technical reports on this site, feel free to reach out.
 
 <div class="contact-grid">
   <a class="contact-card" href="mailto:contact@wumbolabs.dev">
