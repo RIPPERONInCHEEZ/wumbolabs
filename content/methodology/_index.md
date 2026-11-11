@@ -1,5 +1,5 @@
 +++
-title = "WELP v1.0 — Evaluation Methodology"
+title = "WELP v1.0 - Evaluation Methodology"
 description = "Eight modular evaluation sections, original evidence, independent validation, and configuration-specific findings."
 template = "methodology.html"
 
