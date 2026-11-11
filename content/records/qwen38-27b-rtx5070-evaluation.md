@@ -9,7 +9,7 @@ back_label = "Back to Reports"
 back_url = "/records/"
 +++
 
-This completed local campaign tested Qwen3.8-27B on [WumboJetsII](/projects/wumbojetsii/). It is evidence from one consumer workstation and a frozen WumboLabs corpus—not a universal model ranking or accuracy claim.
+This completed local campaign tested Qwen3.8-27B on [WumboJetsII](/projects/wumbojetsii/). It is evidence from one consumer workstation and a frozen WumboLabs corpus, not a universal model ranking or accuracy claim.
 
 <p class="kicker">2026-08-21 / QWEN3.8-27B LOCAL EVALUATION CAMPAIGN</p>
 
@@ -166,7 +166,7 @@ Matched 8K Q4/Q4 FIXED evidence:
 | Baseline | 45.03 tok/s | reference |
 | Native MTP, `nmax=1` | 66.13 tok/s | 1.469x speedup; ~75.1% acceptance |
 
-Earlier optimization work found 22/24 byte-identical outputs. The fresh 50-task matched subset found the same quality classes for baseline and MTP—39 CLEAN_PASS, 7 MATERIAL_DEFECT, 3 HALLUCINATION, 1 STRUCTURAL_FAILURE—and 46/50 byte-identical outputs. Fresh mean generation was 45.10 versus 63.81 tok/s, or **1.41x**; headroom was 1,899 versus 1,353 MiB.
+Earlier optimization work found 22/24 byte-identical outputs. The fresh 50-task matched subset found the same quality classes for baseline and MTP (39 CLEAN_PASS, 7 MATERIAL_DEFECT, 3 HALLUCINATION, 1 STRUCTURAL_FAILURE) and 46/50 byte-identical outputs. Fresh mean generation was 45.10 versus 63.81 tok/s, or **1.41x**; headroom was 1,899 versus 1,353 MiB.
 
 MTP is an optional fast 8K profile, not the daily default. The output mismatches require reviewed use and rule out a blanket equivalence claim. At 32K MTP started with ~141 MiB headroom and CUDA-OOMed during a filled ~31.7K prompt; 64K MTP was not attempted. N-gram speculation did not offer enough useful gain to recommend.
 
@@ -176,7 +176,7 @@ DFlash2 required experimental llama.cpp support. The Q4_K_M draft loaded metadat
 
 ## Vision
 
-With a pinned F16 projector, bounded OCR, counting, and spatial-reasoning probes passed **3/3**. Peak VRAM was approximately 11,301 MiB with ~926 MiB headroom. Vision worked for this bounded test, but is an edge configuration on this 12GB card—not a comfortable default.
+With a pinned F16 projector, bounded OCR, counting, and spatial-reasoning probes passed **3/3**. Peak VRAM was approximately 11,301 MiB with ~926 MiB headroom. Vision worked for this bounded test, but it is an edge configuration on this 12GB card, not a comfortable default.
 
 ## Coding
 

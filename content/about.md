@@ -20,7 +20,7 @@ The goal is to keep the evidence bounded and usable.
 
 ## Professional Background
 
-My technical work started professionally in support and network operations.
+My professional technical work began in support and network operations.
 
 I worked in customer support, service assurance, and technical support roles troubleshooting wireless networks, hardware, configuration issues, outages, vendor coordination, field technician support, ticket documentation, and customer-facing communication.
 
@@ -32,7 +32,7 @@ That experience shaped how I approach systems:
 - Communicate clearly
 - Keep rollback paths available
 
-Before that, I worked in kitchens and eventually became a Sous Chef.
+Before that, I worked in kitchens and eventually became a sous chef.
 
 While the work was very different, many of the habits carried forward: stay organized, stay calm under pressure, solve problems quickly, and keep things moving when something breaks.
 

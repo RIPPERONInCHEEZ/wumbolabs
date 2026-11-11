@@ -1,6 +1,6 @@
 +++
 title = "LFM2.5-8B-A1B"
-description = "LFM2.5-8B-A1B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "LFM2.5-8B-A1B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 1
 
@@ -17,18 +17,18 @@ event_count = 4
 latest_evidence_date = 2026-11-11
 +++
 
-WumboLabs tests **LFM2.5-8B-A1B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **LFM2.5-8B-A1B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** NOT_READY — [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924), profile llama.cpp upstream official Q6_K (reasoning-on, publisher sampler)
-- **Recommended profile:** llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) (`lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
-- **Practical context:** 32,768 default / 128,000 guarded tokens; native model-card maximum 128,000 (envelope complete: NO) — [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924)
-- **Latest evidence:** 2026-11-11 — LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result
+- **Classification:** NOT_READY ; source: [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924), profile llama.cpp upstream official Q6_K (reasoning-on, publisher sampler)
+- **Recommended profile:** llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) (`lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
+- **Practical context:** 32,768 default / 128,000 guarded tokens; native model-card maximum 128,000 (envelope complete: NO); source: [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924)
+- **Latest evidence:** 2026-11-11: LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result
 
 ## Tested profiles
 
-### llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) — CURRENT
+### llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) (CURRENT)
 
 Profile identity: `lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment`.
 
@@ -45,10 +45,10 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924) — NOT_READY
-- [Prospective retest with reliability-class calibration and proven uncached timing (official Q6_K, upstream llama.cpp b10999) (2026-09-23)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-20260923) — NOT_READY
+- [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924); status: NOT_READY
+- [Prospective retest with reliability-class calibration and proven uncached timing (official Q6_K, upstream llama.cpp b10999) (2026-09-23)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-20260923); status: NOT_READY
 
-### Q5_K_M (official LiquidAI GGUF) — LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable, publisher sampler — CURRENT
+### Q5_K_M (official LiquidAI GGUF): LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable, publisher sampler (CURRENT)
 
 Profile identity: `lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10`.
 
@@ -65,9 +65,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [LFM2.5-8B-A1B Model/Core baseline + advanced reasoning (RTX 5070 CUDA) (2026-11-10)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10) — NOT_ASSIGNED
+- [LFM2.5-8B-A1B Model/Core baseline + advanced reasoning (RTX 5070 CUDA) (2026-11-10)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10); status: NOT_ASSIGNED
 
-### Q5_K_M (official LiquidAI GGUF) — LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface) — CURRENT
+### Q5_K_M (official LiquidAI GGUF): LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface) (CURRENT)
 
 Profile identity: `lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11`.
 
@@ -84,7 +84,7 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result (2026-11-11)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11) — NOT_ASSIGNED
+- [LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result (2026-11-11)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11); status: NOT_ASSIGNED
 
 ## Testing history
 
@@ -92,9 +92,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11"></a>
 
-### 2026-11-11 — LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result
+### 2026-11-11: LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result
 
-**WELP v1.0 authentic objective HelicopterBench /2** · profile: Q5_K_M (official LiquidAI GGUF) — LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 authentic objective HelicopterBench /2** · profile: Q5_K_M (official LiquidAI GGUF): LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
@@ -125,22 +125,22 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
 ##### Quality and capabilities
 
 - **Constrained result:** See configuration-specific section findings; no composite model score.
-- helicopterbench: 1 recorded identities
+- helicopterbench: 1 recorded identity
 
 ###### Guardrails and limitations
 
@@ -342,7 +342,7 @@ Historical /1 scores and videos retain their separate attribution.
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -362,9 +362,9 @@ rankings.
 
 <a id="lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10"></a>
 
-### 2026-11-10 — LFM2.5-8B-A1B Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
+### 2026-11-10: LFM2.5-8B-A1B Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
 
-**WELP v1.0 third-family baseline and reasoning arm** · profile: Q5_K_M (official LiquidAI GGUF) — LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable, publisher sampler · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 third-family baseline and reasoning arm** · profile: Q5_K_M (official LiquidAI GGUF): LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable, publisher sampler · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
@@ -395,15 +395,15 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -411,7 +411,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 - **Constrained result:** See configuration-specific section findings; no composite model score.
 - advanced-reasoning: 3 recorded identities
-- baseline: 61 recorded identities
+- baseline: 61 recorded identity
 
 ###### Guardrails and limitations
 
@@ -1445,7 +1445,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1465,9 +1465,9 @@ rankings.
 
 <a id="lfm25-8b-a1b-rtx5070-welp-adjudication-20260924"></a>
 
-### 2026-09-24 — Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999)
+### 2026-09-24: Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999)
 
-**WELP Review Adjudication — Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Review Adjudication: Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
@@ -1502,7 +1502,7 @@ rankings.
 - **Methodology snapshot:** welp-next-snapshot-2026-09-24-review-and-setup-hardening (WELP commit c7b5c92b1f22f5b34d65d688e517d7812df0c37c, DRAFT / NOT v1.0)
 - **Classification contract:** welp-final-classification-0.4.0-draft
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md
 
 ##### Context profile
 
@@ -1518,7 +1518,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.0683016 s | — | not recorded |
+| Short | 0.0683016 s | Not recorded | not recorded |
 | Moderate (unspecified-token input) | not recorded | not recorded | not recorded |
 
 <p><small>Raw single-repetition llama-bench invocations (one designated warmup plus five measured, all retained), uncached; near-full 32,768 window prefill proxy 13,131.7 tok/s / decode proxy 256.6 tok/s; near-full timing from 8K to 128K: prefill ~14.5k to ~8.9k tok/s, decode 299 to 173 tok/s.</small></p>
@@ -1566,9 +1566,9 @@ rankings.
 
 <a id="lfm25-8b-a1b-rtx5070-welp-20260923"></a>
 
-### 2026-09-23 — Prospective retest with reliability-class calibration and proven uncached timing (official Q6_K, upstream llama.cpp b10999)
+### 2026-09-23: Prospective retest with reliability-class calibration and proven uncached timing (official Q6_K, upstream llama.cpp b10999)
 
-**WELP Prospective Retest — Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Prospective Retest: Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/e7ea77de15f214d2ba84b5a182e07ecbb45ba1ce/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
@@ -1602,7 +1602,7 @@ rankings.
 - **Classification:** NOT_READY
 - **Artifact classification:** current
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/e7ea77de15f214d2ba84b5a182e07ecbb45ba1ce/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/e7ea77de15f214d2ba84b5a182e07ecbb45ba1ce/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/REPORT.md
 
 ##### Context profile
 
@@ -1618,7 +1618,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.0683 s | — | not recorded |
+| Short | 0.0683 s | Not recorded | not recorded |
 | Moderate (unspecified-token input) | not recorded | not recorded | not recorded |
 
 <p><small>llama-bench canonical arm (6 reps, no warmup), uncached; near-full prefill 14,531 tok/s (8K) to 8,854 tok/s (128K); full-occupancy decode 299 tok/s (8K) to 173 tok/s (128K); LocalMaxxing five-rep arm 349.51 tok/s out / 9,816.22 tok/s prefill.</small></p>

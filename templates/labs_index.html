@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Evaluations — Model Catalog | {{ config.title }}{% endblock title %}
+{% block title %}Evaluations: Model Catalog | {{ config.title }}{% endblock title %}
 
 {% block head %}<script src="/js/evaluations-catalog.js?v={{ config.extra.site_version }}" defer></script>{% endblock head %}
 
@@ -64,7 +64,7 @@
           <tr>
             <th scope="col">Model</th>
             <th scope="col">Producer</th>
-            <th scope="col">Artifact / quant</th>
+            <th scope="col">Artifact / quantization</th>
             <th scope="col">Latest evidence</th>
             <th scope="col">Status</th>
             <th scope="col">Evidence</th>

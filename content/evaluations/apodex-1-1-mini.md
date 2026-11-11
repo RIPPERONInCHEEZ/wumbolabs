@@ -1,6 +1,6 @@
 +++
 title = "Apodex 1.1 mini"
-description = "Apodex 1.1 mini — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Apodex 1.1 mini: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 22
 
@@ -16,17 +16,17 @@ event_count = 1
 latest_evidence_date = 2026-08-25
 +++
 
-WumboLabs tests **Apodex 1.1 mini** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Apodex 1.1 mini**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE — [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex), profile llama.cpp IQ1_M (community conversion)
-- **Recommended profile:** llama.cpp IQ1_M (community conversion) (`apodex-1.1-mini-llamacpp-iq1m`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
-- **Latest evidence:** 2026-08-25 — Initial evaluation (bounded early stop)
+- **Classification:** BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE ; source: [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex), profile llama.cpp IQ1_M (community conversion)
+- **Recommended profile:** llama.cpp IQ1_M (community conversion) (`apodex-1.1-mini-llamacpp-iq1m`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
+- **Latest evidence:** 2026-08-25: Initial evaluation (bounded early stop)
 
 ## Tested profiles
 
-### llama.cpp IQ1_M (community conversion) — CURRENT
+### llama.cpp IQ1_M (community conversion) (CURRENT)
 
 Profile identity: `apodex-1.1-mini-llamacpp-iq1m`.
 
@@ -39,7 +39,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex) — BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
+- [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex); status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
 ## Testing history
 
@@ -47,9 +47,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="initial-evaluation-2026-08-25-apodex"></a>
 
-### 2026-08-25 — Initial evaluation (bounded early stop)
+### 2026-08-25: Initial evaluation (bounded early stop)
 
-**Initial Evaluation — Early Stop** · profile: llama.cpp IQ1_M (community conversion) · maturity: EARLY_STOP · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
+**Initial Evaluation: Early Stop** · profile: llama.cpp IQ1_M (community conversion) · maturity: EARLY_STOP · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/apodex-1.1-mini)
@@ -86,7 +86,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 The model failed the applicable advancement gate. Per WELP protocol, later phases were not run. This is a bounded result, not a complete capability review.
 
-The early-stop behavior is a feature of WELP transparency: the model failed the gate, so the evaluation stopped. This is not a protocol failure — it is the protocol working as designed.
+The early-stop behavior is a feature of WELP transparency: the model failed the gate, so the evaluation stopped. This is not a protocol failure; it is the protocol working as designed.
 
 ### Performance
 
@@ -97,7 +97,7 @@ The early-stop behavior is a feature of WELP transparency: the model failed the 
 | TTFT (short prompt) | ~125 ms |
 | VRAM idle | 9.7 GB |
 
-### Phase 3 Practical Viability — DO_NOT_ADVANCE
+### Phase 3 Practical Viability: DO_NOT_ADVANCE
 
 Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 35/35), 30 tasks x seeds {42,43,44}, thinking OFF baseline.
 
@@ -108,7 +108,7 @@ Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 3
 | G3 factual-uncertainty | >=0.50 | 0.500 | 0.750 | 0.500 | PASS (boundary) |
 | G4 structured-output | >=0.70 | 0.714 | 0.714 | 0.714 | PASS |
 
-Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genuine failures (fabricated package description, explained nonexistent git flag, asserted 25 prime, invented phone number, echoed un-reversed word); ~8 scorer lexicon artifacts. Verdict robust: correcting every artifact still leaves seed-42 aggregate <0.75.
+Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genuine failures (fabricated package description, explained nonexistent git flag, asserted that 25 is prime, invented phone number, echoed un-reversed word); ~8 scorer lexicon artifacts. Verdict robust: correcting every artifact still leaves seed-42 aggregate <0.75.
 
 ### What Was NOT Tested
 

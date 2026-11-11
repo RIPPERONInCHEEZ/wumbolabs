@@ -1,6 +1,6 @@
 +++
 title = "Qwen2.5-3B Instruct"
-description = "Qwen2.5-3B Instruct — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen2.5-3B Instruct: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 24
 
@@ -15,16 +15,16 @@ event_count = 2
 latest_evidence_date = 2026-07-15
 +++
 
-WumboLabs tests **Qwen2.5-3B Instruct** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen2.5-3B Instruct**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Recommended profile:** vLLM BF16 (cross-runtime lane) (`qwen2.5-3b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md)
-- **Latest evidence:** 2026-07-15 — vLLM fingerprint live smoke
+- **Recommended profile:** vLLM BF16 (cross-runtime lane) (`qwen2.5-3b-vllm-bf16`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md)
+- **Latest evidence:** 2026-07-15: vLLM fingerprint live smoke
 
 ## Tested profiles
 
-### llama.cpp F16 (comparison reference) — CURRENT
+### llama.cpp F16 (comparison reference) (CURRENT)
 
 Profile identity: `qwen2.5-3b-llamacpp-f16`.
 
@@ -37,9 +37,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Cross-runtime comparison: llama.cpp F16 vs vLLM BF16 (2026-07-15)](/evaluations/qwen2-5-3b#qwen25-3b-cross-runtime-2026-07-15) — BENCHMARK_ONLY / CROSS_RUNTIME_METHODOLOGY_LANE
+- [Cross-runtime comparison: llama.cpp F16 vs vLLM BF16 (2026-07-15)](/evaluations/qwen2-5-3b#qwen25-3b-cross-runtime-2026-07-15); status: BENCHMARK_ONLY / CROSS_RUNTIME_METHODOLOGY_LANE
 
-### vLLM BF16 (cross-runtime lane) — CURRENT
+### vLLM BF16 (cross-runtime lane) (CURRENT)
 
 Profile identity: `qwen2.5-3b-vllm-bf16`.
 
@@ -52,7 +52,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [vLLM fingerprint live smoke (2026-07-15)](/evaluations/qwen2-5-3b#qwen25-3b-vllm-fingerprint-smoke-2026-07-15) — SPECIALIZED_TEST / RUNTIME_FINGERPRINT
+- [vLLM fingerprint live smoke (2026-07-15)](/evaluations/qwen2-5-3b#qwen25-3b-vllm-fingerprint-smoke-2026-07-15); status: SPECIALIZED_TEST / RUNTIME_FINGERPRINT
 
 ## Testing history
 
@@ -60,16 +60,16 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="qwen25-3b-vllm-fingerprint-smoke-2026-07-15"></a>
 
-### 2026-07-15 — vLLM fingerprint live smoke
+### 2026-07-15: vLLM fingerprint live smoke
 
-**Specialized Test — runtime fingerprint** · profile: vLLM BF16 (cross-runtime lane) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / RUNTIME_FINGERPRINT
+**Specialized Test: runtime fingerprint** · profile: vLLM BF16 (cross-runtime lane) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / RUNTIME_FINGERPRINT
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-vllm-fingerprint-smoke-2026-07-15/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen2.5-3b)
 
 ### Identity and scope
 
-- Profile: `qwen2.5-3b-vllm-bf16` — vLLM BF16 (cross-runtime lane)
+- Profile: `qwen2.5-3b-vllm-bf16`: vLLM BF16 (cross-runtime lane)
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -82,16 +82,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="qwen25-3b-cross-runtime-2026-07-15"></a>
 
-### 2026-07-15 — Cross-runtime comparison: llama.cpp F16 vs vLLM BF16
+### 2026-07-15: Cross-runtime comparison: llama.cpp F16 vs vLLM BF16
 
-**Benchmark Only — cross-runtime methodology lane** · profile: llama.cpp F16 (comparison reference) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / CROSS_RUNTIME_METHODOLOGY_LANE
+**Benchmark Only: cross-runtime methodology lane** · profile: llama.cpp F16 (comparison reference) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / CROSS_RUNTIME_METHODOLOGY_LANE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-cross-runtime-2026-07-15/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen2.5-3b)
 
 ### Identity and scope
 
-- Profile: `qwen2.5-3b-llamacpp-f16` — llama.cpp F16 (comparison reference)
+- Profile: `qwen2.5-3b-llamacpp-f16`: llama.cpp F16 (comparison reference)
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance, agent-backend
 - Hardware: WumboJetsII (RTX 5070 12GB)

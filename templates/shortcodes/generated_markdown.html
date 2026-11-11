@@ -1,2 +1,2 @@
 {% set generated_content = load_data(path=path, format="plain") %}
-{{ generated_content | markdown | safe }}
+{{ generated_content | replace(from=" — repo-local", to=": repo-local") | replace(from=" — guided setup wizard", to=": guided setup wizard") | markdown | safe }}

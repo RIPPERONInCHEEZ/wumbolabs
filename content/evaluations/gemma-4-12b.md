@@ -1,6 +1,6 @@
 +++
 title = "Gemma 4 12B IT"
-description = "Gemma 4 12B IT — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Gemma 4 12B IT: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 2
 
@@ -17,18 +17,18 @@ event_count = 7
 latest_evidence_date = 2026-11-09
 +++
 
-WumboLabs tests **Gemma 4 12B IT** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Gemma 4 12B IT**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12), profile llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
-- **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
-- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12)
-- **Latest evidence:** 2026-11-09 — Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
+- **Classification:** READY_WITH_GUARDRAILS ; source: [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12), profile llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
+- **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12)
+- **Latest evidence:** 2026-11-09: Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
 
 ## Tested profiles
 
-### llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) — CURRENT
+### llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (CURRENT)
 
 Profile identity: `gemma-4-12b-llamacpp-qat-q4-0`.
 
@@ -45,14 +45,14 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12) — READY_WITH_GUARDRAILS
-- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
-- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04) — BENCHMARK_ONLY (LMX local speed)
-- [12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-practical-use-family-2026-06-21) — PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
-- [Honesty ladder smoke (QAT Q4) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-honesty-ladder-2026-06-21) — SPECIALIZED_TEST / UNSCORED_SMOKE
-- [Early core-v1 + agent-backend-v1 scored runs (QAT Q4) (2026-06-16)](/evaluations/gemma-4-12b#gemma4-12b-core-agent-v016-2026-06-16) — BENCHMARK_ONLY
+- [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12); status: READY_WITH_GUARDRAILS
+- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04); status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
+- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04); status: BENCHMARK_ONLY (LMX local speed)
+- [12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-practical-use-family-2026-06-21); status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
+- [Honesty ladder smoke (QAT Q4) (2026-06-21)](/evaluations/gemma-4-12b#gemma4-12b-honesty-ladder-2026-06-21); status: SPECIALIZED_TEST / UNSCORED_SMOKE
+- [Early core-v1 + agent-backend-v1 scored runs (QAT Q4) (2026-06-16)](/evaluations/gemma-4-12b#gemma4-12b-core-agent-v016-2026-06-16); status: BENCHMARK_ONLY
 
-### UD-Q4_K_XL (Unsloth Dynamic 2.0 GGUF) — Unsloth UD-Q4_K_XL GGUF, llama.cpp CUDA on RTX 5070, thinking not configurable, fresh NVMe (SSD) canonical deployment — CURRENT
+### UD-Q4_K_XL (Unsloth Dynamic 2.0 GGUF): Unsloth UD-Q4_K_XL GGUF, llama.cpp CUDA on RTX 5070, thinking not configurable, fresh NVMe (SSD) canonical deployment (CURRENT)
 
 Profile identity: `gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09`.
 
@@ -69,9 +69,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA) (2026-11-09)](/evaluations/gemma-4-12b#gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09) — NOT_ASSIGNED
+- [Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA) (2026-11-09)](/evaluations/gemma-4-12b#gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09); status: NOT_ASSIGNED
 
-### llama.cpp Q4_K_M (ggml-org) — SPECIALIZED
+### llama.cpp Q4_K_M (ggml-org) (SPECIALIZED)
 
 Profile identity: `gemma-4-12b-llamacpp-q4km`.
 
@@ -84,9 +84,9 @@ Status: specialized tested surface.
 
 Events on this profile:
 
-- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04) — BENCHMARK_ONLY (LMX local speed)
+- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04); status: BENCHMARK_ONLY (LMX local speed)
 
-### llama.cpp Q4_K_M (ggml-org) — SPECIALIZED
+### llama.cpp Q4_K_M (ggml-org) (SPECIALIZED)
 
 Profile identity: `gemma-4-12b-llamacpp-ud-q5-k-xl`.
 
@@ -99,9 +99,9 @@ Status: specialized tested surface.
 
 Events on this profile:
 
-- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04) — BENCHMARK_ONLY (LMX local speed)
+- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04); status: BENCHMARK_ONLY (LMX local speed)
 
-### llama.cpp Q4_K_M (ggml-org) — SPECIALIZED
+### llama.cpp Q4_K_M (ggml-org) (SPECIALIZED)
 
 Profile identity: `gemma-4-12b-llamacpp-ud-q6-k-xl`.
 
@@ -114,7 +114,7 @@ Status: specialized tested surface.
 
 Events on this profile:
 
-- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04) — BENCHMARK_ONLY (LMX local speed)
+- [LMX speed runs across four Gemma 4 12B quants (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-lmx-speed-2026-07-04); status: BENCHMARK_ONLY (LMX local speed)
 
 ## Testing history
 
@@ -122,9 +122,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09"></a>
 
-### 2026-11-09 — Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
+### 2026-11-09: Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
 
-**WELP v1.0 fresh second-family baseline and reasoning arm** · profile: UD-Q4_K_XL (Unsloth Dynamic 2.0 GGUF) — Unsloth UD-Q4_K_XL GGUF, llama.cpp CUDA on RTX 5070, thinking not configurable, fresh NVMe (SSD) canonical deployment · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 fresh second-family baseline and reasoning arm** · profile: UD-Q4_K_XL (Unsloth Dynamic 2.0 GGUF): Unsloth UD-Q4_K_XL GGUF, llama.cpp CUDA on RTX 5070, thinking not configurable, fresh NVMe (SSD) canonical deployment · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
@@ -155,15 +155,15 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -171,7 +171,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 - **Constrained result:** See configuration-specific section findings; no composite model score.
 - advanced-reasoning: 3 recorded identities
-- baseline: 61 recorded identities
+- baseline: 61 recorded identity
 
 ###### Guardrails and limitations
 
@@ -1220,7 +1220,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1240,9 +1240,9 @@ rankings.
 
 <a id="gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"></a>
 
-### 2026-09-12 — Current-WELP recharacterization
+### 2026-09-12: Current-WELP recharacterization
 
-**WELP Recharacterization — llama.cpp QAT UD-Q4_K_XL** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Recharacterization: llama.cpp QAT UD-Q4_K_XL** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
@@ -1275,7 +1275,7 @@ rankings.
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md
 
 ##### Context profile
 
@@ -1285,7 +1285,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Guarded context | 131072 tokens |
 | Native model-card maximum | 262144 tokens |
 | Model-card envelope complete | YES |
-| Native maximum disposition | FIT_LIMIT — measured: one bounded admission attempt failed with CUDA OOM (compute buffer) and KV-slope accounting (17.4 KiB/token) proves the point cannot fit with required reserve on 12GB; nearest measured boundary 131,072 |
+| Native maximum disposition | FIT_LIMIT: measured: one bounded admission attempt failed with CUDA OOM (compute buffer) and KV-slope accounting (17.4 KiB/token) proves the point cannot fit with required reserve on 12GB; nearest measured boundary 131,072 |
 
 ##### Quality and capabilities
 
@@ -1309,7 +1309,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | MEASURED_NOT_SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1329,34 +1329,34 @@ rankings.
 
 <a id="gemma4-12b-practical-pool-v025-2026-07-04"></a>
 
-### 2026-07-04 — 12B practical pool comparison v025 + Grug
+### 2026-07-04: 12B practical pool comparison v025 + Grug
 
-**Practical Use — shared comparison (canonical)** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
+**Practical Use: shared comparison (canonical)** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
 
 ### Identity and scope
 
-- Profile: `gemma-4-12b-llamacpp-qat-q4-0` — llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
+- Profile: `gemma-4-12b-llamacpp-qat-q4-0`: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
 - Evidence maturity: **PRACTICAL_USE**
 - Evidence scope: practical-use
 - Hardware: WumboJetsII (RTX 5070 12GB)
 
-Second shared multi-model practical-use comparison: the incumbent QAT Q4 practical default (259.2/300 from the v024 suite) against five additional tested models on wumbolabs-practical-use-v1 at 8k — Grug-12B 243.6, Mellum2 Instruct 239.9, Mellum2 Thinking 232.8, Qwen3.6-35B-A3B 233.9, Qwen3-14B 228.4 (all /300 manual practical scores). One immutable shared report; each related model page lists this event with its own score.
+Second shared multi-model practical-use comparison: the incumbent QAT Q4 practical default (259.2/300 from the v024 suite) against five additional tested models on wumbolabs-practical-use-v1 at 8k: Grug-12B 243.6, Mellum2 Instruct 239.9, Mellum2 Thinking 232.8, Qwen3.6-35B-A3B 233.9, Qwen3-14B 228.4 (all /300 manual practical scores). One immutable shared report; each related model page lists this event with its own score.
 
 This event is a bounded public-safe summary derived from retained WumboLabs evidence.
 It is not a WELP characterization, a universal model ranking, or a production-readiness
 proof. Values are attributed to the tested artifact, runtime, hardware, suite, and settings.
 
-Shared comparison: `practical-use-comparison-2026-07-04` — one immutable shared report; related model pages list
+Shared comparison: `practical-use-comparison-2026-07-04`: one immutable shared report; related model pages list
 this event with their own measured entries.
 
 <a id="gemma4-12b-lmx-speed-2026-07-04"></a>
 
-### 2026-07-04 — LMX speed runs across four Gemma 4 12B quants
+### 2026-07-04: LMX speed runs across four Gemma 4 12B quants
 
-**Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M (ggml-org) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed) · related profiles: `gemma-4-12b-llamacpp-qat-q4-0`, `gemma-4-12b-llamacpp-ud-q5-k-xl`, `gemma-4-12b-llamacpp-ud-q6-k-xl`
+**Benchmark Only: LMX local speed** · profile: llama.cpp Q4_K_M (ggml-org) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed) · related profiles: `gemma-4-12b-llamacpp-qat-q4-0`, `gemma-4-12b-llamacpp-ud-q5-k-xl`, `gemma-4-12b-llamacpp-ud-q6-k-xl`
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
@@ -1366,7 +1366,7 @@ this event with their own measured entries.
 
 ### Identity and scope
 
-- Profile: `gemma-4-12b-llamacpp-q4km` — llama.cpp Q4_K_M (ggml-org)
+- Profile: `gemma-4-12b-llamacpp-q4km`: llama.cpp Q4_K_M (ggml-org)
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -1379,9 +1379,9 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="gemma4-12b-practical-use-family-2026-06-21"></a>
 
-### 2026-06-21 — 12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable)
+### 2026-06-21: 12B Gemma practical-use test (QAT vs UD-Q5 vs Gemmable)
 
-**Practical Use — LLMGauge wumbolabs-practical-use-v1** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
+**Practical Use: LLMGauge wumbolabs-practical-use-v1** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-06-21/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
@@ -1390,32 +1390,32 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 ### Identity and scope
 
-- Profile: `gemma-4-12b-llamacpp-qat-q4-0` — llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
+- Profile: `gemma-4-12b-llamacpp-qat-q4-0`: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
 - Evidence maturity: **PRACTICAL_USE**
 - Evidence scope: practical-use
 - Hardware: WumboJetsII (RTX 5070 12GB)
 
-Gemma 4 12B IT QAT UD-Q4_K_XL scored 259.2/300 (4.32 avg, 73.45 tok/s) vs UD-Q5_K_XL 254.0/300 (4.23); QAT Q4 selected as best overall practical variant. Shared report also tested Gemmable 4 12B MTP Q4_K_M (119.8/300) on the same suite — that model carries its own Evaluation page.
+Gemma 4 12B IT QAT UD-Q4_K_XL scored 259.2/300 (4.32 avg, 73.45 tok/s) vs UD-Q5_K_XL 254.0/300 (4.23); QAT Q4 selected as best overall practical variant. Shared report also tested Gemmable 4 12B MTP Q4_K_M (119.8/300) on the same suite; that model carries its own Evaluation page.
 
 This event is a bounded public-safe summary derived from retained WumboLabs evidence.
 It is not a WELP characterization, a universal model ranking, or a production-readiness
 proof. Values are attributed to the tested artifact, runtime, hardware, suite, and settings.
 
-Shared comparison: `practical-use-comparison-2026-06-21` — one immutable shared report; related model pages list
+Shared comparison: `practical-use-comparison-2026-06-21`: one immutable shared report; related model pages list
 this event with their own measured entries.
 
 <a id="gemma4-12b-honesty-ladder-2026-06-21"></a>
 
-### 2026-06-21 — Honesty ladder smoke (QAT Q4)
+### 2026-06-21: Honesty ladder smoke (QAT Q4)
 
-**Specialized Test — honesty ladder** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_SMOKE
+**Specialized Test: honesty ladder** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_SMOKE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-honesty-ladder-2026-06-21/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
 
 ### Identity and scope
 
-- Profile: `gemma-4-12b-llamacpp-qat-q4-0` — llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
+- Profile: `gemma-4-12b-llamacpp-qat-q4-0`: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized, reliability
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -1428,16 +1428,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="gemma4-12b-core-agent-v016-2026-06-16"></a>
 
-### 2026-06-16 — Early core-v1 + agent-backend-v1 scored runs (QAT Q4)
+### 2026-06-16: Early core-v1 + agent-backend-v1 scored runs (QAT Q4)
 
-**Benchmark Only — LLMGauge v0.16 era** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY
+**Benchmark Only: LLMGauge v0.16 era** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-core-agent-v016-2026-06-16/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
 
 ### Identity and scope
 
-- Profile: `gemma-4-12b-llamacpp-qat-q4-0` — llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
+- Profile: `gemma-4-12b-llamacpp-qat-q4-0`: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance, capabilities
 - Hardware: WumboJetsII (RTX 5070 12GB)

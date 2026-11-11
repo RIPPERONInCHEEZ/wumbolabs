@@ -1,6 +1,6 @@
 +++
 title = "Qwen3.8-4B (Empero)"
-description = "Qwen3.8-4B (Empero) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen3.8-4B (Empero): tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 18
 
@@ -15,16 +15,16 @@ event_count = 2
 latest_evidence_date = 2026-09-01
 +++
 
-WumboLabs tests **Qwen3.8-4B (Empero)** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen3.8-4B (Empero)**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) (`qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver`, specialized) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-distill-wumboserver-2026-09-01/REPORT.md)
-- **Latest evidence:** 2026-09-01 — WumboServer RTX 2060S LocalMaxxing 4B Q4_K_M
+- **Recommended profile:** llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) (`qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver`, specialized); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-distill-wumboserver-2026-09-01/REPORT.md)
+- **Latest evidence:** 2026-09-01: WumboServer RTX 2060S LocalMaxxing 4B Q4_K_M
 
 ## Tested profiles
 
-### LLMGauge vendor-alignment battery (bf16/q4) — CURRENT
+### LLMGauge vendor-alignment battery (bf16/q4) (CURRENT)
 
 Profile identity: `qwen3.8-4b-empero-vendor-battery`.
 
@@ -37,9 +37,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [LLMGauge vendor-alignment battery (4B bf16/q4) (2026-08-18)](/evaluations/qwen3-8-4b-empero#qwen38-empero-4b-vendor-battery-2026-08-18) — SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
+- [LLMGauge vendor-alignment battery (4B bf16/q4) (2026-08-18)](/evaluations/qwen3-8-4b-empero#qwen38-empero-4b-vendor-battery-2026-08-18); status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
-### llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) — SPECIALIZED
+### llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) (SPECIALIZED)
 
 Profile identity: `qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver`.
 
@@ -52,7 +52,7 @@ Status: specialized tested surface.
 
 Events on this profile:
 
-- [WumboServer RTX 2060S LocalMaxxing 4B Q4_K_M (2026-09-01)](/evaluations/qwen3-8-4b-empero#qwen38-empero-4b-distill-wumboserver-2026-09-01) — BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
+- [WumboServer RTX 2060S LocalMaxxing 4B Q4_K_M (2026-09-01)](/evaluations/qwen3-8-4b-empero#qwen38-empero-4b-distill-wumboserver-2026-09-01); status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
 
 ## Testing history
 
@@ -60,16 +60,16 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="qwen38-empero-4b-distill-wumboserver-2026-09-01"></a>
 
-### 2026-09-01 — WumboServer RTX 2060S LocalMaxxing 4B Q4_K_M
+### 2026-09-01: WumboServer RTX 2060S LocalMaxxing 4B Q4_K_M
 
-**Benchmark Only — WumboServer hardware lane** · profile: llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
+**Benchmark Only: WumboServer hardware lane** · profile: llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-distill-wumboserver-2026-09-01/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3.8-4b-empero)
 
 ### Identity and scope
 
-- Profile: `qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver` — llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane)
+- Profile: `qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver`: llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane)
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance
 - Hardware: WumboServer (RTX 2060 SUPER 8GB)
@@ -82,16 +82,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="qwen38-empero-4b-vendor-battery-2026-08-18"></a>
 
-### 2026-08-18 — LLMGauge vendor-alignment battery (4B bf16/q4)
+### 2026-08-18: LLMGauge vendor-alignment battery (4B bf16/q4)
 
-**Specialized Test — vendor alignment** · profile: LLMGauge vendor-alignment battery (bf16/q4) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
+**Specialized Test: vendor alignment** · profile: LLMGauge vendor-alignment battery (bf16/q4) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-4b-empero/events/qwen38-empero-4b-vendor-battery-2026-08-18/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3.8-4b-empero)
 
 ### Identity and scope
 
-- Profile: `qwen3.8-4b-empero-vendor-battery` — LLMGauge vendor-alignment battery (bf16/q4)
+- Profile: `qwen3.8-4b-empero-vendor-battery`: LLMGauge vendor-alignment battery (bf16/q4)
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized, performance
 - Hardware: WumboJetsII (RTX 5070 12GB)

@@ -1,6 +1,6 @@
 +++
 title = "Qwen3.6-35B-A3B"
-description = "Qwen3.6-35B-A3B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen3.6-35B-A3B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 10
 
@@ -17,18 +17,18 @@ event_count = 3
 latest_evidence_date = 2026-09-15
 +++
 
-WumboLabs tests **Qwen3.6-35B-A3B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen3.6-35B-A3B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** LIMITED_ROLE_ONLY — [Current-WELP recharacterization (2026-09-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15), profile llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile)
-- **Recommended profile:** llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) (`qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
-- **Practical context:** 32,768 default / 16,384 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15)
-- **Latest evidence:** 2026-09-15 — Current-WELP recharacterization
+- **Classification:** LIMITED_ROLE_ONLY ; source: [Current-WELP recharacterization (2026-09-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15), profile llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile)
+- **Recommended profile:** llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) (`qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
+- **Practical context:** 32,768 default / 16,384 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [Current-WELP recharacterization (2026-09-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15)
+- **Latest evidence:** 2026-09-15: Current-WELP recharacterization
 
 ## Tested profiles
 
-### llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) — CURRENT
+### llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) (CURRENT)
 
 Profile identity: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv`.
 
@@ -45,9 +45,9 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Current-WELP recharacterization (2026-09-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15) — LIMITED_ROLE_ONLY
+- [Current-WELP recharacterization (2026-09-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15); status: LIMITED_ROLE_ONLY
 
-### llama.cpp Unsloth UD-IQ2_M — HISTORICAL
+### llama.cpp Unsloth UD-IQ2_M (HISTORICAL)
 
 Profile identity: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m`.
 
@@ -60,8 +60,8 @@ Status: historical tested surface; retained evidence, not the recommended profil
 
 Events on this profile:
 
-- [LLMGauge v0.71 practical re-run (2026-07-22)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-practical-v071-2026-07-22) — BENCHMARK_ONLY (TOOL_VERSION_RERUN)
-- [Fit-ladder E2E (LLMGauge feature validation) (2026-07-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-fit-ladder-e2e-2026-07-15) — SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
+- [LLMGauge v0.71 practical re-run (2026-07-22)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-practical-v071-2026-07-22); status: BENCHMARK_ONLY (TOOL_VERSION_RERUN)
+- [Fit-ladder E2E (LLMGauge feature validation) (2026-07-15)](/evaluations/qwen3-6-35b-a3b#qwen36-35b-fit-ladder-e2e-2026-07-15); status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
 ## Testing history
 
@@ -69,9 +69,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15"></a>
 
-### 2026-09-15 — Current-WELP recharacterization
+### 2026-09-15: Current-WELP recharacterization
 
-**WELP Recharacterization — llama.cpp UD-IQ2_M q8_0 KV** · profile: llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) · maturity: CURRENT_WELP · status: LIMITED_ROLE_ONLY
+**WELP Recharacterization: llama.cpp UD-IQ2_M q8_0 KV** · profile: llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile) · maturity: CURRENT_WELP · status: LIMITED_ROLE_ONLY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3.6-35b-a3b)
@@ -103,7 +103,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Outcome:** PASS
 - **Classification:** LIMITED_ROLE_ONLY
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/7009751ff83088b435eba61730e94b511f1103c4/models/qwen3.6-35b-a3b/events/qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15/REPORT.md
 
 ##### Context profile
 
@@ -136,7 +136,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | MEASURED_NOT_SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -156,16 +156,16 @@ rankings.
 
 <a id="qwen36-35b-practical-v071-2026-07-22"></a>
 
-### 2026-07-22 — LLMGauge v0.71 practical re-run
+### 2026-07-22: LLMGauge v0.71 practical re-run
 
-**Benchmark Only — tool-version re-run** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (TOOL_VERSION_RERUN)
+**Benchmark Only: tool-version re-run** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (TOOL_VERSION_RERUN)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-practical-v071-2026-07-22/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
-- Profile: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m` — llama.cpp Unsloth UD-IQ2_M
+- Profile: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m`: llama.cpp Unsloth UD-IQ2_M
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance, practical-use
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -178,16 +178,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="qwen36-35b-fit-ladder-e2e-2026-07-15"></a>
 
-### 2026-07-15 — Fit-ladder E2E (LLMGauge feature validation)
+### 2026-07-15: Fit-ladder E2E (LLMGauge feature validation)
 
-**Specialized Test — fit ladder** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
+**Specialized Test: fit ladder** · profile: llama.cpp Unsloth UD-IQ2_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.6-35b-a3b/events/qwen36-35b-fit-ladder-e2e-2026-07-15/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3.6-35b-a3b)
 
 ### Identity and scope
 
-- Profile: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m` — llama.cpp Unsloth UD-IQ2_M
+- Profile: `qwen3.6-35b-a3b-llamacpp-ud-iq2-m`: llama.cpp Unsloth UD-IQ2_M
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -202,7 +202,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 This model appears in shared multi-model comparisons. Each report is stored once in WumboLabs/evaluations/shared-events/; the model's measured entries remain attributed to the same historical event:
 
-- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — UD-IQ2_M scored 233.9/300 (3.9 avg); tight 12GB fit (676 MiB minimum headroom). — [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
+- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04): UD-IQ2_M scored 233.9/300 (3.9 avg); tight 12GB fit (676 MiB minimum headroom). [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 
 ## Canonical evidence
 

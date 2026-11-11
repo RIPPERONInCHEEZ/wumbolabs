@@ -1,6 +1,6 @@
 +++
 title = "Gemma 4 E4B"
-description = "Gemma 4 E4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Gemma 4 E4B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 15
 
@@ -17,18 +17,18 @@ event_count = 1
 latest_evidence_date = 2026-09-10
 +++
 
-WumboLabs tests **Gemma 4 E4B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Gemma 4 E4B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4), profile llama.cpp official QAT Q4_0
-- **Recommended profile:** llama.cpp official QAT Q4_0 (`gemma4-e4b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
-- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4)
-- **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
+- **Classification:** READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL ; source: [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4), profile llama.cpp official QAT Q4_0
+- **Recommended profile:** llama.cpp official QAT Q4_0 (`gemma4-e4b-llamacpp-qat-q4-0`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 131,072 (envelope complete: YES); source: [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4)
+- **Latest evidence:** 2026-09-10: Initial evaluation (full characterization)
 
 ## Tested profiles
 
-### llama.cpp official QAT Q4_0 — CURRENT
+### llama.cpp official QAT Q4_0 (CURRENT)
 
 Profile identity: `gemma4-e4b-llamacpp-qat-q4-0`.
 
@@ -45,7 +45,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4) — READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
+- [Initial evaluation (full characterization) (2026-09-10)](/evaluations/gemma4-e4b#initial-evaluation-2026-09-10-gemma4); status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
 ## Testing history
 
@@ -53,9 +53,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="initial-evaluation-2026-09-10-gemma4"></a>
 
-### 2026-09-10 — Initial evaluation (full characterization)
+### 2026-09-10: Initial evaluation (full characterization)
 
-**Initial Evaluation — official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
+**Initial Evaluation: official QAT Q4_0** · profile: llama.cpp official QAT Q4_0 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS / CLOSED_WELP_CROSS_FAMILY_CONTROL
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma4-e4b)
@@ -87,9 +87,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 - **Outcome:** PASS — GEMMA4_E4B_EVIDENCE_COMPLETION_COMPLETE
 - **Classification:** READY_WITH_GUARDRAILS
-- **Artifact classification:** Official Google QAT Q4_0 + official mmproj — the only official precision that hosts the full card range with reserve on this GPU; community Q4_K_M pair retained as evidence only (provenance unknown)
+- **Artifact classification:** Official Google QAT Q4_0 + official mmproj; the only official precision that hosts the full card range with reserve on this GPU; community Q4_K_M pair retained as evidence only (provenance unknown)
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma4-e4b/events/initial-evaluation-2026-09-10-gemma4/REPORT.md
 
 ##### Context profile
 
@@ -105,7 +105,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.0225 s | — | 150.4 tok/s |
+| Short | 0.0225 s | Not recorded | 150.4 tok/s |
 | Moderate (2785-token input) | 0.504 s | 7217 tok/s | 145.7 tok/s |
 
 <p><small>Medians over five measured repetitions per surface; near-full ladder values are medians of two seeds per rung</small></p>
@@ -123,7 +123,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 - OCR/document understanding TESTED_LIMITED (one document ID digit dropped at temperature 0; broader OCR types untested)
 - Video evidence bounded to frame-sequence probes (full <=60 s @1fps producer envelope not established); MTP/speculative deferred (distinct serving surface)
 
-**Reliability:** Canonical 32K profile: 20/20 runtime completion with zero errors; behavioral exactness 14/20 — all six failures are the known dossier strict-format/absent defect, bit-stable across arms; bounded, not soak/endurance
+**Reliability:** Canonical 32K profile: 20/20 runtime completion with zero errors; behavioral exactness 14/20; all six failures are the known dossier strict-format/absent defect, bit-stable across arms; bounded, not soak/endurance
 
 ##### LocalMaxxing
 
@@ -136,7 +136,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Submission reference | cmtwgcs7c097sps01sdq9ihbu |
 | verifiedRun | null (not claimed) |
 
-<p><small>SUBMITTED once, origin NEW, service APPROVED (in-campaign, 2026-09-11); verifiedRun null — the service returned no verification state and the client could not transmit verification fields; recorded honestly, not claimed as verified; actual prompt tokens 77 (endpoint usage); tokSPrefill 1,322.5</small></p>
+<p><small>SUBMITTED once, origin NEW, service APPROVED (in-campaign, 2026-09-11); verifiedRun null; the service returned no verification state and the client could not transmit verification fields; recorded honestly, not claimed as verified; actual prompt tokens 77 (endpoint usage); tokSPrefill 1,322.5</small></p>
 
 ##### Canonical evidence
 

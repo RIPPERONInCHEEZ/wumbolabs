@@ -1,6 +1,6 @@
 +++
 title = "Grug 12B"
-description = "Grug 12B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Grug 12B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 27
 
@@ -15,16 +15,16 @@ event_count = 2
 latest_evidence_date = 2026-07-04
 +++
 
-WumboLabs tests **Grug 12B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Grug 12B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Q4_K_M (`grug-12b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/grug-12b/events/grug-lmx-speed-2026-07-04/REPORT.md)
-- **Latest evidence:** 2026-07-04 — LMX speed run
+- **Recommended profile:** llama.cpp Q4_K_M (`grug-12b-llamacpp-q4km`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/grug-12b/events/grug-lmx-speed-2026-07-04/REPORT.md)
+- **Latest evidence:** 2026-07-04: LMX speed run
 
 ## Tested profiles
 
-### llama.cpp Q4_K_M — CURRENT
+### llama.cpp Q4_K_M (CURRENT)
 
 Profile identity: `grug-12b-llamacpp-q4km`.
 
@@ -37,8 +37,8 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [LMX speed run (2026-07-04)](/evaluations/grug-12b#grug-lmx-speed-2026-07-04) — BENCHMARK_ONLY (LMX local speed)
-- [Honesty smoke + provenance refresh (2026-07-04)](/evaluations/grug-12b#grug-honesty-smoke-2026-07-04) — SPECIALIZED_TEST / UNSCORED_SMOKE
+- [LMX speed run (2026-07-04)](/evaluations/grug-12b#grug-lmx-speed-2026-07-04); status: BENCHMARK_ONLY (LMX local speed)
+- [Honesty smoke + provenance refresh (2026-07-04)](/evaluations/grug-12b#grug-honesty-smoke-2026-07-04); status: SPECIALIZED_TEST / UNSCORED_SMOKE
 
 ## Testing history
 
@@ -46,16 +46,16 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="grug-lmx-speed-2026-07-04"></a>
 
-### 2026-07-04 — LMX speed run
+### 2026-07-04: LMX speed run
 
-**Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
+**Benchmark Only: LMX local speed** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/grug-12b/events/grug-lmx-speed-2026-07-04/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/grug-12b)
 
 ### Identity and scope
 
-- Profile: `grug-12b-llamacpp-q4km` — llama.cpp Q4_K_M
+- Profile: `grug-12b-llamacpp-q4km`: llama.cpp Q4_K_M
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -68,16 +68,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="grug-honesty-smoke-2026-07-04"></a>
 
-### 2026-07-04 — Honesty smoke + provenance refresh
+### 2026-07-04: Honesty smoke + provenance refresh
 
-**Specialized Test — honesty/provenance** · profile: llama.cpp Q4_K_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_SMOKE
+**Specialized Test: honesty/provenance** · profile: llama.cpp Q4_K_M · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_SMOKE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/grug-12b/events/grug-honesty-smoke-2026-07-04/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/grug-12b)
 
 ### Identity and scope
 
-- Profile: `grug-12b-llamacpp-q4km` — llama.cpp Q4_K_M
+- Profile: `grug-12b-llamacpp-q4km`: llama.cpp Q4_K_M
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -92,7 +92,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 This model appears in shared multi-model comparisons. Each report is stored once in WumboLabs/evaluations/shared-events/; the model's measured entries remain attributed to the same historical event:
 
-- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — Grug-12B scored 243.6/300 (4.06 avg); viable, not a practical-default replacement. — [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
+- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04): Grug-12B scored 243.6/300 (4.06 avg); viable, not a practical-default replacement. [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 
 ## Canonical evidence
 

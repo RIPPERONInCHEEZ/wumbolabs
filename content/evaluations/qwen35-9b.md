@@ -1,6 +1,6 @@
 +++
 title = "Qwen3.5-9B"
-description = "Qwen3.5-9B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen3.5-9B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 3
 
@@ -16,17 +16,17 @@ event_count = 9
 latest_evidence_date = 2026-11-08
 +++
 
-WumboLabs tests **Qwen3.5-9B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen3.5-9B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Q8_0 GGUF (`qwen35-9b-llamacpp-q8`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
-- **Practical context:** 16,384 default tokens — [Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on) (2026-10-22)](/evaluations/qwen35-9b#qwen35-9b-r9700-hip-m2-geometry-2026-10-22)
-- **Latest evidence:** 2026-11-08 — Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed)
+- **Recommended profile:** llama.cpp Q8_0 GGUF (`qwen35-9b-llamacpp-q8`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
+- **Practical context:** 16,384 default tokens; source: [Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on) (2026-10-22)](/evaluations/qwen35-9b#qwen35-9b-r9700-hip-m2-geometry-2026-10-22)
+- **Latest evidence:** 2026-11-08: Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed)
 
 ## Tested profiles
 
-### llama.cpp Q8_0 GGUF — CURRENT
+### llama.cpp Q8_0 GGUF (CURRENT)
 
 Profile identity: `qwen35-9b-llamacpp-q8`.
 
@@ -43,9 +43,9 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Context envelope completion (2026-09-11)](/evaluations/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b) — READY_WITH_GUARDRAILS
+- [Context envelope completion (2026-09-11)](/evaluations/qwen35-9b#context-envelope-completion-2026-09-11-qwen35-9b); status: READY_WITH_GUARDRAILS
 
-### Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp HIP on AMD Radeon AI PRO R9700, thinking-on, qualified wide16k-C0 sampler — CURRENT
+### Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp HIP on AMD Radeon AI PRO R9700, thinking-on, qualified wide16k-C0 sampler (CURRENT)
 
 Profile identity: `qwen35-9b-r9700-hip-on-2026-10-22`.
 
@@ -62,9 +62,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on) (2026-10-22)](/evaluations/qwen35-9b#qwen35-9b-r9700-hip-m2-geometry-2026-10-22) — NOT_ASSIGNED
+- [Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on) (2026-10-22)](/evaluations/qwen35-9b#qwen35-9b-r9700-hip-m2-geometry-2026-10-22); status: NOT_ASSIGNED
 
-### Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) — CURRENT
+### Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) (CURRENT)
 
 Profile identity: `qwen35-9b-rtx5070-cuda-on-2026-11-06`.
 
@@ -81,12 +81,12 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Qwen3.5-9B scored Agentic M3 — research and repository (genuine negatives) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06) — NOT_ASSIGNED
-- [Qwen3.5-9B scored Agentic M3 — readiness and system (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06) — NOT_ASSIGNED
-- [Qwen3.5-9B advanced reasoning specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06) — NOT_ASSIGNED
-- [Qwen3.5-9B advanced coding specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06) — NOT_ASSIGNED
+- [Qwen3.5-9B scored Agentic M3 — research and repository (genuine negatives) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06); status: NOT_ASSIGNED
+- [Qwen3.5-9B scored Agentic M3 — readiness and system (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06); status: NOT_ASSIGNED
+- [Qwen3.5-9B advanced reasoning specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06); status: NOT_ASSIGNED
+- [Qwen3.5-9B advanced coding specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06); status: NOT_ASSIGNED
 
-### Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced long-context surface) — CURRENT
+### Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced long-context surface) (CURRENT)
 
 Profile identity: `qwen35-9b-rtx5070-cuda-lc-on-2026-11-06`.
 
@@ -103,9 +103,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Qwen3.5-9B advanced long-context specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06) — NOT_ASSIGNED
+- [Qwen3.5-9B advanced long-context specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06); status: NOT_ASSIGNED
 
-### Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced tool-use surface) — CURRENT
+### Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced tool-use surface) (CURRENT)
 
 Profile identity: `qwen35-9b-rtx5070-cuda-atu-on-2026-11-06`.
 
@@ -122,9 +122,9 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Qwen3.5-9B advanced tool-use specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06) — NOT_ASSIGNED
+- [Qwen3.5-9B advanced tool-use specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06); status: NOT_ASSIGNED
 
-### Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface) — CURRENT
+### Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface) (CURRENT)
 
 Profile identity: `qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08`.
 
@@ -141,7 +141,7 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed) (2026-11-08)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08) — NOT_ASSIGNED
+- [Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed) (2026-11-08)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08); status: NOT_ASSIGNED
 
 ## Testing history
 
@@ -149,9 +149,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08"></a>
 
-### 2026-11-08 — Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed)
+### 2026-11-08: Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed)
 
-**WELP v1.0 Runtime Performance** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Runtime Performance** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -182,15 +182,15 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -514,7 +514,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -534,9 +534,9 @@ rankings.
 
 <a id="qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06"></a>
 
-### 2026-11-06 — Qwen3.5-9B scored Agentic M3 — research and repository (genuine negatives)
+### 2026-11-06: Qwen3.5-9B scored Agentic M3: research and repository (genuine negatives)
 
-**WELP v1.0 Full Agentic M3 (research + repository negatives)** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Full Agentic M3 (research + repository negatives)** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -567,15 +567,15 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -688,7 +688,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -708,9 +708,9 @@ rankings.
 
 <a id="qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06"></a>
 
-### 2026-11-06 — Qwen3.5-9B scored Agentic M3 — readiness and system (RTX 5070 CUDA, thinking-on)
+### 2026-11-06: Qwen3.5-9B scored Agentic M3: readiness and system (RTX 5070 CUDA, thinking-on)
 
-**WELP v1.0 Full Agentic M3 (readiness + system)** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Full Agentic M3 (readiness + system)** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -741,23 +741,23 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
 ##### Quality and capabilities
 
 - **Constrained result:** See configuration-specific section findings; no composite model score.
-- agentic: 1 recorded identities
-- agentic-readiness: 1 recorded identities
+- agentic: 1 recorded identity
+- agentic-readiness: 1 recorded identity
 
 ###### Guardrails and limitations
 
@@ -874,7 +874,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -894,9 +894,9 @@ rankings.
 
 <a id="qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06"></a>
 
-### 2026-11-06 — Qwen3.5-9B advanced tool-use specialist (RTX 5070 CUDA, thinking-on)
+### 2026-11-06: Qwen3.5-9B advanced tool-use specialist (RTX 5070 CUDA, thinking-on)
 
-**WELP v1.0 Advanced Tool Use specialist** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced tool-use surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Advanced Tool Use specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced tool-use surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -927,15 +927,15 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -1044,7 +1044,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1064,9 +1064,9 @@ rankings.
 
 <a id="qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06"></a>
 
-### 2026-11-06 — Qwen3.5-9B advanced reasoning specialist (RTX 5070 CUDA, thinking-on)
+### 2026-11-06: Qwen3.5-9B advanced reasoning specialist (RTX 5070 CUDA, thinking-on)
 
-**WELP v1.0 Advanced Reasoning specialist** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Advanced Reasoning specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -1097,15 +1097,15 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -1214,7 +1214,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1234,9 +1234,9 @@ rankings.
 
 <a id="qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06"></a>
 
-### 2026-11-06 — Qwen3.5-9B advanced long-context specialist (RTX 5070 CUDA, thinking-on)
+### 2026-11-06: Qwen3.5-9B advanced long-context specialist (RTX 5070 CUDA, thinking-on)
 
-**WELP v1.0 Advanced Long Context specialist** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced long-context surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Advanced Long Context specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced long-context surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -1267,15 +1267,15 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -1384,7 +1384,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1404,9 +1404,9 @@ rankings.
 
 <a id="qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06"></a>
 
-### 2026-11-06 — Qwen3.5-9B advanced coding specialist (RTX 5070 CUDA, thinking-on)
+### 2026-11-06: Qwen3.5-9B advanced coding specialist (RTX 5070 CUDA, thinking-on)
 
-**WELP v1.0 Advanced Coding specialist** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 Advanced Coding specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -1437,15 +1437,15 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
@@ -1554,7 +1554,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -1574,9 +1574,9 @@ rankings.
 
 <a id="qwen35-9b-r9700-hip-m2-geometry-2026-10-22"></a>
 
-### 2026-10-22 — Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on)
+### 2026-10-22: Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on)
 
-**WELP v1.0 reference-family Model/Core baseline** · profile: Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp HIP on AMD Radeon AI PRO R9700, thinking-on, qualified wide16k-C0 sampler · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**WELP v1.0 reference-family Model/Core baseline** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp HIP on AMD Radeon AI PRO R9700, thinking-on, qualified wide16k-C0 sampler · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -1607,22 +1607,22 @@ rankings.
 - **Classification:** NOT_ASSIGNED
 - **Methodology snapshot:** model-baseline/2
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 16384 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | NOT_CLAIMED |
 
 ##### Quality and capabilities
 
 - **Constrained result:** See configuration-specific section findings; no composite model score.
-- baseline: 61 recorded identities
+- baseline: 61 recorded identity
 
 ###### Guardrails and limitations
 
@@ -2629,7 +2629,7 @@ Performance observations are not model-quality scores; null/UNKNOWN metrics rema
 | Field | Value |
 |---|---|
 | Status | BLOCKED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -2649,9 +2649,9 @@ rankings.
 
 <a id="context-envelope-completion-2026-09-11-qwen35-9b"></a>
 
-### 2026-09-11 — Context envelope completion
+### 2026-09-11: Context envelope completion
 
-**Context Envelope — llama.cpp Q8_0** · profile: llama.cpp Q8_0 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
+**Context Envelope: llama.cpp Q8_0** · profile: llama.cpp Q8_0 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
@@ -2685,7 +2685,7 @@ rankings.
 - **Classification:** READY_WITH_GUARDRAILS (unchanged; new occupancy guardrail: at >=99.4% occupancy the model returns the absent-information value NOT_SPECIFIED under the literal key name 'zeta' instead of the required 'absent' key)
 - **Artifact classification:** High-quality quantized medium-fit text control (unchanged)
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md
 
 ##### Context profile
 
@@ -2701,7 +2701,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.043883 s | — | 66.66 tok/s |
+| Short | 0.043883 s | Not recorded | 66.66 tok/s |
 | Moderate (3642-token input) | 0.831738 s | 4378.79 tok/s | 64.84 tok/s |
 
 <p><small>Near-full context fixture per-seed values; client/transport proxies with native timings retained in campaign evidence; short/moderate surfaces inherited unchanged from the baseline campaign (66.7 tok/s short decode, 0.83 s moderate TTFT)</small></p>
@@ -2728,7 +2728,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | cmtwcn79807eups01faxxmyr1 |

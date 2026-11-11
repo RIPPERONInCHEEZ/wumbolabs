@@ -9,4 +9,4 @@ back_label = "Back to Home"
 back_url = "/"
 +++
 
-Research collects longer technical reports behind WumboLabs evidence. The archive includes benchmarks, experiments, fit tests, baselines, and investigations. These are not formal research papers unless a report says so. For per-model evidence, use [Evaluations](/evaluations/). Methodology documentation is temporarily a holding page while WELP is revised: [Methodology](/methodology/).
+Research collects the longer technical reports behind WumboLabs evidence. The archive includes benchmarks, experiments, fit tests, baselines, and investigations. These are not formal research papers unless a report says so. For per-model evidence, use [Evaluations](/evaluations/). The released WELP v1.0 framework and its claim boundaries are described in [Methodology](/methodology/).

@@ -1,6 +1,6 @@
 +++
 title = "Qwen3.8-27B"
-description = "Qwen3.8-27B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen3.8-27B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 12
 
@@ -17,18 +17,18 @@ event_count = 4
 latest_evidence_date = 2026-09-12
 +++
 
-WumboLabs tests **Qwen3.8-27B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen3.8-27B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** COMPLETED_DEEP_EVALUATION — [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21), profile Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
-- **Recommended profile:** ExLlamaV3 H1 (SC_2.20bpw_H3_V3) (`qwen38-27b-exl3-h1`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md)
-- **Practical context:** 65,536 default / 98,304 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12)
-- **Latest evidence:** 2026-09-12 — Context envelope completion
+- **Classification:** COMPLETED_DEEP_EVALUATION ; source: [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21), profile Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
+- **Recommended profile:** ExLlamaV3 H1 (SC_2.20bpw_H3_V3) (`qwen38-27b-exl3-h1`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md)
+- **Practical context:** 65,536 default / 98,304 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12)
+- **Latest evidence:** 2026-09-12: Context envelope completion
 
 ## Tested profiles
 
-### ExLlamaV3 H1 (SC_2.20bpw_H3_V3) — CURRENT
+### ExLlamaV3 H1 (SC_2.20bpw_H3_V3) (CURRENT)
 
 Profile identity: `qwen38-27b-exl3-h1`.
 
@@ -45,10 +45,10 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12) — GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
-- [H1 deployment / canonical promotion (2026-09-09)](/evaluations/qwen38-27b#h1-canonical-promotion-2026-09-09) — COMPLETE / CURRENT_CANONICAL_H1_PROFILE
+- [Context envelope completion (2026-09-12)](/evaluations/qwen38-27b#context-envelope-completion-2026-09-12); status: GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
+- [H1 deployment / canonical promotion (2026-09-09)](/evaluations/qwen38-27b#h1-canonical-promotion-2026-09-09); status: COMPLETE / CURRENT_CANONICAL_H1_PROFILE
 
-### Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) — HISTORICAL
+### Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) (HISTORICAL)
 
 Profile identity: `qwen38-27b-llamacpp-ud-q2-k-xl`.
 
@@ -61,8 +61,8 @@ Status: historical tested surface; retained evidence, not the recommended profil
 
 Events on this profile:
 
-- [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21) — COMPLETED_DEEP_EVALUATION
-- [llama.cpp quant/variant showdown runs (LLMGauge era) (2026-08-20)](/evaluations/qwen38-27b#qwen38-27b-quant-showdowns-2026-08-20) — PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
+- [Initial evaluation (deep evaluation, historical llama.cpp) (2026-08-21)](/evaluations/qwen38-27b#initial-evaluation-2026-08-21); status: COMPLETED_DEEP_EVALUATION
+- [llama.cpp quant/variant showdown runs (LLMGauge era) (2026-08-20)](/evaluations/qwen38-27b#qwen38-27b-quant-showdowns-2026-08-20); status: PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
 
 ## Testing history
 
@@ -70,9 +70,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="context-envelope-completion-2026-09-12"></a>
 
-### 2026-09-12 — Context envelope completion
+### 2026-09-12: Context envelope completion
 
-**Context Envelope — ExLlamaV3 H1** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CONTEXT_COMPLETION · status: GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
+**Context Envelope: ExLlamaV3 H1** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CONTEXT_COMPLETION · status: GUARDED / MODEL-CARD CONTEXT ENVELOPE COMPLETE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen38-27b)
@@ -104,7 +104,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Outcome:** PASS — QWEN38_27B_CONTEXT_ENVELOPE_COMPLETED
 - **Classification:** MODEL-CARD CONTEXT ENVELOPE COMPLETE at the inherited guarded deployment classification; practical default unchanged
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md
 
 ##### Context profile
 
@@ -156,9 +156,9 @@ rankings.
 
 <a id="h1-canonical-promotion-2026-09-09"></a>
 
-### 2026-09-09 — H1 deployment / canonical promotion
+### 2026-09-09: H1 deployment / canonical promotion
 
-**H1 Canonical Promotion — ExLlamaV3** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CURRENT_WELP · status: COMPLETE / CURRENT_CANONICAL_H1_PROFILE
+**H1 Canonical Promotion: ExLlamaV3** · profile: ExLlamaV3 H1 (SC_2.20bpw_H3_V3) · maturity: CURRENT_WELP · status: COMPLETE / CURRENT_CANONICAL_H1_PROFILE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen38-27b)
@@ -190,15 +190,15 @@ rankings.
 - **Classification:** CURRENT_CANONICAL_PROFILE — engine/history promotion validation, not a new model classification; the historical deep-evaluation role findings remain those of their tested stack
 - **Artifact classification:** Current canonical Qwen3.8 serving surface (exact artifact/runtime/geometry scope only)
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
 | Practical default | 65536 tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | NO |
 | Native maximum disposition | No full model-card context campaign exists for this profile; inherited validated evidence: E18E corrected combined oracle 3/3 requests / 15/15 target fields exact on H1 at ~58.8K actual input tokens (prompts 58,849/58,902/58,883) |
 
@@ -206,7 +206,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | not recorded | — | not recorded |
+| Short | not recorded | Not recorded | not recorded |
 | Moderate (3514-token input) | 4.4487 s | 789.89 tok/s | 75.79 tok/s |
 
 <p><small>E18H arm-B (H1) frozen 3,514-token prompt, five cold repetitions after warmup, medians; MTP width 1 active</small></p>
@@ -251,9 +251,9 @@ rankings.
 
 <a id="initial-evaluation-2026-08-21"></a>
 
-### 2026-08-21 — Initial evaluation (deep evaluation, historical llama.cpp)
+### 2026-08-21: Initial evaluation (deep evaluation, historical llama.cpp)
 
-**Initial Evaluation — Historical llama.cpp** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: HISTORICAL_EVALUATION · status: COMPLETED_DEEP_EVALUATION
+**Initial Evaluation: Historical llama.cpp** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: HISTORICAL_EVALUATION · status: COMPLETED_DEEP_EVALUATION
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/initial-evaluation-2026-08-21/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen38-27b)
@@ -307,8 +307,8 @@ The evidence does not support use as an unattended agent, source of unverified t
 | Configuration | Decode tok/s | Prefill tok/s | Context | Notes |
 |---|---|---|---|---|
 | Quality/balance (Q4_K_M, 38 GPU layers, 8K) | 6.4–6.8 | ~880 | 8K | 4.85–5.0/5 coding score; 467 MiB min headroom |
-| Speed (UD-IQ2_M, full GPU, 4K) | 42.0–42.9 | — | 4K | 362/5 manual avg; task-dependent quality |
-| Agent-safe (UD-IQ2_XXS, full GPU, 12K) | — | — | 12K | Bounded one-file OMP pass |
+| Speed (UD-IQ2_M, full GPU, 4K) | 42.0–42.9 | Not recorded | 4K | 362/5 manual avg; task-dependent quality |
+| Agent-safe (UD-IQ2_XXS, full GPU, 12K) | Not recorded | Not recorded | 12K | Bounded one-file OMP pass |
 | Large context (Q2_K_XL, 64K Q4/Q4) | ~30 | ~704 | 64K | Low-headroom reviewed work |
 
 Native MTP at 8K: ~66 tok/s (1.47x speedup over baseline ~45 tok/s, ~75% acceptance).
@@ -396,16 +396,16 @@ Full reproduction instructions, manifests, and checksums are published in the ca
 
 <a id="qwen38-27b-quant-showdowns-2026-08-20"></a>
 
-### 2026-08-20 — llama.cpp quant/variant showdown runs (LLMGauge era)
+### 2026-08-20: llama.cpp quant/variant showdown runs (LLMGauge era)
 
-**Profile Optimization — llama.cpp quant selection** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: PROFILE_OPTIMIZATION · status: PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
+**Profile Optimization: llama.cpp quant selection** · profile: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF) · maturity: PROFILE_OPTIMIZATION · status: PROFILE_OPTIMIZATION (historical llama.cpp lane; superseded by ExLlamaV3 H1)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/qwen38-27b-quant-showdowns-2026-08-20/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen38-27b)
 
 ### Identity and scope
 
-- Profile: `qwen38-27b-llamacpp-ud-q2-k-xl` — Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
+- Profile: `qwen38-27b-llamacpp-ud-q2-k-xl`: Historical llama.cpp (Unsloth UD-Q2_K_XL GGUF)
 - Evidence maturity: **PROFILE_OPTIMIZATION**
 - Evidence scope: performance, serving-profile
 - Hardware: WumboJetsII (RTX 5070 12GB)

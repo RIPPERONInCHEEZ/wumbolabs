@@ -56,6 +56,14 @@ The registry's explicit `current_state` event/profile selections govern current
 classification, context and recommendation display, even when a newer specialist
 event exists. A current tested profile is not automatically a recommendation.
 
+Editorial copy belongs in authored pages and presentation templates, not in frozen
+exports, registry identities, or cached event narratives. `editorial_presentation`
+in `sync_labs.py` applies bounded copy corrections only to the rendered derivative.
+Code, quotations, linked citation text, URLs, and HTML attributes are preserved.
+Original outcome/classification strings remain verbatim, including punctuation.
+Missing measurements display as “Not recorded,” never zero. Review all generated
+HTML pages after editorial changes, including compatibility pages and metadata.
+
 ## Update sequence
 
 Standing owner decision, 2026-11-11: **Evaluation → evidence verification →

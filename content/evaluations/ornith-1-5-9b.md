@@ -1,6 +1,6 @@
 +++
 title = "Ornith 1.5 9B"
-description = "Ornith 1.5 9B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Ornith 1.5 9B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 17
 
@@ -16,17 +16,17 @@ event_count = 2
 latest_evidence_date = 2026-09-02
 +++
 
-WumboLabs tests **Ornith 1.5 9B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Ornith 1.5 9B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** COMPLETE / FINAL_WELP_READINESS_NOT_READY — [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27), profile llama.cpp Q4_K_M
-- **Recommended profile:** llama.cpp Q4_K_M (`ornith-1.5-9b-llamacpp-q4km`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/ornith-1.5-9b/events/ornith-9b-wumboserver-admission-2026-09-02/REPORT.md)
-- **Latest evidence:** 2026-09-02 — WumboServer RTX 2060S admission benchmark
+- **Classification:** COMPLETE / FINAL_WELP_READINESS_NOT_READY ; source: [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27), profile llama.cpp Q4_K_M
+- **Recommended profile:** llama.cpp Q4_K_M (`ornith-1.5-9b-llamacpp-q4km`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/ornith-1.5-9b/events/ornith-9b-wumboserver-admission-2026-09-02/REPORT.md)
+- **Latest evidence:** 2026-09-02: WumboServer RTX 2060S admission benchmark
 
 ## Tested profiles
 
-### llama.cpp Q4_K_M — CURRENT
+### llama.cpp Q4_K_M (CURRENT)
 
 Profile identity: `ornith-1.5-9b-llamacpp-q4km`.
 
@@ -39,8 +39,8 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [WumboServer RTX 2060S admission benchmark (2026-09-02)](/evaluations/ornith-1-5-9b#ornith-9b-wumboserver-admission-2026-09-02) — BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
-- [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27) — COMPLETE / FINAL_WELP_READINESS_NOT_READY
+- [WumboServer RTX 2060S admission benchmark (2026-09-02)](/evaluations/ornith-1-5-9b#ornith-9b-wumboserver-admission-2026-09-02); status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
+- [Initial evaluation (full-lifecycle WELP campaign) (2026-08-27)](/evaluations/ornith-1-5-9b#initial-evaluation-2026-08-27); status: COMPLETE / FINAL_WELP_READINESS_NOT_READY
 
 ## Testing history
 
@@ -48,16 +48,16 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="ornith-9b-wumboserver-admission-2026-09-02"></a>
 
-### 2026-09-02 — WumboServer RTX 2060S admission benchmark
+### 2026-09-02: WumboServer RTX 2060S admission benchmark
 
-**Benchmark Only — WumboServer hardware lane** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
+**Benchmark Only: WumboServer hardware lane** · profile: llama.cpp Q4_K_M · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY / HARDWARE_LANE (not a WumboJetsII result)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/ornith-1.5-9b/events/ornith-9b-wumboserver-admission-2026-09-02/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/ornith-1.5-9b)
 
 ### Identity and scope
 
-- Profile: `ornith-1.5-9b-llamacpp-q4km` — llama.cpp Q4_K_M
+- Profile: `ornith-1.5-9b-llamacpp-q4km`: llama.cpp Q4_K_M
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance
 - Hardware: WumboServer (RTX 2060 SUPER 8GB)
@@ -69,14 +69,13 @@ It is not a WELP characterization, a universal model ranking, or a production-re
 proof. Values are attributed to the tested artifact, runtime, hardware, suite, and settings.
 ### Lane boundary
 
-Measured on the WumboServer RTX 2060 SUPER hardware lane. It complements — and must not be
-compared numerically with — the canonical WumboJetsII RTX 5070 WELP campaign on this model.
+Measured on the WumboServer RTX 2060 SUPER hardware lane. It complements the canonical WumboJetsII RTX 5070 WELP campaign on this model. The two hardware lanes must not be compared numerically.
 
 <a id="initial-evaluation-2026-08-27"></a>
 
-### 2026-08-27 — Initial evaluation (full-lifecycle WELP campaign)
+### 2026-08-27: Initial evaluation (full-lifecycle WELP campaign)
 
-**Initial Evaluation — Full Campaign (NOT_READY)** · profile: llama.cpp Q4_K_M · maturity: FULL_EVALUATION · status: COMPLETE / FINAL_WELP_READINESS_NOT_READY
+**Initial Evaluation: Full Campaign (NOT_READY)** · profile: llama.cpp Q4_K_M · maturity: FULL_EVALUATION · status: COMPLETE / FINAL_WELP_READINESS_NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/ornith-1.5-9b/events/initial-evaluation-2026-08-27/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/ornith-1.5-9b)
@@ -112,7 +111,7 @@ compared numerically with — the canonical WumboJetsII RTX 5070 WELP campaign o
 **FINAL WELP READINESS: NOT_READY.**
 
 - Phase 3 Practical Viability: **ADVANCE** (aggregate 0.922, all five gates pass, identical decision across seeds 42/43/44).
-- Phase 4 Reliability: **DO_NOT_ADVANCE** — frozen gate G6 (uncertainty-calibration rate) measured 1/21 = 0.0476 against a ≥0.15 threshold.
+- Phase 4 Reliability: **DO_NOT_ADVANCE**; frozen gate G6 (uncertainty-calibration rate) measured 1/21 = 0.0476 against a ≥0.15 threshold.
 - Under frozen protocol semantics, the Phase 4 gate failure closes deployment: **0 deployment roles earned** (`roles = []`).
 - All later-phase evidence (capability modules, context, variance, optimization, soak) is **characterization only** and does not modify the readiness verdict.
 
@@ -126,7 +125,7 @@ This is a complete campaign, not an early stop: phases after the blocking gate w
 | Prefill throughput | 4,046.67 ± 15.68 tok/s |
 | TTFT (estimated, short prompt) | ~46.7 ms |
 
-### Practical Viability (Phase 3) — ADVANCE
+### Practical Viability (Phase 3): ADVANCE
 
 30 tasks × seeds {42, 43, 44}, thinking OFF baseline, scorer self-test 35/35 before live scoring.
 
@@ -138,13 +137,13 @@ This is a complete campaign, not an early stop: phases after the blocking gate w
 | G4 structured-output | ≥0.70 | pass | PASS |
 | G5 seed stability | identical decision | identical | PASS |
 
-### Reliability (Phase 4) — DO_NOT_ADVANCE
+### Reliability (Phase 4): DO_NOT_ADVANCE
 
 162/162 rows scored. G1 clean 0.4877 PASS · G2 hallucination-on-false-premise 0.1296 PASS · G3 refusal-drift 0.0185 PASS · G4 UNSAFE = 0 · G5 seed range 0.0926 PASS · **G6 uncertainty 1/21 = 0.0476 FAIL** (threshold ≥0.15).
 
-**Mechanical vs qualitative distinction:** the mechanical gate result is authoritative and stands — the campaign verdict is NOT_READY. Manual review (documented as scorer-lexicon adjudications, finding PF-01) found the dominant G6 failure mode to be scorer false-negatives: correct expressions of uncertainty whose wording fell outside the frozen lexicon. Genuine calibration failures remain in the residual. The qualitative finding explains the mechanism; it does not overturn the gate.
+**Mechanical vs qualitative distinction:** the mechanical gate result is authoritative and stands; the campaign verdict is NOT_READY. Manual review (documented as scorer-lexicon adjudications, finding PF-01) found the dominant G6 failure mode to be scorer false-negatives: correct expressions of uncertainty whose wording fell outside the frozen lexicon. Genuine calibration failures remain in the residual. The qualitative finding explains the mechanism; it does not overturn the gate.
 
-### Capability Modules (Phase 5) — characterization only
+### Capability Modules (Phase 5): characterization only
 
 No PASS thresholds exist for Phase 5 (frozen decision D4); rates below are honest characterization, not gate results.
 
@@ -169,9 +168,9 @@ Useful context **24,576 tokens** under the 12 GB Q4_K_M profile (configured 32,7
 
 MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output divergence → **REJECTED_FOR_CANONICAL**. Frozen serving profile unchanged.
 
-### Stability (Phase 9) — screening soak
+### Stability (Phase 9): screening soak
 
-30-minute screening: 11,449 requests, 0 real errors, 0 GPU Xid events. Clean. **LOCKIN (120 min + cycles) NOT_REACHED** — screening-level only.
+30-minute screening: 11,449 requests, 0 real errors, 0 GPU Xid events. Clean. **LOCKIN (120 min + cycles) NOT_REACHED**; screening-level only.
 
 ### Producer Claims (reviewed against revision `489cb979`)
 

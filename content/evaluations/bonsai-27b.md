@@ -1,6 +1,6 @@
 +++
 title = "Bonsai 27B (Q1_0)"
-description = "Bonsai 27B (Q1_0) — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Bonsai 27B (Q1_0): tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 25
 
@@ -15,16 +15,16 @@ event_count = 1
 latest_evidence_date = 2026-07-14
 +++
 
-WumboLabs tests **Bonsai 27B (Q1_0)** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Bonsai 27B (Q1_0)**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Recommended profile:** llama.cpp Q1_0 (unscored smoke payload) (`bonsai-27b-q1-0-llamacpp`, specialized) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/bonsai-27b/events/bonsai-27b-smoke-v070-2026-07-14/REPORT.md)
-- **Latest evidence:** 2026-07-14 — LLMGauge v0.70 smoke runs (Q1_0 payload, unscored)
+- **Recommended profile:** llama.cpp Q1_0 (unscored smoke payload) (`bonsai-27b-q1-0-llamacpp`, specialized); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/bonsai-27b/events/bonsai-27b-smoke-v070-2026-07-14/REPORT.md)
+- **Latest evidence:** 2026-07-14: LLMGauge v0.70 smoke runs (Q1_0 payload, unscored)
 
 ## Tested profiles
 
-### llama.cpp Q1_0 (unscored smoke payload) — SPECIALIZED
+### llama.cpp Q1_0 (unscored smoke payload) (SPECIALIZED)
 
 Profile identity: `bonsai-27b-q1-0-llamacpp`.
 
@@ -37,7 +37,7 @@ Status: specialized tested surface.
 
 Events on this profile:
 
-- [LLMGauge v0.70 smoke runs (Q1_0 payload, unscored) (2026-07-14)](/evaluations/bonsai-27b#bonsai-27b-smoke-v070-2026-07-14) — SPECIALIZED_TEST / UNSCORED_SMOKE / IDENTITY_UNRESOLVED
+- [LLMGauge v0.70 smoke runs (Q1_0 payload, unscored) (2026-07-14)](/evaluations/bonsai-27b#bonsai-27b-smoke-v070-2026-07-14); status: SPECIALIZED_TEST / UNSCORED_SMOKE / IDENTITY_UNRESOLVED
 
 ## Testing history
 
@@ -45,16 +45,16 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="bonsai-27b-smoke-v070-2026-07-14"></a>
 
-### 2026-07-14 — LLMGauge v0.70 smoke runs (Q1_0 payload, unscored)
+### 2026-07-14: LLMGauge v0.70 smoke runs (Q1_0 payload, unscored)
 
-**Specialized Test — unscored smoke** · profile: llama.cpp Q1_0 (unscored smoke payload) · maturity: UNRESOLVED_HISTORICAL · status: SPECIALIZED_TEST / UNSCORED_SMOKE / IDENTITY_UNRESOLVED
+**Specialized Test: unscored smoke** · profile: llama.cpp Q1_0 (unscored smoke payload) · maturity: UNRESOLVED_HISTORICAL · status: SPECIALIZED_TEST / UNSCORED_SMOKE / IDENTITY_UNRESOLVED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/bonsai-27b/events/bonsai-27b-smoke-v070-2026-07-14/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/bonsai-27b)
 
 ### Identity and scope
 
-- Profile: `bonsai-27b-q1-0-llamacpp` — llama.cpp Q1_0 (unscored smoke payload)
+- Profile: `bonsai-27b-q1-0-llamacpp`: llama.cpp Q1_0 (unscored smoke payload)
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized
 - Hardware: WumboJetsII (RTX 5070 12GB)

@@ -31,7 +31,7 @@ Every model begins with the same Model/Core baseline. Capability evidence guides
 
 Tasks, scoring and budgets are fixed before measurement. Original requests, responses, attempt accounting and configuration attribution are retained. Finalized sections carry manifests and support offline reconstruction; independent review is used where the method requires it. Public-safe evidence omits private operational material and reviewer identities, not unfavorable findings.
 
-A genuine **FAIL** or low benchmark score is a valid result. Token, turn or time exhaustion is **BUDGET_LIMITED**, not an invented semantic failure. Technical **INVALID** means the affected measurement cannot support scientific credit. Failed evidence verification, unresolved review, unsafe content or technical invalidity compromising required coverage stops publication for correction.
+A genuine **FAIL** or low benchmark score is a valid result. Token, turn, or time exhaustion is **BUDGET_LIMITED**, not an invented semantic failure. Technical **INVALID** means the affected measurement cannot support scientific credit. Failed evidence verification, unresolved review, unsafe content, or technical invalidity compromising required coverage must stop publication for correction.
 
 HelicopterBench /2 reports objective raw points and a normalized score, with no subjective visual score. Genuine captured gameplay is supplementary evidence, not a replacement for scoring. Historical /1 scores and footage retain their original methodology and attribution; /1 is never retrospectively scored under /2.
 

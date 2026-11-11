@@ -1,6 +1,6 @@
 +++
 title = "Ling 3.0 Tiny"
-description = "Ling 3.0 Tiny — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Ling 3.0 Tiny: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 4
 
@@ -16,17 +16,17 @@ event_count = 4
 latest_evidence_date = 2026-09-25
 +++
 
-WumboLabs tests **Ling 3.0 Tiny** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Ling 3.0 Tiny**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** NOT_READY — [Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference) (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925), profile llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K)
-- **Recommended profile:** llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) (`ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md)
-- **Latest evidence:** 2026-09-25 — Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference)
+- **Classification:** NOT_READY ; source: [Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference) (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925), profile llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K)
+- **Recommended profile:** llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) (`ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md)
+- **Latest evidence:** 2026-09-25: Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference)
 
 ## Tested profiles
 
-### llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) — CURRENT
+### llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) (CURRENT)
 
 Profile identity: `ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment`.
 
@@ -43,10 +43,10 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference) (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925) — NOT_READY
-- [Second WELP stabilization-cohort campaign: hybrid-attention MoE characterized end-to-end on the pinned runtime (official Q8_0) (2026-09-24)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-characterization-20260924) — NOT_READY
+- [Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference) (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925); status: NOT_READY
+- [Second WELP stabilization-cohort campaign: hybrid-attention MoE characterized end-to-end on the pinned runtime (official Q8_0) (2026-09-24)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-characterization-20260924); status: NOT_READY
 
-### llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) — CURRENT-ALTERNATE
+### llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) (CURRENT-ALTERNATE)
 
 Profile identity: `ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off`.
 
@@ -63,8 +63,8 @@ Status: validated alternate tested surface.
 
 Events on this profile:
 
-- [Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925) — NOT_READY
-- [First WELP Agentic section execution: three bounded tool tasks through the pinned harness in a disposable offline sandbox; methodology-validation event on a known model (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-agentic-20260925) — NOT_READY
+- [Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925); status: NOT_READY
+- [First WELP Agentic section execution: three bounded tool tasks through the pinned harness in a disposable offline sandbox; methodology-validation event on a known model (2026-09-25)](/evaluations/ling-3-0-tiny#ling-3-0-tiny-rtx5070-welp-agentic-20260925); status: NOT_READY
 
 ## Testing history
 
@@ -72,9 +72,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925"></a>
 
-### 2026-09-25 — Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference)
+### 2026-09-25: Reasoning On classification re-derived under the 2026-09-25 reasoning-profiles snapshot from retained hash-bound evidence (no new inference)
 
-**WELP Reasoning-Profile Re-derivation — Ling 3.0 Tiny (Reasoning On, publisher default)** · profile: llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Reasoning-Profile Re-derivation: Ling 3.0 Tiny (Reasoning On, publisher default)** · profile: llama.cpp official Q8_0 (Reasoning On, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/ling-3.0-tiny)
@@ -104,15 +104,15 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-on-20260925/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -130,7 +130,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -150,9 +150,9 @@ rankings.
 
 <a id="ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925"></a>
 
-### 2026-09-25 — Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model
+### 2026-09-25: Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model
 
-**WELP Reasoning-Profile Characterization — Ling 3.0 Tiny (Reasoning Off, supported alternate)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Reasoning-Profile Characterization: Ling 3.0 Tiny (Reasoning Off, supported alternate)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/ling-3.0-tiny)
@@ -182,15 +182,15 @@ rankings.
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/a5717d2fecc21184da6dfa20d973fb8e4fbca0e4/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-reasoning-off-20260925/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -208,7 +208,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -228,9 +228,9 @@ rankings.
 
 <a id="ling-3-0-tiny-rtx5070-welp-agentic-20260925"></a>
 
-### 2026-09-25 — First WELP Agentic section execution: three bounded tool tasks through the pinned harness in a disposable offline sandbox; methodology-validation event on a known model
+### 2026-09-25: First WELP Agentic section execution: three bounded tool tasks through the pinned harness in a disposable offline sandbox; methodology-validation event on a known model
 
-**WELP Agentic — Ling 3.0 Tiny (Reasoning Off; methodology validation)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Agentic: Ling 3.0 Tiny (Reasoning Off; methodology validation)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/599063be57edd4f3b01f27c33da02d48abc541d8/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/ling-3.0-tiny)
@@ -260,15 +260,15 @@ rankings.
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/599063be57edd4f3b01f27c33da02d48abc541d8/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/599063be57edd4f3b01f27c33da02d48abc541d8/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-agentic-20260925/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -286,7 +286,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -306,9 +306,9 @@ rankings.
 
 <a id="ling-3-0-tiny-rtx5070-welp-characterization-20260924"></a>
 
-### 2026-09-24 — Second WELP stabilization-cohort campaign: hybrid-attention MoE characterized end-to-end on the pinned runtime (official Q8_0)
+### 2026-09-24: Second WELP stabilization-cohort campaign: hybrid-attention MoE characterized end-to-end on the pinned runtime (official Q8_0)
 
-**WELP Initial Evaluation — inclusionAI Ling 3.0 Tiny (reasoning-on)** · profile: llama.cpp official Q8_0 (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Initial Evaluation: inclusionAI Ling 3.0 Tiny (reasoning-on)** · profile: llama.cpp official Q8_0 (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/43f56d8add4b3dfc51183ccd818fc6037e79bd9c/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-characterization-20260924/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/ling-3.0-tiny)
@@ -338,15 +338,15 @@ rankings.
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/43f56d8add4b3dfc51183ccd818fc6037e79bd9c/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-characterization-20260924/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/43f56d8add4b3dfc51183ccd818fc6037e79bd9c/models/ling-3.0-tiny/events/ling-3-0-tiny-rtx5070-welp-characterization-20260924/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -364,7 +364,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |

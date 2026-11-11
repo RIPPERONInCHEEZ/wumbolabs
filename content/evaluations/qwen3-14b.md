@@ -1,6 +1,6 @@
 +++
 title = "Qwen3-14B"
-description = "Qwen3-14B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen3-14B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 11
 
@@ -17,18 +17,18 @@ event_count = 4
 latest_evidence_date = 2026-09-14
 +++
 
-WumboLabs tests **Qwen3-14B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen3-14B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-14)](/evaluations/qwen3-14b#qwen3-14b-rtx5070-welp-recharacterization-2026-09-14), profile llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface)
-- **Recommended profile:** llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface) (`qwen3-14b-llamacpp-q4km-q8kv`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/3330db39e23d8a3a02b3d627a895af4b8ae5e4b1/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/REPORT.md)
-- **Practical context:** 32,768 default / 32,768 guarded tokens; native model-card maximum 32,768 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-14)](/evaluations/qwen3-14b#qwen3-14b-rtx5070-welp-recharacterization-2026-09-14)
-- **Latest evidence:** 2026-09-14 — Current-WELP recharacterization
+- **Classification:** READY_WITH_GUARDRAILS ; source: [Current-WELP recharacterization (2026-09-14)](/evaluations/qwen3-14b#qwen3-14b-rtx5070-welp-recharacterization-2026-09-14), profile llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface)
+- **Recommended profile:** llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface) (`qwen3-14b-llamacpp-q4km-q8kv`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/3330db39e23d8a3a02b3d627a895af4b8ae5e4b1/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/REPORT.md)
+- **Practical context:** 32,768 default / 32,768 guarded tokens; native model-card maximum 32,768 (envelope complete: YES); source: [Current-WELP recharacterization (2026-09-14)](/evaluations/qwen3-14b#qwen3-14b-rtx5070-welp-recharacterization-2026-09-14)
+- **Latest evidence:** 2026-09-14: Current-WELP recharacterization
 
 ## Tested profiles
 
-### llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface) — CURRENT
+### llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface) (CURRENT)
 
 Profile identity: `qwen3-14b-llamacpp-q4km-q8kv`.
 
@@ -45,9 +45,9 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Current-WELP recharacterization (2026-09-14)](/evaluations/qwen3-14b#qwen3-14b-rtx5070-welp-recharacterization-2026-09-14) — READY_WITH_GUARDRAILS
+- [Current-WELP recharacterization (2026-09-14)](/evaluations/qwen3-14b#qwen3-14b-rtx5070-welp-recharacterization-2026-09-14); status: READY_WITH_GUARDRAILS
 
-### Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) — HISTORICAL
+### Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) (HISTORICAL)
 
 Profile identity: `qwen3-14b-ollama-q4km-wumbo`.
 
@@ -60,9 +60,9 @@ Status: historical tested surface; retained evidence, not the recommended profil
 
 Events on this profile:
 
-- [Practical daily-driver evaluation (Ollama era, qwen3-14b-wumbo tag) (2026-05-07)](/evaluations/qwen3-14b#qwen3-14b-wumbo-daily-evaluation-2026-05-07) — PRACTICAL_USE / PRE_WELP_HISTORICAL
+- [Practical daily-driver evaluation (Ollama era, qwen3-14b-wumbo tag) (2026-05-07)](/evaluations/qwen3-14b#qwen3-14b-wumbo-daily-evaluation-2026-05-07); status: PRACTICAL_USE / PRE_WELP_HISTORICAL
 
-### llama.cpp Q4_K_M (unsloth) — HISTORICAL
+### llama.cpp Q4_K_M (unsloth) (HISTORICAL)
 
 Profile identity: `qwen3-14b-llamacpp-q4km`.
 
@@ -75,8 +75,8 @@ Status: historical tested surface; retained evidence, not the recommended profil
 
 Events on this profile:
 
-- [Fit-ladder success-fallback E2E (LLMGauge feature validation) (2026-07-15)](/evaluations/qwen3-14b#qwen3-14b-fit-ladder-2026-07-15) — SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
-- [LMX speed run (2026-07-05)](/evaluations/qwen3-14b#qwen3-14b-lmx-speed-2026-07-05) — BENCHMARK_ONLY (LMX local speed)
+- [Fit-ladder success-fallback E2E (LLMGauge feature validation) (2026-07-15)](/evaluations/qwen3-14b#qwen3-14b-fit-ladder-2026-07-15); status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
+- [LMX speed run (2026-07-05)](/evaluations/qwen3-14b#qwen3-14b-lmx-speed-2026-07-05); status: BENCHMARK_ONLY (LMX local speed)
 
 ## Testing history
 
@@ -84,9 +84,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"></a>
 
-### 2026-09-14 — Current-WELP recharacterization
+### 2026-09-14: Current-WELP recharacterization
 
-**WELP Recharacterization — llama.cpp Q4_K_M q8_0 KV** · profile: llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Recharacterization: llama.cpp Q4_K_M q8_0 KV** · profile: llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/3330db39e23d8a3a02b3d627a895af4b8ae5e4b1/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3-14b)
@@ -119,7 +119,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/3330db39e23d8a3a02b3d627a895af4b8ae5e4b1/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/3330db39e23d8a3a02b3d627a895af4b8ae5e4b1/models/qwen3-14b/events/qwen3-14b-rtx5070-welp-recharacterization-2026-09-14/REPORT.md
 
 ##### Context profile
 
@@ -152,7 +152,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | MEASURED_NOT_SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -172,16 +172,16 @@ rankings.
 
 <a id="qwen3-14b-fit-ladder-2026-07-15"></a>
 
-### 2026-07-15 — Fit-ladder success-fallback E2E (LLMGauge feature validation)
+### 2026-07-15: Fit-ladder success-fallback E2E (LLMGauge feature validation)
 
-**Specialized Test — fit ladder** · profile: llama.cpp Q4_K_M (unsloth) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
+**Specialized Test: fit ladder** · profile: llama.cpp Q4_K_M (unsloth) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / TOOL_FEATURE_VALIDATION
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-fit-ladder-2026-07-15/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3-14b)
 
 ### Identity and scope
 
-- Profile: `qwen3-14b-llamacpp-q4km` — llama.cpp Q4_K_M (unsloth)
+- Profile: `qwen3-14b-llamacpp-q4km`: llama.cpp Q4_K_M (unsloth)
 - Evidence maturity: **SPECIALIZED_TEST**
 - Evidence scope: specialized
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -194,16 +194,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="qwen3-14b-lmx-speed-2026-07-05"></a>
 
-### 2026-07-05 — LMX speed run
+### 2026-07-05: LMX speed run
 
-**Benchmark Only — LMX local speed** · profile: llama.cpp Q4_K_M (unsloth) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
+**Benchmark Only: LMX local speed** · profile: llama.cpp Q4_K_M (unsloth) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-lmx-speed-2026-07-05/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3-14b)
 
 ### Identity and scope
 
-- Profile: `qwen3-14b-llamacpp-q4km` — llama.cpp Q4_K_M (unsloth)
+- Profile: `qwen3-14b-llamacpp-q4km`: llama.cpp Q4_K_M (unsloth)
 - Evidence maturity: **BENCHMARK_ONLY**
 - Evidence scope: performance
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -216,16 +216,16 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 <a id="qwen3-14b-wumbo-daily-evaluation-2026-05-07"></a>
 
-### 2026-05-07 — Practical daily-driver evaluation (Ollama era, qwen3-14b-wumbo tag)
+### 2026-05-07: Practical daily-driver evaluation (Ollama era, qwen3-14b-wumbo tag)
 
-**Practical Use — historical daily driver** · profile: Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / PRE_WELP_HISTORICAL
+**Practical Use: historical daily driver** · profile: Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / PRE_WELP_HISTORICAL
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3-14b/events/qwen3-14b-wumbo-daily-evaluation-2026-05-07/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3-14b)
 
 ### Identity and scope
 
-- Profile: `qwen3-14b-ollama-q4km-wumbo` — Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver)
+- Profile: `qwen3-14b-ollama-q4km-wumbo`: Ollama Q4_K_M (qwen3-14b-wumbo custom tag, historical daily driver)
 - Evidence maturity: **PRACTICAL_USE**
 - Evidence scope: practical-use
 - Hardware: WumboJetsII (RTX 5070 12GB)
@@ -240,7 +240,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 This model appears in shared multi-model comparisons. Each report is stored once in WumboLabs/evaluations/shared-events/; the model's measured entries remain attributed to the same historical event:
 
-- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04) — Q4_K_M scored 228.4/300 (3.81 avg). — [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
+- [12B practical pool comparison v025 + Grug (2026-07-04)](/evaluations/gemma-4-12b#gemma4-12b-practical-pool-v025-2026-07-04): Q4_K_M scored 228.4/300 (3.81 avg). [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
 
 ## Canonical evidence
 

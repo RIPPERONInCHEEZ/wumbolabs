@@ -1,6 +1,6 @@
 +++
 title = "Qwen3.5-4B"
-description = "Qwen3.5-4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Qwen3.5-4B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 14
 
@@ -16,17 +16,17 @@ event_count = 1
 latest_evidence_date = 2026-09-11
 +++
 
-WumboLabs tests **Qwen3.5-4B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Qwen3.5-4B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Recommended profile:** llama.cpp BF16 GGUF (`qwen35-4b-llamacpp-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
-- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Context envelope completion (2026-09-11)](/evaluations/qwen35-4b#context-envelope-completion-2026-09-11-qwen35-4b)
-- **Latest evidence:** 2026-09-11 — Context envelope completion
+- **Recommended profile:** llama.cpp BF16 GGUF (`qwen35-4b-llamacpp-bf16`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
+- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [Context envelope completion (2026-09-11)](/evaluations/qwen35-4b#context-envelope-completion-2026-09-11-qwen35-4b)
+- **Latest evidence:** 2026-09-11: Context envelope completion
 
 ## Tested profiles
 
-### llama.cpp BF16 GGUF — CURRENT
+### llama.cpp BF16 GGUF (CURRENT)
 
 Profile identity: `qwen35-4b-llamacpp-bf16`.
 
@@ -43,7 +43,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Context envelope completion (2026-09-11)](/evaluations/qwen35-4b#context-envelope-completion-2026-09-11-qwen35-4b) — READY_WITH_GUARDRAILS
+- [Context envelope completion (2026-09-11)](/evaluations/qwen35-4b#context-envelope-completion-2026-09-11-qwen35-4b); status: READY_WITH_GUARDRAILS
 
 ## Testing history
 
@@ -51,9 +51,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="context-envelope-completion-2026-09-11-qwen35-4b"></a>
 
-### 2026-09-11 — Context envelope completion
+### 2026-09-11: Context envelope completion
 
-**Context Envelope — llama.cpp BF16** · profile: llama.cpp BF16 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
+**Context Envelope: llama.cpp BF16** · profile: llama.cpp BF16 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-4b)
@@ -87,7 +87,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS (unchanged; new occupancy-dependent instruction-retention guardrail added)
 - **Artifact classification:** Comfortable-fit high-precision BF16 text control
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-4b/events/context-envelope-completion-2026-09-11-qwen35-4b/REPORT.md
 
 ##### Context profile
 
@@ -103,7 +103,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.040569 s | — | 67.91 tok/s |
+| Short | 0.040569 s | Not recorded | 67.91 tok/s |
 | Moderate (3642-token input) | 0.691319 s | 5268.19 tok/s | 67.29 tok/s |
 
 <p><small>Near-full context fixture medians per seed pair; client/transport proxies with native timings retained in campaign evidence; short/moderate surfaces inherited unchanged from the baseline campaign (67.9 tok/s short decode, 0.69 s moderate TTFT)</small></p>

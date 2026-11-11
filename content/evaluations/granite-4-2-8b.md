@@ -1,6 +1,6 @@
 +++
 title = "Granite 4.2 8B"
-description = "Granite 4.2 8B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Granite 4.2 8B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 6
 
@@ -16,17 +16,17 @@ event_count = 1
 latest_evidence_date = 2026-09-24
 +++
 
-WumboLabs tests **Granite 4.2 8B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Granite 4.2 8B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** NOT_READY — [First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999) (2026-09-24)](/evaluations/granite-4-2-8b#granite-42-8b-rtx5070-welp-context-completion-20260924), profile llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K)
-- **Recommended profile:** llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) (`granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
-- **Latest evidence:** 2026-09-24 — First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999)
+- **Classification:** NOT_READY ; source: [First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999) (2026-09-24)](/evaluations/granite-4-2-8b#granite-42-8b-rtx5070-welp-context-completion-20260924), profile llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K)
+- **Recommended profile:** llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) (`granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
+- **Latest evidence:** 2026-09-24: First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999)
 
 ## Tested profiles
 
-### llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) — CURRENT
+### llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) (CURRENT)
 
 Profile identity: `granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment`.
 
@@ -43,7 +43,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999) (2026-09-24)](/evaluations/granite-4-2-8b#granite-42-8b-rtx5070-welp-context-completion-20260924) — NOT_READY
+- [First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999) (2026-09-24)](/evaluations/granite-4-2-8b#granite-42-8b-rtx5070-welp-context-completion-20260924); status: NOT_READY
 
 ## Testing history
 
@@ -51,9 +51,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="granite-42-8b-rtx5070-welp-context-completion-20260924"></a>
 
-### 2026-09-24 — First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999)
+### 2026-09-24: First published evaluation via linked completion of the methodology-repair predecessor (official Q4_K_M, upstream llama.cpp b10999)
 
-**WELP Initial Evaluation — IBM Granite 4.2 8B (reasoning-on)** · profile: llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Initial Evaluation: IBM Granite 4.2 8B (reasoning-on)** · profile: llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · maturity: CURRENT_WELP · status: NOT_READY
 
 Methodology snapshot: `welp-next-snapshot-2026-09-24-context-outcome-repair` · WELP commit `ead28bde1ea9bce20cec6b3930125016068a8bbc`
 
@@ -85,15 +85,15 @@ Methodology snapshot: `welp-next-snapshot-2026-09-24-context-outcome-repair` · 
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -111,7 +111,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |

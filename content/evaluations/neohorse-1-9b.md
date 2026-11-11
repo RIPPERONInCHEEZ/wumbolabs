@@ -1,6 +1,6 @@
 +++
 title = "NeoHorse-1-9B"
-description = "NeoHorse-1-9B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "NeoHorse-1-9B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 5
 
@@ -16,17 +16,17 @@ event_count = 3
 latest_evidence_date = 2026-09-25
 +++
 
-WumboLabs tests **NeoHorse-1-9B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **NeoHorse-1-9B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required) (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-on-20260925), profile llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K)
-- **Recommended profile:** llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) (`neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off`, current-alternate) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md)
-- **Latest evidence:** 2026-09-25 — First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required)
+- **Classification:** READY_WITH_GUARDRAILS ; source: [First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required) (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-on-20260925), profile llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K)
+- **Recommended profile:** llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) (`neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off`, current-alternate); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md)
+- **Latest evidence:** 2026-09-25: First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required)
 
 ## Tested profiles
 
-### llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) — CURRENT
+### llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) (CURRENT)
 
 Profile identity: `neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on`.
 
@@ -43,10 +43,10 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required) (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-on-20260925) — READY_WITH_GUARDRAILS
-- [First fresh-model WELP Agentic event: dual-adapter qualification, three required task classes with two scored (1 PASS / 1 FAIL) and the system class INTEGRATION_BLOCKED by a deterministic frozen-harness defect (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-agentic-20260925) — READY_WITH_GUARDRAILS
+- [First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required) (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-on-20260925); status: READY_WITH_GUARDRAILS
+- [First fresh-model WELP Agentic event: dual-adapter qualification, three required task classes with two scored (1 PASS / 1 FAIL) and the system class INTEGRATION_BLOCKED by a deterministic frozen-harness defect (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-agentic-20260925); status: READY_WITH_GUARDRAILS
 
-### llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) — CURRENT-ALTERNATE
+### llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) (CURRENT-ALTERNATE)
 
 Profile identity: `neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off`.
 
@@ -63,7 +63,7 @@ Status: validated alternate tested surface.
 
 Events on this profile:
 
-- [Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-off-20260925) — READY_WITH_GUARDRAILS
+- [Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-off-20260925); status: READY_WITH_GUARDRAILS
 
 ## Testing history
 
@@ -71,9 +71,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="neohorse-1-9b-rtx5070-welp-reasoning-on-20260925"></a>
 
-### 2026-09-25 — First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required)
+### 2026-09-25: First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required)
 
-**WELP Fresh-Model Characterization — NeoHorse-1-9B (Reasoning On, publisher default)** · profile: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Fresh-Model Characterization: NeoHorse-1-9B (Reasoning On, publisher default)** · profile: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b)
@@ -102,15 +102,15 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -128,7 +128,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -148,9 +148,9 @@ rankings.
 
 <a id="neohorse-1-9b-rtx5070-welp-reasoning-off-20260925"></a>
 
-### 2026-09-25 — Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model
+### 2026-09-25: Full WELP characterization of the Reasoning Off deployment profile: independent setup/calibration, same frozen task set, dual-profile completion of the case-C model
 
-**WELP Reasoning-Profile Characterization — NeoHorse-1-9B (Reasoning Off, supported alternate)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Reasoning-Profile Characterization: NeoHorse-1-9B (Reasoning Off, supported alternate)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b)
@@ -179,15 +179,15 @@ rankings.
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -205,7 +205,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |
@@ -225,9 +225,9 @@ rankings.
 
 <a id="neohorse-1-9b-rtx5070-welp-agentic-20260925"></a>
 
-### 2026-09-25 — First fresh-model WELP Agentic event: dual-adapter qualification, three required task classes with two scored (1 PASS / 1 FAIL) and the system class INTEGRATION_BLOCKED by a deterministic frozen-harness defect
+### 2026-09-25: First fresh-model WELP Agentic event: dual-adapter qualification, three required task classes with two scored (1 PASS / 1 FAIL) and the system class INTEGRATION_BLOCKED by a deterministic frozen-harness defect
 
-**WELP Agentic — NeoHorse-1-9B (publisher-default profile, native tool calls)** · profile: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Agentic: NeoHorse-1-9B (publisher-default profile, native tool calls)** · profile: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b)
@@ -256,15 +256,15 @@ rankings.
 - **Outcome:** COMPLETE_PASS
 - **Classification:** not recorded
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/REPORT.md
 
 ##### Context profile
 
 | Field | Value |
 |---|---|
-| Practical default | not recorded tokens |
-| Guarded context | not recorded tokens |
-| Native model-card maximum | not recorded tokens |
+| Practical default | not recorded |
+| Guarded context | not recorded |
+| Native model-card maximum | not recorded |
 | Model-card envelope complete | not recorded |
 | Native maximum disposition | not recorded |
 
@@ -282,7 +282,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Field | Value |
 |---|---|
 | Status | SUBMITTED |
-| Canonical context | not recorded tokens |
+| Canonical context | not recorded |
 | tok/s out | not recorded |
 | TTFT | not recorded |
 | Submission reference | not recorded |

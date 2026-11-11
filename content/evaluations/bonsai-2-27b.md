@@ -1,6 +1,6 @@
 +++
 title = "Ternary Bonsai 2 27B"
-description = "Ternary Bonsai 2 27B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Ternary Bonsai 2 27B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 8
 
@@ -17,18 +17,18 @@ event_count = 2
 latest_evidence_date = 2026-09-20
 +++
 
-WumboLabs tests **Ternary Bonsai 2 27B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Ternary Bonsai 2 27B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Methodology-revision supplement (thinking-off profile) (2026-09-20)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-methodology-supplement-20260920), profile llama.cpp PTQ1_0 (thinking-off)
-- **Recommended profile:** llama.cpp PTQ1_0 (thinking-off) (`bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md)
-- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Methodology-revision supplement (thinking-off profile) (2026-09-20)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-methodology-supplement-20260920)
-- **Latest evidence:** 2026-09-20 — Methodology-revision supplement (thinking-off profile)
+- **Classification:** READY_WITH_GUARDRAILS ; source: [Methodology-revision supplement (thinking-off profile) (2026-09-20)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-methodology-supplement-20260920), profile llama.cpp PTQ1_0 (thinking-off)
+- **Recommended profile:** llama.cpp PTQ1_0 (thinking-off) (`bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md)
+- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [Methodology-revision supplement (thinking-off profile) (2026-09-20)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-methodology-supplement-20260920)
+- **Latest evidence:** 2026-09-20: Methodology-revision supplement (thinking-off profile)
 
 ## Tested profiles
 
-### llama.cpp PTQ1_0 (thinking-off) — CURRENT
+### llama.cpp PTQ1_0 (thinking-off) (CURRENT)
 
 Profile identity: `bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off`.
 
@@ -45,9 +45,9 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Methodology-revision supplement (thinking-off profile) (2026-09-20)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-methodology-supplement-20260920) — READY_WITH_GUARDRAILS
+- [Methodology-revision supplement (thinking-off profile) (2026-09-20)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-methodology-supplement-20260920); status: READY_WITH_GUARDRAILS
 
-### llama.cpp PTQ1_0 (reasoning-on, vendor default) — HISTORICAL
+### llama.cpp PTQ1_0 (reasoning-on, vendor default) (HISTORICAL)
 
 Profile identity: `bonsai2-27b-ptq1-0-prism-llamacpp`.
 
@@ -64,7 +64,7 @@ Status: historical tested surface; retained evidence, not the recommended profil
 
 Events on this profile:
 
-- [Current-WELP characterization + compression-retention + RTX 2060 SUPER portability (2026-09-18)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-20260918) — NOT_READY
+- [Current-WELP characterization + compression-retention + RTX 2060 SUPER portability (2026-09-18)](/evaluations/bonsai-2-27b#bonsai2-27b-rtx5070-welp-20260918); status: NOT_READY
 
 ## Testing history
 
@@ -72,9 +72,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="bonsai2-27b-rtx5070-welp-methodology-supplement-20260920"></a>
 
-### 2026-09-20 — Methodology-revision supplement (thinking-off profile)
+### 2026-09-20: Methodology-revision supplement (thinking-off profile)
 
-**WELP Methodology-Revision Supplement — PrismML PTQ1_0 (thinking-off)** · profile: llama.cpp PTQ1_0 (thinking-off) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Methodology-Revision Supplement: PrismML PTQ1_0 (thinking-off)** · profile: llama.cpp PTQ1_0 (thinking-off) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/bonsai-2-27b)
@@ -108,7 +108,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-methodology-supplement-20260920/REPORT.md
 
 ##### Context profile
 
@@ -159,9 +159,9 @@ rankings.
 
 <a id="bonsai2-27b-rtx5070-welp-20260918"></a>
 
-### 2026-09-18 — Current-WELP characterization + compression-retention + RTX 2060 SUPER portability
+### 2026-09-18: Current-WELP characterization + compression-retention + RTX 2060 SUPER portability
 
-**WELP Characterization — PrismML PTQ1_0 ternary (reasoning-on)** · profile: llama.cpp PTQ1_0 (reasoning-on, vendor default) · maturity: CURRENT_WELP · status: NOT_READY
+**WELP Characterization: PrismML PTQ1_0 ternary (reasoning-on)** · profile: llama.cpp PTQ1_0 (reasoning-on, vendor default) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/bonsai-2-27b)
@@ -195,7 +195,7 @@ rankings.
 - **Classification:** NOT_READY
 - **Artifact classification:** historical
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/190498671d69583af3202c7f4860531f24c5960c/models/bonsai-2-27b/events/bonsai2-27b-rtx5070-welp-20260918/REPORT.md
 
 ##### Context profile
 
@@ -211,7 +211,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.2787 s | — | not recorded |
+| Short | 0.2787 s | Not recorded | not recorded |
 | Moderate (3600-token input) | 6.366 s | 568.7 tok/s | not recorded |
 
 <p><small>llama-bench canonical arm (5 reps), uncached; near-full prefill 575 to 520 tok/s (8K to 64K); full-occupancy decode 55 to 42 tok/s; prefill is the practical bottleneck on Blackwell for PTQ1_0.</small></p>

@@ -1,6 +1,6 @@
 +++
 title = "Spark-X2.5-4B"
-description = "Spark-X2.5-4B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "Spark-X2.5-4B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 7
 
@@ -17,18 +17,18 @@ event_count = 1
 latest_evidence_date = 2026-09-20
 +++
 
-WumboLabs tests **Spark-X2.5-4B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **Spark-X2.5-4B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Current-WELP characterization (official Q8_0, upstream llama.cpp b10999) (2026-09-20)](/evaluations/spark-x2-5-4b#spark25-4b-rtx5070-welp-20260920), profile llama.cpp upstream official Q8_0 (reasoning-on, vendor default)
-- **Recommended profile:** llama.cpp upstream official Q8_0 (reasoning-on, vendor default) (`spark25-4b-q8-0-llamacpp`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md)
-- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 1,048,576 (envelope complete: YES) — [Current-WELP characterization (official Q8_0, upstream llama.cpp b10999) (2026-09-20)](/evaluations/spark-x2-5-4b#spark25-4b-rtx5070-welp-20260920)
-- **Latest evidence:** 2026-09-20 — Current-WELP characterization (official Q8_0, upstream llama.cpp b10999)
+- **Classification:** READY_WITH_GUARDRAILS ; source: [Current-WELP characterization (official Q8_0, upstream llama.cpp b10999) (2026-09-20)](/evaluations/spark-x2-5-4b#spark25-4b-rtx5070-welp-20260920), profile llama.cpp upstream official Q8_0 (reasoning-on, vendor default)
+- **Recommended profile:** llama.cpp upstream official Q8_0 (reasoning-on, vendor default) (`spark25-4b-q8-0-llamacpp`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 1,048,576 (envelope complete: YES); source: [Current-WELP characterization (official Q8_0, upstream llama.cpp b10999) (2026-09-20)](/evaluations/spark-x2-5-4b#spark25-4b-rtx5070-welp-20260920)
+- **Latest evidence:** 2026-09-20: Current-WELP characterization (official Q8_0, upstream llama.cpp b10999)
 
 ## Tested profiles
 
-### llama.cpp upstream official Q8_0 (reasoning-on, vendor default) — CURRENT
+### llama.cpp upstream official Q8_0 (reasoning-on, vendor default) (CURRENT)
 
 Profile identity: `spark25-4b-q8-0-llamacpp`.
 
@@ -45,7 +45,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Current-WELP characterization (official Q8_0, upstream llama.cpp b10999) (2026-09-20)](/evaluations/spark-x2-5-4b#spark25-4b-rtx5070-welp-20260920) — READY_WITH_GUARDRAILS
+- [Current-WELP characterization (official Q8_0, upstream llama.cpp b10999) (2026-09-20)](/evaluations/spark-x2-5-4b#spark25-4b-rtx5070-welp-20260920); status: READY_WITH_GUARDRAILS
 
 ## Testing history
 
@@ -53,9 +53,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="spark25-4b-rtx5070-welp-20260920"></a>
 
-### 2026-09-20 — Current-WELP characterization (official Q8_0, upstream llama.cpp b10999)
+### 2026-09-20: Current-WELP characterization (official Q8_0, upstream llama.cpp b10999)
 
-**WELP Characterization — iFlytek Spark-X2.5-4B (reasoning-on)** · profile: llama.cpp upstream official Q8_0 (reasoning-on, vendor default) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Characterization: iFlytek Spark-X2.5-4B (reasoning-on)** · profile: llama.cpp upstream official Q8_0 (reasoning-on, vendor default) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/spark-x2.5-4b)
@@ -89,7 +89,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/51a5ad2b0af17dff7502f1f55f94262ee1e67245/models/spark-x2.5-4b/events/spark25-4b-rtx5070-welp-20260920/REPORT.md
 
 ##### Context profile
 
@@ -105,7 +105,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.0266 s | — | 122.1 tok/s |
+| Short | 0.0266 s | Not recorded | 122.1 tok/s |
 | Moderate (4114-token input) | 0.4946 s | 8318.3 tok/s | not recorded |
 
 <p><small>llama-bench canonical arm (5 reps), uncached; near-full prefill 8,329 tok/s (8K) to 4,318 tok/s (128K); full-occupancy decode ~59 tok/s at 128K vs 122 tok/s short-prompt; SWA hybrid keeps prefill fast through 128K.</small></p>

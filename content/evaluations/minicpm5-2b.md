@@ -1,6 +1,6 @@
 +++
 title = "MiniCPM5-2B"
-description = "MiniCPM5-2B — the current WumboLabs evidence state on one page: tested profiles, validated context, and the full chronological testing history. Each value is attributed to the profile and event that measured it."
+description = "MiniCPM5-2B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
 weight = 16
 
@@ -17,18 +17,18 @@ event_count = 1
 latest_evidence_date = 2026-09-10
 +++
 
-WumboLabs tests **MiniCPM5-2B** on real consumer hardware. This is the canonical model page: current state first, then every tested profile and every evidence event. Values are attributed to the profile and event that measured them; historical findings remain the evidence of their tested stack and are never silently replaced.
+This page collects WumboLabs evidence for **MiniCPM5-2B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
 
 ## Current state
 
-- **Classification:** READY_WITH_GUARDRAILS — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5), profile contained vLLM BF16
-- **Recommended profile:** contained vLLM BF16 (`minicpm5-2b-vllm-bf16`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
-- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 131,072 (envelope complete: YES) — [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5)
-- **Latest evidence:** 2026-09-10 — Initial evaluation (full characterization)
+- **Classification:** READY_WITH_GUARDRAILS ; source: [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5), profile contained vLLM BF16
+- **Recommended profile:** contained vLLM BF16 (`minicpm5-2b-vllm-bf16`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
+- **Practical context:** 32,768 default / 65,536 guarded tokens; native model-card maximum 131,072 (envelope complete: YES); source: [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5)
+- **Latest evidence:** 2026-09-10: Initial evaluation (full characterization)
 
 ## Tested profiles
 
-### contained vLLM BF16 — CURRENT
+### contained vLLM BF16 (CURRENT)
 
 Profile identity: `minicpm5-2b-vllm-bf16`.
 
@@ -45,7 +45,7 @@ Status: current canonical/recommended tested surface.
 
 Events on this profile:
 
-- [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5) — READY_WITH_GUARDRAILS
+- [Initial evaluation (full characterization) (2026-09-10)](/evaluations/minicpm5-2b#initial-evaluation-2026-09-10-minicpm5); status: READY_WITH_GUARDRAILS
 
 ## Testing history
 
@@ -53,9 +53,9 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 <a id="initial-evaluation-2026-09-10-minicpm5"></a>
 
-### 2026-09-10 — Initial evaluation (full characterization)
+### 2026-09-10: Initial evaluation (full characterization)
 
-**Initial Evaluation — contained vLLM BF16** · profile: contained vLLM BF16 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS
+**Initial Evaluation: contained vLLM BF16** · profile: contained vLLM BF16 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
 [View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/minicpm5-2b)
@@ -89,7 +89,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official BF16 full-precision candidate (characterized; not deployed); architecture-diversity control value HIGH
 
-Publication state: **published** — canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md
+Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md
 
 ##### Context profile
 
@@ -105,14 +105,14 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 
 | Surface | TTFT | Prefill | Decode |
 |---|---|---|---|
-| Short | 0.013037 s | — | 118.622 tok/s |
+| Short | 0.013037 s | Not recorded | 118.622 tok/s |
 | Moderate (2663-token input) | 0.203597 s | 13079.8 tok/s | 116.95 tok/s |
 
 <p><small>Medians over five measured repetitions per surface at 8,192 baseline context; near-full ladder medians of two seeds per rung retained in campaign evidence</small></p>
 
 ##### Quality and capabilities
 
-- **Constrained result:** 6/7 constrained checks — one deterministic temperature-0 over-refusal of a benign prime-list prompt failed the repeat-check content scorer; repeat consistency itself held; no repair attempted (frozen contract)
+- **Constrained result:** 6/7 constrained checks; one deterministic temperature-0 over-refusal of a benign prime-list prompt failed the repeat-check content scorer; repeat consistency itself held; no repair attempted (frozen contract)
 - Thinking/reasoning TESTED_PASS; coding TESTED_PASS (4/4 frozen execution cases); native tool selection and tool-result use TESTED_PASS
 - English/Chinese text, instruction following, and structured output TESTED_PASS
 - Near-full performance inside practical gates through 98,304 (BF16-KV) with zero errors across 55 scientific requests
@@ -136,7 +136,7 @@ Publication state: **published** — canonical evidence: https://github.com/Wumb
 | Submission reference | cmtwcna5907f0ps01sfiwd60a |
 | verifiedRun | NO |
 
-<p><small>APPROVED, origin NEW (localmaxxing-backfill-2026-09-10); benchmarked on the canonical practical stack (BF16, vLLM contained runtime, 32K default — not the 131K fp8 boundary); actual prompt tokens 252 (endpoint usage); verifiedRun false reflects a client capture limitation</small></p>
+<p><small>APPROVED, origin NEW (localmaxxing-backfill-2026-09-10); benchmarked on the canonical practical stack (BF16, vLLM contained runtime, 32K default, not the 131K fp8 boundary); actual prompt tokens 252 (endpoint usage); verifiedRun false reflects a client capture limitation</small></p>
 
 ##### Canonical evidence
 

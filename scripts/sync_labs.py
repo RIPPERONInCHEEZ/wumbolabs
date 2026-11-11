@@ -515,7 +515,7 @@ def render_generated_event_body(entry: dict[str, Any], export: dict[str, Any]) -
     if welp.get("contract"):
         lines.append(f'- **Classification contract:** {welp["contract"]}')
     lines.append("")
-    lines.append("Publication state: **%s** — %s" % (
+    lines.append("Publication state: **%s**; %s" % (
         "evidence pending human gate" if pending else "published",
         "canonical public evidence is not yet published; this record shows an explicit pending state"
         if pending else f'canonical evidence: {evidence.get("url")}',
@@ -541,7 +541,7 @@ def render_generated_event_body(entry: dict[str, Any], export: dict[str, Any]) -
         short_ttft = perf.get("short_ttft_s")
         short_dec = perf.get("short_decode_tps")
         mod = perf.get("moderate_input_tokens")
-        lines.append("| Short | %s | — | %s |" % (
+        lines.append("| Short | %s | Not recorded | %s |" % (
             f"{short_ttft:g} s" if isinstance(short_ttft, (int, float)) else "not recorded",
             f"{short_dec:g} tok/s" if isinstance(short_dec, (int, float)) else "not recorded"))
         mod_ttft = perf.get("moderate_ttft_s")
@@ -625,7 +625,7 @@ def render_generated_event_body(entry: dict[str, Any], export: dict[str, Any]) -
     lines.append("#### Canonical evidence")
     lines.append("")
     if pending:
-        lines.append("State: **PENDING_HUMAN_GATE** — the canonical public evidence repository")
+        lines.append("State: **PENDING_HUMAN_GATE**. The canonical public evidence repository")
         lines.append("has not been published yet. This section intentionally claims no canonical")
         lines.append("evidence URL. Once the evidence repository is published and the registry is")
         lines.append("updated, this record synchronizes against it and the pending state is removed.")
@@ -708,6 +708,62 @@ def latest_evidence_date(entries: list[dict[str, Any]]) -> str | None:
     return max((e["event_date"] for e in entries), default=None)
 
 
+def editorial_presentation(markdown: str) -> str:
+    """Copyedit the derivative only; canonical exports and citations stay intact."""
+    replacements = {
+        "failure — it is": "failure; it is",
+        "persists and worsens — BF16": "persists and worsens: BF16",
+        "explanations — 0/12": "explanations: 0/12",
+        "saturated — 5/5": "saturated: 5/5",
+        "stands — the campaign": "stands; the campaign",
+        "It complements — and must not be\ncompared numerically with — the canonical":
+            "It complements the canonical",
+        "RTX 5070 WELP campaign on this model.\n":
+            "RTX 5070 WELP campaign on this model. The two hardware lanes must not be compared numerically.\n",
+        "at 8k — Grug-12B": "at 8k: Grug-12B",
+        "same suite — that model": "same suite; that model",
+        "14/20 — all six": "14/20; all six",
+        "verifiedRun null — the service": "verifiedRun null; the service",
+        "32K default — not the 131K fp8 boundary)": "32K default, not the 131K fp8 boundary)",
+        "bounded — not autonomous-agent qualification)": "bounded, not autonomous-agent qualification)",
+        "weaker — the historical": "weaker; the historical",
+        "Q4_0 + official mmproj — the only": "Q4_0 + official mmproj; the only",
+        "Q4_K_M.gguf — the only": "Q4_K_M.gguf; the only",
+        "6/7 constrained checks — one": "6/7 constrained checks; one",
+        "VALIDATED — capacity": "VALIDATED: capacity",
+        "FIT_LIMIT — measured:": "FIT_LIMIT: measured:",
+        " — frozen gate G6": "; frozen gate G6",
+        " — screening-level only.": "; screening-level only.",
+        "1 recorded identities": "1 recorded identity",
+        "not recorded tokens": "not recorded",
+        "asserted 25 prime": "asserted that 25 is prime",
+    }
+    # Protect code, quotations, URLs, and HTML attributes before editing prose.
+    protected = re.compile(
+        r"(?ms:^```.*?^```[^\n]*$|^~~~.*?^~~~[^\n]*$)|"
+        r"(?m:^>[^\n]*$|^(?: {4}|\t)[^\n]*$)|"
+        r"`+[^`\n]*`+|\[[^\]\n]*\]\([^)]+\)|https?://[^\s)<>]+|</?[A-Za-z][^>\n]*>")
+    tokens: list[str] = []
+
+    def preserve(match: re.Match[str]) -> str:
+        tokens.append(match.group())
+        return f"\x00{len(tokens) - 1}\x00"
+
+    text = protected.sub(preserve, markdown)
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    rows = text.splitlines(keepends=True)
+    for n, row in enumerate(rows):
+        if row.lstrip().startswith("|"):
+            row = re.sub(r"(?<=\|) — (?=\|)", " Not recorded ", row)
+        elif row.startswith(("#", "- Profile:", "Shared comparison:", "Related tested profile:")):
+            row = row.replace(" — ", ": ")
+        elif row.startswith("**") and " · profile:" in row:
+            row = row.replace(" — ", ": ")
+        rows[n] = row
+    return re.sub(r"\x00(\d+)\x00", lambda m: tokens[int(m[1])], "".join(rows))
+
+
 def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
                       exports: dict[str, dict[str, Any]], catalog_weight: int,
                       shared_for_model: list[dict[str, Any]] | None = None) -> str:
@@ -739,9 +795,9 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     # stable: profile_sort_key sorts by (status-current, latest_date); reverse=False keeps
     # current first. Do not double-sort (kept explicit for clarity).
 
-    desc = (f"{display} — the current WumboLabs evidence state on one page: tested profiles, "
-            "validated context, and the full chronological testing history. Each value is "
-            "attributed to the profile and event that measured it.")
+    desc = (f"{display}: tested profiles, validated context, and chronological "
+            "evaluation history. Findings are attributed to the profile and event "
+            "that measured them.")
 
     lines: list[str] = []
     lines.append("+++")
@@ -774,11 +830,10 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     lines.append("")
 
     lines.append(
-        f"WumboLabs tests **{display}** on real consumer hardware. This is the canonical "
-        f"model page: current state first, then every tested profile and every evidence "
-        "event. Values are attributed to the profile and event that measured them; "
-        "historical findings remain the evidence of their tested stack and are never "
-        "silently replaced.")
+        f"This page collects WumboLabs evidence for **{display}**: current findings, "
+        "tested profiles, and chronological evaluation history. Each value belongs "
+        "to its measured deployment; later findings do not silently replace "
+        "historical evidence.")
     lines.append("")
 
     # ---- current state ----
@@ -786,12 +841,12 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     lines.append("")
     if cls_event:
         lines.append(f'- **Classification:** {fmt(cls_event.get("welp_status"))} '
-                     f"— {anchor_link(cls_event)}, profile {cls_event.get('profile_name')}")
+                     f"; source: {anchor_link(cls_event)}, profile {cls_event.get('profile_name')}")
     if rec_event:
         repo_url = (rec_event.get("canonical_evidence") or {}).get("url", "")
         lines.append(f'- **Recommended profile:** {fmt(rec_event.get("profile_name"))} '
                      f'(`{rec_event["profile_id"]}`, {rec_event.get("profile_status")})'
-                     + (f" — [canonical evidence]({repo_url})" if repo_url else ""))
+                     + (f"; [canonical evidence]({repo_url})" if repo_url else ""))
     if ctx_export and isinstance(ctx_export.get("context"), dict) \
             and isinstance(ctx_export["context"].get("practical_default_tokens"), int):
         c = ctx_export["context"]
@@ -803,8 +858,8 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
             extra = f"; native model-card maximum {c['native_maximum_tokens']:,}"
             if c.get("envelope_complete") is not None:
                 extra += f" (envelope complete: {fmt(c['envelope_complete'])})"
-        lines.append(f'- **Practical context:** {practical} tokens{extra} — {anchor_link(ctx_event)}')
-    lines.append(f'- **Latest evidence:** {latest["event_date"]} — {latest.get("event_title")}')
+        lines.append(f'- **Practical context:** {practical} tokens{extra}; source: {anchor_link(ctx_event)}')
+    lines.append(f'- **Latest evidence:** {latest["event_date"]}: {latest.get("event_title")}')
     lines.append("")
 
     # ---- tested profiles ----
@@ -814,7 +869,7 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
         pevents = sorted(profile_events[pid], key=lambda e: (e["event_date"], e["slug"]), reverse=True)
         first = pevents[0]
         status = first.get("profile_status") or "current"
-        lines.append(f'### {fmt(first.get("profile_name"))} — {status.upper()}')
+        lines.append(f'### {fmt(first.get("profile_name"))} ({status.upper()})')
         lines.append("")
         lines.append(f'Profile identity: `{pid}`.')
         lines.append("")
@@ -854,7 +909,7 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
         lines.append("Events on this profile:")
         lines.append("")
         for e in pevents:
-            lines.append(f"- {anchor_link(e)} — {fmt(e.get('welp_status'))}")
+            lines.append(f"- {anchor_link(e)}; status: {fmt(e.get('welp_status'))}")
         lines.append("")
 
     # ---- testing history ----
@@ -867,7 +922,7 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     for e in entries_sorted:
         lines.append(f'<a id="{e["event_id"]}"></a>')
         lines.append("")
-        lines.append(f'### {e["event_date"]} — {fmt(e.get("event_title"))}')
+        lines.append(f'### {e["event_date"]}: {fmt(e.get("event_title"))}')
         lines.append("")
         ev_url = (e.get("canonical_evidence") or {}).get("url", "")
         meta = [f'**{fmt(e.get("event_kicker"))}**', f'profile: {e.get("profile_name")}']
@@ -918,8 +973,8 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
             e = s["entry"]
             note = s.get("note")
             lines.append(f"- {anchor_link(e)}"
-                         + (f" — {note}" if note else "")
-                         + (f" — [Canonical Evidence / Full Report]({e['canonical_evidence']['url']})"
+                         + (f": {note}" if note else "")
+                         + (f" [Canonical Evidence / Full Report]({e['canonical_evidence']['url']})"
                             if e.get("canonical_evidence", {}).get("url") else ""))
         lines.append("")
 
@@ -946,7 +1001,7 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     while lines and lines[-1] == "":
         lines.pop()
 
-    return "\n".join(lines) + "\n"
+    return editorial_presentation("\n".join(lines) + "\n")
 
 
 def render_stub(entry: dict[str, Any], old_slug: str) -> str:

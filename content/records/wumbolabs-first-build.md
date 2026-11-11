@@ -41,9 +41,9 @@ Recent changes focused on making the site easier to understand quickly:
 
 The 2026-06 site structure recorded here was:
 
-- **Projects** — what exists
-- **Reports** — reports, baselines, fit tests, and notes documenting what was tested, changed, and learned
-- **About** — what WumboLabs is
+- **Projects**: what exists
+- **Reports**: reports, baselines, fit tests, and notes documenting what was tested, changed, and learned
+- **About**: what WumboLabs is
 
 Current content ownership separates Projects, Evaluations, Reports, and Methodology.
 

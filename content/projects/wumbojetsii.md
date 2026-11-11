@@ -32,12 +32,12 @@ It runs Fedora 44 without a desktop session and supports LLMGauge testing, deepe
 
   <div class="info-card">
     <span class="info-label">GPU</span>
-    <strong>AMD Radeon AI PRO R9700 32GB</strong>
+    <strong>AMD Radeon AI PRO R9700 32 GB</strong>
   </div>
 
   <div class="info-card">
     <span class="info-label">CPU / Memory</span>
-    <strong>Ryzen 7 9800X3D / 32GB DDR5</strong>
+    <strong>Ryzen 7 9800X3D / 32 GB DDR5</strong>
   </div>
 
   <div class="info-card">
@@ -60,7 +60,7 @@ It runs Fedora 44 without a desktop session and supports LLMGauge testing, deepe
 
 WumboJetsII is where WumboLabs local AI compute happens: LLMGauge runs, deeper model-evaluation campaigns, and supporting execution work for the other systems in the lab.
 
-The AMD Radeon AI PRO R9700 provides 32GB of physical GPU VRAM for local AI compute. ROCm/HIP and Vulkan development and testing are hardware-scoped; runtime qualification applies to the tested model, artifact, build, backend, and configuration, not to every workload or to a preferred runtime.
+The AMD Radeon AI PRO R9700 provides 32 GB of physical GPU VRAM for local AI compute. ROCm/HIP and Vulkan development and testing are hardware-scoped; runtime qualification applies to the tested model, artifact, build, backend, and configuration, not to every workload or to a preferred runtime.
 
 The Qwen3.8-27B deep-evaluation campaign ran on the RTX 5070 with llama.cpp/CUDA; that GPU has since been removed, and the campaign stands as historical evidence for that hardware. [Read the historical campaign report](/records/qwen38-27b-rtx5070-evaluation/) for its runtime-specific findings and limitations. The Qwen3.8 H1 canonical profile from that era is documented on the [canonical Qwen3.8 evaluation page](/evaluations/qwen38-27b/#h1-canonical-promotion-2026-09-09).
 
