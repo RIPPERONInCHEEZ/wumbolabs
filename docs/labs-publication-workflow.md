@@ -52,6 +52,9 @@ A context-only event must not replace classification, reliability, or capabiliti
 Human model pages show current findings, tested profiles, testing history, exact
 **Canonical Evidence / Full Report** links, profile metadata, and clearly labelled
 legacy provenance. No independent public research backlog is generated.
+The registry's explicit `current_state` event/profile selections govern current
+classification, context and recommendation display, even when a newer specialist
+event exists. A current tested profile is not automatically a recommendation.
 
 ## Update sequence
 

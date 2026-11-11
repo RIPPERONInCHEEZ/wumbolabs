@@ -6,6 +6,7 @@
 - Bind public visibility to HUMAN_ACCEPTED scientific review and exact section manifests.
 - Verify event-specific gameplay assets and render supplementary MP4 players.
 - Restore standing review-to-publication closeout without a second campaign approval.
+- Honor central recommendation/context attribution; newer benchmark-only profiles never replace the selected serving profile.
 
 ## Unreleased — offline WELP section publication
 

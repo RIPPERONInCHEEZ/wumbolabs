@@ -9,9 +9,9 @@ kind = "model"
 model_id = "lfm2.5-8b-a1b"
 vendor = "Liquid AI"
 classification = "NOT_READY"
-recommended_profile_id = "lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11"
-recommended_profile_name = "Q5_K_M (official LiquidAI GGUF) — LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface)"
-practical_context = "16,384 default tokens"
+recommended_profile_id = "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment"
+recommended_profile_name = "llama.cpp upstream official Q6_K (reasoning-on, publisher sampler)"
+practical_context = "32,768 default / 128,000 guarded tokens"
 profile_count = 3
 event_count = 4
 latest_evidence_date = 2026-11-11
@@ -22,8 +22,8 @@ WumboLabs tests **LFM2.5-8B-A1B** on real consumer hardware. This is the canonic
 ## Current state
 
 - **Classification:** NOT_READY — [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924), profile llama.cpp upstream official Q6_K (reasoning-on, publisher sampler)
-- **Recommended profile:** Q5_K_M (official LiquidAI GGUF) — LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface) (`lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md)
-- **Practical context:** 16,384 default tokens — [LFM2.5-8B-A1B Model/Core baseline + advanced reasoning (RTX 5070 CUDA) (2026-11-10)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10)
+- **Recommended profile:** llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) (`lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
+- **Practical context:** 32,768 default / 128,000 guarded tokens; native model-card maximum 128,000 (envelope complete: NO) — [Blinded tie-break adjudication and calibration sanity completion of the hardening-validation event (official Q6_K, upstream llama.cpp b10999) (2026-09-24)](/evaluations/lfm2-5-8b-a1b#lfm25-8b-a1b-rtx5070-welp-adjudication-20260924)
 - **Latest evidence:** 2026-11-11 — LFM2.5-8B-A1B HelicopterBench /2 one-shot objective result
 
 ## Tested profiles
@@ -58,7 +58,7 @@ Profile identity: `lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10`.
 | Artifact | lfm2.5-8b-a1b |
 | Precision | Q5_K_M |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
@@ -77,7 +77,7 @@ Profile identity: `lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11`.
 | Artifact | lfm2.5-8b-a1b |
 | Precision | Q5_K_M |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)

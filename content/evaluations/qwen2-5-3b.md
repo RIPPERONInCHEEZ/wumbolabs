@@ -30,7 +30,7 @@ Profile identity: `qwen2.5-3b-llamacpp-f16`.
 
 Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen2.5-3b/events/qwen25-3b-cross-runtime-2026-07-15/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json)

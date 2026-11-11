@@ -9,8 +9,8 @@ kind = "model"
 model_id = "neohorse-1-9b"
 vendor = "TokenRhythm"
 classification = "READY_WITH_GUARDRAILS"
-recommended_profile_id = "neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on"
-recommended_profile_name = "llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K)"
+recommended_profile_id = "neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off"
+recommended_profile_name = "llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K)"
 profile_count = 2
 event_count = 3
 latest_evidence_date = 2026-09-25
@@ -21,7 +21,7 @@ WumboLabs tests **NeoHorse-1-9B** on real consumer hardware. This is the canonic
 ## Current state
 
 - **Classification:** READY_WITH_GUARDRAILS — [First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required) (2026-09-25)](/evaluations/neohorse-1-9b#neohorse-1-9b-rtx5070-welp-reasoning-on-20260925), profile llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K)
-- **Recommended profile:** llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) (`neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md)
+- **Recommended profile:** llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) (`neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off`, current-alternate) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md)
 - **Latest evidence:** 2026-09-25 — First fresh-model WELP campaign under the model-agentic snapshot: full Model science of the publisher-default Reasoning On profile; case C measured (Reasoning Off sibling required)
 
 ## Tested profiles
@@ -36,7 +36,7 @@ Profile identity: `neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoni
 | Artifact | not recorded |
 | Precision | not recorded |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)

@@ -654,23 +654,44 @@ def event_body(entry: dict[str, Any], exports: dict[str, dict[str, Any]]) -> str
     return hand_authored_event_body(entry)
 
 
-def current_event(entries: list[dict[str, Any]], surface: str) -> dict[str, Any] | None:
+def current_event(entries: list[dict[str, Any]], surface: str,
+                  state: dict[str, Any] | None = None) -> dict[str, Any] | None:
     """Latest event whose evidence_scope covers `surface`.
 
     Deterministic precedence: greatest event_date wins; ties break on the
     lexicographically greatest slug. A later event can only supersede the
     surfaces it declares.
     """
+    if state is not None and surface in state:
+        event_id = state[surface]
+        if event_id is None:
+            return None
+        selected = next((e for e in entries if e['event_id'] == event_id), None)
+        if selected is None:
+            fail(f"central current-state {surface!r} references missing event {event_id!r}")
+        return selected
     cands = [e for e in entries if surface in (e.get("evidence_scope") or [])]
     if not cands:
         return None
     return max(cands, key=lambda e: (e["event_date"], e["slug"]))
 
 
-def recommended_profile(entries: list[dict[str, Any]]) -> dict[str, Any] | None:
+def recommended_profile(entries: list[dict[str, Any]],
+                        state: dict[str, Any] | None = None) -> dict[str, Any] | None:
     """Profile of the latest serving-profile event; fallback: latest practical-use
     event; final fallback: latest event overall. Benchmark-only or specialized
     events must not masquerade as the recommended practical surface."""
+    if state is not None and 'recommended_profile_id' in state:
+        profile_id = state['recommended_profile_id']
+        if profile_id is None:
+            return None
+        selected = current_event(entries, 'serving-profile', state)
+        if selected and selected['profile_id'] == profile_id:
+            return selected
+        candidates = [e for e in entries if e['profile_id'] == profile_id]
+        if not candidates:
+            fail(f"central recommended profile {profile_id!r} has no event")
+        return max(candidates, key=lambda e: (e['event_date'], e['slug']))
     e = current_event(entries, "serving-profile") or \
         current_event(entries, "practical-use") or \
         max(entries, key=lambda e: (e["event_date"], e["slug"]))
@@ -693,9 +714,10 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     mid = model["model_id"]
     display = model["display_name"]
     entries_sorted = sorted(entries, key=lambda e: (e["event_date"], e["slug"]), reverse=True)
-    cls_event = current_event(entries, "model-classification")
-    ctx_event = current_event(entries, "context")
-    rec_event = recommended_profile(entries)
+    state = model.get('current_state')
+    cls_event = current_event(entries, "model-classification", state)
+    ctx_event = current_event(entries, "context", state)
+    rec_event = recommended_profile(entries, state)
     latest = entries_sorted[0]
     profile_events: dict[str, list[dict[str, Any]]] = {}
     for e in entries:
@@ -812,7 +834,9 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
                          "sections below (hand-authored records; no machine-readable export).")
             lines.append("")
         status_line = {
-            "current": "current canonical/recommended tested surface",
+            "current": ("current canonical/recommended tested surface" if rec_event
+                        and pid == rec_event['profile_id'] else
+                        "current tested surface; not the recommended profile"),
             "current-alternate": "validated alternate tested surface",
             "historical": "historical tested surface; retained evidence, not the recommended profile",
             "superseded": "superseded by a materially different accepted profile",
@@ -1156,7 +1180,8 @@ def run(local_exports: Path | None, check_only: bool) -> int:
         entries = entries_by_model.get(mid) or []
         related_pids = {rp for e in entries for rp in (e.get("related_profile_ids") or [])}
         page_meta[mid] = {
-            "classification": (current_event(entries, "model-classification") or {}).get("welp_status"),
+            "classification": (current_event(entries, "model-classification",
+                                             model.get("current_state")) or {}).get("welp_status"),
             "profile_count": len({e["profile_id"] for e in entries} | related_pids),
             "event_count": len(entries),
             "latest_evidence_date": latest_evidence_date(entries),
@@ -1429,6 +1454,23 @@ def selftest() -> int:
         if "98,304 default" in a_text or "32,768 default / 98,304 guarded" not in a_text:
             failures.append("selftest: practical context must come from the context-scope event")
 
+        # Explicit central attribution beats recency, including legacy events
+        # whose scope omitted serving-profile and a newer benchmark-only profile.
+        prior = {"event_id": "accepted-serving", "profile_id": "qualified-profile",
+                 "event_date": "2026-01-01", "slug": "accepted-serving",
+                 "evidence_scope": ["context", "model-classification"]}
+        benchmark = {"event_id": "broken-game", "profile_id": "game-only-profile",
+                     "event_date": "2026-01-02", "slug": "broken-game",
+                     "evidence_scope": ["specialized", "context"]}
+        state = {"serving-profile": "accepted-serving", "context": "accepted-serving",
+                 "recommended_profile_id": "qualified-profile"}
+        if recommended_profile([prior, benchmark], state) != prior:
+            failures.append("selftest: a benchmark-only profile replaced the central recommendation")
+        if current_event([prior, benchmark], "context", state) != prior:
+            failures.append("selftest: recency replaced the explicit central context attribution")
+        if recommended_profile([prior, benchmark], dict(state, recommended_profile_id=None)) is not None:
+            failures.append("selftest: missing central recommendation invented a fallback")
+
         # 3. redirect stub content: served at the legacy /labs/ URL, targets the
         #    /evaluations/ model page + event anchor
         stub = root / "content" / "evaluations" / "a2-context.md"
@@ -1588,6 +1630,7 @@ def selftest() -> int:
             "generated _redirects (section roots + model pages) and route-migration map",
             "multi-profile/multi-event aggregation with anchors",
             "per-surface current-state precedence (classification vs context)",
+            "explicit central recommendations/context cannot be replaced by newer specialized events",
             "legacy URL stub targets model page + event anchor",
             "events dataset preserves record_date chronology",
             "second sync is a no-op; --check passes",

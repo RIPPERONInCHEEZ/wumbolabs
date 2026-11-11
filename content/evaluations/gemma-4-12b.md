@@ -11,7 +11,7 @@ vendor = "Google"
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "gemma-4-12b-llamacpp-qat-q4-0"
 recommended_profile_name = "llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)"
-practical_context = "16,384 default tokens"
+practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 5
 event_count = 7
 latest_evidence_date = 2026-11-09
@@ -22,8 +22,8 @@ WumboLabs tests **Gemma 4 12B IT** on real consumer hardware. This is the canoni
 ## Current state
 
 - **Classification:** READY_WITH_GUARDRAILS — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12), profile llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)
-- **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
-- **Practical context:** 16,384 default tokens — [Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA) (2026-11-09)](/evaluations/gemma-4-12b#gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09)
+- **Recommended profile:** llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) (`gemma-4-12b-llamacpp-qat-q4-0`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES) — [Current-WELP recharacterization (2026-09-12)](/evaluations/gemma-4-12b#gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12)
 - **Latest evidence:** 2026-11-09 — Gemma 4 12B IT fresh Model/Core baseline + advanced reasoning (RTX 5070 CUDA)
 
 ## Tested profiles
@@ -62,7 +62,7 @@ Profile identity: `gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09`.
 | Artifact | gemma-4-12b |
 | Precision | UNKNOWN |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)

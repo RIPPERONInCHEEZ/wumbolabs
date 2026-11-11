@@ -30,7 +30,7 @@ Profile identity: `qwen3.8-9b-empero-vendor-battery`.
 
 Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-9b-empero/events/qwen38-empero-9b-vendor-battery-2026-08-18/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-vendor-battery/profile.json)

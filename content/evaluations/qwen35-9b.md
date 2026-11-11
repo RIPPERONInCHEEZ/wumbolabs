@@ -8,8 +8,8 @@ weight = 3
 kind = "model"
 model_id = "qwen35-9b"
 vendor = "Alibaba (Qwen team)"
-recommended_profile_id = "qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08"
-recommended_profile_name = "Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface)"
+recommended_profile_id = "qwen35-9b-llamacpp-q8"
+recommended_profile_name = "llama.cpp Q8_0 GGUF"
 practical_context = "16,384 default tokens"
 profile_count = 6
 event_count = 9
@@ -20,7 +20,7 @@ WumboLabs tests **Qwen3.5-9B** on real consumer hardware. This is the canonical 
 
 ## Current state
 
-- **Recommended profile:** Q4_K_M (Unsloth publisher GGUF) — Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface) (`qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md)
+- **Recommended profile:** llama.cpp Q8_0 GGUF (`qwen35-9b-llamacpp-q8`, current) — [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
 - **Practical context:** 16,384 default tokens — [Qwen3.5-9B reference Model/Core baseline (Radeon R9700 HIP, thinking-on) (2026-10-22)](/evaluations/qwen35-9b#qwen35-9b-r9700-hip-m2-geometry-2026-10-22)
 - **Latest evidence:** 2026-11-08 — Qwen3.5-9B runtime performance (RTX 5070 CUDA, deployment-attributed)
 
@@ -55,7 +55,7 @@ Profile identity: `qwen35-9b-r9700-hip-on-2026-10-22`.
 | Artifact | qwen35-9b |
 | Precision | UNKNOWN |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
@@ -74,7 +74,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-on-2026-11-06`.
 | Artifact | qwen35-9b |
 | Precision | UNKNOWN |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
@@ -96,7 +96,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-lc-on-2026-11-06`.
 | Artifact | qwen35-9b |
 | Precision | UNKNOWN |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
@@ -115,7 +115,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-atu-on-2026-11-06`.
 | Artifact | qwen35-9b |
 | Precision | UNKNOWN |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
@@ -134,7 +134,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08`.
 | Artifact | qwen35-9b |
 | Precision | UNKNOWN |
 
-Status: current canonical/recommended tested surface.
+Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md)
 [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
