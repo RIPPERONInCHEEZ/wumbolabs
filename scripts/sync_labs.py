@@ -268,6 +268,37 @@ def validate_export(raw: bytes, origin: str) -> dict[str, Any]:
         fail(f"{origin}: invalid disposition {disposition!r}; expected one of {sorted(DISPOSITIONS)}")
     if disposition in ("WEBSITE_BLOCKED", "NOT_FOR_PUBLICATION") and not export.get("reason"):
         fail(f"{origin}: {disposition} requires a reason")
+    if ('welp_sections' in export
+            and disposition not in ('WEBSITE_READY', 'WEBSITE_PUBLISHED')):
+        fail(f"{origin}: WELP section export is not approved for public visibility")
+    if 'welp_sections' in export:
+        acceptance = export.get('scientific_acceptance') or {}
+        manifests = {s['section']: s['manifest_sha256'] for s in export['welp_sections']}
+        if (acceptance.get('schema') != 'welp-scientific-acceptance/1'
+                or acceptance.get('decision') != 'HUMAN_ACCEPTED'
+                or acceptance.get('campaign_id') != export['campaign']
+                or acceptance.get('section_manifests') != manifests
+                or not re.fullmatch(r'[0-9a-f]{64}', acceptance.get('review_source_sha256', ''))):
+            fail(f"{origin}: WELP scientific acceptance must bind the exact finalized event")
+        heli = next((s for s in export['welp_sections'] if s['section'] == 'helicopterbench'), None)
+        media = export.get('gameplay_media')
+        if heli and not media and not export.get('gameplay_unavailable_reason'):
+            fail(f"{origin}: HelicopterBench needs verified event footage or an explicit unavailable reason")
+        if media:
+            identity = export.get('identity') or {}
+            event = identity.get('event_id', '')
+            if (not heli or not ID_RE.fullmatch(event)
+                    or media.get('event_id') != event
+                    or media.get('profile_id') != heli['profile_id']
+                    or media.get('methodology') != heli['methodology']
+                    or media.get('model_artifact_sha256') != export['artifact']['sha256']
+                    or media.get('url') != f'/media/evaluations/{event}/gameplay.mp4'
+                    or not re.fullmatch(r'[0-9a-f]{64}', media.get('game_sha256', ''))
+                    or not re.fullmatch(r'[0-9a-f]{64}', media.get('sha256', ''))):
+                fail(f"{origin}: gameplay attribution must match this event, profile and artifact")
+            asset = BASE / 'static' / media['url'].lstrip('/')
+            if not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest() != media['sha256']:
+                fail(f"{origin}: gameplay asset missing or checksum mismatch")
     display_name = (export.get("model") or {}).get("display_name")
     if not isinstance(display_name, str) or not display_name.strip():
         fail(f"{origin}: model.display_name is required")
@@ -539,6 +570,42 @@ def render_generated_event_body(entry: dict[str, Any], export: dict[str, Any]) -
     lines.append("")
     lines.append(f'**Reliability:** {fmt(quality.get("reliability_summary"))}')
     lines.append("")
+    if "welp_sections" in export:
+        lines.extend([
+            "#### WELP section findings and provenance", "",
+            "Each section retains its own profile, methodology, outcomes and manifest.",
+            "Performance observations are not model-quality scores; null/UNKNOWN metrics remain unavailable.",
+            "", "```json",
+            json.dumps({"sections": export["welp_sections"],
+                        "profile_conditions": export.get("profile_conditions", [])},
+                       ensure_ascii=False, sort_keys=True, indent=2),
+            "```", ""])
+    for section in export.get('welp_sections', []):
+        score = section.get('objective_benchmark')
+        if not score:
+            continue
+        lines.extend([
+            "#### Objective HelicopterBench result", "",
+            "| Raw objective points | Normalized / 100 | Result |",
+            "|---|---|---|",
+            f'| {score["mechanical_points"]}/{score["mechanical_max"]} | {score["final_score"]} | {score["class"]} |',
+            "", "Generation PASS means a completed submission, not a functioning game.",
+            "Failed gameplay checks remain part of the objective result.", ""])
+    if export.get('gameplay_media'):
+        media = export['gameplay_media']
+        lines.extend([
+            "#### Independently captured gameplay", "",
+            "Actual independently executed gameplay from the evaluated generated artifact.",
+            "Supplementary evidence only; objective scoring remains authoritative.", "",
+            f'<video controls preload="metadata" width="{int(media["width"])}" height="{int(media["height"])}">',
+            f'<source src="{media["url"]}" type="video/mp4">',
+            f'<a href="{media["url"]}">Download the captured H.264 MP4</a>',
+            '</video>', "",
+            f'Video SHA-256: `{media["sha256"]}`. Methodology: `{media["methodology"]}`.',
+            "Historical /1 scores and videos retain their separate attribution.", ""])
+    elif export.get('gameplay_unavailable_reason'):
+        lines.extend(["#### Gameplay footage", "",
+                      export['gameplay_unavailable_reason'], ""])
 
     lines.append("#### LocalMaxxing")
     lines.append("")

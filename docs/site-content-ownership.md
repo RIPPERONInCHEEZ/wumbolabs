@@ -8,7 +8,7 @@ Keep one authoritative public surface for each kind of fact.
 | Projects index | Compatibility notice only | `/projects/` explains that the directory is retired from navigation. It must not list project pages. |
 | Evaluations | Model catalog and historical evidence | Pinned `WumboLabs/evaluations` registry → `data/labs-registry.json` → `scripts/sync_labs.py` → generated model pages. `latest_evidence_date` is derived as the maximum authoritative `event_date` for that model; never use presentation, Git, filesystem, or deployment timestamps. Never hand-maintain a second catalog or copy evidence facts into client JavaScript. Display a protocol snapshot only when the registry or export already records one. |
 | Research | Long-form reports, experiments, fit tests, baselines, and technical findings | `content/records/*.md` at `/records/`. Navigation label is Research. Preserve historical context and routes. |
-| Methodology | Temporary WELP holding page | `content/methodology/_index.md`. Do not present the previous detailed protocol as the current authoritative method. Do not restate internal development status elsewhere. |
+| Methodology | Current WELP framework and scientific boundaries | `content/methodology/_index.md`; link to the public specification and canonical results. Preserve earlier results under their original methodology; never reinterpret legacy scores as v1.0. |
 | Homepage | Research orientation | `templates/index.html`; link to Evaluations, Research, and Methodology. Do not promote software projects. |
 
 ## Required checks

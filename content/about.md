@@ -12,7 +12,7 @@ The work is about what was tested, how it was tested, what the evidence showed, 
 
 My interest in local AI goes back to 2021, when I started experimenting with projects like DeepDaze. Hardware limits kept those experiments small. The question that stayed was simpler: what can actually be run, measured, and documented on consumer hardware?
 
-That question is now the site's research focus. [Evaluations](/evaluations/) holds model evidence. [Research](/records/) holds technical reports and investigations. [Methodology](/methodology/) is a holding page while WELP is revised.
+That question is now the site's research focus. [Evaluations](/evaluations/) holds model evidence. [Research](/records/) holds technical reports and investigations. [Methodology](/methodology/) explains the scientifically accepted WELP v1.0 framework and its evidence boundaries.
 
 The goal isn't to chase hype.
 

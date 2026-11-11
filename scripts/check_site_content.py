@@ -54,11 +54,6 @@ def main() -> int:
     if records_index.get("title") != "Research" or records_index.get("template") != "records_index.html":
         failures.append("Research index is not the canonical /records/ surface")
 
-    methodology = (CONTENT / "methodology" / "_index.md").read_text(encoding="utf-8")
-    if "Under Construction" not in methodology:
-        failures.append("Methodology is not the WELP under-construction holding page")
-    if "S00" in methodology or "Model Configuration Authority" in methodology:
-        failures.append("Methodology still presents detailed current WELP protocol")
 
     baseline = (CONTENT / "records" / "local-llm-baseline.md").read_text(encoding="utf-8")
     if "historical baseline predates the current welp" not in baseline.lower():
@@ -87,9 +82,6 @@ def main() -> int:
             failures.append("evaluations catalog missing historical notice")
         if "Not every entry was produced by WELP" not in evaluations:
             failures.append("evaluations notice implies every result was WELP")
-        method = html_unescape((PUBLIC / "methodology" / "index.html").read_text(encoding="utf-8"))
-        if "Under Construction" not in method:
-            failures.append("built methodology page is not the holding page")
 
     if failures:
         print("FAIL")

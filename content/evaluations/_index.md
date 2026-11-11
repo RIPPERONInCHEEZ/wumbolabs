@@ -11,7 +11,7 @@ back_url = "/"
 
 ## Historical evaluation notice
 
-This catalog includes results produced under earlier WELP methodologies and other testing workflows. WELP is currently being revised, and existing results have not necessarily been retested under the forthcoming methodology.
+This catalog includes results produced under earlier WELP methodologies and other testing workflows. WELP v1.0 is scientifically accepted; historical entries have not necessarily been retested under v1.0.
 
 Results remain available as historical evidence. Differences in methodology, hardware, runtime, and configuration should be considered when comparing results. Not every entry was produced by WELP. Protocol revisions do not replace frozen scores or verdicts.
 

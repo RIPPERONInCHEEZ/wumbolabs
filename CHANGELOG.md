@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.17 — WELP v1.0 publication
+
+- Publish the accepted eight-section methodology and preserve legacy result boundaries.
+- Bind public visibility to HUMAN_ACCEPTED scientific review and exact section manifests.
+- Verify event-specific gameplay assets and render supplementary MP4 players.
+- Restore standing review-to-publication closeout without a second campaign approval.
+
+## Unreleased — offline WELP section publication
+
+- Preserve configuration-specific WELP section findings and provenance in event rendering.
+- Reject held successor exports at the existing consumer boundary.
+- Verify deterministic private staged rendering without public deployment or activation.
+
 ## v0.16 - Research website refocus
 
 ### Changed

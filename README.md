@@ -43,7 +43,7 @@ The static site is generated into:
 
 - **Evaluations** is the registry-backed model catalog and historical evidence surface.
 - **Research** keeps long-form reports, benchmarks, experiments, fit tests, and investigations at `/records/`.
-- **Methodology** is a temporary WELP holding page while the evaluation framework is revised.
+- **Methodology** explains the scientifically accepted WELP v1.0 framework, its eight sections, and historical/comparison boundaries.
 - **Project URLs** under `/projects/` are unlisted compatibility pages. They are not primary navigation.
 
 See [docs/site-content-ownership.md](docs/site-content-ownership.md) for the operational contract.

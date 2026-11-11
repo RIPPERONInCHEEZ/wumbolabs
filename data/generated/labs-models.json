@@ -3,6 +3,33 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
+      "model_id": "lfm2.5-8b-a1b",
+      "display_name": "LFM2.5-8B-A1B",
+      "page": "/evaluations/lfm2-5-8b-a1b/",
+      "classification": "NOT_READY",
+      "profile_count": 3,
+      "event_count": 4,
+      "latest_evidence_date": "2026-11-11"
+    },
+    {
+      "model_id": "gemma-4-12b",
+      "display_name": "Gemma 4 12B IT",
+      "page": "/evaluations/gemma-4-12b/",
+      "classification": "READY_WITH_GUARDRAILS",
+      "profile_count": 5,
+      "event_count": 7,
+      "latest_evidence_date": "2026-11-09"
+    },
+    {
+      "model_id": "qwen35-9b",
+      "display_name": "Qwen3.5-9B",
+      "page": "/evaluations/qwen35-9b/",
+      "classification": null,
+      "profile_count": 6,
+      "event_count": 9,
+      "latest_evidence_date": "2026-11-08"
+    },
+    {
       "model_id": "ling-3.0-tiny",
       "display_name": "Ling 3.0 Tiny",
       "page": "/evaluations/ling-3-0-tiny/",
@@ -27,15 +54,6 @@
       "classification": "NOT_READY",
       "profile_count": 1,
       "event_count": 1,
-      "latest_evidence_date": "2026-09-24"
-    },
-    {
-      "model_id": "lfm2.5-8b-a1b",
-      "display_name": "LFM2.5-8B-A1B",
-      "page": "/evaluations/lfm2-5-8b-a1b/",
-      "classification": "NOT_READY",
-      "profile_count": 1,
-      "event_count": 2,
       "latest_evidence_date": "2026-09-24"
     },
     {
@@ -84,15 +102,6 @@
       "latest_evidence_date": "2026-09-14"
     },
     {
-      "model_id": "gemma-4-12b",
-      "display_name": "Gemma 4 12B IT",
-      "page": "/evaluations/gemma-4-12b/",
-      "classification": "READY_WITH_GUARDRAILS",
-      "profile_count": 4,
-      "event_count": 6,
-      "latest_evidence_date": "2026-09-12"
-    },
-    {
       "model_id": "qwen38-27b",
       "display_name": "Qwen3.8-27B",
       "page": "/evaluations/qwen38-27b/",
@@ -114,15 +123,6 @@
       "model_id": "qwen35-4b",
       "display_name": "Qwen3.5-4B",
       "page": "/evaluations/qwen35-4b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_evidence_date": "2026-09-11"
-    },
-    {
-      "model_id": "qwen35-9b",
-      "display_name": "Qwen3.5-9B",
-      "page": "/evaluations/qwen35-9b/",
       "classification": null,
       "profile_count": 1,
       "event_count": 1,

@@ -251,6 +251,116 @@
       "resolved_commit": "f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/f551e9cc0b00afd5eb8a3bde81ed6f52a12e4e0b/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09": {
+      "file": "data/generated/evaluations-exports/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09.json",
+      "sha256": "cbd7ca3d3a61de9b20b6ae70e59ea0d8048c5c9c1878ec2855af0e27d3cc871a",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10": {
+      "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10.json",
+      "sha256": "be7a478ca41736201401584267b101e27b93cce2359739040486f6ecb7a23d9f",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11": {
+      "file": "data/generated/evaluations-exports/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11.json",
+      "sha256": "010533924d0c9a7af4c44499cc1ebe231fb3512b1791e884b30d465060823e54",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-r9700-hip-m2-geometry-2026-10-22": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-r9700-hip-m2-geometry-2026-10-22.json",
+      "sha256": "cf54b1295fde52b69d5e9e15e792a3c40b6458e920024289edc4374ee5aefea6",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06.json",
+      "sha256": "c5cdbd8cdd2a6bf03eab451d0cc9fc8e0c0fbcfc92151232c8c3f3efa8eb2475",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06.json",
+      "sha256": "a4c78d20f05cde7da380cdbd7d9394bd238a0892dc6fedb804261fe07ced4721",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06.json",
+      "sha256": "d38965ccf231553dacfa843cadeb8b783bd5b247d0c1ce29ebfbe83081369f7f",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06.json",
+      "sha256": "e78794075406259a229ebc794f57e802e040728b801411167052f6400c31493c",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06.json",
+      "sha256": "bdf6d4c7abda39f19f2d654f8bcebc92c6f98edc5986fe20ba267babc3e151b7",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06.json",
+      "sha256": "85b04153cbf3e517029010c887e4ee6c17bfa77c9ff9886549910d0d84b3d9e5",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08": {
+      "file": "data/generated/evaluations-exports/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08.json",
+      "sha256": "28db53d0d546f411001081fc8d6a2e24098692c9f89585d78fd63d170caa7d76",
+      "repo": "WumboLabs/evaluations",
+      "ref": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "path": "models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/website-publication.json",
+      "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -267,8 +377,20 @@
       "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
     },
     {
+      "slug": "eval-gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09",
+      "campaign": "gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09"
+    },
+    {
       "slug": "eval-granite-42-8b-rtx5070-welp-context-completion-20260924",
       "campaign": "granite-4.2-8b-rtx5070-welp-context-outcome-completion-2026-09-24"
+    },
+    {
+      "slug": "eval-lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11",
+      "campaign": "lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11"
+    },
+    {
+      "slug": "eval-lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10",
+      "campaign": "lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10"
     },
     {
       "slug": "eval-lfm25-8b-a1b-rtx5070-welp-20260923",
@@ -323,6 +445,38 @@
       "campaign": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"
     },
     {
+      "slug": "eval-qwen35-9b-r9700-hip-m2-geometry-2026-10-22",
+      "campaign": "qwen35-9b-r9700-hip-m2-geometry-2026-10-22"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06",
+      "campaign": "qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06",
+      "campaign": "qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06",
+      "campaign": "qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06",
+      "campaign": "qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06",
+      "campaign": "qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06",
+      "campaign": "qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06"
+    },
+    {
+      "slug": "eval-qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08",
+      "campaign": "qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08"
+    },
+    {
       "slug": "eval-qwen36-35b-a3b-recharacterization-2026-09-15",
       "campaign": "qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15"
     },
@@ -357,5 +511,5 @@
   ],
   "pending_public_evidence": [],
   "models": 27,
-  "model_events": 58
+  "model_events": 69
 }

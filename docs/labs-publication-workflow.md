@@ -55,12 +55,20 @@ legacy provenance. No independent public research backlog is generated.
 
 ## Update sequence
 
+Standing owner decision, 2026-11-11: **Evaluation → evidence verification →
+scientific review → HUMAN_ACCEPTED → automatic public-safe publication.**
+No second per-campaign approval follows scientific acceptance. This applies to
+the future separately authorized Qwen3.8-Flash-Next / Strata campaign; it grants
+no inference permission. Valid FAILs, low scores and budget-limited findings
+publish. Unresolved review, failed verification, unsafe content or technical
+INVALID coverage stops publication.
+
 1. Complete the authorized WELP campaign and its publication disposition. Preserve
    measured values, limitations, dates, source attribution, and negative results.
 2. Follow the WELP contract to publish public-safe event files and update the existing
    central registry/indexes. Use the event-file commit in registry citations; then
-   push the registry commit under explicit human authorization. Never fabricate a
-   future commit or publish pending evidence as if it exists.
+   push the registry commit under the standing accepted-campaign authorization.
+   Never fabricate a future commit or publish pending evidence as if it exists.
 3. Set `data/evaluations-source.json` to the pushed central registry commit and hash.
    Add the campaign to the local campaign-side publication-gap registry if applicable.
 4. Run from this website repository:
@@ -77,8 +85,9 @@ legacy provenance. No independent public research backlog is generated.
    ```
 
 5. Review scoped working and staged diffs, public safety, exact report/profile links,
-   model scientific state, and every compatibility route. Git push and deployment
-   require explicit human authorization; a local export does not authorize them.
+   model scientific state, and every compatibility route. For HUMAN_ACCEPTED,
+   verified public-safe campaigns, routine commit/push/deploy is standing-authorized;
+   a local export or visibility flag alone never supplies scientific acceptance.
 6. Push the accepted website main commit for Cloudflare Pages deployment, then verify
    the **actual live** homepage, Evaluation index, model pages, report/profile links,
    and old routes. Mark `WEBSITE_PUBLISHED` only after verification.
@@ -106,3 +115,32 @@ Share the website model URL for ordinary discussion, central model/profile index
 for navigation, and `https://github.com/WumboLabs/evaluations/blob/FULL_SHA/PATH` for
 an exact scientific claim. Branch links are discovery, not immutable citations.
 Legacy links are historical provenance, never future publication targets.
+
+## Successor WELP section exports (offline qualified)
+
+`python -m welp_next.publication CAMPAIGN DEST` produces the existing
+`wumbolabs-labs-publication/1` envelope with additive `welp_sections` and
+`profile_conditions`. These carry independent section results, original negative,
+invalid and budget-limited outcomes, unknown metrics, and profile/manifest hashes;
+they do not define a composite model score. The consumer preserves these fields
+in the generated event body.
+
+The adapter retains the campaign's existing disposition by default. An external
+`welp-scientific-acceptance/1` receipt binds genuine HUMAN_ACCEPTED review to the
+exact campaign, finalized section manifests, review date and original private
+decision-source SHA-256. Use `--acceptance RECEIPT --review-source SOURCE`; no
+private source bytes or reviewer names enter the public export. This produces a
+WEBSITE_READY overlay without editing original evidence. Default development
+holds may advance after acceptance; exceptional privacy/scope holds must first
+be corrected. The website checks the embedded acceptance binding, not just a flag.
+Pending exports have no invented public commit or URL.
+
+For HelicopterBench, use `--gameplay-media DESCRIPTOR` to bind genuine captured
+H.264 MP4 bytes to the event/profile, model artifact, methodology and evaluated
+game SHA-256. The producer verifies the complete video hash and ffprobe format;
+copy those same bytes to `static/media/evaluations/<event_id>/gameplay.mp4`.
+The website verifies that local asset hash and renders a controls-enabled player
+on that event. Video is actual independently executed gameplay, supplementary to
+objective scoring. /1 and /2 retain separate scores and footage attribution.
+If genuine footage is unavailable, record `--gameplay-unavailable-reason`; never
+generate substitute footage. Verify actual browser playback before promotion.
