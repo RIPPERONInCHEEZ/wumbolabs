@@ -1271,7 +1271,7 @@ rankings.
 
 ##### WELP outcome
 
-- **Outcome:** PASS — RECHARACTERIZED
+- **Outcome:** PASS: RECHARACTERIZED
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 

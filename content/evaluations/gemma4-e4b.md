@@ -85,7 +85,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — GEMMA4_E4B_EVIDENCE_COMPLETION_COMPLETE
+- **Outcome:** PASS: GEMMA4_E4B_EVIDENCE_COMPLETION_COMPLETE
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official Google QAT Q4_0 + official mmproj; the only official precision that hosts the full card range with reserve on this GPU; community Q4_K_M pair retained as evidence only (provenance unknown)
 

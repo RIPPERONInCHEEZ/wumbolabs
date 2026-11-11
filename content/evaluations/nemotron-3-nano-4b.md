@@ -86,7 +86,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — NEMOTRON3_NANO_4B_RTX5070_RECHARACTERIZED
+- **Outcome:** PASS: NEMOTRON3_NANO_4B_RTX5070_RECHARACTERIZED
 - **Classification:** READY_WITH_GUARDRAILS (reliability is the guardrail)
 - **Artifact classification:** Canonical official llama.cpp deployment surface (sole official quant); BF16 fit-limited on this GPU at the tested context targets; Q4_K_M quality confound disclosed
 

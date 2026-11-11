@@ -107,7 +107,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — RECHARACTERIZED (Thinking profile)
+- **Outcome:** PASS: RECHARACTERIZED (Thinking profile)
 - **Classification:** NOT_READY
 - **Artifact classification:** current
 

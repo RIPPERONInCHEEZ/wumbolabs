@@ -85,7 +85,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — MINICPM5_2B_RTX5070_CHARACTERIZED; MODEL-CARD CONTEXT ENVELOPE COMPLETE = YES
+- **Outcome:** PASS: MINICPM5_2B_RTX5070_CHARACTERIZED; MODEL-CARD CONTEXT ENVELOPE COMPLETE = YES
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** Official BF16 full-precision candidate (characterized; not deployed); architecture-diversity control value HIGH
 

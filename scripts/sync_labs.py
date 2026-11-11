@@ -709,7 +709,7 @@ def latest_evidence_date(entries: list[dict[str, Any]]) -> str | None:
 
 
 def editorial_presentation(markdown: str) -> str:
-    """Copyedit the derivative only; canonical exports and citations stay intact."""
+    """Copyedit display text only; preserve source evidence and citation targets."""
     replacements = {
         "failure — it is": "failure; it is",
         "persists and worsens — BF16": "persists and worsens: BF16",
@@ -742,7 +742,7 @@ def editorial_presentation(markdown: str) -> str:
     protected = re.compile(
         r"(?ms:^```.*?^```[^\n]*$|^~~~.*?^~~~[^\n]*$)|"
         r"(?m:^>[^\n]*$|^(?: {4}|\t)[^\n]*$)|"
-        r"`+[^`\n]*`+|\[[^\]\n]*\]\([^)]+\)|https?://[^\s)<>]+|</?[A-Za-z][^>\n]*>")
+        r"`+[^`\n]*`+|(?<=\]\()[^)\n]+(?=\))|https?://[^\s)<>]+|</?[A-Za-z][^>\n]*>")
     tokens: list[str] = []
 
     def preserve(match: re.Match[str]) -> str:
@@ -760,7 +760,9 @@ def editorial_presentation(markdown: str) -> str:
             row = row.replace(" — ", ": ")
         elif row.startswith("**") and " · profile:" in row:
             row = row.replace(" — ", ": ")
-        rows[n] = row
+        # New source labels and visible link titles follow the same display rule.
+        # Protected evidence/code/URLs are restored below, never rejected.
+        rows[n] = row.replace(" — ", ": ").replace("—", ": ")
     return re.sub(r"\x00(\d+)\x00", lambda m: tokens[int(m[1])], "".join(rows))
 
 
@@ -1327,6 +1329,22 @@ def selftest() -> int:
     with tempfile.TemporaryDirectory() as td:
         root = Path(td)
         failures: list[str] = []
+        # Display punctuation must not mutate scientific evidence or link identity.
+        display_source = (
+            "- **Outcome:** PASS — RECORDED\n\n"
+            "[Event—detail](/event—id#anchor—id)\n\n"
+            "`a—b`\n\n> Original — quotation\n\n"
+            "```json\n{\"original\": \"A—B\"}\n```\n\n"
+            '<a id="anchor—id"></a>\n')
+        display_expected = (
+            "- **Outcome:** PASS: RECORDED\n\n"
+            "[Event: detail](/event—id#anchor—id)\n\n"
+            "`a—b`\n\n> Original — quotation\n\n"
+            "```json\n{\"original\": \"A—B\"}\n```\n\n"
+            '<a id="anchor—id"></a>\n')
+        if editorial_presentation(display_source) != display_expected:
+            failures.append("display punctuation changed protected evidence or citation identity")
+
 
         def mk_export(slug: str, campaign: str, *, engine: str, artifact: str, precision: str,
                       classification: str, default: int, guarded: int, disposition: str,

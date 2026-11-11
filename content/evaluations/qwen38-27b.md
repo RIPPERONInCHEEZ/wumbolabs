@@ -101,7 +101,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — QWEN38_27B_CONTEXT_ENVELOPE_COMPLETED
+- **Outcome:** PASS: QWEN38_27B_CONTEXT_ENVELOPE_COMPLETED
 - **Classification:** MODEL-CARD CONTEXT ENVELOPE COMPLETE at the inherited guarded deployment classification; practical default unchanged
 
 Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/context-envelope-completion-2026-09-12/REPORT.md
@@ -186,8 +186,8 @@ rankings.
 
 ##### WELP outcome
 
-- **Outcome:** PASS — E18I_H1_CANONICAL_PROMOTION_COMPLETE (E18H: PASS — E18H_H1_VALIDATED_EXPERIMENTAL_PROMOTION_CANDIDATE)
-- **Classification:** CURRENT_CANONICAL_PROFILE — engine/history promotion validation, not a new model classification; the historical deep-evaluation role findings remain those of their tested stack
+- **Outcome:** PASS: E18I_H1_CANONICAL_PROMOTION_COMPLETE (E18H: PASS: E18H_H1_VALIDATED_EXPERIMENTAL_PROMOTION_CANDIDATE)
+- **Classification:** CURRENT_CANONICAL_PROFILE: engine/history promotion validation, not a new model classification; the historical deep-evaluation role findings remain those of their tested stack
 - **Artifact classification:** Current canonical Qwen3.8 serving surface (exact artifact/runtime/geometry scope only)
 
 Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen38-27b/events/h1-canonical-promotion-2026-09-09/REPORT.md

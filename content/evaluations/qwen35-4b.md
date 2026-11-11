@@ -83,7 +83,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — QWEN35_4B_CONTEXT_ENVELOPE_COMPLETED
+- **Outcome:** PASS: QWEN35_4B_CONTEXT_ENVELOPE_COMPLETED
 - **Classification:** READY_WITH_GUARDRAILS (unchanged; new occupancy-dependent instruction-retention guardrail added)
 - **Artifact classification:** Comfortable-fit high-precision BF16 text control
 

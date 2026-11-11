@@ -81,8 +81,8 @@ Status: current tested surface; not the recommended profile.
 
 Events on this profile:
 
-- [Qwen3.5-9B scored Agentic M3 — research and repository (genuine negatives) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06); status: NOT_ASSIGNED
-- [Qwen3.5-9B scored Agentic M3 — readiness and system (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06); status: NOT_ASSIGNED
+- [Qwen3.5-9B scored Agentic M3: research and repository (genuine negatives) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06); status: NOT_ASSIGNED
+- [Qwen3.5-9B scored Agentic M3: readiness and system (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06); status: NOT_ASSIGNED
 - [Qwen3.5-9B advanced reasoning specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06); status: NOT_ASSIGNED
 - [Qwen3.5-9B advanced coding specialist (RTX 5070 CUDA, thinking-on) (2026-11-06)](/evaluations/qwen35-9b#qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06); status: NOT_ASSIGNED
 
@@ -2681,7 +2681,7 @@ rankings.
 
 ##### WELP outcome
 
-- **Outcome:** PASS — QWEN35_9B_CONTEXT_ENVELOPE_COMPLETED
+- **Outcome:** PASS: QWEN35_9B_CONTEXT_ENVELOPE_COMPLETED
 - **Classification:** READY_WITH_GUARDRAILS (unchanged; new occupancy guardrail: at >=99.4% occupancy the model returns the absent-information value NOT_SPECIFIED under the literal key name 'zeta' instead of the required 'absent' key)
 - **Artifact classification:** High-quality quantized medium-fit text control (unchanged)
 

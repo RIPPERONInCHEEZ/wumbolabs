@@ -115,7 +115,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 
 ##### WELP outcome
 
-- **Outcome:** PASS — RECHARACTERIZED
+- **Outcome:** PASS: RECHARACTERIZED
 - **Classification:** READY_WITH_GUARDRAILS
 - **Artifact classification:** current
 
