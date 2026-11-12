@@ -2,7 +2,7 @@
 title = "NeoHorse-1-9B"
 description = "NeoHorse-1-9B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
-weight = 5
+weight = 6
 
 [extra]
 kind = "model"
@@ -39,7 +39,7 @@ Profile identity: `neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoni
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)
 
 Events on this profile:
 
@@ -59,7 +59,7 @@ Profile identity: `neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoni
 Status: validated alternate tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
 
 Events on this profile:
 
@@ -76,7 +76,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP Fresh-Model Characterization: NeoHorse-1-9B (Reasoning On, publisher default)** · profile: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-on-20260925/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b)
 
 ##### Identity
 
@@ -153,7 +153,7 @@ rankings.
 **WELP Reasoning-Profile Characterization: NeoHorse-1-9B (Reasoning Off, supported alternate)** · profile: llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-reasoning-off-20260925/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b)
 
 ##### Identity
 
@@ -230,7 +230,7 @@ rankings.
 **WELP Agentic: NeoHorse-1-9B (publisher-default profile, native tool calls)** · profile: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/bf5e29e1afee4f391c4b8f83e77636b887453f53/models/neohorse-1-9b/events/neohorse-1-9b-rtx5070-welp-agentic-20260925/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b)
 
 ##### Identity
 
@@ -304,5 +304,5 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)
-- **neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
+- **neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)
+- **neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)

@@ -2,7 +2,7 @@
 title = "Gemma 4 12B IT"
 description = "Gemma 4 12B IT: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
-weight = 2
+weight = 3
 
 [extra]
 kind = "model"
@@ -41,7 +41,7 @@ Profile identity: `gemma-4-12b-llamacpp-qat-q4-0`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
 
 Events on this profile:
 
@@ -65,7 +65,7 @@ Profile identity: `gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)
 
 Events on this profile:
 
@@ -80,7 +80,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: specialized tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
 
 Events on this profile:
 
@@ -95,7 +95,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: specialized tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
 
 Events on this profile:
 
@@ -110,7 +110,7 @@ Runtime and artifact identity are described inside the event sections below (han
 Status: specialized tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 Events on this profile:
 
@@ -127,7 +127,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP v1.0 fresh second-family baseline and reasoning arm** · profile: UD-Q4_K_XL (Unsloth Dynamic 2.0 GGUF): Unsloth UD-Q4_K_XL GGUF, llama.cpp CUDA on RTX 5070, thinking not configurable, fresh NVMe (SSD) canonical deployment · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/gemma-4-12b/events/gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
 
 ##### Identity
 
@@ -1245,7 +1245,7 @@ rankings.
 **WELP Recharacterization: llama.cpp QAT UD-Q4_K_XL** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
 
 ##### Identity
 
@@ -1334,7 +1334,7 @@ rankings.
 **Practical Use: shared comparison (canonical)** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-07-04/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
 
 ### Identity and scope
 
@@ -1359,10 +1359,10 @@ this event with their own measured entries.
 **Benchmark Only: LMX local speed** · profile: llama.cpp Q4_K_M (ggml-org) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY (LMX local speed) · related profiles: `gemma-4-12b-llamacpp-qat-q4-0`, `gemma-4-12b-llamacpp-ud-q5-k-xl`, `gemma-4-12b-llamacpp-ud-q6-k-xl`
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
-[Profile Metadata: gemma-4-12b-llamacpp-qat-q4-0](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
-[Profile Metadata: gemma-4-12b-llamacpp-ud-q5-k-xl](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
-[Profile Metadata: gemma-4-12b-llamacpp-ud-q6-k-xl](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
+[Profile Metadata: gemma-4-12b-llamacpp-qat-q4-0](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
+[Profile Metadata: gemma-4-12b-llamacpp-ud-q5-k-xl](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
+[Profile Metadata: gemma-4-12b-llamacpp-ud-q6-k-xl](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 ### Identity and scope
 
@@ -1384,7 +1384,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Practical Use: LLMGauge wumbolabs-practical-use-v1** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: PRACTICAL_USE · status: PRACTICAL_USE / SHARED_MULTI_MODEL_COMPARISON (canonical)
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/shared-events/practical-use-comparison-2026-06-21/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
 
 [Long-form report: 12B Gemma-Based Practical Use Test](/records/gemma-12b-practical-use/)
 
@@ -1411,7 +1411,7 @@ this event with their own measured entries.
 **Specialized Test: honesty ladder** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / UNSCORED_SMOKE
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-honesty-ladder-2026-06-21/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
 
 ### Identity and scope
 
@@ -1433,7 +1433,7 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 **Benchmark Only: LLMGauge v0.16 era** · profile: llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging) · maturity: BENCHMARK_ONLY · status: BENCHMARK_ONLY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-core-agent-v016-2026-06-16/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b)
 
 ### Identity and scope
 
@@ -1452,11 +1452,11 @@ proof. Values are attributed to the tested artifact, runtime, hardware, suite, a
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **gemma-4-12b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
-- **gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)
-- **gemma-4-12b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
-- **gemma-4-12b-llamacpp-ud-q5-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
-- **gemma-4-12b-llamacpp-ud-q6-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
+- **gemma-4-12b-llamacpp-qat-q4-0**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
+- **gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)
+- **gemma-4-12b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
+- **gemma-4-12b-llamacpp-ud-q5-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
+- **gemma-4-12b-llamacpp-ud-q6-k-xl**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 ### Legacy provenance
 

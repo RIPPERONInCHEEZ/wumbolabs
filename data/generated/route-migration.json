@@ -255,6 +255,15 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/qwen3-8-flash-next/",
+      "content_type": "model-page",
+      "model_id": "qwen3.8-flash-next",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-8-flash-next/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

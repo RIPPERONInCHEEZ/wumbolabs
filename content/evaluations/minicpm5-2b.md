@@ -2,7 +2,7 @@
 title = "MiniCPM5-2B"
 description = "MiniCPM5-2B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
-weight = 16
+weight = 17
 
 [extra]
 kind = "model"
@@ -41,7 +41,7 @@ Profile identity: `minicpm5-2b-vllm-bf16`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **Initial Evaluation: contained vLLM BF16** · profile: contained vLLM BF16 · maturity: FULL_EVALUATION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/minicpm5-2b/events/initial-evaluation-2026-09-10-minicpm5/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/minicpm5-2b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/minicpm5-2b)
 
 ##### Identity
 
@@ -152,7 +152,7 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **minicpm5-2b-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
+- **minicpm5-2b-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
 
 ### Legacy provenance
 

@@ -2,7 +2,7 @@
 title = "Granite 4.2 8B"
 description = "Granite 4.2 8B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
-weight = 6
+weight = 7
 
 [extra]
 kind = "model"
@@ -39,7 +39,7 @@ Profile identity: `granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 Methodology snapshot: `welp-next-snapshot-2026-09-24-context-outcome-repair` · WELP commit `ead28bde1ea9bce20cec6b3930125016068a8bbc`
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/adcfa178b6dd9b52eede2c433ffc691dbcd26941/models/granite-4.2-8b/events/granite-42-8b-rtx5070-welp-context-completion-20260924/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/granite-4.2-8b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/granite-4.2-8b)
 
 ##### Identity
 
@@ -133,4 +133,4 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
+- **granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)

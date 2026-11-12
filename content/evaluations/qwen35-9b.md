@@ -2,7 +2,7 @@
 title = "Qwen3.5-9B"
 description = "Qwen3.5-9B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
 template = "lab_model.html"
-weight = 3
+weight = 4
 
 [extra]
 kind = "model"
@@ -39,7 +39,7 @@ Profile identity: `qwen35-9b-llamacpp-q8`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
 
 Events on this profile:
 
@@ -58,7 +58,7 @@ Profile identity: `qwen35-9b-r9700-hip-on-2026-10-22`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
 
 Events on this profile:
 
@@ -77,7 +77,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-on-2026-11-06`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
 
 Events on this profile:
 
@@ -99,7 +99,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-lc-on-2026-11-06`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
 
 Events on this profile:
 
@@ -118,7 +118,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-atu-on-2026-11-06`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
 
 Events on this profile:
 
@@ -137,7 +137,7 @@ Profile identity: `qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
 
 Events on this profile:
 
@@ -154,7 +154,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP v1.0 Runtime Performance** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (runtime-performance measurement surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -539,7 +539,7 @@ rankings.
 **WELP v1.0 Full Agentic M3 (research + repository negatives)** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-remaining-2026-11-06/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -713,7 +713,7 @@ rankings.
 **WELP v1.0 Full Agentic M3 (readiness + system)** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-m3-scored-2026-11-06/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -899,7 +899,7 @@ rankings.
 **WELP v1.0 Advanced Tool Use specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced tool-use surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-tool-use-2026-11-06/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -1069,7 +1069,7 @@ rankings.
 **WELP v1.0 Advanced Reasoning specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-reasoning-2026-11-06/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -1239,7 +1239,7 @@ rankings.
 **WELP v1.0 Advanced Long Context specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (advanced long-context surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-long-context-2026-11-06/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -1409,7 +1409,7 @@ rankings.
 **WELP v1.0 Advanced Coding specialist** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp CUDA on RTX 5070, thinking-on (specialist and scored-M3 surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-advanced-coding-2026-11-06/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -1579,7 +1579,7 @@ rankings.
 **WELP v1.0 reference-family Model/Core baseline** · profile: Q4_K_M (Unsloth publisher GGUF): Unsloth Q4_K_M GGUF, llama.cpp HIP on AMD Radeon AI PRO R9700, thinking-on, qualified wide16k-C0 sampler · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-r9700-hip-m2-geometry-2026-10-22/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -2654,7 +2654,7 @@ rankings.
 **Context Envelope: llama.cpp Q8_0** · profile: llama.cpp Q8_0 GGUF · maturity: CONTEXT_COMPLETION · status: READY_WITH_GUARDRAILS
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen35-9b/events/context-envelope-completion-2026-09-11-qwen35-9b/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b)
 
 ##### Identity
 
@@ -2750,12 +2750,12 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **qwen35-9b-llamacpp-q8**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
-- **qwen35-9b-r9700-hip-on-2026-10-22**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
-- **qwen35-9b-rtx5070-cuda-on-2026-11-06**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
-- **qwen35-9b-rtx5070-cuda-lc-on-2026-11-06**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
-- **qwen35-9b-rtx5070-cuda-atu-on-2026-11-06**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
-- **qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
+- **qwen35-9b-llamacpp-q8**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
+- **qwen35-9b-r9700-hip-on-2026-10-22**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
+- **qwen35-9b-rtx5070-cuda-on-2026-11-06**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
+- **qwen35-9b-rtx5070-cuda-lc-on-2026-11-06**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
+- **qwen35-9b-rtx5070-cuda-atu-on-2026-11-06**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
+- **qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
 
 ### Legacy provenance
 

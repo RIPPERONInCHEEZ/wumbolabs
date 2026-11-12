@@ -41,7 +41,7 @@ Profile identity: `lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment`.
 Status: current canonical/recommended tested surface.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this profile:
 
@@ -61,7 +61,7 @@ Profile identity: `lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
 
 Events on this profile:
 
@@ -80,7 +80,7 @@ Profile identity: `lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11`.
 Status: current tested surface; not the recommended profile.
 
 [Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)
+[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)
 
 Events on this profile:
 
@@ -97,7 +97,7 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 **WELP v1.0 authentic objective HelicopterBench /2** · profile: Q5_K_M (official LiquidAI GGUF): LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable (HelicopterBench /2 one-shot surface) · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-helicopterbench-v2-2026-11-11/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b)
 
 ##### Identity
 
@@ -367,7 +367,7 @@ rankings.
 **WELP v1.0 third-family baseline and reasoning arm** · profile: Q5_K_M (official LiquidAI GGUF): LiquidAI official Q5_K_M GGUF, llama.cpp CUDA on RTX 5070, reasoning not configurable, publisher sampler · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-cuda-m2-2026-11-10/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b)
 
 ##### Identity
 
@@ -1470,7 +1470,7 @@ rankings.
 **WELP Review Adjudication: Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/2d84b324f62ffb6376267f5c011c94e89f58e52e/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-adjudication-20260924/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b)
 
 ##### Identity
 
@@ -1571,7 +1571,7 @@ rankings.
 **WELP Prospective Retest: Liquid AI LFM2.5-8B-A1B (reasoning-on)** · profile: llama.cpp upstream official Q6_K (reasoning-on, publisher sampler) · maturity: CURRENT_WELP · status: NOT_READY
 
 [Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/e7ea77de15f214d2ba84b5a182e07ecbb45ba1ce/models/lfm2.5-8b-a1b/events/lfm25-8b-a1b-rtx5070-welp-20260923/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b)
+[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b)
 
 ##### Identity
 
@@ -1667,6 +1667,6 @@ rankings.
 
 All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
 
-- **lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
-- **lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
-- **lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/c22b97035929d7c798e21b2fbe4a2832319d48c4/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)
+- **lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
+- **lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
+- **lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)

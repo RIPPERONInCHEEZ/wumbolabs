@@ -12,6 +12,15 @@
       "latest_evidence_date": "2026-11-11"
     },
     {
+      "model_id": "qwen3.8-flash-next",
+      "display_name": "Qwen3.8-Flash-Next",
+      "page": "/evaluations/qwen3-8-flash-next/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-11-11"
+    },
+    {
       "model_id": "gemma-4-12b",
       "display_name": "Gemma 4 12B IT",
       "page": "/evaluations/gemma-4-12b/",
