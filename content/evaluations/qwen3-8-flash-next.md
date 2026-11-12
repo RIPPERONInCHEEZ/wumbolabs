@@ -25,7 +25,11 @@ This page collects WumboLabs evidence for **Qwen3.8-Flash-Next**: current findin
 
 Profile identity: `qwen3.8-flash-next-strata-r9700-hip-v11-on-2026-11-11`.
 
-Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
+| Field | Value |
+|---|---|
+| Runtime | Strata v0.2.11/0bdcef4682c5+rocm; Control 0.1.57/c3b3f5035506 |
+| Artifact | qwen3.8-flash-next |
+| Precision | IQ3_S |
 
 Status: current tested surface; not the recommended profile.
 

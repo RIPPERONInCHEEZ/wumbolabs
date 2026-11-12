@@ -1180,7 +1180,7 @@ def run(local_exports: Path | None, check_only: bool) -> int:
     provenance: dict[str, dict[str, Any]] = {}
     blocked: list[str] = []
     for entry in registry["records"]:
-        if entry.get("authoring") != "generated":
+        if entry.get("authoring") != "generated" and not entry.get("source"):
             continue
         raw, prov = resolve_source(entry, local_exports)
         export = validate_export(raw, f"record {entry['slug']!r}")
@@ -1692,6 +1692,39 @@ def selftest() -> int:
         (exports_dir / "a2-context" / "website-publication.json").write_text(
             json.dumps(ctx_a2, indent=2) + "\n")
 
+        # Narrative presentation must not bypass attached structured evidence.
+        hybrid_export = json.loads(json.dumps(ctx_a2))
+        hybrid_export["runtime"]["engine"] = "hybrid-runtime"
+        hybrid_export["welp_sections"] = [
+            {"section": "baseline", "manifest_sha256": "a" * 64}]
+        hybrid_export["scientific_acceptance"] = {
+            "schema": "welp-scientific-acceptance/1", "decision": "HUMAN_ACCEPTED",
+            "campaign_id": hybrid_export["campaign"],
+            "section_manifests": {"baseline": "a" * 64},
+            "review_source_sha256": "b" * 64}
+        hybrid_registry = json.loads(json.dumps(registry))
+        hybrid_entry = hybrid_registry["records"][2]
+        hybrid_entry["authoring"] = "hand-authored"
+        hybrid_entry["event_body"] = "labs-events/initial-evaluation.md"
+        hybrid_entry["source"] = write_export(exports_dir, "a2-context", hybrid_export)
+        REGISTRY_PATH.write_text(json.dumps(hybrid_registry, indent=2) + "\n")
+        if run(root / "exports", check_only=False) != 0:
+            failures.append("selftest: narrative attached export not accepted")
+        if "| Runtime | hybrid-runtime v1 |" not in (EVALUATIONS_PAGES / "model-a.md").read_text():
+            failures.append("selftest: narrative attached deployment identity missing")
+        hybrid_export["scientific_acceptance"]["decision"] = "PENDING_HUMAN_REVIEW"
+        hybrid_entry["source"] = write_export(exports_dir, "a2-context", hybrid_export)
+        REGISTRY_PATH.write_text(json.dumps(hybrid_registry, indent=2) + "\n")
+        try:
+            run(root / "exports", check_only=False)
+            failures.append("selftest: narrative export bypassed human acceptance")
+        except SystemExit as exc:
+            if exc.code != 1:
+                failures.append(f"selftest: narrative acceptance exit {exc.code}")
+        REGISTRY_PATH.write_text(json.dumps(registry, indent=2) + "\n")
+        (exports_dir / "a2-context" / "website-publication.json").write_text(
+            json.dumps(ctx_a2, indent=2) + "\n")
+
         REGISTRY_PATH, GENERATED_MODELS, GENERATED_EVENTS, GENERATED_FRESHNESS, \
             EVALUATIONS_PAGES, GENERATED_ROUTE_MIGRATION, REDIRECTS_FILE, BASE = orig
 
@@ -1718,6 +1751,7 @@ def selftest() -> int:
             "slug mismatch rejected",
             "pending export with URL rejected",
             "conflicting export identity rejected; matching identity accepted",
+            "narrative attached structured evidence retains deployment identity and enforces scientific acceptance",
         ]}, indent=2))
         return 0
 

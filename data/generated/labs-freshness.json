@@ -361,6 +361,16 @@
       "resolved_commit": "a8e5cc762eb9b0c52c9de870264d943841c2c8be",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/a8e5cc762eb9b0c52c9de870264d943841c2c8be/models/qwen35-9b/events/qwen35-9b-rtx5070-cuda-runtime-performance-2026-11-08/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-qwen38-flash-next-welp-v11-strata-r9700-2026-11-11": {
+      "file": "data/generated/evaluations-exports/qwen38-flash-next-welp-v11-strata-r9700-2026-11-11.json",
+      "sha256": "9216f3befacc94a16938bb1bc2e40f4dd8a7b4f53f2b9ed13516666176ec7468",
+      "repo": "WumboLabs/evaluations",
+      "ref": "b50eb6546cb01b95b329bf614e51e688b2f77714",
+      "path": "models/qwen3.8-flash-next/events/qwen38-flash-next-welp-v11-strata-r9700-2026-11-11/website-publication.json",
+      "resolved_commit": "b50eb6546cb01b95b329bf614e51e688b2f77714",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/b50eb6546cb01b95b329bf614e51e688b2f77714/models/qwen3.8-flash-next/events/qwen38-flash-next-welp-v11-strata-r9700-2026-11-11/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -479,6 +489,10 @@
     {
       "slug": "eval-qwen36-35b-a3b-recharacterization-2026-09-15",
       "campaign": "qwen36-35b-a3b-rtx5070-welp-recharacterization-2026-09-15"
+    },
+    {
+      "slug": "eval-qwen38-flash-next-welp-v11-strata-r9700-2026-11-11",
+      "campaign": "qwen38-flash-next-welp-v11-strata-r9700-2026-11-11"
     },
     {
       "slug": "eval-spark25-4b-rtx5070-welp-20260920",

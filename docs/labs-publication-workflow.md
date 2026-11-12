@@ -137,6 +137,10 @@ Legacy links are historical provenance, never future publication targets.
 invalid and budget-limited outcomes, unknown metrics, and profile/manifest hashes;
 they do not define a composite model score. The consumer preserves these fields
 in the generated event body.
+Narrative-authored events may attach the same structured source alongside their
+report body. The source still passes hash, identity and scientific-acceptance
+admission and supplies tested-profile metadata; choosing narrative presentation
+does not bypass those checks or make the attached export disappear.
 
 The adapter retains the campaign's existing disposition by default. An external
 `welp-scientific-acceptance/1` receipt binds genuine HUMAN_ACCEPTED review to the
