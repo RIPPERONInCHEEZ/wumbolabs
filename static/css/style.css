@@ -1140,7 +1140,6 @@ code,
 }
 
 .operator-console-bar,
-.operator-path-nav,
 .operator-route-key,
 .operator-route-links {
   font-family: var(--font-mono);
@@ -1172,35 +1171,12 @@ code,
   background: var(--wl-status-neutral);
 }
 
-.operator-path-nav {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.7rem 0.85rem;
-  border-top: 1px solid var(--wl-border);
-  background: var(--wl-bg-panel);
-  font-size: 0.76rem;
-}
 
 .operator-prompt {
   margin-right: 0.35rem;
   color: var(--wl-text-muted);
 }
 
-.operator-path-nav a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.75rem;
-  padding: 0.3rem 0.5rem;
-  color: var(--wl-text-soft);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-.operator-path-nav a:hover {
-  color: var(--wl-text);
-  text-decoration-thickness: 2px;
-}
 
 
 .operator-console a:focus-visible {
@@ -1209,9 +1185,6 @@ code,
 }
 
 .operator-overview {
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.75fr);
-  gap: 1px;
   background: var(--wl-border);
   scroll-margin-top: 0;
 }
@@ -1251,24 +1224,6 @@ code,
   line-height: 1.75;
 }
 
-.operator-status {
-  min-height: 0;
-  padding: 1.25rem;
-  border: 0;
-  box-shadow: none;
-  align-self: stretch;
-  height: auto;
-  justify-content: flex-start;
-}
-
-.operator-status .status-list {
-  max-height: none;
-  overflow: visible;
-}
-
-.operator-status .status-list a {
-  color: inherit;
-}
 
 .operator-evidence,
 .operator-systems {
@@ -1356,7 +1311,7 @@ code,
 
 
 .operator-systems .inventory-list {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .operator-systems .inventory-list div {
@@ -1373,9 +1328,6 @@ code,
 }
 
 @media (max-width: 900px) {
-  .operator-overview {
-    grid-template-columns: 1fr;
-  }
   .operator-route {
     grid-template-columns: 130px minmax(0, 1fr);
   }
@@ -1412,18 +1364,14 @@ code,
     gap: 0.25rem;
   }
 
-  .operator-path-nav {
-    flex-wrap: wrap;
-  }
 
   .operator-prompt {
     flex-basis: 100%;
   }
 
-.operator-pane,
-.operator-status {
-  padding: 0.9rem;
-}
+  .operator-pane {
+    padding: 0.9rem;
+  }
 
   .operator-overview h1 {
     font-size: clamp(2.1rem, 11vw, 3rem);
@@ -2356,7 +2304,7 @@ body {
 
 .evaluation-table {
   width: 100%;
-  min-width: 64rem;
+  min-width: 52rem;
   border-collapse: collapse;
   font-size: 0.9rem;
 }
@@ -2369,10 +2317,6 @@ body {
   vertical-align: top;
 }
 
-/* Classification column stays a neutral signal; text is authoritative. */
-.evaluation-table tbody td:nth-child(5) {
-  color: var(--wl-status-neutral);
-}
 
 .evaluation-table thead th {
   background: var(--wl-bg-panel);
@@ -2416,4 +2360,54 @@ main :is(a, button, input, select, summary, [tabindex]):focus-visible {
     grid-column: auto;
     justify-content: flex-start;
   }
+}
+
+/* Shared findings-first model evidence. */
+.evaluation-model .page-record-content > h2 {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--wl-border);
+}
+
+.evaluation-model .page-record-content h3 {
+  margin-top: 2rem;
+}
+
+.evaluation-model details {
+  padding: 0.8rem 0;
+  margin: 1rem 0;
+}
+
+.evaluation-model summary {
+  min-height: 2.75rem;
+  padding: 0.5rem 0;
+}
+
+.evaluation-data-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.evaluation-model .evaluation-data-scroll table {
+  display: table;
+  width: 100%;
+  margin: 0;
+}
+
+.evaluation-model :is(th, td) {
+  min-width: 6rem;
+  vertical-align: top;
+}
+
+.evaluation-model th {
+  background: var(--wl-bg-panel);
+}
+
+.evaluation-model :is(h2, h3, a[id]) {
+  scroll-margin-top: 5rem;
+}
+
+.evaluation-model a[id] {
+  display: block;
 }

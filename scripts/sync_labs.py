@@ -48,6 +48,8 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+import labs_findings_render  # findings-first Evaluation page renderer
+
 REGISTRY_PATH = Path("data/labs-registry.json")
 EVENT_BODIES = Path("data")  # hand-authored event bodies resolve under data/
 GENERATED_MODELS = Path("data/generated/labs-models.json")
@@ -413,10 +415,6 @@ def fmt(value: Any, default: str = "not recorded") -> str:
     return str(value)
 
 
-def fmt_tokens(value: Any) -> str:
-    return f"{value:,} tokens" if isinstance(value, int) else fmt(value)
-
-
 def url_slug(model_id: str) -> str:
     """Public URL slug for a model page.
 
@@ -427,220 +425,6 @@ def url_slug(model_id: str) -> str:
     return model_id.replace(".", "-")
 
 
-def shift_headings(markdown: str) -> str:
-    out = []
-    in_fence = False
-    for line in markdown.split("\n"):
-        if line.lstrip().startswith("```"):
-            in_fence = not in_fence
-        if not in_fence and line.startswith("#"):
-            line = "#" + line
-        out.append(line)
-    return "\n".join(out)
-
-
-def render_generated_event_body(entry: dict[str, Any], export: dict[str, Any]) -> str:
-    """Render the immutable per-event detail (export derivative) for inlining."""
-    slug = entry["slug"]
-    model = export["model"]
-    artifact = export["artifact"]
-    runtime = export["runtime"]
-    hardware = export["hardware"]
-    welp = export["welp"]
-    ctx = export["context"]
-    perf = export.get("performance") or {}
-    quality = export["quality"]
-    lmx = export["localmaxxing"]
-    evidence = export["canonical_evidence"]
-    pending = evidence["state"] == "PENDING_HUMAN_GATE"
-    date = entry.get("record_date") or export.get("publication_date") or ""
-
-    lines: list[str] = []
-    if pending:
-        proposed = evidence.get("proposed_repo")
-        lines.append("> **Evidence publication pending.** Canonical public evidence for this")
-        lines.append("> record has not been published yet"
-                     + (f" (proposed repository: `{proposed}`)" if proposed else "") + ".")
-        lines.append("> This section is a local derivative prepared ahead of publication; no")
-        lines.append("> canonical evidence URL is claimed. The listed measurements come from")
-        lines.append("> the accepted local WELP campaign named below.")
-        lines.append("")
-
-    campaign = export.get("campaign", "")
-    lines.append("#### Identity")
-    lines.append("")
-    lines.append("| Field | Value |")
-    lines.append("|---|---|")
-    lines.append(f'| Model | {fmt(model.get("display_name"))} |')
-    lines.append(f'| Producer | {fmt(model.get("producer"))} |')
-    if model.get("official_id"):
-        lines.append(f'| Official model | {model["official_id"]}'
-                     + (f' @ `{model["official_revision"]}`' if model.get("official_revision") else "") + " |")
-    lines.append(f'| Tested artifact | {fmt(artifact.get("tested"))} |')
-    lines.append(f'| Precision | {fmt(artifact.get("precision"))} |')
-    if artifact.get("sha256"):
-        sha = artifact["sha256"]
-        if re.fullmatch(r"[a-f0-9]{64}", str(sha)):
-            lines.append(f'| Artifact SHA-256 | `{sha}` |')
-        else:
-            lines.append(f'| Artifact hash evidence | {sha} |')
-    lines.append(f'| Campaign | `{campaign}` |')
-    lines.append(f'| Record date | {date} |')
-    lines.append("")
-
-    lines.append("#### Runtime and hardware")
-    lines.append("")
-    lines.append("| Field | Value |")
-    lines.append("|---|---|")
-    lines.append(f'| Engine | {fmt(runtime.get("engine"))} |')
-    lines.append(f'| Runtime version | {fmt(runtime.get("version"))} |')
-    if runtime.get("notes"):
-        lines.append(f'| Runtime notes | {runtime["notes"]} |')
-    gpu = fmt(hardware.get("gpu"))
-    machine = hardware.get("machine")
-    hw = f"{machine} ({gpu})" if machine else gpu
-    lines.append(f'| Hardware | {hw} |')
-    if hardware.get("notes"):
-        lines.append(f'| Hardware notes | {hardware["notes"]} |')
-    lines.append("")
-
-    lines.append("#### WELP outcome")
-    lines.append("")
-    lines.append(f'- **Outcome:** {fmt(welp.get("outcome"))}')
-    lines.append(f'- **Classification:** {fmt(welp.get("classification"))}')
-    if welp.get("artifact_classification"):
-        lines.append(f'- **Artifact classification:** {welp["artifact_classification"]}')
-    if welp.get("snapshot"):
-        lines.append(f'- **Methodology snapshot:** {welp["snapshot"]}')
-    if welp.get("contract"):
-        lines.append(f'- **Classification contract:** {welp["contract"]}')
-    lines.append("")
-    lines.append("Publication state: **%s**; %s" % (
-        "evidence pending human gate" if pending else "published",
-        "canonical public evidence is not yet published; this record shows an explicit pending state"
-        if pending else f'canonical evidence: {evidence.get("url")}',
-    ))
-    lines.append("")
-
-    lines.append("#### Context profile")
-    lines.append("")
-    lines.append("| Field | Value |")
-    lines.append("|---|---|")
-    lines.append(f'| Practical default | {fmt(ctx.get("practical_default_tokens"))} tokens |')
-    lines.append(f'| Guarded context | {fmt(ctx.get("guarded_tokens"))} tokens |')
-    lines.append(f'| Native model-card maximum | {fmt(ctx.get("native_maximum_tokens"))} tokens |')
-    lines.append(f'| Model-card envelope complete | {fmt(ctx.get("envelope_complete"))} |')
-    lines.append(f'| Native maximum disposition | {fmt(ctx.get("native_maximum_disposition"))} |')
-    lines.append("")
-
-    if perf:
-        lines.append("#### Headline performance")
-        lines.append("")
-        lines.append("| Surface | TTFT | Prefill | Decode |")
-        lines.append("|---|---|---|---|")
-        short_ttft = perf.get("short_ttft_s")
-        short_dec = perf.get("short_decode_tps")
-        mod = perf.get("moderate_input_tokens")
-        lines.append("| Short | %s | Not recorded | %s |" % (
-            f"{short_ttft:g} s" if isinstance(short_ttft, (int, float)) else "not recorded",
-            f"{short_dec:g} tok/s" if isinstance(short_dec, (int, float)) else "not recorded"))
-        mod_ttft = perf.get("moderate_ttft_s")
-        mod_pre = perf.get("moderate_prefill_tps")
-        mod_dec = perf.get("moderate_decode_tps")
-        lines.append("| Moderate (%s-token input) | %s | %s | %s |" % (
-            fmt(mod, "unspecified"),
-            f"{mod_ttft:g} s" if isinstance(mod_ttft, (int, float)) else "not recorded",
-            f"{mod_pre:g} tok/s" if isinstance(mod_pre, (int, float)) else "not recorded",
-            f"{mod_dec:g} tok/s" if isinstance(mod_dec, (int, float)) else "not recorded"))
-        if perf.get("surface_note"):
-            lines.append("")
-            lines.append(f"<p><small>{perf['surface_note']}</small></p>")
-        lines.append("")
-
-    lines.append("#### Quality and capabilities")
-    lines.append("")
-    lines.append(f'- **Constrained result:** {fmt(quality.get("constrained_result"))}')
-    for cap in quality.get("capability_highlights") or []:
-        lines.append(f"- {cap}")
-    lines.append("")
-    lines.append("##### Guardrails and limitations")
-    lines.append("")
-    for guard in quality.get("key_guardrails") or []:
-        lines.append(f"- {guard}")
-    lines.append("")
-    lines.append(f'**Reliability:** {fmt(quality.get("reliability_summary"))}')
-    lines.append("")
-    if "welp_sections" in export:
-        lines.extend([
-            "#### WELP section findings and provenance", "",
-            "Each section retains its own profile, methodology, outcomes and manifest.",
-            "Performance observations are not model-quality scores; null/UNKNOWN metrics remain unavailable.",
-            "", "```json",
-            json.dumps({"sections": export["welp_sections"],
-                        "profile_conditions": export.get("profile_conditions", [])},
-                       ensure_ascii=False, sort_keys=True, indent=2),
-            "```", ""])
-    for section in export.get('welp_sections', []):
-        score = section.get('objective_benchmark')
-        if not score:
-            continue
-        lines.extend([
-            "#### Objective HelicopterBench result", "",
-            "| Raw objective points | Normalized / 100 | Result |",
-            "|---|---|---|",
-            f'| {score["mechanical_points"]}/{score["mechanical_max"]} | {score["final_score"]} | {score["class"]} |',
-            "", "Generation PASS means a completed submission, not a functioning game.",
-            "Failed gameplay checks remain part of the objective result.", ""])
-    if export.get('gameplay_media'):
-        media = export['gameplay_media']
-        lines.extend([
-            "#### Independently captured gameplay", "",
-            "Actual independently executed gameplay from the evaluated generated artifact.",
-            "Supplementary evidence only; objective scoring remains authoritative.", "",
-            f'<video controls preload="metadata" width="{int(media["width"])}" height="{int(media["height"])}">',
-            f'<source src="{media["url"]}" type="video/mp4">',
-            f'<a href="{media["url"]}">Download the captured H.264 MP4</a>',
-            '</video>', "",
-            f'Video SHA-256: `{media["sha256"]}`. Methodology: `{media["methodology"]}`.',
-            "Historical /1 scores and videos retain their separate attribution.", ""])
-    elif export.get('gameplay_unavailable_reason'):
-        lines.extend(["#### Gameplay footage", "",
-                      export['gameplay_unavailable_reason'], ""])
-
-    lines.append("#### LocalMaxxing")
-    lines.append("")
-    lines.append("| Field | Value |")
-    lines.append("|---|---|")
-    lines.append(f'| Status | {fmt(lmx.get("status"))} |')
-    lines.append(f'| Canonical context | {fmt(lmx.get("canonical_context_tokens"))} tokens |')
-    lines.append(f'| tok/s out | {fmt(lmx.get("tok_s_out"))} |')
-    lines.append(f'| TTFT | %s |' % (f"{lmx['ttft_ms']:g} ms" if isinstance(lmx.get("ttft_ms"), (int, float)) else "not recorded"))
-    lines.append(f'| Submission reference | {fmt(lmx.get("submission_ref"))} |')
-    lines.append(f'| verifiedRun | {fmt(lmx.get("verified_run"), "null (not claimed)")} |')
-    if lmx.get("note"):
-        lines.append("")
-        lines.append(f"<p><small>{lmx['note']}</small></p>")
-    lines.append("")
-
-    lines.append("#### Canonical evidence")
-    lines.append("")
-    if pending:
-        lines.append("State: **PENDING_HUMAN_GATE**. The canonical public evidence repository")
-        lines.append("has not been published yet. This section intentionally claims no canonical")
-        lines.append("evidence URL. Once the evidence repository is published and the registry is")
-        lines.append("updated, this record synchronizes against it and the pending state is removed.")
-    else:
-        lines.append(f'Canonical public evidence: <{evidence["url"]}>')
-    lines.append("")
-    lines.append("This event section is a human-readable derivative of the accepted local WELP")
-    lines.append("campaign evidence named above; the campaign's REPORT.md is the authoritative")
-    lines.append("scientific source. Results are bounded by the tested artifact, runtime,")
-    lines.append("hardware, configuration, and protocol snapshot, and are not universal model")
-    lines.append("rankings.")
-    lines.append("")
-    return "\n".join(lines)
-
-
 def hand_authored_event_body(entry: dict[str, Any]) -> str:
     rel = safe_rel_path(entry.get("event_body"), "event_body", entry["slug"])
     path = BASE / EVENT_BODIES / rel
@@ -648,9 +432,8 @@ def hand_authored_event_body(entry: dict[str, Any]) -> str:
 
 
 def event_body(entry: dict[str, Any], exports: dict[str, dict[str, Any]]) -> str:
-    if entry.get("authoring") == "generated":
-        # stored heading level is already nested; shift the fresh render once
-        return shift_headings(render_generated_event_body(entry, exports[entry["slug"]]))
+    """Event body for narrative (hand-authored) records. Generated records
+    render entirely from their exports in labs_findings_render."""
     return hand_authored_event_body(entry)
 
 
@@ -768,7 +551,8 @@ def editorial_presentation(markdown: str) -> str:
 
 def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
                       exports: dict[str, dict[str, Any]], catalog_weight: int,
-                      shared_for_model: list[dict[str, Any]] | None = None) -> str:
+                      shared_for_model: list[dict[str, Any]] | None = None,
+                      profiles: dict[str, dict[str, Any]] | None = None) -> str:
     mid = model["model_id"]
     display = model["display_name"]
     entries_sorted = sorted(entries, key=lambda e: (e["event_date"], e["slug"]), reverse=True)
@@ -797,213 +581,17 @@ def render_model_page(model: dict[str, Any], entries: list[dict[str, Any]],
     # stable: profile_sort_key sorts by (status-current, latest_date); reverse=False keeps
     # current first. Do not double-sort (kept explicit for clarity).
 
-    desc = (f"{display}: tested profiles, validated context, and chronological "
-            "evaluation history. Findings are attributed to the profile and event "
-            "that measured them.")
+    # Findings-first presentation for every model page (website presentation
+    # only; same inputs, one shared design). Reuses the precedence logic above.
+    return labs_findings_render.render_findings_first_page(
+        model=model, entries=entries, entries_sorted=entries_sorted,
+        profile_ids=profile_ids, profile_events=profile_events,
+        cls_event=cls_event, ctx_event=ctx_event, rec_event=rec_event,
+        latest=latest, exports=exports, catalog_weight=catalog_weight,
+        shared_for_model=shared_for_model, profiles=profiles,
+        fmt=fmt, anchor_link=anchor_link, event_body=event_body,
+        editorial_presentation=editorial_presentation)
 
-    lines: list[str] = []
-    lines.append("+++")
-    lines.append(f'title = "{display}"')
-    lines.append(f'description = "{desc}"')
-    lines.append('template = "lab_model.html"')
-    lines.append(f"weight = {catalog_weight}")
-    lines.append("")
-    lines.append("[extra]")
-    lines.append("kind = \"model\"")
-    lines.append(f'model_id = "{mid}"')
-    lines.append(f'vendor = "{fmt(model.get("vendor"))}"')
-    if cls_event:
-        lines.append(f'classification = "{fmt(cls_event.get("welp_status"))}"')
-    if rec_event:
-        lines.append(f'recommended_profile_id = "{rec_event["profile_id"]}"')
-        lines.append(f'recommended_profile_name = "{fmt(rec_event.get("profile_name"))}"')
-    ctx_export = exports.get(ctx_event["slug"]) if ctx_event else None
-    if ctx_export and isinstance(ctx_export.get("context"), dict):
-        c = ctx_export["context"]
-        if isinstance(c.get("practical_default_tokens"), int):
-            practical = f"{c['practical_default_tokens']:,} default"
-            if isinstance(c.get("guarded_tokens"), int):
-                practical += f" / {c['guarded_tokens']:,} guarded"
-            lines.append(f'practical_context = "{practical} tokens"')
-    lines.append(f"profile_count = {len(profile_ids)}")
-    lines.append(f"event_count = {len(entries)}")
-    lines.append(f'latest_evidence_date = {latest["event_date"]}')
-    lines.append("+++")
-    lines.append("")
-
-    lines.append(
-        f"This page collects WumboLabs evidence for **{display}**: current findings, "
-        "tested profiles, and chronological evaluation history. Each value belongs "
-        "to its measured deployment; later findings do not silently replace "
-        "historical evidence.")
-    lines.append("")
-
-    # ---- current state ----
-    lines.append("## Current state")
-    lines.append("")
-    if cls_event:
-        lines.append(f'- **Classification:** {fmt(cls_event.get("welp_status"))} '
-                     f"; source: {anchor_link(cls_event)}, profile {cls_event.get('profile_name')}")
-    if rec_event:
-        repo_url = (rec_event.get("canonical_evidence") or {}).get("url", "")
-        lines.append(f'- **Recommended profile:** {fmt(rec_event.get("profile_name"))} '
-                     f'(`{rec_event["profile_id"]}`, {rec_event.get("profile_status")})'
-                     + (f"; [canonical evidence]({repo_url})" if repo_url else ""))
-    if ctx_export and isinstance(ctx_export.get("context"), dict) \
-            and isinstance(ctx_export["context"].get("practical_default_tokens"), int):
-        c = ctx_export["context"]
-        practical = f"{c['practical_default_tokens']:,} default"
-        if isinstance(c.get("guarded_tokens"), int):
-            practical += f" / {c['guarded_tokens']:,} guarded"
-        extra = ""
-        if isinstance(c.get("native_maximum_tokens"), int):
-            extra = f"; native model-card maximum {c['native_maximum_tokens']:,}"
-            if c.get("envelope_complete") is not None:
-                extra += f" (envelope complete: {fmt(c['envelope_complete'])})"
-        lines.append(f'- **Practical context:** {practical} tokens{extra}; source: {anchor_link(ctx_event)}')
-    lines.append(f'- **Latest evidence:** {latest["event_date"]}: {latest.get("event_title")}')
-    lines.append("")
-
-    # ---- tested profiles ----
-    lines.append("## Tested profiles")
-    lines.append("")
-    for pid in profile_ids:
-        pevents = sorted(profile_events[pid], key=lambda e: (e["event_date"], e["slug"]), reverse=True)
-        first = pevents[0]
-        status = first.get("profile_status") or "current"
-        lines.append(f'### {fmt(first.get("profile_name"))} ({status.upper()})')
-        lines.append("")
-        lines.append(f'Profile identity: `{pid}`.')
-        lines.append("")
-        exports_for_profile = [exports[e["slug"]] for e in pevents if e["slug"] in exports]
-        if exports_for_profile:
-            ex = exports_for_profile[0]
-            art, rt = ex["artifact"], ex["runtime"]
-            lines.append("| Field | Value |")
-            lines.append("|---|---|")
-            lines.append(f'| Runtime | {fmt(rt.get("engine"))}'
-                         + (f' {rt.get("version")}' if rt.get("version") else "") + " |")
-            lines.append(f'| Artifact | {fmt(art.get("tested"))} |')
-            lines.append(f'| Precision | {fmt(art.get("precision"))} |')
-            lines.append("")
-        else:
-            lines.append("Runtime and artifact identity are described inside the event "
-                         "sections below (hand-authored records; no machine-readable export).")
-            lines.append("")
-        status_line = {
-            "current": ("current canonical/recommended tested surface" if rec_event
-                        and pid == rec_event['profile_id'] else
-                        "current tested surface; not the recommended profile"),
-            "current-alternate": "validated alternate tested surface",
-            "historical": "historical tested surface; retained evidence, not the recommended profile",
-            "superseded": "superseded by a materially different accepted profile",
-            "specialized": "specialized tested surface",
-        }[status]
-        lines.append(f"Status: {status_line}.")
-        lines.append("")
-        repo_url = (first.get("canonical_evidence") or {}).get("url", "")
-        if repo_url:
-            lines.append(f"[Canonical Evidence]({repo_url})")
-            metadata_url = first.get("profile_metadata_urls", {}).get(pid)
-            if metadata_url:
-                lines.append(f"[Profile Metadata]({metadata_url})")
-        lines.append("")
-        lines.append("Events on this profile:")
-        lines.append("")
-        for e in pevents:
-            lines.append(f"- {anchor_link(e)}; status: {fmt(e.get('welp_status'))}")
-        lines.append("")
-
-    # ---- testing history ----
-    lines.append("## Testing history")
-    lines.append("")
-    lines.append("Newest first. Each event is one immutable testing/publication event; the "
-                 "exact scientific report lives in the canonical evidence repository linked "
-                 "at the top of each event.")
-    lines.append("")
-    for e in entries_sorted:
-        lines.append(f'<a id="{e["event_id"]}"></a>')
-        lines.append("")
-        lines.append(f'### {e["event_date"]}: {fmt(e.get("event_title"))}')
-        lines.append("")
-        ev_url = (e.get("canonical_evidence") or {}).get("url", "")
-        meta = [f'**{fmt(e.get("event_kicker"))}**', f'profile: {e.get("profile_name")}']
-        if e.get("evidence_maturity"):
-            meta.append(f'maturity: {e["evidence_maturity"]}')
-        if e.get("welp_status"):
-            meta.append(f'status: {e["welp_status"]}')
-        if e.get("related_profile_ids"):
-            meta.append("related profiles: " + ", ".join(f'`{p}`' for p in e["related_profile_ids"]))
-        line = " · ".join(meta)
-        lines.append(line)
-        recorded = e.get("welp") if isinstance(e.get("welp"), dict) else {}
-        snapshot = recorded.get("snapshot")
-        welp_commit = recorded.get("welp_commit")
-        if isinstance(snapshot, str) and snapshot.strip():
-            provenance = f"Methodology snapshot: `{snapshot.strip()}`"
-            if isinstance(welp_commit, str) and re.fullmatch(r"[0-9a-f]{40}", welp_commit):
-                provenance += f" · WELP commit `{welp_commit}`"
-            lines.append("")
-            lines.append(provenance)
-        if ev_url:
-            lines.append("")
-            lines.append(f"[Canonical Evidence / Full Report]({ev_url})")
-            if e.get("model_evidence_url"):
-                lines.append(f"[View on GitHub]({e['model_evidence_url']})")
-            for pid in e.get("related_profile_ids", []):
-                url = e.get("profile_metadata_urls", {}).get(pid)
-                if url:
-                    lines.append(f"[Profile Metadata: {pid}]({url})")
-        report_page = e.get("report_page")
-        if report_page:
-            report_url = f"/{report_page[:-3]}/" if report_page.endswith(".md") else report_page
-            report_title = e.get("report_title") or "Long-form campaign report"
-            lines.append("")
-            lines.append(f"[Long-form report: {report_title}]({report_url})")
-        lines.append("")
-        lines.append(event_body(e, exports).rstrip())
-        lines.append("")
-
-    if shared_for_model:
-        lines.append("## Shared comparison events")
-        lines.append("")
-        lines.append("This model appears in shared multi-model comparisons. Each report is "
-                     "stored once in WumboLabs/evaluations/shared-events/; the model's "
-                     "measured entries remain attributed to the same historical event:")
-        lines.append("")
-        for s in sorted(shared_for_model, key=lambda x: (x["entry"]["event_date"], x["entry"]["slug"])):
-            e = s["entry"]
-            note = s.get("note")
-            lines.append(f"- {anchor_link(e)}"
-                         + (f": {note}" if note else "")
-                         + (f" [Canonical Evidence / Full Report]({e['canonical_evidence']['url']})"
-                            if e.get("canonical_evidence", {}).get("url") else ""))
-        lines.append("")
-
-    lines.append("## Canonical evidence")
-    lines.append("")
-    lines.append("All canonical public evidence lives in WumboLabs/evaluations. Each event "
-                 "links an immutable full-commit/path citation; each profile remains a "
-                 "distinct scientific identity, not a separate repository.")
-    lines.append("")
-    for pid in profile_ids:
-        first = profile_events[pid][0]
-        url = first.get("profile_metadata_urls", {}).get(pid) or \
-            (first.get("canonical_evidence") or {}).get("url", "")
-        if url:
-            lines.append(f"- **{pid}**: [Profile Metadata]({url})")
-    legacy_sources = {
-        (source["repo"], source["commit"], source["path"])
-        for e in entries for source in e.get("legacy_sources", [])
-    }
-    if legacy_sources:
-        lines.extend(["", "### Legacy provenance", ""])
-        for repo, commit, path in sorted(legacy_sources):
-            lines.append(f"- [{repo} @ `{commit}`](https://github.com/{repo}/blob/{commit}/{path})")
-    while lines and lines[-1] == "":
-        lines.pop()
-
-    return editorial_presentation("\n".join(lines) + "\n")
 
 
 def render_stub(entry: dict[str, Any], old_slug: str) -> str:
@@ -1232,6 +820,7 @@ def run(local_exports: Path | None, check_only: bool) -> int:
         (changed if is_changed else unchanged).append(str(path))
 
     page_meta: dict[str, dict[str, Any]] = {}
+    profile_map = {p["profile_id"]: p for p in registry.get("profiles", [])}
     for model in registry["models"]:
         mid = model["model_id"]
         entries = entries_by_model.get(mid) or []
@@ -1265,7 +854,7 @@ def run(local_exports: Path | None, check_only: bool) -> int:
         entries = entries_by_model.get(mid) or []
         record_output(BASE / EVALUATIONS_PAGES / f"{url_slug(mid)}.md",
                       render_model_page(model, entries, exports, catalog_weight,
-                                        shared_by_model.get(mid)))
+                                        shared_by_model.get(mid), profile_map))
 
     for entry in registry["records"]:
         for url in entry.get("legacy_urls") or []:
@@ -1522,7 +1111,7 @@ def selftest() -> int:
 
         # 2. current-state precedence: classification from the full-characterization
         #    hand-authored event; context from the later context-only completion.
-        if "- **Classification:** COMPLETED_DEEP_EVALUATION" not in a_text:
+        if "- **Model classification: COMPLETED_DEEP_EVALUATION**" not in a_text:
             failures.append("selftest: classification must come from the classification-scope event")
         if "98,304 default" in a_text or "32,768 default / 98,304 guarded" not in a_text:
             failures.append("selftest: practical context must come from the context-scope event")
@@ -1710,7 +1299,7 @@ def selftest() -> int:
         REGISTRY_PATH.write_text(json.dumps(hybrid_registry, indent=2) + "\n")
         if run(root / "exports", check_only=False) != 0:
             failures.append("selftest: narrative attached export not accepted")
-        if "| Runtime | hybrid-runtime v1 |" not in (EVALUATIONS_PAGES / "model-a.md").read_text():
+        if "- Runtime (as recorded): hybrid-runtime v1." not in (EVALUATIONS_PAGES / "model-a.md").read_text():
             failures.append("selftest: narrative attached deployment identity missing")
         hybrid_export["scientific_acceptance"]["decision"] = "PENDING_HUMAN_REVIEW"
         hybrid_entry["source"] = write_export(exports_dir, "a2-context", hybrid_export)

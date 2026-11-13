@@ -30,7 +30,7 @@
     <div class="evaluation-catalog-controls" id="evaluation-controls" hidden>
       <div class="evaluation-search">
         <label for="evaluation-search">Search evaluations</label>
-        <input id="evaluation-search" type="search" placeholder="Search model, producer, artifact, or status" autocomplete="off">
+        <input id="evaluation-search" type="search" placeholder="Search model, producer, or artifact" autocomplete="off">
       </div>
       <div class="evaluation-sort">
         <label for="evaluation-sort">Sort</label>
@@ -66,23 +66,20 @@
             <th scope="col">Producer</th>
             <th scope="col">Artifact / quantization</th>
             <th scope="col">Latest evidence</th>
-            <th scope="col">Status</th>
             <th scope="col">Evidence</th>
           </tr>
         </thead>
         <tbody>
           {% for page in models.pages %}
             {% if not page.extra | get(key="redirect_page", default=false) %}
-              {% set classification = page.extra | get(key="classification", default="Evidence in progress") %}
               {% set profile = page.extra | get(key="recommended_profile_name", default="No recommended profile recorded") %}
               {% set practical_context = page.extra | get(key="practical_context", default="Not recorded") %}
               {% set latest_evidence_date = page.extra | get(key="latest_evidence_date", default="") %}
-              <tr data-evaluation-row data-model-id="{{ page.extra.model_id }}" data-model="{{ page.title | lower }}" data-producer="{{ page.extra.vendor | lower }}" data-latest-evidence="{{ latest_evidence_date }}" data-search="{{ page.title | lower }} {{ page.extra.model_id | lower }} {{ page.extra.vendor | lower }} {{ profile | lower }} {{ classification | lower }} {{ practical_context | lower }}">
+              <tr data-evaluation-row data-model-id="{{ page.extra.model_id }}" data-model="{{ page.title | lower }}" data-producer="{{ page.extra.vendor | lower }}" data-latest-evidence="{{ latest_evidence_date }}" data-search="{{ page.title | lower }} {{ page.extra.model_id | lower }} {{ page.extra.vendor | lower }} {{ profile | lower }} {{ practical_context | lower }}">
                 <th scope="row"><a href="{{ page.permalink }}">{{ page.title }}</a></th>
                 <td>{{ page.extra.vendor }}</td>
                 <td>{{ profile }}</td>
                 <td>{% if latest_evidence_date %}{{ latest_evidence_date }}{% else %}Not recorded{% endif %}</td>
-                <td>{{ classification | replace(from='_', to=' ') | lower }}</td>
                 <td><a href="{{ page.permalink }}">{{ page.extra.event_count }} event{% if page.extra.event_count != 1 %}s{% endif %}</a></td>
               </tr>
             {% endif %}

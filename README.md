@@ -64,12 +64,18 @@ Canonical sync command:
 
     python3 scripts/sync_labs.py
 
+`scripts/labs_findings_render.py` supplies the shared findings-first model-page
+presentation. Edit that renderer or `templates/lab_model.html`, not generated
+Markdown, frozen source exports, or the registry pin.
+
 ## Validation
 
-    python3 scripts/check_site_content.py
     python3 scripts/sync_labs.py --check
+    python3 scripts/sync_labs.py selftest
     zola build
+    python3 scripts/check_site_content.py
     python3 scripts/check_evaluations_site.py
+    node scripts/test_evaluations_catalog.js
 
 ## Brand assets
 

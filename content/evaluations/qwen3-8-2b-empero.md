@@ -1,6 +1,6 @@
 +++
 title = "Qwen3.8-2B (Empero)"
-description = "Qwen3.8-2B (Empero): tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
+description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
 weight = 24
 
@@ -8,6 +8,7 @@ weight = 24
 kind = "model"
 model_id = "qwen3.8-2b-empero"
 vendor = "empero-ai (Qwen3.8 derivative)"
+findings_first = true
 recommended_profile_id = "qwen3.8-2b-empero-vllm-bf16"
 recommended_profile_name = "vLLM BF16 vendor-alignment battery"
 profile_count = 1
@@ -15,49 +16,38 @@ event_count = 1
 latest_evidence_date = 2026-08-18
 +++
 
-This page collects WumboLabs evidence for **Qwen3.8-2B (Empero)**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
+## Overview
 
-## Current state
+empero-ai (Qwen3.8 derivative) · 1 tested configuration · 1 evidence event · newest evidence 2026-08-18.
 
-- **Recommended profile:** vLLM BF16 vendor-alignment battery (`qwen3.8-2b-empero-vllm-bf16`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-- **Latest evidence:** 2026-08-18: LLMGauge vendor-alignment battery (2B bf16)
+Contents: [Findings](#current-state) · [Event results](#testing-history) · [Tested configurations](#tested-profiles) · [Chronology](#chronology) · [Technical provenance](#canonical-evidence)
 
-## Tested profiles
+<a id="current-state"></a>
 
-### vLLM BF16 vendor-alignment battery (CURRENT)
+## Findings
 
-Profile identity: `qwen3.8-2b-empero-vllm-bf16`.
+Each finding is attributed to the event and tested configuration that measured it; exact values, failures and limitations are in the [event results](#testing-history). A historical event's recorded status describes that event's own sections at its date and is not a verdict on newer sections.
 
-Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
+- **Recommended configuration:** vLLM BF16 vendor-alignment battery (current): [event result](#qwen38-empero-2b-vendor-battery-2026-08-18).
+- **Latest evidence:** 2026-08-18: [event result](#qwen38-empero-2b-vendor-battery-2026-08-18)
+- **2026-08-18** · vLLM/llama.cpp · RTX 5070: classification SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY. [Event result](#qwen38-empero-2b-vendor-battery-2026-08-18)
 
-Status: current canonical/recommended tested surface.
+<a id="testing-history"></a>
 
-[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+## Event results
 
-Events on this profile:
-
-- [LLMGauge vendor-alignment battery (2B bf16) (2026-08-18)](/evaluations/qwen3-8-2b-empero#qwen38-empero-2b-vendor-battery-2026-08-18); status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
-
-## Testing history
-
-Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+Newest first. Each event is one independent testing/publication event with its full report linked once at the top of its section; scores, failures and limitations stay visible and raw section-provenance JSON stays collapsed.
 
 <a id="qwen38-empero-2b-vendor-battery-2026-08-18"></a>
 
 ### 2026-08-18: LLMGauge vendor-alignment battery (2B bf16)
 
-**Specialized Test: vendor alignment** · profile: vLLM BF16 vendor-alignment battery · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
+**Specialized Test: vendor alignment** · config vLLM/llama.cpp · RTX 5070 · maturity: SPECIALIZED_TEST · status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
 
-[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero)
+Configuration: vLLM BF16 vendor-alignment battery.
 
-### Identity and scope
+[Full report (REPORT.md)](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/qwen3.8-2b-empero/events/qwen38-empero-2b-vendor-battery-2026-08-18/REPORT.md)
 
-- Profile: `qwen3.8-2b-empero-vllm-bf16`: vLLM BF16 vendor-alignment battery
-- Evidence maturity: **SPECIALIZED_TEST**
-- Evidence scope: specialized, performance, context
-- Hardware: WumboJetsII (RTX 5070 12GB)
 
 LLMGauge vendor-alignment qualification battery on empero-ai Qwen3.8-2B (BF16/GGUF): full suites at vendor 8192 plus configured-context default probing up to 262144. Primary subject is LLMGauge vendor alignment; model results retained.
 
@@ -65,11 +55,54 @@ This event is a bounded public-safe summary derived from retained WumboLabs evid
 It is not a WELP characterization, a universal model ranking, or a production-readiness
 proof. Values are attributed to the tested artifact, runtime, hardware, suite, and settings.
 
-## Canonical evidence
+###### Identity and scope
 
-All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
+- Profile: `qwen3.8-2b-empero-vllm-bf16`: vLLM BF16 vendor-alignment battery
+- Evidence maturity: **SPECIALIZED_TEST**
+- Evidence scope: specialized, performance, context
+- Hardware: WumboJetsII (RTX 5070 12GB)
 
-- **qwen3.8-2b-empero-vllm-bf16**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+<a id="tested-profiles"></a>
+
+## Tested configurations
+
+Exact profile identities, sampling conditions and provenance are in each configuration's details below.
+
+| Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
+|---|---|---|---|---|---|
+| vLLM/llama.cpp · RTX 5070 | not recorded | vLLM/llama.cpp | RTX 5070 | not recorded | 1 (2026-08-18) |
+
+<details class="lab-findings-configs">
+<summary>Configuration details: vLLM/llama.cpp · RTX 5070</summary>
+
+- Full profile name: vLLM BF16 vendor-alignment battery.
+- Profile identity: `qwen3.8-2b-empero-vllm-bf16`.
+- Status: current canonical/recommended tested surface.
+- Artifact (as recorded): empero-ai/Qwen3.8-2B-GGUF (+ BF16)
+- Runtime (as recorded): vLLM/llama.cpp.
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+
+Events on this configuration:
+
+- [LLMGauge vendor-alignment battery (2B bf16) (2026-08-18)](/evaluations/qwen3-8-2b-empero#qwen38-empero-2b-vendor-battery-2026-08-18); status: SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY
+
+</details>
+
+## Chronology
+
+Compact index; full results are in [Event results](#testing-history).
+
+| Date | Event | Configuration | Status |
+|---|---|---|---|
+| 2026-08-18 | [LLMGauge vendor-alignment battery (2B bf16)](#qwen38-empero-2b-vendor-battery-2026-08-18) | vLLM/llama.cpp · RTX 5070 | SPECIALIZED_TEST / VENDOR_ALIGNMENT_BATTERY |
+
+<a id="canonical-evidence"></a>
+
+## Technical provenance
+
+Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
+
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero)
 
 ### Legacy provenance
 

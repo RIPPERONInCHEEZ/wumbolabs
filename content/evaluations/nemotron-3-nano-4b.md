@@ -1,6 +1,6 @@
 +++
 title = "Nemotron 3 Nano 4B"
-description = "Nemotron 3 Nano 4B: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
+description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
 weight = 14
 
@@ -8,6 +8,7 @@ weight = 14
 kind = "model"
 model_id = "nemotron-3-nano-4b"
 vendor = "NVIDIA"
+findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "nemotron-3-nano-4b-llamacpp-q4km"
 recommended_profile_name = "llama.cpp Q4_K_M"
@@ -17,54 +18,104 @@ event_count = 2
 latest_evidence_date = 2026-09-11
 +++
 
-This page collects WumboLabs evidence for **Nemotron 3 Nano 4B**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
+## Overview
 
-## Current state
+NVIDIA · 1 tested configuration · 2 evidence events · newest evidence 2026-09-11.
 
-- **Classification:** READY_WITH_GUARDRAILS ; source: [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11), profile llama.cpp Q4_K_M
-- **Recommended profile:** llama.cpp Q4_K_M (`nemotron-3-nano-4b-llamacpp-q4km`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md)
-- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11)
-- **Latest evidence:** 2026-09-11: Current-WELP recharacterization
+Contents: [Findings](#current-state) · [Event results](#testing-history) · [Limitations](#limitations) · [Tested configurations](#tested-profiles) · [Chronology](#chronology) · [Technical provenance](#canonical-evidence)
 
-## Tested profiles
+<a id="current-state"></a>
 
-### llama.cpp Q4_K_M (CURRENT)
+## Findings
 
-Profile identity: `nemotron-3-nano-4b-llamacpp-q4km`.
+Each finding is attributed to the event and tested configuration that measured it; exact values, failures and limitations are in the [event results](#testing-history). A historical event's recorded status describes that event's own sections at its date and is not a verdict on newer sections.
 
-| Field | Value |
-|---|---|
-| Runtime | llama.cpp build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA SM120) |
-| Artifact | NVIDIA-Nemotron3-Nano-4B-Q4_K_M.gguf; the only official llama.cpp quant NVIDIA publishes for this model |
-| Precision | Q4_K_M weights; f16 KV cache; dense hybrid (no MoE) |
+- **Model classification: READY_WITH_GUARDRAILS** - attributed to the [2026-09-11 event](#welp-recharacterization-2026-09-11), configuration Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070.
+- **Recommended configuration:** llama.cpp Q4_K_M (current): [event result](#welp-recharacterization-2026-09-11).
+- **Practical context:** 32,768 default / 131,072 guarded tokens; native model-card maximum 262,144 (envelope complete: YES); source: [event result](#welp-recharacterization-2026-09-11)
+- **Context limit outcome:** VALIDATED: capacity admitted, near-full performance measured (uncached prefill ~2,877 tok/s, decode ~79-81 tok/s, 7,268 MiB VRAM), strict useful-context PASS at both required seeds (42, 314159); source: [event result](#welp-recharacterization-2026-09-11)
+- **Latest evidence:** 2026-09-11: [event result](#welp-recharacterization-2026-09-11)
+- **2026-09-11** · Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070: classification READY_WITH_GUARDRAILS; frozen 12-task model-neutral screen 12/12 PASS (mechanical scorer frozen before outputs; temp 0, seed 42). [Event result](#welp-recharacterization-2026-09-11)
+- **2026-08-25** · Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070: classification PARTIAL_PROTOCOL_DEVELOPMENT. [Event result](#initial-evaluation-2026-08-25)
 
-Status: current canonical/recommended tested surface.
+<a id="testing-history"></a>
 
-[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
+## Event results
 
-Events on this profile:
-
-- [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11); status: READY_WITH_GUARDRAILS
-- [Initial evaluation (protocol development, PROTOCOL_BLOCKED) (2026-08-25)](/evaluations/nemotron-3-nano-4b#initial-evaluation-2026-08-25); status: PARTIAL_PROTOCOL_DEVELOPMENT
-
-## Testing history
-
-Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+Newest first. Each event is one independent testing/publication event with its full report linked once at the top of its section; scores, failures and limitations stay visible and raw section-provenance JSON stays collapsed.
 
 <a id="welp-recharacterization-2026-09-11"></a>
 
 ### 2026-09-11: Current-WELP recharacterization
 
-**WELP Recharacterization: llama.cpp Q4_K_M** · profile: llama.cpp Q4_K_M · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
+**WELP Recharacterization: llama.cpp Q4_K_M** · config Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 · maturity: CURRENT_WELP · status: READY_WITH_GUARDRAILS
 
-[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b)
+Configuration: llama.cpp Q4_K_M.
 
-##### Identity
+[Full report (REPORT.md)](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md)
+
+#### WELP outcome
+
+- **Outcome:** PASS: NEMOTRON3_NANO_4B_RTX5070_RECHARACTERIZED
+- **Classification:** READY_WITH_GUARDRAILS (reliability is the guardrail)
+- **Artifact classification:** Canonical official llama.cpp deployment surface (sole official quant); BF16 fit-limited on this GPU at the tested context targets; Q4_K_M quality confound disclosed
+
+Publication state: **published**; canonical evidence linked above
+
+#### Headline performance
+
+| Surface | TTFT | Prefill | Decode |
+|---|---|---|---|
+| Short | 0.046 s | Not recorded | 186.6 tok/s |
+| Moderate (3880-token input) | 0.507 s | 7498 tok/s | 182.9 tok/s |
+
+<p><small>Short/moderate values are campaign-measured streaming surfaces; context-rung values are near-full occupancy measurements with unique prompts (cached tokens 0 at the native-maximum rungs)</small></p>
+
+#### Quality and capabilities
+
+- **Constrained result:** frozen 12-task model-neutral screen 12/12 PASS (mechanical scorer frozen before outputs; temp 0, seed 42)
+- Reasoning TESTED_PASS in the official thinking mode; coding TESTED_PASS on executable frozen cases; tool calling TESTED_PASS (structural validity + grounded continuation, bounded, not autonomous-agent qualification)
+- Strongest near-full strict-compliance context result in the current control set: strict useful-context aggregate PASS at every rung through 99.49% of the native 262,144-token maximum
+- First hybrid Mamba-2 model characterized under current WELP on this host; measured allocation confirms fixed recurrent state plus 4-layer context-linear KV
+- Zero OOM, zero CUDA errors, zero Xid; peak 247-249 W within the stock 250 W envelope
+
+##### Guardrails and limitations
+
+- Behavioral reliability has measurable hallucination/evidence-discipline defects under the adversarial corpus: clean-pass 0.30/0.25 and hallucination 0.20/0.15 across seeds 42/314159 on a 20-request stratified sample of the proven mechanical reliability corpus (transport success 40/40)
+- The model confidently fabricated a nonexistent CUDA API and capitulated to a false user assertion; independently verify technical/factual claims in adversarial or evidence-discipline-sensitive contexts
+- The 12/12 bounded quality screen is not evidence of universal reliability; the strict near-full context PASS is not proof of universal long-document reasoning
+- Q4_K_M quantization confound disclosed, not measured against BF16
+
+**Reliability:** Transport/runtime reliability strong; bounded quality/structured behavior clean; adversarial behavioral reliability materially weaker; the historical Phase-4 weakness is reproduced on the current instrument and remains the mandatory guardrail
+
+#### LocalMaxxing
+
+- Status: SUBMITTED
+- Canonical context: 32,768 tokens
+- tok/s out: 185.8
+- TTFT: 125.1 ms
+- Submission reference: cmt86gy1j000eli01ca3cwwn0
+- verifiedRun: NO
+<p><small>Exact canonical practical profile (Q4_K_M, llama.cpp b10449, 32,768 context, f16 KV, full GPU, RTX 5070) already submitted and approved 2026-08-25; per the never-duplicate rule zero new submissions were created. A fresh 5-rep local benchmark (tg128 191.0 tok/s, pp512 8,275 tok/s) reproduces the submitted result.</small></p>
+
+**Tested condition:** artifact Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 · context 32,768 default / 131,072 guarded · native model-card maximum 262,144 tokens · envelope complete: YES.
+
+**Context limit outcome:** VALIDATED: capacity admitted, near-full performance measured (uncached prefill ~2,877 tok/s, decode ~79-81 tok/s, 7,268 MiB VRAM), strict useful-context PASS at both required seeds (42, 314159)
+
+**Context boundaries:** Hybrid Mamba-2 memory model measured: 4 attention layers carry context-linear KV (~16 KiB/token f16); the 38 Mamba-2 layers carry a fixed context-independent recurrent state (~100-300 MiB). The full 262,144 slot fits in 7,268 MiB with 4,546 MiB free
+
+**Runtime conditions:** Full GPU residency (-ngl 999), parallel=1, FlashAttention on, f16 KV, reasoning-off baseline via the official enable_thinking template kwarg
+
+**Hardware conditions:** Single-user workstation; AMD Ryzen 7 9800X3D; Fedora Linux
+
+<details class="lab-findings-configs">
+<summary>Full tested identity, runtime and context details (exact hashes, versions and configuration)</summary>
+
+#### Identity
 
 | Field | Value |
 |---|---|
+| Profile identity | `nemotron-3-nano-4b-llamacpp-q4km` |
 | Model | Nemotron 3 Nano 4B |
 | Producer | NVIDIA |
 | Official model | nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF (GGUF) / nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16 (BF16 weights) @ `ba223d14e45525f7fae81db77ea8cabeb2fc6c25` |
@@ -74,25 +125,16 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 | Campaign | `nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11` |
 | Record date | 2026-09-11 |
 
-##### Runtime and hardware
+#### Runtime and hardware
 
 | Field | Value |
 |---|---|
-| Engine | llama.cpp |
-| Runtime version | build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA SM120) |
-| Runtime notes | Full GPU residency (-ngl 999), parallel=1, FlashAttention on, f16 KV, reasoning-off baseline via the official enable_thinking template kwarg |
+| Engine | llama.cpp build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA SM120) |
 | Hardware | WumboJetsII (NVIDIA GeForce RTX 5070 12GB) |
+| Runtime notes | Full GPU residency (-ngl 999), parallel=1, FlashAttention on, f16 KV, reasoning-off baseline via the official enable_thinking template kwarg |
 | Hardware notes | Single-user workstation; AMD Ryzen 7 9800X3D; Fedora Linux |
 
-##### WELP outcome
-
-- **Outcome:** PASS: NEMOTRON3_NANO_4B_RTX5070_RECHARACTERIZED
-- **Classification:** READY_WITH_GUARDRAILS (reliability is the guardrail)
-- **Artifact classification:** Canonical official llama.cpp deployment surface (sole official quant); BF16 fit-limited on this GPU at the tested context targets; Q4_K_M quality confound disclosed
-
-Publication state: **published**; canonical evidence: https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md
-
-##### Context profile
+#### Context profile
 
 | Field | Value |
 |---|---|
@@ -102,65 +144,103 @@ Publication state: **published**; canonical evidence: https://github.com/WumboLa
 | Model-card envelope complete | YES |
 | Native maximum disposition | VALIDATED: capacity admitted, near-full performance measured (uncached prefill ~2,877 tok/s, decode ~79-81 tok/s, 7,268 MiB VRAM), strict useful-context PASS at both required seeds (42, 314159) |
 
-##### Headline performance
+<p><small>Hybrid Mamba-2 memory model measured: 4 attention layers carry context-linear KV (~16 KiB/token f16); the 38 Mamba-2 layers carry a fixed context-independent recurrent state (~100-300 MiB). The full 262,144 slot fits in 7,268 MiB with 4,546 MiB free</small></p>
 
-| Surface | TTFT | Prefill | Decode |
-|---|---|---|---|
-| Short | 0.046 s | Not recorded | 186.6 tok/s |
-| Moderate (3880-token input) | 0.507 s | 7498 tok/s | 182.9 tok/s |
-
-<p><small>Short/moderate values are campaign-measured streaming surfaces; context-rung values are near-full occupancy measurements with unique prompts (cached tokens 0 at the native-maximum rungs)</small></p>
-
-##### Quality and capabilities
-
-- **Constrained result:** frozen 12-task model-neutral screen 12/12 PASS (mechanical scorer frozen before outputs; temp 0, seed 42)
-- Reasoning TESTED_PASS in the official thinking mode; coding TESTED_PASS on executable frozen cases; tool calling TESTED_PASS (structural validity + grounded continuation, bounded, not autonomous-agent qualification)
-- Strongest near-full strict-compliance context result in the current control set: strict useful-context aggregate PASS at every rung through 99.49% of the native 262,144-token maximum
-- First hybrid Mamba-2 model characterized under current WELP on this host; measured allocation confirms fixed recurrent state plus 4-layer context-linear KV
-- Zero OOM, zero CUDA errors, zero Xid; peak 247-249 W within the stock 250 W envelope
-
-###### Guardrails and limitations
-
-- Behavioral reliability has measurable hallucination/evidence-discipline defects under the adversarial corpus: clean-pass 0.30/0.25 and hallucination 0.20/0.15 across seeds 42/314159 on a 20-request stratified sample of the proven mechanical reliability corpus (transport success 40/40)
-- The model confidently fabricated a nonexistent CUDA API and capitulated to a false user assertion; independently verify technical/factual claims in adversarial or evidence-discipline-sensitive contexts
-- The 12/12 bounded quality screen is not evidence of universal reliability; the strict near-full context PASS is not proof of universal long-document reasoning
-- Q4_K_M quantization confound disclosed, not measured against BF16
-
-**Reliability:** Transport/runtime reliability strong; bounded quality/structured behavior clean; adversarial behavioral reliability materially weaker; the historical Phase-4 weakness is reproduced on the current instrument and remains the mandatory guardrail
-
-##### LocalMaxxing
-
-| Field | Value |
-|---|---|
-| Status | SUBMITTED |
-| Canonical context | 32768 tokens |
-| tok/s out | 185.8 |
-| TTFT | 125.1 ms |
-| Submission reference | cmt86gy1j000eli01ca3cwwn0 |
-| verifiedRun | NO |
-
-<p><small>Exact canonical practical profile (Q4_K_M, llama.cpp b10449, 32,768 context, f16 KV, full GPU, RTX 5070) already submitted and approved 2026-08-25; per the never-duplicate rule zero new submissions were created. A fresh 5-rep local benchmark (tg128 191.0 tok/s, pp512 8,275 tok/s) reproduces the submitted result.</small></p>
-
-##### Canonical evidence
-
-Canonical public evidence: <https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md>
-
-This event section is a human-readable derivative of the accepted local WELP
-campaign evidence named above; the campaign's REPORT.md is the authoritative
-scientific source. Results are bounded by the tested artifact, runtime,
-hardware, configuration, and protocol snapshot, and are not universal model
-rankings.
+</details>
 
 <a id="initial-evaluation-2026-08-25"></a>
 
 ### 2026-08-25: Initial evaluation (protocol development, PROTOCOL_BLOCKED)
 
-**Initial Evaluation: PROTOCOL_BLOCKED (historical, preserved)** · profile: llama.cpp Q4_K_M · maturity: PROTOCOL_BLOCKED · status: PARTIAL_PROTOCOL_DEVELOPMENT
+**Initial Evaluation: PROTOCOL_BLOCKED (historical, preserved)** · config Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 · maturity: PROTOCOL_BLOCKED · status: PARTIAL_PROTOCOL_DEVELOPMENT
 
-[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/initial-evaluation-2026-08-25/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b)
+Configuration: llama.cpp Q4_K_M.
 
-### Identity
+[Full report (REPORT.md)](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/initial-evaluation-2026-08-25/REPORT.md)
+
+
+###### Hardware
+
+| Field | Value |
+|---|---|
+| Machine | WumboJetsII |
+| GPU | NVIDIA GeForce RTX 5070 12GB (SM120) |
+| VRAM | 12,227 MiB physical |
+| CPU | AMD Ryzen 7 9800X3D |
+| OS | Fedora Linux 44, kernel 7.1.9 |
+| Driver / CUDA | NVIDIA 610.57.04 |
+| Runtime | llama.cpp b10449 (commit `0d9ceae1e38291035605613ab41a8f5e693d6fcd`) |
+
+###### Headline Verdict
+
+**PROTOCOL_BLOCKED at Phase 3 gate decision.**
+
+The model showed no failing behavior. WELP's documented material contains no Phase 3 advancement threshold, so no deterministic PASS/FAIL could be produced without inventing a rule, which the campaign forbids.
+
+This campaign contributed to protocol development. It is **not a complete WELP capability review**. Do not present it as equivalent in evaluation depth to Qwen3.8-27B.
+
+###### Performance
+
+| Metric | Result |
+|---|---|
+| Decode | ~178 tok/s mean (512-token generations) |
+| Prefill | ~6,500 tok/s at ~2,600-token prompts |
+| TTFT (short prompt) | ~30 ms |
+| llama-bench (p512/n128) | ~180 tok/s out, 65 ms TTFT |
+
+###### Phases Reached
+
+| Phase | Gate | Outcome |
+|---|---|---|
+| 0 Provenance | Not recorded | PASS |
+| 1 Admission (hard) | PASS | Loads; full GPU residency verified; clean inference/termination |
+| 2 Performance | PASS* | Criterion interpreted (F-02) |
+| 3 Practical Viability | **PROTOCOL_BLOCKED** | 12/12 screen but protocol defines no advancement threshold (F-01) |
+| 4–10, OMP-21B | NOT RUN | Stopped per campaign rule |
+
+###### Practical Viability Evidence
+
+12 tasks across instruction following, strict output, extraction, structured JSON, technical knowledge, false-premise rejection, uncertainty behavior, simple reasoning: **12/12**, mechanical scoring. This is screening evidence, not a gate pass.
+
+###### Reasoning Findings
+
+Bounded observations only (dedicated module not reached): default mode emits `<think>` traces then answers; `enable_thinking=false` yields direct correct answers. Producer's reasoning-off benchmark framing is operationally reproducible on this runtime.
+
+###### Role Classification
+
+**No deployment recommendation is supported by this evidence.**
+
+What the reached phases establish:
+- The model loaded cleanly and served stably across the tested phases
+- Performance was measured
+- The Phase-3 screening result was measured: 12/12
+- OMP connectivity was demonstrated
+- The reasoning-control mechanism was boundedly observed
+
+**Explicitly NOT TESTED:** reliability, capability modules, context quality, variance, soak, and agent capability.
+
+###### Important Limitations
+
+- **Single-seed practical screen.** Reliability, context quality, coding, tools, agent behavior, and soak were NOT TESTED.
+- **Context wording:** the server was configured with a 32K context window and inference ran within it. Useful 32K context behavior was **not evaluated**.
+- **No LLMGauge Agent Harness result.** LLMGauge was never invoked.
+- **Protocol findings:** this campaign identified 9 protocol ambiguities (F-01 through F-09) and 4 undocumented decisions required. These are documented in the canonical repo.
+- Results must not be generalized to a model review.
+
+###### Evidence Links
+
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
+- **WELP protocol:** https://github.com/WumboLabs/welp
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models
+- **LocalMaxxing:** Speed run measured locally (~180 tok/s); submission blocked on missing credentials. No benchmark suite submissions.
+
+###### Reproduction
+
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
+
+This Lab Record is a summary; the canonical repo is the source of truth.
+
+###### Identity
 
 | Field | Value |
 |---|---|
@@ -174,92 +254,67 @@ rankings.
 | Highest phase reached | Phase 3 (gate decision) |
 | Campaign classification | PARTIAL_PROTOCOL_DEVELOPMENT |
 
-### Hardware
+## Limitations
 
-| Field | Value |
-|---|---|
-| Machine | WumboJetsII |
-| GPU | NVIDIA GeForce RTX 5070 12GB (SM120) |
-| VRAM | 12,227 MiB physical |
-| CPU | AMD Ryzen 7 9800X3D |
-| OS | Fedora Linux 44, kernel 7.1.9 |
-| Driver / CUDA | NVIDIA 610.57.04 |
-| Runtime | llama.cpp b10449 (commit `0d9ceae1e38291035605613ab41a8f5e693d6fcd`) |
+- Behavioral reliability has measurable hallucination/evidence-discipline defects under the adversarial corpus: clean-pass 0.30/0.25 and hallucination 0.20/0.15 across seeds 42/314159 on a 20-request stratified sample of the proven mechanical reliability corpus (transport success 40/40) Source events: [2026-09-11](#welp-recharacterization-2026-09-11).
+- The model confidently fabricated a nonexistent CUDA API and capitulated to a false user assertion; independently verify technical/factual claims in adversarial or evidence-discipline-sensitive contexts Source events: [2026-09-11](#welp-recharacterization-2026-09-11).
+- The 12/12 bounded quality screen is not evidence of universal reliability; the strict near-full context PASS is not proof of universal long-document reasoning Source events: [2026-09-11](#welp-recharacterization-2026-09-11).
+- Q4_K_M quantization confound disclosed, not measured against BF16 Source events: [2026-09-11](#welp-recharacterization-2026-09-11).
 
-### Headline Verdict
+<a id="tested-profiles"></a>
 
-**PROTOCOL_BLOCKED at Phase 3 gate decision.**
+## Tested configurations
 
-The model showed no failing behavior. WELP's documented material contains no Phase 3 advancement threshold, so no deterministic PASS/FAIL could be produced without inventing a rule, which the campaign forbids.
+Exact profile identities, sampling conditions and provenance are in each configuration's details below.
 
-This campaign contributed to protocol development. It is **not a complete WELP capability review**. Do not present it as equivalent in evaluation depth to Qwen3.8-27B.
+| Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
+|---|---|---|---|---|---|
+| Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 | Q4_K_M weights; f16 KV cache; dense hybrid | llama.cpp | RTX 5070 | 32,768 default / 131,072 guarded | 2 (2026-08-25, 2026-09-11) |
 
-### Performance
+<details class="lab-findings-configs">
+<summary>Configuration details: Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070</summary>
 
-| Metric | Result |
-|---|---|
-| Decode | ~178 tok/s mean (512-token generations) |
-| Prefill | ~6,500 tok/s at ~2,600-token prompts |
-| TTFT (short prompt) | ~30 ms |
-| llama-bench (p512/n128) | ~180 tok/s out, 65 ms TTFT |
+- Full profile name: llama.cpp Q4_K_M.
+- Profile identity: `nemotron-3-nano-4b-llamacpp-q4km`.
+- Status: current canonical/recommended tested surface.
+- Artifact (as recorded): NVIDIA-Nemotron3-Nano-4B-Q4_K_M.gguf (sole official quant; upstream rev ba223d14e45525f7fae81db77ea8cabeb2fc6c25)
+- Runtime (as recorded): llama.cpp build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA SM120).
+- Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
 
-### Phases Reached
+Events on this configuration:
 
-| Phase | Gate | Outcome |
-|---|---|---|
-| 0 Provenance | Not recorded | PASS |
-| 1 Admission (hard) | PASS | Loads; full GPU residency verified; clean inference/termination |
-| 2 Performance | PASS* | Criterion interpreted (F-02) |
-| 3 Practical Viability | **PROTOCOL_BLOCKED** | 12/12 screen but protocol defines no advancement threshold (F-01) |
-| 4–10, OMP-21B | NOT RUN | Stopped per campaign rule |
+- [Current-WELP recharacterization (2026-09-11)](/evaluations/nemotron-3-nano-4b#welp-recharacterization-2026-09-11); status: READY_WITH_GUARDRAILS
+- [Initial evaluation (protocol development, PROTOCOL_BLOCKED) (2026-08-25)](/evaluations/nemotron-3-nano-4b#initial-evaluation-2026-08-25); status: PARTIAL_PROTOCOL_DEVELOPMENT
 
-### Practical Viability Evidence
+</details>
 
-12 tasks across instruction following, strict output, extraction, structured JSON, technical knowledge, false-premise rejection, uncertainty behavior, simple reasoning: **12/12**, mechanical scoring. This is screening evidence, not a gate pass.
+## Chronology
 
-### Reasoning Findings
+Compact index; full results are in [Event results](#testing-history).
 
-Bounded observations only (dedicated module not reached): default mode emits `<think>` traces then answers; `enable_thinking=false` yields direct correct answers. Producer's reasoning-off benchmark framing is operationally reproducible on this runtime.
+| Date | Event | Configuration | Status |
+|---|---|---|---|
+| 2026-09-11 | [Current-WELP recharacterization](#welp-recharacterization-2026-09-11) | Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 | READY_WITH_GUARDRAILS |
+| 2026-08-25 | [Initial evaluation (protocol development, PROTOCOL_BLOCKED)](#initial-evaluation-2026-08-25) | Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 | PARTIAL_PROTOCOL_DEVELOPMENT |
 
-### Role Classification
+<a id="canonical-evidence"></a>
 
-**No deployment recommendation is supported by this evidence.**
+## Technical provenance
 
-What the reached phases establish:
-- The model loaded cleanly and served stably across the tested phases
-- Performance was measured
-- The Phase-3 screening result was measured: 12/12
-- OMP connectivity was demonstrated
-- The reasoning-control mechanism was boundedly observed
+Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-**Explicitly NOT TESTED:** reliability, capability modules, context quality, variance, soak, and agent capability.
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b)
 
-### Important Limitations
+<details class="lab-findings-provenance">
+<summary>Event provenance: 2026-09-11 WELP Recharacterization: llama.cpp Q4_K_M</summary>
 
-- **Single-seed practical screen.** Reliability, context quality, coding, tools, agent behavior, and soak were NOT TESTED.
-- **Context wording:** the server was configured with a 32K context window and inference ran within it. Useful 32K context behavior was **not evaluated**.
-- **No LLMGauge Agent Harness result.** LLMGauge was never invoked.
-- **Protocol findings:** this campaign identified 9 protocol ambiguities (F-01 through F-09) and 4 undocumented decisions required. These are documented in the canonical repo.
-- Results must not be generalized to a model review.
+- Campaign: `nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11`
+- Export disposition: WEBSITE_READY; publication date 2026-09-12
+- Canonical citation (immutable commit/path pin): `https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/REPORT.md`
+- Export source pin: repository-cache WumboLabs/evaluations @ `479cb50c197f8ea0dd905a68ffd61f632f49c652` path models/nemotron-3-nano-4b/events/welp-recharacterization-2026-09-11/website-publication.json sha256 `457ef6f472770425857963f5cb899dc4d7f6dd6ddb0bb12cbe33b54511ae07fa`
 
-### Evidence Links
-
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
-- **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models
-- **LocalMaxxing:** Speed run measured locally (~180 tok/s); submission blocked on missing credentials. No benchmark suite submissions.
-
-### Reproduction
-
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
-
-This Lab Record is a summary; the canonical repo is the source of truth.
-
-## Canonical evidence
-
-All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
-
-- **nemotron-3-nano-4b-llamacpp-q4km**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
+</details>
 
 ### Legacy provenance
 

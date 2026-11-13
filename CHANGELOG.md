@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.20 - Evaluation readability
+
+- Keep one prominent homepage research destination set alongside global navigation.
+- Remove catalog workflow classifications from public columns and search metadata.
+- Use one findings-first presentation across all model evaluations, preserving independent event results, failed checks, methodology attribution, report links, and gameplay evidence.
+- Keep exact configurations and raw provenance accessible through native expandable details; retain immutable registry pins and source records.
+
 ## v0.17 — WELP v1.0 publication
 
 - Publish the accepted eight-section methodology and preserve legacy result boundaries.

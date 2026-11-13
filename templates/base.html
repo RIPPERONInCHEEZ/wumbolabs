@@ -77,9 +77,11 @@
       </div>
 
       <div class="footer-links">
+        {% if current_path != "/" %}
         <a href="/evaluations/">Evaluations</a>
         <a href="/records/">Research</a>
         <a href="/methodology/">Methodology</a>
+        {% endif %}
         <a href="https://github.com/RIPPERONInCHEEZ/wumbolabs">GitHub</a>
       </div>
     </div>

@@ -8,4 +8,4 @@ generate_feeds = true
 
 [extra]
 author = "Kevin Dickinson"
-site_version = "v0.19"
+site_version = "v0.20"

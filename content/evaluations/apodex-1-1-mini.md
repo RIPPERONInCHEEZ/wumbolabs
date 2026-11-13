@@ -1,6 +1,6 @@
 +++
 title = "Apodex 1.1 mini"
-description = "Apodex 1.1 mini: tested profiles, validated context, and chronological evaluation history. Findings are attributed to the profile and event that measured them."
+description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
 weight = 23
 
@@ -8,6 +8,7 @@ weight = 23
 kind = "model"
 model_id = "apodex-1.1-mini"
 vendor = "Apodex (Qwen3.5-35B-A3B MoE base)"
+findings_first = true
 classification = "BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE"
 recommended_profile_id = "apodex-1.1-mini-llamacpp-iq1m"
 recommended_profile_name = "llama.cpp IQ1_M (community conversion)"
@@ -16,45 +17,120 @@ event_count = 1
 latest_evidence_date = 2026-08-25
 +++
 
-This page collects WumboLabs evidence for **Apodex 1.1 mini**: current findings, tested profiles, and chronological evaluation history. Each value belongs to its measured deployment; later findings do not silently replace historical evidence.
+## Overview
 
-## Current state
+Apodex (Qwen3.5-35B-A3B MoE base) · 1 tested configuration · 1 evidence event · newest evidence 2026-08-25.
 
-- **Classification:** BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE ; source: [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex), profile llama.cpp IQ1_M (community conversion)
-- **Recommended profile:** llama.cpp IQ1_M (community conversion) (`apodex-1.1-mini-llamacpp-iq1m`, current); [canonical evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
-- **Latest evidence:** 2026-08-25: Initial evaluation (bounded early stop)
+Contents: [Findings](#current-state) · [Event results](#testing-history) · [Tested configurations](#tested-profiles) · [Chronology](#chronology) · [Technical provenance](#canonical-evidence)
 
-## Tested profiles
+<a id="current-state"></a>
 
-### llama.cpp IQ1_M (community conversion) (CURRENT)
+## Findings
 
-Profile identity: `apodex-1.1-mini-llamacpp-iq1m`.
+Each finding is attributed to the event and tested configuration that measured it; exact values, failures and limitations are in the [event results](#testing-history). A historical event's recorded status describes that event's own sections at its date and is not a verdict on newer sections.
 
-Runtime and artifact identity are described inside the event sections below (hand-authored records; no machine-readable export).
+- **Model classification: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE** - attributed to the [2026-08-25 event](#initial-evaluation-2026-08-25-apodex), configuration IQ1_M · llama.cpp · RTX 5070.
+- **Recommended configuration:** llama.cpp IQ1_M (community conversion) (current): [event result](#initial-evaluation-2026-08-25-apodex).
+- **Latest evidence:** 2026-08-25: [event result](#initial-evaluation-2026-08-25-apodex)
+- **2026-08-25** · IQ1_M · llama.cpp · RTX 5070: classification BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE. [Event result](#initial-evaluation-2026-08-25-apodex)
 
-Status: current canonical/recommended tested surface.
+<a id="testing-history"></a>
 
-[Canonical Evidence](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
-[Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
+## Event results
 
-Events on this profile:
-
-- [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex); status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
-
-## Testing history
-
-Newest first. Each event is one immutable testing/publication event; the exact scientific report lives in the canonical evidence repository linked at the top of each event.
+Newest first. Each event is one independent testing/publication event with its full report linked once at the top of its section; scores, failures and limitations stay visible and raw section-provenance JSON stays collapsed.
 
 <a id="initial-evaluation-2026-08-25-apodex"></a>
 
 ### 2026-08-25: Initial evaluation (bounded early stop)
 
-**Initial Evaluation: Early Stop** · profile: llama.cpp IQ1_M (community conversion) · maturity: EARLY_STOP · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
+**Initial Evaluation: Early Stop** · config IQ1_M · llama.cpp · RTX 5070 · maturity: EARLY_STOP · status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
-[Canonical Evidence / Full Report](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
-[View on GitHub](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini)
+Configuration: llama.cpp IQ1_M (community conversion).
 
-### Identity
+[Full report (REPORT.md)](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/apodex-1.1-mini/events/initial-evaluation-2026-08-25-apodex/REPORT.md)
+
+
+###### Hardware
+
+| Field | Value |
+|---|---|
+| Machine | WumboJetsII |
+| GPU | NVIDIA GeForce RTX 5070 12GB (SM120) |
+| VRAM | 12,227 MiB physical |
+| CPU | AMD Ryzen 7 9800X3D |
+| OS | Fedora Linux 44 |
+| Driver / CUDA | NVIDIA 610.57.04 |
+| Runtime | llama.cpp pinned at `f280b26983ad0fdb705a0d9ebf0503e76f2899b0` (2026-08-24) |
+
+###### Headline Verdict
+
+**DO_NOT_ADVANCE at Phase 3 (early stop, frozen gate).**
+
+The model failed the applicable advancement gate. Per WELP protocol, later phases were not run. This is a bounded result, not a complete capability review.
+
+The early-stop behavior is a feature of WELP transparency: the model failed the gate, so the evaluation stopped. This is not a protocol failure; it is the protocol working as designed.
+
+###### Performance
+
+| Metric | Result |
+|---|---|
+| Decode throughput | 169.36 tok/s (median 169.46, sigma 1.70) |
+| Prefill (~5.6K tok) | 1,798.76 tok/s |
+| TTFT (short prompt) | ~125 ms |
+| VRAM idle | 9.7 GB |
+
+###### Phase 3 Practical Viability: DO_NOT_ADVANCE
+
+Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 35/35), 30 tasks x seeds {42,43,44}, thinking OFF baseline.
+
+| Gate | Threshold | s42 | s43 | s44 | Verdict |
+|---|---|---|---|---|---|
+| G1 aggregate | >=0.75 | 0.667 | 0.700 | 0.733 | **FAIL (all)** |
+| G2 false-premise | >=0.60 | 0.400 | 0.200 | 0.600 | **FAIL (42,43)** |
+| G3 factual-uncertainty | >=0.50 | 0.500 | 0.750 | 0.500 | PASS (boundary) |
+| G4 structured-output | >=0.70 | 0.714 | 0.714 | 0.714 | PASS |
+
+Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genuine failures (fabricated package description, explained nonexistent git flag, asserted that 25 is prime, invented phone number, echoed un-reversed word); ~8 scorer lexicon artifacts. Verdict robust: correcting every artifact still leaves seed-42 aggregate <0.75.
+
+###### What Was NOT Tested
+
+- Native Tools module
+- Coding module
+- Reasoning module (dedicated)
+- Context / Variance / Optimization / Stability
+- Soak
+- OMP Stage 2 (agent)
+
+**Do not fabricate missing results.** This evaluation establishes that the strongest representation satisfying the frozen WumboJetsII full-GPU baseline (IQ1_M, 1.75-bpw) does not clear the frozen viability gate. It does NOT establish that BF16/FP8/GPTQ or Agent Team deployments would fail.
+
+###### Role Classification
+
+**Supported roles:** none beyond "runs coherently on 12GB at extreme quantization."
+
+**NOT_REACHED:** Phases 4–10, OMP Stage 2, all capability modules, context/variance/optimization/soak/classification engine.
+
+###### Important Limitations
+
+- **Extreme quantization forced by hardware:** single 12GB consumer GPU required IQ1_M (1.75-bpw). Producer positioning rests on BF16-class deployments plus an agent harness that was not authorized to run.
+- **Phase-3 failure at IQ1_M does NOT establish that BF16/FP8/GPTQ or Agent Team deployments would fail.** It establishes that the strongest representation satisfying the frozen full-GPU baseline does not clear the frozen viability gate.
+- **Scorer lexicon defect** understates false-premise performance modestly; verdict unaffected.
+- **No reliability, coding, tools, context, or soak results exist.**
+
+###### Evidence Links
+
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m
+- **WELP protocol:** https://github.com/WumboLabs/welp
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models
+- **LocalMaxxing:** Speed result SUBMITTED/APPROVED (ID `cmt9ijytg00xali017f46xk25`, 182.31 tok/s p512/n128). Benchmark suites NOT_SUBMITTED due to early WELP stop.
+
+###### Reproduction
+
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
+
+This Lab Record is a summary; the canonical repo is the source of truth.
+
+###### Identity
 
 | Field | Value |
 |---|---|
@@ -68,90 +144,47 @@ Newest first. Each event is one immutable testing/publication event; the exact s
 | Highest phase reached | Phase 3 (gate decision) |
 | Campaign classification | BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE |
 
-### Hardware
+<a id="tested-profiles"></a>
 
-| Field | Value |
-|---|---|
-| Machine | WumboJetsII |
-| GPU | NVIDIA GeForce RTX 5070 12GB (SM120) |
-| VRAM | 12,227 MiB physical |
-| CPU | AMD Ryzen 7 9800X3D |
-| OS | Fedora Linux 44 |
-| Driver / CUDA | NVIDIA 610.57.04 |
-| Runtime | llama.cpp pinned at `f280b26983ad0fdb705a0d9ebf0503e76f2899b0` (2026-08-24) |
+## Tested configurations
 
-### Headline Verdict
+Exact profile identities, sampling conditions and provenance are in each configuration's details below.
 
-**DO_NOT_ADVANCE at Phase 3 (early stop, frozen gate).**
-
-The model failed the applicable advancement gate. Per WELP protocol, later phases were not run. This is a bounded result, not a complete capability review.
-
-The early-stop behavior is a feature of WELP transparency: the model failed the gate, so the evaluation stopped. This is not a protocol failure; it is the protocol working as designed.
-
-### Performance
-
-| Metric | Result |
-|---|---|
-| Decode throughput | 169.36 tok/s (median 169.46, sigma 1.70) |
-| Prefill (~5.6K tok) | 1,798.76 tok/s |
-| TTFT (short prompt) | ~125 ms |
-| VRAM idle | 9.7 GB |
-
-### Phase 3 Practical Viability: DO_NOT_ADVANCE
-
-Contract WELP Practical Viability 0.1.2-draft, scorer `score_pv.py` (self-test 35/35), 30 tasks x seeds {42,43,44}, thinking OFF baseline.
-
-| Gate | Threshold | s42 | s43 | s44 | Verdict |
+| Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| G1 aggregate | >=0.75 | 0.667 | 0.700 | 0.733 | **FAIL (all)** |
-| G2 false-premise | >=0.60 | 0.400 | 0.200 | 0.600 | **FAIL (42,43)** |
-| G3 factual-uncertainty | >=0.50 | 0.500 | 0.750 | 0.500 | PASS (boundary) |
-| G4 structured-output | >=0.70 | 0.714 | 0.714 | 0.714 | PASS |
+| IQ1_M · llama.cpp · RTX 5070 | IQ1_M | llama.cpp | RTX 5070 | not recorded | 1 (2026-08-25) |
 
-Decision identical across seeds => stable FAIL. Bounded failure review: ~19 genuine failures (fabricated package description, explained nonexistent git flag, asserted that 25 is prime, invented phone number, echoed un-reversed word); ~8 scorer lexicon artifacts. Verdict robust: correcting every artifact still leaves seed-42 aggregate <0.75.
+<details class="lab-findings-configs">
+<summary>Configuration details: IQ1_M · llama.cpp · RTX 5070</summary>
 
-### What Was NOT Tested
+- Full profile name: llama.cpp IQ1_M (community conversion).
+- Profile identity: `apodex-1.1-mini-llamacpp-iq1m`.
+- Status: current canonical/recommended tested surface.
+- Artifact (as recorded): Apodex-1.1-mini-IQ1_M.gguf (community conversion abenzerps/Apodex-1.1-mini-GGUF @ 59afa57852525f79a9634d5f80dd639cceee572c)
+- Runtime (as recorded): llama.cpp.
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
 
-- Native Tools module
-- Coding module
-- Reasoning module (dedicated)
-- Context / Variance / Optimization / Stability
-- Soak
-- OMP Stage 2 (agent)
+Events on this configuration:
 
-**Do not fabricate missing results.** This evaluation establishes that the strongest representation satisfying the frozen WumboJetsII full-GPU baseline (IQ1_M, 1.75-bpw) does not clear the frozen viability gate. It does NOT establish that BF16/FP8/GPTQ or Agent Team deployments would fail.
+- [Initial evaluation (bounded early stop) (2026-08-25)](/evaluations/apodex-1-1-mini#initial-evaluation-2026-08-25-apodex); status: BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE
 
-### Role Classification
+</details>
 
-**Supported roles:** none beyond "runs coherently on 12GB at extreme quantization."
+## Chronology
 
-**NOT_REACHED:** Phases 4–10, OMP Stage 2, all capability modules, context/variance/optimization/soak/classification engine.
+Compact index; full results are in [Event results](#testing-history).
 
-### Important Limitations
+| Date | Event | Configuration | Status |
+|---|---|---|---|
+| 2026-08-25 | [Initial evaluation (bounded early stop)](#initial-evaluation-2026-08-25-apodex) | IQ1_M · llama.cpp · RTX 5070 | BOUNDED_EARLY_STOP / PHASE_3_DO_NOT_ADVANCE |
 
-- **Extreme quantization forced by hardware:** single 12GB consumer GPU required IQ1_M (1.75-bpw). Producer positioning rests on BF16-class deployments plus an agent harness that was not authorized to run.
-- **Phase-3 failure at IQ1_M does NOT establish that BF16/FP8/GPTQ or Agent Team deployments would fail.** It establishes that the strongest representation satisfying the frozen full-GPU baseline does not clear the frozen viability gate.
-- **Scorer lexicon defect** understates false-premise performance modestly; verdict unaffected.
-- **No reliability, coding, tools, context, or soak results exist.**
+<a id="canonical-evidence"></a>
 
-### Evidence Links
+## Technical provenance
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m
-- **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models
-- **LocalMaxxing:** Speed result SUBMITTED/APPROVED (ID `cmt9ijytg00xali017f46xk25`, 182.31 tok/s p512/n128). Benchmark suites NOT_SUBMITTED due to early WELP stop.
+Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-### Reproduction
-
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m)
-
-This Lab Record is a summary; the canonical repo is the source of truth.
-
-## Canonical evidence
-
-All canonical public evidence lives in WumboLabs/evaluations. Each event links an immutable full-commit/path citation; each profile remains a distinct scientific identity, not a separate repository.
-
-- **apodex-1.1-mini-llamacpp-iq1m**: [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini/profiles/apodex-1.1-mini-llamacpp-iq1m/profile.json)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/apodex-1.1-mini)
 
 ### Legacy provenance
 

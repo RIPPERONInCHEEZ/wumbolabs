@@ -49,9 +49,15 @@ must match their hash pins too. Never hand-edit cached exports to resolve a conf
 
 Current findings follow each event's `evidence_scope`, not merely the latest date.
 A context-only event must not replace classification, reliability, or capabilities.
-Human model pages show current findings, tested profiles, testing history, exact
-**Canonical Evidence / Full Report** links, profile metadata, and clearly labelled
-legacy provenance. No independent public research backlog is generated.
+Human model pages use one findings-first renderer in `scripts/labs_findings_render.py`,
+called by `scripts/sync_labs.py` for every model. Overview and attributed findings
+precede independent event results, limitations, tested configurations, chronology,
+and supporting technical provenance. Each event has one clear full-report link;
+profile metadata, original event anchors, and legacy provenance remain accessible.
+Native details hold raw section JSON and lengthy identities, never substantive
+negative findings or objective scores. Narrative events retain their own methodology
+and authored findings; missing optional fields do not acquire invented values.
+No independent public research backlog or composite model verdict is generated.
 The registry's explicit `current_state` event/profile selections govern current
 classification, context and recommendation display, even when a newer specialist
 event exists. A current tested profile is not automatically a recommendation.
@@ -95,6 +101,7 @@ INVALID coverage stops publication.
    python3 scripts/check_labs_publication_status.py --campaign-registry CAMPAIGN_REGISTRY
    zola build
    python3 scripts/check_evaluations_site.py
+   node scripts/test_evaluations_catalog.js
    ```
 
 5. Review scoped working and staged diffs, public safety, exact report/profile links,

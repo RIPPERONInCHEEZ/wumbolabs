@@ -3,7 +3,7 @@
 {% block title %}{{ page.title }} | {{ config.title }}{% endblock title %}
 
 {% block content %}
-<section class="container page-record">
+<section class="container page-record evaluation-model">
   <div class="console-record-bar" aria-label="Record context">
     <span><span class="operator-signal" aria-hidden="true"></span> WUMBOLABS / EVALUATIONS</span>
     <span>CANONICAL MODEL EVALUATION</span>
@@ -20,13 +20,12 @@
     <h1>{{ page.title }}</h1>
     <p class="page-record-description">{{ page.description }}</p>
     <p class="page-record-date">
-      {% if page.extra.classification %}{{ page.extra.classification | replace(from='_', to=' ') }}{% endif %}
-      {% if page.extra.latest_evidence_date %} / latest evidence {{ page.extra.latest_evidence_date }}{% endif %}
+      {% if page.extra.latest_evidence_date %}latest evidence {{ page.extra.latest_evidence_date }}{% endif %}
     </p>
   </header>
 
   <div class="page-record-content">
-    {{ page.content | safe }}
+    {{ page.content | replace(from='<table>', to='<div class="evaluation-data-scroll" tabindex="0" role="region" aria-label="Scrollable evaluation data"><table>') | replace(from='</table>', to='</table></div>') | safe }}
   </div>
 
   <nav class="page-exit" aria-label="After this model page">
