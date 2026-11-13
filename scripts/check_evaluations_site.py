@@ -13,7 +13,7 @@ Checks:
     status/classification or placeholder advertisement in data-search) that
     derives latest evidence from canonical event dates and sorts deterministically;
   - homepage links each research destination exactly twice (global nav + one
-    main route set) and keeps the recorded research hardware;
+    main route set), without a homepage hardware inventory;
   - primary navigation exposes Evaluations, Research, and Methodology, not Projects;
   - retired /labs/ routes and event stubs preserve their model-page targets;
   - /records/ remains the Research archive and each technical-record URL;
@@ -518,8 +518,9 @@ def main() -> int:
     home = html(PUBLIC / "index.html")
     for label, dest in (("Evaluations", "/evaluations/"), ("Research", "/records/"),
                         ("Methodology", "/methodology/"),
-                        ("About", "/about/"), ("Contact", "/contact/")):
-        check(f'href="{dest}"' in home, f"primary navigation missing {label} ({dest})")
+                        ("About", "/about/"), ("Links", "/contact/")):
+        check(re.search(rf'<a\b[^>]*href="{re.escape(dest)}"[^>]*>{label}</a>', home),
+              f"primary navigation missing {label} ({dest})")
     check(">Projects<" not in home, "primary navigation still exposes Projects")
     for page in PUBLIC.glob("*/index.html"):
         body = html(page)
@@ -527,8 +528,7 @@ def main() -> int:
             failures.append(f"{page}: links retired destination /labs/")
 
     # 2b. homepage: each research destination exactly twice (global nav + one
-    # main route set — a duplicated route panel would re-expose the destination),
-    # with the recorded research hardware preserved.
+    # main route set — a duplicated route panel would re-expose the destination).
     main_block = re.search(r"<main\b[^>]*>(.*)</main>", home, flags=re.DOTALL)
     check(main_block is not None, "homepage lost its main content landmark")
     if main_block is not None:
@@ -552,8 +552,8 @@ def main() -> int:
             check(in_chrome == 1,
                   f"homepage global navigation must expose {label} exactly once; "
                   f"found {in_chrome}")
-        check("Radeon AI PRO R9700" in home and "RTX 5070" in home,
-              "homepage lost the recorded research hardware inventory")
+        check('id="systems"' not in main_html and 'class="inventory-list"' not in main_html,
+              "homepage still exposes a hardware inventory")
 
     # 3. retired Labs section root and model routes remain covered by _redirects.
     check("/labs/" in redirects, "_redirects missing entry for /labs/")

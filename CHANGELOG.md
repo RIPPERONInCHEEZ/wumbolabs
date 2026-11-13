@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.21 - Homepage cleanup and links directory
+
+- Remove the homepage research-hardware panel; keep hardware and runtime evidence in its evaluation and report context.
+- Expand `/contact/` into Links & Contact, grouping research destinations, personal profiles, and correspondence.
+- Label primary navigation Links and simplify the footer to one directory link.
+
 ## v0.20 - Evaluation readability
 
 - Keep one prominent homepage research destination set alongside global navigation.

@@ -282,7 +282,7 @@ a:hover {
 .contact-grid {
   display: grid;
   gap: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem;
 }
 
 .contact-card {
@@ -299,6 +299,11 @@ a:hover {
 .contact-card:hover {
   text-decoration: none;
   border-color: var(--wl-border-strong);
+}
+
+.contact-card:focus-visible {
+  outline: 2px solid var(--wl-interactive);
+  outline-offset: 3px;
 }
 
 .contact-icon {
@@ -599,8 +604,7 @@ summary:hover {
 
 .lab-status-panel,
 .bench-item,
-.project-record,
-.inventory-list {
+.project-record {
   background: var(--wl-bg-panel);
   border: 1px solid var(--wl-border);
   border-radius: 0;
@@ -755,32 +759,6 @@ summary:hover {
   font-size: 0.9rem;
 }
 
-.inventory-list {
-  display: grid;
-}
-
-.inventory-list div {
-  display: grid;
-  gap: 0.25rem;
-  padding: 0.9rem 1rem;
-  border-bottom: 1px solid var(--wl-border);
-}
-
-.inventory-list div:last-child {
-  border-bottom: 0;
-}
-
-.inventory-list span {
-  color: var(--wl-text-muted);
-  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.75rem;
-}
-
-.inventory-list strong {
-  color: var(--wl-text-soft);
-  font-size: 0.95rem;
-}
-
 @media (max-width: 900px) {
   .split-section,
   .project-records {
@@ -843,7 +821,6 @@ code,
 .panel-topline,
 .bench-key,
 .record-meta,
-.inventory-list span,
 .text-link {
   font-family: var(--font-mono);
 }
@@ -867,23 +844,20 @@ code,
 
 .lab-status-panel,
 .bench-item,
-.project-record,
-.inventory-list {
+.project-record {
   position: relative;
 }
 
 .panel-topline,
 .record-meta,
-.bench-key,
-.inventory-list span {
+.bench-key {
   font-weight: 800;
   letter-spacing: 0.14em;
 }
 
 .status-list dt,
 .bench-item strong,
-.project-record h2,
-.inventory-list strong {
+.project-record h2 {
   letter-spacing: -0.02em;
 }
 
@@ -1225,8 +1199,7 @@ code,
 }
 
 
-.operator-evidence,
-.operator-systems {
+.operator-evidence {
   border-top: 1px solid var(--wl-border);
   scroll-margin-top: 1rem;
 }
@@ -1310,23 +1283,6 @@ code,
 }
 
 
-.operator-systems .inventory-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.operator-systems .inventory-list div {
-  border-right: 1px solid var(--wl-border);
-  border-bottom: 0;
-}
-
-.operator-systems .inventory-list div:last-child {
-  border-right: 0;
-}
-
-.operator-systems .inventory-list a {
-  color: inherit;
-}
-
 @media (max-width: 900px) {
   .operator-route {
     grid-template-columns: 130px minmax(0, 1fr);
@@ -1335,22 +1291,6 @@ code,
   .operator-route-links {
     grid-column: 2;
     justify-content: flex-start;
-  }
-
-  .operator-systems .inventory-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .operator-systems .inventory-list div {
-    border-bottom: 1px solid var(--wl-border);
-  }
-
-  .operator-systems .inventory-list div:nth-child(2n) {
-    border-right: 0;
-  }
-
-  .operator-systems .inventory-list div:nth-last-child(-n + 2) {
-    border-bottom: 0;
   }
 }
 
@@ -1378,8 +1318,7 @@ code,
     letter-spacing: -0.055em;
   }
 
-  .operator-route,
-  .operator-systems .inventory-list {
+  .operator-route {
     grid-template-columns: 1fr;
   }
 
@@ -1390,17 +1329,6 @@ code,
 
   .operator-route-links {
     grid-column: auto;
-  }
-
-  .operator-systems .inventory-list div,
-  .operator-systems .inventory-list div:nth-child(2n),
-  .operator-systems .inventory-list div:nth-last-child(-n + 2) {
-    border-right: 0;
-    border-bottom: 1px solid var(--wl-border);
-  }
-
-  .operator-systems .inventory-list div:last-child {
-    border-bottom: 0;
   }
 }
 

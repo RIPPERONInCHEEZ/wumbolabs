@@ -53,7 +53,7 @@
         <a href="/records/"{% if current_path == "/records/" %} aria-current="page"{% elif current_path is starting_with("/records/") %} aria-current="location"{% endif %}>Research</a>
         <a href="/methodology/"{% if current_path == "/methodology/" %} aria-current="page"{% elif current_path is starting_with("/methodology/") %} aria-current="location"{% endif %}>Methodology</a>
         <a href="/about/"{% if current_path == "/about/" %} aria-current="page"{% endif %}>About</a>
-        <a href="/contact/"{% if current_path == "/contact/" %} aria-current="page"{% endif %}>Contact</a>
+        <a href="/contact/"{% if current_path == "/contact/" %} aria-current="page"{% endif %}>Links</a>
       </div>
     </nav>
   </header>
@@ -77,12 +77,7 @@
       </div>
 
       <div class="footer-links">
-        {% if current_path != "/" %}
-        <a href="/evaluations/">Evaluations</a>
-        <a href="/records/">Research</a>
-        <a href="/methodology/">Methodology</a>
-        {% endif %}
-        <a href="https://github.com/RIPPERONInCHEEZ/wumbolabs">GitHub</a>
+        <a href="/contact/">Links &amp; Contact</a>
       </div>
     </div>
   </footer>
