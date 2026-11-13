@@ -85,6 +85,7 @@ If local test results are used, summarize them with claim boundaries rather than
 - Update the central registry first; pin its pushed full commit and SHA-256 in `data/evaluations-source.json`, then run deterministic sync. `data/labs-registry.json`, cached exports, model pages, and indexes are derivatives; do not independently edit them.
 - Preserve immutable historical exports and legacy provenance. Shared events live once with explicit related model/profile IDs; display attribution is not ownership.
 - Follow `docs/labs-publication-workflow.md` and canonical WELP `docs/publication.md`. Publication work never authorizes new inference, benchmarks, LocalMaxxing actions, or model downloads.
+- WELP v1.0 standing owner decision (2026-11-11): verified public-safe HUMAN_ACCEPTED findings proceed automatically through central publication, pin/sync/build/deploy and live verification, without another campaign publication approval. Scientific review is substantive; a WEBSITE_READY flag alone never authorizes unaccepted findings. Valid FAILs/budget limits publish; failed integrity, unsafe content and unresolved technical INVALID coverage stop promotion. This applies to future separately authorized Strata evaluation closeout, not permission to start inference.
 
 ## Technical change policy
 
