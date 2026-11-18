@@ -42,3 +42,6 @@
 /labs/nanbeige4-3-33b/ /evaluations/nanbeige4-3-33b/ 301
 /labs/tess-4-5-27b/ /evaluations/tess-4-5-27b/ 301
 /labs/occamy-1-0/ /evaluations/occamy-1-0/ 301
+/labs/qwen3-coder-30b-a3b-instruct/ /evaluations/qwen3-coder-30b-a3b-instruct/ 301
+/labs/nanbeige4-2-3b/ /evaluations/nanbeige4-2-3b/ 301
+/labs/muse-glimmer-30b/ /evaluations/muse-glimmer-30b/ 301

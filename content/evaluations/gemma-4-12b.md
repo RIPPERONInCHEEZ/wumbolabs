@@ -2,7 +2,7 @@
 title = "Gemma 4 12B IT"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 7
+weight = 10
 
 [extra]
 kind = "model"
@@ -1332,7 +1332,7 @@ Configuration: llama.cpp Q4_K_M (ggml-org).
 
 [Full report (REPORT.md)](https://github.com/WumboLabs/evaluations/blob/479cb50c197f8ea0dd905a68ffd61f632f49c652/models/gemma-4-12b/events/gemma4-12b-lmx-speed-2026-07-04/REPORT.md)
 
-Related tested profiles: [gemma-4-12b-llamacpp-qat-q4-0](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json), [gemma-4-12b-llamacpp-ud-q5-k-xl](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json), [gemma-4-12b-llamacpp-ud-q6-k-xl](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
+Related tested profiles: [gemma-4-12b-llamacpp-qat-q4-0](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json), [gemma-4-12b-llamacpp-ud-q5-k-xl](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json), [gemma-4-12b-llamacpp-ud-q6-k-xl](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 
 LMX local speed evidence: Q4_K_M 72.11, UD-Q5_K_XL 62.76, UD-Q6_K_XL 51.26 tok/s out (llama.cpp). Archaeology additionally cites Q8_0 test and NVFP4 conversion-attempt records (weights since removed).
@@ -1459,7 +1459,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): google/gemma-4-12b-it-qat-q4_0-gguf (QAT UD-Q4_K_XL packaging)
 - Runtime (as recorded): llama.cpp b9672 (74ade5274), CUDA SM120.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-qat-q4-0/profile.json)
 
 Events on this configuration:
 
@@ -1487,7 +1487,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 0.0, repeat_penalty 1.0, seed 42, temperature 1.0, top_k 64, top_p 0.95.
 - Reasoning arm: NOT_CONFIGURABLE.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-rtx5070-cuda-ssd-not-configurable-2026-11-09/profile.json)
 
 Events on this configuration:
 
@@ -1503,7 +1503,7 @@ Events on this configuration:
 - Status: specialized tested surface.
 - Artifact (as recorded): ggml-org/gemma-4-12b-it-GGUF Q4_K_M
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-q4km/profile.json)
 
 Events on this configuration:
 
@@ -1519,7 +1519,7 @@ Events on this configuration:
 - Status: specialized tested surface.
 - Artifact (as recorded): unsloth/gemma-4-12b-it-GGUF UD-Q5_K_XL
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q5-k-xl/profile.json)
 
 Events on this configuration:
 
@@ -1535,7 +1535,7 @@ Events on this configuration:
 - Status: specialized tested surface.
 - Artifact (as recorded): unsloth/gemma-4-12b-it-GGUF UD-Q6_K_XL
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b/profiles/gemma-4-12b-llamacpp-ud-q6-k-xl/profile.json)
 
 Events on this configuration:
 
@@ -1563,7 +1563,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma-4-12b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/gemma-4-12b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-11-09 WELP v1.0 fresh second-family baseline and reasoning arm</summary>

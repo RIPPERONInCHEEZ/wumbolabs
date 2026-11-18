@@ -2,7 +2,7 @@
 title = "Qwen3-14B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 16
+weight = 19
 
 [extra]
 kind = "model"
@@ -235,7 +235,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): unsloth/Qwen3-14B-GGUF Q4_K_M (9,001,753,376-byte Q4_K_M; sha256 712c0791d5124d3dd6d1e4968de1201207afeae49c6e10fbeb9c58fe00c58555)
 - Runtime (as recorded): llama.cpp b9672 (74ade5274), CUDA SM120.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km-q8kv/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km-q8kv/profile.json)
 
 Events on this configuration:
 
@@ -251,7 +251,7 @@ Events on this configuration:
 - Status: historical tested surface; retained evidence, not the recommended profile.
 - Artifact (as recorded): unsloth/Qwen3-14B-GGUF Q4_K_M (custom qwen3-14b-wumbo Ollama tag; 9,001,753,376-byte weights fingerprint)
 - Runtime (as recorded): Ollama.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3-14b/profiles/qwen3-14b-ollama-q4km-wumbo/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3-14b/profiles/qwen3-14b-ollama-q4km-wumbo/profile.json)
 
 Events on this configuration:
 
@@ -267,7 +267,7 @@ Events on this configuration:
 - Status: historical tested surface; retained evidence, not the recommended profile.
 - Artifact (as recorded): unsloth/Qwen3-14B-GGUF Q4_K_M
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3-14b/profiles/qwen3-14b-llamacpp-q4km/profile.json)
 
 Events on this configuration:
 
@@ -293,7 +293,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3-14b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3-14b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-14 WELP Recharacterization: llama.cpp Q4_K_M q8_0 KV</summary>

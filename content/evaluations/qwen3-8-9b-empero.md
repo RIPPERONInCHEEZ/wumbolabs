@@ -2,7 +2,7 @@
 title = "Qwen3.8-9B (Empero)"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 24
+weight = 27
 
 [extra]
 kind = "model"
@@ -106,7 +106,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Status: current tested surface; not the recommended profile.
 - Artifact (as recorded): empero-ai/Qwen3.8-9B-GGUF@760121cd70bb4c36b2b5ec58eb765e0df5987efe (Q8_0) + base Q4 lane
 - Runtime (as recorded): llama.cpp/vLLM.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-vendor-battery/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-vendor-battery/profile.json)
 
 Events on this configuration:
 
@@ -122,7 +122,7 @@ Events on this configuration:
 - Status: specialized tested surface.
 - Artifact (as recorded): empero-ai/Qwen3.8-9B-Distill-GGUF Q4_K_M / Q5_K_M / Q6_K
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3.8-9b-empero/profiles/qwen3.8-9b-empero-distill-llamacpp-q4q5q6-wumboserver/profile.json)
 
 Events on this configuration:
 
@@ -145,7 +145,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.8-9b-empero)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen3.8-9b-empero)
 
 ### Legacy provenance
 

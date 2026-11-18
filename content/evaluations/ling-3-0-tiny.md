@@ -2,7 +2,7 @@
 title = "Ling 3.0 Tiny"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 9
+weight = 12
 
 [extra]
 kind = "model"
@@ -355,7 +355,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): inclusionAI/Ling-3.0-tiny-GGUF@01b850e2 :: Ling-3.0-tiny-Q8_0.gguf (sha256 9299a9e5cbc540597619e252a41fd671faa4e84e619e3cea816542c84e19f0d6)
 - Runtime (as recorded): llama.cpp b10999.
 - Hardware (as recorded): NVIDIA GeForce RTX 5070 12 GB.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this configuration:
 
@@ -373,7 +373,7 @@ Events on this configuration:
 - Artifact (as recorded): inclusionAI/Ling-3.0-tiny-GGUF@01b850e2 :: Ling-3.0-tiny-Q8_0.gguf (sha256 9299a9e5cbc540597619e252a41fd671faa4e84e619e3cea816542c84e19f0d6)
 - Runtime (as recorded): llama.cpp b10999.
 - Hardware (as recorded): NVIDIA GeForce RTX 5070 12 GB.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ling-3.0-tiny/profiles/ling-3.0-tiny-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
 
 Events on this configuration:
 
@@ -399,7 +399,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/ling-3.0-tiny)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ling-3.0-tiny)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-25 WELP Reasoning-Profile Re-derivation: Ling 3.0 Tiny (Reasoning On, publisher default)</summary>

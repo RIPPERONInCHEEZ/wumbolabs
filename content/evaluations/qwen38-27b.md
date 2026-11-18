@@ -2,7 +2,7 @@
 title = "Qwen3.8-27B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 17
+weight = 20
 
 [extra]
 kind = "model"
@@ -351,14 +351,14 @@ A two-hour balanced-profile soak completed 225/225 HTTP successes and 46/46 exac
 
 ###### Evidence Links
 
-- **Canonical evaluation repo (historical llama.cpp profile):** https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl
+- **Canonical evaluation repo (historical llama.cpp profile):** https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models
 - **LocalMaxxing:** APPROVED speed-test submissions (`cmt3jngze0njfmv0133xpneeu` BALANCED 16K; `cmt3jp2cn0njpmv01t5u8m6wd` FAST 8K MTP) + benchmark suite APPROVED/PUBLIC; ref-quant `cmsv68xl3085ims01w8aeacig`
 
 ###### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl)
 
 Full reproduction instructions, manifests, and checksums are published in the canonical repository. This Lab Record is a summary; the canonical repo is the source of truth.
 
@@ -442,7 +442,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): Qwen3.8-27B-SC_2.20bpw_H3_V3 (EXL3)
 - Runtime (as recorded): ExLlamaV3 1.4.6+cu128.torch2.10.0 (torch 2.10.0+cu128, CUDA 12.8).
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen38-27b/profiles/qwen38-27b-exl3-h1/profile.json)
 
 Events on this configuration:
 
@@ -460,7 +460,7 @@ Events on this configuration:
 - Deployment topology (as recorded): Full-GPU llama.cpp CUDA serving on a single-user workstation; quant-matrix and placement evidence in reports/ and manifests/
 - Artifact (as recorded): Unsloth Qwen3.8-27B UD-Q2_K_XL GGUF (Unsloth rev 27af057ecb382ddfea5d12837360a8980560e3ed)
 - Runtime (as recorded): llama.cpp b10449 (0d9ceae1e38291035605613ab41a8f5e693d6fcd).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen38-27b/profiles/qwen38-27b-llamacpp-ud-q2-k-xl/profile.json)
 
 Events on this configuration:
 
@@ -486,7 +486,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen38-27b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen38-27b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-12 Context Envelope: ExLlamaV3 H1</summary>

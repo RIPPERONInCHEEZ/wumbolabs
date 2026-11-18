@@ -300,6 +300,33 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/qwen3-coder-30b-a3b-instruct/",
+      "content_type": "model-page",
+      "model_id": "qwen3-coder-30b-a3b-instruct",
+      "event_id": null,
+      "new_url": "/evaluations/qwen3-coder-30b-a3b-instruct/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/nanbeige4-2-3b/",
+      "content_type": "model-page",
+      "model_id": "nanbeige4.2-3b",
+      "event_id": null,
+      "new_url": "/evaluations/nanbeige4-2-3b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/muse-glimmer-30b/",
+      "content_type": "model-page",
+      "model_id": "muse-glimmer-30b",
+      "event_id": null,
+      "new_url": "/evaluations/muse-glimmer-30b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

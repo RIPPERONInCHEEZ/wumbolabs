@@ -2,7 +2,7 @@
 title = "Qwen3.5-4B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 19
+weight = 22
 
 [extra]
 kind = "model"
@@ -169,7 +169,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): Qwen3.5-4B-BF16.gguf (text-only conversion; Unsloth rev e87f176479d0855a907a41277aca2f8ee7a09523)
 - Runtime (as recorded): llama.cpp 0.1.0-dev build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA 13.3, SM120).
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-4b/profiles/qwen35-4b-llamacpp-bf16/profile.json)
 
 Events on this configuration:
 
@@ -191,7 +191,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen35-4b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-4b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-11 Context Envelope: llama.cpp BF16</summary>

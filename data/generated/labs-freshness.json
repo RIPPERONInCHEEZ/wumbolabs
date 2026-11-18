@@ -411,6 +411,36 @@
       "resolved_commit": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/5a8ecd7cafe5ff70c5f718620820d02f03be9ca5/models/occamy-1.0/events/occamy10-r9700-hip-on-2026-11-17/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17": {
+      "file": "data/generated/evaluations-exports/qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17.json",
+      "sha256": "59dad2a877205933116f1c2bcfc2913732a9c9d0267fecbd037ed6e08525129b",
+      "repo": "WumboLabs/evaluations",
+      "ref": "844dcc6e47c6092b492af372985cf45f4923a0a9",
+      "path": "models/qwen3-coder-30b-a3b-instruct/events/qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17/website-publication.json",
+      "resolved_commit": "844dcc6e47c6092b492af372985cf45f4923a0a9",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/844dcc6e47c6092b492af372985cf45f4923a0a9/models/qwen3-coder-30b-a3b-instruct/events/qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-nanbeige42-3b-rtx5070-cuda-on-2026-11-17": {
+      "file": "data/generated/evaluations-exports/nanbeige42-3b-rtx5070-cuda-on-2026-11-17.json",
+      "sha256": "23ff2d28ac710ec7bffe4988a565dc9042f19303ffdada2f88dfa0c35290a5ab",
+      "repo": "WumboLabs/evaluations",
+      "ref": "844dcc6e47c6092b492af372985cf45f4923a0a9",
+      "path": "models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-on-2026-11-17/website-publication.json",
+      "resolved_commit": "844dcc6e47c6092b492af372985cf45f4923a0a9",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/844dcc6e47c6092b492af372985cf45f4923a0a9/models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-on-2026-11-17/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-muse-glimmer-30b-r9700-hip-high-2026-11-17": {
+      "file": "data/generated/evaluations-exports/muse-glimmer-30b-r9700-hip-high-2026-11-17.json",
+      "sha256": "1161e60734aa56eee3ff53f6b37ad8544a106598952820108cf307171b1fe6cd",
+      "repo": "WumboLabs/evaluations",
+      "ref": "844dcc6e47c6092b492af372985cf45f4923a0a9",
+      "path": "models/muse-glimmer-30b/events/muse-glimmer-30b-r9700-hip-high-2026-11-17/website-publication.json",
+      "resolved_commit": "844dcc6e47c6092b492af372985cf45f4923a0a9",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/844dcc6e47c6092b492af372985cf45f4923a0a9/models/muse-glimmer-30b/events/muse-glimmer-30b-r9700-hip-high-2026-11-17/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -479,6 +509,14 @@
       "campaign": "mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14"
     },
     {
+      "slug": "eval-muse-glimmer-30b-r9700-hip-high-2026-11-17",
+      "campaign": "muse-glimmer-30b-r9700-hip-high-2026-11-17"
+    },
+    {
+      "slug": "eval-nanbeige42-3b-rtx5070-cuda-on-2026-11-17",
+      "campaign": "nanbeige42-3b-rtx5070-cuda-on-2026-11-17"
+    },
+    {
       "slug": "eval-nanbeige43-33b-r9700-hip-on-recovery-2026-11-16",
       "campaign": "nanbeige43-33b-r9700-hip-on-recovery-2026-11-16"
     },
@@ -505,6 +543,10 @@
     {
       "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
       "campaign": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"
+    },
+    {
+      "slug": "eval-qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17",
+      "campaign": "qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17"
     },
     {
       "slug": "eval-qwen35-9b-r9700-hip-m2-geometry-2026-10-22",
@@ -580,6 +622,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 32,
-  "model_events": 74
+  "models": 35,
+  "model_events": 77
 }

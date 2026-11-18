@@ -2,7 +2,7 @@
 title = "Bonsai 27B (Q1_0)"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 30
+weight = 33
 
 [extra]
 kind = "model"
@@ -87,7 +87,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Status: specialized tested surface.
 - Artifact (as recorded): Upstream identity unresolved; retained public evidence describes a 3,803,452,480-byte Q1_0 artifact fingerprint.
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/bonsai-27b/profiles/bonsai-27b-q1-0-llamacpp/profile.json)
 
 Events on this configuration:
 
@@ -109,7 +109,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/bonsai-27b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/bonsai-27b)
 
 ### Legacy provenance
 
