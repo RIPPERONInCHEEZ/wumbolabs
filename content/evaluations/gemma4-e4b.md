@@ -2,7 +2,7 @@
 title = "Gemma 4 E4B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 16
+weight = 20
 
 [extra]
 kind = "model"
@@ -170,7 +170,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): gemma-4-E4B_q4_0-it.gguf + official gemma-4-E4B-it-mmproj.gguf (Google official QAT release)
 - Runtime (as recorded): llama.cpp 0.1.0-dev build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (campaign-local CUDA 13.3 build, SM120).
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma4-e4b/profiles/gemma4-e4b-llamacpp-qat-q4-0/profile.json)
 
 Events on this configuration:
 
@@ -192,7 +192,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/gemma4-e4b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/gemma4-e4b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-10 Initial Evaluation: official QAT Q4_0</summary>

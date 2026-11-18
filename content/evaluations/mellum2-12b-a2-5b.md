@@ -2,7 +2,7 @@
 title = "Mellum2 12B-A2.5B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 10
+weight = 14
 
 [extra]
 kind = "model"
@@ -291,7 +291,7 @@ Configuration: llama.cpp Q4_K_M (Instruct).
 
 [Long-form report: Mellum2 Agent Backend Test](/records/mellum2-agent-backend-test/)
 
-Related tested profiles: [mellum2-12b-a2.5b-llamacpp-q4km-thinking](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
+Related tested profiles: [mellum2-12b-a2.5b-llamacpp-q4km-thinking](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
 
 
 Instruct + Thinking Q4_K_M through LLMGauge agent-backend-v1 at 64k on WumboJetsII. 64k fit confirmed (Instruct 5/5 complete, 251.0-257.2 tok/s out, 9203 MiB peak VRAM). Manual scores: Instruct preferred (overall trust 3.7/5) over Thinking; neither safe for unsupervised shell/systemd operations. Not a general model-quality verdict.
@@ -340,7 +340,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): Mellum2-12B-A2.5B-Instruct-Q4_K_M.gguf (8,071,293,600-byte Q4_K_M; sha256 b04281c27de5d968d577f310d982273b1b13bdbd8117b3ecffffeebfe222f0a7; official JetBrains/Mellum2-12B-A2.5B-Instruct-GGUF-Q4_K_M @ 1236b4166ed6ab1d57e4be9bcc19f4899c190cbf, reacquired 2026-09-15 after local+archive absence, byte-verified against official LFS SHA-256)
 - Runtime (as recorded): llama.cpp b9672 (74ade5274), CUDA SM120.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-instruct/profile.json)
 
 Events on this configuration:
 
@@ -361,7 +361,7 @@ Events on this configuration:
 - Artifact (as recorded): JetBrains/Mellum2-12B-A2.5B-Thinking-GGUF-Q4_K_M
 - Runtime (as recorded): llama.cpp b9672 (74ade5274), CUDA SM120.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/mellum2-12b-a2.5b/profiles/mellum2-12b-a2.5b-llamacpp-q4km-thinking/profile.json)
 
 Events on this configuration:
 
@@ -388,7 +388,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/mellum2-12b-a2.5b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/mellum2-12b-a2.5b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-16 WELP Recharacterization: llama.cpp Q4_K_M (Thinking)</summary>

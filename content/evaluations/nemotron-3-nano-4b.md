@@ -2,7 +2,7 @@
 title = "Nemotron 3 Nano 4B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 14
+weight = 18
 
 [extra]
 kind = "model"
@@ -229,14 +229,14 @@ What the reached phases establish:
 
 ###### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models
 - **LocalMaxxing:** Speed run measured locally (~180 tok/s); submission blocked on missing credentials. No benchmark suite submissions.
 
 ###### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
 
@@ -280,7 +280,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): NVIDIA-Nemotron3-Nano-4B-Q4_K_M.gguf (sole official quant; upstream rev ba223d14e45525f7fae81db77ea8cabeb2fc6c25)
 - Runtime (as recorded): llama.cpp build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA SM120).
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/nemotron-3-nano-4b/profiles/nemotron-3-nano-4b-llamacpp-q4km/profile.json)
 
 Events on this configuration:
 
@@ -304,7 +304,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/nemotron-3-nano-4b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/nemotron-3-nano-4b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-11 WELP Recharacterization: llama.cpp Q4_K_M</summary>

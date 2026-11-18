@@ -2,7 +2,7 @@
 title = "Granite 4.2 8B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 7
+weight = 11
 
 [extra]
 kind = "model"
@@ -135,7 +135,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): ibm-granite/granite-4.2-8b-GGUF@93f3f6a8 :: granite-4.2-8b-Q4_K_M.gguf (sha256 16a9369d0805f80b7377d25d87f937a90c05dc04ad79173a52001e42c9aab311)
 - Runtime (as recorded): llama.cpp b10999.
 - Hardware (as recorded): NVIDIA GeForce RTX 5070 12 GB.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/granite-4.2-8b/profiles/granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this configuration:
 
@@ -157,7 +157,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/granite-4.2-8b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/granite-4.2-8b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-24 WELP Initial Evaluation: IBM Granite 4.2 8B (reasoning-on)</summary>

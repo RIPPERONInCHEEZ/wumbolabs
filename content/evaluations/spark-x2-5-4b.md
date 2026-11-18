@@ -2,7 +2,7 @@
 title = "Spark-X2.5-4B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 8
+weight = 12
 
 [extra]
 kind = "model"
@@ -174,7 +174,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): XHToken/Spark-X2.5-4B-GGUF@9826e0be :: Spark-X2.5-4B-Q8_0.gguf (sha256 5c2c3c190e4337e1016b8593ca8e26e8b18c972200b107385d4ec61a25d9dea2)
 - Runtime (as recorded): llama.cpp (upstream) b04d4e567cd2fb8d2ded6e17d38dbbcfafe29063 (tag b10999, 0.4.1-dev build 1), CUDA SM120.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/spark-x2.5-4b/profiles/spark25-4b-q8-0-llamacpp/profile.json)
 
 Events on this configuration:
 
@@ -196,7 +196,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/spark-x2.5-4b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/spark-x2.5-4b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-20 WELP Characterization: iFlytek Spark-X2.5-4B (reasoning-on)</summary>

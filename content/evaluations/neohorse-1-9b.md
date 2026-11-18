@@ -2,7 +2,7 @@
 title = "NeoHorse-1-9B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 6
+weight = 10
 
 [extra]
 kind = "model"
@@ -278,7 +278,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): TokenRhythm/NeoHorse-1-9B-GGUF@ddcb4c93 :: NeoHorse-1-9B-Q8_0.gguf (sha256 519869730bda973ec50bb3ac42cd874569e5f3a57c3e0d5d23a2b5040e93310f)
 - Runtime (as recorded): llama.cpp b10999.
 - Hardware (as recorded): NVIDIA GeForce RTX 5070 12 GB.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-on/profile.json)
 
 Events on this configuration:
 
@@ -296,7 +296,7 @@ Events on this configuration:
 - Artifact (as recorded): TokenRhythm/NeoHorse-1-9B-GGUF@ddcb4c93 :: NeoHorse-1-9B-Q8_0.gguf (sha256 519869730bda973ec50bb3ac42cd874569e5f3a57c3e0d5d23a2b5040e93310f)
 - Runtime (as recorded): llama.cpp b10999.
 - Hardware (as recorded): NVIDIA GeForce RTX 5070 12 GB.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/neohorse-1-9b/profiles/neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off/profile.json)
 
 Events on this configuration:
 
@@ -320,7 +320,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/neohorse-1-9b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/neohorse-1-9b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-25 WELP Fresh-Model Characterization: NeoHorse-1-9B (Reasoning On, publisher default)</summary>

@@ -371,6 +371,46 @@
       "resolved_commit": "b50eb6546cb01b95b329bf614e51e688b2f77714",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/b50eb6546cb01b95b329bf614e51e688b2f77714/models/qwen3.8-flash-next/events/qwen38-flash-next-welp-v11-strata-r9700-2026-11-11/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14": {
+      "file": "data/generated/evaluations-exports/mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14.json",
+      "sha256": "c9fc42c30ca7f4d8cb7b2261dcd6d17779fc48ccdb15c9c6b209b1715bd65a9e",
+      "repo": "WumboLabs/evaluations",
+      "ref": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "path": "models/mimo-v2.6-distill-qwen-9b/events/mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14/website-publication.json",
+      "resolved_commit": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/5a8ecd7cafe5ff70c5f718620820d02f03be9ca5/models/mimo-v2.6-distill-qwen-9b/events/mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-nanbeige43-33b-r9700-hip-on-recovery-2026-11-16": {
+      "file": "data/generated/evaluations-exports/nanbeige43-33b-r9700-hip-on-recovery-2026-11-16.json",
+      "sha256": "b17d14196eb8976f3c874152f1216d32c8acc608f6561dc20eb5151a43fa51cb",
+      "repo": "WumboLabs/evaluations",
+      "ref": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "path": "models/nanbeige4.3-33b/events/nanbeige43-33b-r9700-hip-on-recovery-2026-11-16/website-publication.json",
+      "resolved_commit": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/5a8ecd7cafe5ff70c5f718620820d02f03be9ca5/models/nanbeige4.3-33b/events/nanbeige43-33b-r9700-hip-on-recovery-2026-11-16/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-tess45-27b-r9700-hip-on-2026-11-17": {
+      "file": "data/generated/evaluations-exports/tess45-27b-r9700-hip-on-2026-11-17.json",
+      "sha256": "dd7e6f2e422a6822aea13632880bd2304efe0de59a42b21a33fdee823f1f2eb6",
+      "repo": "WumboLabs/evaluations",
+      "ref": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "path": "models/tess-4.5-27b/events/tess45-27b-r9700-hip-on-2026-11-17/website-publication.json",
+      "resolved_commit": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/5a8ecd7cafe5ff70c5f718620820d02f03be9ca5/models/tess-4.5-27b/events/tess45-27b-r9700-hip-on-2026-11-17/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-occamy10-r9700-hip-on-2026-11-17": {
+      "file": "data/generated/evaluations-exports/occamy10-r9700-hip-on-2026-11-17.json",
+      "sha256": "0e96117c73f217a47299d97feb87804a8bcc96e5f2f297c27eb5f57e8130fad2",
+      "repo": "WumboLabs/evaluations",
+      "ref": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "path": "models/occamy-1.0/events/occamy10-r9700-hip-on-2026-11-17/website-publication.json",
+      "resolved_commit": "5a8ecd7cafe5ff70c5f718620820d02f03be9ca5",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/5a8ecd7cafe5ff70c5f718620820d02f03be9ca5/models/occamy-1.0/events/occamy10-r9700-hip-on-2026-11-17/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -435,6 +475,14 @@
       "campaign": "mellum2-12b-a2.5b-thinking-rtx5070-welp-recharacterization-2026-09-16"
     },
     {
+      "slug": "eval-mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14",
+      "campaign": "mimo-v26-distill-qwen9b-rtx5070-cuda-on-2026-11-14"
+    },
+    {
+      "slug": "eval-nanbeige43-33b-r9700-hip-on-recovery-2026-11-16",
+      "campaign": "nanbeige43-33b-r9700-hip-on-recovery-2026-11-16"
+    },
+    {
       "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
       "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
     },
@@ -449,6 +497,10 @@
     {
       "slug": "eval-neohorse-1-9b-rtx5070-welp-reasoning-on-20260925",
       "campaign": "neohorse-1-9b-rtx5070-welp-reasoning-on-2026-09-25"
+    },
+    {
+      "slug": "eval-occamy10-r9700-hip-on-2026-11-17",
+      "campaign": "occamy10-r9700-hip-on-2026-11-17"
     },
     {
       "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
@@ -499,6 +551,10 @@
       "campaign": "spark-x2.5-4b-rtx5070-welp-characterization-2026-09-20"
     },
     {
+      "slug": "eval-tess45-27b-r9700-hip-on-2026-11-17",
+      "campaign": "tess45-27b-r9700-hip-on-2026-11-17"
+    },
+    {
       "slug": "gemma4-e4b",
       "campaign": "gemma4-e4b-rtx5070-welp-characterization-2026-09-10"
     },
@@ -524,6 +580,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 28,
-  "model_events": 70
+  "models": 32,
+  "model_events": 74
 }

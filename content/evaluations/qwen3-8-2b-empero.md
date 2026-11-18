@@ -2,7 +2,7 @@
 title = "Qwen3.8-2B (Empero)"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 24
+weight = 28
 
 [extra]
 kind = "model"
@@ -80,7 +80,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Status: current canonical/recommended tested surface.
 - Artifact (as recorded): empero-ai/Qwen3.8-2B-GGUF (+ BF16)
 - Runtime (as recorded): vLLM/llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.8-2b-empero/profiles/qwen3.8-2b-empero-vllm-bf16/profile.json)
 
 Events on this configuration:
 
@@ -102,7 +102,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.8-2b-empero)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.8-2b-empero)
 
 ### Legacy provenance
 

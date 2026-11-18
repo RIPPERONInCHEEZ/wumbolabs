@@ -38,3 +38,7 @@
 /labs/ling-3-0-tiny/ /evaluations/ling-3-0-tiny/ 301
 /labs/neohorse-1-9b/ /evaluations/neohorse-1-9b/ 301
 /labs/qwen3-8-flash-next/ /evaluations/qwen3-8-flash-next/ 301
+/labs/mimo-v2-6-distill-qwen-9b/ /evaluations/mimo-v2-6-distill-qwen-9b/ 301
+/labs/nanbeige4-3-33b/ /evaluations/nanbeige4-3-33b/ 301
+/labs/tess-4-5-27b/ /evaluations/tess-4-5-27b/ 301
+/labs/occamy-1-0/ /evaluations/occamy-1-0/ 301

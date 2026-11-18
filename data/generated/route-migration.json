@@ -264,6 +264,42 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/mimo-v2-6-distill-qwen-9b/",
+      "content_type": "model-page",
+      "model_id": "mimo-v2.6-distill-qwen-9b",
+      "event_id": null,
+      "new_url": "/evaluations/mimo-v2-6-distill-qwen-9b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/nanbeige4-3-33b/",
+      "content_type": "model-page",
+      "model_id": "nanbeige4.3-33b",
+      "event_id": null,
+      "new_url": "/evaluations/nanbeige4-3-33b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/tess-4-5-27b/",
+      "content_type": "model-page",
+      "model_id": "tess-4.5-27b",
+      "event_id": null,
+      "new_url": "/evaluations/tess-4-5-27b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/occamy-1-0/",
+      "content_type": "model-page",
+      "model_id": "occamy-1.0",
+      "event_id": null,
+      "new_url": "/evaluations/occamy-1-0/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

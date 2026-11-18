@@ -2,7 +2,7 @@
 title = "Qwen3.6-35B-A3B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 11
+weight = 15
 
 [extra]
 kind = "model"
@@ -208,7 +208,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): Qwen3.6-35B-A3B-UD-IQ2_M.gguf (11,522,702,304-byte UD-IQ2_M; sha256 2be7ef1ed7e1af8b10d3829102cf9a6c2bd5ddb64d675b4ece23a60799403d43)
 - Runtime (as recorded): llama.cpp 0.1.0-dev build 10449 (0d9ceae1e), CUDA.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv/profile.json)
 
 Events on this configuration:
 
@@ -224,7 +224,7 @@ Events on this configuration:
 - Status: historical tested surface; retained evidence, not the recommended profile.
 - Artifact (as recorded): unsloth Qwen3.6-35B-A3B UD-IQ2_M GGUF (11,522,702,304-byte fingerprint)
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.6-35b-a3b/profiles/qwen3.6-35b-a3b-llamacpp-ud-iq2-m/profile.json)
 
 Events on this configuration:
 
@@ -249,7 +249,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/87ab638502d63eea47a5f8734eed729b39e3042c/models/qwen3.6-35b-a3b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/993abf47e2863921c731f6ee34ba15a1820ee31c/models/qwen3.6-35b-a3b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-15 WELP Recharacterization: llama.cpp UD-IQ2_M q8_0 KV</summary>
