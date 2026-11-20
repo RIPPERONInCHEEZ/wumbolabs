@@ -12,6 +12,9 @@ findings_first = true
 classification = "LIMITED_ROLE_ONLY"
 recommended_profile_id = "qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv"
 recommended_profile_name = "llama.cpp UD-IQ2_M q8_0 KV (32K text-generation profile)"
+catalog_artifact = "UD-IQ2_M"
+catalog_profile_id = "qwen3.6-35b-a3b-llamacpp-ud-iq2-m-q8kv"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 16,384 guarded tokens"
 profile_count = 2
 event_count = 3
@@ -196,7 +199,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
 | UD-IQ2_M · llama.cpp · RTX 5070 | UD-IQ2_M | llama.cpp | RTX 5070 | 32,768 default / 16,384 guarded | 1 (2026-09-15) |
-| llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 2 (2026-07-15, 2026-07-22) |
+| llama.cpp · RTX 5070 | unsloth Qwen3.6-35B-A3B UD-IQ2_M GGUF (11,522,702,304-byte fingerprint) | llama.cpp | RTX 5070 | not recorded | 2 (2026-07-15, 2026-07-22) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: UD-IQ2_M · llama.cpp · RTX 5070</summary>

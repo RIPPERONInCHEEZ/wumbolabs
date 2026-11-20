@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off"
 recommended_profile_name = "llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K)"
+catalog_artifact = "Q8_0 official publisher GGUF"
+catalog_profile_id = "neohorse-1-9b-q8-0-llamacpp-b10999-rtx5070-deployment-reasoning-off"
+catalog_profile_recommended = true
 profile_count = 2
 event_count = 3
 latest_evidence_date = 2026-09-25
@@ -266,8 +269,8 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070 | Q8_0 official publisher GGUF; f16 K/V cache | llama.cpp b10999 | RTX 5070 | not recorded | 2 (2026-09-25, 2026-09-25) |
-| llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070 | Q8_0 official publisher GGUF; f16 K/V cache | llama.cpp b10999 | RTX 5070 | not recorded | 1 (2026-09-25) |
+| llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070 | Q8_0 official publisher GGUF | llama.cpp b10999 | RTX 5070 | not recorded | 2 (2026-09-25, 2026-09-25) |
+| llama.cpp official Q8_0 (Reasoning Off, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070 | Q8_0 official publisher GGUF | llama.cpp b10999 | RTX 5070 | not recorded | 1 (2026-09-25) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: llama.cpp official Q8_0 (Reasoning On = publisher default, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070</summary>

@@ -12,6 +12,9 @@ findings_first = true
 classification = "COMPLETED_DEEP_EVALUATION"
 recommended_profile_id = "qwen38-27b-exl3-h1"
 recommended_profile_name = "ExLlamaV3 H1 (SC_2.20bpw_H3_V3)"
+catalog_artifact = "2.20 bpw EXL3"
+catalog_profile_id = "qwen38-27b-exl3-h1"
+catalog_profile_recommended = true
 practical_context = "65,536 default / 98,304 guarded tokens"
 profile_count = 2
 event_count = 4
@@ -429,7 +432,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| 2.20 bpw EXL3; q4 target KV; q4 draft KV · ExLlamaV3 · RTX 5070 | 2.20 bpw EXL3; q4 target KV; q4 draft KV; MTP width 1 | ExLlamaV3 | RTX 5070 | 65,536 default / 98,304 guarded | 2 (2026-09-09, 2026-09-12) |
+| 2.20 bpw EXL3; q4 target KV; q4 draft KV · ExLlamaV3 · RTX 5070 | 2.20 bpw EXL3 | ExLlamaV3 | RTX 5070 | 65,536 default / 98,304 guarded | 2 (2026-09-09, 2026-09-12) |
 | UD-Q2_K_XL · llama.cpp b10449 · RTX 5070, SM120 | UD-Q2_K_XL | llama.cpp b10449 | RTX 5070, SM120 | not recorded | 2 (2026-08-20, 2026-08-21) |
 
 <details class="lab-findings-configs">

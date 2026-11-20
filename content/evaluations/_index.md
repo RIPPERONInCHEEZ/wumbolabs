@@ -17,4 +17,6 @@ Results remain available as historical evidence. Differences in methodology, har
 
 Each tested model has one Evaluation page. Current findings come first; tested profiles and the published testing history follow, with every value attributed to the profile and event that measured it.
 
+The catalog shows one tested artifact per model: the explicitly recommended profile when it has published artifact information, otherwise the newest published profile with that information. Only labeled profiles are recommendations. Select an artifact to see all tested configurations.
+
 Public scientific reports and profile metadata live in [WumboLabs/evaluations](https://github.com/WumboLabs/evaluations). Every model page links to its reports at exact commits.

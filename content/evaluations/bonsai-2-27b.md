@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off"
 recommended_profile_name = "llama.cpp PTQ1_0 (thinking-off)"
+catalog_artifact = "PTQ1_0 (1.75 bpw ternary group 128, Hadamard-rotated basis)"
+catalog_profile_id = "bonsai2-27b-ptq1-0-prism-llamacpp-thinking-off"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 65,536 guarded tokens"
 profile_count = 2
 event_count = 2
@@ -255,8 +258,8 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| PTQ1_0 · llama.cpp (PrismML-Eng fork) · RTX 5070 · verify strict one-shot outputs | PTQ1_0 | llama.cpp (PrismML-Eng fork) | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-20) |
-| PTQ1_0 · llama.cpp (PrismML-Eng fork) · RTX 5070 · template enable_thinking=false is the only effective control). Second hardware observation: same artifact/source on RTX 2060 SUPER 8GB (SM75 build), practical at 8K | PTQ1_0 | llama.cpp (PrismML-Eng fork) | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-18) |
+| PTQ1_0 · llama.cpp (PrismML-Eng fork) · RTX 5070 · verify strict one-shot outputs | PTQ1_0 (1.75 bpw ternary group 128, Hadamard-rotated basis) | llama.cpp (PrismML-Eng fork) | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-20) |
+| PTQ1_0 · llama.cpp (PrismML-Eng fork) · RTX 5070 · template enable_thinking=false is the only effective control). Second hardware observation: same artifact/source on RTX 2060 SUPER 8GB (SM75 build), practical at 8K | PTQ1_0 (1.75 bpw ternary group 128, Hadamard-rotated basis) | llama.cpp (PrismML-Eng fork) | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-18) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: PTQ1_0 · llama.cpp (PrismML-Eng fork) · RTX 5070 · verify strict one-shot outputs</summary>

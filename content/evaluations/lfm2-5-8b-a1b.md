@@ -12,6 +12,9 @@ findings_first = true
 classification = "NOT_READY"
 recommended_profile_id = "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment"
 recommended_profile_name = "llama.cpp upstream official Q6_K (reasoning-on, publisher sampler)"
+catalog_artifact = "Q6_K (official publisher GGUF)"
+catalog_profile_id = "lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 128,000 guarded tokens"
 profile_count = 3
 event_count = 4
@@ -1727,9 +1730,9 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q6_K · llama.cpp b10999 · RTX 5070 | Q6_K | llama.cpp b10999 | RTX 5070 | 32,768 default / 128,000 guarded · useful max 8,192 | 2 (2026-09-23, 2026-09-24) |
-| Q5_K_M · llama.cpp b11827 · RTX 5070 · configured capacity 16,384 tokens | Q5_K_M | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-10) |
-| Q5_K_M · llama.cpp b11827 · RTX 5070 · one-shot HelicopterBench /2 generation surface | Q5_K_M | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-11) |
+| Q6_K · llama.cpp b10999 · RTX 5070 | Q6_K (official publisher GGUF) | llama.cpp b10999 | RTX 5070 | 32,768 default / 128,000 guarded · useful max 8,192 | 2 (2026-09-23, 2026-09-24) |
+| Q5_K_M · llama.cpp b11827 · RTX 5070 · configured capacity 16,384 tokens | GGUF · Q5_K_M | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-10) |
+| Q5_K_M · llama.cpp b11827 · RTX 5070 · one-shot HelicopterBench /2 generation surface | GGUF · Q5_K_M | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-11) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q6_K · llama.cpp b10999 · RTX 5070</summary>

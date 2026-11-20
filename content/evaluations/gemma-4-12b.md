@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "gemma-4-12b-llamacpp-qat-q4-0"
 recommended_profile_name = "llama.cpp official QAT Q4_0 (google GGUF, UD-Q4_K_XL packaging)"
+catalog_artifact = "UD-Q4_K_XL (Unsloth Dynamic 2.0 over QAT Q4_0 lineage)"
+catalog_profile_id = "gemma-4-12b-llamacpp-qat-q4-0"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 5
 event_count = 7
@@ -1444,11 +1447,11 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| UD-Q4_K_XL · llama.cpp b9672 · RTX 5070 | UD-Q4_K_XL | llama.cpp b9672 | RTX 5070 | 32,768 default / 131,072 guarded | 6 (2026-06-16, 2026-06-21, 2026-06-21, 2026-07-04, 2026-07-04, 2026-09-12) |
-| UNKNOWN · llama.cpp b11827 · UNKNOWN | UNKNOWN | llama.cpp b11827 | UNKNOWN | 16,384 default · reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-09) |
-| llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-04) |
-| llama.cpp Unsloth UD-Q5_K_XL · llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-04) |
-| llama.cpp Unsloth UD-Q6_K_XL · llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-04) |
+| UD-Q4_K_XL · llama.cpp b9672 · RTX 5070 | UD-Q4_K_XL (Unsloth Dynamic 2.0 over QAT Q4_0 lineage) | llama.cpp b9672 | RTX 5070 | 32,768 default / 131,072 guarded | 6 (2026-06-16, 2026-06-21, 2026-06-21, 2026-07-04, 2026-07-04, 2026-09-12) |
+| UNKNOWN · llama.cpp b11827 · UNKNOWN | GGUF · UD-Q4_K_XL (Unsloth Dynamic 2.0 GGUF) | llama.cpp b11827 | UNKNOWN | 16,384 default · reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-09) |
+| llama.cpp · RTX 5070 | ggml-org/gemma-4-12b-it-GGUF Q4_K_M | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-04) |
+| llama.cpp Unsloth UD-Q5_K_XL · llama.cpp · RTX 5070 | unsloth/gemma-4-12b-it-GGUF UD-Q5_K_XL | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-04) |
+| llama.cpp Unsloth UD-Q6_K_XL · llama.cpp · RTX 5070 | unsloth/gemma-4-12b-it-GGUF UD-Q6_K_XL | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-04) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: UD-Q4_K_XL · llama.cpp b9672 · RTX 5070</summary>

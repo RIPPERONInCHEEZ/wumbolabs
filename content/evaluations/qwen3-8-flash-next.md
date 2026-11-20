@@ -9,6 +9,8 @@ kind = "model"
 model_id = "qwen3.8-flash-next"
 vendor = "Qwen"
 findings_first = true
+catalog_artifact = "GGUF + native Strata pack · IQ3_S"
+catalog_profile_id = "qwen3.8-flash-next-strata-r9700-hip-v11-on-2026-11-11"
 profile_count = 1
 event_count = 1
 latest_evidence_date = 2026-11-11
@@ -3060,7 +3062,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| IQ3_S · Strata · AI PRO R9700 | IQ3_S | Strata | AI PRO R9700 | reasoning ON · capacity 196,608 | 1 (2026-11-11) |
+| IQ3_S · Strata · AI PRO R9700 | GGUF + native Strata pack · IQ3_S | Strata | AI PRO R9700 | reasoning ON · capacity 196,608 | 1 (2026-11-11) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: IQ3_S · Strata · AI PRO R9700</summary>

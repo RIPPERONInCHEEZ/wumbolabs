@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "minicpm5-2b-vllm-bf16"
 recommended_profile_name = "contained vLLM BF16"
+catalog_artifact = "BF16 weights and BF16 KV (primary surface)"
+catalog_profile_id = "minicpm5-2b-vllm-bf16"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 65,536 guarded tokens"
 profile_count = 1
 event_count = 1
@@ -159,7 +162,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| BF16 weights and BF16 KV · vLLM · RTX 5070 | BF16 weights and BF16 KV | vLLM | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-10) |
+| BF16 weights and BF16 KV · vLLM · RTX 5070 | BF16 weights and BF16 KV (primary surface) | vLLM | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-10) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: BF16 weights and BF16 KV · vLLM · RTX 5070</summary>

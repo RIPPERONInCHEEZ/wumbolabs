@@ -11,6 +11,9 @@ vendor = "empero-ai (Qwen3.8 derivative)"
 findings_first = true
 recommended_profile_id = "qwen3.8-2b-empero-vllm-bf16"
 recommended_profile_name = "vLLM BF16 vendor-alignment battery"
+catalog_artifact = "empero-ai/Qwen3.8-2B-GGUF (+ BF16)"
+catalog_profile_id = "qwen3.8-2b-empero-vllm-bf16"
+catalog_profile_recommended = true
 profile_count = 1
 event_count = 1
 latest_evidence_date = 2026-08-18
@@ -70,7 +73,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| vLLM/llama.cpp · RTX 5070 | not recorded | vLLM/llama.cpp | RTX 5070 | not recorded | 1 (2026-08-18) |
+| vLLM/llama.cpp · RTX 5070 | empero-ai/Qwen3.8-2B-GGUF (+ BF16) | vLLM/llama.cpp | RTX 5070 | not recorded | 1 (2026-08-18) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: vLLM/llama.cpp · RTX 5070</summary>

@@ -19,7 +19,7 @@ const frontMatter = (file) => {
     const pair = line.match(/^([A-Za-z0-9_]+) = (.*)$/);
     if (pair) {
       const value = pair[2].trim();
-      fields[pair[1]] = /^".*"$/s.test(value) ? value.slice(1, -1) : value;
+      fields[pair[1]] = value.startsWith('"') ? JSON.parse(value) : value;
     }
   }
   return fields;
@@ -44,13 +44,10 @@ for (const model of models) {
     `${model.model_id}: front matter latest_evidence_date must match the generated dataset`);
 }
 
-// Mirrors the template's data-search corpus: model, identifier, producer,
-// recommended profile (artifact), practical context. Classification, status
-// text and placeholder advertisement are deliberately absent so catalog rows
-// expose no status discovery metadata.
+// Preserve existing recommendation/context search and add the tested artifact.
 const searchable = (page) =>
   `${page.title} ${page.model_id} ${page.vendor} `
-  + `${page.recommended_profile_name || 'No recommended profile recorded'} `
+  + `${page.catalog_artifact || ''} ${page.recommended_profile_name || ''} `
   + `${page.practical_context || 'Not recorded'}`;
 
 class Control {
@@ -245,12 +242,8 @@ const modelExpected = expectSearch(probeModel.model_id.toLowerCase(),
 assert(modelExpected.some((page) => page.model_id === probeModel.model_id),
   'identifier search result must include the probed model');
 
-const withoutProfile = titles(catalogPages.filter((page) => !page.recommended_profile_name)).sort();
-assert.deepEqual(titles(matchPages('no recommended profile')).sort(), withoutProfile,
-  'profile fallback text must be searchable exactly for models without a recommended profile');
-const withoutContext = titles(catalogPages.filter((page) => !page.practical_context)).sort();
-assert.deepEqual(titles(matchPages('not recorded')).sort(), withoutContext,
-  'context fallback text must be searchable exactly for models without recorded context');
+assert.equal(matchPages('no recommended profile').length, 0,
+  'the retired recommendation fallback must not be searchable');
 
 search('does-not-exist');
 assert.equal(visible().length, 0);
@@ -312,8 +305,8 @@ assert.equal(controls['evaluation-results'].textContent, `Showing all ${models.l
 change('evaluation-sort', 'newest');
 search('');
 
-// Artifact (recommended profile) and practical-context tokens picked from the
-// corpus: whatever subset they match must stay searchable.
+// Tested artifact and practical-context tokens picked from the corpus must
+// stay searchable.
 const frequentToken = (source, minimum) => {
   const counts = new Map();
   for (const page of catalogPages) {
@@ -329,9 +322,9 @@ const frequentToken = (source, minimum) => {
     .filter(([, matched]) => matched >= minimum)
     .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))[0];
 };
-const artifactToken = frequentToken((page) => page.recommended_profile_name, 2);
-assert(artifactToken, 'the corpus must contain a repeated recommended-profile token');
-expectSearch(artifactToken[0], 'recommended profile (artifact) search must stay available');
+const artifactToken = frequentToken((page) => page.catalog_artifact, 2);
+assert(artifactToken, 'the corpus must contain a repeated tested artifact token');
+expectSearch(artifactToken[0], 'tested artifact search must stay available');
 const contextToken = frequentToken((page) => page.practical_context, 1);
 assert(contextToken, 'the corpus must contain a practical-context token');
 expectSearch(contextToken[0], 'practical context search must stay available');

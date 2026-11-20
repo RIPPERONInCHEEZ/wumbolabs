@@ -61,6 +61,13 @@ No independent public research backlog or composite model verdict is generated.
 The registry's explicit `current_state` event/profile selections govern current
 classification, context and recommendation display, even when a newer specialist
 event exists. A current tested profile is not automatically a recommendation.
+The catalog shows the explicitly recommended profile if it has published
+artifact information; otherwise it uses the most recent published primary
+profile with artifact information (descending event date, then event slug).
+Labels come from that profile's pinned exports or its own registry metadata.
+Catalog artifact links lead to the model page's tested configurations,
+including alternates. Only a selected, explicitly recommended profile is
+labeled as recommended.
 
 Editorial copy belongs in authored pages and presentation templates, not in frozen
 exports, registry identities, or cached event narratives. `editorial_presentation`

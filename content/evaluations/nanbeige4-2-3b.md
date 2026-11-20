@@ -9,6 +9,8 @@ kind = "model"
 model_id = "nanbeige4.2-3b"
 vendor = "Nanbeige"
 findings_first = true
+catalog_artifact = "GGUF · Q8_0"
+catalog_profile_id = "nanbeige4.2-3b-rtx5070-cuda-on-2026-11-17"
 profile_count = 1
 event_count = 1
 latest_evidence_date = 2026-11-17
@@ -1938,7 +1940,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q8_0 · llama.cpp b11827 · RTX 5070 | Q8_0 | llama.cpp b11827 | RTX 5070 | reasoning ON · capacity 16,384 | 1 (2026-11-17) |
+| Q8_0 · llama.cpp b11827 · RTX 5070 | GGUF · Q8_0 | llama.cpp b11827 | RTX 5070 | reasoning ON · capacity 16,384 | 1 (2026-11-17) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q8_0 · llama.cpp b11827 · RTX 5070</summary>

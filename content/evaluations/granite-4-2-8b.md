@@ -12,6 +12,9 @@ findings_first = true
 classification = "NOT_READY"
 recommended_profile_id = "granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment"
 recommended_profile_name = "llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K)"
+catalog_artifact = "Q4_K_M official publisher GGUF"
+catalog_profile_id = "granite-4.2-8b-q4-k-m-llamacpp-b10999-rtx5070-deployment"
+catalog_profile_recommended = true
 profile_count = 1
 event_count = 1
 latest_evidence_date = 2026-09-24
@@ -123,7 +126,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070 | Q4_K_M official publisher GGUF; f16 K/V cache | llama.cpp b10999 | RTX 5070 | not recorded | 1 (2026-09-24) |
+| llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070 | Q4_K_M official publisher GGUF | llama.cpp b10999 | RTX 5070 | not recorded | 1 (2026-09-24) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: llama.cpp official Q4_K_M (reasoning-on, deployment sampler, 32K) · llama.cpp b10999 · RTX 5070</summary>

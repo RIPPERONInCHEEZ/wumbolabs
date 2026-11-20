@@ -1133,6 +1133,52 @@ def selftest() -> int:
         if recommended_profile([prior, benchmark], dict(state, recommended_profile_id=None)) is not None:
             failures.append("selftest: missing central recommendation invented a fallback")
 
+        # Render the catalog fields and tested-configurations table together.
+        old, latest_profile = registry["records"][:2]
+        old_pid, latest_pid = old["profile_id"], latest_profile["profile_id"]
+        pending = dict(old, slug="pending", event_id="pending-event",
+                       profile_id="pending-profile", event_date="2026-01-04",
+                       publication_state="evidence-pending-human-gate")
+        profile_exports = {
+            old["slug"]: {"artifact": {"format": "safetensors", "precision": "FP8 (E4M3)"}},
+            latest_profile["slug"]: base_a2,
+            pending["slug"]: {"artifact": {"precision": "must-not-publish"}},
+        }
+        model = registry["models"][0]
+        def catalog_page(events, explicit_id=None, exports=profile_exports):
+            return render_model_page(dict(model, current_state={"recommended_profile_id": explicit_id}),
+                                     events, exports, catalog_weight=1)
+
+        many = [old, pending, latest_profile]
+        tested_page = catalog_page(many)
+        recommended_page = catalog_page(many, explicit_id=old_pid)
+        only_page = catalog_page([latest_profile])
+        registry_label_page = render_model_page(
+            dict(model, current_state={"recommended_profile_id": None}), [old], {}, 1,
+            profiles={old_pid: {"artifact": "publisher/legacy-artifact QAD Q4_0"}})
+        unknown_page = catalog_page([latest_profile], exports={
+            latest_profile["slug"]: {"artifact": {"tested": "model-a", "format": "UNKNOWN",
+                                                 "precision": "Not recorded"}},
+        })
+        tested_front = tested_page.split("+++")[1]
+        recommended_front = recommended_page.split("+++")[1]
+        if (f'catalog_profile_id = "{latest_pid}"' not in tested_front
+                or 'catalog_artifact = "Q8"' not in tested_front
+                or "catalog_profile_recommended" in tested_front
+                or "must-not-publish" in tested_front
+                or 'catalog_artifact = "Q8"' not in only_page.split("+++")[1]):
+            failures.append("selftest: use the latest published tested artifact without inventing a recommendation")
+        if (f'catalog_profile_id = "{old_pid}"' not in recommended_front
+                or 'catalog_artifact = "safetensors · FP8 (E4M3)"' not in recommended_front
+                or "catalog_profile_recommended = true" not in recommended_front
+                or "| safetensors · FP8 (E4M3) |" not in recommended_page
+                or "| Q8 |" not in recommended_page):
+            failures.append("selftest: explicit recommendation must use its own artifact and keep the alternate visible")
+        if ('catalog_artifact = "publisher/legacy-artifact QAD Q4_0"' not in registry_label_page
+                or "catalog_artifact" in unknown_page.split("+++")[1]
+                or "| Artifact not recorded |" not in unknown_page):
+            failures.append("selftest: legacy artifact labels and genuine missing-data fallback")
+
         # 3. redirect stub content: served at the legacy /labs/ URL, targets the
         #    /evaluations/ model page + event anchor
         stub = root / "content" / "evaluations" / "a2-context.md"
@@ -1326,6 +1372,7 @@ def selftest() -> int:
             "multi-profile/multi-event aggregation with anchors",
             "per-surface current-state precedence (classification vs context)",
             "explicit central recommendations/context cannot be replaced by newer specialized events",
+            "catalog tested artifacts use published evidence, preserve explicit recommendations, and match model configurations",
             "legacy URL stub targets model page + event anchor",
             "events dataset preserves record_date chronology",
             "second sync is a no-op; --check passes",

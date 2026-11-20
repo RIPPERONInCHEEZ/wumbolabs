@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "qwen3-14b-llamacpp-q4km-q8kv"
 recommended_profile_name = "llama.cpp Q4_K_M q8_0 KV (unsloth artifact, native-max 32K surface)"
+catalog_artifact = "Q4_K_M"
+catalog_profile_id = "qwen3-14b-llamacpp-q4km-q8kv"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 32,768 guarded tokens"
 profile_count = 3
 event_count = 4
@@ -222,8 +225,8 @@ Exact profile identities, sampling conditions and provenance are in each configu
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
 | Q4_K_M · llama.cpp b9672 · RTX 5070 | Q4_K_M | llama.cpp b9672 | RTX 5070 | 32,768 default / 32,768 guarded | 1 (2026-09-14) |
-| Ollama · RTX 5070 | not recorded | Ollama | RTX 5070 | not recorded | 1 (2026-05-07) |
-| llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 2 (2026-07-05, 2026-07-15) |
+| Ollama · RTX 5070 | unsloth/Qwen3-14B-GGUF Q4_K_M (custom qwen3-14b-wumbo Ollama tag | Ollama | RTX 5070 | not recorded | 1 (2026-05-07) |
+| llama.cpp · RTX 5070 | unsloth/Qwen3-14B-GGUF Q4_K_M | llama.cpp | RTX 5070 | not recorded | 2 (2026-07-05, 2026-07-15) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q4_K_M · llama.cpp b9672 · RTX 5070</summary>

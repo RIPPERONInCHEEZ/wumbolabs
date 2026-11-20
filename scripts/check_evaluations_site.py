@@ -390,7 +390,7 @@ def _front_matter(path: Path) -> dict:
         pair = re.match(r"^([A-Za-z0-9_]+) = (.*)$", line)
         if pair:
             value = pair.group(2).strip()
-            fields[pair.group(1)] = value[1:-1] if re.fullmatch(r'".*"', value, re.S) else value
+            fields[pair.group(1)] = json.loads(value) if value.startswith('"') else value
     return fields
 
 
@@ -451,6 +451,10 @@ def main() -> int:
               f"{STATUS_PLACEHOLDER!r}")
         check("<th scope=\"col\">Latest evidence</th>" in catalog,
               "catalog lacks a Latest evidence column")
+        check("<th scope=\"col\">Tested artifact / quantization</th>" in catalog,
+              "catalog lacks a Tested artifact / quantization column")
+        check("No recommended profile recorded" not in catalog,
+              "catalog still substitutes recommendation state for artifact data")
         check('id="evaluation-sort"' in catalog,
               "catalog lacks the Sort control")
         for option in ("Newest evidence", "Oldest evidence", "Model A–Z", "Producer A–Z"):
@@ -493,16 +497,34 @@ def main() -> int:
             cells = re.findall(r"<t[dh]\b", body)
             check(len(cells) == CATALOG_COLUMNS,
                   f"{model_id}: catalog row must have exactly {CATALOG_COLUMNS} cells")
-            # data-search mirrors the page front matter verbatim (title, identifier,
-            # producer, recommended profile, practical context) and nothing else.
-            profile = front.get("recommended_profile_name") or "No recommended profile recorded"
+            artifact = front.get("catalog_artifact", "")
+            recommendation = front.get("recommended_profile_name", "")
+            recommended_id = (model.get("current_state") or {}).get("recommended_profile_id")
+            is_recommended = bool(artifact and front.get("catalog_profile_id") == recommended_id)
+            body_cells = re.findall(r"<td>(.*?)</td>", body, flags=re.DOTALL)
+            artifact_cell = body_cells[1] if len(body_cells) > 1 else ""
+            expected_label = artifact or "Artifact not recorded"
+            if is_recommended:
+                expected_label += " Recommended profile"
+            check(" ".join(PageText(artifact_cell).visible_text().split()) == expected_label,
+                  f"{model_id}: catalog must show the tested artifact and only mark explicit recommendations")
+            if artifact:
+                anchors = [url for _, url, _ in PageText(artifact_cell).links]
+                expected_fragment = f"/evaluations/{url_slug(model_id)}/#tested-profiles"
+                check(len(anchors) == 1 and anchors[0].endswith(expected_fragment),
+                      f"{model_id}: artifact must link to the tested configurations")
+                detail_path = PUBLIC / "evaluations" / url_slug(model_id) / "index.html"
+                detail = PageText(html(detail_path)) if detail_path.is_file() else PageText("")
+                lo, hi = detail.ids.get("tested-profiles"), detail.ids.get("chronology")
+                check(lo is not None and hi is not None and artifact in detail.visible_text(lo, hi),
+                      f"{model_id}: artifact missing from tested configurations")
             context = front.get("practical_context") or "Not recorded"
             expected_search = " ".join(
-                (front.get("title") or model["display_name"],
-                 model_id, model["vendor"], profile, context)).lower()
+                (front.get("title") or model["display_name"], model_id, model["vendor"],
+                 artifact, recommendation, context)).lower()
             actual_search = data_attr(attrs, "data-search") or ""
             check(actual_search == expected_search,
-                  f"{model_id}: data-search must mirror the five front-matter fields "
+                  f"{model_id}: data-search must mirror the front-matter fields "
                   f"(got {actual_search!r}, expected {expected_search!r})")
             classification = generated_models.get(model_id, {}).get("classification")
             leaks = [c for c in all_classifications if c in actual_search.lower()]

@@ -9,6 +9,8 @@ kind = "model"
 model_id = "qwen3-coder-30b-a3b-instruct"
 vendor = "Qwen"
 findings_first = true
+catalog_artifact = "GGUF · Q4_K_M"
+catalog_profile_id = "qwen3-coder-30b-a3b-instruct-r9700-hip-not-configurable-2026-11-17"
 profile_count = 1
 event_count = 1
 latest_evidence_date = 2026-11-17
@@ -1922,7 +1924,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q4_K_M · llama.cpp b11311 · AI PRO R9700 | Q4_K_M | llama.cpp b11311 | AI PRO R9700 | reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-17) |
+| Q4_K_M · llama.cpp b11311 · AI PRO R9700 | GGUF · Q4_K_M | llama.cpp b11311 | AI PRO R9700 | reasoning NOT_CONFIGURABLE · capacity 16,384 | 1 (2026-11-17) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q4_K_M · llama.cpp b11311 · AI PRO R9700</summary>

@@ -90,6 +90,38 @@ def _precision_short(precision: Any) -> str:
     return ""
 
 
+def _published_artifact(events, exports, profile, profile_id):
+    """Use only this profile's published exports, then its registry metadata."""
+    def recorded(value):
+        if not isinstance(value, str) or value.strip().casefold() in {
+            "", "unknown", "not recorded", "not available", "n/a", "—"
+        }:
+            return ""
+        return value.strip()
+
+    artifact_format = ""
+    tested = ""
+    for event in events:
+        if event["profile_id"] != profile_id or event["publication_state"] != "published":
+            continue
+        artifact = (exports.get(event["slug"]) or {}).get("artifact") or {}
+        fmt = recorded(artifact.get("format"))
+        precision = recorded(artifact.get("precision"))
+        if precision:
+            return " · ".join(filter(None, (fmt, precision.split(";", 1)[0])))
+        artifact_format = artifact_format or fmt
+        identity = recorded(artifact.get("tested"))
+        if identity.casefold() != event["model_id"].casefold():
+            tested = tested or identity
+    precision = recorded(profile.get("artifact_precision"))
+    if precision:
+        return " · ".join(filter(None, (artifact_format, precision.split(";", 1)[0])))
+    descriptor = recorded(profile.get("artifact")) or tested
+    if descriptor:
+        return descriptor.split(" :: ", 1)[0].split(";", 1)[0]
+    return f"{artifact_format} · precision not recorded" if artifact_format else ""
+
+
 def _runtime_short(engine: Any, version: Any) -> str:
     """``llama.cpp (upstream)`` + ``... (tag b10999, ...)`` -> ``llama.cpp b10999``."""
     eng = ((engine or "").replace(" (upstream)", "").strip()) if isinstance(engine, str) else ""
@@ -908,6 +940,21 @@ def render_findings_first_page(*, model, entries, entries_sorted, profile_ids,
     profile_names = {e["profile_id"]: e.get("profile_name") for e in entries}
     for pid, profile in (profiles or {}).items():
         profile_names.setdefault(pid, profile.get("profile_display_name"))
+    profiles = profiles or {}
+    profile_entries = {
+        pid: sorted(events, key=lambda e: (e["event_date"], e["slug"]), reverse=True)
+        for pid, events in profile_events.items()
+    }
+    published_profiles = dict.fromkeys(e["profile_id"] for e in entries_sorted
+                                       if e["publication_state"] == "published")
+    artifacts = {
+        pid: _published_artifact(events, exports, profiles.get(pid, {}), pid)
+        for pid, events in profile_entries.items()
+        if any(e["publication_state"] == "published" for e in events)
+    }
+    recommended_id = (model.get("current_state") or {}).get("recommended_profile_id")
+    catalog_profile = next((pid for pid in (recommended_id, *published_profiles)
+                            if pid in published_profiles and artifacts[pid]), None)
     guard_sources: dict[str, list[dict[str, Any]]] = {}
     for entry in entries_sorted:
         quality = (exports.get(entry["slug"]) or {}).get("quality") or {}
@@ -928,6 +975,11 @@ def render_findings_first_page(*, model, entries, entries_sorted, profile_ids,
     if rec_event:
         lines.append(f'recommended_profile_id = "{rec_event["profile_id"]}"')
         lines.append(f'recommended_profile_name = "{fmt(rec_event.get("profile_name"))}"')
+    if catalog_profile:
+        lines.append(f'catalog_artifact = {json.dumps(artifacts[catalog_profile], ensure_ascii=False)}')
+        lines.append(f'catalog_profile_id = "{catalog_profile}"')
+        if catalog_profile == recommended_id:
+            lines.append("catalog_profile_recommended = true")
     ctx_export = exports.get(ctx_event["slug"]) if ctx_event else None
     if ctx_export and isinstance(ctx_export.get("context"), dict):
         c = ctx_export["context"]
@@ -1029,8 +1081,7 @@ def render_findings_first_page(*, model, entries, entries_sorted, profile_ids,
                   "Context / reasoning | Events |",
                   "|---|---|---|---|---|---|"])
     for pid in profile_ids:
-        pevents = sorted(profile_events[pid],
-                         key=lambda e: (e["event_date"], e["slug"]), reverse=True)
+        pevents = profile_entries[pid]
         registry_profile = (profiles or {}).get(pid) or {}
         export = next((exports.get(e.get("slug") or "") for e in pevents
                        if e["profile_id"] == pid and exports.get(e.get("slug") or "")),
@@ -1041,9 +1092,7 @@ def render_findings_first_page(*, model, entries, entries_sorted, profile_ids,
         ctx = (export or {}).get("context") or {}
         condition = next((c for c in ((export or {}).get("profile_conditions") or [])
                           if c.get("profile_id") == pid), None)
-        artifact_cell = (_precision_short(artifact.get("precision"))
-                         or _precision_short(registry_profile.get("artifact_precision"))
-                         or "not recorded")
+        artifact_cell = (artifacts.get(pid) or "Artifact not recorded").replace("|", r"\|")
         runtime_cell = (_runtime_short(*_runtime_values(runtime, registry_profile))
                         or "not recorded")
         hardware_cell = (_gpu_short(hardware.get("gpu"))
@@ -1069,8 +1118,7 @@ def render_findings_first_page(*, model, entries, entries_sorted, profile_ids,
                      f"| {len(pevents)} ({dates}) |")
     lines.append("")
     for pid in profile_ids:
-        pevents = sorted(profile_events[pid],
-                         key=lambda e: (e["event_date"], e["slug"]), reverse=True)
+        pevents = profile_entries[pid]
         first = pevents[0]
         registry_profile = (profiles or {}).get(pid) or {}
         own = [e for e in pevents if e["profile_id"] == pid]

@@ -11,6 +11,9 @@ vendor = "empero-ai (Qwen3.8 derivative)"
 findings_first = true
 recommended_profile_id = "qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver"
 recommended_profile_name = "llama.cpp Q4_K_M Distill (WumboServer RTX 2060S lane)"
+catalog_artifact = "empero-ai/Qwen3.8-4B-Distill-GGUF Q4_K_M"
+catalog_profile_id = "qwen3.8-4b-empero-distill-llamacpp-q4km-wumboserver"
+catalog_profile_recommended = true
 profile_count = 2
 event_count = 2
 latest_evidence_date = 2026-09-01
@@ -95,8 +98,8 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| llama.cpp/vLLM · RTX 5070 | not recorded | llama.cpp/vLLM | RTX 5070 | not recorded | 1 (2026-08-18) |
-| llama.cpp · RTX 2060 SUPER | not recorded | llama.cpp | RTX 2060 SUPER | not recorded | 1 (2026-09-01) |
+| llama.cpp/vLLM · RTX 5070 | empero-ai/Qwen3.8-4B-GGUF (BF16 + Q4) | llama.cpp/vLLM | RTX 5070 | not recorded | 1 (2026-08-18) |
+| llama.cpp · RTX 2060 SUPER | empero-ai/Qwen3.8-4B-Distill-GGUF Q4_K_M | llama.cpp | RTX 2060 SUPER | not recorded | 1 (2026-09-01) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: llama.cpp/vLLM · RTX 5070</summary>

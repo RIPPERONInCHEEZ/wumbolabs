@@ -11,6 +11,9 @@ vendor = "Alibaba (Qwen team)"
 findings_first = true
 recommended_profile_id = "qwen2.5-3b-vllm-bf16"
 recommended_profile_name = "vLLM BF16 (cross-runtime lane)"
+catalog_artifact = "Qwen/Qwen2.5-3B-Instruct BF16"
+catalog_profile_id = "qwen2.5-3b-vllm-bf16"
+catalog_profile_recommended = true
 profile_count = 2
 event_count = 2
 latest_evidence_date = 2026-07-15
@@ -95,8 +98,8 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-15) |
-| vLLM · RTX 5070 | not recorded | vLLM | RTX 5070 | not recorded | 1 (2026-07-15) |
+| llama.cpp · RTX 5070 | Qwen2.5-3B-Instruct F16 GGUF (6,178,317,312-byte fingerprint) | llama.cpp | RTX 5070 | not recorded | 1 (2026-07-15) |
+| vLLM · RTX 5070 | Qwen/Qwen2.5-3B-Instruct BF16 | vLLM | RTX 5070 | not recorded | 1 (2026-07-15) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: llama.cpp · RTX 5070</summary>

@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "nemotron-3-nano-4b-llamacpp-q4km"
 recommended_profile_name = "llama.cpp Q4_K_M"
+catalog_artifact = "Q4_K_M weights"
+catalog_profile_id = "nemotron-3-nano-4b-llamacpp-q4km"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 1
 event_count = 2
@@ -269,7 +272,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 | Q4_K_M weights; f16 KV cache; dense hybrid | llama.cpp | RTX 5070 | 32,768 default / 131,072 guarded | 2 (2026-08-25, 2026-09-11) |
+| Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070 | Q4_K_M weights | llama.cpp | RTX 5070 | 32,768 default / 131,072 guarded | 2 (2026-08-25, 2026-09-11) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q4_K_M weights; f16 KV cache; dense hybrid · llama.cpp · RTX 5070</summary>

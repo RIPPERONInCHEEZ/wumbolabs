@@ -11,6 +11,9 @@ vendor = "Alibaba (Qwen team)"
 findings_first = true
 recommended_profile_id = "qwen35-4b-llamacpp-bf16"
 recommended_profile_name = "llama.cpp BF16 GGUF"
+catalog_artifact = "BF16 weights"
+catalog_profile_id = "qwen35-4b-llamacpp-bf16"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 65,536 guarded tokens"
 profile_count = 1
 event_count = 1
@@ -158,7 +161,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| BF16 weights; f16 KV · llama.cpp · RTX 5070 | BF16 weights; f16 KV | llama.cpp | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-11) |
+| BF16 weights; f16 KV · llama.cpp · RTX 5070 | BF16 weights | llama.cpp | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-11) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: BF16 weights; f16 KV · llama.cpp · RTX 5070</summary>

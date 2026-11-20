@@ -9,6 +9,8 @@ kind = "model"
 model_id = "nanbeige4.3-33b"
 vendor = "Nanbeige"
 findings_first = true
+catalog_artifact = "GGUF · Q4_K_M"
+catalog_profile_id = "nanbeige4.3-33b-r9700-hip-recovery-on-2026-11-16"
 profile_count = 1
 event_count = 1
 latest_evidence_date = 2026-11-16
@@ -2049,7 +2051,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q4_K_M · llama.cpp b11311 · AI PRO R9700 | Q4_K_M | llama.cpp b11311 | AI PRO R9700 | reasoning ON · capacity 16,384 | 1 (2026-11-16) |
+| Q4_K_M · llama.cpp b11311 · AI PRO R9700 | GGUF · Q4_K_M | llama.cpp b11311 | AI PRO R9700 | reasoning ON · capacity 16,384 | 1 (2026-11-16) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q4_K_M · llama.cpp b11311 · AI PRO R9700</summary>

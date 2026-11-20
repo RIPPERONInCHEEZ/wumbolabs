@@ -11,6 +11,9 @@ vendor = "Alibaba (Qwen team)"
 findings_first = true
 recommended_profile_id = "qwen35-9b-llamacpp-q8"
 recommended_profile_name = "llama.cpp Q8_0 GGUF"
+catalog_artifact = "Q8_0 weights"
+catalog_profile_id = "qwen35-9b-llamacpp-q8"
+catalog_profile_recommended = true
 practical_context = "16,384 default tokens"
 profile_count = 6
 event_count = 9
@@ -2746,12 +2749,12 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q8_0 weights; f16 KV · llama.cpp · RTX 5070 | Q8_0 weights; f16 KV | llama.cpp | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-11) |
-| UNKNOWN · llama.cpp b11311 · AI PRO R9700 | UNKNOWN | llama.cpp b11311 | AI PRO R9700 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-10-22) |
-| UNKNOWN · llama.cpp b11827 · RTX 5070 · specialist sections and scored Agentic M3 | UNKNOWN | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 4 (2026-11-06, 2026-11-06, 2026-11-06, 2026-11-06) |
-| UNKNOWN · llama.cpp b11827 · RTX 5070 · advanced long-context specialist surface | UNKNOWN | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-11-06) |
-| UNKNOWN · llama.cpp b11827 · RTX 5070 · advanced tool-use specialist surface | UNKNOWN | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-11-06) |
-| UNKNOWN · llama.cpp b11827 · RTX 5070 · single-device single-request condition | UNKNOWN | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-11-08) |
+| Q8_0 weights; f16 KV · llama.cpp · RTX 5070 | Q8_0 weights | llama.cpp | RTX 5070 | 32,768 default / 65,536 guarded | 1 (2026-09-11) |
+| UNKNOWN · llama.cpp b11311 · AI PRO R9700 | GGUF · Q4_K_M (Unsloth publisher GGUF) | llama.cpp b11311 | AI PRO R9700 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-10-22) |
+| UNKNOWN · llama.cpp b11827 · RTX 5070 · specialist sections and scored Agentic M3 | GGUF · Q4_K_M (Unsloth publisher GGUF) | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 4 (2026-11-06, 2026-11-06, 2026-11-06, 2026-11-06) |
+| UNKNOWN · llama.cpp b11827 · RTX 5070 · advanced long-context specialist surface | GGUF · Q4_K_M (Unsloth publisher GGUF) | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-11-06) |
+| UNKNOWN · llama.cpp b11827 · RTX 5070 · advanced tool-use specialist surface | GGUF · Q4_K_M (Unsloth publisher GGUF) | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-11-06) |
+| UNKNOWN · llama.cpp b11827 · RTX 5070 · single-device single-request condition | GGUF · Q4_K_M (Unsloth publisher GGUF) | llama.cpp b11827 | RTX 5070 | 16,384 default · reasoning ON · capacity 16,384 | 1 (2026-11-08) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q8_0 weights; f16 KV · llama.cpp · RTX 5070</summary>

@@ -11,6 +11,9 @@ vendor = "kai-os"
 findings_first = true
 recommended_profile_id = "grug-12b-llamacpp-q4km"
 recommended_profile_name = "llama.cpp Q4_K_M"
+catalog_artifact = "kai-os/Grug-12B-GGUF Q4_K_M"
+catalog_profile_id = "grug-12b-llamacpp-q4km"
+catalog_profile_recommended = true
 profile_count = 1
 event_count = 2
 latest_evidence_date = 2026-07-04
@@ -95,7 +98,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| llama.cpp · RTX 5070 | not recorded | llama.cpp | RTX 5070 | not recorded | 2 (2026-07-04, 2026-07-04) |
+| llama.cpp · RTX 5070 | kai-os/Grug-12B-GGUF Q4_K_M | llama.cpp | RTX 5070 | not recorded | 2 (2026-07-04, 2026-07-04) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: llama.cpp · RTX 5070</summary>

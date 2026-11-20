@@ -12,6 +12,9 @@ findings_first = true
 classification = "READY_WITH_GUARDRAILS"
 recommended_profile_id = "spark25-4b-q8-0-llamacpp"
 recommended_profile_name = "llama.cpp upstream official Q8_0 (reasoning-on, vendor default)"
+catalog_artifact = "Q8_0 (official publisher GGUF, 8.50 BPW)"
+catalog_profile_id = "spark25-4b-q8-0-llamacpp"
+catalog_profile_recommended = true
 practical_context = "32,768 default / 131,072 guarded tokens"
 profile_count = 1
 event_count = 1
@@ -162,7 +165,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q8_0 · llama.cpp b10999 · RTX 5070 | Q8_0 | llama.cpp b10999 | RTX 5070 | 32,768 default / 131,072 guarded | 1 (2026-09-20) |
+| Q8_0 · llama.cpp b10999 · RTX 5070 | Q8_0 (official publisher GGUF, 8.50 BPW) | llama.cpp b10999 | RTX 5070 | 32,768 default / 131,072 guarded | 1 (2026-09-20) |
 
 <details class="lab-findings-configs">
 <summary>Configuration details: Q8_0 · llama.cpp b10999 · RTX 5070</summary>
