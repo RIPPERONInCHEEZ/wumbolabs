@@ -2,7 +2,7 @@
 title = "Grug 12B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 35
+weight = 38
 
 [extra]
 kind = "model"
@@ -108,7 +108,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Status: current canonical/recommended tested surface.
 - Artifact (as recorded): kai-os/Grug-12B-GGUF Q4_K_M
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/grug-12b/profiles/grug-12b-llamacpp-q4km/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/grug-12b/profiles/grug-12b-llamacpp-q4km/profile.json)
 
 Events on this configuration:
 
@@ -132,7 +132,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/grug-12b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/grug-12b)
 
 ### Legacy provenance
 

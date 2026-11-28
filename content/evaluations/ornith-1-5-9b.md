@@ -2,7 +2,7 @@
 title = "Ornith 1.5 9B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 25
+weight = 28
 
 [extra]
 kind = "model"
@@ -182,14 +182,14 @@ MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output 
 
 ###### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models
 - **LocalMaxxing:** Speed result submitted and APPROVED (ID `cmtc6sopl0007o601d7hqrj1z`; decode 102.04 tok/s, prefill 4,046.67 tok/s, Q4_K_M, llama.cpp b10449, RTX 5070 12 GB). Model page: https://www.localmaxxing.com/en/models/ornith-ai/Ornith-1.5-9B
 
 ###### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km)
 
 This Lab Record is a summary; the canonical repo is the source of truth.
 
@@ -225,7 +225,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Status: current canonical/recommended tested surface.
 - Artifact (as recorded): Ornith-1.5-9B-Q4_K_M.gguf (source rev 489cb97981b8654bcfcf30ce1f94ed1b62e07b53)
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km/profile.json)
 
 Events on this configuration:
 
@@ -249,7 +249,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ornith-1.5-9b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/ornith-1.5-9b)
 
 ### Legacy provenance
 

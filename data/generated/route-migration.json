@@ -327,6 +327,33 @@
       "http_status": 301
     },
     {
+      "old_url": "/labs/devstral-small-2-24b-instruct-2512/",
+      "content_type": "model-page",
+      "model_id": "devstral-small-2-24b-instruct-2512",
+      "event_id": null,
+      "new_url": "/evaluations/devstral-small-2-24b-instruct-2512/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/nemotron-3-5-bolt-e4b/",
+      "content_type": "model-page",
+      "model_id": "nemotron-3.5-bolt-e4b",
+      "event_id": null,
+      "new_url": "/evaluations/nemotron-3-5-bolt-e4b/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
+      "old_url": "/labs/gemma-4-31b-it/",
+      "content_type": "model-page",
+      "model_id": "gemma-4-31b-it",
+      "event_id": null,
+      "new_url": "/evaluations/gemma-4-31b-it/",
+      "mechanism": "cloudflare-redirects",
+      "http_status": 301
+    },
+    {
       "old_url": "/labs/qwen3.8-27b/",
       "content_type": "event-url",
       "model_id": "qwen38-27b",

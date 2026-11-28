@@ -112,13 +112,13 @@ MTP speculative decoding (`--spec-type draft-mtp`): +9.9% throughput but output 
 
 ### Evidence Links
 
-- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km
+- **Canonical evaluation repo:** https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km
 - **WELP protocol:** https://github.com/WumboLabs/welp
-- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models
+- **Labs catalog:** https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models
 - **LocalMaxxing:** Speed result submitted and APPROVED (ID `cmtc6sopl0007o601d7hqrj1z`; decode 102.04 tok/s, prefill 4,046.67 tok/s, Q4_K_M, llama.cpp b10449, RTX 5070 12 GB). Model page: https://www.localmaxxing.com/en/models/ornith-ai/Ornith-1.5-9B
 
 ### Reproduction
 
-Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km)
+Direct link to canonical reproduction material: [Central evidence](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/ornith-1.5-9b/profiles/ornith-1.5-9b-llamacpp-q4km)
 
 This Lab Record is a summary; the canonical repo is the source of truth.

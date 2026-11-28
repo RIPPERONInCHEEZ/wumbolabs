@@ -2,7 +2,7 @@
 title = "LFM2.5-8B-A1B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 8
+weight = 11
 
 [extra]
 kind = "model"
@@ -1744,7 +1744,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): LiquidAI/LFM2.5-8B-A1B-GGUF@49c14831 :: LFM2.5-8B-A1B-Q6_K.gguf (sha256 7ccf57a2d410d8822d1560a1ca10c8318f3e15d6a8f6d42d1903d58e80ea20a6)
 - Runtime (as recorded): llama.cpp (upstream) b04d4e567cd2fb8d2ded6e17d38dbbcfafe29063 (tag b10999, 0.4.1-dev build 1), CUDA SM120.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/lfm2.5-8b-a1b/profiles/lfm25-8b-a1b-q6-k-llamacpp-b10999-rtx5070-deployment/profile.json)
 
 Events on this configuration:
 
@@ -1768,7 +1768,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 0.0, repeat_penalty 1.05, seed 42, temperature 0.2, top_k 80, top_p 1.0.
 - Reasoning arm: NOT_CONFIGURABLE.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-not-configurable-2026-11-10/profile.json)
 
 Events on this configuration:
 
@@ -1791,7 +1791,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 0.0, repeat_penalty 1.05, seed 42, temperature 0.2, top_k 80, top_p 1.0.
 - Reasoning arm: NOT_CONFIGURABLE.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/lfm2.5-8b-a1b/profiles/lfm2.5-8b-a1b-rtx5070-cuda-heli-not-configurable-2026-11-11/profile.json)
 
 Events on this configuration:
 
@@ -1816,7 +1816,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/lfm2.5-8b-a1b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/lfm2.5-8b-a1b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-11-11 WELP v1.0 authentic objective HelicopterBench /2</summary>

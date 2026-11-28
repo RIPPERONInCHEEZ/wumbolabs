@@ -2,7 +2,7 @@
 title = "MiniCPM5-2B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 24
+weight = 27
 
 [extra]
 kind = "model"
@@ -173,7 +173,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): model-00000-of-00001.safetensors (official BF16; no quantization or conversion)
 - Runtime (as recorded): vLLM 0.27.1 (g6e448d0ea), Torch 2.13.0+cu130, Transformers 5.15.0, FlashInfer 0.6.16.post3.
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/minicpm5-2b/profiles/minicpm5-2b-vllm-bf16/profile.json)
 
 Events on this configuration:
 
@@ -195,7 +195,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/minicpm5-2b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/minicpm5-2b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-09-10 Initial Evaluation: contained vLLM BF16</summary>

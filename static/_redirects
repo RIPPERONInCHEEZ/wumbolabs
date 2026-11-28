@@ -45,3 +45,6 @@
 /labs/qwen3-coder-30b-a3b-instruct/ /evaluations/qwen3-coder-30b-a3b-instruct/ 301
 /labs/nanbeige4-2-3b/ /evaluations/nanbeige4-2-3b/ 301
 /labs/muse-glimmer-30b/ /evaluations/muse-glimmer-30b/ 301
+/labs/devstral-small-2-24b-instruct-2512/ /evaluations/devstral-small-2-24b-instruct-2512/ 301
+/labs/nemotron-3-5-bolt-e4b/ /evaluations/nemotron-3-5-bolt-e4b/ 301
+/labs/gemma-4-31b-it/ /evaluations/gemma-4-31b-it/ 301

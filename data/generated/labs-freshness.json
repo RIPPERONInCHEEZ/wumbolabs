@@ -441,6 +441,56 @@
       "resolved_commit": "844dcc6e47c6092b492af372985cf45f4923a0a9",
       "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/844dcc6e47c6092b492af372985cf45f4923a0a9/models/muse-glimmer-30b/events/muse-glimmer-30b-r9700-hip-high-2026-11-17/website-publication.json",
       "kind": "repository-cache"
+    },
+    "eval-qwen3-coder-30b-a3b-instruct-r9700-hip-coding-advanced-2-2026-11-27": {
+      "file": "data/generated/evaluations-exports/qwen3-coder-30b-a3b-instruct-r9700-hip-coding-advanced-2-2026-11-27.json",
+      "sha256": "985952d7b85ee08620d55e4c73d7cdf32cc75c84412cc4b4a25f03e749a1cda1",
+      "repo": "WumboLabs/evaluations",
+      "ref": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "path": "models/qwen3-coder-30b-a3b-instruct/events/qwen3-coder-30b-a3b-instruct-r9700-hip-coding-advanced-2-2026-11-27/website-publication.json",
+      "resolved_commit": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/92906a38562272c0824bdd4a5e7118811d7a5b9b/models/qwen3-coder-30b-a3b-instruct/events/qwen3-coder-30b-a3b-instruct-r9700-hip-coding-advanced-2-2026-11-27/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27": {
+      "file": "data/generated/evaluations-exports/nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27.json",
+      "sha256": "30e5dc7561e374944f9c875e375d8715c455eef2d405fbf822d255d55f0bff87",
+      "repo": "WumboLabs/evaluations",
+      "ref": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "path": "models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27/website-publication.json",
+      "resolved_commit": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/92906a38562272c0824bdd4a5e7118811d7a5b9b/models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-devstral-r9700-vulkan-native-2026-11-27": {
+      "file": "data/generated/evaluations-exports/devstral-r9700-vulkan-native-2026-11-27.json",
+      "sha256": "d7e23623cb139f5a323891c1908505686cb0c8d30beacb2cefaa2fc028125c5d",
+      "repo": "WumboLabs/evaluations",
+      "ref": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "path": "models/devstral-small-2-24b-instruct-2512/events/devstral-r9700-vulkan-native-2026-11-27/website-publication.json",
+      "resolved_commit": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/92906a38562272c0824bdd4a5e7118811d7a5b9b/models/devstral-small-2-24b-instruct-2512/events/devstral-r9700-vulkan-native-2026-11-27/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-nemotron35-bolt-e4b-rtx5070-cuda-off-2026-11-27": {
+      "file": "data/generated/evaluations-exports/nemotron35-bolt-e4b-rtx5070-cuda-off-2026-11-27.json",
+      "sha256": "f886e8a081876dd57c12744c8e20300f7a36d2b78b6f221ef3810b8636cc5d1c",
+      "repo": "WumboLabs/evaluations",
+      "ref": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "path": "models/nemotron-3.5-bolt-e4b/events/nemotron35-bolt-e4b-rtx5070-cuda-off-2026-11-27/website-publication.json",
+      "resolved_commit": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/92906a38562272c0824bdd4a5e7118811d7a5b9b/models/nemotron-3.5-bolt-e4b/events/nemotron35-bolt-e4b-rtx5070-cuda-off-2026-11-27/website-publication.json",
+      "kind": "repository-cache"
+    },
+    "eval-gemma-4-31b-it-r9700-vulkan-off-2026-11-27": {
+      "file": "data/generated/evaluations-exports/gemma-4-31b-it-r9700-vulkan-off-2026-11-27.json",
+      "sha256": "65ac9fff712b6b4d87426c784fbb464ba57ffb6b9af9064f335f663a1a931bb5",
+      "repo": "WumboLabs/evaluations",
+      "ref": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "path": "models/gemma-4-31b-it/events/gemma-4-31b-it-r9700-vulkan-off-2026-11-27/website-publication.json",
+      "resolved_commit": "92906a38562272c0824bdd4a5e7118811d7a5b9b",
+      "url": "https://raw.githubusercontent.com/WumboLabs/evaluations/92906a38562272c0824bdd4a5e7118811d7a5b9b/models/gemma-4-31b-it/events/gemma-4-31b-it-r9700-vulkan-off-2026-11-27/website-publication.json",
+      "kind": "repository-cache"
     }
   },
   "latest_represented_campaigns": [
@@ -453,12 +503,20 @@
       "campaign": "bonsai-2-27b-welp-methodology-supplement-2026-09-20"
     },
     {
+      "slug": "eval-devstral-r9700-vulkan-native-2026-11-27",
+      "campaign": "devstral-r9700-vulkan-native-2026-11-27"
+    },
+    {
       "slug": "eval-gemma-4-12b-recharacterization-2026-09-12",
       "campaign": "gemma4-12b-it-rtx5070-welp-recharacterization-2026-09-12"
     },
     {
       "slug": "eval-gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09",
       "campaign": "gemma-4-12b-rtx5070-cuda-m2-fresh-ssd-2026-11-09"
+    },
+    {
+      "slug": "eval-gemma-4-31b-it-r9700-vulkan-off-2026-11-27",
+      "campaign": "gemma-4-31b-it-r9700-vulkan-off-2026-11-27"
     },
     {
       "slug": "eval-granite-42-8b-rtx5070-welp-context-completion-20260924",
@@ -513,6 +571,10 @@
       "campaign": "muse-glimmer-30b-r9700-hip-high-2026-11-17"
     },
     {
+      "slug": "eval-nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27",
+      "campaign": "nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27"
+    },
+    {
       "slug": "eval-nanbeige42-3b-rtx5070-cuda-on-2026-11-17",
       "campaign": "nanbeige42-3b-rtx5070-cuda-on-2026-11-17"
     },
@@ -523,6 +585,10 @@
     {
       "slug": "eval-nemotron-3-nano-4b-recharacterization-2026-09-11",
       "campaign": "nemotron3-nano-4b-rtx5070-welp-recharacterization-2026-09-11"
+    },
+    {
+      "slug": "eval-nemotron35-bolt-e4b-rtx5070-cuda-off-2026-11-27",
+      "campaign": "nemotron35-bolt-e4b-rtx5070-cuda-off-2026-11-27"
     },
     {
       "slug": "eval-neohorse-1-9b-rtx5070-welp-agentic-20260925",
@@ -543,6 +609,10 @@
     {
       "slug": "eval-qwen3-14b-recharacterization-2026-09-14",
       "campaign": "qwen3-14b-rtx5070-welp-recharacterization-2026-09-14"
+    },
+    {
+      "slug": "eval-qwen3-coder-30b-a3b-instruct-r9700-hip-coding-advanced-2-2026-11-27",
+      "campaign": "qwen3-coder-30b-a3b-instruct-r9700-hip-coding-advanced-2-2026-11-27"
     },
     {
       "slug": "eval-qwen3-coder-30b-a3b-instruct-r9700-hip-native-2026-11-17",
@@ -622,6 +692,6 @@
     }
   ],
   "pending_public_evidence": [],
-  "models": 35,
-  "model_events": 77
+  "models": 38,
+  "model_events": 82
 }

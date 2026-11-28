@@ -2,7 +2,7 @@
 title = "Nanbeige4.2-3B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 2
+weight = 3
 
 [extra]
 kind = "model"
@@ -10,15 +10,15 @@ model_id = "nanbeige4.2-3b"
 vendor = "Nanbeige"
 findings_first = true
 catalog_artifact = "GGUF · Q8_0"
-catalog_profile_id = "nanbeige4.2-3b-rtx5070-cuda-on-2026-11-17"
-profile_count = 1
-event_count = 1
-latest_evidence_date = 2026-11-17
+catalog_profile_id = "nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27"
+profile_count = 2
+event_count = 2
+latest_evidence_date = 2026-11-27
 +++
 
 ## Overview
 
-Nanbeige · 1 tested configuration · 1 evidence event · newest evidence 2026-11-17.
+Nanbeige · 2 tested configurations · 2 evidence events · newest evidence 2026-11-27.
 
 Contents: [Findings](#current-state) · [Event results](#testing-history) · [Limitations](#limitations) · [Tested configurations](#tested-profiles) · [Chronology](#chronology) · [Technical provenance](#canonical-evidence)
 
@@ -28,8 +28,9 @@ Contents: [Findings](#current-state) · [Event results](#testing-history) · [Li
 
 Each finding is attributed to the event and tested configuration that measured it; exact values, failures and limitations are in the [event results](#testing-history). A historical event's recorded status describes that event's own sections at its date and is not a verdict on newer sections.
 
-- **Latest evidence:** 2026-11-17: [event result](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17)
-- **2026-11-17** · Q8_0 · llama.cpp b11827 · RTX 5070: classification NOT_ASSIGNED; See configuration-specific section findings; no composite model score; baseline 61 units: 48 PASS, 7 FAIL, 6 NOT_EVALUABLE; coverage failures retained: context 6 pass / 1 fail; reasoning 3 pass / 2 fail; reliability 15 pass / 2 fail; tool use 1 pass / 2 fail. [Event result](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17)
+- **Latest evidence:** 2026-11-27: [event result](#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27)
+- **2026-11-27** · Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned · llama.cpp, CUDA, NVIDIA GeForce RTX 5070, native reasoning ON with preserved thinking and XML tools: classification NOT_ASSIGNED; See configuration-specific section findings; no composite model score; coding 3 units: 3 PASS (ADVANCE). [Event result](#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27)
+- **2026-11-17** · Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned: classification NOT_ASSIGNED; See configuration-specific section findings; no composite model score; baseline 61 units: 48 PASS, 7 FAIL, 6 NOT_EVALUABLE; coverage failures retained: context 6 pass / 1 fail; reasoning 3 pass / 2 fail; reliability 15 pass / 2 fail; tool use 1 pass / 2 fail. [Event result](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17)
 
 <a id="testing-history"></a>
 
@@ -37,11 +38,181 @@ Each finding is attributed to the event and tested configuration that measured i
 
 Newest first. Each event is one independent testing/publication event with its full report linked once at the top of its section; scores, failures and limitations stay visible and raw section-provenance JSON stays collapsed.
 
+<a id="nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27"></a>
+
+### 2026-11-27: Nanbeige4.2-3B: corrective Advanced Coding
+
+**HUMAN_ACCEPTED corrective coding-advanced/2; historical /1 deferral unchanged** · config Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned · llama.cpp, CUDA, NVIDIA GeForce RTX 5070, native reasoning ON with preserved thinking and XML tools · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+
+Configuration: Q8_0: llama.cpp / NVIDIA GeForce RTX 5070 CUDA, native reasoning ON with preserved thinking and XML tools.
+
+[Full report (REPORT.md)](https://github.com/WumboLabs/evaluations/blob/d6aa6cecea86ed619d04927bc8017ae0ebded296/models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27/REPORT.md)
+
+#### Nanbeige4.2-3B: corrective Advanced Coding
+
+**HUMAN_ACCEPTED scope: the corrective Advanced Coding section (`coding-advanced/2`) only.** This is an independent corrective event, not a regrade. The historical `coding-advanced/1` section stays DEFERRED_BY_OWNER; its original timeout remains a valid resource-limit observation, not a semantic failure.
+
+##### Corrective Advanced Coding (coding-advanced/2)
+
+Three units, all PASS, with offline replay verification reproducing all three outcomes: `advanced-module-01`, `advanced-repair-supplied-01`, `advanced-repair-multi-01`. Sandbox-executed frozen oracles decide outcomes. The methodology-versioned `/2` construct corrects the defective `/1` multi-file repair task, whose published deferral reason (frozen task supplied an already-correct target) remains the record of the separate 2026-11-17 baseline event. This corrective section does not supersede that deferral and publishes no score for `/1`.
+
+##### Provenance reconciliation: explicitly accepted and disclosed
+
+The owner explicitly accepted the Batch 04 provenance reconciliation, SHA-256 `da7e6ab7b983a0b02e9857d3ef3d293bed3ede92eb64e30c62450c1db158a138`, and its disclosed limitations:
+
+- The sealed corrective profile inherited the historical Batch 03 source-inventory hash `8c916381dd5e1505023a00689698ed8a893fd4222ed6f2c802006718f59ff372` and the historical Batch 03 authorization wording. They are not the corrected `coding-advanced/2` source inventory and not the current assignment authorization.
+- The corrected post-correction 189-entry source-and-fixtures inventory has SHA-256 `095a5138e667960fa472db4fb7a0317f6c5327ba80d97de5b93b3b26853f45eb`; a later check verified every listed file against it. That later check is not an execution-time hash measurement at each scored dispatch.
+- No independently established execution-time source hash is claimed.
+
+A public-safe derivative of the reconciliation record is preserved beside the profile metadata under `supporting-evidence/`; the original record remains in the local scientific evidence.
+
+
+The accompanying structured export, `website-publication.json`, retains the exact unit outcomes, deployment conditions, and acceptance bindings. Original local evidence governs scientific conflicts. This result is bounded to the tested deployment; it is not a composite model score or a production-readiness claim.
+
+##### Identity and deployment
+
+- Event: `nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27`. Profile: `nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27`, revision `bb68134687d9d49b2e31f3e89f107b36a95a987d3639f950dbbfb33da2f558d9`.
+- Tested [GGUF artifact](https://huggingface.co/bartowski/Nanbeige_Nanbeige4.2-3B-GGUF/tree/17562eefe9752007209148d5f7a6e275fc8d8077): Q8_0, 4,434,787,488 bytes, SHA-256 `837ba713ef3a3b5c9aee82e5dcba07600ea7db36ae392419f982b3bfaec04ef2`.
+- NVIDIA GeForce RTX 5070, CUDA, llama.cpp `b11827-970b51ce7c9ba5fff0726c5e9994f1c2f0e4eedc`, native reasoning ON with preserved thinking and XML tool call format (temperature 0.6, top-p 0.95, top-k 20). Context and performance findings apply only to the bounded workloads tested; the 16,384-token configured capacity is not a validated useful-context default.
+- Accepted section manifest SHA-256 `f708f688f5999d9e9cb79e79fdcf4fb7c882b19bfe99381efb7d2620e02af6b5`; section report SHA-256 `f6cd7563eaec628bc4e4d6ff13f9d37290a4f6ef9e9b80671b1f4f384ed995d1`; owner acceptance 2026-11-28 UTC.
+
+<details class="lab-findings-provenance">
+<summary>Raw section findings and provenance (JSON: outcomes, hashes, manifest and sampling conditions)</summary>
+
+```json
+{
+  "profile_conditions": [
+    {
+      "artifact_sha256": "837ba713ef3a3b5c9aee82e5dcba07600ea7db36ae392419f982b3bfaec04ef2",
+      "context_capacity": 16384,
+      "framework": {
+        "methodology": "model-baseline/2",
+        "version": "welp/1.0.0-alpha-m2"
+      },
+      "profile_id": "nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27",
+      "reasoning": {
+        "arm": "ON",
+        "controls": {
+          "chat_template_kwargs": {
+            "enable_thinking": true,
+            "preserve_thinking": true,
+            "tool_call_format": "xml"
+          }
+        }
+      },
+      "runtime": {
+        "backend": "CUDA",
+        "engine": "llama.cpp",
+        "version": "b11827-970b51ce7c9ba5fff0726c5e9994f1c2f0e4eedc"
+      },
+      "sampling": {
+        "min_p": 0.0,
+        "presence_penalty": 0.0,
+        "repeat_penalty": 1.0,
+        "seed": 42,
+        "temperature": 0.6,
+        "top_k": 20,
+        "top_p": 0.95
+      },
+      "serve_model_id": "Nanbeige4.2-3B-Q8_0",
+      "template_sha256": "4202c87e62cb0a6df3d4b219b51b514e76e7cdcf6a84897e814402c61f90f80e"
+    }
+  ],
+  "sections": [
+    {
+      "advancement": {
+        "decision": "ADVANCE"
+      },
+      "evidence_kind": "REAL_MODEL",
+      "manifest_sha256": "f708f688f5999d9e9cb79e79fdcf4fb7c882b19bfe99381efb7d2620e02af6b5",
+      "methodology": "coding-advanced/2",
+      "profile_id": "nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27",
+      "profile_revision": "bb68134687d9d49b2e31f3e89f107b36a95a987d3639f950dbbfb33da2f558d9",
+      "report_sha256": "f6cd7563eaec628bc4e4d6ff13f9d37290a4f6ef9e9b80671b1f4f384ed995d1",
+      "section": "coding",
+      "units": [
+        {
+          "attempted": true,
+          "completion": "COMPLETE",
+          "coverage_impact": "MEASURED_AND_SCORED",
+          "exclusion_reason": null,
+          "execution": "VALID",
+          "limits": "NONE",
+          "original_outcome": "PASS",
+          "original_result": {
+            "completion": "COMPLETE",
+            "execution": "VALID",
+            "limits": "NONE",
+            "outcome": "PASS",
+            "reason": null,
+            "scoring": "SCORED_PASS"
+          },
+          "outcome": "PASS",
+          "reason": null,
+          "recorded_attempts": 1,
+          "scoring": "SCORED_PASS",
+          "technical_applicability": "APPLICABLE",
+          "unit_id": "advanced-module-01"
+        },
+        {
+          "attempted": true,
+          "completion": "COMPLETE",
+          "coverage_impact": "MEASURED_AND_SCORED",
+          "exclusion_reason": null,
+          "execution": "VALID",
+          "limits": "NONE",
+          "original_outcome": "PASS",
+          "original_result": {
+            "completion": "COMPLETE",
+            "execution": "VALID",
+            "limits": "NONE",
+            "outcome": "PASS",
+            "reason": null,
+            "scoring": "SCORED_PASS"
+          },
+          "outcome": "PASS",
+          "reason": null,
+          "recorded_attempts": 1,
+          "scoring": "SCORED_PASS",
+          "technical_applicability": "APPLICABLE",
+          "unit_id": "advanced-repair-multi-01"
+        },
+        {
+          "attempted": true,
+          "completion": "COMPLETE",
+          "coverage_impact": "MEASURED_AND_SCORED",
+          "exclusion_reason": null,
+          "execution": "VALID",
+          "limits": "NONE",
+          "original_outcome": "PASS",
+          "original_result": {
+            "completion": "COMPLETE",
+            "execution": "VALID",
+            "limits": "NONE",
+            "outcome": "PASS",
+            "reason": null,
+            "scoring": "SCORED_PASS"
+          },
+          "outcome": "PASS",
+          "reason": null,
+          "recorded_attempts": 1,
+          "scoring": "SCORED_PASS",
+          "technical_applicability": "APPLICABLE",
+          "unit_id": "advanced-repair-supplied-01"
+        }
+      ]
+    }
+  ]
+}
+```
+
+</details>
+
 <a id="nanbeige42-3b-rtx5070-cuda-on-2026-11-17"></a>
 
 ### 2026-11-17: Nanbeige4.2-3B: Model/Core baseline
 
-**HUMAN_ACCEPTED Model/Core only; Advanced Coding deferred by owner** · config Q8_0 · llama.cpp b11827 · RTX 5070 · maturity: CURRENT_WELP · status: NOT_ASSIGNED
+**HUMAN_ACCEPTED Model/Core only; Advanced Coding deferred by owner** · config Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned · maturity: CURRENT_WELP · status: NOT_ASSIGNED
 
 Configuration: Q8_0: llama.cpp / NVIDIA GeForce RTX 5070 CUDA, native reasoning ON with preserved thinking and XML tools.
 
@@ -1928,9 +2099,9 @@ The accompanying structured export, `website-publication.json`, retains all iden
 
 ## Limitations
 
-- Model and Agentic findings are independent. Source events: [2026-11-17](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17).
-- Performance is deployment-attributed, never model-quality credit. Source events: [2026-11-17](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17).
-- Missing metrics remain unknown; boundary memory samples are not true peaks. Source events: [2026-11-17](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17).
+- Model and Agentic findings are independent. Source events: [2026-11-27](#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27), [2026-11-17](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17).
+- Performance is deployment-attributed, never model-quality credit. Source events: [2026-11-27](#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27), [2026-11-17](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17).
+- Missing metrics remain unknown; boundary memory samples are not true peaks. Source events: [2026-11-27](#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27), [2026-11-17](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17).
 
 <a id="tested-profiles"></a>
 
@@ -1940,10 +2111,11 @@ Exact profile identities, sampling conditions and provenance are in each configu
 
 | Configuration | Artifact / precision | Runtime | Hardware | Context / reasoning | Events |
 |---|---|---|---|---|---|
-| Q8_0 · llama.cpp b11827 · RTX 5070 | GGUF · Q8_0 | llama.cpp b11827 | RTX 5070 | reasoning ON · capacity 16,384 | 1 (2026-11-17) |
+| Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned | GGUF · Q8_0 | llama.cpp b11827 | RTX 5070 | reasoning ON · capacity 16,384 | 1 (2026-11-17) |
+| Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned · llama.cpp, CUDA, NVIDIA GeForce RTX 5070, native reasoning ON with preserved thinking and XML tools | GGUF · Q8_0 | llama.cpp b11827 | RTX 5070 | reasoning ON · capacity 16,384 | 1 (2026-11-27) |
 
 <details class="lab-findings-configs">
-<summary>Configuration details: Q8_0 · llama.cpp b11827 · RTX 5070</summary>
+<summary>Configuration details: Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned</summary>
 
 - Full profile name: Q8_0: llama.cpp / NVIDIA GeForce RTX 5070 CUDA, native reasoning ON with preserved thinking and XML tools.
 - Profile identity: `nanbeige4.2-3b-rtx5070-cuda-on-2026-11-17`.
@@ -1957,11 +2129,34 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Sampling (as recorded): min_p 0.0, presence_penalty 0.0, repeat_penalty 1.0, seed 42, temperature 0.6, top_k 20, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/nanbeige4.2-3b/profiles/nanbeige4.2-3b-rtx5070-cuda-on-2026-11-17/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/nanbeige4.2-3b/profiles/nanbeige4.2-3b-rtx5070-cuda-on-2026-11-17/profile.json)
 
 Events on this configuration:
 
 - [Nanbeige4.2-3B: Model/Core baseline (2026-11-17)](/evaluations/nanbeige4-2-3b#nanbeige42-3b-rtx5070-cuda-on-2026-11-17); status: NOT_ASSIGNED
+
+</details>
+
+<details class="lab-findings-configs">
+<summary>Configuration details: Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned · llama.cpp, CUDA, NVIDIA GeForce RTX 5070, native reasoning ON with preserved thinking and XML tools</summary>
+
+- Full profile name: Q8_0: llama.cpp / NVIDIA GeForce RTX 5070 CUDA, native reasoning ON with preserved thinking and XML tools.
+- Profile identity: `nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27`.
+- Status: current tested surface; not the recommended profile.
+- Deployment topology (as recorded): llama.cpp, CUDA, NVIDIA GeForce RTX 5070, native reasoning ON with preserved thinking and XML tools; configured 16384 tokens, not validation at full capacity. No serving recommendation assigned.
+- Artifact (as recorded): bartowski/Nanbeige_Nanbeige4.2-3B-GGUF; revision 17562eefe9752007209148d5f7a6e275fc8d8077; GGUF Q8_0; sha256 837ba713ef3a3b5c9aee82e5dcba07600ea7db36ae392419f982b3bfaec04ef2
+- Artifact revision: 17562eefe9752007209148d5f7a6e275fc8d8077.
+- Artifact format: GGUF.
+- Runtime (as recorded): llama.cpp b11827-970b51ce7c9ba5fff0726c5e9994f1c2f0e4eedc.
+- Hardware (as recorded): NVIDIA GeForce RTX 5070.
+- Sampling (as recorded): min_p 0.0, presence_penalty 0.0, repeat_penalty 1.0, seed 42, temperature 0.6, top_k 20, top_p 0.95.
+- Reasoning arm: ON.
+- Configured capacity: 16,384 tokens.
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/nanbeige4.2-3b/profiles/nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27/profile.json)
+
+Events on this configuration:
+
+- [Nanbeige4.2-3B: corrective Advanced Coding (2026-11-27)](/evaluations/nanbeige4-2-3b#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27); status: NOT_ASSIGNED
 
 </details>
 
@@ -1971,7 +2166,8 @@ Compact index; full results are in [Event results](#testing-history).
 
 | Date | Event | Configuration | Status |
 |---|---|---|---|
-| 2026-11-17 | [Nanbeige4.2-3B: Model/Core baseline](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17) | Q8_0 · llama.cpp b11827 · RTX 5070 | NOT_ASSIGNED |
+| 2026-11-27 | [Nanbeige4.2-3B: corrective Advanced Coding](#nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27) | Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned · llama.cpp, CUDA, NVIDIA GeForce RTX 5070, native reasoning ON with preserved thinking and XML tools | NOT_ASSIGNED |
+| 2026-11-17 | [Nanbeige4.2-3B: Model/Core baseline](#nanbeige42-3b-rtx5070-cuda-on-2026-11-17) | Q8_0 · llama.cpp b11827 · RTX 5070 · configured 16384 tokens, not validation at full capacity. No serving recommendation assigned | NOT_ASSIGNED |
 
 <a id="canonical-evidence"></a>
 
@@ -1979,7 +2175,32 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/nanbeige4.2-3b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/nanbeige4.2-3b)
+
+<details class="lab-findings-provenance">
+<summary>Event provenance: 2026-11-27 HUMAN_ACCEPTED corrective coding-advanced/2; historical /1 deferral unchanged</summary>
+
+- Campaign: `nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27`
+- Export disposition: WEBSITE_READY; publication date 2026-11-27
+- Canonical citation (immutable commit/path pin): `https://github.com/WumboLabs/evaluations/blob/d6aa6cecea86ed619d04927bc8017ae0ebded296/models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27/REPORT.md`
+- Methodology snapshot: model-baseline/2
+- Scientific acceptance: schema welp-scientific-acceptance/1, decision HUMAN_ACCEPTED, reviewed 2026-11-28
+- Acceptance basis (as recorded): Direct owner scientific acceptance delivered 2026-11-28T12:58:44Z (UTC date 2026-11-28). HUMAN_ACCEPTED scope: the corrective Advanced Coding section coding-advanced/2 of this campaign only (three units, three PASS, offline replay verified), on the accepted native reasoning-ON RTX 5070 CUDA deployment; an independent corrective event, not a regrade. The historical coding-advanced/1 section stays DEFERRED_BY_OWNER; its original timeout remains a valid resource-limit observation, not a semantic failure, and its outcomes and manifest provenance are unchanged. The owner explicitly accepted the Batch 04 provenance reconciliation, SHA-256 da7e6ab7b983a0b02e9857d3ef3d293bed3ede92eb64e30c62450c1db158a138, and its disclosed limitations: the sealed corrective profile inherited the historical Batch 03 source-inventory hash and authorization wording, which are neither the corrected coding-advanced/2 source inventory nor the current assignment authorization. The corrected post-correction source-and-fixtures inventory (SHA-256 095a5138e667960fa472db4fb7a0317f6c5327ba80d97de5b93b3b26853f45eb) was verified afterward against the current files; that later verification is not an execution-time hash measurement, and no independently established execution-time source hash is claimed. Original negative results, historical deferrals and budget observations are retained. This acceptance covers the bounded scientific findings of the tested deployment, not general model production readiness.
+- Review source SHA-256: `a76ccf29e6db88c0f415676f121d0438002bdb6511ebd37b5f6af9c5324105a2`
+
+| Section | Manifest SHA-256 |
+|---|---|
+| coding | `f708f688f5999d9e9cb79e79fdcf4fb7c882b19bfe99381efb7d2620e02af6b5` |
+
+- Artifact revision: 17562eefe9752007209148d5f7a6e275fc8d8077
+- Artifact format: GGUF
+- Runtime backend: CUDA
+- Export identity: event_date `2026-11-27`, event_id `nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27`, event_type `welp-recharacterization`, model_id `nanbeige4.2-3b`, profile_id `nanbeige4.2-3b-rtx5070-cuda-on-2026-11-27`
+- Export source pin: repository-cache WumboLabs/evaluations @ `92906a38562272c0824bdd4a5e7118811d7a5b9b` path models/nanbeige4.2-3b/events/nanbeige42-3b-rtx5070-cuda-coding-advanced-2-2026-11-27/website-publication.json sha256 `30e5dc7561e374944f9c875e375d8715c455eef2d405fbf822d255d55f0bff87`
+
+<p><small>Publication provenance note (as recorded): Direct owner scientific acceptance 2026-11-28 UTC with private decision-source SHA-256 a76ccf29e6db88c0f415676f121d0438002bdb6511ebd37b5f6af9c5324105a2. All accepted outcomes retained; the two Batch 04 reconciliations are explicitly accepted and disclosed with their limitations; no execution-time source hash is claimed.</small></p>
+
+</details>
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-11-17 HUMAN_ACCEPTED Model/Core only; Advanced Coding deferred by owner</summary>

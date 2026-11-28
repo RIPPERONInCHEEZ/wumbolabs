@@ -2,7 +2,7 @@
 title = "Nanbeige4.3-33B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 6
+weight = 9
 
 [extra]
 kind = "model"
@@ -2068,7 +2068,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Sampling (as recorded): min_p 0.0, presence_penalty 0.0, repeat_penalty 1.0, seed 42, temperature 0.6, top_k 0, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/nanbeige4.3-33b/profiles/nanbeige4.3-33b-r9700-hip-recovery-on-2026-11-16/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/nanbeige4.3-33b/profiles/nanbeige4.3-33b-r9700-hip-recovery-on-2026-11-16/profile.json)
 
 Events on this configuration:
 
@@ -2090,7 +2090,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/nanbeige4.3-33b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/nanbeige4.3-33b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-11-16 HUMAN_ACCEPTED independent sections; SCI-01 Q02 interpretation attributed separately</summary>

@@ -2,7 +2,7 @@
 title = "Qwen3.5-9B"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 11
+weight = 14
 
 [extra]
 kind = "model"
@@ -2765,7 +2765,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Artifact (as recorded): Qwen3.5-9B-Q8_0.gguf (text-only conversion; Unsloth rev 3885219b6810b007914f3a7950a8d1b469d598a5)
 - Runtime (as recorded): llama.cpp 0.1.0-dev build b10449, commit 0d9ceae1e38291035605613ab41a8f5e693d6fcd (CUDA 13.3, SM120).
 - Hardware (as recorded): WumboJetsII (NVIDIA GeForce RTX 5070 12GB).
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b/profiles/qwen35-9b-llamacpp-q8/profile.json)
 
 Events on this configuration:
 
@@ -2788,7 +2788,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 1.5, repeat_penalty 1.0, seed 42, temperature 1.0, top_k 20, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b/profiles/qwen35-9b-r9700-hip-on-2026-10-22/profile.json)
 
 Events on this configuration:
 
@@ -2811,7 +2811,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 1.5, repeat_penalty 1.0, seed 42, temperature 1.0, top_k 20, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-on-2026-11-06/profile.json)
 
 Events on this configuration:
 
@@ -2837,7 +2837,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 1.5, repeat_penalty 1.0, seed 42, temperature 1.0, top_k 20, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-lc-on-2026-11-06/profile.json)
 
 Events on this configuration:
 
@@ -2860,7 +2860,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 1.5, repeat_penalty 1.0, seed 42, temperature 1.0, top_k 20, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-atu-on-2026-11-06/profile.json)
 
 Events on this configuration:
 
@@ -2883,7 +2883,7 @@ Events on this configuration:
 - Sampling (as recorded): min_p 0.0, presence_penalty 1.5, repeat_penalty 1.0, seed 42, temperature 1.0, top_k 20, top_p 0.95.
 - Reasoning arm: ON.
 - Configured capacity: 16,384 tokens.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b/profiles/qwen35-9b-rtx5070-cuda-rtperf-on-2026-11-08/profile.json)
 
 Events on this configuration:
 
@@ -2913,7 +2913,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen35-9b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen35-9b)
 
 <details class="lab-findings-provenance">
 <summary>Event provenance: 2026-11-08 WELP v1.0 Runtime Performance</summary>

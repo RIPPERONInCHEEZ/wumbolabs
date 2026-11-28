@@ -3,6 +3,51 @@
   "generated_by": "scripts/sync_labs.py (model-centric) from data/labs-registry.json",
   "models": [
     {
+      "model_id": "devstral-small-2-24b-instruct-2512",
+      "display_name": "Devstral Small 2 24B",
+      "page": "/evaluations/devstral-small-2-24b-instruct-2512/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-11-27"
+    },
+    {
+      "model_id": "gemma-4-31b-it",
+      "display_name": "Gemma 4 31B IT",
+      "page": "/evaluations/gemma-4-31b-it/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-11-27"
+    },
+    {
+      "model_id": "nanbeige4.2-3b",
+      "display_name": "Nanbeige4.2-3B",
+      "page": "/evaluations/nanbeige4-2-3b/",
+      "classification": null,
+      "profile_count": 2,
+      "event_count": 2,
+      "latest_evidence_date": "2026-11-27"
+    },
+    {
+      "model_id": "nemotron-3.5-bolt-e4b",
+      "display_name": "Nemotron 3.5 Bolt E4B",
+      "page": "/evaluations/nemotron-3-5-bolt-e4b/",
+      "classification": null,
+      "profile_count": 1,
+      "event_count": 1,
+      "latest_evidence_date": "2026-11-27"
+    },
+    {
+      "model_id": "qwen3-coder-30b-a3b-instruct",
+      "display_name": "Qwen3-Coder-30B-A3B-Instruct",
+      "page": "/evaluations/qwen3-coder-30b-a3b-instruct/",
+      "classification": null,
+      "profile_count": 2,
+      "event_count": 2,
+      "latest_evidence_date": "2026-11-27"
+    },
+    {
       "model_id": "muse-glimmer-30b",
       "display_name": "Muse Glimmer 30B",
       "page": "/evaluations/muse-glimmer-30b/",
@@ -12,27 +57,9 @@
       "latest_evidence_date": "2026-11-17"
     },
     {
-      "model_id": "nanbeige4.2-3b",
-      "display_name": "Nanbeige4.2-3B",
-      "page": "/evaluations/nanbeige4-2-3b/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_evidence_date": "2026-11-17"
-    },
-    {
       "model_id": "occamy-1.0",
       "display_name": "Occamy-1.0",
       "page": "/evaluations/occamy-1-0/",
-      "classification": null,
-      "profile_count": 1,
-      "event_count": 1,
-      "latest_evidence_date": "2026-11-17"
-    },
-    {
-      "model_id": "qwen3-coder-30b-a3b-instruct",
-      "display_name": "Qwen3-Coder-30B-A3B-Instruct",
-      "page": "/evaluations/qwen3-coder-30b-a3b-instruct/",
       "classification": null,
       "profile_count": 1,
       "event_count": 1,

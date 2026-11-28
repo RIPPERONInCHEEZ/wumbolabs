@@ -2,7 +2,7 @@
 title = "Qwen2.5-3B Instruct"
 description = "Published evaluation evidence and testing history. Results remain attributed to their original configurations and methods."
 template = "lab_model.html"
-weight = 32
+weight = 35
 
 [extra]
 kind = "model"
@@ -109,7 +109,7 @@ Exact profile identities, sampling conditions and provenance are in each configu
 - Status: current tested surface; not the recommended profile.
 - Artifact (as recorded): Qwen2.5-3B-Instruct F16 GGUF (6,178,317,312-byte fingerprint)
 - Runtime (as recorded): llama.cpp.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen2.5-3b/profiles/qwen2.5-3b-llamacpp-f16/profile.json)
 
 Events on this configuration:
 
@@ -125,7 +125,7 @@ Events on this configuration:
 - Status: current canonical/recommended tested surface.
 - Artifact (as recorded): Qwen/Qwen2.5-3B-Instruct BF16
 - Runtime (as recorded): vLLM.
-- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen2.5-3b/profiles/qwen2.5-3b-vllm-bf16/profile.json)
+- [Profile Metadata](https://github.com/WumboLabs/evaluations/blob/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen2.5-3b/profiles/qwen2.5-3b-vllm-bf16/profile.json)
 
 Events on this configuration:
 
@@ -148,7 +148,7 @@ Compact index; full results are in [Event results](#testing-history).
 
 Publication, acceptance and source-pin provenance for each event, collapsed; the scientific content above never depends on it.
 
-[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/4f93731a9f042b9c1d86718a98a4e0e13d0fbd21/models/qwen2.5-3b)
+[Model evidence tree (GitHub)](https://github.com/WumboLabs/evaluations/tree/48d5e75b7a6e60e26900f2984fc15c54de109e49/models/qwen2.5-3b)
 
 ### Legacy provenance
 
